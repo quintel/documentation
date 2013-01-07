@@ -11,15 +11,15 @@ Central place to put documentation in. As a replacements for the infamous
   * Contact information
   * Expenses
 * Model information
-  * General calculation
-    * Costs
-    * CO2
-    * Renewability
-  * Technical workings
-  * Modules
-    * ETFlex
-    * Merit
-    * Industry
+  - General calculation
+    o Costs
+    o CO2
+    o Renewability
+  - Technical workings
+  - Modules
+    o ETFlex
+    o Merit
+    o Industry
 
 ## Migrating from the old Wiki
 
