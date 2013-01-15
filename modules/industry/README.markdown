@@ -83,10 +83,10 @@ I will try to draw it below.
         +-----------------------------------------------+
 ```
 
-This type of 'embedded graph' type allows for the definition 
+This type of *Embedded Graph* allows for the definition 
 of various energy flows within its boundaries (such as electricity 
 generation, own use, etc). All these flows then scale with a 
-predefined 'useful demand' parameter. This 'embedded graph' 
+predefined 'useful demand' parameter. This *Embedded Graph* 
 can report energy balance data if probed, as opposed to 
 converters now.
 
