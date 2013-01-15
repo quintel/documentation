@@ -6,10 +6,11 @@ Currently, only the metal sector has been implemented.
 
 The biggest **technical** debt in the metal subsector is the *coupling carrier*
 which was added to the graph and Etengine to deal with the requirement that two
-converters should *both* be increases/decreased when one is updated by the
+converters should *both* be increased/decreased when one is updated by the
 user. This is needed for the industry, because the same metal factory has some
-energy use in it, and transformation processes. These cannot be combined, since
-that would lead to the loss of information and circularities.
+energy use in it, and transformation processes. These cannot be combined in a 
+single converter, since that would lead to the loss of information and 
+circularities.
 
 ### Current fall out
 
@@ -55,14 +56,17 @@ Suppose we:
   * A was 1 and becomes 10
   * B was 2 and becomes 20
 
+Note: Mark den Heijer has included a more extensive and realistic example
+in the Industry docmentation.
+
 #### Possible future extensions
 
 In addition to this, we can also for example ask the `Steel factory` for its
-`output_capacity`, its `co2_emissions`, `final_energy_demand` etcetera,
-etcetera, which would make a lot of statistical converters rendundant and
-could open up new possibilities.
+`output_capacity`, its `co2_emissions`, `final_energy_demand` etcetera, 
+which would have the added benefit of making a lot of statistical converters 
+rendundant and could open up new possibilities.
 
-Precaution would be advised to not overuse or abuse this new pattern.
+Caution is needed not to overuse or abuse this new pattern.
 
 We should also think about rendundance with respect to defining properties.
 (e.g. what determines output capacity: the elements or the collection?)
