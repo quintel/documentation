@@ -56,8 +56,60 @@ Suppose we:
   * A was 1 and becomes 10
   * B was 2 and becomes 20
 
-Note: Mark den Heijer has included a more extensive and realistic example
-in the Industry docmentation.
+#### Alternative example: 
+
+Mark den Heijer has included an alternative example
+in the Industry docmentation. It is worth considering. The essential 
+difference is that his example does away with the rather artificial 
+splitting into two converters of what is essentially a single converter.
+I will try to draw it below.
+
+```
+        +-----------------------------------------------+
+        |                                               |
+        |                     Coke oven                 |
+        |                   +------------+              |
+     58 |  cokes            |            |    coal      | 80
+      <--------------------+|            |<----------------+
+        |                   |            |              |
+      8 | coke oven gas  16 |            |  electricity | 0.3
+      <----------------+---+|            |<----------------+
+        |              |    |            |              |
+        |              |    |            |<---+         |
+        |              |    +------------+    | 8       |
+        |              |                      |         |
+        |              |    coke oven gas     |         |
+        |              +----------------------+         |
+        +-----------------------------------------------+
+```
+
+This type of 'embedded graph' type allows for the definition 
+of various energy flows within its boundaries (such as electricity 
+generation, own use, etc). All these flows then scale with a 
+predefined 'useful demand' parameter. This 'embedded graph' 
+can report energy balance data if probed, as opposed to 
+converters now.
+
+This results in the following contribution to the energy balance:
+
+```
+        +--------------------------+---------+
+        | Key                      | Value   |
+        +--------------------------|---------|
+        | Transformation Processes |         |
+        |                          |         |
+        |   Coke ovens             |         |
+        |     Coal                 |  -80 PJ |
+        |     Cokes                |   58 PJ |
+        |     Coke oven gas        |   16 PJ |
+        +------------------------------------+
+        | Energy industry own use  |         |
+        |                          |         |
+        |   Coke ovens             |         |
+        |     Coke oven gas        |    8 PJ |
+        |     Electricity          |  0.3 PJ |
+        +------------------------------------+
+```
 
 #### Possible future extensions
 
