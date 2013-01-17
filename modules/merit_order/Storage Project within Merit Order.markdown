@@ -54,9 +54,9 @@ The owner output from electricity producers (including storage in discharge mode
 #### Load-shifting 
 "In an electric power system, the transfer of loads from times of peak demand to off-peak time periods" <sub>[McGraw-Hill Dictionary of Scientific & Technical Terms, 6E, Copyright © 2003 by The McGraw-Hill Companies, Inc.]</sub>. 
 
-This is strict definition of load-shifting, all have to be fulfilled:
+This is a strict definition of load-shifting, all have to be fulfilled:
 
-1. It triggers extra production when storage is filled
+1. It adds an extra demand to the grid  when storage is filled
 * It displaces production when storage is discharged 
 * Electricity is actually taken out of the system and stored in the form of another energy carrier. 
 
