@@ -2,12 +2,20 @@
 
 ## Scope
 
-In a first attempt, storage will only fulfil the following functionality within the merit order: 
+In a first attempt, storage will only fulfil the following functionality within 
+the merit order: 
 
-* Storage is a participant that can consume or produce electricity (if charged). 
-* Storage is incorporated within the merit order module. It can be disabled by setting its charging capacity or maximum storage charge to zero. 
-* Only 'excess electricity' is stored. The trigger for charging storage is a negative residual demand (the availability of excess electricity that would be exported or curtailed otherwise). How storage and export compete for excess electricity is yet to be decided. 
-* The trigger for discharging storage is a positive residual demand. As storage is discharged, the full load hours of dispatchables decreases. In consequence, storage does not act economically, as it does not maximise revenues during discharge. 
+* Storage is a participant that can consume or produce electricity (if charged).
+* Storage is incorporated within the merit order module. It can be disabled by 
+the user.
+* Only 'excess electricity' is stored. The trigger for charging storage is a 
+negative residual demand (the availability of excess electricity that would be 
+exported or curtailed otherwise). How storage and export compete for excess 
+electricity is yet to be decided. 
+* The trigger for discharging storage is a positive residual demand. 
+As storage is discharged, the full load hours of dispatchables decreases. 
+In consequence, storage does not act economically, as it does not maximise r
+evenues during discharge. 
 
 ## Nomenclature and Definitions
 
@@ -15,24 +23,45 @@ In a first attempt, storage will only fulfil the following functionality within 
 Storage makes use of the same classification of participants as merit order: 
 * `dispatchable producers` (can be switched on and off at will)
 * `volatile producers` (can be switched off but not on at will)
-* `must-run producers` (produces electricity as a by-product and is insensitive to changes in electricity demand)
+* `must-run producers` (produces electricity as a by-product and is insensitive 
+to changes in electricity demand)
 
 
 #### Residual load curve
-The merit order uses a demand curve as input. This demand may be (partly) fulfilled by the load from volatiles and must-run participants. The residual load is the demand minus the load from volatiles and must-runs. This curve can become negative for large penetrations of volatiles and must-run capacity, which leads to 'excess electricity'.
+The merit order uses a demand curve as input. This demand may be (partly) 
+fulfilled by the load from volatiles and must-run participants. 
+The residual load is the demand minus the load from volatiles and must-runs. 
+This curve can become negative for large penetrations of volatiles and must-run 
+capacity, which leads to 'excess electricity'.
 
 #### Excess electricity (or Surplus electricity)
-Excess electricity occurs whenever the residual load is negative. Whenever excess electricity occurs, the domestic demand for electricity is already satisfied. Dispatchables are turned off. Excess electricity is usually exported, but can also be stored in electricity storage, curtailed or converted into gas, heat... 
+Excess electricity occurs whenever the residual load is negative. Whenever 
+excess electricity occurs, the domestic demand for electricity is already 
+satisfied (and dispatchables are thus turned off). Excess electricity is 
+usually exported, but can also be stored in electricity storage, 
+curtailed or converted into gas, heat... 
 
 #### Curtailment 
-Curtailment occurs in situations of excess electricity. If excess electricity cannot be assigned to a consumer (e.g. export or storage), it has to be curtailed. On a physical level this means that producers of electricity are told to shut down by the grid operator. Curtailing electricity is a measure to maintain grid stability. Currently, curtailment hardly occurs; however, it is expected to increase significantly in the future. Curtailment by be caused or amplified by limited export capacities or transmission grid constraints. 
+Curtailment occurs in situations of excess electricity. If excess electricity 
+cannot be assigned to a consumer (e.g. export, conversion or storage), it has 
+to be curtailed. On a physical level this means that producers of electricity 
+are told to shut down by the grid operator. Curtailing electricity is a measure 
+to maintain grid stability. Currently, curtailment hardly occurs; however, its 
+occurence is expected to increase significantly in the future. Curtailment 
+by be caused or amplified by limited export capacities or transmission grid 
+constraints. 
 
 #### Avoided Curtailment 
-Avoided curtailment is the amount of electricity that would have been curtailed if no preventive measure had been taken.
+Avoided curtailment is the amount of electricity that would have been curtailed 
+if no preventive measure had been taken.
 
 #### Electricity Storage
-Electricity is stored in the form of another energy carrier. For example, chemical energy in batteries or potential energy in pumped hydro plants. This storage reservoir is emptied on demand, and electricity is generated by discharging the storage. 
-Electricity storage is characterized by numerous parameters, like: * charging/discharging efficiency (round-trip efficiency)
+Electricity is stored in the form of another energy carrier. For example, 
+chemical energy in batteries or potential energy in pumped hydro plants. This 
+storage reservoir is emptied on demand, and electricity is generated by 
+discharging the storage. 
+Electricity storage is characterized by numerous parameters, like: 
+* charging/discharging efficiency (round-trip efficiency)
 * self-discharge
 * maximum capacity
 * maximum energy content
@@ -40,34 +69,49 @@ Electricity storage is characterized by numerous parameters, like: * charging/di
 * etc 
 
 #### Storage Capacity (power capacity)
-Storage capacity refers to the load that a storage device draws from the grid. Just like the capacity of a gas plant, the storage capacity is a power measured in Watts. In contrast to ordinary language, storage capacity does not refer to an energy content (thinking of AA batteries). 
+Storage capacity refers to the load that a storage device draws from the grid. 
+Just like the capacity of a gas plant, the storage capacity is a power measured 
+in Watts. In contrast to ordinary language, storage capacity does not refer to 
+an energy content (thinking of AA batteries). 
 
-#### Maximum Storage Charge (energy capacity)
-Opposite to other participants, storage is limited by its maximum charge. Storage might become unavailable for further charging when full. Similarly, storage can no longer discharge when empty. 
+#### Storage Charge
+Opposite to other participants, storage is limited by its maximum charge 
+content. Storage might become unavailable for further charging when full. 
+Similarly, storage can no longer discharge when empty.
 
 #### Demand
-The request from consumers for electricity, in MW. 
+The request from consumers for electricity, in MW.
 
 #### Load
-The owner output from electricity producers (including storage in discharge mode) in MW. 
+The owner output from electricity producers (including storage in discharge 
+mode) in MW. 
 
 #### Load-shifting 
-"In an electric power system, the transfer of loads from times of peak demand to off-peak time periods" <sub>[McGraw-Hill Dictionary of Scientific & Technical Terms, 6E, Copyright © 2003 by The McGraw-Hill Companies, Inc.]</sub>. 
+"In an electric power system, the transfer of loads from times of peak demand 
+to off-peak time periods" <sub>[McGraw-Hill Dictionary of Scientific & 
+Technical Terms, 6E, Copyright © 2003 by The McGraw-Hill Companies, Inc.]</sub>.
 
 This is a strict definition of load-shifting, all have to be fulfilled:
 
-1. It adds an extra demand to the grid  when storage is filled
-* It displaces production when storage is discharged 
-* Electricity is actually taken out of the system and stored in the form of another energy carrier. 
+1. It adds an extra demand to the grid when storage is charged
+* It removes production when storage is discharged
+* Electricity is taken out of the system and stored in the form of 
+another energy carrier
 
 #### Electricity storage, power-to-power conversion
-Physical devices that perform load-shifting tasks. Storage is a net consumer of electricity. <sub>(With the exception of compressed air storage that co-fires natural gas during discharge.)<\sub>
+Physical devices that perform load-shifting tasks. Storage is a net consumer of 
+electricity. <sub>(With the exception of compressed air storage that co-fires 
+natural gas during discharge.)<\sub>
+
+RICHARD: I dont understand these two last sentences. Could you rephrase/explain?
 
 #### Demand shifting, demand side management 
-Shifting the demand of consumers in time. The net demand stays constant. 
+Shifting the demand of consumers in time. The net demand stays constant.
 
 #### Ramping 
-As demand and generation from volatiles/must-runs changes over time, dispatchables have to adapt their output. Ramping refers this change in dispatchable load (the gradient of the residual load curve). 
+As demand and generation from volatiles/must-runs changes over time, 
+dispatchables have to adapt their output. Ramping refers this change in 
+dispatchable load (the gradient of the residual load curve). 
 Ramping does not refer to switching a plant on 'gradually'. 
 
 ## Inputs
@@ -80,7 +124,9 @@ to be done
 
 ## Road map
 
-* We have to decide whether both must-run and volatile production can lead to curtailments
+* We have to decide whether both must-run and volatile production can lead to 
+curtailments
 * All costs parameters have to be clearly defined
-* At a later stage the exact look and feel in the etmodel will have to be determined and also what outputs to etmodel are needed
+* At a later stage the exact look and feel in the etmodel will have to be 
+determined and also what outputs to etmodel are needed
 
