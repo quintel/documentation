@@ -68,6 +68,20 @@ Electricity storage is characterized by numerous parameters, like:
 * cost paramters
 * etc 
 
+Storage devices are physical instruments that perform load-shifting tasks (see below).
+Electricity storage is purely a power-to-power conversion, it does not convert
+power into heat or hydrogen (which may be a one-way route). Charging and
+discharging electricity storage leads to energy losses. Therefore, storage is
+a net consumer of energy.  However, one needs to zoom in more closely:  For
+example, hydro storage plants might not only be charged by pumping up water
+electrically, but also by water influx from rain or rivers. Compressed air
+storage usually needs to co-fire natural gas during discharge (in order to
+avoid the gas turbine to freeze). A compressed air storage facility converts
+potential energy from the compressed air and chemical energy from the fuel
+into electricity. In consequence, the electricity output from a compressed air
+storage may be higher than its original electricity uptake.
+
+
 #### Storage Capacity (power capacity)
 Storage capacity refers to the load that a storage device draws from the grid. 
 Just like the capacity of a gas plant, the storage capacity is a power measured 
@@ -97,13 +111,6 @@ This is a strict definition of load-shifting, all have to be fulfilled:
 * It removes production when storage is discharged
 * Electricity is taken out of the system and stored in the form of 
 another energy carrier
-
-#### Electricity storage, power-to-power conversion
-Physical devices that perform load-shifting tasks. Storage is a net consumer of 
-electricity. <sub>(With the exception of compressed air storage that co-fires 
-natural gas during discharge.)<\sub>
-
-RICHARD: I dont understand these two last sentences. Could you rephrase/explain?
 
 #### Demand shifting, demand side management 
 Shifting the demand of consumers in time. The net demand stays constant.
