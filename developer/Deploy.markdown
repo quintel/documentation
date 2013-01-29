@@ -31,7 +31,7 @@ Assuming everything works as expected on beta:
    1. Dump ete_new
    1. Load in on ete_production (overwrite production db)
 
-   # ETModel
+   ## ETModel
    1. Create etm_new locally
    1. Dump etm_staging
    1. Load etm_staging dump
@@ -50,9 +50,13 @@ Assuming everything works as expected on beta:
 1. Merge/rebase the production branch of each application on top of staging. Force push if you have to, try to keep the git history as linear as possible
 1. Deploy the application (both ETE and ETM)
 
-    cap production deploy
+      cap production deploy
 
 1. On etengine_live, import the latest etsource. Make sure ETS production branch has been rebased/merged with master, since ete_production uses ETS' production branch.
+1. You should reindex the ETM content:
+
+    RAILS_ENV=production bundle exec rake sunspot:reindex
+
 
 # Post deploy checks
 
@@ -61,3 +65,5 @@ If new gems were added it might be a good idea to force restart the web server a
     sudo /etc/init.d/unicorn-etmodel restart  (on ETM)
     sudo /etc/init.d/unicorn-etengine restart (on ETE)
     sudo /etc/init.d/memcached restart        (on both)
+
+When everything's fine you can remove the notice from the live server.
