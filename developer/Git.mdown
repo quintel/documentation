@@ -1,0 +1,27 @@
+# Git Workflow
+
+Most applications use three different branches:
+
+* `master`: active development
+* `staging`: staging servers
+* `production`: production servers
+
+If you're adding a complex feature that takes many related commits then it's a good idea to use a new topic branch (named after the feature you're adding). When the feature is complete you can merge it into master, possibly using the `--no-ff` flag, to make the feature history simpler to follow.
+
+We're making an effort to keep the repository history as linear as possible, so it is usually a good idea to use a rebase-based update whenever possible. But don't hesitate to use the safer merge-based strategy when rebasing turns out to be troublesome. Let's just try to avoid a spaghetti-like commit log.
+
+![Git Chaos](images/git-chaos.png)
+
+## Deploy Scenarios
+
+In between deploys we often have to backport features and bugfixes to the staging and production branches: this will obviously make the branches diverge. Before deploying you're allowed to hard reset and force push the staging and production branches (after warning the other developers!) to make the git tree linear again.
+
+## Housekeeping
+
+Don't leave stale branches on github. Please delete the branches you aren't using anymore with
+
+    git push origin --delete BRANCHNAME
+
+To remove stale refs on your own working copy run
+
+    git remote prune origin
