@@ -53,9 +53,13 @@ Assuming everything works as expected on beta:
       cap production deploy
 
 1. On etengine_live, import the latest etsource. Make sure ETS production branch has been rebased/merged with master, since ete_production uses ETS' production branch.
-1. You should reindex the ETM content:
+1. You should reindex the ETM content by running this command on the console:
 
     RAILS_ENV=production bundle exec rake sunspot:reindex
+
+   Or using this capistrano recipe:
+
+    cap production solr:reindex
 
 
 # Post deploy checks
@@ -65,5 +69,12 @@ If new gems were added it might be a good idea to force restart the web server a
     sudo /etc/init.d/unicorn-etmodel restart  (on ETM)
     sudo /etc/init.d/unicorn-etengine restart (on ETE)
     sudo /etc/init.d/memcached restart        (on both)
+
+Another way to restart the unicorn process is through monit commands (the watchdog process):
+
+    sudo monit restart unicorn_etmodel_master  (on ETM)
+    sudo monit restart unicorn_etengine_master (on ETE)
+
+If the full-text search doesn't work, make sure SOLR is running (it's managed by a tomcat instance).
 
 When everything's fine you can remove the notice from the live server.
