@@ -16,8 +16,9 @@ DS will be responsible for implementation of functionality in Ruby.
 
 ## Time budget
 
-* Planned: 70 days
-* Used: 49.73 (80% of which by interns)
+* Planned: 70 days 
+* Used: 49.73 (80% of which by interns) (RD has registered
+  most of his hours under "Energy Storage (time-resolved)" since Oct 2012 
 * Planned running time: 01-02-2013 to 01-04-2013 DOES THIS MAKE SENSE?
 
 ## Scope
@@ -27,10 +28,10 @@ of electricity in the ETM.
 The ETM will give the user the option of dealing with excess production of 
 electricity in one of the following ways:
 
-1. Curtailment
-* Export
-* Conversion (e.g., into gas and heat) 
+1. Export
 * Storage
+* Conversion (e.g. into gas or heat)
+* Curtailment (discarding electricity, equivalent to turning off production)
 
 The user will be able to use the Merit Order module without storage. But needs 
 to use the Merit Order module to be able to use storage.
