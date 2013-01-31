@@ -2,6 +2,14 @@
 
 This is an organic project planning document for the Storage Project in the ETM.
 
+## Questions
+
+* What do we do with electricity to gas conversion? Does it get fed back into
+  the graph?? If yes, we have a lot of dependencies! (e.g. capacity of installed
+  converters, green gas, gas prices, etc., etc.)
+* When the user moves the slider of e.g. capacity of batteries, what does he expect?
+  - changing costs? if yes: how are we going to include costs of batteries etc.?
+
 ## Project Management
 
 * Management responsible: AW
