@@ -33,12 +33,15 @@ DS will be responsible for implementation of functionality in Ruby.
 
 This project concerns the implementation of storage, conversion and curtailement
 of electricity in the ETM. 
-The ETM will give the user the option of dealing with excess production of 
-electricity in one of the following ways:
+The following routes will be incorporated into the ETM/Merit Order model: 
 
 1. Export
-* Storage
-* Conversion (e.g. into gas or heat)
+* Storage (easiest trigger mechanisms) 
+  * storage in Electric Vehicle Batteries
+  * storage in utility sized battery storage 
+* Conversion 
+  * power - to - heat
+  * power - to - gas
 * Curtailment (discarding electricity, equivalent to turning off production)
 
 The user will be able to use the Merit Order module without storage. But needs 
@@ -60,7 +63,7 @@ electricity production. IT IS UNCLEAR WHAT THIS SLIDE CONTAINS: A RADIO BUTTON
 WITH THESE OPTIONS?
 
 1. Export
-* Store
+* Store - car/central storage
 * Convert to heat
 * Convert to gas
 * Curtail
