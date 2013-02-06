@@ -80,7 +80,7 @@ Storage%20Project%20within%20Merit%20Order.markdown]
 
 ## Deliverables
 
-* A comprehensive study of storage/conversion options.
+* A comprehensive study of storage/conversion options. For technology characterization, see https://github.com/quintel/documentation/blob/master/modules/merit_order/technology%20characterization.markdown
 
 * A 'Storage' slide where the user has options of dealing with excess 
 electricity production. Most likely we will give the user the option to set 
