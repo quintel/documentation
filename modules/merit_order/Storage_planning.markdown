@@ -5,10 +5,21 @@ This is an organic project planning document for the Storage Project in the ETM.
 ## Questions
 
 * What do we do with electricity to gas conversion? Does it get fed back into
-  the graph?? If yes, we have a lot of dependencies! (e.g. capacity of installed
+  the graph? If yes, we have a lot of dependencies! (e.g. capacity of installed
   converters, green gas, gas prices, etc., etc.)
 * When the user moves the slider of e.g. capacity of batteries, what does he expect?
   - changing costs? if yes: how are we going to include costs of batteries etc.?
+* How should the user choose for the different options of treatment? By setting 
+a potential? 
+  - This would mean a capacity (in Watt) for conversion channels and a capacity 
+  (in Watt) and a volume (MJ) available for power-to-power storage.
+* Will we use heat demand curves to model the capacity for power-to-heat 
+storage?
+  - Richard has data for this.
+  - Feels a bit over-engineered for the ETM though.
+* What will be the order of power-to-power, power-to-heat and power-to-gas?
+  - It would make sense to give power-to-power precedence over the conversion 
+  options because of limited availability and exergy arguments. TRUE AW & RD?
 
 ## Project Management
 
@@ -17,26 +28,37 @@ This is an organic project planning document for the Storage Project in the ETM.
 
 ## Roles and resources
 
-RD will be responsible for the bulk of the research. Supervised by AW.
-CK will be responsible for project management and technical supervision of RD.
-CK will be responsible for queries, inputs, chars, slides and sliders.
-DS will be responsible for implementation of functionality in Ruby.
+* RD will be responsible for the bulk of the research. Supervised by AW.
+* CK will be responsible for project management and technical supervision of RD.
+* CK will be responsible for queries, inputs, chars, slides and sliders.
+* DS will be responsible for implementation of functionality in Ruby.
+
+## Priority
+
+This project is less urgent than 
+
+1. Watt Nu?!
+* SER
+
+The project could possibly run parallel with the 'Input Tool' project as this 
+does not require CKs full attention.
 
 ## Time budget
 
 * Planned: 70 days 
 * Used: 49.73 (80% of which by interns) (RD has registered
   most of his hours under "Energy Storage (time-resolved)" since Oct 2012 
-* Planned running time: 01-02-2013 to 01-04-2013 DOES THIS MAKE SENSE?
+* Planned running time: 01-03-2013 to 01-05-2013 DOES THIS MAKE SENSE? It would 
+make sense to do this when Richard is still here.
 
 ## Scope
 
-This project concerns the implementation of storage, conversion and curtailement
-of electricity in the ETM. 
+This project concerns the implementation of storage, conversion and curtailment
+of **excess** electricity in the ETM. 
 The following routes will be incorporated into the ETM/Merit Order model: 
 
 1. Export
-* Storage (easiest trigger mechanisms) 
+* Storage
   * storage in Electric Vehicle Batteries
   * storage in utility sized battery storage 
 * Conversion 
@@ -50,34 +72,28 @@ to use the Merit Order module to be able to use storage.
 This project is not concerned with the graduation project of RD, although it 
 has overlap with, and benefits from his research for the University of Utrecht.
 
+The triggers for charging and discharging 
+
 The scope of the project is further limited to the specifications found on
 [https://github.com/quintel/documentation/blob/master/modules/merit_order/
 Storage%20Project%20within%20Merit%20Order.markdown]
 
-## Deliverables MANY THINGS TO DECIDE ON!
+## Deliverables
 
 * A comprehensive study of storage/conversion options.
 
 * A 'Storage' slide where the user has options of dealing with excess 
-electricity production. IT IS UNCLEAR WHAT THIS SLIDE CONTAINS: A RADIO BUTTON 
-WITH THESE OPTIONS?
+electricity production. Most likely we will give the user the option to set 
+a **potential** for the different options
 
-1. Export
-* Store - car/central storage
-* Convert to heat
-* Convert to gas
+1. Export (interconnector capacity in MW)
+* Store - car/central storage (charging rate in MW and charge volume in MJ)
+* Convert to heat (capacity in MW)
+* Convert to gas (capacity in MW)
 * Curtail
 
-We might also coniseder an implementation where the user can choose between
-
-1. Export
-* Store/Convert
-* Curtail
-
-and we choose a sensible **order** for the storage and conversion to be used.
-
-* A slider for the total volume of storage facilties? This may also take the 
-form of a market penetration of course. NOT CLEAR YET!
+NOTE: for electric cars, the potential (charge volume) is set by the market 
+share of electric cars in the transport sector.
 
 * Chart(s) to go with the slide mentioned above. WE HAVE TO DECIDE WHAT TO SHOW.
 One could think about a bezier curve with excess electricity production broken 
