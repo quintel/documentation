@@ -80,21 +80,31 @@ Storage%20Project%20within%20Merit%20Order.markdown]
 
 ## Deliverables
 
-* A comprehensive study of storage/conversion options. For technology characterization, see https://github.com/quintel/documentation/blob/master/modules/merit_order/technology%20characterization.markdown
-
+* A comprehensive study of storage/conversion options. 
+  For an overiew of availalbe storage technologies, see https://github.com/quintel/documentation/blob/master/modules/merit_order/technology%20characterization.markdown
 * A 'Storage' slide where the user has options of dealing with excess 
 electricity production. Most likely we will give the user the option to set 
 a **potential** for the different options
-
-1. Export (interconnector capacity in MW)
-* Store - car/central storage (charging rate in MW and charge volume in MJ)
-* Convert to heat (capacity in MW)
-* Convert to gas (capacity in MW)
-* Curtail
+  1. Export (interconnector capacity in MW)
+  * Store - car/central storage (charging rate in MW and charge volume in MJ)
+  * Convert to heat (capacity in MW)
+  * Convert to gas (capacity in MW)
+  * Curtail
 
 NOTE: for electric cars, the potential (charge volume) is set by the market 
 share of electric cars in the transport sector.
 
+* The following paramters have to be determined for each implementation
+   * nominal capacity (MW)
+   * full load hours ? (will be determined by merit order module. Do we need default FLH?)
+   * availability
+   * eff. output of nominal capacity
+   * intial investment
+   * lifetime
+   * cost for installing
+   * fixed operation and maintenance cost per year
+   * variable operation and maintenance cost per full load hour
+   * employment
 * Chart(s) to go with the slide mentioned above. WE HAVE TO DECIDE WHAT TO SHOW.
 One could think about a bezier curve with excess electricity production broken 
 down into:
