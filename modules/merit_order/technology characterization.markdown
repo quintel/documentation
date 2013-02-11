@@ -6,7 +6,9 @@ Richard Deuchler will maintain this file, update figures and link to sources.
 An overview of electricity storage options can be found here: http://refman
 .et-model.com/publications/1730
 
-### Power to Heat  Power to heat is activated if storage is fully charged or
+### Power to Heat  
+
+Power to heat is activated if storage is fully charged or
 the battery charging rate is not sufficient to avoid curtailment.
 
 current characterization P2H, to be validated by Hans Overdiep: 
