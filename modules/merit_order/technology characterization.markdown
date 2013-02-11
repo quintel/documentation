@@ -12,8 +12,8 @@ Power to heat is activated if storage is fully charged or
 the battery charging rate is not sufficient to avoid curtailment.
 
 current characterization P2H, to be validated by Hans Overdiep: 
-* There are 7,512,824 households in NL, with 2.2 persons / household. Daily demand for hot
-water: 132 per household (at 60 °C). This equates to a daily demand for hot
+* There are 7,512,824 households in NL, with 2.2 persons / household. Demand for hot
+water: 132 liter per household and day(at 60 °C). This equates to a daily demand for hot
 water of about 9 GJ, 7 kWh (and 287 W on average) 
 * The idea is to equip all suitable hot water heaters with power-to-heat conversion technology  
 * Only small tank are retrofitted: 100 liter tanks  
