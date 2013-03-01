@@ -1,13 +1,17 @@
-Profile specifications - how to make a 'good' profile for volatile participants
+### Profile specifications - how to make a 'good' profile for volatile participants
 
 #### Purpose 
 Collecting and documenting knowledge on how to build profiles for wind, solar, hydro etc. 
 #### How to make a profile
+
 **Research Data**. A profile should be based on actual measurement data. For volatile participants, this is usually the energy carrier that is exploited by the converter, e.g. wind speeds, light intensities, water flow. 
 If possible, data from different locations (but the same year) is combined. The wind profiles that we use in the ETM are based on about 4 measurement curves. Combining more curves leads to more smooth and less peaked profiles. A smoother profile will also be characterized by more full load hours. 
 (Note: do not average that data yet). 
+
 **Convert primary energy into el. output**. For each dataset, calculate the electricity output of the converter. This is done by applying conversion laws and efficiencies  (including for example, cut-in, cut-out speeds in case of wind, or peak-power in case of solar cells). 
+
 **Average power output**: Now, the electricity output can be averaged. (We average over distributed power generation output, not over distributed wind speeds or river flow). 
+
 **Normalize**: The averaged profile is normalized vertically so that the area under the profile is equal to 1/3600. Normalization is a hard constraint, it should be double-checked before a profile is included in the model. 
 Normalization ensures that the participant will produce the correct amount of MWh/year in merit order. This annual energy output is given by research data (effective capacity/unit and full load hours) and the user choices (number of units). 
 
