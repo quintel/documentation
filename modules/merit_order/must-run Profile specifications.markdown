@@ -31,7 +31,6 @@ This means that the participant always runs below nameplate capacity (e.g. solar
 ***FLH(profile) < FLH(ETM)***
 The merit order will calculate a max power generation that is above the installed capacity. 
 
-
 ##### Reasoning of why any profile should reflect the Full Load Hours of the participant
 *Full Load Hours (ETM)* is a figure defined in the ETM dataset
 *Full Load Hours (profile)* is determined only by the shape of the profile: 
@@ -39,14 +38,17 @@ The merit order will calculate a max power generation that is above the installe
 
 ###### Claim: The hourly power output can never surpass the installed nameplate capacity!
 This translates into: 
-*Number of Units * Effective Capacity 
-≧ Max(profile) * 3600 * Number of Units * Effective Capacity * Full Load Hours (ETM)*.         **[2]**
+
+*Number of Units * Effective Capacity ≧ Max(profile) * 3600 * Number of Units * Effective Capacity * Full Load Hours (ETM)*.         **[2]**
 
 The left side of the equation is the installed nameplate capacity. The right side of the equation is the maximum power output that can occur in the merit order 'load calculation'. Both sides equate to the unit of MW. 
 
 [2]--> *1 ≧ Max(profile) * 3600 * Full Load Hours (ETM)*
+
 with [1] and Total(profile) = 1/3600, this becomes
+
 [2]--> *Full Load Hours (profile) * 3600 * max(profile) ≧ Max(profile) * 3600 * Full Load Hours (ETM)*
+
 --> *Full Load Hours (profile) ≧ Full Load Hours (ETM)*
 
 This means that the Full Load Hours specified in ETM may never exceed the Full Load Hours of the profile (can easily happen for wind and even buildings_CHP). Of course, *Full Load Hours (profile) > Full Load Hours (ETM)* is possible. It just means that the participant always runs below nameplate capacity (e.g. solar PV in the Netherlands).
