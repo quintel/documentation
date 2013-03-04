@@ -6,18 +6,18 @@ Assuming everything works as expected on beta:
 
     http://et-model.com/admin/general_user_notifications
 
-1. Add git tags on current production branches (ETM, ETE, ETS)
-1. Backup production databases (etmodel/etengine) - use Sequel Pro, mysqldump or whatever suits you best
+1. Add git tags on current `production` branches (ETM, ETE, ETS) and push them up to `origin`. The current naming format is `production-YYYY-MM-DD`.
+1. Backup production databases (`etmodel` and `etengine`) - use Sequel Pro, `mysqldump` or whatever suits you best
 1. Prepare the new dbs, which will merge staging data with production data
    ## ETEngine
-   New database = ete_staging + (ete_production's scenarios and users)
+   New database = etengine_staging + (etengine (production) scenarios and users)
 
-   1. Create locally a new db (ete_new)
-   1. Dump ete_staging
-   1. Load the ete_staging dump into it
-   1. Dump from ete_production the users and scenarios tables
-   1. Load these tables on ete_new
-   1. Clean-up records on ete_new
+   1. Create locally a new db *ete_new*)
+   1. Dump *etengine_staging*
+   1. Load the *etengine_staging* dump into it
+   1. Dump from *etengine* (production) the `users` and `scenarios` tables
+   1. Load these tables on *ete_new*
+   1. Clean-up records on *ete_new*
      - remove stale scenarios:
        This query is a decent starting point, refine as neeeded:
        ```sql
@@ -28,31 +28,31 @@ Assuming everything works as expected on beta:
          AND (title = 'API' OR title IS NULL)
        ```
      - make other SQL fixes as needed
-   1. Dump ete_new
-   1. Load in on ete_production (overwrite production db)
+   1. Dump *ete_new*
+   1. Load *ete_new* on *etengine* (overwrite production db)
 
    ## ETModel
-   1. Create etm_new locally
-   1. Dump etm_staging
-   1. Load etm_staging dump
+   1. Create *etm_new* locally
+   1. Dump *etmodel_staging*
+   1. Load *etmodel_staging* dump on *etm_new*
    1. Tables you should overwrite:
-     - comments
-     - saved_scenarios
-     - users
-     Dump the content of these tables (from etm_production) and load the dump on etm_new
+     - `comments`
+     - `saved_scenarios`
+     - `users`
+     Dump the content of these tables (from *etmodel* (production)) and load the dump on *etm_new*
    1. Clean up stale records as needed
       ```sql
        DELETE FROM sessions;
        ```
-   1. Dump etm_new
-   1. Import etm_new on etm_live
+   1. Dump *etm_new*
+   1. Overwrite *etmodel* (production) with *etm_new*
 
 1. Merge/rebase the production branch of each application on top of staging. Force push if you have to, try to keep the git history as linear as possible
 1. Deploy the application (both ETE and ETM)
 
       cap production deploy
 
-1. On etengine_live, import the latest etsource. Make sure ETS production branch has been rebased/merged with master, since ete_production uses ETS' production branch.
+1. On et-engine.com (production), import the latest etsource. Make sure ETS `production` branch has been rebased/merged with `master`, since et-engine.com live uses ETS' `production` branch.
 1. You should reindex the ETM content by running this command on the console:
 
     RAILS_ENV=production bundle exec rake sunspot:reindex
@@ -77,4 +77,4 @@ Another way to restart the unicorn process is through monit commands (the watchd
 
 If the full-text search doesn't work, make sure SOLR is running (it's managed by a tomcat instance).
 
-When everything's fine you can remove the notice from the live server.
+When everything's fine you can remove the notice from the live server (unless it was removed when you overwrote the production database).
