@@ -12,7 +12,7 @@ Assuming everything works as expected on beta:
    ## ETEngine
    New database = etengine_staging + (etengine (production) scenarios and users)
 
-   1. Create locally a new db *ete_new*)
+   1. Create locally a new db *ete_new*
    1. Dump *etengine_staging*
    1. Load the *etengine_staging* dump into it
    1. Dump from *etengine* (production) the `users` and `scenarios` tables
@@ -20,7 +20,7 @@ Assuming everything works as expected on beta:
    1. Clean-up records on *ete_new*
      - remove stale scenarios:
        This query is a decent starting point, refine as neeeded:
-       ```sql
+       ```
        DELETE FROM scenarios WHERE
          user_id IS NULL
          AND protected IS NULL
@@ -41,25 +41,25 @@ Assuming everything works as expected on beta:
      - `users`
      Dump the content of these tables (from *etmodel* (production)) and load the dump on *etm_new*
    1. Clean up stale records as needed
-      ```sql
-       DELETE FROM sessions;
-       ```
+      ```
+      DELETE FROM sessions;
+      ```
    1. Dump *etm_new*
    1. Overwrite *etmodel* (production) with *etm_new*
 
 1. Merge/rebase the production branch of each application on top of staging. Force push if you have to, try to keep the git history as linear as possible
 1. Deploy the application (both ETE and ETM)
 
-      cap production deploy
+       cap production deploy
 
 1. On et-engine.com (production), import the latest etsource. Make sure ETS `production` branch has been rebased/merged with `master`, since et-engine.com live uses ETS' `production` branch.
 1. You should reindex the ETM content by running this command on the console:
 
-    RAILS_ENV=production bundle exec rake sunspot:reindex
+       RAILS_ENV=production bundle exec rake sunspot:reindex
 
    Or using this capistrano recipe:
 
-    cap production solr:reindex
+       cap production solr:reindex
 
 
 # Post deploy checks
