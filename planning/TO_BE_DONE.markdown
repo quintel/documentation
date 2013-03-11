@@ -7,10 +7,9 @@ issues.
 
 ### High
 
-1. Coupling carrier
-2. Input Excel
-3. Data sets
-4. Input statements clean up
+1. Input Excel
+* Data sets
+* Input statements clean up
 
 ### Medium
 
@@ -22,13 +21,15 @@ issues.
 ### Low
 
 1. Space heater demand buildings
-2. CHP clean up: technical specifications (issues present on [input_excel]
-3. Devices/appliances Labels should be removed
-4. Time curves (possibly cleaned up with flex max?)A
-5. Industry: Cokes production does not follow demand
-6. Converter names without carrier
-7. the `undefined` carrier
-8. Plant dataset, 'state of the art'
+* CHP clean up: technical specifications (issues present on [input_excel]
+* Devices/appliances Labels should be removed
+* Time curves (possibly cleaned up with flex max?)
+* Industry: Cokes production does not follow demand
+* Coupling carrier replacement
+* Converter names without carrier
+* the `undefined` carrier
+* Plant dataset, 'state of the art'
+
 
 ## Wishes
 
