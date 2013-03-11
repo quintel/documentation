@@ -15,6 +15,8 @@ If possible, data from different locations (but the same year) is combined. The 
 **Normalize**: The averaged profile is normalized vertically so that the area under the profile is equal to 1/3600. Normalization is a hard constraint, it should be double-checked before a profile is included in the model. 
 Normalization ensures that the participant will produce the correct amount of MWh/year in merit order. This annual energy output is given by research data (effective capacity/unit and full load hours) and the user choices (number of units). 
 
+**Save as Windows-CSV**: If the profile should be readable for the et-engine, it has to be saved in a CSV file that has windows-syle newline commands. In Excel, you need to save the profile as "Windows Comma Separated (.csv)". 
+
 ##### The profile *"should"* also reflect the Full Load Hours of the participant 
 A profile has an intrinsic full load hour characteristic that is described by 
 *Full Load Hours (profile) = Total(profile) / Max(profile)*. 
