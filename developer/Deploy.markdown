@@ -20,13 +20,16 @@ Assuming everything works as expected on beta:
    1. Clean-up records on *ete_new*
      - remove stale scenarios:
        This query is a decent starting point, refine as neeeded:
-       ```
-       DELETE FROM scenarios WHERE
-         user_id IS NULL
-         AND protected IS NULL
-         AND description IS NULL
-         AND (title = 'API' OR title IS NULL)
-       ```
+
+        ```
+        DELETE FROM scenarios WHERE
+        user_id IS NULL
+        AND protected IS NULL
+        AND description IS NULL
+        AND scenarios.created_at < DATE_ADD(NOW(), INTERVAL -4 WEEK)
+        AND (title = 'API' OR title IS NULL)
+        ```
+
      - make other SQL fixes as needed
    1. Dump *ete_new*
    1. Load *ete_new* on *etengine* (overwrite production db)
