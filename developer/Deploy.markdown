@@ -64,6 +64,7 @@ Assuming everything works as expected on beta:
 
        cap production solr:reindex
 
+
 1. Go to http://et-model.com/admin and click on 'clear cache'
 
 # Post deploy checks
