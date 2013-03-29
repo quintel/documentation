@@ -1,3 +1,4 @@
+
 # Deploy Procedure
 
 Assuming everything works as expected on beta:
@@ -63,7 +64,8 @@ Assuming everything works as expected on beta:
    Or using this capistrano recipe:
 
        cap production solr:reindex
-
+    
+1. Go to http://et-model.com/admin and click on 'clear cache'
 
 # Post deploy checks
 
