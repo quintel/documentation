@@ -30,7 +30,7 @@ New database = etengine_staging + (etengine (production) scenarios and users)
     AND scenarios.created_at < DATE_ADD(NOW(), INTERVAL -4 WEEK)
     AND (title = 'API' OR title IS NULL)
     ```
-
+ - remove scenarios that have been added to etsource as 'preset scenarios' (otherwise the engine runs into troubles described in https://github.com/quintel/etmodel/issues/1321)
  - make other SQL fixes as needed
 1. Dump *ete_new*
 1. Load *ete_new* on *etengine* (overwrite production db)
