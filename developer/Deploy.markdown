@@ -48,6 +48,7 @@ New database = etengine_staging + (etengine (production) scenarios and users)
   ```
   DELETE FROM sessions;
   ```
+1. Deleted preset scenarios from the user/scenario mapping on etmodel (see https://github.com/quintel/etmodel/issues/1321)
 1. Dump *etm_new*
 1. Overwrite *etmodel* (production) with *etm_new*
 
