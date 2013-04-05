@@ -1,5 +1,5 @@
 ### Excess-Electricity Module
-##### This is to enhance the discussion of what is to become of the first "storaga" (really: excess electricity) implemenation
+##### This is to enhance the discussion of what is to become of the first "storage" (really: excess electricity) implemenation
 ________
 #### Definitions: 
 Excess power = negative residual load
