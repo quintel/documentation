@@ -22,7 +22,7 @@ Must-run = CHPs that follow a profile (everything that is not volatile and opera
 
 #### 2. Chart (that appears when clicking on the dashboard item)
 * Display a ranking (table) of the technologies that is determined by an economic indicator. And show the investment cost and other data. 
-* BUT: 
+ * BUT: 
  * Do we adapt the parameters to the actual slider settings? To the data in etsource? What if there are no electric cars? Would the power-to-battery route become unavailable? 
  * Under which constraints? 90 % curtailment reduction? Installed capacity? 
  * Do we say anything about the reduction potential? 
