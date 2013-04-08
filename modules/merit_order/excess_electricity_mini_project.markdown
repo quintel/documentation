@@ -1,11 +1,11 @@
 ### Excess-Electricity Module
-##### This is to enhance the discussion of what is to become of the first "storage" (really: excess electricity) implemenation
+##### This is to enhance the discussion of what is to become of the first "storage" implementation (really: excess electricity)
 ________
 #### Definitions: 
-Excess power = negative residual load
-Residual load = demand – must-run – volatiles
-volatiles = wind + solar + hydro (everything driven by ‘nature’)
-Must-run = CHPs that follow a profile (everything that is not volatile and operates regardless of electricity price) 
+* Excess power = negative residual load
+* Residual load = demand – must-run – volatiles
+* volatiles = wind + solar + hydro (everything driven by ‘nature’)
+* Must-run = CHPs that follow a profile (everything that is not volatile and operates regardless of electricity price) 
 
 #### Technical requirements:
 * extract the amount of excess from the merit order calculation 
