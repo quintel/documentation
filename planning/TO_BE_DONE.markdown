@@ -13,15 +13,15 @@ issues.
 
 ### Medium
 
-1. Households: Merging hot water and space heating devices 
-2. Households and building insulations: destroy and rebuild in gqueries/inputs
+1. CHP clean up: technical specifications (issues present on [input_excel]
+* Households and building insulations: destroy and rebuild in gqueries/inputs
    in [ETSource], and research data.
-3. Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
+* Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
 
 ### Low
 
 1. Space heater demand buildings
-* CHP clean up: technical specifications (issues present on [input_excel]
+* Households: Merging hot water and space heating devices 
 * Devices/appliances Labels should be removed
 * Time curves (possibly cleaned up with flex max?)
 * Industry: Cokes production does not follow demand
