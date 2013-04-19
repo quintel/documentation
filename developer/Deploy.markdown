@@ -34,6 +34,7 @@ New database = etengine_staging + (etengine (production) scenarios and users)
  - make other SQL fixes as needed
 1. Dump *ete_new*
 1. Load *ete_new* on *etengine* (overwrite production db)
+1. Run bulk_update rake task (talk to Chael first) to update slidervalues to changes in the ETM. 
 
 ## ETModel
 1. Create *etm_new* locally
