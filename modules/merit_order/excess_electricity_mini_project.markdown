@@ -15,7 +15,8 @@ All non-dispatchable participants can cause excess electricity, and therefore ar
 The denominator represents the total non-dispatchable production, it does NOT refer to the energy that is required by domestic demand. 
 
 #### Technical requirements:
-* extract the amount of hourly excess from the merit order calculation. 
+* The dashboard item can only display a number if merit order is 'on'. 
+* The amount of all hourly excess needs to be extracted from the merit order calculation. 
 * Sum of hourly excess electricity: annual excess in MWh. 
 * The amount of energy produced by non-dispatchable participants is known already. It needs to be summed up for the dashboard item. 
  
