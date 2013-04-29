@@ -25,7 +25,7 @@ The denominator represents the total non-dispatchable production, it does NOT re
  * It is possible that excess is caused by lots of fossil-driven CHPs in scenarios << 20 % renewable electricity. 
 * The figure in the dashboard will be in the range of 0 - 100 %.
 * The dashboard item can also display the amount of excess (MWh) instead of a percentage. 
-________
+
 ## Diagram of Capacities
 We want to display a chart to the user that compares the capacity of excess electricity to the capacity of the technologies that could potentially deal with the excess. 
 This chart is supposed to be dynamic, i.e. it is supposed to update according to certain slider settings. For example, building more electric vehicles or increasing the number of certain heating technologies, will increase the capacity of the power-to-power/heat technology. 
@@ -38,7 +38,7 @@ The chart will display two vertically stacked bars: The first one displays the m
 * Power-to-heat: The amount of certain heating technology will influence the conversion capacity
 * Power-to-gas: The capacity for hydrogen production is not known --> problematic!!
 * The peak in the excess electricity curve has to be extracted from merit order calculation. 
-___________
+
 ## Diagram of costs?
 We also want to display some information about the costs that are linked to the conversion/storage of excess electricity. 
 The motivation is a question like this: "What is the cheapest way to boost the share of renewable energy/electricity?" 
