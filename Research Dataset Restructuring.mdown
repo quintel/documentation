@@ -39,11 +39,12 @@ should we get rid of it?
 1 Research data to input data is a process
   * Consists of multiple steps
   * Occurs in a certain order
-  * Hinges on several key analyses CHP 
+  * Hinges on several key analyses 
+    - CHP 
     - power and heat
     - metal sector
     - etc
-* We need these analysis tools (for now a spreadsheet) that we can use to do 
+2 We need these analysis tools (for now a spreadsheet) that we can use to do 
 the data interpretation from research data to input data
   * Each analysis has a recognizable and uniform format and structure 
   (dashboard, assumptions, calculations, sources, etc)
