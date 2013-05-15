@@ -36,33 +36,37 @@ should we get rid of it?
 * All analysis online in an inputtool
 
 ## Working hypotheses
-<sl>
+<ol>
 <li> Research data to input data is a process</li>
-<ul>
+  <ul>
   <li> Consists of multiple steps</li>
   <li> Occurs in a certain order</li>
   <li> Hinges on several key analyses</li> 
-    </ul>
+    <ul>
     <li> CHP</li> 
     <li> power and heat</li>
     <li> metal sector</li>
     <li> etc</li>
     </ul>
-</ul>
+  </ul>
 
 <li> We need these analysis tools (for now a spreadsheet) that we can use to do 
 the data interpretation from research data to input data</li>
-  * Each analysis has a recognizable and uniform format and structure 
-  (dashboard, assumptions, calculations, sources, etc)
-  * Each analysis can open/import/use the data for all supported countries 
-  (CHALLENGE!)
-  * To keep it well documented and transparent we need multiple sheets per 
-  analysis
-  * Such analysis tools will present
-    - Challenges for version control
-    - Challenges for maintainability
-    - Challenges for transparency
-</sl>
+  <ul>
+  <li> Each analysis has a recognizable and uniform format and structure 
+  (dashboard, assumptions, calculations, sources, etc) </li>
+  <li> Each analysis can open/import/use the data for all supported countries 
+  (CHALLENGE!)</li>
+  <li> To keep it well documented and transparent we need multiple sheets per 
+  analysis</li>
+  <li> Such analysis tools will present</li>
+    <ul>
+    <li> Challenges for version control</li>
+    <li> Challenges for maintainability</li>
+    <li> Challenges for transparency</li>
+    </ul>
+  </ul>
+</ol>
 
 ## Key questions / dilemmas
 * We anticipate spreadsheet tool will remain necessary. How can we maintain 
