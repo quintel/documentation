@@ -40,10 +40,10 @@ should we get rid of it?
   * Consists of multiple steps
   * Occurs in a certain order
   * Hinges on several key analyses
-    * CHP 
-    * power and heat
-    * metal sector
-    * etc
+    - CHP 
+    - power and heat
+    - metal sector
+    - etc
 * We need these analysis tools (for now a spreadsheet) that we can use to do 
 the data interpretation from research data to input data
   * Each analysis has a recognizable and uniform format and structure 
@@ -53,9 +53,9 @@ the data interpretation from research data to input data
   * To keep it well documented and transparent we need multiple sheets per 
   analysis
   * Such analysis tools will present
-    ** Challenges for version control
-    ** Challenges for transparency
-    ** Challenges for maintainability
+    - Challenges for version control
+    - Challenges for maintainability
+    - Challenges for transparency
 
 ## Key questions / dilemmas
 * We anticipate spreadsheet tool will remain necessary. How can we maintain 
