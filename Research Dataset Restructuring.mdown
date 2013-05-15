@@ -49,8 +49,8 @@ should we get rid of it?
     <li> etc</li>
     </ul>
   </ul>
-<li> We need these analysis tools (for now a spreadsheet) that we can use to do 
-the data interpretation from research data to input data</li>
+2. We need these analysis tools (for now a spreadsheet) that we can use to do
+the data interpretation from research data to input data  
   <ul>
   <li> Each analysis has a recognizable and uniform format and structure 
   (dashboard, assumptions, calculations, sources, etc) </li>
