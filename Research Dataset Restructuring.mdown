@@ -44,6 +44,7 @@ should we get rid of it?
     - power and heat
     - metal sector
     - etc
+
 2 We need these analysis tools (for now a spreadsheet) that we can use to do 
 the data interpretation from research data to input data
   * Each analysis has a recognizable and uniform format and structure 
