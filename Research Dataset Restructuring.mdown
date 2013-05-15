@@ -53,9 +53,9 @@ the data interpretation from research data to input data
   * To keep it well documented and transparent we need multiple sheets per 
   analysis
   * Such analysis tools will present
-    * Challenges for version control
-    * Challenges for transparency
-    * Challenges for maintainability
+    ** Challenges for version control
+    ** Challenges for transparency
+    ** Challenges for maintainability
 
 ## Key questions / dilemmas
 * We anticipate spreadsheet tool will remain necessary. How can we maintain 
