@@ -36,11 +36,10 @@ should we get rid of it?
 * All analysis online in an inputtool
 
 ## Working hypotheses
-* Research data to input data is a process
+1 Research data to input data is a process
   * Consists of multiple steps
   * Occurs in a certain order
-  * Hinges on several key analyses
-    - CHP 
+  * Hinges on several key analyses CHP 
     - power and heat
     - metal sector
     - etc
