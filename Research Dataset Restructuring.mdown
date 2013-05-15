@@ -36,8 +36,7 @@ should we get rid of it?
 * All analysis online in an inputtool
 
 ## Working hypotheses
-<ol>
-<li> Research data to input data is a process</li>
+1. Research data to input data is a process
   <ul>
   <li> Consists of multiple steps</li>
   <li> Occurs in a certain order</li>
@@ -50,7 +49,7 @@ should we get rid of it?
     </ul>
   </ul>
 2. We need these analysis tools (for now a spreadsheet) that we can use to do
-the data interpretation from research data to input data  
+the data interpretation from research data to input data
   <ul>
   <li> Each analysis has a recognizable and uniform format and structure 
   (dashboard, assumptions, calculations, sources, etc) </li>
@@ -65,7 +64,6 @@ the data interpretation from research data to input data
     <li> Challenges for transparency</li>
     </ul>
   </ul>
-</ol>
 
 ## Key questions / dilemmas
 * We anticipate spreadsheet tool will remain necessary. How can we maintain 
