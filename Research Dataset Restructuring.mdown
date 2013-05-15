@@ -36,17 +36,22 @@ should we get rid of it?
 * All analysis online in an inputtool
 
 ## Working hypotheses
-1. Research data to input data is a process
-  * Consists of multiple steps
-  * Occurs in a certain order
-  * Hinges on several key analyses 
-    - CHP 
-    - power and heat
-    - metal sector
-    - etc
+<sl>
+<li> Research data to input data is a process</li>
+<ul>
+  <li> Consists of multiple steps</li>
+  <li> Occurs in a certain order</li>
+  <li> Hinges on several key analyses</li> 
+    </ul>
+    <li> CHP</li> 
+    <li> power and heat</li>
+    <li> metal sector</li>
+    <li> etc</li>
+    </ul>
+</ul>
 
-2. We need these analysis tools (for now a spreadsheet) that we can use to do 
-the data interpretation from research data to input data
+<li> We need these analysis tools (for now a spreadsheet) that we can use to do 
+the data interpretation from research data to input data</li>
   * Each analysis has a recognizable and uniform format and structure 
   (dashboard, assumptions, calculations, sources, etc)
   * Each analysis can open/import/use the data for all supported countries 
@@ -57,6 +62,7 @@ the data interpretation from research data to input data
     - Challenges for version control
     - Challenges for maintainability
     - Challenges for transparency
+</sl>
 
 ## Key questions / dilemmas
 * We anticipate spreadsheet tool will remain necessary. How can we maintain 
