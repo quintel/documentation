@@ -13,11 +13,11 @@ issues.
 
 ### Medium
 
-1. CHP clean up: technical specifications (issues present on [input_excel]
-* Households and building insulations: destroy and rebuild in gqueries/inputs
+1. Households and building insulations: destroy and rebuild in gqueries/inputs
    in [ETSource], and research data.
 * Clean up etengine back-end information (and display)
 * Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
+* Remaining CHP cleanup: variable O&M costs and profiles.
 
 ### Low
 
