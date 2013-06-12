@@ -15,7 +15,7 @@ If possible, data from different locations (but the same year) is combined. The 
 **Normalize**: The averaged profile is normalized vertically so that the area under the profile is equal to 1/3600. Normalization is a hard constraint, it should be double-checked before a profile is included in the model. 
 Normalization ensures that the participant will produce the correct amount of MWh/year in merit order. This annual energy output is given by research data (effective capacity/unit and full load hours) and the user choices (number of units). 
 
-**Save as Windows-CSV**: If the profile should be readable for the et-engine, it has to be saved in a CSV file that has windows-syle newline commands. In Excel, you need to save the profile as "Windows Comma Separated (.csv)". 
+**Save as Windows-CSV**: If the profile should be readable for the et-engine, it has to be saved in a CSV file that has windows-style newline commands. In Excel, you need to save the profile as "Windows Comma Separated (.csv)". 
 
 ##### The profile *"should"* also reflect the Full Load Hours of the participant 
 A profile has an intrinsic full load hour characteristic that is described by 
@@ -23,6 +23,7 @@ A profile has an intrinsic full load hour characteristic that is described by
 It might conflict with the ETM dataset: If wind turbines with a nameplate capacity of 3 GW are installed, it should not happen that the merit order will run them at 5 GW in certain hours of the year. (this can be caused by the shape of the profile. Especially at little full load hours, the peaks may exceed installed generation capacity)
 This problem can only be avoided if the full load hours of the ETM and the profile match (see below). 
 Unfortunately, the FLH(profile) can only be changed by *messing around* with the research data: A profile is made from measurements and converted into electric output by a physical law. Officially, there is no 'freedom' of shaping the profile so that the peaks match the maximum allowed power production. 
+This is the reason why, for example, the hub height is changed in the wind profile generation. Technically, the wind speeds are scaled down by lowering the hub height, but there is no other way of making the full load hours fit. 
 
 ***FLH(profile) = FLH(ETM)***
 The maximum power output of the respective participant matches exactly to the installed capacity. 
