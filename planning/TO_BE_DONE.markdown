@@ -9,20 +9,27 @@ issues.
 
 1. Input Excel
 * Data sets
-* Input statements clean up
 
 ### Medium
 
 1. Households and building insulations: destroy and rebuild in gqueries/inputs
    in [ETSource], and research data.
-* Clean up etengine back-end information (and display)
+* Households: Merging hot water and space heating devices 
+* Input statements clean up
+* Charts and gqueries clean up
+    * Charts should be made consistent
+    * Gqueries should be put in clear folder structure
+    * Gqueries should be robust to changing graph (make use of uniquely and 
+    centrally defined converter groups)
+    * Gqueries should be re-used as much as possible
+    * Gqueries should use the same (clean) syntax
 * Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
 * Remaining CHP cleanup: variable O&M costs and profiles.
 
 ### Low
 
 1. Space heater demand buildings
-* Households: Merging hot water and space heating devices 
+* Clean up etengine back-end information (and display)
 * Devices/appliances Labels should be removed
 * Time curves (possibly cleaned up with flex max?)
 * Industry: Cokes production does not follow demand
