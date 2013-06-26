@@ -2,9 +2,9 @@
 
 Assuming everything works as expected on beta:
 
-1. Add a notice on live server
+1. Put up the maintenance page on ET-Model:
 
-    http://et-model.com/admin/general_user_notifications
+    `dev/etmodel$ cap production maintenance:offline`
 
 1. Add git tags on current `production` branches (ETM, ETE, ETS) and push them up to `origin`. The current naming format is `production-YYYY-MM-DD`.
 1. Backup production databases (`etmodel` and `etengine`) - use Sequel Pro, `mysqldump` or whatever suits you best
