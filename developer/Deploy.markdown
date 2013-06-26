@@ -44,6 +44,8 @@ New database = etengine_staging + (etengine (production) scenarios and users)
  - `comments`
  - `saved_scenarios`
  - `users`
+ - `press_releases`
+
  Dump the content of these tables (from *etmodel* (production)) and load the dump on *etm_new*
 1. Clean up stale records as needed
   ```
