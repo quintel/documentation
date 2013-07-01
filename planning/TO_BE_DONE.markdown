@@ -29,7 +29,7 @@ issues.
 
 ### Low
 
-1. Space heater demand buildings
+1. Space heating demand buildings (research of technologies used etc.)
 * Clean up etengine back-end information (and display)
 * Devices/appliances Labels should be removed
 * Time curves (possibly cleaned up with flex max?)
