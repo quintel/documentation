@@ -18,7 +18,7 @@ In the midst of doing a clean install on my new MacBook, I realized I should log
 - Install git up. It's the bomb. `gem install git-up`
 
 ### RSA keys
-- Generate new RSA keys for your own computer `ssh-keygen -t RSA -C "yourname@quintel.com"`
+- Generate new RSA keys for your own computer `ssh-keygen -t rsa -C "yourname@quintel.com"`
   (decide for yourself whether or not you would like to use a passphrase)
 - Put your own `config` in your `~/.ssh` directory
 
