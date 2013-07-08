@@ -51,6 +51,7 @@ In the midst of doing a clean install on my new MacBook, I realized I should log
 
 ### MySQL
 - Install latest version of MySQL using the [Native Package](http://dev.mysql.com/downloads/mysql/5.5.html#macosx-dmg) (choose the 64-bit version and just press 'download', you don't need to fill in the whole form.). You can also use `brew install mysql`, but then you will not have the PrefPane options, and a lot more verbose to get everything to run (and it takes longer!). 
+- Install the CLI with `brew install mysql`
 - If you run into a weird `.dylib` error, run the following command (from [StackOverflow](http://stackoverflow.com/questions/4546698/library-not-loaded-libmysqlclient-16-dylib-error-when-trying-to-run-rails-serv)):
 `sudo ln -s /usr/local/mysql/lib/libmysqlclient.18.dylib /usr/lib/libmysqlclient.18.dylib`
 
