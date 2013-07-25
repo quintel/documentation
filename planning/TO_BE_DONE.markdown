@@ -15,7 +15,7 @@ issues.
 1. Households and building insulations: destroy and rebuild in gqueries/inputs
    in [ETSource], and research data.
 * Households: Merging hot water and space heating devices 
-* Households: Interface clean up
+* Input statements clean up
 * Charts and gqueries clean up
     * Charts should be made consistent
     * Gqueries should be put in clear folder structure
@@ -23,9 +23,9 @@ issues.
     centrally defined converter groups)
     * Gqueries should be re-used as much as possible
     * Gqueries should use the same (clean) syntax
-* Input statements clean up
 * Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
 * Remaining CHP cleanup: variable O&M costs and profiles.
+* Coupling carrier replacement (Embedded Graphs)
 
 ### Low
 
@@ -34,7 +34,6 @@ issues.
 * Devices/appliances Labels should be removed
 * Time curves (possibly cleaned up with flex max?)
 * Industry: Cokes production does not follow demand
-* Coupling carrier replacement
 * Converter names without carrier
 * the `undefined` carrier
 * Plant dataset, 'state of the art'
