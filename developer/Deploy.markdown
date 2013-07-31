@@ -63,12 +63,7 @@ New database = etengine_staging + (etengine (production) scenarios and users)
 1. On et-engine.com (production), import the latest etsource. Make sure ETS `production` branch has been rebased/merged with `master`, since et-engine.com live uses ETS' `production` branch.
 1. You should reindex the ETM content by running this command on the console:
 
-         RAILS_ENV=production bundle exec rake sunspot:reindex
-
-   Or using this capistrano recipe:
-
-        cap production solr:reindex
-
+        RAILS_ENV=production bundle exec rake sunspot:reindex
 
 1. Go to http://et-model.com/admin and click on 'clear cache'
 1. Run bulk_update rake task on ETEngine (talk to Chael first) to update slidervalues to changes in the ETM. 
