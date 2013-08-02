@@ -30,6 +30,7 @@ issues.
 ### Low
 
 1. Space heating demand buildings (research of technologies used etc.)
+* Re-model the way solar thermal heaters and heatpump add-ons are modeled
 * Clean up etengine back-end information (and display)
 * Devices/appliances Labels should be removed
 * Time curves (possibly cleaned up with flex max?)
