@@ -23,6 +23,7 @@ issues.
     centrally defined converter groups)
     * Gqueries should be re-used as much as possible
     * Gqueries should use the same (clean) syntax
+* Network properties (analysis and research is not maintainable / validatable)
 * Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
 * Remaining CHP cleanup: variable O&M costs and profiles.
 * Coupling carrier replacement (Embedded Graphs)
