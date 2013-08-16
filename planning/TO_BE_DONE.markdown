@@ -27,7 +27,7 @@ issues.
 * Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
 * Remaining CHP cleanup: variable O&M costs and profiles.
 * Coupling carrier replacement (Embedded Graphs)
-* Mixers vs. speudo-mixers: do we want to get rid of either one?
+
 
 ### Low
 
@@ -41,7 +41,7 @@ issues.
 * the `undefined` carrier
 * Plant dataset, 'state of the art'
 * Heat representation in ETM
-
+* Mixers vs. speudo-mixers: do we want to get rid of either one?
 
 ## Wishes
 
