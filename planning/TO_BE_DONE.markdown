@@ -7,15 +7,11 @@ issues.
 
 ### High
 
-1. Input Excel
-* Data sets
+1. Data sets
 
 ### Medium
 
-1. Households and building insulations: destroy and rebuild in gqueries/inputs
-   in [ETSource], and research data.
-* Households: Merging hot water and space heating devices 
-* Input statements clean up
+1. Households: Merging hot water and space heating devices 
 * Charts and gqueries clean up
     * Charts should be made consistent
     * Gqueries should be put in clear folder structure
@@ -23,6 +19,7 @@ issues.
     centrally defined converter groups)
     * Gqueries should be re-used as much as possible
     * Gqueries should use the same (clean) syntax
+* Input statements clean up
 * Network properties (analysis and research is not maintainable / validatable)
 * Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
 * Remaining CHP cleanup: variable O&M costs and profiles.
@@ -41,7 +38,6 @@ issues.
 * the `undefined` carrier
 * Plant dataset, 'state of the art'
 * Heat representation in ETM
-* Mixers vs. speudo-mixers: do we want to get rid of either one?
 
 ## Wishes
 
