@@ -47,9 +47,6 @@ issues.
    * follows foreign demand
    * priorities
    * period between now and future and affects total reserves
-* ETSource Object Mapper
-* Division of Node / Converter
 * Simpler way to make charts (possibly without gqueries)
 
-[input_excel][http://github.com/quintel/input_excel]
 [ETSource][http://github.com/quintel/etsource]
