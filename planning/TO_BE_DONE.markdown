@@ -7,10 +7,6 @@ issues.
 
 ### High
 
-1. Data sets
-
-### Medium
-
 1. Households: Merging hot water and space heating devices 
 * Charts and gqueries clean up
     * Charts should be made consistent
@@ -20,7 +16,10 @@ issues.
     * Gqueries should be re-used as much as possible
     * Gqueries should use the same (clean) syntax
 * Input statements clean up
-* Network properties (analysis and research is not maintainable / validatable)
+
+### Medium
+
+1. Network properties (analysis and research is not maintainable / validatable)
 * Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
 * Remaining CHP cleanup: variable O&M costs and profiles.
 * Coupling carrier replacement (Embedded Graphs)
