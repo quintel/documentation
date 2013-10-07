@@ -7,14 +7,14 @@ issues.
 
 ### High
 
-1. Households: Merging hot water and space heating devices 
-* Charts and gqueries clean up
+1. Charts and gqueries clean up
     * Charts should be made consistent
     * Gqueries should be put in clear folder structure
     * Gqueries should be robust to changing graph (make use of uniquely and 
     centrally defined converter groups)
     * Gqueries should be re-used as much as possible
     * Gqueries should use the same (clean) syntax
+* Remove 'average_effective_output_of_nominal_capacity_over_lifetime'
 * Input statements clean up
 
 ### Medium
