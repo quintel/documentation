@@ -20,7 +20,8 @@ Normalization ensures that the participant will produce the correct amount of MW
 ##### The profile *"should"* also reflect the Full Load Hours of the participant 
 A profile has a 'intrinsic' full load hour characteristic that is described by 
 *Full Load Hours (profile) = Total(profile) / Max(profile)* (Assuming that the peak of the profile is equivalent to the total installed capacity, which is most likely not the case)
-It might conflict with the ETM dataset: If wind turbines with a nameplate capacity of 3 GW are installed, it should not happen that the merit order will run them at 5 GW in certain hours of the year. (this can be caused by the shape of the profile. Especially at little full load hours, the peaks may exceed installed generation capacity)
+
+A profile may be in conflict with the ETM dataset: If wind turbines with a nameplate capacity of 3 GW are installed, it should not happen that the merit order will run them at 5 GW in certain hours of the year. (this can be caused by the shape of the profile. Especially at little full load hours, the peaks may exceed installed generation capacity)
 This problem can only be avoided if the full load hours of the ETM and the profile match (see below). 
 Unfortunately, the FLH(profile) can only be changed by *messing around* with the research data: A profile is made from measurements and converted into electric output by a physical law. Officially, there is no 'freedom' of shaping the profile so that the peaks match the maximum allowed power production. 
 This is the reason why, for example, the hub height is changed in the wind profile generation. Technically, the wind speeds are scaled down by lowering the hub height, but there is no other way of making the full load hours fit. 
