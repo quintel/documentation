@@ -13,6 +13,9 @@ Assuming everything works as expected on beta:
 ## ETEngine
 New database = etengine_staging + (etengine (production) scenarios and users)
 
+1. Make a note of the ETSource revision in use on the staging server. We will
+   need to know this later so that we can ensure that the new production
+   deployment uses the same version.
 1. Create locally a new db *ete_new*
 1. Dump *etengine_staging*
 1. Load the *etengine_staging* dump into it
@@ -22,7 +25,7 @@ New database = etengine_staging + (etengine (production) scenarios and users)
  - remove stale scenarios:
    This query is a decent starting point, refine as neeeded:
 
-    ```
+    ```sql
     DELETE FROM scenarios WHERE
     user_id IS NULL
     AND protected IS NULL
@@ -34,7 +37,17 @@ New database = etengine_staging + (etengine (production) scenarios and users)
  - make other SQL fixes as needed
 1. Dump *ete_new*
 1. Load *ete_new* on *etengine* (overwrite production db)
+1. Deploy ETEngine, providing it with the ETSource revision you noted in step 1
+   as the `ETSOURCE_REV` environment variable:
 
+    ```sh
+   ETSOURCE_REV=a0b1c2d cap production deploy
+   ```
+
+   This will deploy the new code to ETEngine and simultaneously ensure that the
+   compatible version of ETSource is imported. Omitting the `ETSOURCE_REV`
+   variable will cause ETEngine to use the same ETSource revision as the
+   previous deployment.
 
 ## ETModel
 1. Create *etm_new* locally
