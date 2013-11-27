@@ -65,7 +65,7 @@ have some work to do to have the region show in ETModel.
 
 ETModel requires that you add the region to the "Choose country" drop-down
 manually. You can do this by editing the `area_links` method in
-(layout_helper.rb)[https://github.com/quintel/etmodel/blob/master/app/helpers/layout_helper.rb].
+[layout_helper.rb](https://github.com/quintel/etmodel/blob/master/app/helpers/layout_helper.rb).
 
 ```ruby
 def area_links
