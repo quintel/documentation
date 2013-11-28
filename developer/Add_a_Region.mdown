@@ -12,7 +12,14 @@ region you are adding.
 
 #### ETDataset
 
-TODO
+In the ETDataset context, a country-specific analysis is
+carried out that will be used to calculate all energy flows modeled in the
+ETM. With the help of the tools on ETDataset, uniform research data (data
+tables by the International Energy Balance) are combined with further country-
+specific assumptions. Refer to the
+[readme](https://github.com/quintel/etdataset/blob/master/README.md) on the
+ETDataset repository and create a complete set of CSV files for the new
+country chiark. 
 
 #### ETSource
 
