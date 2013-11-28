@@ -22,7 +22,7 @@ import them into ETSource.
 You must start by creating a new sub-directory in `datasets/` with the same name
 as the region, then creating an "ActiveDocument" with the regional attributes.
 The easiest way to accomplish this is to create a copy of the NL document, and
-modify it as required:
+modify it as required (be sure to correct the keys 'country' and 'area' to chiark):
 
 ```sh
 mkdir datasets/chiark
