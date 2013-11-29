@@ -14,14 +14,15 @@ issues.
     centrally defined converter groups)
     * Gqueries should be re-used as much as possible
     * Gqueries should use the same (clean) syntax
-* Remove 'average_effective_output_of_nominal_capacity_over_lifetime'
-* Input statements clean up
+* Loss of load probability calculation
+* Network properties (analysis and research is not maintainable / validatable)
+
 
 ### Medium
 
-1. Network properties (analysis and research is not maintainable / validatable)
+1. Input statements clean up
 * Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
-* Remaining CHP cleanup: variable O&M costs and profiles.
+* Remaining CHP cleanup: profiles.
 * Coupling carrier replacement (Embedded Graphs)
 
 
