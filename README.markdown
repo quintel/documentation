@@ -27,7 +27,8 @@ We'll have to think of a way to translate the current MediaWiki stuff to
 Markdown. Maybe there are translaters for this? 
 
 For manual markdown formatting jobs, this website may be helpful: [dillinger.io](http://dillinger.io).
-GitHub cheatsheet: https://gist.github.com/1146055
+Alternatively, you might want to download the application [Mou](http://mouapp.com/). 
+GitHub cheatsheet for markdown formatting: https://gist.github.com/1146055. 
 
 
 ## Exposing information from this repository to somewhere else
