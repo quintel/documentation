@@ -22,7 +22,6 @@ issues.
 
 1. Input statements clean up
 * Simplify `co2_free`, `part_ets`, `energetic`/`non_energetic`
-* Remaining CHP cleanup: profiles.
 * Coupling carrier replacement (Embedded Graphs)
 
 
@@ -34,6 +33,7 @@ issues.
 * Devices/appliances Labels should be removed
 * Time curves (possibly cleaned up with flex max?)
 * Industry: Cokes production does not follow demand
+* Remaining CHP cleanup: profiles.
 * Converter names without carrier
 * the `undefined` carrier
 * Plant dataset, 'state of the art'
