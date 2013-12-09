@@ -17,30 +17,56 @@ Normalization ensures that the participant will produce the correct amount of MW
 
 **Save as Windows-CSV**: If the profile should be readable for the et-engine, it has to be saved in a CSV file that has windows-style newline commands. In Excel, you need to save the profile as "Windows Comma Separated (.csv)". 
 
-##### The profile *"should"* also reflect the Full Load Hours of the participant 
+
+##### A profile should not cause a conflict in installed capacities 
+
+Profiles are used to convert an annual energy production to an hourly load in the merit order calculation: 
+
+```
+L(i) = profile(i) * P             < 1 >
+```
+with: 
+; L: Load or demand in MW
+; i: hour
+; P: total production in MJ
+
+It should never happen that merit order calculates an hourly electricity production capacity that exceeds the installed capacity. In other words: If wind turbines with a nameplate capacity of 3 GW are installed, it should not happen that  merit order will run them at 5 GW in certain hours of the year. In technical terms, this means: 
+
+The load curve L(i) [MW] can never exceed the installed capacity (spec. capacity * number of units):
+
+	L(i) =< spec_capacity * #_units             < 2 >
+
+Combining the two equations, yields:
+
+	profile(i) * P =< spec_capacity * #_units             < 3 >
+
+In the merit order module, total annual production is defined as 
+
+	P [MJ] = spec_capacity [MW] * #_units * availability [%] * full_load_hours [h] * 3600 s/h             < 4 >
+
+Substituting P in < 3 >: 
+
+	profile(i) * full load hours * availability * 3600 <= 1
+
+If `MAX(profile(i) ) * full load hours * availability * 3600 exceeds 1, merit order will calculate with exaggerated capacities for certain hours of the year. 
+
+Please test if your profiles fulfil the above constraint. It may also be interesting to see for how many hours of the year `profile(i) * full load hours * availability * 3600 = 1` is fulfilled. This is equivalent to the number of hours that a technology is running at full capacity. Is that number realistic? How often does it happen that *all* wind turbines are running at nameplate capacity throughout the country?
+
+* * * *
+
+**Addition:**
+
+The issue with peaking production capacity can also be expressed with regard to full load hours: 
 A profile has a 'intrinsic' full load hour characteristic that is described by 
 *Full Load Hours (profile) = Total(profile) / Max(profile)* (Assuming that the peak of the profile is equivalent to the total installed capacity, which is most likely not the case)
 
-A profile may be in conflict with the ETM dataset: If wind turbines with a nameplate capacity of 3 GW are installed, it should not happen that the merit order will run them at 5 GW in certain hours of the year. (this can be caused by the shape of the profile. Especially at little full load hours, the peaks may exceed installed generation capacity)
-This problem can only be avoided if the full load hours of the ETM and the profile match (see below). 
-Unfortunately, the FLH(profile) can only be changed by *messing around* with the research data: A profile is made from measurements and converted into electric output by a physical law. Officially, there is no 'freedom' of shaping the profile so that the peaks match the maximum allowed power production. 
-This is the reason why, for example, the hub height is changed in the wind profile generation. Technically, the wind speeds are scaled down by lowering the hub height, but there is no other way of making the full load hours fit. 
 
-***FLH(profile) = FLH(ETM)***
-The maximum power output of the respective participant matches exactly to the installed capacity. 
-
-***FLH(profile) > FLH(ETM)***
-This means that the participant always runs below nameplate capacity (e.g. solar PV in the Netherlands).
-
-***FLH(profile) < FLH(ETM)***
-The merit order will calculate a max power generation that is above the installed capacity. 
-
-##### Reasoning of why any profile should reflect the Full Load Hours of the participant
+###### Reasoning of why any profile should reflect the Full Load Hours of the participant
 *Full Load Hours (ETM)* is a figure defined in the ETM dataset
 *Full Load Hours (profile)* is determined only by the shape of the profile: 
 *Full Load Hours (profile) = Total(profile) / max(profile)*.        **[1]**
 
-###### Claim: The hourly power output can never surpass the installed nameplate capacity!
+####### Claim: The hourly power output can never surpass the installed nameplate capacity!
 This translates into: 
 
 *Number of Units * Effective Capacity ≧ Max(profile) * 3600 * Number of Units * Effective Capacity * Full Load Hours (ETM)*.         **[2]**
