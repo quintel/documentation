@@ -7,14 +7,7 @@ issues.
 
 ### High
 
-1. Charts and gqueries clean up
-    * Charts should be made consistent
-    * Gqueries should be put in clear folder structure
-    * Gqueries should be robust to changing graph (make use of uniquely and 
-    centrally defined converter groups)
-    * Gqueries should be re-used as much as possible
-    * Gqueries should use the same (clean) syntax
-* Loss of load probability calculation
+1. Loss of load probability calculation
 * Network properties (analysis and research is not maintainable / validatable)
 
 
