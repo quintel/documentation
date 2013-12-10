@@ -1,0 +1,10 @@
+.DS_Store
+compiled/*
+tmp_*
+v*.zip
+*.tmproj
+/tmp
+coverage/
+.rbenv-version
+*.sublime-project
+*.sublime-workspace
