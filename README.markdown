@@ -1,9 +1,8 @@
 # The Energy Transition Model
 
 The [Energy Transition Model](http://www.energytransitionmodel.com) (ETM) 
-is a tool for energy modeling. 
-It allows a user to create and explore scenario's for the energy 
-future of various countries through various interfaces:
+is an interactive tool for energy modeling. It allows you to create and explore scenario's for the energy 
+future of various countries. The ETM provides the facts and the interfaces; all you have to provide is a vision on the energy future!
 
 ![ETM landing page](https://f.cloud.github.com/assets/1303760/1733256/55a38776-6334-11e3-89ee-9f29fde6f179.png)
 
