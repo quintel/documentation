@@ -1,8 +1,9 @@
 # The Energy Transition Model
 
 The [Energy Transition Model](http://www.energytransitionmodel.com) (ETM) 
-is an interactive tool for energy modeling. It allows you to create and explore scenario's for the energy 
-future of various countries. The ETM provides the facts and the interfaces; all you have to provide is a vision on the energy future!
+is an interactive tool for energy modeling. It allows you to create and explore 
+scenario's for the energy future of various countries. 
+The ETM brings the facts and tools to capture your vision for the future!
 
 ![ETM landing page](https://f.cloud.github.com/assets/1303760/1733256/55a38776-6334-11e3-89ee-9f29fde6f179.png)
 
@@ -24,13 +25,13 @@ looking for.
 Whether you are a user, a contributer, an energy expert or a developer, 
 the links below should get you started right away!
 
-* [Documentation for users](## Documentation for users): 
+* [Documentation for users](#users_doc): 
 If you want to **use** the ETM for a workshop, a strategy session or your own
 amusement.
-* [Documentation for contributers](## Documentation for contributers): If you 
+* [Documentation for contributers](#contr_doc): If you 
 want to change, extend, re-design or re-use any part of the ETM.
 
-## Documentation for users
+## <a name="users_doc"></a>Documentation for users
 
 The [Energy Transition Model](http://www.energytransitionmodel.com) has 
 three main interfaces:
@@ -65,6 +66,8 @@ therefore, less dependent on governement influences than prices.
 
 ### Basics of the Professional interface 
 
+#### Interacting with the ETM
+
 You can interact with the ETM trough **sliders**:
 
 ![Active slider with share](https://f.cloud.github.com/assets/1303760/1733125/deb716b8-632f-11e3-97bd-032db6dfe9b9.png)
@@ -75,11 +78,20 @@ slider
 * typing directly into the value box (click once on the value to activate)
 
 You receive feedback about the changes your choices bring about through the 
-dashboard and the charts.
+dashboard and the charts. Both dashboard and charts can be changed to show the 
+information that you are interested in.
 
+#### Start-year and end-year
 
+At every moment in time, the ETM contains information about **two** scenarios:
 
-## Documentation for contributers
+* The start-scenario: this scenario is fixed and is used to calculate how much 
+your choices for the future affect things like CO2 emissions.
+* The future scenario: this scenario starts identical to the start-scenario but 
+will reflect the changes you make in the ETM. The philosophy of the ETM is: if 
+you don't change anything, the situation will stay the same.
+
+## <a name="contr_doc"></a>Documentation for contributers
 
 The [Energy Transition Model](http://www.energytransitionmodel.com) consists of 
 a centrally hosted [computation engine](https://github.com/quintel/etengine) 
@@ -96,33 +108,30 @@ that can be accessed by three web-interfaces and an API. The interfaces are
 The different parts of the ETM can be schematically represented as shown below
 
 
-
-                                                                             +--------------+
-                                                                             |              |
-                                                                             |              |
-                                                                        +---->   ETModel    +-------> user
-                                                                        |    |              |
-                                                                        |    |              |
-                                                                        |    +--+-+---------+
-                                                                        |       | |
-                                                                        |       | |
-                                                                        |       | |
-    +----------------+     +----------------+     +----------------+    |       | |    +--------------+
-    |                |     |                |     |                |    |       | |    |              |
-    |                |     |                |     |                |    |       | |    |              |
-    |   ETDataset    +----->    ETSource    +----->  ETEngine      +----+       | +---->   ETFlex     +---> user
-    |                |     |                |     |                |            |      |              |
-    |                |     |                |     |                |            |      |              |
-    +----------------+     +----------------+     +----------------+            |      +--------------+
+                                                                                         +--------------+
+                                                                                         |              |
+                                                                                         |              |
+                                                                                +-------->   ETFlex     +---> user
+                                                                                |        |              |
+                                                                                |        |              |
+                                                                                |        +--------------+
                                                                                 |
+    +----------------+     +----------------+     +----------------+    +-------+------+
+    |                |     |                |     |                |    |              |
+    |                |     |                |     |                |    |              |
+    |   ETDataset    +----->    ETSource    +----->  ETEngine      +---->   ETModel    |-------> user
+    |                |     |                |     |                |    |              |
+    |                |     |                |     |                |    |              |
+    +----------------+     +----------------+     +----------------+    +--------------+
+                                                                                +
                                                                                 |
-                                                                                |      +--------------+
-                                                                                |      |              |
-                                                                                |      |              |
-                                                                                +------>    Mixer     +---> user
-                                                                                       |              |
-                                                                                       |              |
-                                                                                       +--------------+
+                                                                                |         +--------------+
+                                                                                |         |              |
+                                                                                |         |              |
+                                                                                +--------->    Mixer     +---> user
+                                                                                          |              |
+                                                                                          |              |
+                                                                                          +--------------+
 The user can interact with ETModel (through the professional interface), 
 ETFlex (the game interface) and Mixer (the questionaire interface). ETFlex and 
 Mixer both use the slider objects that are defined within ETModel which does the
@@ -130,11 +139,30 @@ actual communication to ETEngine.
 
 ## Where to start?
 
-* Go to [Start with data](## Start with data) if you are interested in 
+* Go to [Start with data](#start_data) if you are interested in 
 improving the existing data or want to create your own country.
-* Go to [Start with code](## Start with code) if you want to build on the ETM 
+* Go to [Start with code](#start_code) if you want to build on the ETM 
 code.
 
-## Start with data
+## <a name="start_data"></a> Start with data
 
-## Start with code
+The dataflow of the ETM starts with the energy 
+balance of a country (or a group of countries as in the EU version of the 
+model).
+We currently use the [IEA](http://www.iea.org/) energy balances because they 
+are available for all countries, in the same format and can be bought online.
+The energy balance is a matrix of numbers that describe the energy flows of a 
+country broken down in carrier (along on axis) and sectors, applications etc. (
+along the other axis)
+
+Besides the energy balance, the ETM needs information about the current state of
+affairs in the country you want to model in the ETM. Such information includes 
+(amongst others) the number of inhabitants and the fraction of LED lamps.
+We call this type of information 'assumptions'.
+
+The energy balance, together with the assumptions will be forged into a dataset 
+that can initialize the ETM. This process is done in the Dataset Analysis which 
+can be found in the 
+[ETDataset repository](https://github.com/quintel/etdataset).
+
+## <a name="start_code"></a> Start with code
