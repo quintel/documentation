@@ -5,7 +5,8 @@ is a tool for energy modeling.
 It allows a user to create and explore scenario's for the energy 
 future of various countries through various interfaces:
 
-![](https://www.evernote.com/shard/s169/sh/1e09e600-2631-4a31-9a2c-cea20edda752/2f42e47103300e9d00d5348e5f0ccc20/res/aa53f27c-f488-4e1d-a0f4-bda7a0337503/skitch.png)
+![ETM landing page](https://f.cloud.github.com/assets/1303760/1733256/55a38776-6334-11e3-89ee-9f29fde6f179.png)
+
 
 ## We are open source!
 
