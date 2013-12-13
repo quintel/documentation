@@ -29,7 +29,7 @@ the links below should get you started right away!
 If you want to **use** the ETM for a workshop, a strategy session or your own
 amusement.
 * [Documentation for contributers](#contr_doc): If you 
-want to change, extend, re-design or re-use any part of the ETM.
+want to **change, extend, re-design** or **re-use** any part of the ETM.
 
 ## <a name="users_doc"></a>Documentation for users
 
@@ -44,9 +44,7 @@ energy scenario for various countries and end-years.
 * The [Energy Mixer](http://mixer.et-model.com/): a questionaire type of 
 interface that creates a scenario based on your answers.
 
-From here on, we will focus on the professional interface as it is 
-underlying all other interfaces and the main product.
-
+From here on, we will focus on the professional interface.
 
 ![](http://f.cl.ly/items/291h3S0g3E2U3L1T0Z2H/Screen%20Shot%202013-12-10%20at%2013.38.35.png)
 
@@ -71,11 +69,12 @@ therefore, less dependent on governement influences than prices.
 You can interact with the ETM trough **sliders**:
 
 ![Active slider with share](https://f.cloud.github.com/assets/1303760/1733125/deb716b8-632f-11e3-97bd-032db6dfe9b9.png)
+
 Sliders can be moved by either 
-* dragging the slider itself (using the mouse)
-* clicking the minus and plus signs that appear when the mouse hovers over a 
+* **dragging** the slider itself (using the mouse)
+* **clicking** the minus and plus signs that appear when the mouse hovers over a 
 slider
-* typing directly into the value box (click once on the value to activate)
+* **typing** directly into the value box (click once on the value to activate)
 
 You receive feedback about the changes your choices bring about through the 
 dashboard and the charts. Both dashboard and charts can be changed to show the 
@@ -83,13 +82,14 @@ information that you are interested in.
 
 #### Start-year and end-year
 
-At every moment in time, the ETM contains information about **two** scenarios:
+At any time, the ETM contains information about **two** scenarios:
 
-* The start-scenario: this scenario is fixed and is used to calculate how much 
+* The **start-scenario**: this scenario is fixed and is used to calculate how much 
 your choices for the future affect things like CO2 emissions.
-* The future scenario: this scenario starts identical to the start-scenario but 
-will reflect the changes you make in the ETM. The philosophy of the ETM is: if 
-you don't change anything, the situation will stay the same.
+* The **future scenario**: this scenario is initially identical to the 
+start-scenario but will reflect the changes you make in the ETM. 
+The philosophy of the ETM is: if you don't change anything, 
+the future will be equal to the present.
 
 ## <a name="contr_doc"></a>Documentation for contributers
 
@@ -155,7 +155,7 @@ The energy balance is a matrix of numbers that describe the energy flows of a
 country broken down in carrier (along on axis) and sectors, applications etc. (
 along the other axis)
 
-Besides the energy balance, the ETM needs information about the current state of
+Apart from the energy balance, the ETM needs information about the current state of
 affairs in the country you want to model in the ETM. Such information includes 
 (amongst others) the number of inhabitants and the fraction of LED lamps.
 We call this type of information 'assumptions'.
