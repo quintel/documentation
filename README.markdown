@@ -91,7 +91,7 @@ start-scenario but will reflect the changes you make in the ETM.
 The philosophy of the ETM is: if you don't change anything, 
 the future will be equal to the present.
 
-#### The energy calculation
+#### <a name="energy_calc"></a>The energy calculation
 
 **Energy** is the 'common currency' of the ETM. When you change a slider, 
 you effectively change the energy flow in the ETM. This energy flow can be 
@@ -101,15 +101,23 @@ represented as a **graph** such as shown below:
 
 The **nodes** are represented by **converters** who convert or 
 transport energy (possibly with loss). The **edges** (the connections) are the 
-energy flows which are characterized by **volume** (in Mega Joule) and **type**.
+energy flows which are characterized by **volume** (in Mega Joule) and 
+**carrier type** (such as coal, electricity, useable_heat etc.).
 
+The ETM is **demand driven** meaning that moving a slider in the demand sector, 
+the graph is traverse from left to right. From 'useful demand' (heating, 
+hot water, car-kilometers) to 'primary demand' (the extraction of gas, import 
+of coal etc.)
 
+More information on the calculation methods of the ETM can be found on our
+[wiki](http://wiki.quintel.com/index.php/Documentation)
 
 ## <a name="contr_doc"></a>Documentation for contributers
 
 The [Energy Transition Model](http://www.energytransitionmodel.com) consists of 
 a centrally hosted [computation engine](https://github.com/quintel/etengine) 
-that can be accessed by three web-interfaces and an API. The interfaces are 
+that can be accessed by three web-interfaces and an 
+[API](http://et-model.com/api). The interfaces are 
 
 * The [Energy Game](http://etflex.et-model.com/) hosted on 
 [github.com/quintel/etflex](https://github.com/quintel/etflex)
@@ -120,7 +128,6 @@ that can be accessed by three web-interfaces and an API. The interfaces are
 ### Under the hood: Structure of the code
 
 The different parts of the ETM can be schematically represented as shown below
-
 
                                                                                          +--------------+
                                                                                          |              |
@@ -185,4 +192,16 @@ Depending on which part of the model you want to work on, the repositories that
 hold the relevant code are as folows:
 
 * [ETEngine](https://github.com/quintel/etengine): the computational engine. 
-Contains all methods to traverse the energy graph. 
+Contains all methods to traverse the [energy graph](#energy_calc), methods 
+for interaction with the graph (e.g., gqueries) etc.
+* [ETModel](http://pro.et-model.com/): the front-end code, charts, translations.
+* [ETSource](https://github.com/quintel/etsource): gqueries, input-statements 
+the data that defines the graph structure and content.
+* [Merit](https://github.com/quintel/merit): stand-alone merit order calculator
+which is used as a gem by ETEngine.
+* [Atlas](https://github.com/quintel/atlas): functions to initialize the graph.
+* [Refinery](https://github.com/quintel/refinery): graph traversal algorithms 
+used to initialize the graph. Refinery is used as a gem by Atlas.
+
+Each repository has its own specific documentation in the 
+README.md locatedin the root directory.
