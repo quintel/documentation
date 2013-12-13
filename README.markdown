@@ -180,4 +180,4 @@ which is used as a gem by ETEngine.
 used to initialize the graph. Refinery is used as a gem by Atlas.
 
 Each repository has its own specific documentation in the 
-README.md locatedin the root directory.
+README.md located in the root directory.
