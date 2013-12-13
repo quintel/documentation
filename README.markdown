@@ -91,6 +91,20 @@ start-scenario but will reflect the changes you make in the ETM.
 The philosophy of the ETM is: if you don't change anything, 
 the future will be equal to the present.
 
+#### The energy calculation
+
+**Energy** is the 'common currency' of the ETM. When you change a slider, 
+you effectively change the energy flow in the ETM. This energy flow can be 
+represented as a **graph** such as shown below:
+
+![Simplified version of the Graph that is at the core of the ETM](http://wiki.quintel.com/images/7/78/Graph.jpg)
+
+The **nodes** are represented by **converters** who convert or 
+transport energy (possibly with loss). The **edges** (the connections) are the 
+energy flows which are characterized by **volume** (in Mega Joule) and **type**.
+
+
+
 ## <a name="contr_doc"></a>Documentation for contributers
 
 The [Energy Transition Model](http://www.energytransitionmodel.com) consists of 
@@ -166,3 +180,9 @@ can be found in the
 [ETDataset repository](https://github.com/quintel/etdataset).
 
 ## <a name="start_code"></a> Start with code
+
+Depending on which part of the model you want to work on, the repositories that
+hold the relevant code are as folows:
+
+* [ETEngine](https://github.com/quintel/etengine): the computational engine. 
+Contains all methods to traverse the energy graph. 

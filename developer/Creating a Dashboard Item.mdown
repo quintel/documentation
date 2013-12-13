@@ -1,5 +1,0 @@
-* Create through the ETM admin page a new Constraint/DashboardItem. Remember to assign a group, otherwise it won't show up in the dashboard selector
-* Create the i18n strings in `config/locales/[en|nl]_dashboard_items.yml`, using the constraint key as identifier
-* Assign the item a gquery (optional). You can control its display format in `app/assets/javascripts/lib/views/constraint_view.coffee`
-* Create the view that will be used as dashboard popup: check `app/views/constraints` to see some working examples
-
