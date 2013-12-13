@@ -5,13 +5,13 @@ is an interactive tool for energy modeling. It allows you to create and explore
 scenario's for the energy future of various countries. 
 The ETM brings the facts and tools to capture your vision for the future!
 
-![ETM landing page](https://f.cloud.github.com/assets/1303760/1733256/55a38776-6334-11e3-89ee-9f29fde6f179.png)
-
+![ETM interfaces](https://f.cloud.github.com/assets/1303760/1742063/e35852d2-63f1-11e3-8ade-484d65a4302f.png)
 
 ## We are open source!
 
 All functionality of the ETM can be used free of charge and the 
-[code](https://github.com/quintel/etmodel) is publicly
+[ETModel code](https://github.com/quintel/etmodel) (other repositories 
+will follow shortly) is publicly
 available on GitHub under the 
 [MIT licence](https://github.com/quintel/etmodel/blob/master/LICENSE.txt).
 
@@ -127,36 +127,12 @@ that can be accessed by three web-interfaces and an
 
 ### Under the hood: Structure of the code
 
-The different parts of the ETM can be schematically represented as shown below
+The different parts of the ETM can be schematically represented as shown below:
 
-                                                                                         +--------------+
-                                                                                         |              |
-                                                                                         |              |
-                                                                                +-------->   ETFlex     +---> user
-                                                                                |        |              |
-                                                                                |        |              |
-                                                                                |        +--------------+
-                                                                                |
-    +----------------+     +----------------+     +----------------+    +-------+------+
-    |                |     |                |     |                |    |              |
-    |                |     |                |     |                |    |              |
-    |   ETDataset    +----->    ETSource    +----->  ETEngine      +---->   ETModel    |-------> user
-    |                |     |                |     |                |    |              |
-    |                |     |                |     |                |    |              |
-    +----------------+     +----------------+     +----------------+    +--------------+
-                                                                                +
-                                                                                |
-                                                                                |         +--------------+
-                                                                                |         |              |
-                                                                                |         |              |
-                                                                                +--------->    Mixer     +---> user
-                                                                                          |              |
-                                                                                          |              |
-                                                                                          +--------------+
+![](http://f.cl.ly/items/2a1x0m062V2N310k2p40/Screen%20Shot%202013-12-13%20at%2013.17.18.png)
+
 The user can interact with ETModel (through the professional interface), 
-ETFlex (the game interface) and Mixer (the questionaire interface). ETFlex and 
-Mixer both use the slider objects that are defined within ETModel which does the
-actual communication to ETEngine.
+ETFlex (the game interface) and Mixer (the questionaire interface). 
 
 ## Where to start?
 
