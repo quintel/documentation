@@ -51,12 +51,12 @@ From here on, we will focus on the professional interface.
 The professional inteface allows you to influence all the main aspects of the 
 energy system:
 
-* Targets: set goals for your scenario and see if you can reach them. 
+* **Targets**: set goals for your scenario and see if you can reach them. 
 Targets can be set for CO2 reduction, renewability, total cost, max import etc.
-* Demand: what happens to energy consumption in the future? 
-* Supply: which technologies will we use to produce heat and electricity 
+* **Demand**: what happens to energy consumption in the future? 
+* **Supply**: hich technologies will we use to produce heat and electricity 
 in the future?
-* Costs: specify what you think will happen to the costs of carriers and 
+* **Costs**: specify what you think will happen to the costs of carriers and 
 technologies. Setting the costs provides the canvas on which your scenario is
 painted. 
 NOTE: these costs do not include taxes or subsidies and are, 
@@ -97,7 +97,7 @@ the future will be equal to the present.
 you effectively change the energy flow in the ETM. This energy flow can be 
 represented as a **graph** such as shown below:
 
-![Simplified version of the Graph that is at the core of the ETM](http://wiki.quintel.com/images/7/78/Graph.jpg)
+![Simplified version of the Graph that is at the core of the ETM](/images/Graph.jpg)
 
 The **nodes** are represented by **converters** who convert or 
 transport energy (possibly with loss). The **edges** (the connections) are the 
