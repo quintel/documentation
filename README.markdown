@@ -181,3 +181,14 @@ used to initialize the graph. Refinery is used as a gem by Atlas.
 
 Each repository has its own specific documentation in the 
 README.md located in the root directory.
+
+# Quintel Intelligence
+
+## The people behind the ETM
+
+The Energy Transition Model has been created by 
+[Quintel Intelligence](http://quintel.com/). We are a small company with big
+ambitions when it comes to energy modeling. Our [team](http://quintel.com/team) 
+consists of people from various diciplines who share a passion for energy.
+
+Please look at our [company website](http://quintel.com/) for more information.
