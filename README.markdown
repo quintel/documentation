@@ -97,7 +97,7 @@ the future will be equal to the present.
 you effectively change the energy flow in the ETM. This energy flow can be 
 represented as a **graph** such as shown below:
 
-![Simplified version of the Graph that is at the core of the ETM](http://wiki.quintel.com/images/7/78/Graph.jpg)
+![Simplified version of the Graph that is at the core of the ETM](/images/Graph.jpg)
 
 The **nodes** are represented by **converters** who convert or 
 transport energy (possibly with loss). The **edges** (the connections) are the 
