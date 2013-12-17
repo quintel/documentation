@@ -28,7 +28,7 @@ the links below should get you started right away!
 
 * [Documentation for users](#users_doc): 
 If you want to **use** the ETM for a workshop, a strategy session or for your own
-learning.
+education.
 * [Documentation for contributers](#contr_doc): If you 
 want to **change, extend, re-design** or **re-use** any part of the ETM.
 
