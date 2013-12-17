@@ -7,11 +7,12 @@ The ETM brings the facts and tools to capture your vision for the future!
 
 ![ETM interfaces](https://f.cloud.github.com/assets/1303760/1742063/e35852d2-63f1-11e3-8ade-484d65a4302f.png)
 
-## We are open source!
+## We are going open source!
 
 All functionality of the ETM can be used free of charge and the 
-[ETModel code](https://github.com/quintel/etmodel) (other repositories 
-will follow shortly) is publicly
+[ETModel](https://github.com/quintel/etmodel) and 
+[ETEngine](https://github.com/quintel/etengine) code (other repositories
+will follow shortly) are publicly
 available on GitHub under the 
 [MIT licence](https://github.com/quintel/etmodel/blob/master/LICENSE.txt).
 
@@ -26,8 +27,8 @@ Whether you are a user, a contributer, an energy expert or a developer,
 the links below should get you started right away!
 
 * [Documentation for users](#users_doc): 
-If you want to **use** the ETM for a workshop, a strategy session or your own
-amusement.
+If you want to **use** the ETM for a workshop, a strategy session or for your own
+learning.
 * [Documentation for contributers](#contr_doc): If you 
 want to **change, extend, re-design** or **re-use** any part of the ETM.
 
@@ -36,23 +37,25 @@ want to **change, extend, re-design** or **re-use** any part of the ETM.
 The [Energy Transition Model](http://www.energytransitionmodel.com) has 
 three main interfaces:
 
+* The [Professional interface](http://pro.et-model.com/): over 300 sliders, 
+100+ charts and tables and much more. The starting point for a detailed
+energy scenario for various countries and end-years.
 * The [Energy Game](http://etflex.et-model.com/): lets you explore the 
 energy future of the Netherlands in a fun, visual way.
-* The [Professional interface](http://pro.et-model.com/): over 300 sliders, 
-100+ charts and tables and much, much more. The starting point for a detailed
-energy scenario for various countries and end-years.
 * The [Energy Mixer](http://mixer.et-model.com/): a questionaire type of 
-interface that creates a scenario based on your answers.
+interface that creates a scenario based on your answers. This interface is
+aimed more at non-technical people then the other interfaces.
 
 From here on, we will focus on the professional interface.
 
 ![](http://f.cl.ly/items/291h3S0g3E2U3L1T0Z2H/Screen%20Shot%202013-12-10%20at%2013.38.35.png)
 
-The professional inteface allows you to influence all the main aspects of the 
+The professional interface allows you to influence all the main aspects of the 
 energy system:
 
 * Targets: set goals for your scenario and see if you can reach them. 
-Targets can be set for CO2 reduction, renewability, total cost, max import etc.
+Targets can be set for CO<sub>2</sub> reduction, renewability, total cost,
+max import etc.
 * Demand: what happens to energy consumption in the future? 
 * Supply: which technologies will we use to produce heat and electricity 
 in the future?
@@ -87,9 +90,11 @@ At any time, the ETM contains information about **two** scenarios:
 * The **start-scenario**: this scenario is fixed and is used to calculate how much 
 your choices for the future affect things like CO2 emissions.
 * The **future scenario**: this scenario is initially identical to the 
-start-scenario but will reflect the changes you make in the ETM. 
-The philosophy of the ETM is: if you don't change anything, 
-the future will be equal to the present.
+start-scenario but will reflect the changes you make in the ETM, using the 
+sliders available. 
+The philosophy of the ETM is: the future will be equal to the present, 
+unless you change things. This is to make the effects of single measures
+really clear.
 
 #### <a name="energy_calc"></a>The energy calculation
 
