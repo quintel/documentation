@@ -13,7 +13,7 @@ The impact of climate change on the useful demand of heating and cooling of hous
 
 To find the relation between the average outdoor temperature and the degree-days we have used temperature measurements from the observatory at "De Bilt" in the Netherlands for the year 2010. Figure 1. below shows these temperature measurements in degrees centigrade. Also plotted are the threshold temperatures above and below which we assume cooling and heating is required.
 
-![600|Figure 1, Temperature versus time for "De Bilt" in 2010 and degree-days (shaded regions).]( ../images/Degree_days_shaded.png "600|Figure 1, Temperature versus time for "De Bilt" in 2010 and degree-days (shaded regions).")
+![600|Figure 1, Temperature versus time for 'De Bilt' in 2010 and degree-days (shaded regions).]( ../images/Degree_days_shaded.png "600|Figure 1, Temperature versus time for 'De Bilt' in 2010 and degree-days (shaded regions).")
 
 To calculate degree-days for a given temperature threshold, the area between the threshold temperature and the curve is integrated. For heating this is the area **under** the 18 degree threshold and **above** the curve. These two (both heating and cooling) surface areas are shaded blue in Figure 1. Shifting the whole curve up (for increasing outdoor temperatures) or down (for decreasing outdoor temperatures) changes the shaded areas and thus the degree-days. The Figures below show the surface areas for heating (left Figure) and cooling (right Figure) as a function of temperature change (with respect to the 2010 average).
 
