@@ -138,23 +138,23 @@ The ETM uses the following assumptions to limit complexity:
 Calculations
 ------------
 
-The ETM performs a number of calculations each time the user alters a [slider](sliders "wikilink"). First, the energy balance in the model is recalculated, after which a number of secondary calculations is performed.
+The ETM performs a number of calculations each time the user alters a slider. First, the energy balance in the model is recalculated, after which a number of secondary calculations is performed.
 
 Here, an overview of the different calculation types is given.
 
 ### Energy flow calculations
 
-The energy flow calculations are the most important calculations in the model, as all other calculations are related to these calculations. Based on the [modeling logic](Index#Calculation "wikilink"), the model calculates the flow of energy through the entire network of [converters](converter "wikilink"), which calculates the [primary demand](Primary_energy "wikilink") based on the [useful demand](useful_demand.md) and how these are provided. When this initial calculation is completed, the other calculations are done based on the outcome.
+The energy flow calculations are the most important calculations in the model, as all other calculations are related to these calculations. The model calculates the flow of energy through the entire network of converters (or, equivalently: vertices, nodes), which calculates the [primary demand](primary_energy.md) based on the [useful demand](useful_demand.md) and how these are provided. When this initial calculation is completed, the other calculations are done based on the outcome.
 
 ### Primary energy calculations
 
-*Main article: [Primary energy](Primary energy "wikilink")*
+*Main article: [Primary energy](primary_energy.md)*
 
-The model calculates primary consumption associated with the output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the primary consumption of that converter's output is and takes his share. This process continues until it reaches the primary converters. At the primary converters, the primary consumption is determined using the [physical content method](Primary_energy#Physical_content_method "wikilink"). Hence the associated primary consumption can be calculated for every converter, including those that represent non-energetic consumption (for example feedstock in the chemical industry) and those that export energy (currently only electricity is exported).
+The model calculates primary consumption associated with the output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the primary consumption of that converter's output is and takes his share. This process continues until it reaches the primary converters. At the primary converters, the primary consumption is determined using the [physical content method](primary_energy.md). Hence the associated primary consumption can be calculated for every converter, including those that represent non-energetic consumption (for example feedstock in the chemical industry) and those that export energy (currently only electricity is exported).
 
 ### CO<sub>2</sub> emissions calculations
 
-*Main article: [CO2 calculations](CO2 calculations "wikilink")*
+*Main article: [CO2 calculations](co_calculations.md)*
 
 The model calculates CO<sub>2</sub> emissions for the current year and the scenario year. The CO<sub>2</sub> emission for the year 1990 is a fixed number taken from `area data`.
 
@@ -162,7 +162,7 @@ The model calculates CO<sub>2</sub> emissions associated with the energy output 
 
 ### Import calculations
 
-*Main article: [Import calculations](Import calculations "wikilink")*
+*Main article: [Import calculations](import_calculations)*
 
 The energy import shows the percentage of energy that is imported from outside of the area.
 
@@ -202,7 +202,7 @@ The Energy Transition Model calculates the change in employment (in units of Ful
 
 Note: not all technologies in the ETM are included in the Employment calculation, in particular, the Industry and Agriculture sectors are not included.
 
-### Biofootprint calculations
+### <a name="biofootprint_calculations"></a>Biofootprint calculations
 
 The ETM makes a rough estimation of how much arable land equivalent a region needs to meet its biomass needs. For that the following categories of biomass are recognized:
 

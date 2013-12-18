@@ -22,12 +22,12 @@ The percentage shows the change in CO<sub>2</sub> emissions between 1990 and the
 
 CO<sub>2</sub> emissions shown here are the total *energetic* CO<sub>2</sub> emissions resulting from the total final *energy* consumption. This does not include CO<sub>2</sub> emissions from final non-energy consumption, fugitive emissions, industrial process, solvent and other product use, agriculture, LULUCF, and other. It also does not include CO<sub>2</sub> emissions resulting from exports. The CO<sub>2</sub> emission reduction of CO<sub>2</sub> capture and storage is taken into account.
 
-![Energy import in the dashboard](/images/Import_chart.jpg "fig:Energy import in the dashboard") The 1990 value is taken from [area data](area data "wikilink"). The values for the current year and the scenario year are calculated. For more information on the CO<sub>2</sub> emission calculation click [here](co2_calculations.md).
+![Energy import in the dashboard](../images/Import_chart.jpg "fig:Energy import in the dashboard") The 1990 value is taken from the [area data file](https://github.com/quintel/etsource/blob/master/datasets/nl/nl.ad). The values for the current year and the scenario year are calculated. For more information on the CO<sub>2</sub> emission calculation click [here](co2_calculations.md).
 
 Energy imports
 --------------
 
-*Main article: [Import calculations](Import calculations "wikilink")*
+*Main article: [Import calculations](import_calculations)*
 
 The percentage is the net amount of imported primary energy (imports - exports) divided by the total primary consumption. The total primary consumption includes the conversion losses incurred from generation of electricity that is exported. (this approach is sometimes called the 'territorial' approach, as opposed to the 'final consumption' approach)
 
@@ -42,7 +42,7 @@ The number shows the total yearly cost of energy supply in your region in the sc
 
 The chart shows the these costs both for the current situation (left) and the scenario (right). It also shows the contribution to the costs from the supply of heat, supply of electricity, supply of transport fuels, and the supply of non-energetically used fuels (for example feedstock in the chemical industry, or oil used as lubricant in the transport sector).
 
-The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [ here](Index#Cost_calculations "wikilink") for more information on the cost calculation.
+The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [ here](cost_calculations.md) for more information on the cost calculation.
 
 Costs per household
 -------------------
@@ -53,18 +53,18 @@ The number shows the total yearly cost of energy supply divided by the number of
 
 The chart shows the these costs both for the current situation (left) and the scenario (right). It also shows the contribution to the costs from the supply of heat, supply of electricity, supply of transport fuels, and the supply of non-energetically used fuels (for example feedstock in the chemical industry, or oil used as lubricant in the transport sector).
 
-The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [here](Index#Cost_calculations "wikilink") for more information on the cost calculation.
+The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [here](cost_calculations.md) for more information on the cost calculation.
 
-Bio-footprint
+Bio-footprint 
 -------------
 
-*Main article: [Footprint calculations](Index#Biofootprint_calculations "wikilink")*
+*Main article: [Footprint calculations](documentation.md#biofootprint_calculations)*
 
 The number shows how much arable land you need to grow the biomass used in your scenario expressed in multiples of your region's total *arable land* area (taken from "Area\_data"). Biomass includes solid biomass, biofuels (liquid), and biogasses (including green gas).
 
 The graphic shows the necessary arable land for both the current year, and the scenario, by blue pictures of your region. Be aware that 1 blue picture of your region means that you need 1 times the *arable land* area of your region, **not** 1 times the total area of your region to grow the biomass.
 
-For more information on the calulation of the bio-footprint click [here](Index#Biofootprint_calculations "wikilink").
+For more information on the calulation of the bio-footprint click [here](documentation.md#biofootprint_calculations).
 
 Renewables
 ----------
