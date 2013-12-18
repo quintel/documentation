@@ -48,7 +48,7 @@ or
 
 ![Left](../images/Levelized_cost_definition.jpg "Left")
 
-Deriving the cost curves for conversion technologies for Figure 4 is rather complex and CPU- intensive. Furthermore, the simulation of excess electricity and its conversion is only possible with the information of the merit order module and with an hourly calculation. The simulation can only produce indicative results because there are many [ assumptions](Storage_and_conversion_of_electricity#Assumptions_in_simulating_Excess_Electricity_and_Levelized_costs.md) and many uncertainties in the [technology characterization]. For these reasons, the chart has to be static and cannot adapt to slider settings.
+Deriving the cost curves for conversion technologies for Figure 4 is rather complex and CPU- intensive. Furthermore, the simulation of excess electricity and its conversion is only possible with the information of the merit order module and with an hourly calculation. The simulation can only produce indicative results because there are many [assumptions](storage.md#assumptions-in-simulating-excess-electricity-and-levelized-costs) and many uncertainties in the [technology characterization]. For these reasons, the chart has to be static and cannot adapt to slider settings.
 
 Assumptions in simulating Excess Electricity and Levelized Costs
 ----------------------------------------------------------------
@@ -92,9 +92,9 @@ The most important technology characterizations are summarized in the following 
 |Technology|Investment cost|Annual O&M cost|Lifetime|Discount rate|Round-trip efficiency|Source|
 |----------|---------------|---------------|--------|-------------|---------------------|------|
 ||€ / kWel<sub>input</sub> (\*)|€ / kWel<sub>input</sub> (\*)|years|%|%||
-|Battery storage, 10kW/85kWh batteries|1615|9.4|10|15|\> 80|[[\#References|[Budischak et al., 2012] ]] (data interpolated to 2020)|
-|Conversion to Heat|1500|0|4|10|\~ 100|estimate based on 750 € / unit [[\#References|]Deuchler, 2013]]]|
-|Conversion to Gas|1329|50.7|10|15|\~ 60|[[\#References| [Greiner et al., 2007] ]]|
+|Battery storage, 10kW/85kWh batteries|1615|9.4|10|15|\> 80|[Budischak et al., 2012](#references) (data interpolated to 2020)|
+|Conversion to Heat|1500|0|4|10|\~ 100|estimate based on 750 € / unit [Deuchler, 2013](#references)|
+|Conversion to Gas|1329|50.7|10|15|\~ 60|[Greiner et al., 2007](#references)|
 
 (\*) The unit € / kWel<sub>input</sub> refers to the cost for installing capacity. The capacity (kW) refers to the ability to absorb excess electricity (instead of electricity output).
 
@@ -118,7 +118,7 @@ Economical characterization, see table above.
 
 #### Conversion to Gas
 
-![Figure 3: Layout of Power-to-Hydrogen conversion. Layout and Firgures are based on [[Greiner et al., 2007](#references)]. ](../images/Power to gas layout.jpg "Figure 3: Layout of Power-to-Hydrogen conversion. Layout and Firgures are based on [Greiner et al., 2007]. ")
+![Figure 3: Layout of Power-to-Hydrogen conversion. Layout and Firgures are based on [[Greiner et al., 2007](#references)]. ](../images/Power_to_gas_layout.jpg "Figure 3: Layout of Power-to-Hydrogen conversion. Layout and Firgures are based on [Greiner et al., 2007]. ")
 
 Excess electricity can be converted into hydrogen via electrolysis. A layout of this process is shown in Figure 2. Excess electricity is used to split water molecules into hydrogen and oxygen. The hydrogen is then compressed and mixed in with natural gas in the gas network. This 'green' hydrogen can be integrated into the grid with percentages of probably up to \~15 % [[Melaina et al., 2013](#references)].
 
@@ -170,8 +170,8 @@ In the end, it has to be concluded that the results of the simulation are very u
 -   Budischak, C., Sewell, D., Thomson, H., Mach, L., Veron, D. E., & Kempton, W. (2012). [Cost-Minimized Combinations of Wind Power, Solar Power and Electrochemical Storage, Powering the Grid up to 99.9% of the Time](http://refman.et-model.com/publications/1734). Journal of Power Sources, 225, 60–74. <doi:10.1016/j.jpowsour.2012.09.054>
 -   Deuchler, R, 2013. [Load management – strategies for dealing with temporary oversupply of variable renewable electricity](http://refman.et-model.com/publications/1743). Utrecht University. Excerpt of thesis report:
 
-  
-  
+
+
 - Investment costs for retrofitting the power-to-heat route are 750 € per household. This figure is based on the following breakdown:
 
 - 250 € for the new 100 l tank incl. electric heating unit (alternatively for equipping an existing tank with a new electric heater)

@@ -16,7 +16,7 @@ For more information on the primary energy calculation click [here](primary_ener
 CO<sub>2</sub> emissions
 ------------------------
 
-*Main article: [CO2 calculations](co2_calculations.md)*
+*Main article: [CO<sub>2</sub> calculations](co2_calculations.md)*
 
 The percentage shows the change in CO<sub>2</sub> emissions between 1990 and the scenario year. The chart shows the CO<sub>2</sub> emissions in 1990, in the current year and in the scenario year. The target CO<sub>2</sub> emissions is set by the user in the section "goals - sustainability targets".
 

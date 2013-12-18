@@ -150,11 +150,11 @@ The energy flow calculations are the most important calculations in the model, a
 
 *Main article: [Primary energy](primary_energy.md)*
 
-The model calculates primary consumption associated with the output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the primary consumption of that converter's output is and takes his share. This process continues until it reaches the primary converters. At the primary converters, the primary consumption is determined using the [physical content method](primary_energy.md). Hence the associated primary consumption can be calculated for every converter, including those that represent non-energetic consumption (for example feedstock in the chemical industry) and those that export energy (currently only electricity is exported).
+The model calculates primary consumption associated with the output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the primary consumption of that converter's output is and takes his share. This process continues until it reaches the primary converters. At the primary converters, the primary consumption is determined using the [physical content method](primary_energy.md#physical-content-method). Hence the associated primary consumption can be calculated for every converter, including those that represent non-energetic consumption (for example feedstock in the chemical industry) and those that export energy (currently only electricity is exported).
 
 ### CO<sub>2</sub> emissions calculations
 
-*Main article: [CO2 calculations](co_calculations.md)*
+*Main article: [CO<sub>2</sub> calculations](co2_calculations.md)*
 
 The model calculates CO<sub>2</sub> emissions for the current year and the scenario year. The CO<sub>2</sub> emission for the year 1990 is a fixed number taken from `area data`.
 
@@ -162,7 +162,7 @@ The model calculates CO<sub>2</sub> emissions associated with the energy output 
 
 ### Import calculations
 
-*Main article: [Import calculations](import_calculations)*
+*Main article: [Import calculations](import_calculations.md)*
 
 The energy import shows the percentage of energy that is imported from outside of the area.
 
@@ -235,7 +235,7 @@ Uranium / nuclear heat is counted as non-renewable.
 
 ### Network calculations
 
-*Main article: [Network calculations](network_calculations.md)*
+*Main article: [Network calculations](network.md)*
 
 Currently, the network costs are only calculated for the Netherlands. These costs include the annual maintenance costs for both the electricity and the gas network, but also accounts for additional costs that have to be made in case the network has to be improved due to choices for specific technologies which may affect the infrastructure requirements.
 
@@ -249,7 +249,7 @@ Currently the merit order calculation only works for the Netherlands.
 
 ### Loss of load calculations
 
-*Main article: [Loss of load](loss_of_load_probability_md)*
+*Main article: [Loss of load](loss_of_load_probability.md)*
 
 The calculation shows the probability that available electricity production capacity is less than the expected demand. Such a calculation is an important consideration when planning a power system and similar, but more elaborate, versions of this calculation are always conducted by the Transmission System Operators of a country. The loss of load dashboard item can be accessed via the flexible dashboard by clicking 'Change' on the bottom right corner of the Energy Transition Model interface.
 

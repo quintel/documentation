@@ -1,3 +1,5 @@
+# Employment
+
 This page serves to explain the Employment module implemented in 2012 and commissioned by [Alliander](http://www.alliander.com/nl/alliander/). It describes the changes made to the ETM to accommodate the calculation of employment effects.
 
 Introduction
@@ -68,7 +70,7 @@ For insulation of households, the employment is calculated analogously to costs.
 Use
 ---
 
-![Figure 1: Selecting flexible dashboard item for the Employment module](../images/selectDashboard.png "Figure 1: Selecting flexible dashboard item for the Employment module")
+![Figure 1: Selecting flexible dashboard item for the Employment module](../images/SelectDashboard.png "Figure 1: Selecting flexible dashboard item for the Employment module")
 
 Information about employment is accessible by either
 
@@ -81,11 +83,11 @@ The dashboard item can be selected by clicking 'change' on the ETM dashboard and
 
 Moving the slider associated with a technology (included in the project scope) instantaneously changes the net employment of the current scenario visible in the flexible dashboard item shown in Figure 2.
 
-![Figure 2: Flexible dashboard item for the Employment module](../images/dashboard.png "Figure 2: Flexible dashboard item for the Employment module")
+![Figure 2: Flexible dashboard item for the Employment module](../images/Dashboard.png "Figure 2: Flexible dashboard item for the Employment module")
 
 ### Slide
 
-![Figure 3: Employment slide](../images/slide.png "Figure 3: Employment slide")
+![Figure 3: Employment slide](../images/Slide.png "Figure 3: Employment slide")
 
 The 'Employment slide' (Costs \> Employment) is shown in Figure 3. It shows a graph of the total employment per year in the start-year and the end-year (left and right respectively), subdivided in the previously mentioned categories. The units are in kFTE (1000 Full Time Equivalents which taken to be 1800 man hours per year). The three sliders give the user the opportunity to change the values of three poorly known factors:
 
@@ -98,80 +100,80 @@ Appendix A: List of technologies with employment figures
 
 Overview of technologies included in the employment calculations are given in the table below. Columns show name, and employment figures for four phases: 'planning', 'placement', 'maintenance' and 'removal/replacement'.
 
-`+------------------------------------------------------------------------+---------------+----------------+----------------+----------------+`
-`|                                 name                                   |   planning    |   placement    |  maintenance   |    removal     |`
-`+------------------------------------------------------------------------+---------------+----------------+----------------+----------------+`
-`| buildings_collective_geothermal                                        | 0.0           | 19530.0        | 19530.0        | 0.0            |`
-`| buildings_collective_chp_gas_power_fuelmix                             | 360.0         | 2880.0         | 1260.0         | 360.0          |`
-`| buildings_collective_chp_wood_pellets                                  | 113580.0      | 820080.0       | 171000.0       | 91080.0        |`
-`| buildings_cooling_airconditioning                                      | 0.0           | 23.0           | 1.7            | 7.0            |`
-`| buildings_cooling_collective_heatpump_water_water_ts_electricity       | 6.0           | 50272.2        | 1377.3         | 40.0           |`
-`| buildings_cooling_heatpump_air_water_network_gas                       | 0.0           | 8164.9         | 340.2          | 16.0           |`
-`| buildings_solar_pv_solar_radiation                                     | 0.0           | 11855.56       | 118.56         | 0.0            |`
-`| buildings_space_heater_coal                                            | 0.0           | 88.0           | 1.5            | 64.0           |`
-`| buildings_space_heater_collective_heatpump_water_water_ts_electricity  | 6.0           | 16933.0        | 463.9          | 40.0           |`
-`| buildings_space_heater_crude_oil                                       | 0.0           | 136.0          | 1.5            | 64.0           |`
-`| buildings_space_heater_electricity                                     | 0.0           | 17.0           | 0.0            | 1.0            |`
-`| buildings_space_heater_heatpump_air_water_network_gas                  | 6.0           | 16933.0        | 463.9          | 40.0           |`
-`| buildings_space_heater_network_gas                                     | 0.0           | 21.0           | 0.0            | 1.0            |`
-`| buildings_space_heater_solar_thermal                                   | 0.0           | 430.8          | 4.5            | 16.0           |`
-`| buildings_space_heater_wood_pellets                                    | 0.0           | 84.0           | 1.5            | 80.0           |`
-`| energy_chp_combined_cycle_gas_power_fuelmix                            | 442800.0      | 2835000.0      | 534600.0       | 354600.0       |`
-`| energy_chp_ultra_supercritical_coal                                    | 590580.0      | 7087680.0      | 1170000.0      | 472500.0       |`
-`| energy_chp_ultra_supercritical_crude_oil                               | 590580.0      | 7087680.0      | 1170000.0      | 472500.0       |`
-`| energy_chp_ultra_supercritical_lignite                                 | 590580.0      | 7087680.0      | 1170000.0      | 472500.0       |`
-`| energy_chp_ultra_supercritical_wood_pellets                            | 113580.0      | 820080.0       | 171000.0       | 91080.0        |`
-`| energy_power_combined_cycle_ccs_coal                                   | 2281500.0     | 3802500.0      | 367200.0       | 1170000.0      |`
-`| energy_power_combined_cycle_ccs_gas_power_fuelmix                      | 27300.0       | 27300.0        | 650000.0       | 816000.0       |`
-`| energy_power_combined_cycle_coal                                       | 1755000.0     | 2925000.0      | 216000.0       | 900000.0       |`
-`| energy_power_combined_cycle_gas_power_fuelmix                          | 21000.0       | 500000.0       | 76800.0        | 480000.0       |`
-`| energy_power_geothermal                                                | 0.0           | 41664.0        | 22848.0        | 0.0            |`
-`| energy_power_nuclear_gen3_uranium_oxide                                | 4400000.0     | 1296000.0      | 288000.0       | 480000.0       |`
-`| energy_power_solar_pv_solar_radiation                                  | 0.0           | 222222.22      | 2222.22        | 0.0            |`
-`| energy_power_supercritical_coal                                        | 1350000.0     | 2250000.0      | 180000.0       | 900000.0       |`
-`| energy_power_supercritical_waste_mix                                   | 113580.0      | 820080.0       | 171000.0       | 91080.0        |`
-`| energy_power_turbine_network_gas                                       | 88560.0       | 567000.0       | 106920.0       | 70920.0        |`
-`| energy_power_ultra_supercritical_ccs_coal                              | 1755000.0     | 2925000.0      | 306000.0       | 1170000.0      |`
-`| energy_power_ultra_supercritical_coal                                  | 1350000.0     | 2250000.0      | 180000.0       | 900000.0       |`
-`| energy_power_ultra_supercritical_cofiring_wood_pellets                 | 1350000.0     | 2250000.0      | 180000.0       | 900000.0       |`
-`| energy_power_ultra_supercritical_crude_oil                             | 21000.0       | 500000.0       | 76800.0        | 480000.0       |`
-`| energy_power_ultra_supercritical_gas_power_fuelmix                     | 21000.0       | 500000.0       | 76800.0        | 480000.0       |`
-`| energy_power_ultra_supercritical_lignite                               | 1350000.0     | 2250000.0      | 180000.0       | 900000.0       |`
-`| energy_power_ultra_supercritical_oxyfuel_ccs_lignite                   | 1755000.0     | 2925000.0      | 306000.0       | 1170000.0      |`
-`| energy_power_wind_turbine_coastal                                      | 3439.09       | 4120.2         | 750.0          | 1740.0         |`
-`| energy_power_wind_turbine_inland                                       | 3439.09       | 4120.2         | 750.0          | 1740.0         |`
-`| energy_power_wind_turbine_offshore                                     | 3439.1        | 22680.0        | 750.0          | 1740.0         |`
-`| households_collective_geothermal                                       | 0.0           | 19530.0        | 19530.0        | 0.0            |`
-`| households_collective_chp_network_gas                                  | 360.0         | 2880.0         | 1260.0         | 360.0          |`
-`| households_collective_chp_wood_pellets                                 | 113580.0      | 820080.0       | 171000.0       | 91080.0        |`
-`| households_cooling_airconditioning_electricity                         | 0.0           | 7.0            | 1.5            | 7.0            |`
-`| households_cooling_collective_heatpump_water_water_ts_electricity      | 6.0           | 130.0          | 4.0            | 40.0           |`
-`| households_cooling_heatpump_air_water_network_gas                      | 6.0           | 130.0          | 4.0            | 40.0           |`
-`| households_cooling_heatpump_ground_water_electricity                   | 6.0           | 130.0          | 4.0            | 40.0           |`
-`| households_solar_pv_solar_radiation                                    | 0.0           | 11111.11       | 111.11         | 0.0            |`
-`| households_space_heater_coal                                           | 0.0           | 72.0           | 1.5            | 64.0           |`
-`| households_space_heater_collective_heatpump_water_water_ts_electricity | 900.0         | 4320.0         | 1620.0         | 720.0          |`
-`| households_space_heater_combined_network_gas                           | 0.0           | 4.5            | 0.5            | 4.5            |`
-`| households_space_heater_crude_oil                                      | 0.0           | 120.0          | 1.5            | 64.0           |`
-`| households_space_heater_district_heating_steam_hot_water               | 0.0           | 0.0            | 0.0            | 0.0            |`
-`| households_space_heater_electricity                                    | 0.0           | 1.0            | 0.0            | 1.0            |`
-`| households_space_heater_heatpump_add_on_electricity                    | 0.0           | 16.0           | 0.5            | 16.0           |`
-`| households_space_heater_heatpump_air_water_network_gas                 | 900.0         | 4320.0         | 1620.0         | 720.0          |`
-`| households_space_heater_heatpump_ground_water_electricity              | 6.0           | 130.0          | 4.0            | 40.0           |`
-`| households_space_heater_network_gas                                    | 0.0           | 5.0            | 0.0            | 1.0            |`
-`| households_space_heater_wood_pellets                                   | 0.0           | 68.0           | 1.5            | 64.0           |`
-`| households_water_heater_coal                                           | 0.0           | 88.0           | 1.5            | 80.0           |`
-`| households_water_heater_combined_network_gas                           | 0.0           | 4.5            | 0.5            | 4.5            |`
-`| households_water_heater_crude_oil                                      | 0.0           | 136.0          | 1.5            | 64.0           |`
-`| households_water_heater_district_heating_steam_hot_water               | 0.0           | 11.6           | 0.0            | 0.0            |`
-`| households_water_heater_fuel_cell_chp_network_gas                      | 0.0           | 8.5            | 0.5            | 4.5            |`
-`| households_water_heater_heatpump_air_water_electricity                 | 2.0           | 72.0           | 1.5            | 16.0           |`
-`| households_water_heater_micro_chp_network_gas                          | 0.0           | 8.5            | 0.5            | 4.5            |`
-`| households_water_heater_network_gas                                    | 0.0           | 8.0            | 1.0            | 4.0            |`
-`| households_water_heater_resistive_electricity                          | 0.0           | 5.0            | 1.0            | 5.0            |`
-`| households_water_heater_solar_thermal                                  | 0.0           | 16.0           | 0.333333       | 16.0           |`
-`| households_water_heater_wood_pellets                                   | 0.0           | 88.0           | 1.5            | 80.0           |`
-`+------------------------------------------------------------------------+---------------+----------------+----------------+----------------+`
+
+|name|   planning    |   placement    |  maintenance   |    removal     |
+|---| ---|---|---|---|
+| buildings_collective_geothermal                                        | 0.0           | 19530.0        | 19530.0        | 0.0            |
+| buildings_collective_chp_gas_power_fuelmix                             | 360.0         | 2880.0         | 1260.0         | 360.0          |
+| buildings_collective_chp_wood_pellets                                  | 113580.0      | 820080.0       | 171000.0       | 91080.0        |
+| buildings_cooling_airconditioning                                      | 0.0           | 23.0           | 1.7            | 7.0            |
+| buildings_cooling_collective_heatpump_water_water_ts_electricity       | 6.0           | 50272.2        | 1377.3         | 40.0           |
+| buildings_cooling_heatpump_air_water_network_gas                       | 0.0           | 8164.9         | 340.2          | 16.0           |
+| buildings_solar_pv_solar_radiation                                     | 0.0           | 11855.56       | 118.56         | 0.0            |
+| buildings_space_heater_coal                                            | 0.0           | 88.0           | 1.5            | 64.0           |
+| buildings_space_heater_collective_heatpump_water_water_ts_electricity  | 6.0           | 16933.0        | 463.9          | 40.0           |
+| buildings_space_heater_crude_oil                                       | 0.0           | 136.0          | 1.5            | 64.0           |
+| buildings_space_heater_electricity                                     | 0.0           | 17.0           | 0.0            | 1.0            |
+| buildings_space_heater_heatpump_air_water_network_gas                  | 6.0           | 16933.0        | 463.9          | 40.0           |
+| buildings_space_heater_network_gas                                     | 0.0           | 21.0           | 0.0            | 1.0            |
+| buildings_space_heater_solar_thermal                                   | 0.0           | 430.8          | 4.5            | 16.0           |
+| buildings_space_heater_wood_pellets                                    | 0.0           | 84.0           | 1.5            | 80.0           |
+| energy_chp_combined_cycle_gas_power_fuelmix                            | 442800.0      | 2835000.0      | 534600.0       | 354600.0       |
+| energy_chp_ultra_supercritical_coal                                    | 590580.0      | 7087680.0      | 1170000.0      | 472500.0       |
+| energy_chp_ultra_supercritical_crude_oil                               | 590580.0      | 7087680.0      | 1170000.0      | 472500.0       |
+| energy_chp_ultra_supercritical_lignite                                 | 590580.0      | 7087680.0      | 1170000.0      | 472500.0       |
+| energy_chp_ultra_supercritical_wood_pellets                            | 113580.0      | 820080.0       | 171000.0       | 91080.0        |
+| energy_power_combined_cycle_ccs_coal                                   | 2281500.0     | 3802500.0      | 367200.0       | 1170000.0      |
+| energy_power_combined_cycle_ccs_gas_power_fuelmix                      | 27300.0       | 27300.0        | 650000.0       | 816000.0       |
+| energy_power_combined_cycle_coal                                       | 1755000.0     | 2925000.0      | 216000.0       | 900000.0       |
+| energy_power_combined_cycle_gas_power_fuelmix                          | 21000.0       | 500000.0       | 76800.0        | 480000.0       |
+| energy_power_geothermal                                                | 0.0           | 41664.0        | 22848.0        | 0.0            |
+| energy_power_nuclear_gen3_uranium_oxide                                | 4400000.0     | 1296000.0      | 288000.0       | 480000.0       |
+| energy_power_solar_pv_solar_radiation                                  | 0.0           | 222222.22      | 2222.22        | 0.0            |
+| energy_power_supercritical_coal                                        | 1350000.0     | 2250000.0      | 180000.0       | 900000.0       |
+| energy_power_supercritical_waste_mix                                   | 113580.0      | 820080.0       | 171000.0       | 91080.0        |
+| energy_power_turbine_network_gas                                       | 88560.0       | 567000.0       | 106920.0       | 70920.0        |
+| energy_power_ultra_supercritical_ccs_coal                              | 1755000.0     | 2925000.0      | 306000.0       | 1170000.0      |
+| energy_power_ultra_supercritical_coal                                  | 1350000.0     | 2250000.0      | 180000.0       | 900000.0       |
+| energy_power_ultra_supercritical_cofiring_wood_pellets                 | 1350000.0     | 2250000.0      | 180000.0       | 900000.0       |
+| energy_power_ultra_supercritical_crude_oil                             | 21000.0       | 500000.0       | 76800.0        | 480000.0       |
+| energy_power_ultra_supercritical_gas_power_fuelmix                     | 21000.0       | 500000.0       | 76800.0        | 480000.0       |
+| energy_power_ultra_supercritical_lignite                               | 1350000.0     | 2250000.0      | 180000.0       | 900000.0       |
+| energy_power_ultra_supercritical_oxyfuel_ccs_lignite                   | 1755000.0     | 2925000.0      | 306000.0       | 1170000.0      |
+| energy_power_wind_turbine_coastal                                      | 3439.09       | 4120.2         | 750.0          | 1740.0         |
+| energy_power_wind_turbine_inland                                       | 3439.09       | 4120.2         | 750.0          | 1740.0         |
+| energy_power_wind_turbine_offshore                                     | 3439.1        | 22680.0        | 750.0          | 1740.0         |
+| households_collective_geothermal                                       | 0.0           | 19530.0        | 19530.0        | 0.0            |
+| households_collective_chp_network_gas                                  | 360.0         | 2880.0         | 1260.0         | 360.0          |
+| households_collective_chp_wood_pellets                                 | 113580.0      | 820080.0       | 171000.0       | 91080.0        |
+| households_cooling_airconditioning_electricity                         | 0.0           | 7.0            | 1.5            | 7.0            |
+| households_cooling_collective_heatpump_water_water_ts_electricity      | 6.0           | 130.0          | 4.0            | 40.0           |
+| households_cooling_heatpump_air_water_network_gas                      | 6.0           | 130.0          | 4.0            | 40.0           |
+| households_cooling_heatpump_ground_water_electricity                   | 6.0           | 130.0          | 4.0            | 40.0           |
+| households_solar_pv_solar_radiation                                    | 0.0           | 11111.11       | 111.11         | 0.0            |
+| households_space_heater_coal                                           | 0.0           | 72.0           | 1.5            | 64.0           |
+| households_space_heater_collective_heatpump_water_water_ts_electricity | 900.0         | 4320.0         | 1620.0         | 720.0          |
+| households_space_heater_combined_network_gas                           | 0.0           | 4.5            | 0.5            | 4.5            |
+| households_space_heater_crude_oil                                      | 0.0           | 120.0          | 1.5            | 64.0           |
+| households_space_heater_district_heating_steam_hot_water               | 0.0           | 0.0            | 0.0            | 0.0            |
+| households_space_heater_electricity                                    | 0.0           | 1.0            | 0.0            | 1.0            |
+| households_space_heater_heatpump_add_on_electricity                    | 0.0           | 16.0           | 0.5            | 16.0           |
+| households_space_heater_heatpump_air_water_network_gas                 | 900.0         | 4320.0         | 1620.0         | 720.0          |
+| households_space_heater_heatpump_ground_water_electricity              | 6.0           | 130.0          | 4.0            | 40.0           |
+| households_space_heater_network_gas                                    | 0.0           | 5.0            | 0.0            | 1.0            |
+| households_space_heater_wood_pellets                                   | 0.0           | 68.0           | 1.5            | 64.0           |
+| households_water_heater_coal                                           | 0.0           | 88.0           | 1.5            | 80.0           |
+| households_water_heater_combined_network_gas                           | 0.0           | 4.5            | 0.5            | 4.5            |
+| households_water_heater_crude_oil                                      | 0.0           | 136.0          | 1.5            | 64.0           |
+| households_water_heater_district_heating_steam_hot_water               | 0.0           | 11.6           | 0.0            | 0.0            |
+| households_water_heater_fuel_cell_chp_network_gas                      | 0.0           | 8.5            | 0.5            | 4.5            |
+| households_water_heater_heatpump_air_water_electricity                 | 2.0           | 72.0           | 1.5            | 16.0           |
+| households_water_heater_micro_chp_network_gas                          | 0.0           | 8.5            | 0.5            | 4.5            |
+| households_water_heater_network_gas                                    | 0.0           | 8.0            | 1.0            | 4.0            |
+| households_water_heater_resistive_electricity                          | 0.0           | 5.0            | 1.0            | 5.0            |
+| households_water_heater_solar_thermal                                  | 0.0           | 16.0           | 0.333333       | 16.0           |
+| households_water_heater_wood_pellets                                   | 0.0           | 88.0           | 1.5            | 80.0           |
++------------------------------------------------------------------------+---------------+----------------+----------------+----------------+
 
 Appendix B: known issues
 ------------------------
