@@ -1,15 +1,15 @@
 The dashboard in the Energy Transition Model is the overview at the bottom of the page, which contains information on the most essential performance indicators of the scenario. The user can click on each of the indicators in the dashboard to get a pop-up with detailed information on each of the subjects. This page explains both the number indicator and the pop-up window.
 
-As of November 2011 the dynamic dashboard has been introduced. Users can now customize the dashboard they see in the model by clicking 'Change' at the bottom right of the dashboard. ![A screenshot of the dashboard, which supplies information on a number of performance indicators of your scenario.](/images/Dashboard.jpg "fig:A screenshot of the dashboard, which supplies information on a number of performance indicators of your scenario.")
+As of November 2011 the dynamic dashboard has been introduced. Users can now customize the dashboard they see in the model by clicking 'Change' at the bottom right of the dashboard. ![A screenshot of the dashboard, which supplies information on a number of performance indicators of your scenario.](../images/Dashboard.jpg "fig:A screenshot of the dashboard, which supplies information on a number of performance indicators of your scenario.")
 
 Energy use
 ----------
 
-*Main article: [Primary energy](primary_energy)*
+*Main article: [Primary energy](primary_energy.md)*
 
 The chart shows the total primary energy consumption resulting from the total final consumption. This includes primary consumption that results from final non-energy consumption. It does not include primary consumption that results from exports. (This also means that the losses which are typically incurred in the conversion sector are only included for the part of the inland final consumption, not for the exports)
 
-For more information on the primary energy calculation click [here](primary_energy).
+For more information on the primary energy calculation click [here](primary_energy.md).
 
 CO<sub>2</sub> emissions
 ------------------------
