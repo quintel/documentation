@@ -36,7 +36,7 @@ Unlike most calculations in the ETM, this one involves load on the grid, not ene
 
 The six levels that are defined are: Low voltage network (LV network), Medium/Low voltage transformer (MV/LV transformer), Medium voltage distribution network (MV distribution network or MV-D network), Medium voltage transport network (MV transport network or MV-T network), High/Medium voltage transformer (HV/MV transformer), and High voltage network (HV network).
 
-The following figure shows a schematic of the electricity grid and the model considered by the ETM. ![](../images/Schematic_of electricity_grid.jpg "fig:Schematic of electricity grid.jpg")
+The following figure shows a schematic of the electricity grid and the model considered by the ETM. ![](../images/Schematic_of_electricity_grid.jpg "fig:Schematic of electricity grid.jpg")
 
 The most important difference between the actual grid and the model used in the ETM is that the ETM model consists of only one component per level (i.e. instead of taking into account the thousands of cables and transformers that compose the actual grid, the ETM views these as a single cable or transformer for each level.)
 
