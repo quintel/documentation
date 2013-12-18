@@ -5,7 +5,7 @@ Primary energy is energy found in nature that has not been subjected to any conv
 Primary energy calculation method
 ---------------------------------
 
-The model calculates primary consumption associated with the output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the primary consumption of that converter's output is and takes his share. This process continues until it reaches the primary converters. At the primary converters, the primary consumption is determined using the [physical content method](primary_energy.md). Hence the associated primary consumption can be calculated for every converter, including those that represent *non-energetic* consumption (for example feedstock in the chemical industry) and those that export energy (currently only electricity is exported as a carrier where transformation losses occur).
+The model calculates primary consumption associated with the output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the primary consumption of that converter's output is and takes his share. This process continues until it reaches the primary converters. At the primary converters, the primary consumption is determined using the [physical content method](primary_energy.md#physical-content-method). Hence the associated primary consumption can be calculated for every converter, including those that represent *non-energetic* consumption (for example feedstock in the chemical industry) and those that export energy (currently only electricity is exported as a carrier where transformation losses occur).
 
 "Energy use" in the dashboard
 -----------------------------
@@ -25,17 +25,17 @@ We determine the primary energy equivalent of an energy flow by calculating the 
 
 ### Physical energy calculation
 
-| Technology | Primary energy form | Calculation IEA/EC | Calculation ETM |
-| ---------- | ------------------- | ------------------ | --------------- | 
-| Combustible fuels (coal, oil, gas, biomass, waste and derivatives) | Fuel itself | Heat of combustion on a net calorific value basis (also known as lower heating value) | Idem | 
-| Nuclear | Heat | 3.03 x gross output of electricity (which assumes a 33% efficiency) | 3.125 x (assumes 32 % efficiency) | 
-| Solar thermal | Heat | Output of heat. Note: only solar heat from flat plate collectors and solar thermal electric plants is counted, not passive heating of houses etc. | Idem | 
-| Geothermal heat | Heat | 2 x heat output | Output of heat | 
-| Geothermal electricity | Heat / Electricity | 10 x electricity output | Gross output of electricity | 
-| Heat pump (ambient heat part) | Heat | Useful heat output - Electricity input. Note: only ambient heat for heat pumps that deliver monetized heat is counted; ambient heat for heat pumps in for example households or industry is not counted at all. | All ambient heat input to heatpumps is counted, also for example in households or industry. The calculation is idem. | 
-| Hydro energy | Electricity | Gross output of electricity | Idem | 
-| Wind energy | Electricity | Gross output of electricity | Idem | 
-| Tide/wave/ocean | Electricity | Gross output of electricity | N/A | 
-| style=white-space:nowrap  |  Solar Photovoltaic | Electricity | Gross output of electricity | Idem | 
+|Technology|Primary energy form|Calculation IEA/EC|Calculation ETM|
+|----------|-------------------|------------------|---------------|
+|Combustible fuels (coal, oil, gas, biomass, waste and derivatives)|Fuel itself|Heat of combustion on a net calorific value basis (also known as lower heating value)|Idem|
+|Nuclear|Heat|3.03 x gross output of electricity (which assumes a 33% efficiency)|3.125 x (assumes 32 % efficiency)|
+|Solar thermal|Heat|Output of heat. Note: only solar heat from flat plate collectors and solar thermal electric plants is counted, not passive heating of houses etc.|Idem|
+|Geothermal heat|Heat|2 x heat output|Output of heat|
+|Geothermal electricity|Heat / Electricity|10 x electricity output|Gross output of electricity|
+|Heat pump (ambient heat part)|Heat|Useful heat output - Electricity input. Note: only ambient heat for heat pumps that deliver monetized heat is counted; ambient heat for heat pumps in for example households or industry is not counted at all.|All ambient heat input to heatpumps is counted, also for example in households or industry. The calculation is idem.|
+|Hydro energy|Electricity|Gross output of electricity|Idem|
+|Wind energy|Electricity|Gross output of electricity|Idem|
+|Tide/wave/ocean|Electricity|Gross output of electricity|N/A|
+|Solar Photovoltaic|Electricity|Gross output of electricity|Idem|
 
 General information on primary energy can be found [here](http://en.wikipedia.org/wiki/Primary_energy).

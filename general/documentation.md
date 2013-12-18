@@ -213,8 +213,9 @@ The ETM makes a rough estimation of how much arable land equivalent a region nee
 
 Any biomass that is not domestically produced (see [import article](import_calculations.md) for information on domestic production curves) is imported. The research team has determined which energy crop is the most efficient for each of the categories listed above. Regardless of whether biomass is homegrown or imported the ETM calculates impact on arable land somewhere in the world and expresses this in multiples of the region's own arable land area as shown in the [Dashboard](dashboard.md).
 
-|---|---|---|
+
 |**Energy Carrier**|Typical production|Comment|
+|---|---|---|
 ||*GJ per hectare*||
 |Biomass|264.0|For woody biomass we use this yield for North West Europe, based on a combination of cost and production efficiency.|
 |Greengas|125.65|For biogas production by co-digestion we assume a 50 / 50 mixture of manure and biomass. The manure available acts like a cap on domestic production capacity. The crop of choice is corn-silage. Per tonne of input we obtain 56 m<sup>3</sup> or 2.2 GJ of methane.|

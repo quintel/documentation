@@ -36,7 +36,7 @@ With this calculation in the ETM, users can see whether they have a sufficiently
 
 ### In the ETM
 
-![screenshot of the loss of load popup](../images/blackout_risk_popup.jpg "screenshot of the loss of load popup")
+![screenshot of the loss of load popup](../images/Blackout_risk_popup.jpg "screenshot of the loss of load popup")
 
 The loss of load dashboard item can be accessed via the flexible dashboard by clicking 'Change' on the bottom right corner of the Energy Transition Model interface. If the calculation is selected, the loss of load probability is seen in the middle of the dashboard. This percentage is the probability that production capacity is less than demand by comparing the peak electricity demand and the installed electricity production capacity. By clicking on the dashboard item reveals a popup showing a chart with three values for both the present and the future year. In the chart the three things shown are:
 
@@ -48,9 +48,9 @@ The sum of the reliable and unreliable production capacity is equal to the total
 
 If the peak electricity demand is less than the reliable capacity the loss of load probability increases. To decrease the loss of load probability, reliable capacity needs to be installed. Favorable options are technologies such as: gas CCGTs, large CHPs, hydro plants, etc.
 
-===Calculation===
+### Calculation
 
-![illustrative sketch of loss of load calculation](Security_of_supply_normal_distribution.jpg "illustrative sketch of loss of load calculation")
+![illustrative sketch of loss of load calculation](/images/Security_of_supply_normal_distribution.jpg "illustrative sketch of loss of load calculation")
 
 Calculating the loss of load probability is done using the following parameters:
 
@@ -74,7 +74,7 @@ The flexibility of electricity backup calculation offers a comparison between fo
 
 ### In the ETM
 
-![Screenshot of scatter plot showing comparison of backup options](../images/flexibility_scatter_plot.jpg "Screenshot of scatter plot showing comparison of backup options")
+![Screenshot of scatter plot showing comparison of backup options](../images/Flexibility_scatter_plot.jpg "Screenshot of scatter plot showing comparison of backup options")
 
 The backup for volatile electricity production module is found under the sidebar item “electricity backup” under the tab “supply”. It consists of a scatter plot comparing different electricity backup options based on the additional costs and emissions that would be incurred on top of the costs and emissions of volatile electricity production. Figure 2 shows a screenshot of the scatter plot. For example, based on the figure it is seen that a Gas CCGT plant had additional costs of approximately 5 EUR/MWhe and emissions of 23 kgCO2/MWhe. Some important things to understand about the values expressed in the scatter plot:
 
@@ -83,7 +83,7 @@ The backup for volatile electricity production module is found under the sidebar
 
 ### Calculation
 
-Details about the calculation can be found in the project documentation found [http://refman.et-model.com/publications/1705 here](http://refman.et-model.com/publications/1705). The details are excluded here because of formatting limitations.
+Details about the calculation can be found in the project documentation found [here](http://refman.et-model.com/publications/1705). The details are excluded here because of formatting limitations.
 
 Literature
 ----------

@@ -22,7 +22,9 @@ The percentage shows the change in CO<sub>2</sub> emissions between 1990 and the
 
 CO<sub>2</sub> emissions shown here are the total *energetic* CO<sub>2</sub> emissions resulting from the total final *energy* consumption. This does not include CO<sub>2</sub> emissions from final non-energy consumption, fugitive emissions, industrial process, solvent and other product use, agriculture, LULUCF, and other. It also does not include CO<sub>2</sub> emissions resulting from exports. The CO<sub>2</sub> emission reduction of CO<sub>2</sub> capture and storage is taken into account.
 
-![Energy import in the dashboard](../images/Import_chart.jpg "fig:Energy import in the dashboard") The 1990 value is taken from the [area data file](https://github.com/quintel/etsource/blob/master/datasets/nl/nl.ad). The values for the current year and the scenario year are calculated. For more information on the CO<sub>2</sub> emission calculation click [here](co2_calculations.md).
+![Energy import in the dashboard](../images/Import_chart.jpg "fig:Energy import in the dashboard")
+
+The 1990 value is taken from the [area data file](https://github.com/quintel/etsource/blob/master/datasets/nl/nl.ad). The values for the current year and the scenario year are calculated. For more information on the CO<sub>2</sub> emission calculation click [here](co2_calculations.md).
 
 Energy imports
 --------------
@@ -55,7 +57,7 @@ The chart shows the these costs both for the current situation (left) and the sc
 
 The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [here](cost_calculations.md) for more information on the cost calculation.
 
-Bio-footprint 
+Bio-footprint
 -------------
 
 *Main article: [Footprint calculations](documentation.md#biofootprint_calculations)*
