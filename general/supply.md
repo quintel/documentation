@@ -1,3 +1,5 @@
+# Supply
+
 Introduction
 ------------
 
@@ -14,7 +16,7 @@ The Supply tab covers the central production of both electricity and heat, as we
 Supply/Demand Balance
 ---------------------
 
-Having determined energy consumption in the [Demand](Demand "wikilink") section, the user has the opportunity to specify how electricity and heat production should take place. Of course, supply and demand of electricity must be in balance. The ETM assure this balance exists, by importing any shortages or exporting surpluses. Electricity is easily imported or exported via interconnection capacity on the grid. As there are few options for electricity storage and no options for just dumping electricity, it is important to maintain the electricity balance.
+Having determined energy consumption in the [Demand](demand.md) section, the user has the opportunity to specify how electricity and heat production should take place. Of course, supply and demand of electricity must be in balance. The ETM assure this balance exists, by importing any shortages or exporting surpluses. Electricity is easily imported or exported via interconnection capacity on the grid. As there are few options for electricity storage and no options for just dumping electricity, it is important to maintain the electricity balance.
  Heat on the other hand, can be and is often dumped. Too much heat production will just lead to waste in the ETM, whereas a surplus of electricity will lead to exports. In the households and buildings sectors the heat demand and supply are automatically balanced in the model by adjusting the supply of heat to the demand. This is achieved by linking the local demand for heat to decentral heat producing technologies.
 The only exception is the district heating option, which is connected to the central heat network, where several heat sources can supply heat at the same time, so a direct link between demand and supply is not possible.
 In the other sectors demand and supply are not automatically linked. If there is a shortage of heat the model will show a "Heat network remainder" slider which shows the user he has to produce more heat in some way to balance the heat demand and supply in the model. Heat in the model is exchanged between sectors and only if the heat produced in all sectors together is lower than the demand does a shortage exist. If the total heat produced in all sectors is higher than the demand a surplus of heat exists and this excess heat is dumped.

@@ -1,3 +1,5 @@
+# Dashboard
+
 The dashboard in the Energy Transition Model is the overview at the bottom of the page, which contains information on the most essential performance indicators of the scenario. The user can click on each of the indicators in the dashboard to get a pop-up with detailed information on each of the subjects. This page explains both the number indicator and the pop-up window.
 
 As of November 2011 the dynamic dashboard has been introduced. Users can now customize the dashboard they see in the model by clicking 'Change' at the bottom right of the dashboard. ![A screenshot of the dashboard, which supplies information on a number of performance indicators of your scenario.](../images/Dashboard.jpg "fig:A screenshot of the dashboard, which supplies information on a number of performance indicators of your scenario.")
@@ -14,13 +16,13 @@ For more information on the primary energy calculation click [here](primary_ener
 CO<sub>2</sub> emissions
 ------------------------
 
-*Main article: [CO2 calculations](CO2 calculations "wikilink")*
+*Main article: [CO2 calculations](co2_calculations.md)*
 
 The percentage shows the change in CO<sub>2</sub> emissions between 1990 and the scenario year. The chart shows the CO<sub>2</sub> emissions in 1990, in the current year and in the scenario year. The target CO<sub>2</sub> emissions is set by the user in the section "goals - sustainability targets".
 
 CO<sub>2</sub> emissions shown here are the total *energetic* CO<sub>2</sub> emissions resulting from the total final *energy* consumption. This does not include CO<sub>2</sub> emissions from final non-energy consumption, fugitive emissions, industrial process, solvent and other product use, agriculture, LULUCF, and other. It also does not include CO<sub>2</sub> emissions resulting from exports. The CO<sub>2</sub> emission reduction of CO<sub>2</sub> capture and storage is taken into account.
 
-![Energy import in the dashboard](/images/Import_chart.jpg "fig:Energy import in the dashboard") The 1990 value is taken from [area data](area data "wikilink"). The values for the current year and the scenario year are calculated. For more information on the CO<sub>2</sub> emission calculation click [here](CO2_calculations "wikilink").
+![Energy import in the dashboard](/images/Import_chart.jpg "fig:Energy import in the dashboard") The 1990 value is taken from [area data](area data "wikilink"). The values for the current year and the scenario year are calculated. For more information on the CO<sub>2</sub> emission calculation click [here](co2_calculations.md).
 
 Energy imports
 --------------
@@ -34,7 +36,7 @@ The chart shows the net imported amount (net export is negative) of each primary
 Cost
 ----
 
-*Main article: [Cost calculations](Cost calculations "wikilink")*
+*Main article: [Cost calculations](cost_calculations.md)*
 
 The number shows the total yearly cost of energy supply in your region in the scenario.
 
@@ -45,7 +47,7 @@ The value is in current year's euros. It includes the costs of the primary energ
 Costs per household
 -------------------
 
-*Main article: [Cost calculations](Cost calculations "wikilink")*
+*Main article: [Cost calculations](cost_calculations.md)*
 
 The number shows the total yearly cost of energy supply divided by the number of households.
 
@@ -85,11 +87,11 @@ The chart shows this percentage both for the current situation and the scenario.
 Goals
 -----
 
-*Main article: [Goals](Goals "wikilink")*
+*Main article: [Goals](targets.md)*
 
 The numerator in this fraction shows the number of targets met in the scenario, while the denominator shows the total number of targets that can be set.
 
-The pop-up shows a list of all targets with the goals set and the value in the current scenario. When a goal is met the red X in front of the target changes in a green V. The goals shown here are the users own goals which he can change under the tab "[Goals](Goals "wikilink")" on top of the screen.
+The pop-up shows a list of all targets with the goals set and the value in the current scenario. When a goal is met the red X in front of the target changes in a green V. The goals shown here are the users own goals which he can change under the tab "[Goals](targets.md)" on top of the screen.
 
 Loss of load
 ------------

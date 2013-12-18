@@ -1,3 +1,5 @@
+# Cost calculations
+
 The Energy Transition Model calculates the total cost of the yearly energy supply for the region. The total cost is broken down in five categories: heat, electricity, fuels, non-energetic fuels, and network costs.
 
 -   The costs for electricity includes costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable.

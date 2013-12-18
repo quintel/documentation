@@ -1,3 +1,5 @@
+# Detailed documentation
+
 Introduction
 ------------
 
@@ -5,10 +7,10 @@ The Energy Transition Model (ETM) allows the user to explore the future of the e
 
 The model consists of 4 major areas:
 
--   **[ Targets](Goals "wikilink"):** where users set their policy targets that they are later evaluated against
--   **[ Demand](Demand "wikilink"):** where users set the future demand of energy in 6 economic sectors (households, non-residential buildings, transport, industry, agriculture and other)
--   **[ Costs](Costs "wikilink"):** where users specify their estimations of future energy costs
--   **[ Supply](Supply "wikilink"):** where users set how and what energy is supplied in the future
+-   **[Targets](targets.md):** where users set their policy targets that they are later evaluated against
+-   **[Demand](demand.md):** where users set the future demand of energy in 6 economic sectors (households, non-residential buildings, transport, industry, agriculture and other)
+-   **[Costs](costs.md):** where users specify their estimations of future energy costs
+-   **[Supply](supply.md):** where users set how and what energy is supplied in the future
 
 The model uses data on energy consumption and production and present day state-of-the-art technology data. The use of underlying assumptions has been minimized and assumptions about changes in the future are left to the user as much as possible. With the sliders in the interface a user can influence the future state of the model. If no slider is available to set a certain change in the future, no assumption is made by the ETM.
 **Note:** The user is responsible for the internal consistency of all assumptions, as no automatic correction of inconsistent assumptions takes place.
@@ -18,7 +20,7 @@ The energy system is approached as an ‘energy flow’ or Sankey diagram based 
 Interface
 ---------
 
-*Main article: [Interface](Interface "wikilink")*
+*Main article: [Interface](interface.md)*
 
 ### Layout
 
@@ -26,31 +28,29 @@ The layout of the ETM is based on its four main topics (Targets, Demand, Costs a
 
 #### Targets
 
-*Main article: [ Targets](Goals "wikilink")*
+*Main article: [Targets](targets.md)*
 
 Allows the user to set targets for sustainability, dependence on other countries for energy, costs of energy and the maximum area use for renewable technologies. These targets are not used as input to the ETM's calculations and do not set hard boundaries in the model. They allow the user to see for which areas he is meeting his targets and for which he needs to make a bigger effort to achieve them.
 
 #### Demand
 
-*Main article: [Demand](Demand "wikilink")*
+*Main article: [Demand](demand.md)*
 
 Allows the user to change the way energy is used and what energy demand will be in the future in the sectors: Households, Non-residential buildings, Transport, Industry, Agriculture and Other.
 
 #### Cost
 
-*Main article: [Costs](Costs "wikilink")*
+*Main article: [Costs](costs.md)*
 
 Allows the user to input his assumptions on how costs for fuels, electricity production technologies and CO<sub>2</sub> emission will change.
 
 #### Supply
 
-*Main article: [Supply](Supply "wikilink")*
+*Main article: [Supply](supply.md)*
 
 Allows the user to determine which technologies are used for central electricity and heat production and also how green transport fuels will be.
 
 ### Charts
-
-*Main article: [Charts](Charts "wikilink")*
 
 The charts on the right hand side of the page directly show the result when a slider is changed. The charts provide insight in the energy system by showing figures of the current situation as well as of the scenario you are creating. The transition path in the charts is only an indication of the development, as the values between the current year and the scenario year are solely an interpolation between the figures of the two years.
 
@@ -58,7 +58,7 @@ Specific charts are explained further in the explanation of the interface. In th
 
 ### Dashboard
 
-*Main article: [Dashboard](Dashboard "wikilink")*
+*Main article: [Dashboard](dashboard.md)*
 
 The dashboard is the row of numbers at the bottom of each page. It shows the most important indicators for your scenario at a glance. As of November 2011 it is possible to customize the dashboard by clicking 'Change' at the bottom right side of the dashboard in the ETM. The indicators currently available for the dashboard are:
 
@@ -87,12 +87,12 @@ The model is linear and does not use feedback loops (it is not an equilibrium mo
 ### Calculation
 
 The ETM calculates the energy consumption and associated parameters such as costs and CO<sub>2</sub> in a bottom up fashion starting from what is called 'useful demand', via 'final demand' to 'primary demand'.
-[ Useful demand](useful demand "wikilink") is the demand for heat for heating houses, or for transportation, for example.
+[Useful demand](useful_demand.md) is the demand for heat for heating houses, or for transportation, for example.
 **Final demand** is the consumption of energy carriers in order to meet useful demand, e.g. gas for heating houses or gasoline for transportation.
 **Primary demand** is the consumption of primary energy carriers, some of which may be converted to other carriers, e.g. coal converted into cokes or mineral oil into oil fractions like gasoline.
  The ETM uses the following approach to calculate how useful demand determines demand for primary energy carriers:
 
--   The energy system is approached as an ‘energy flow’ or Sankey diagram based on a network of interconnected ‘energy convertors’ with [links](Links "wikilink") between them.
+-   The energy system is approached as an ‘energy flow’ or Sankey diagram based on a network of interconnected ‘energy convertors’ with links (or edges) between them.
     -   Energy converters convert energy carriers into other energy and losses, examples are gas heaters, electric cars, nuclear power plants, power lines etc. All converters have [attributes](Converter_attributes "wikilink") assigned.
     -   The network of converters is called a ‘graph’. A partial schematic version is shown below (to be read from left to right).
     -   The ETM uses two graphs, a static one for the present and a dynamic one for the future situation; the latter can be influenced using the sliders in the interface.
@@ -144,7 +144,7 @@ Here, an overview of the different calculation types is given.
 
 ### Energy flow calculations
 
-The energy flow calculations are the most important calculations in the model, as all other calculations are related to these calculations. Based on the [modeling logic](Index#Calculation "wikilink"), the model calculates the flow of energy through the entire network of [converters](converter "wikilink"), which calculates the [primary demand](Primary_energy "wikilink") based on the [useful demand](useful demand "wikilink") and how these are provided. When this initial calculation is completed, the other calculations are done based on the outcome.
+The energy flow calculations are the most important calculations in the model, as all other calculations are related to these calculations. Based on the [modeling logic](Index#Calculation "wikilink"), the model calculates the flow of energy through the entire network of [converters](converter "wikilink"), which calculates the [primary demand](Primary_energy "wikilink") based on the [useful demand](useful_demand.md) and how these are provided. When this initial calculation is completed, the other calculations are done based on the outcome.
 
 ### Primary energy calculations
 
@@ -172,7 +172,7 @@ To calculate how large the total imported energy is compared to the total energy
 
 ### Cost calculations
 
-*Main article: [Cost calculations](Cost calculations "wikilink")*
+*Main article: [Cost calculations](cost_calculations.md)*
 
 The Energy Transition Model calculates the total cost of energy supply for the region. The total cost is broken down in five categories: electricity, heat, (energetic) fuels, non-energetic fuels, and network costs.
 
@@ -211,7 +211,7 @@ The ETM makes a rough estimation of how much arable land equivalent a region nee
 -   Waste streams for direct combustion
 -   Waste streams for co-digestion into biogas
 
-Any biomass that is not domestically produced (see [import article](Import_calculations#Domestic_production_curves "wikilink") for information on domestic production curves) is imported. The research team has determined which energy crop is the most efficient for each of the categories listed above. Regardless of whether biomass is homegrown or imported the ETM calculates impact on arable land somewhere in the world and expresses this in multiples of the region's own arable land area as shown in the [Dashboard](Dashboard "wikilink").
+Any biomass that is not domestically produced (see [import article](Import_calculations#Domestic_production_curves "wikilink") for information on domestic production curves) is imported. The research team has determined which energy crop is the most efficient for each of the categories listed above. Regardless of whether biomass is homegrown or imported the ETM calculates impact on arable land somewhere in the world and expresses this in multiples of the region's own arable land area as shown in the [Dashboard](dashboard.md).
 
 |---|---|---|
 |**Energy Carrier**|Typical production|Comment|

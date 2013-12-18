@@ -1,3 +1,5 @@
+# Network impact calculation
+
 The network impact calculation is a module that currently only works for the Dutch version of the ETM. The calculation determines the investment required in the electricity grid depending on the choices made by the users. For example, in a scenario with a large share of electric heaters the capacity of the current electricity grid is not sufficient to meet all demand.
 
 The results of the Network Impact calculation are two graphs on the front end of the model: ‘Required additional infrastructure investments’ and ‘Annual infrastructure costs’. The first graph shows the total additional investment required in the electricity grid for certain scenarios and the second shows these costs in annual costs including operation and maintenance costs and interest.

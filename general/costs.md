@@ -1,7 +1,9 @@
+# Costs
+
 Introduction
 ------------
 
-*Related articles: [Cost calculations](Cost calculations "wikilink")*
+*Related articles: [Cost calculations](cost_calculations.md)*
 
 On the Costs tab of the ETM a user can input all his estimates concerning future energy costs. A graph on the right displays how various types of electricity generation differ in terms of costs. For some of these plants, expert predictions of cost development are included. The user can choose whether the ETM should use these or not. The following categories are available:
 

@@ -1,3 +1,5 @@
+# Storage
+
 The largest obstacle in integrating large amounts of wind or solar power into the grid is the frequent mismatch between generation and demand. This can lead to both shortage and excess.
 
 This wiki page serves to explain the storage and conversion sidebar item in the ETM (Electricity storage). It is available in the professional version of the ETM in the Supply \> [Electricity storage](http://energytransitionmodel.com/scenario/supply/electricity_storage) slide.
@@ -46,7 +48,7 @@ or
 
 ![Left](Levelized_cost_definition.jpg "Left")
 
-Deriving the cost curves for conversion technologies for Figure 4 is rather complex and CPU- intensive. Furthermore, the simulation of excess electricity and its conversion is only possible with the information of the merit order module and with an hourly calculation. The simulation can only produce indicative results because there are many [ assumptions](Storage_and_conversion_of_electricity#Assumptions_in_simulating_Excess_Electricity_and_Levelized_Costs "wikilink") and many uncertainties in the [ technology characterization](Storage_and_conversion_of_electricity#Characterization_of_conversion_technologies "wikilink") . For these reasons, the chart has to be static and cannot adapt to slider settings.
+Deriving the cost curves for conversion technologies for Figure 4 is rather complex and CPU- intensive. Furthermore, the simulation of excess electricity and its conversion is only possible with the information of the merit order module and with an hourly calculation. The simulation can only produce indicative results because there are many [ assumptions](Storage_and_conversion_of_electricity#Assumptions_in_simulating_Excess_Electricity_and_Levelized_costs.md) and many uncertainties in the [ technology characterization](Storage_and_conversion_of_electricity#Characterization_of_conversion_technologies "wikilink") . For these reasons, the chart has to be static and cannot adapt to slider settings.
 
 Assumptions in simulating Excess Electricity and Levelized Costs
 ----------------------------------------------------------------
