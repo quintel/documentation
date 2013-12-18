@@ -1,3 +1,5 @@
+# Loss of load probability
+
 This wiki page documents information about the loss of load dashboard item.
 
 Introduction
@@ -12,7 +14,7 @@ With this calculation in the ETM, users can see whether they have a sufficiently
 In the ETM
 ----------
 
-![screenshot of the loss of load popup](/images/Blackout_risk_popup.jpg "screenshot of the loss of load popup")
+[screenshot of the loss of load popup](/images/Blackout_risk_popup.jpg "screenshot of the loss of load popup")
 
 The loss of load dashboard item can be accessed via the flexible dashboard by clicking 'Change' on the bottom right corner of the Energy Transition Model interface. If the calculation is selected, the loss of load probability is seen in the middle of the dashboard. This percentage is the probability that production capacity is less than demand by comparing the peak electricity demand and the installed electricity production capacity. By clicking on the dashboard item reveals a popup showing a chart with three values for both the present and the future year. In the chart the three things shown are:
 
@@ -27,7 +29,7 @@ If the peak electricity demand is less than the reliable capacity the loss of lo
 Calculation
 -----------
 
-![illustrative sketch of loss of load calculation](/images/Security_of_supply_normal_distribution.jpg "illustrative sketch of loss of load calculation")
+[illustrative sketch of loss of load calculation](/images/Security_of_supply_normal_distribution.jpg "illustrative sketch of loss of load calculation")
 
 Calculating the loss of load probability is done using the following parameters:
 

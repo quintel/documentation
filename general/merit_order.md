@@ -1,6 +1,6 @@
 # Merit Order
 
-![Figure 1: Merit Order slide in the ETM.](/images/Mo_slide.png "Figure 1: Merit Order slide in the ETM.")
+[Figure 1: Merit Order slide in the ETM.](/images/Mo_slide.png "Figure 1: Merit Order slide in the ETM.")
 
 For Dutch readers: Het project is uitgevoerd met subsidie van het Ministerie van Economische Zaken, voor het TKI Gas uitgevoerd door Agentschap NL. Translation: This project was supported by subsidies from the Ministry of economic affairs.
 
@@ -30,7 +30,7 @@ The module can be switched on and off using the switch on the Merit Order slide 
 
 #### The Merit Order table and chart
 
-![Figure 3: Merit Order table (left) and Merit Order graph (right).](/images/Mo_charts.png "Figure 3: Merit Order table (left) and Merit Order graph (right).")
+[Figure 3: Merit Order table (left) and Merit Order graph (right).](/images/Mo_charts.png "Figure 3: Merit Order table (left) and Merit Order graph (right).")
 
 There are three dedicated output elements associated with the Merit Order module: two tables and a chart. In Figure 3, the table and chart that show information about full load hours and marginal costs. The table associated with profitability is shown in Figure 5 and will be discussed in the next sub-section.
 
@@ -49,7 +49,7 @@ The *Merit Order Chart* (Figure 3, tight side) shows the installed capacity of e
 
 ### Using the dashboard item: Profitability
 
-![Figure 4: Selecting the 'profitability' dashboard item.](/images/Mo_dashboard_selection.png "fig:Figure 4: Selecting the 'profitability' dashboard item.") ![Figure 5: Profitability table.](/images/Mo_profitability_chart.png "fig:Figure 5: Profitability table.")
+[Figure 4: Selecting the 'profitability' dashboard item.](/images/Mo_dashboard_selection.png "fig:Figure 4: Selecting the 'profitability' dashboard item.") [Figure 5: Profitability table.](/images/Mo_profitability_chart.png "fig:Figure 5: Profitability table.")
 
 You can click on the 'change' button in the dashboard (see Figure 1, lower- right corner) to choose the profitability dashboard item. This will show the percentage of profitable power plants. More detailed information about profitability of electricity producers can be obtained by clicking the dashboard item which will open the table shown in Figure 5. We define three categories of profitability:
 
@@ -62,7 +62,7 @@ See also :[Profitability](#profitability).Note that the Merit Order module does 
 Implementation
 --------------
 
-![Figure 6: Cartoon of time-resolved Merit Order computation.](/images/Mo_cartoon.png "Figure 6: Cartoon of time-resolved Merit Order computation.")
+[Figure 6: Cartoon of time-resolved Merit Order computation.](/images/Mo_cartoon.png "Figure 6: Cartoon of time-resolved Merit Order computation.")
 
 The Merit Order module orders the dispatchable producers according their **marginal costs** and computes their yearly production of electricity (and, equivalently, their full load hours). Additionally, the module sets a price for electricity for every hour of the year.
 
@@ -188,7 +188,7 @@ Examples
 
 #### <a name="installing_too_many_power_plants"></a>Installing too many power plants
 
-![Figure 7: Merit oder off.](/images/Merit_order_example1_off.png "fig:Figure 7: Merit oder off.") ![Figure 8: Merit oder on.](/images/Merit_order_example1_on.png "fig:Figure 8: Merit oder on.")
+[Figure 7: Merit oder off.](/images/Merit_order_example1_off.png "fig:Figure 7: Merit oder off.") ![Figure 8: Merit oder on.](/images/Merit_order_example1_on.png "fig:Figure 8: Merit oder on.")
 
 To understand a first direct consequence of turning on the merit order module, try the following: *Add more pulverized coal plants* in the ‘Supply’ section. As long as the merit order module is turned off, the total electricity generation in the production graph will exceed the demand (see Figure 7). When you *turn on* the merit order module, it will only allow dispatchable power plants to run if there is a demand. In consequence, you will find, that the electricity production is reduced to the actual demand of your scenario (see Figure 8).
 
