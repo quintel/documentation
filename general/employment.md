@@ -173,7 +173,7 @@ Overview of technologies included in the employment calculations are given in th
 | households_water_heater_resistive_electricity                          | 0.0           | 5.0            | 1.0            | 5.0            |
 | households_water_heater_solar_thermal                                  | 0.0           | 16.0           | 0.333333       | 16.0           |
 | households_water_heater_wood_pellets                                   | 0.0           | 88.0           | 1.5            | 80.0           |
-+------------------------------------------------------------------------+---------------+----------------+----------------+----------------+
+
 
 Appendix B: known issues
 ------------------------
