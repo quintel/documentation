@@ -11,7 +11,7 @@ If the user selects "Start a new scenario" he can choose the country that he wan
 
 In the top right of the screen the user can also login to his/her account, or create one. There are additional links to information about Quintel, our partners and our education program.
 
-![The start screen of the ETM](../images/20110428_Start_screen.png "The start screen of the ETM")
+![The start screen of the ETM](../images/Start_screen.png "The start screen of the ETM")
 
 The main interface
 ------------------
@@ -20,7 +20,7 @@ The main interface contains a structure that the user should know in order to na
 
 The tabs in at the top of the screen contain the main topics of the ETM:
 
-1.  [Goals](targets.md)
+1.  [Targets](targets.md)
 2.  [Demand](demand.md)
 3.  [Costs](costs.md)
 4.  [Supply](supply.md)
@@ -35,7 +35,7 @@ On pages that have a tutorial available there is a button that can be clicked by
 
 In the top right the user can see the end year of the model and the flag of the area that he is creating a scenario for.
 
-![The main screen of the ETM](../images/20110428 main screen with highlights.png "The main screen of the ETM")
+![The main screen of the ETM](../images/20110428_main_screen_with_highlights.png "The main screen of the ETM")
 
 Energy mixer
 ------------
