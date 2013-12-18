@@ -36,7 +36,7 @@ Unlike most calculations in the ETM, this one involves load on the grid, not ene
 
 The six levels that are defined are: Low voltage network (LV network), Medium/Low voltage transformer (MV/LV transformer), Medium voltage distribution network (MV distribution network or MV-D network), Medium voltage transport network (MV transport network or MV-T network), High/Medium voltage transformer (HV/MV transformer), and High voltage network (HV network).
 
-The following figure shows a schematic of the electricity grid and the model considered by the ETM. ![](Schematic of electricity grid.jpg "fig:Schematic of electricity grid.jpg")
+The following figure shows a schematic of the electricity grid and the model considered by the ETM. ![](../images/Schematic of electricity grid.jpg "fig:Schematic of electricity grid.jpg")
 
 The most important difference between the actual grid and the model used in the ETM is that the ETM model consists of only one component per level (i.e. instead of taking into account the thousands of cables and transformers that compose the actual grid, the ETM views these as a single cable or transformer for each level.)
 
@@ -49,11 +49,11 @@ The bottom up calculation is used to calculate the impact of a user's scenario o
 
 The approach assumes that the networks are connected in linear fashion and that any electricity produced at the lowest level flows up through the higher levels. This implies that for each level it is necessary to consider what the impact is at the current level as well as what the impact is of the flow of electricity from lower levels. This concept is depicted in the following figure:
 
-![]( Network bottom up calculation.jpg " Network bottom up calculation.jpg")
+![](../images/Network bottom up calculation.jpg " Network bottom up calculation.jpg")
 
 To calculate the impact at a given level it is necessary to know what technologies are found at that level. The impact is determined by calculating the peak load deltas of relevant technologies and determining whether the network needs to be expanded or not. The following schematic and the explanation following shows how the calculation works:
 
-![](Network example calculation.jpg "Network example calculation.jpg")
+![](../images/Network example calculation.jpg "Network example calculation.jpg")
 
 1. The technologies that affect the electricity grid (such as heat pumps, solar panels, electric vehicles, etc.) are split into two categories: supply and demand technologies. For each technology the delta peak load of a single unit is calculated and multiplied by the simultaneousness.
 

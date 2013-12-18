@@ -27,7 +27,7 @@ CO<sub>2</sub> emissions shown here are the total *energetic* CO<sub>2</sub> emi
 Energy imports
 --------------
 
-*Main article: [Import calculations](import_calculations)*
+*Main article: [Import calculations](import_calculations.md)*
 
 The percentage is the net amount of imported primary energy (imports - exports) divided by the total primary consumption. The total primary consumption includes the conversion losses incurred from generation of electricity that is exported. (this approach is sometimes called the 'territorial' approach, as opposed to the 'final consumption' approach)
 
@@ -42,7 +42,7 @@ The number shows the total yearly cost of energy supply in your region in the sc
 
 The chart shows the these costs both for the current situation (left) and the scenario (right). It also shows the contribution to the costs from the supply of heat, supply of electricity, supply of transport fuels, and the supply of non-energetically used fuels (for example feedstock in the chemical industry, or oil used as lubricant in the transport sector).
 
-The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [ here](cost_calculations.md) for more information on the cost calculation.
+The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [here](cost_calculations.md) for more information on the cost calculation.
 
 Costs per household
 -------------------
@@ -69,22 +69,22 @@ For more information on the calulation of the bio-footprint click [here](documen
 Renewables
 ----------
 
-*Main article: [Renewables](Renewables "wikilink")*
+*Main article: [Renewables](renewability.md)*
 
 The number shows the percentage of final *energy* consumption that is supplied by renewable sources in the scenario.
 
-The chart shows this percentage both for the current situation and the scenario. The percentage for the current situation is also calculated by the ETM. This percentage may be slighty different from the number in official statistics due to a different definition or due to necessary simplifications in the ETM. The main article [renewables](renewables "wikilink") provides more information on these differences.
+The chart shows this percentage both for the current situation and the scenario. The percentage for the current situation is also calculated by the ETM. This percentage may be slighty different from the number in official statistics due to a different definition or due to necessary simplifications in the ETM. The main article [renewables](renewability.md) provides more information on these differences.
 
 Renewable electricity
 ---------------------
 
-*Main article: [Renewables](Renewables "wikilink")*
+*Main article: [Renewables](renewability.md)*
 
 The number shows the percentage of final *electricity* consumption that is renewably produced. The calculation uses the definition as used by the European Commission (Directive [2009/28/EC](http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=Oj:L:2009:140:0016:0062:en:PDF)). Also see the main article for more information.
 
-The chart shows this percentage both for the current situation and the scenario. The percentage for the current situation is also calculated by the ETM. This percentage may be slighty different from the number in official statistics due to a different definition or due to necessary simplifications in the ETM. The main article [renewables](renewables "wikilink") provides more information on these differences.
+The chart shows this percentage both for the current situation and the scenario. The percentage for the current situation is also calculated by the ETM. This percentage may be slighty different from the number in official statistics due to a different definition or due to necessary simplifications in the ETM. The main article [renewables](renewability.md) provides more information on these differences.
 
-Goals
+Targets
 -----
 
 *Main article: [Goals](targets.md)*
@@ -96,7 +96,7 @@ The pop-up shows a list of all targets with the goals set and the value in the c
 Loss of load
 ------------
 
-*Main article: [Electricity backup](Electricity backup "wikilink")*
+*Main article: [Electricity backup](electricity_backup.md)*
 
 The loss of load dashboard item shows the probability that electricity production capacity is less than expected demand. The loss of load probability is calculated by comparing the peak electricity demand of a country with the installed capacity. In this calculation, consideration is also given for the variability of volatile electricity production (i.e. Solar PV and wind turbines).
 

@@ -63,12 +63,12 @@ There are several issues related to this improvement, however:
 
 ### Insulation
 
-For insulation of households, the employment is calculated analogously to costs. Based on the Rc value (equivalently: slider position) of the houses, a combination of insulation improvements is assumed. These improvements have a cost associated with them. We have added man-hours in precisely the same way, using standardized installation guides. More details can be found on the [Insulation](Insulation "wikilink") page.
+For insulation of households, the employment is calculated analogously to costs. Based on the Rc value (equivalently: slider position) of the houses, a combination of insulation improvements is assumed. These improvements have a cost associated with them. We have added man-hours in precisely the same way, using standardized installation guides. More details can be found on the [Insulation](insulation.md) page.
 
 Use
 ---
 
-![Figure 1: Selecting flexible dashboard item for the Employment module](selectDashboard.png "Figure 1: Selecting flexible dashboard item for the Employment module")
+![Figure 1: Selecting flexible dashboard item for the Employment module](../images/selectDashboard.png "Figure 1: Selecting flexible dashboard item for the Employment module")
 
 Information about employment is accessible by either
 
@@ -81,11 +81,11 @@ The dashboard item can be selected by clicking 'change' on the ETM dashboard and
 
 Moving the slider associated with a technology (included in the project scope) instantaneously changes the net employment of the current scenario visible in the flexible dashboard item shown in Figure 2.
 
-![Figure 2: Flexible dashboard item for the Employment module](dashboard.png "Figure 2: Flexible dashboard item for the Employment module")
+![Figure 2: Flexible dashboard item for the Employment module](../images/dashboard.png "Figure 2: Flexible dashboard item for the Employment module")
 
 ### Slide
 
-![Figure 3: Employment slide](slide.png "Figure 3: Employment slide")
+![Figure 3: Employment slide](../images/slide.png "Figure 3: Employment slide")
 
 The 'Employment slide' (Costs \> Employment) is shown in Figure 3. It shows a graph of the total employment per year in the start-year and the end-year (left and right respectively), subdivided in the previously mentioned categories. The units are in kFTE (1000 Full Time Equivalents which taken to be 1800 man hours per year). The three sliders give the user the opportunity to change the values of three poorly known factors:
 

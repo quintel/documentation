@@ -93,11 +93,11 @@ The ETM calculates the energy consumption and associated parameters such as cost
  The ETM uses the following approach to calculate how useful demand determines demand for primary energy carriers:
 
 -   The energy system is approached as an ‘energy flow’ or Sankey diagram based on a network of interconnected ‘energy convertors’ with links (or edges) between them.
-    -   Energy converters convert energy carriers into other energy and losses, examples are gas heaters, electric cars, nuclear power plants, power lines etc. All converters have [attributes](Converter_attributes "wikilink") assigned.
+    -   Energy converters convert energy carriers into other energy and losses, examples are gas heaters, electric cars, nuclear power plants, power lines etc. All converters have [attributes](converter_attributes.md) assigned.
     -   The network of converters is called a ‘graph’. A partial schematic version is shown below (to be read from left to right).
     -   The ETM uses two graphs, a static one for the present and a dynamic one for the future situation; the latter can be influenced using the sliders in the interface.
 
-![Simplified version of the Graph that is at the core of the Energy Transition Model](Graph.jpg "fig:Simplified version of the Graph that is at the core of the Energy Transition Model")
+![Simplified version of the Graph that is at the core of the Energy Transition Model](../images/Graph.jpg "fig:Simplified version of the Graph that is at the core of the Energy Transition Model")
 \* The ETM calculates both the present and future situations with supplied input data for the present, energy converter attributes (like efficiency, costs, etc) and sliders settings for the future
 
 -   NO transition paths are calculated
@@ -190,7 +190,7 @@ The costs are all expressed in current year euros. Inflation is not taken into a
 
 ### Employment calculations
 
-*Main article: [Employment](Employment "wikilink")*
+*Main article: [Employment](employment.md)*
 
 The Energy Transition Model calculates the change in employment (in units of Full Time Equivalent, or FTE) for many technologies in the model. Labour is subdivided into five classes:
 
@@ -211,7 +211,7 @@ The ETM makes a rough estimation of how much arable land equivalent a region nee
 -   Waste streams for direct combustion
 -   Waste streams for co-digestion into biogas
 
-Any biomass that is not domestically produced (see [import article](Import_calculations#Domestic_production_curves "wikilink") for information on domestic production curves) is imported. The research team has determined which energy crop is the most efficient for each of the categories listed above. Regardless of whether biomass is homegrown or imported the ETM calculates impact on arable land somewhere in the world and expresses this in multiples of the region's own arable land area as shown in the [Dashboard](dashboard.md).
+Any biomass that is not domestically produced (see [import article](import_calculations.md) for information on domestic production curves) is imported. The research team has determined which energy crop is the most efficient for each of the categories listed above. Regardless of whether biomass is homegrown or imported the ETM calculates impact on arable land somewhere in the world and expresses this in multiples of the region's own arable land area as shown in the [Dashboard](dashboard.md).
 
 |---|---|---|
 |**Energy Carrier**|Typical production|Comment|
@@ -224,7 +224,7 @@ Any biomass that is not domestically produced (see [import article](Import_calcu
 
 ### Renewables
 
-*Main article: [Renewables](Renewables "wikilink")*
+*Main article: [Renewables](renewability.md)*
 
 The ETM calculates the renewable share of all energy flows in the model on the basis of the output. For example: if in a country the 75 PJ of electricity is supplied as follows: 50 PJ from an efficient natural gas powerplant which requires 100 PJ gas input, and 25 PJ from an inefficient biogas powerplant which requires 100 PJ biogas input, then the renewable share of the electricity supplied is 25 / 75 = 33%. By taking the proper sum of energy flows the renewable share of any desired part of the energy system can be calculated.
 
@@ -234,13 +234,13 @@ Uranium / nuclear heat is counted as non-renewable.
 
 ### Network calculations
 
-*Main article: [Network calculations](Network calculations "wikilink")*
+*Main article: [Network calculations](network_calculations.md)*
 
 Currently, the network costs are only calculated for the Netherlands. These costs include the annual maintenance costs for both the electricity and the gas network, but also accounts for additional costs that have to be made in case the network has to be improved due to choices for specific technologies which may affect the infrastructure requirements.
 
 ### Merit order calculations
 
-*Main article: [Merit order](Merit order "wikilink")*
+*Main article: [Merit order](merit_order.md)*
 
 In future energy scenarios it is very likely that power plants will operate differently than they do now due to factors such as fuel price and market penetration of renewables. The merit order calculation determines the operating hours of power plants based on the power production park created by the user. The calculation shows that if for example the amount of wind electricity production increases the operating hours of conventional power plants decreases.
 
@@ -248,13 +248,13 @@ Currently the merit order calculation only works for the Netherlands.
 
 ### Loss of load calculations
 
-*Main article: [Loss of load](Loss of load "wikilink")*
+*Main article: [Loss of load](loss_of_load_probability_md)*
 
 The calculation shows the probability that available electricity production capacity is less than the expected demand. Such a calculation is an important consideration when planning a power system and similar, but more elaborate, versions of this calculation are always conducted by the Transmission System Operators of a country. The loss of load dashboard item can be accessed via the flexible dashboard by clicking 'Change' on the bottom right corner of the Energy Transition Model interface.
 
 ### Electricity storage calculations
 
-*Main article: [Storage and conversion of electricity](Storage and conversion of electricity "wikilink")*
+*Main article: [Storage and conversion of electricity](storage.md)*
 
 For large installed capacities of wind turbines and solar PV, it may become possible that production of wind and solar power exceeds the demand for electricity. The 'Electricity storage' module of the ETM displays cost trends of technologies that can absorb excess electricity as a function of installed wind and solar capacity. If very large installed volatile capacities are installed, it might become economically interesting to build first conversion units that reduce the amount of curtailment.
 
@@ -262,7 +262,7 @@ Currently, the module "Electricity storage and conversion" is static and only wo
 
 ### Climate change
 
-*Main article: [Climate change](Climate change "wikilink")*
+*Main article: [Climate change](climate.md)*
 
 Climate change has a direct impact on the useful demand for heating and cooling of households and buildings. When the average outdoor temperature rises, the useful demand for heating decreases and the useful demand for cooling increases. These effects are reversed for a drop in average outdoor temperature.
 
@@ -270,9 +270,4 @@ Currently, the climate impact is only calculated for the Netherlands.
 
 ### Insulation
 
-*Main article: [Insulation](Insulation "wikilink")*
-
-Frequently Asked Questions
---------------------------
-
-*Main Article: [Frequently Asked Questions](Frequently Asked Questions "wikilink")*
+*Main article: [Insulation](insulation.md)*

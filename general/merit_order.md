@@ -11,13 +11,13 @@ The main purpose of the module is to calculate full load hours for power plants,
 
 The ETM usually does not match electricity generation and demand. When producers (gas plants, coal plants, wind turbines etc.) are built, the model assumes that these producers are operating regardless of the actual need for electricity. If the production exceeds the annual demand for electricity, the surplus is exported. Similarly, electricity scarcity will be balanced with importing electricity.
 
-The merit order module manages power plants in a smarter way. Power plants are turned on and off in order to follow the electricity demand, which actually varies over the course of time. Instead of having a plant running just because it exists, the merit order will only allow a plant to operate when its output is required (this is under the presumption that the power plant is [dispatchable](#Producers "wikilink") and can be turned off). At times oflow demand, only those producers are turned on that generate electricity at lowest costs. If the demand increases from one hour to the next, additional (and more expensive) producers are switched on. Based on this mechanism, the amount of time is calculated that each power plant actually needs to run in order to fulfill the electricity demand. In other words, the merit order calculates the full load hours of each participant.
+The merit order module manages power plants in a smarter way. Power plants are turned on and off in order to follow the electricity demand, which actually varies over the course of time. Instead of having a plant running just because it exists, the merit order will only allow a plant to operate when its output is required (this is under the presumption that the power plant is [dispatchable](#producers) and can be turned off). At times oflow demand, only those producers are turned on that generate electricity at lowest costs. If the demand increases from one hour to the next, additional (and more expensive) producers are switched on. Based on this mechanism, the amount of time is calculated that each power plant actually needs to run in order to fulfill the electricity demand. In other words, the merit order calculates the full load hours of each participant.
 
 The term 'merit order' refers to the order in which dispatchable plants are used to fill up the demand for electricity. This order is based on the marginal costs (in units of 'euro per MWh of produced electricity') of these plants, which are essentially the costs of producing an extra unit of electricity.
 
-It is important to note that turning on the merit order module will take control over how electricity is generated in the ETM. You will find that the merit order turns off all the expensive power plants when they are not needed (for example because you installed too many, [see example below](#Installing_too_many_power_plants "wikilink")).
+It is important to note that turning on the merit order module will take control over how electricity is generated in the ETM. You will find that the merit order turns off all the expensive power plants when they are not needed (for example because you installed too many, [see example below](#installing_too_many_power_plants)).
 
-The full load hours (output of the the merit order module) are used in the ETM for the scenario in the 'future' year, impacting, among others, CO2 emissions, costs, import&export, total energy use and renewable percentages of electricity and energy. In addition, the module calculates financial metrics for producers such as **profit** and **profitability** ([defined below](#Profitability "wikilink")).
+The full load hours (output of the the merit order module) are used in the ETM for the scenario in the 'future' year, impacting, among others, CO2 emissions, costs, import&export, total energy use and renewable percentages of electricity and energy. In addition, the module calculates financial metrics for producers such as **profit** and **profitability** ([defined below](#profitability)).
 
 Displaying outputs of the Merit Order Module
 --------------------------------------------
@@ -55,7 +55,7 @@ You can click on the 'change' button in the dashboard (see Figure 1, lower- righ
 2.  Conditionally profitable
 3.  Unprofitable
 
-See also :[Profitability](#Profitability "wikilink").Note that the Merit Order module does not take individual plants into account, but rather **plant-types** as producers. This simplification may be alleviated in a follow-up project. As a result of this simplification, the profitable percentage can make large jumps if a producer with a large installed capacity passes the threshold from conditionally profitable to unprofitable.
+See also :[Profitability](#profitability).Note that the Merit Order module does not take individual plants into account, but rather **plant-types** as producers. This simplification may be alleviated in a follow-up project. As a result of this simplification, the profitable percentage can make large jumps if a producer with a large installed capacity passes the threshold from conditionally profitable to unprofitable.
 
 Implementation
 --------------
@@ -76,7 +76,7 @@ All devices that consume electricity are **users**. Currently, this is the total
 
 In Figure 6, a cartoon of a demand profile is shown in blue. It has 8760 datapoints (units of MW), one for every hour of the year.
 
-##### Producers
+##### <a name="producers"></a>Producers
 
 A producer is an electricity producing technology, such as a nuclear power plant, wind turbine or local CHP.
 
@@ -167,7 +167,7 @@ The **profit** of a producer (EUR/year) is calculated by subtracting the **total
 
 `   profit = revenue - total_costs`
 
-#### Profitability
+#### Profitability<a name="profitability"></a>
 
 The profitability of the dispatchable power plants is shown in the dashboard. For each dispatchable participant, the profitability is classified in the following way:
 
@@ -184,7 +184,7 @@ The Plant Profitability in the Dashboard is a summary of the individual plant pr
 Examples
 --------
 
-#### Installing too many power plants
+#### <a name="installing_too_many_power_plants"></a>Installing too many power plants
 
 ![Figure 7: Merit oder off.](Merit order example1 off.png "fig:Figure 7: Merit oder off.") ![Figure 8: Merit oder on.](Merit order example1 on.png "fig:Figure 8: Merit oder on.")
 
@@ -210,7 +210,6 @@ By eliminating the 'Gas turbines', you take out the most expensive producer. As 
 
 -   *Set the 'Gas CCGT' plant to 15.0 \# units.*
 
-  
   
 In consequence, you see that profits of the 'Gas CCGT' decrease and that it no longer is fully profitable (now labelled yellow instead of green). The primary reason for the lowered profits is the decrease of full load hours (from about \~7000 to only \~3000). Since the plant type does not run for most of the year, it makes less revenues. Another reason for decreased profitability of a plant type can be caused by a changed price setting plant. When more 'Gas CCGT' capacity is available, more expensive plants are pushed out of the merit order. As these more expensive plants are needed less frequently, they also hardly function as price setting plants any more. A lower electricity price leads to decreased revenues for all participants.
 

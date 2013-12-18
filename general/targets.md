@@ -1,7 +1,9 @@
+# Targets
+
 Introduction
 ------------
 
-The Targets section in the model allows a user to set the boundary conditions for the scenario that he creates. Only in this section, the sliders do not change the future energy system like in the other sections. Instead they set the values that the scenario is evaluated against. The user can always see the number of attained goals in the [dashboard](dashboard.md).
+The Targets section in the model allows a user to set the boundary conditions for the scenario that he creates. Only in this section, the sliders do not change the future energy system like in the other sections. Instead they set the values that the scenario is evaluated against. The user can always see the number of attained targets in the [dashboard](dashboard.md).
 
 For example, if a user sets the target of reducing CO<sub>2</sub> emissions by 20% in the end year of the scenario the model will show this goal as unattained as long as the CO<sub>2</sub> emissions are higher than the 20% reduction. Once the user takes measures that make the CO<sub>2</sub> emissions go below the 20% reduction, the goal is shown as having been attained in the [dashboard](dashboard.md).
 
@@ -17,7 +19,7 @@ It is hard to attain all targets when realistic values are chosen, this is becau
 Sustainability targets
 ----------------------
 
-**CO<sub>2</sub> emissions:** Sets the percentage of CO<sub>2</sub> emissions in the end year, compared to the 1990 CO<sub>2</sub> emissions in the current region of the scenario. The [ CO<sub>2</sub> calculations](co2_calculations.md) page of this Wiki provides details on how CO<sub>2</sub> emissions are calculated.
+**CO<sub>2</sub> emissions:** Sets the percentage of CO<sub>2</sub> emissions in the end year, compared to the 1990 CO<sub>2</sub> emissions in the current region of the scenario. The [CO<sub>2</sub> calculations](co2_calculations.md) page of this Wiki provides details on how CO<sub>2</sub> emissions are calculated.
 
 **Percentage renewables:** Sets the percentage of final energy consumption that comes from renewable sources. EU renewable energy targets are defined in terms of final energy use. This means renewable heat and electricity are weighted equally when calculating the renewable percentage.
 

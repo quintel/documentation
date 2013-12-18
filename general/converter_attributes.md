@@ -49,16 +49,16 @@ Network attributes
 |installing\_costs\_per\_mw\_input|euro/MW|[Cost calculations](cost_calculations.md)|The labor costs of installing the converter calculated back to costs per MW of input capacity.|
 |output\_share\_electricity|%|[Cost calculations](cost_calculations.md)|This is defined in the link of the converter, and states how efficient the electricity production is.|
 |output\_share\_heat|%|[Cost calculations](cost_calculations.md)|This is defined in the link of the converter, and states how efficient the heat production is.|
-|network\_capacity\_available\_in\_mw|MW|[Network\_calculations](Network_calculations "wikilink")||
-|network\_capacity\_used\_in\_mw|MW|[Network\_calculations](Network_calculations "wikilink")||
-|network\_expansion\_costs\_in\_euro\_per\_mw|euro/MW|[Network\_calculations](Network_calculations "wikilink")||
-|simult\_sd|%|[Network\_calculations](Network_calculations "wikilink")||
-|simult\_se|%|[Network\_calculations](Network_calculations "wikilink")||
-|simult\_wd|%|[Network\_calculations](Network_calculations "wikilink")||
-|simult\_we|%|[Network\_calculations](Network_calculations "wikilink")||
-|peak\_load\_units\_present|1.  |[Network\_calculations](Network_calculations "wikilink")||
-|availability|%|[Network\_calculations](Network_calculations "wikilink")||
-|variability||[Network\_calculations](Network_calculations "wikilink")||
+|network\_capacity\_available\_in\_mw|MW|[Network\_calculations](network_calculations.md)||
+|network\_capacity\_used\_in\_mw|MW|[Network\_calculations](network_calculations.md)||
+|network\_expansion\_costs\_in\_euro\_per\_mw|euro/MW|[Network\_calculations](network_calculations.md)||
+|simult\_sd|%|[Network\_calculations](network_calculations.md)||
+|simult\_se|%|[Network\_calculations](network_calculations.md)||
+|simult\_wd|%|[Network\_calculations](network_calculations.md)||
+|simult\_we|%|[Network\_calculations](network_calculations.md)||
+|peak\_load\_units\_present|1.  |[Network\_calculations](network_calculations.md)||
+|availability|%|[Network\_calculations](network_calculations.md)||
+|variability||[Network\_calculations](network_calculations.md)||
 
 Adding a new Converter attribute
 --------------------------------
