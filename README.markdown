@@ -54,13 +54,13 @@ The professional interface allows you to influence all the main aspects of the
 energy system:
 
 
-* **Targets**: set goals for your scenario and see if you can reach them. 
+* [**Targets**](/general/targets.md): set goals for your scenario and see if you can reach them. 
 Targets can be set for CO<sub>2</sub> reduction, renewability, total cost,
 max import etc.
-* **Demand**: what happens to energy consumption in the future? 
-* **Supply**: which technologies will we use to produce heat and electricity 
+* [**Demand**](/general/demand.md): what happens to energy consumption in the future? 
+* [**Supply**](/general/supply.md): which technologies will we use to produce heat and electricity 
 in the future?
-* **Costs**: specify what you think will happen to the costs of carriers and 
+* [**Costs**](/general/costs.md): specify what you think will happen to the costs of carriers and 
 technologies. Setting the costs provides the canvas on which your scenario is
 painted. 
 NOTE: these costs do not include taxes or subsidies and are, 
@@ -116,7 +116,7 @@ hot water, car-kilometers) to 'primary demand' (the extraction of gas, import
 of coal etc.)
 
 More information on the calculation methods of the ETM can be found on our
-[wiki](http://wiki.quintel.com/index.php/Documentation)
+[detailed documentation pages](/general/documentation.md)
 
 ## <a name="contr_doc"></a>Documentation for contributers
 

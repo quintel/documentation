@@ -1,3 +1,5 @@
+# Storage
+
 The largest obstacle in integrating large amounts of wind or solar power into the grid is the frequent mismatch between generation and demand. This can lead to both shortage and excess.
 
 This wiki page serves to explain the storage and conversion sidebar item in the ETM (Electricity storage). It is available in the professional version of the ETM in the Supply \> [Electricity storage](http://energytransitionmodel.com/scenario/supply/electricity_storage) slide.
@@ -5,7 +7,7 @@ This wiki page serves to explain the storage and conversion sidebar item in the 
 Introduction
 ------------
 
-![Figure 1: Simulation of excess electricity. This chart displays how excess electricity can be caused: Together, must-run capacity, solar and wind production, may deliver more electricity to the grid than is demanded. In the chart, excess electricity occurs (when the demand (red line) is smaller than the total production (top of green area). This situation might occur in The Netherlands in the year 2020, if the targeted capacity of \~13 GW wind is reached. Chart taken from [[Deuchler.2013](#References "wikilink")]. ](Simulation_of_excess_electricity.jpg "Figure 1: Simulation of excess electricity. This chart displays how excess electricity can be caused: Together, must-run capacity, solar and wind production, may deliver more electricity to the grid than is demanded. In the chart, excess electricity occurs (when the demand (red line) is smaller than the total production (top of green area). This situation might occur in The Netherlands in the year 2020, if the targeted capacity of ~13 GW wind is reached. Chart taken from [Deuchler.2013]. ")
+![Figure 1: Simulation of excess electricity. This chart displays how excess electricity can be caused: Together, must-run capacity, solar and wind production, may deliver more electricity to the grid than is demanded. In the chart, excess electricity occurs (when the demand (red line) is smaller than the total production (top of green area). This situation might occur in The Netherlands in the year 2020, if the targeted capacity of \~13 GW wind is reached. Chart taken from [[Deuchler.2013](#references)]. ](../images/Simulation_of_excess_electricity.jpg "Figure 1: Simulation of excess electricity. This chart displays how excess electricity can be caused: Together, must-run capacity, solar and wind production, may deliver more electricity to the grid than is demanded. In the chart, excess electricity occurs (when the demand (red line) is smaller than the total production (top of green area). This situation might occur in The Netherlands in the year 2020, if the targeted capacity of ~13 GW wind is reached. Chart taken from [Deuchler.2013]. ")
 
 Although excess electricity does not occur in the 'present year' scenario of The Netherlands, it might me become an issue in your future scenario, if it is based on large amounts of volatile electricity production. Especially wind and solar energy is highly volatile, which means that power production varies strongly with time. Also, volatile producers are not dispatchable, they cannot be turned on 'on-demand' like conventional power plants. In order to reach high shares of renewable electricity, you might increase the capacity of wind and solar generation. In consequence, it may happen that, on occasion, the supply of electricity surpasses the demand. Such an event is called an excess event. See Figure 1 for a graphical explanation. The figure describes a scenario in which wind and solar energy already produce a considerable amount of electricity. Although excess electricity is not visible on an annual average, it does occurs during certain hours of the year.
 
@@ -18,11 +20,11 @@ Methodology
 
 The following paragraphs describe how excess electricity is modeled and how the economic performance of storage and conversion technologies is carried out; which leads to the chart shown in the ETM frontend (Figure 4).
 
-![Figure 2: Annual excess electricity as a function of installed wind and solar capacity. <b><i>This is an indicative figure</i></b>, with the purpose of explaining the methodology. A similar chart is shown in [[Deuchler.2013](#References "wikilink")]. ](Excess_electrictity_chart.jpg "Figure 2: Annual excess electricity as a function of installed wind and solar capacity. This is an indicative figure, with the purpose of explaining the methodology. A similar chart is shown in [Deuchler.2013]. ")
+![Figure 2: Annual excess electricity as a function of installed wind and solar capacity. <b><i>This is an indicative figure</i></b>, with the purpose of explaining the methodology. A similar chart is shown in [[Deuchler.2013](#references)]. ](../images/Excess_electrictity_chart.jpg "Figure 2: Annual excess electricity as a function of installed wind and solar capacity. This is an indicative figure, with the purpose of explaining the methodology. A similar chart is shown in [Deuchler.2013]. ")
 
 ### Excess electricity
 
-Since the modeling of excess events cannot be done with annual average figures in the ETM, the amount of excess had to be forecasted outside the ETM. A separate model is created that operates with the same extrinsic inputs as the [merit order module](Merit order "wikilink"). In particular, all required information regarding non-dispatchable producers is loaded in the external model (number of units, availability, effective capacity). Furthermore, the profiles of the merit order module are used to derive the hourly electricity production of non-dispatchables (wind, solar, hydro and CHPs). The scenario used for forecasting excess electricity represents a 'present' scenario (ETM), with the only exception that the number of units of solar PV and wind turbines can be increased. The ratio of the present number of units remains constant, i.e. a doubling in wind and solar capacity results in twice the number of units for all participants operating on solar and wind energy. The electricity demand is kept constant and all profiles remain unchanged.
+Since the modeling of excess events cannot be done with annual average figures in the ETM, the amount of excess had to be forecasted outside the ETM. A separate model is created that operates with the same extrinsic inputs as the [merit order module](merit_order.md). In particular, all required information regarding non-dispatchable producers is loaded in the external model (number of units, availability, effective capacity). Furthermore, the profiles of the merit order module are used to derive the hourly electricity production of non-dispatchables (wind, solar, hydro and CHPs). The scenario used for forecasting excess electricity represents a 'present' scenario (ETM), with the only exception that the number of units of solar PV and wind turbines can be increased. The ratio of the present number of units remains constant, i.e. a doubling in wind and solar capacity results in twice the number of units for all participants operating on solar and wind energy. The electricity demand is kept constant and all profiles remain unchanged.
 
 An intermediate result is the residual demand curve, as a function of installed wind and solar capacity. The residual demand curve contains information on the total annual excess electricity as well as its hourly distribution throughout the year. The first excess events can be observed when enough wind and solar capacity is installed, see Figure 2.
 
@@ -36,7 +38,7 @@ The cost of producing electricity is a default value, taken from the ['Cost / Wi
 
 ### Storage and conversion technologies
 
-The amount and distribution of excess electricity is already known. Next, the separate model calculates how much excess electricity can be absorbed by storage or conversion technologies. The conversion of excess electricity depends on the occurrence of excess power and the conversion technology's characteristics, described [below](Storage_and_conversion_of_electricity#Characterization_of_conversion_technologies "wikilink"). For all technologies, only 1 MW of capacity is installed in the separate model. This ensures that only the cost for 'installing the first' unit are addressed. If more conversion capacity is installed, the economic performance will suffer: The amount of excess is constant. If more conversion units are built, the energy throughput per unit is decreased, which increases the cost.
+The amount and distribution of excess electricity is already known. Next, the separate model calculates how much excess electricity can be absorbed by storage or conversion technologies. The conversion of excess electricity depends on the occurrence of excess power and the conversion technology's characteristics, described below. For all technologies, only 1 MW of capacity is installed in the separate model. This ensures that only the cost for 'installing the first' unit are addressed. If more conversion capacity is installed, the economic performance will suffer: The amount of excess is constant. If more conversion units are built, the energy throughput per unit is decreased, which increases the cost.
 
 The performance indicator **levelized cost** is used to compare the technologies in the Figure 4. In case of the wind turbine, the levelized cost refers to the total cost of producing electricity. In case of the storage and conversion technologies, levelized cost refers to the amount of useful energy delivered to a consumer (power, heat or gas). Levelized cost are defined as:
 
@@ -44,9 +46,9 @@ The performance indicator **levelized cost** is used to compare the technologies
 
 or
 
-![Left](Levelized_cost_definition.jpg "Left")
+![Left](../images/Levelized_cost_definition.jpg "Left")
 
-Deriving the cost curves for conversion technologies for Figure 4 is rather complex and CPU- intensive. Furthermore, the simulation of excess electricity and its conversion is only possible with the information of the merit order module and with an hourly calculation. The simulation can only produce indicative results because there are many [ assumptions](Storage_and_conversion_of_electricity#Assumptions_in_simulating_Excess_Electricity_and_Levelized_Costs "wikilink") and many uncertainties in the [ technology characterization](Storage_and_conversion_of_electricity#Characterization_of_conversion_technologies "wikilink") . For these reasons, the chart has to be static and cannot adapt to slider settings.
+Deriving the cost curves for conversion technologies for Figure 4 is rather complex and CPU- intensive. Furthermore, the simulation of excess electricity and its conversion is only possible with the information of the merit order module and with an hourly calculation. The simulation can only produce indicative results because there are many [assumptions](storage.md#assumptions-in-simulating-excess-electricity-and-levelized-costs) and many uncertainties in the [technology characterization]. For these reasons, the chart has to be static and cannot adapt to slider settings.
 
 Assumptions in simulating Excess Electricity and Levelized Costs
 ----------------------------------------------------------------
@@ -77,7 +79,7 @@ Other effects or technologies that might reduce the future amount of excess elec
 The storage and conversion technologies are only permitted to convert excess electricity. In other words, it is not considered that electricity is bought from the grid at times of a positive residual demand.
 
 <li>
-The simulation is based on many inputs that originate from the [merit order module](Merit order "wikilink"). In particular, the profiles for electricity demand and wind & solar production stay constant, regardless of future changes in demand or installed generation capacity.
+The simulation is based on many inputs that originate from the [merit order module](merit_order.md). In particular, the profiles for electricity demand and wind & solar production stay constant, regardless of future changes in demand or installed generation capacity.
 
 </ul>
 Characterization of conversion technologies
@@ -90,9 +92,9 @@ The most important technology characterizations are summarized in the following 
 |Technology|Investment cost|Annual O&M cost|Lifetime|Discount rate|Round-trip efficiency|Source|
 |----------|---------------|---------------|--------|-------------|---------------------|------|
 ||€ / kWel<sub>input</sub> (\*)|€ / kWel<sub>input</sub> (\*)|years|%|%||
-|Battery storage, 10kW/85kWh batteries|1615|9.4|10|15|\> 80|[[\#References|[Budischak et al., 2012] ]] (data interpolated to 2020)|
-|Conversion to Heat|1500|0|4|10|\~ 100|estimate based on 750 € / unit [[\#References|]Deuchler, 2013]]]|
-|Conversion to Gas|1329|50.7|10|15|\~ 60|[[\#References| [Greiner et al., 2007] ]]|
+|Battery storage, 10kW/85kWh batteries|1615|9.4|10|15|\> 80|[Budischak et al., 2012](#references) (data interpolated to 2020)|
+|Conversion to Heat|1500|0|4|10|\~ 100|estimate based on 750 € / unit [Deuchler, 2013](#references)|
+|Conversion to Gas|1329|50.7|10|15|\~ 60|[Greiner et al., 2007](#references)|
 
 (\*) The unit € / kWel<sub>input</sub> refers to the cost for installing capacity. The capacity (kW) refers to the ability to absorb excess electricity (instead of electricity output).
 
@@ -108,7 +110,7 @@ Electricity storage has one district disadvantage in comparison to the other con
 
 The conversion of excess electricity to heat has to serve a demand for heat. Many potential heat demands can also be satisfied electrically, especially in space heating or hot water preparation. Furthermore, it is also possible to heat storage tanks in agricultural CHPs. Another option for converting power into thermal energy would be power-to-cooling.
 
-For this analysis (and chart), it is chosen to simulate the preparation of hot water in Dutch residential households. In contrast to space heating, hot water demand is rather constant throughout the year [[AEE, 2009](#References "wikilink")], which guarantees for a high availability of the conversion technology.
+For this analysis (and chart), it is chosen to simulate the preparation of hot water in Dutch residential households. In contrast to space heating, hot water demand is rather constant throughout the year [[AEE, 2009](#references)], which guarantees for a high availability of the conversion technology.
 
 Conversion to heat (power-to-heat) is characterized in the following way: Regular gas-driven heating systems are equipped with additional preheating tanks. A preheating tank has a volume of 100 liter and can be heated electrically with up to 500 W when excess electricity is available. The preheating tank is used to preheat water before it enters the conventional heating system. In this way, it is ensured that hot water is always available for the consumer, while low-capacity electric heating is integrated into the system. The electric heating capacity is rather low (500 W), in order to limit the additional stress on the electricity grid that will be caused by a large number of synchronized decentral consumers. There is no constraint on the availability of power-to-heat conversion. The conversion can start or stop from one hour to the next. It is assumed that converting at \<500 W will not cause an oversupply of heat, which would be wasted.
 
@@ -116,11 +118,11 @@ Economical characterization, see table above.
 
 #### Conversion to Gas
 
-![Figure 3: Layout of Power-to-Hydrogen conversion. Layout and Firgures are based on [[Greiner et al., 2007](#References "wikilink")]. ](Power to gas layout.jpg "Figure 3: Layout of Power-to-Hydrogen conversion. Layout and Firgures are based on [Greiner et al., 2007]. ")
+![Figure 3: Layout of Power-to-Hydrogen conversion. Layout and Firgures are based on [[Greiner et al., 2007](#references)]. ](../images/Power_to_gas_layout.jpg "Figure 3: Layout of Power-to-Hydrogen conversion. Layout and Firgures are based on [Greiner et al., 2007]. ")
 
-Excess electricity can be converted into hydrogen via electrolysis. A layout of this process is shown in Figure 2. Excess electricity is used to split water molecules into hydrogen and oxygen. The hydrogen is then compressed and mixed in with natural gas in the gas network. This 'green' hydrogen can be integrated into the grid with percentages of probably up to \~15 % [[Melaina et al., 2013](#References "wikilink")].
+Excess electricity can be converted into hydrogen via electrolysis. A layout of this process is shown in Figure 2. Excess electricity is used to split water molecules into hydrogen and oxygen. The hydrogen is then compressed and mixed in with natural gas in the gas network. This 'green' hydrogen can be integrated into the grid with percentages of probably up to \~15 % [[Melaina et al., 2013](#references)].
 
-The process has an efficiency of 60 %, which means that 1 kWh of excess electricity is converted into hydrogen with a lower heating value of 0.6 kWh [[Greiner et al., 2007](#References "wikilink")].. This inclues a compression of about 30 bar, which should be sufficient for pipeline feedin at medium pressure levels.Several pilot plants are currently built or decomissioned in Germany to prove the feasibility of the conversion.
+The process has an efficiency of 60 %, which means that 1 kWh of excess electricity is converted into hydrogen with a lower heating value of 0.6 kWh [[Greiner et al., 2007](#references)].. This inclues a compression of about 30 bar, which should be sufficient for pipeline feedin at medium pressure levels.Several pilot plants are currently built or decomissioned in Germany to prove the feasibility of the conversion.
 
 The produced hydrogen can be converted into synthetic methane or methanol in addditional process steps. Methane has the advantage of being easier to store (especially in pore storage) and it is easier to blend in with the natural gas grid. Methanol has the advantage of being a liquid energy carriere of high energy-density. It could be transported easily in trucks, which eliminates the need to connect the conversion technology to a pipeline. However, all further processing of hydrogen lowers the total conversion efficiency and is very likely going to increase total system cost.
 
@@ -129,11 +131,11 @@ Power-to-gas conversion is very flexible in the model. The conversion is always 
 Results: Costs for producing electricity in excess scenarios
 ------------------------------------------------------------
 
-![Figure 4: Chart displayed in Energy Transition Model / Supply / Electricity storage. It gives an impression of how the costs of conversion technologies compare and at what point it might become economically interesting to build first conversion units.](Electricity_Storage_Chart.png "Figure 4: Chart displayed in Energy Transition Model / Supply / Electricity storage. It gives an impression of how the costs of conversion technologies compare and at what point it might become economically interesting to build first conversion units.")
+![Figure 4: Chart displayed in Energy Transition Model / Supply / Electricity storage. It gives an impression of how the costs of conversion technologies compare and at what point it might become economically interesting to build first conversion units.](../images/Electricity_Storage_Chart.png "Figure 4: Chart displayed in Energy Transition Model / Supply / Electricity storage. It gives an impression of how the costs of conversion technologies compare and at what point it might become economically interesting to build first conversion units.")
 
 The results of the simulation lead to an hourly forecast of excess electricity, see Figure 2. If values of \~15 GW of wind and solar capacity are exceeded, the first occurrences of excess power are observed in The Netherlands. At \~15 GW of installed wind and solar capacity, the scenario has \~40% renewable electricity.
 
-Excess electricity can be absorbed by three different conversion technologies, which are characterized by different costs, conversion efficiencies and availabilities. Figure 4 shows the results of the simulation. The <b>x-axis</b> of the chart displays the total installed generation capacity of wind and solar. The <b>y-axis</b> has the unit € / MWh<sub>output</sub>. Figure 4 is based on the assumption that all excess electricity is curtailed (export or other means of reducing curtailment are not considered). In this context, the figure also displays how the cost for producing electricity from inland wind turbines may increase, as discussed [above](#Effect_on_the_electricity_production_cost_of_wind_turbines "wikilink").
+Excess electricity can be absorbed by three different conversion technologies, which are characterized by different costs, conversion efficiencies and availabilities. Figure 4 shows the results of the simulation. The <b>x-axis</b> of the chart displays the total installed generation capacity of wind and solar. The <b>y-axis</b> has the unit € / MWh<sub>output</sub>. Figure 4 is based on the assumption that all excess electricity is curtailed (export or other means of reducing curtailment are not considered). In this context, the figure also displays how the cost for producing electricity from inland wind turbines may increase, as discussed above.
 
 It can be seen that power-to-heat conversion is the most competitive in comparison to the other technologies. This is due to the relatively low investment and operation costs. Furthermore, power-to-heat conversion has a high availability and very high conversion efficiency in the simulation. While absorbed electricity is converted to heat with an efficiency of 100%, power- to-power and power-to-gas conversion suffer from higher conversion losses (which increases the cost per delivered energy).
 
@@ -161,15 +163,15 @@ Further uncertainties are due to the technology characterization
 
 In the end, it has to be concluded that the results of the simulation are very uncertain. Furthermore, the simulation actually does not represent the user scenario in the ETM. Therefore, the chart is labeled 'indicative' and the y-axis does not display numbers.
 
-References
+<a name="references"></a>References
 ----------
 
 -   AEE, (2009). [Dimensioning of Domestic Hot Water Systems. In Thermal Use of Solar Energy](http://refman.et-model.com/publications/1742). AEE - Institute for Sustainable Technologies.
 -   Budischak, C., Sewell, D., Thomson, H., Mach, L., Veron, D. E., & Kempton, W. (2012). [Cost-Minimized Combinations of Wind Power, Solar Power and Electrochemical Storage, Powering the Grid up to 99.9% of the Time](http://refman.et-model.com/publications/1734). Journal of Power Sources, 225, 60–74. <doi:10.1016/j.jpowsour.2012.09.054>
 -   Deuchler, R, 2013. [Load management – strategies for dealing with temporary oversupply of variable renewable electricity](http://refman.et-model.com/publications/1743). Utrecht University. Excerpt of thesis report:
 
-  
-  
+
+
 - Investment costs for retrofitting the power-to-heat route are 750 € per household. This figure is based on the following breakdown:
 
 - 250 € for the new 100 l tank incl. electric heating unit (alternatively for equipping an existing tank with a new electric heater)

@@ -1,3 +1,5 @@
+# Cost calculations
+
 The Energy Transition Model calculates the total cost of the yearly energy supply for the region. The total cost is broken down in five categories: heat, electricity, fuels, non-energetic fuels, and network costs.
 
 -   The costs for electricity includes costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable.
@@ -15,18 +17,18 @@ The costs are all expressed in current years Euros. Inflation is not taken into 
 Electricity production
 ----------------------
 
-*Main article: [ Electricity and heat production costs](Heat_and_electricity_production_costs "wikilink")*
+*Main article: [ Electricity and heat production costs](heat_and_electricity_cost.md)*
 
-The costs of electricity production are a simple sum of all electricity producing devices in the scenario (eg. power plants, solar panels, CHPs). Per electricity producing unit, the total costs are calculated. This calculation includes costs for fuel, operation and maintenance, financing costs and costs for CO<sub>2</sub> emission credits if applicable. The same calculation is used for both electricity and heat costs, which is explained in more detail [here](Heat_and_electricity_production_costs "wikilink").
+The costs of electricity production are a simple sum of all electricity producing devices in the scenario (eg. power plants, solar panels, CHPs). Per electricity producing unit, the total costs are calculated. This calculation includes costs for fuel, operation and maintenance, financing costs and costs for CO<sub>2</sub> emission credits if applicable. The same calculation is used for both electricity and heat costs, which is explained in more detail [here](heat_and_electricity_cost.md).
 
 The total electricity produced in these converters is usually not an exact match with the demand of electricity in the scenario. When importing electricity, the costs are set to the average local production costs of electricity. In other words: imported electricity costs the same as locally produced electricity. Possible revenues of exported electricity are not taken into account. If your production exceeds your demand, the costs of the resulting excess of electricity are counted towards the total.
 
 Heat production
 ---------------
 
-*Main article: [ Electricity and heat production costs](Heat_and_electricity_production_costs "wikilink")*
+*Main article: [ Electricity and heat production costs](heat_and_electricity_cost.md)*
 
-Just like the costs for electricity production, the calculation for heat producing devices (eg. households heating appliances, industrial burners etc.) include costs for fuel, operation and maintenance, financing costs and costs for CO<sub>2</sub> emission credits if applicable. More details on this calculation are explained [here](Heat_and_electricity_production_costs "wikilink").
+Just like the costs for electricity production, the calculation for heat producing devices (eg. households heating appliances, industrial burners etc.) include costs for fuel, operation and maintenance, financing costs and costs for CO<sub>2</sub> emission credits if applicable. More details on this calculation are explained [here](heat_and_electricity_cost.md).
 
 It is assumed that the total heat produced in the converters corresponds with the use of heat in the scenario, and no heat is imported or exported.
 
@@ -49,8 +51,6 @@ Besides the energetic use of fuels, fuels are also used non-energetically. This 
 Network
 -------
 
-''Main article: [Network calculations](Network calculations "wikilink")
+*Main article: [Network calculations](network.md)*
 
 The network costs are currently only calculated in the Netherlands, because this calculation requires a lot country-specific data which have only been collected in the Netherlands. These costs include the annual maintenance costs for both the electricity as the gas network, and account for additional costs that have to be made in case the network has to be improved due to choices for specific technologies which may affect the infrastructure requirements.
-
-[Category:Cost calculation](Category:Cost calculation "wikilink")
