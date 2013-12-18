@@ -93,4 +93,4 @@ Where:
 -   Variable Operation & Maintenance Costs per Full load hour = the normal costs for operating and maintaining the plant for one full load hour
 -   Variable Operation & Maintenance Costs for CCS per Full load hour = the additional costs for operating and maintaining the Carbon Capture and Storage (CCS) part of a plant for one full load hour
 
-[Category:Cost calculation](cost_calculations.md")
+[Category:Cost calculation](cost_calculations.md)

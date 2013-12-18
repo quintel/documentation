@@ -51,8 +51,6 @@ Besides the energetic use of fuels, fuels are also used non-energetically. This 
 Network
 -------
 
-''Main article: [Network calculations](network_calculations.md)
+*Main article: [Network calculations](network.md)*
 
 The network costs are currently only calculated in the Netherlands, because this calculation requires a lot country-specific data which have only been collected in the Netherlands. These costs include the annual maintenance costs for both the electricity as the gas network, and account for additional costs that have to be made in case the network has to be improved due to choices for specific technologies which may affect the infrastructure requirements.
-
-[Category:Cost calculation](cost_calculations.md)
