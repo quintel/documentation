@@ -1,3 +1,5 @@
+# Useful demand
+
 A good way to explain useful demand is the example of 'useful heat demand'
 
 In order to calculate how much would be saved with alternative heating technologies a useful heat demand is specified. This usable demand can usually not be found in literature or reports, so it is initially calculated based on the shares of the technologies used and their efficiencies. With this value (and the shares and efficiencies of the converters that supply this demand), the kernel can calculate how much of the energy carriers, such as gas and electricity, are used in total.

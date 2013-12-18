@@ -1,3 +1,5 @@
+# Primary demand
+
 Primary energy is energy found in nature that has not been subjected to any conversion or transformation process. For quantitative applications such as the Energy Transition Model (ETM) and Energy Balances we need to define the primary energy more precisely. The conventions in the ETM are consistent with International Energy Agency (IEA) and Eurostat (EC) conventions unless otherwise specified.
 
 Primary energy calculation method
