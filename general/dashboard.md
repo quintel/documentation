@@ -87,11 +87,11 @@ The chart shows this percentage both for the current situation and the scenario.
 Targets
 -----
 
-*Main article: [Goals](targets.md)*
+*Main article: [Targets](targets.md)*
 
 The numerator in this fraction shows the number of targets met in the scenario, while the denominator shows the total number of targets that can be set.
 
-The pop-up shows a list of all targets with the goals set and the value in the current scenario. When a goal is met the red X in front of the target changes in a green V. The goals shown here are the users own goals which he can change under the tab "[Goals](targets.md)" on top of the screen.
+The pop-up shows a list of all targets with the goals set and the value in the current scenario. When a goal is met the red X in front of the target changes in a green V. The goals shown here are the users own goals which he can change under the tab "[Targets](targets.md)" on top of the screen.
 
 Loss of load
 ------------
