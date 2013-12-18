@@ -1,4 +1,4 @@
-![Energy import in the dashboard](Screen_Shot_2011-08-08_at_11.58.32_AM.png "Energy import in the dashboard")
+![Energy import in the dashboard](/images/Screen_Shot_2011-08-08_at_11.58.32_AM.png "Energy import in the dashboard")
 
 The [dashboard](dashboard "wikilink") shows the percentage of primary energy consumption that is imported and the pop-up shows a breakdown of the net energy imports per carrier group. International marine and aviation bunkers are not included. This page describes the calculation method.
 
