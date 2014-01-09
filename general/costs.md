@@ -1,21 +1,26 @@
 # Costs
 
-Introduction
-------------
-
 *Related articles: [Cost calculations](cost_calculations.md)*
 
 On the Costs tab of the ETM a user can input all his estimates concerning future energy costs. A graph on the right displays how various types of electricity generation differ in terms of costs. For some of these plants, expert predictions of cost development are included. The user can choose whether the ETM should use these or not. The following categories are available:
 
+-   Fuel prices
 -   Combustion plants
 -   Nuclear plants
 -   Wind turbines
 -   Hydro electric
 -   Solar power
--   CO<sub>2</sub> emissions
+- 	Geothermal
+- 	CO<sub>2</sub> emissions
+- 	Infrastructure
+- 	Merit order
+- 	Employment
+- 	Heating technologies
 
 Assumptions
 -----------
+
+The following assumptions are made with respect to the costs:
 
 -   All costs are excluding taxes or subsidies.
 -   All costs are in 2010 euros where possible. Some may still be in 2009 euros if we have not had a chance to update the numbers.
@@ -52,3 +57,16 @@ CO<sub>2</sub> emissions
 ------------------------
 
 The costs associated with CO<sub>2</sub> emissions can be estimated.
+
+Infrastructure
+--------------
+The cost related to infrastructur are given. See [Network calculations](network.md). Infrastructure costs are only implemented for the Netherlands.
+
+Merit order
+-----------
+See [Merit order](merit_order.md).
+
+Employment
+----------
+See [Employment](employment.md).
+

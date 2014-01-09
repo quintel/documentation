@@ -58,13 +58,13 @@ energy system:
 Targets can be set for CO<sub>2</sub> reduction, renewability, total cost,
 max import etc.
 * [**Demand**](/general/demand.md): what happens to energy consumption in the future? 
-* [**Supply**](/general/supply.md): which technologies will we use to produce heat and electricity 
-in the future?
 * [**Costs**](/general/costs.md): specify what you think will happen to the costs of carriers and 
 technologies. Setting the costs provides the canvas on which your scenario is
 painted. 
 NOTE: these costs do not include taxes or subsidies and are, 
 therefore, less dependent on governement influences than prices.
+* [**Supply**](/general/supply.md): which technologies will we use to produce heat and electricity 
+in the future?
 
 ### Basics of the Professional interface 
 

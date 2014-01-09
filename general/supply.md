@@ -1,8 +1,5 @@
 # Supply
 
-Introduction
-------------
-
 The Supply tab covers the central production of both electricity and heat, as well as transport fuel. Sliders for decentralized electricity and heat producing options are shown, but cannot be set here as they can be set in the Demand section where the actual production takes place. A chart on the right shows from what sources electricity, heat or transport fuels are obtained. The following areas are covered:
 
 -   Electricity
@@ -34,7 +31,7 @@ Options are biomass, wind, hydro electric, geothermal, solar and waste-fired pow
 Fossil heat
 -----------
 
-Options are Combined Heat and Power (CHP) plants and dedicated heat plants. The CHPs cannot actually be built here as they can be built under Electricity (see above).
+Options are Combined Heat and Power (CHP) plants and dedicated heat plants. The CHPs cannot actually be built here as they can be built under [Electricity](supply.md#electricity).
 
 Renewable heat
 --------------
@@ -46,8 +43,8 @@ Transport fuels
 
 The user can choose to what extent the transport fuel mix should consist of the bio-alternative for each fuel type.
 
-Other fuels
------------
+Alternative fuels
+-----------------
 
 The user can choose to what extent natural gas and coal used should consist of green gas or bio-coal respectively.
 
@@ -56,3 +53,16 @@ Fuel chain emissions
 
 The user can choose what countries or regions of origin fuels should be imported from. Depending on the mix of origins, the user sees the resulting greenhouse gas emissions during the full life cycle of these fuels. The fuel life cycle is divided into: 1. Extraction 2. Processing 3. Transportation and 4. Conversion. The user can choose to have the ETM use these life cycle greenhouse gas emissions instead of the CO<sub>2</sub> emissions from combustion/conversion only.
 This allows the user to compare life cycle emissions for different electricity generation technologies, for example.
+
+Electricity backup
+------------------
+Information is given about the security of supply and the backup options. See [Electricity backup](electricity_backup.md) for more information.
+
+Electricity storage
+-------------------
+Information is given about excess electricity and various electricity storage technologies. See [Storage](storage.md) for more information.
+
+Import/Export
+-------------
+Information is given about the the import and export of electricity.
+

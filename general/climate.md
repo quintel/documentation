@@ -1,5 +1,4 @@
-Introduction
-------------
+# Climate
 
 In recent years, the evidence for human-induced climate change has been accumulating [1](http://en.wikipedia.org/wiki/Global_warming). Climate change has a direct impact on the useful demand for heating and cooling of households and buildings. When the average outdoor temperature rises, the useful demand for heating decreases and the useful demand for cooling increases. Useful demand for heat is the amount of heat needed for space heating, not how much gas or electricity is consumed to make that heat (final demand). These effects are reversed for a drop in average outdoor temperature. Currently, the climate impact is only calculated in the ETM for the Netherlands.
 

@@ -1,16 +1,13 @@
 # Demand
 
-Introduction
-------------
-
 On the Demand tab of the ETM a user can determine the future demand of energy for the sectors available in the area that the user is modeling at that moment. Usually these sectors are:
 
--   Households
--   Buildings
--   Transportation
--   Industry
--   Agriculture
--   Other
+- Households
+- Buildings
+- Transportation
+- Industry
+- Agriculture
+- Other
 
 Not all sectors are available for all areas, depending on the economic reality of that area.
 
@@ -41,7 +38,13 @@ The Transportation sector is equal to a similarly named economic sector used by 
 Industry
 --------
 
-The Industry sector contains the economic sector 'industry' and also includes the energy sector (mining and refining) . The level of detail of this sector is limited in the ETM. Only a distinction is made between electricity and heat. There is no distinction between different temperatures of heat required. This year, Quintel aims to improve this part of the model significantly.
+The Industry sector contains the economic sector 'industry' and also includes the energy sector (mining and refining). The industry sector is divided into three sub-sectors:
+
+- the chemical industry
+- the metal industry
+- the other industry
+
+The level of detail of this sector depends on the sub-sector. Only a distinction is made between electricity and heat. There is no distinction between different temperatures of heat required.
 
 Agriculture
 -----------
@@ -53,8 +56,8 @@ Other
 
 The Other sector contains all energy use not represented in the previous sectors. It differs slightly per region and is usually small. The following items are usually included under the other sector:
 
--   The construction sector
--   The army
--   The hydrological sector (dams, levies, etc)
+- the construction sector
+- the army
+- the hydrological sector (dams, levies, etc)
 
 In some countries (like the Netherlands), the Other sector in the national energy statistics contains agriculture and the tertiary sector. If these sectors cannot be split from the Other sector it can be a big sector. Generally speaking this is not a preferable situation, because the options for changing demand are limited in the other sector.
