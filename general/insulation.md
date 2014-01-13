@@ -6,7 +6,7 @@ Insulation can be used to bring down the amount of heating and cooling we need f
 Research
 --------
 
-![Figure 1: Insulation sliders for residences.](../images/sliders_residences.png "Figure 1: Insulation sliders for residences.")
+![Figure 1: Insulation sliders for residences.](../images/Sliders_residences.png "Figure 1: Insulation sliders for residences.")
 
 The data on the current quality of insulation in residences in the Netherlands shows that there is a jump in R-value from residences build before 1992 and residences build after 1991. We, therefore, distinguish between these two populations as 'old' and 'new' residences in the ETM and the remainder of this text. Another observation is that the <strong>distribution</strong> of R-values is roughly flat; all R-values occur equally often. Given these two observations, we have implemented the slider ranges for residences as shown in the image right. A more detailed description of our derivation of slider values is given in the Modeling Section below.
 
@@ -27,7 +27,7 @@ In this section we describe the modeling methods used for our insulation impleme
 
 ### R-value
 
-![Figure 2: Insulation slider for buildings.](../images/sliders_buildings.png "Figure 2: Insulation slider for buildings.")
+![Figure 2: Insulation slider for buildings.](../images/Sliders_buildings.png "Figure 2: Insulation slider for buildings.")
 
 The R-value is a measure for the quality of the insulation of a building (or house). It is **inversely proportional** to the 'leakiness' factor U (Also see [http://en.wikipedia.org/wiki/R-value\_(insulation) Wikipedia](http://en.wikipedia.org/wiki/R-value_(insulation) Wikipedia "wikilink")):
 
