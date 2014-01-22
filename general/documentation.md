@@ -138,9 +138,7 @@ The ETM uses the following assumptions to limit complexity:
 Calculations
 ------------
 
-The ETM performs a number of calculations each time the user alters a slider. First, the energy balance in the model is recalculated, after which a number of secondary calculations is performed.
-
-Here, an overview of the different calculation types is given.
+The ETM performs a number of calculations each time the user alters a slider. First, the energy balance in the model is recalculated, after which a number of secondary calculations is performed. Here, an overview of the different calculation types is given.
 
 ### Energy flow calculations
 
@@ -156,19 +154,13 @@ The model calculates primary consumption associated with the output of a specifi
 
 *Main article: [CO<sub>2</sub> calculations](co2_calculations.md)*
 
-The model calculates CO<sub>2</sub> emissions for the current year and the scenario year. The CO<sub>2</sub> emission for the year 1990 is a fixed number taken from `area data`.
-
-The model calculates CO<sub>2</sub> emissions associated with the energy output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the CO<sub>2</sub> emission of that converter's energy output is and takes his share. This process continues until it reaches the primary converters, where the CO<sub>2</sub> emission is calculated on the basis of the energy carriers and emission factors. In this process CO<sub>2</sub> emission related to distribution and conversion losses etc. is included.
+The model calculates CO<sub>2</sub> emissions for the current year and the scenario year. The CO<sub>2</sub> emission for the year 1990 is a fixed number taken from `area data`. The model calculates CO<sub>2</sub> emissions associated with the energy output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the CO<sub>2</sub> emission of that converter's energy output is and takes his share. This process continues until it reaches the primary converters, where the CO<sub>2</sub> emission is calculated on the basis of the energy carriers and emission factors. In this process CO<sub>2</sub> emission related to distribution and conversion losses etc. is included.
 
 ### Import calculations
 
 *Main article: [Import calculations](import_calculations.md)*
 
-The energy import shows the percentage of energy that is imported from outside of the area.
-
-For each area, the input data prescribes the amount of energy that is produced/extracted from within the area for a number of future years. If more energy is produced/extracted than needed, the excess energy is exported (except for steam/hot water).
-
-To calculate how large the total imported energy is compared to the total energy use of the area, this total amount of energy import is divided by the total primary energy used in the region. The total primary energy used in the region includes the primary energy used to produce electricity that is exported.
+The energy import shows the percentage of energy that is imported from outside of the area. For each area, the input data prescribes the amount of energy that is produced/extracted from within the area for a number of future years. If more energy is produced/extracted than needed, the excess energy is exported (except for steam/hot water). To calculate how large the total imported energy is compared to the total energy use of the area, this total amount of energy import is divided by the total primary energy used in the region. The total primary energy used in the region includes the primary energy used to produce electricity that is exported.
 
 ### Cost calculations
 
@@ -211,7 +203,7 @@ The ETM makes a rough estimation of how much arable land equivalent a region nee
 -   Waste streams for direct combustion
 -   Waste streams for co-digestion into biogas
 
-Any biomass that is not domestically produced (see [import article](import_calculations.md) for information on domestic production curves) is imported. The research team has determined which energy crop is the most efficient for each of the categories listed above. Regardless of whether biomass is homegrown or imported the ETM calculates impact on arable land somewhere in the world and expresses this in multiples of the region's own arable land area as shown in the [Dashboard](dashboard.md).
+Any biomass that is not domestically produced (see [Import calculations](import_calculations.md) for information on domestic production curves) is imported. The research team has determined which energy crop is the most efficient for each of the categories listed above. Regardless of whether biomass is homegrown or imported the ETM calculates impact on arable land somewhere in the world and expresses this in multiples of the region's own arable land area as shown in the [Dashboard](dashboard.md).
 
 
 |**Energy Carrier**|Typical production|Comment|
