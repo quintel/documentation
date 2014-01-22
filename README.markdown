@@ -89,7 +89,7 @@ information that you are interested in.
 At any time, the ETM contains information about **two** scenarios:
 
 * The **start-scenario**: this scenario is fixed and is used to calculate how much 
-your choices for the future affect things like CO2 emissions.
+your choices for the future affect things like CO<sub>2</sub> emissions.
 * The **future scenario**: this scenario is initially identical to the 
 start-scenario but will reflect the changes you make in the ETM, using the 
 sliders available. 
@@ -107,7 +107,7 @@ represented as a **graph** such as shown below:
 
 The **nodes** are represented by **converters** who convert or 
 transport energy (possibly with loss). The **edges** (the connections) are the 
-energy flows which are characterized by **volume** (in Mega Joule) and 
+energy flows which are characterized by **volume** (in megajoule) and 
 **carrier type** (such as coal, electricity, useable_heat etc.).
 
 The ETM is **demand driven** meaning that moving a slider in the demand sector, 
