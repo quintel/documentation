@@ -14,7 +14,7 @@ By displaying the LOLE in the ETM, users can see whether they have sufficiently 
 In the ETM
 ----------
 
-![screenshot of the loss of load popup](../images/LOLE_popup.jpg "screenshot of the loss of load popup")
+![screenshot of the loss of load popup](../images/LOLE_popup.png "screenshot of the loss of load popup")
 
 The loss of load dashboard item can be accessed via the flexible dashboard by clicking **change** on the bottom right corner of the Energy Transition Model interface. If this item is selected, the loss of load expectation is seen in the middle of the dashboard. The displayed number is the expected number of hours per year that the country's electricity production capacity cannot meet its demand. Clicking on the dashboard item reveals a popup showing a chart with the following items for both the present and the future year:
 
