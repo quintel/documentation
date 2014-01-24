@@ -241,7 +241,7 @@ Currently the merit order calculation only works for the Netherlands.
 
 ### Loss of load calculations
 
-*Main article: [Loss of load](loss_of_load_probability.md)*
+*Main article: [Loss of load](loss_of_load_expectation.md)*
 
 The calculation shows the probability that available electricity production capacity is less than the expected demand. Such a calculation is an important consideration when planning a power system and similar, but more elaborate, versions of this calculation are always conducted by the Transmission System Operators of a country. The loss of load dashboard item can be accessed via the flexible dashboard by clicking 'Change' on the bottom right corner of the Energy Transition Model interface.
 
