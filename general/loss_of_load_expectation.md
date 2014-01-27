@@ -66,7 +66,9 @@ Capacity credit
 
 The capacity credit of an electricity producer is a measure for ability of this producer to replace convetional electricity production or, in other words, a measure for the producers contribution to the reliable production capacity. A solar PV installation for example has a capacity credit of 0% because it is certain that this installation will not produce any electricity at night. Conventional or thermal electricity producers and technologies such as pumped storage hydro power on the other hand have a capacity credit of 100%. The output of these technologies is controlled and hence their contribution to reliable capacity is 100%.
 
-The capacity credit of wind turbines is strongly depended on the installed wind capacity. Several studies have been performed to the exact shape of this dependence (see e.g. [(IEA, 2009)](http://refman.et-model.com/publications/1664)). In the ETM, we use the results from [(Wilton, 2013)](http://refman.et-model.com/publications/1846), page 40 and 41. These numbers have been calculated for The Netherlands, but, due to the lack of others sources, are used for all other countries as well. The capacity credit of wind varies from 30% to 2% for the range of installed wind capacity that can be achieved in the ETM
+The capacity credit of wind turbines is strongly depended on the installed wind capacity. Several studies have been performed to the exact shape of this dependence (see e.g. [(IEA, 2009)](http://refman.et-model.com/publications/1664)). In the ETM, we use the results from [(Wilton, 2013)](http://refman.et-model.com/publications/1846), page 40 and 41. These numbers have been calculated for The Netherlands, but, due to the lack of others sources, are used for all other countries as well. The capacity credit of wind varies from 30% to 2% for the range of installed wind capacity that can be achieved in the ETM.
+
+All electricity producers have an attribute variability. For consistency, we defined `capacity_credit = 1 - variability`.
 
 
 Discussion
