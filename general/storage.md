@@ -2,7 +2,7 @@
 
 The largest obstacle in integrating large amounts of wind or solar power into the grid is the frequent mismatch between generation and demand. This can lead to both shortage and excess.
 
-This wiki page serves to explain the storage and conversion sidebar item in the ETM (Electricity storage). It is available in the professional version of the ETM in the Supply \> [Electricity storage](http://energytransitionmodel.com/scenario/supply/electricity_storage) slide.
+This page serves to explain the storage and conversion sidebar item in the ETM (Electricity storage). It is available in the professional version of the ETM in the Supply \> [Electricity storage](http://energytransitionmodel.com/scenario/supply/electricity_storage) slide.
 
 Introduction
 ------------

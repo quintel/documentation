@@ -1,6 +1,6 @@
 # Electricity backup
 
-This wiki page documents information about the "flexibility of electricity production" project. This project was done in cooperation with GasTerra in the period June 2011 through March 2012. The project consists of two parts: The loss of load probability calculation and the flexibility of electricity backup calculation. In the ETM the calculations are found: [here](http://pro.et-model.com/scenario/supply/electricity_backup/security-of-supply#security-of-supply).
+This page documents information about the "flexibility of electricity production" project. This project was done in cooperation with GasTerra in the period June 2011 through March 2012. The project consists of two parts: The loss of load probability calculation and the flexibility of electricity backup calculation. In the ETM the calculations are found: [here](http://pro.et-model.com/scenario/supply/electricity_backup/security-of-supply#security-of-supply).
 
 Introduction
 ------------
@@ -11,7 +11,7 @@ The first calculation shows the loss of load probability of a scenario by taking
 
 The flexibility of electricity backup calculation offers a comparison between fossil fuel technologies in terms of their ability to serve as backup for volatile electricity production. The comparison is made by considering only the costs and CO2 emissions exclusive to providing backup for volatile electricity production.
 
-On this wiki page an explanation is given about the project.
+On this page an explanation is given about the project.
 
 Useful definitions
 ------------------
