@@ -40,7 +40,7 @@ Several methods exist for calculating the loss of load expectation. Since we lik
 
 In short, the calculation consists of the following steps.
 
-- Scale the demand profile
+1. Scale the demand profile
 - Calculate reliable production capacity
 - Compare the demand profile and the reliable production capacity and determine LOLE
 
