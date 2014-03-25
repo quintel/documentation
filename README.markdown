@@ -176,7 +176,7 @@ hold the relevant code are as folows:
 * [ETEngine](https://github.com/quintel/etengine): the computational engine. 
 Contains all methods to traverse the [energy graph](#energy_calc), methods 
 for interaction with the graph (e.g., gqueries) etc.
-* [ETModel](http://pro.et-model.com/): the front-end code, charts, translations.
+* [ETModel](https://github.com/quintel/etmodel): the front-end code, charts, translations.
 * [ETSource](https://github.com/quintel/etsource): gqueries, input-statements 
 the data that defines the graph structure and content.
 * [Merit](https://github.com/quintel/merit): stand-alone merit order calculator
