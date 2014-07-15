@@ -7,7 +7,7 @@ The ETM brings the facts and tools to capture your vision for the future!
 
 ![ETM interfaces](https://f.cloud.github.com/assets/1303760/1742063/e35852d2-63f1-11e3-8ade-484d65a4302f.png)
 
-## We are going open source!
+## We are open source!
 
 All functionality of the ETM can be used free of charge and the 
 [ETModel](https://github.com/quintel/etmodel) and 
