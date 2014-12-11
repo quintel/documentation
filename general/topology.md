@@ -17,13 +17,33 @@ The high-voltage (HV) net is assumed to lie outside of the testing ground and se
 
 ### The network topology interface
 
-For applications in local testing grounds, the MV- and LV networks are most relevant. The HV network is included in the national scenario but left out of the **network topology interface** for the local testing ground. With this interface you can choose
+For applications in local testing grounds, the MV- and LV networks are most relevant. The HV network is included in the local testing ground only as a connection for the MV network(s) and cannot be further configured. The topology of the local network can be specified by editing a simple nested textfile (YML format). Within this framework it is possible to define:
 
 * the number of MV networks in the testing ground
 * the number of LV networks connected to the MV networks
 * The number of direct connections to the MV net (for wind-turbines or larger CHP)
 
-￼![image](../images/20141209_topology_interface_v1.png =650x "The network topology interface")
+An example of a simple network in YML format is given below:
+
+```
+---
+- name: "High Voltage #1"
+  children:
+    - name: "Medium Voltage #1"
+      children:
+      	- name: "MV connection #1"
+        - name: "Low Voltage #1"
+        - name: "Low Voltage #2"
+    - name: "Medium Voltage #2"
+      children:
+        - name: "Low Voltage #3"
+        - name: "Low Voltage #4"
+        - name: "Low Voltage #5"
+
+```
+The above YML file can be translated into a visual network as seen below:
+
+￼![image](../images/Basic_topology.png =650x "The network topology interface")
 
 
 ## Specifying the network components
