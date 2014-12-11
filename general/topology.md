@@ -11,7 +11,7 @@ The recently added [testing ground functionality](testing_ground.md) alows the u
 
 On the level of a typical testing ground, the network consists of one or several medium-voltage (MV) nets which support several low-voltage (LV) nets (see Figure 1 below for an example of a network topology).
 
-￼![image](../images/network.png =650x "Example of a network topology")
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/network.png "The network topology interface")
 
 The high-voltage (HV) net is assumed to lie outside of the testing ground and serves as a source/sink for demand/supply of electricity for the testing ground as a whole.
 
@@ -43,8 +43,7 @@ An example of a simple network in YML format is given below:
 ```
 The above YML file can be translated into a visual network as seen below:
 
-￼![image](../images/Basic_topology.png =650x "The network topology interface")
-
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/basic_topology.png)
 
 ## Specifying the network components
 
