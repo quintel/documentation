@@ -22,8 +22,15 @@ Before scaling the national scenario to testing ground level, you can specify th
 
 Once the scaling variable has been selected, you can enter a value for this variable. This determines how many residences – or residents – the testing ground will contain (see Figure 1 below).
 
-![image](http://cl.ly/image/1m3D1k3i192B/Image%202014-12-04%20at%202.37.09%20pm.png)
+![image](../images/Testing_ground.png)
 > Figure 1. The scaling interface. Land, year-end and scaling can be chosen.
+
+It is possible to explicitly exclude the following sectors from the testing ground
+
+* Agriculture (excluded by default)
+* Energy sector (included by default but with scaled down numbers)
+* Industry (excluded by default)
+
 
 Scaling of the national scenario to testing ground size happens as follows: all production and demand of energy is reduced by a fixed factor, which is the specified value for the scaling variable divided by the *original* value of the scaling variable.
 If the national scenario, for instance, contains 10 million residences and your testing ground contains only 100 residences the scaling factor is given by:
@@ -32,7 +39,7 @@ If the national scenario, for instance, contains 10 million residences and your 
 
 All energy in the national scenario will be multiplied by 0.00001 to get the testing ground scenario. In addition to energy, the quantities of all technologies are scaled equivalently. For example, if the national scenario contains a million combi-boilers, using a scale factor of 0.00001 means there are only 10 combi-boilers left in the testing ground scenario.
 
-Note: It may happen that scaling results in fractional numbers (eg 123.4 combi boilers.). In those cases, the number will be rounded to the closest integer. Exceptions to this rule are large power plants. It is possible to place 0.3 nuclear power plants in the testing ground.
+Note: It may happen that scaling results in fractional numbers (e.g., 123.4 combi boilers.). In those cases, the number will be rounded to the closest integer. Exceptions to this rule are large power plants. It is possible to place 0.3 nuclear power plants in the testing ground.
 
 ### Excluding sectors from the testing ground
 
