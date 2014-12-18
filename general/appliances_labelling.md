@@ -1,25 +1,36 @@
 Introduction
 ------------
 
-Energy consumption labelling can be used in household appliances to determine how efficient they are. The energy labels can range from class A+++ to class D with the A+++ being the most efficient class and D the least efficient class. The ETM allows you to choose the efficiency levels of each appliance in order to define its energy class. You can increase or decrease the efficiency of the appliance with the maximum percentage of reaching the class A+++ and the minimum percentage of reaching the class D. The starting point refers to the current energy label of the appliance. The energy consumption labels defer from appliance to appliance. This page discusses the modeling methods used for the implementation of energy consumption labelling in the ETM and the data that underlies the modeling.
+The energy consumption labelling can be used in household appliances in order to determine how efficient they are. The energy labels can range from class A+++ to class D with the A+++ being the most efficiency class and D the least efficiency class. 
+The EU established an energy consumption labelling scheme for household appliances and it is necessary for all the manufactures to include it. The energy label can define the energy efficiency class to a colour code associated with a letter (from A+++ to D).
 
-Research
+The ETM allows the user to choose the energy class of each appliance by increasing or decreasing the efficiency level of the appliance with the maximum percentage reaching the class A+++ and the minimum percentage reaching the class D.  
+This page discusses the methods used for the calculation of the energy efficiency change of household appliances in the ETM and the data that underlies the modeling. 
+
+Modeling
 --------
 
-The EU established an energy consumption labelling scheme for household appliances and it is necessary for all the manufactures to include it. The energy label can determine the energy efficiency class to a colour code associated with a letter (from A+++ to D), but also can provide further useful information. A more detailed description of the energy labelling of each appliance is described below. 
+
+![Figure 1: Labelling slide.](../images/labelling_slide.png "Figure 1: Labelling slide")
+
+The data on the current energy class of the household appliances in the Netherlands shows that it is different for each appliance. The starting point of the slider refers to the current energy class of the appliance and the icon above the slider can specify the energy class. The user can change the energy class of the appliance according to how efficient it will be in the future. 
+
+The energy class of each appliance can be determined with the  Energy Efficiency Index (EEI), which is based on the annual energy consumption of the appliance. 
+
+A more detailed description of the EEI of each appliance is described below. 
 
 <strong>Dish washer</strong>
 
-The energy class of the dishwashers can be determined from the Energy Efficiency Index (EEI), which is presented in the table below and it is based on the annual energy consumption of the appliance.
+The table below presents the EEI of each energy label of Dish washers.
 
 ![Figure 1: Dish washer labelling.](../images/Dishwasher_labelling.png "Figure 1: Dish washer labelling.")
 
 
 The label also contains information on:
-
 -   the energy consumption in kWh /cycle-   the washing cycle efficiency class -   the drying cycle efficiency class -   the capacity as a number of place settings-   the water consumption in litres per cycle-   noise in dB(A)
 <strong> Fridge/Freezer</strong>
-The energy class of the fridge/freezers can be determined from the Energy Efficiency Index (EEI), which is presented in the table below and it is based on the annual energy consumption of the appliance.
+
+The table below presents the EEI of each energy label of Fridges/Freezers.
 
 
 ![Figure 1: Fridge/Freezer labelling.](../images/Fridge_Freezer_labelling.png "Figure 1: Fridge/Freezer labelling.")
@@ -27,7 +38,7 @@ The label also contains information on:
 The label also contains information on:
 
 -   the annual energy consumption in kWh/year-   the capacity of fresh foods in litres for refrigerators and combined appliances-   the capacity of frozen foods in litres for freezers and combined appliances-   the noise in dB(A)<strong> Washing machine</strong>
-The energy class of the washing machines can be determined from the Energy Efficiency Index (EEI), which is presented in the table below and it is based on the annual energy consumption of the appliance.
+The table below presents the EEI of each energy label of Washing machines.
 
 
 ![Figure 1: Washing machine labelling.](../images/Washing_machine_labelling.png "Figure 1: Washing machine labelling.")
@@ -39,7 +50,7 @@ The label also contains information on:
 
 <strong> Dryer</strong>
 
-The energy class of the dryers can be determined from the Energy Efficiency Index (EEI), which is presented in the table below and it is based on the annual energy consumption of the appliance.
+The table below presents the EEI of each energy label of Dryers.
 
 
 ![Figure 1: Dryer labelling.](../images/Dryer_labelling.png "Figure 1: Dryer labelling.")
@@ -47,7 +58,7 @@ The energy class of the dryers can be determined from the Energy Efficiency Inde
 The label also contains information on:
 
 -   the annual energy consumption, based on 160 drying cycles of the standard cotton programme at full and partial load, and the consumption of the low-power modes, in kWh/year-   the type of household tumble drier (air-vented, condenser or gas-fired)-   the cycle time corresponding to the standard cotton programme at full load, in minutes-    the capacity for the standard cotton programme at full load, in kg-   the noise during the drying phase, for the standard cotton programme at full load, in dB(A)<strong> Television</strong>
-The energy class of the televisions can be determined from the Energy Efficiency Index (EEI), which is presented in the table below and it is based on the annual energy consumption of the appliance.
+The table below presents the EEI of each energy label of Televisions.
 
 
 ![Figure 1: Television labelling.](../images/Television_labelling.png "Figure 1: Television labelling.")
@@ -56,7 +67,7 @@ The label also contains information on:
 
 -   the on-mode power consumption in Watts-   the annual on-mode energy consumption, in kWh/year-   the visible screen diagonal in inches and centimetres
 <strong>Vacuum cleaner</strong>
-The energy class of the vacuum cleaners can be determined from Maximun kWh/year, which is presented in the table below. 
+The energy labelling of the vacuum cleaners can be determined from the Maximun kWh/year, which is presented in the table below. 
 
 ![Figure 1: Vacuum cleaner labelling.](../images/vacuum_cleaner_labelling.png "Figure 1: Vacuum cleaner labelling.")
 
@@ -77,16 +88,19 @@ and the following websites:
 -   [http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32010R1062&qid=1395837474289&from=EN](http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32010R1062&qid=1395837474289&from=EN)
 -    [http://www.top10energyefficiency.org.uk/dishwashers](http://www.top10energyefficiency.org.uk/dishwashers)
 
-Modeling
--------
 
-In this section the modeling methods used for the calculation of the energy efficiency change of household appliances are described. 
 
-A new EEI adjusted with the linearization method and used for the calculation of the limits of the energy efficiency change of each appliance. The EEI can specify the limits of the energy consumption of each energy class and it is based on the annual energy consumption of the applinace. 
+In order to specify the limits of the energy consumption in each energy class the EEI is used. The relation between the energy label and the EEI is not linear for this reason it was needed the EEI to be adjusted. The EEI adjusted was calculated with the linearization method and the results are shown in the graph below. With the linearization method a straight line was drawn in order to define the new values for the EEI adjusted. The EEI adjusted is used instead of the EEI in order to be able to use the same icon with the energy classes for all the household appliances in the ETM, as the steps from the one energy class to another are equal on the icon.
 
-The starting point refers to the current energy label of each appliance, the maximun value refers to the % change in the energy efficiency of the appliance in order to reach the most efficient energy calss (A+++), and the minimun value refers to the % change in the energy efficiency of the appliance in order to reach the least efficient energy calss (D).
 
- A more detailed description of the energy efficiency limits are shown in the table below. 
+![Figure 1: EEI adjusted.](../images/EEI_adjusted.png "Figure 1: EEI adjusted.")
+
+
+The EEI adjusted for the current energy class of each appliance is used as the starting point in order to calculate the energy efficiency change from the current energy claas to another. The maximum value refers to the % change in the energy efficiency of the appliance in order to reach the EEI of the most efficiency energy class (A+++), and the minimum value refers to the % change in the energy efficiency of the appliance in order to reach the EEI of the least efficiency energy class (D).
+
+All the appliances have an energy class range from A+++ to D, except from the dryers. The least energy efficiency class for the dryers is C. For the simplicity of the calculations, it is assumed that the energy class range for the dryers is also from A+++ to D.
+
+A more detailed description of the energy efficiency change is shown in the table below. 
  
 
 ||Min. %|Current energy label| Max. % |
@@ -98,5 +112,5 @@ The starting point refers to the current energy label of each appliance, the max
 |Television|-93%|A|92%|
 |Vacuum cleaner|-15%|C|75%|
 
-All the appliances have an energy class range from A+++ to D, except from the dryers. The least energy efficient class for the dryers is C. For the simplicity of the calculations, it is assumed that the energy class range for the dryers is also from A+++ to D.
+
 
