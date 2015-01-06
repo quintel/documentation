@@ -1,11 +1,10 @@
 Introduction
 ------------
 
-The energy consumption labelling can be used in household appliances in order to determine how efficient they are. The energy labels can range from class A+++ to class D with the A+++ being the most efficiency class and D the least efficiency class. 
-The EU established an energy consumption labelling scheme for household appliances and it is necessary for all the manufactures to include it. The energy label can define the energy efficiency class to a colour code associated with a letter (from A+++ to D).
+Energy consumption labelling is used to determine how energy efficient household appliances are. The energy labels typically range from class A+++ to class D with  A+++ being the most efficient class and D the least efficient class. The European Union (EU) established an energy consumption labelling scheme for household appliances and it is necessary for all  manufactures to include an energy label with their appliances. The energy label can define the energy efficiency class to a colour code associated with a letter (from A+++ to D).
 
-The ETM allows the user to choose the energy class of each appliance by increasing or decreasing the efficiency level of the appliance with the maximum percentage reaching the class A+++ and the minimum percentage reaching the class D.  
-This page discusses the methods used for the calculation of the energy efficiency change of household appliances in the ETM and the data that underlies the modeling. 
+The ETM allows the user to increase or decrease the energy efficiency level of several types of appliances. These changes in efficiencies are matched to an energy class for each type of appliance with the maximum increase in efficiency corresponding to class A+++ and the maximimum efficiency decrease corresponding to  class D.  
+This page discusses the methods used to determine the relation between energy labels and efficiency improvement and the data underlying the modeling. 
 
 Modeling
 --------
@@ -89,7 +88,7 @@ and the following websites:
 -    [http://www.top10energyefficiency.org.uk/dishwashers](http://www.top10energyefficiency.org.uk/dishwashers)
 
 
-The limits of the annual energy consumption in each energy class are based on the EEI. The relation between the EEI and the energy label is not linear therefor the EEI needed to be adjusted. The EEI adjusted was calculated with the linearization method and the results are shown in the graph below. With the linearization method a straight line was drawn in order to define the new values for the EEI adjusted. The EEI adjusted is used instead of the EEI in order to be able to be used the same icon with the energy classes for all the appliances in the ETM, as the steps from the one energy class to another are equal on the icon.
+The limits of the annual energy consumption in each energy class are based on the EEI. The relation between the EEI and the energy label is not linear; therefore the EEI needed to be adjusted. The EEI adjusted was calculated with the linearization method and the results are shown in the graph below. With the linearization method a straight line was drawn in order to define the new values for the EEI adjusted. The EEI adjusted is used instead of the EEI in order to be able to be used the same icon with the energy classes for all the appliances in the ETM, as the steps from the one energy class to another are equal on the icon.
 
 
 ![Figure 8: EEI adjusted.](../images/EEI_adjusted.png "Figure 8: EEI adjusted.")
@@ -109,7 +108,7 @@ A more detailed description of the % energy efficiency change of the appliances 
 |---------|-----|---------------------|
 |Dish washer|-34%|A|35%|
 |Fridge / Freezer|-132%|A+|66%|
-|Washing machine|-54%|A+|28%|
+|Washing machine|-56%|A+|28%|
 |Dryer|-36%|B|69%|
 |Television|-93%|A|92%|
 |Vacuum cleaner|-15%|C|75%|
