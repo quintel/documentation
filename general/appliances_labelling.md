@@ -23,7 +23,7 @@ A more detailed description of the EEI of each appliance is described below.
 
 The table below presents the EEI of each energy label of Dish washers.
 
-![Figure 1: Dish washer labelling.](../images/Dishwasher_labelling.png "Figure 1: Dish washer labelling.")
+![Figure 2: Dish washer labelling.](../images/Dishwasher_labelling.png "Figure 2: Dish washer labelling.")
 
 
 The label also contains information on:
@@ -33,7 +33,7 @@ The label also contains information on:
 The table below presents the EEI of each energy label of Fridges/Freezers.
 
 
-![Figure 1: Fridge/Freezer labelling.](../images/Fridge_Freezer_labelling.png "Figure 1: Fridge/Freezer labelling.")
+![Figure 3: Fridge/Freezer labelling.](../images/Fridge_Freezer_labelling.png "Figure 3: Fridge/Freezer labelling.")
 
 The label also contains information on:
 
@@ -41,7 +41,7 @@ The label also contains information on:
 The table below presents the EEI of each energy label of Washing machines.
 
 
-![Figure 1: Washing machine labelling.](../images/Washing_machine_labelling.png "Figure 1: Washing machine labelling.")
+![Figure 4: Washing machine labelling.](../images/Washing_machine_labelling.png "Figure 4: Washing machine labelling.")
 
 The label also contains information on:
 
@@ -53,7 +53,7 @@ The label also contains information on:
 The table below presents the EEI of each energy label of Dryers.
 
 
-![Figure 1: Dryer labelling.](../images/Dryer_labelling.png "Figure 1: Dryer labelling.")
+![Figure 5: Dryer labelling.](../images/Dryer_labelling.png "Figure 5: Dryer labelling.")
 
 The label also contains information on:
 
@@ -61,7 +61,7 @@ The label also contains information on:
 The table below presents the EEI of each energy label of Televisions.
 
 
-![Figure 1: Television labelling.](../images/Television_labelling.png "Figure 1: Television labelling.")
+![Figure 6: Television labelling.](../images/Television_labelling.png "Figure 6: Television labelling.")
 
 The label also contains information on:
 
@@ -69,7 +69,7 @@ The label also contains information on:
 <strong>Vacuum cleaner</strong>
 The energy labelling of the vacuum cleaners can be determined from the Maximun kWh/year, which is presented in the table below. 
 
-![Figure 1: Vacuum cleaner labelling.](../images/vacuum_cleaner_labelling.png "Figure 1: Vacuum cleaner labelling.")
+![Figure 7: Vacuum cleaner labelling.](../images/vacuum_cleaner_labelling.png "Figure 7: Vacuum cleaner labelling.")
 
 The label also contains information on:
 -   the annual energy consumption in kWh/year-   the cleaning performance-   the dust re-emission in mg/m3
@@ -89,18 +89,20 @@ and the following websites:
 -    [http://www.top10energyefficiency.org.uk/dishwashers](http://www.top10energyefficiency.org.uk/dishwashers)
 
 
-
-In order to specify the limits of the energy consumption in each energy class the EEI is used. The relation between the energy label and the EEI is not linear for this reason it was needed the EEI to be adjusted. The EEI adjusted was calculated with the linearization method and the results are shown in the graph below. With the linearization method a straight line was drawn in order to define the new values for the EEI adjusted. The EEI adjusted is used instead of the EEI in order to be able to use the same icon with the energy classes for all the household appliances in the ETM, as the steps from the one energy class to another are equal on the icon.
-
-
-![Figure 1: EEI adjusted.](../images/EEI_adjusted.png "Figure 1: EEI adjusted.")
+The limits of the annual energy consumption in each energy class are based on the EEI. The relation between the EEI and the energy label is not linear therefor the EEI needed to be adjusted. The EEI adjusted was calculated with the linearization method and the results are shown in the graph below. With the linearization method a straight line was drawn in order to define the new values for the EEI adjusted. The EEI adjusted is used instead of the EEI in order to be able to be used the same icon with the energy classes for all the appliances in the ETM, as the steps from the one energy class to another are equal on the icon.
 
 
-The EEI adjusted for the current energy class of each appliance is used as the starting point in order to calculate the energy efficiency change from the current energy claas to another. The maximum value refers to the % change in the energy efficiency of the appliance in order to reach the EEI of the most efficiency energy class (A+++), and the minimum value refers to the % change in the energy efficiency of the appliance in order to reach the EEI of the least efficiency energy class (D).
+![Figure 8: EEI adjusted.](../images/EEI_adjusted.png "Figure 8: EEI adjusted.")
 
+
+The EEI adjusted for the current energy class of each appliance is used as the starting point in order to calculate the energy efficiency change from the current energy class to another. The energy efficiency change of the appliance is linked with the annual energy consumption of the appliance. The change of the one energy class to another can be calculated with the following equation 
+
+![Figure 9: Energy efficiency equation.](../images/energy_efficiency_equation.png "Figure 9: Energy efficiency equation.")
+
+where the Δ% refers to the change of the annual energy consumption of the appliance and the EEIn refers to the EEI adjusted of the current energy class. The maximum value of the % change of each appliance is the change of the annual energy consumption in order to reach the most efficiency energy class (A+++) and the minimum value is the change of the annual energy consumption in order to reach the least efficiency energy class (D).
 All the appliances have an energy class range from A+++ to D, except from the dryers. The least energy efficiency class for the dryers is C. For the simplicity of the calculations, it is assumed that the energy class range for the dryers is also from A+++ to D.
 
-A more detailed description of the energy efficiency change is shown in the table below. 
+A more detailed description of the % energy efficiency change of the appliances is shown in the table below. 
  
 
 ||Min. %|Current energy label| Max. % |
