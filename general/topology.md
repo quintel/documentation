@@ -55,12 +55,12 @@ The capacities (and possibly other properties) of transformers between MV and LV
 
 After the characteristics of the network have been specified, you can connect the various technologies in the testing ground to the network by editing the **connection matrix**. This matrix lists all technologies in rows and their technical properties and connections to the network in columns:
 
-|technology|capacity|efficiency|connection|...|
-|---|---|---|---|---|
-|heat pump 1| 2.5 kW| 4.0  | Low Voltage #1  |   |
-|heat pump 2| 3.0 kW| 4.5  | Low Voltage #2  |   |
-|solar panel 1| 1.5 kWp| 1.0 | Low Voltage #2  |   |
-|...   |   |   |   |   |
+|technology|capacity|efficiency|Investment Cost|connection|...|
+|---|---|---|---|---|---|
+|heat pump 1| 2.5 kW| 4.0  |1.5 kEUR| Low Voltage #1  |   |
+|heat pump 2| 3.0 kW| 4.5  |3.0 kEUR| Low Voltage #2  |   |
+|solar panel 1| 1.5 kWp| 1.0 |2.5 kEUR| Low Voltage #2  |   |
+|...   |   |   |   |   |   |
 
 Note that the technical properties of the technologies are given by the ETM. Admin users can change technical properties but this may result in local scenario's that cannot be translated back to the national ETM.
 
