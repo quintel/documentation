@@ -78,11 +78,11 @@ The convention for units is as follows:
 After the characteristics of the network have been specified, you can connect the various technologies in the testing ground to the network by editing the **connection matrix**. This matrix lists all technologies in rows and their technical properties and connections to the network in columns:
 
 |technology|connection|capacity|efficiency|Investment Cost|Load profile|...|
-|---|---|---|---|---|---|
-|heat pump 1| Low Voltage #1  | 2.5 kW| 4.0  |1500 EUR| heat_pump_profile_1  |
-|heat pump 2| Low Voltage #2  | 3.0 kW| 4.5  |3000 EUR|   |
-|solar panel 1| Low Voltage #2  | 1.5 kWp| 1.0 |2500 EUR| solar_pv_profile_2  |
-|...   |   |   |   |   |   |
+|---|---|---|---|---|---|---|
+|heat pump 1| Low Voltage #1  | 2.5 kW| 4.0  |1500 EUR| heat_pump_profile_1  | |
+|heat pump 2| Low Voltage #2  | 3.0 kW| 4.5  |3000 EUR|   | |
+|solar panel 1| Low Voltage #2  | 1.5 kWp| 1.0 |2500 EUR| solar_pv_profile_2  | |
+|...   |   |   |   |   |   | |
 
 Note that the technical properties of the technologies are given by the ETM. Admin users can change technical properties but this may result in local scenario's that cannot be translated back to the national ETM.
 
