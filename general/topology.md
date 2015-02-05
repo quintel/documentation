@@ -27,39 +27,61 @@ An example of a simple network in YML format is given below:
 
 ```
 ---
-- name: "High Voltage #1"
-  children:
-    - name: "Medium Voltage #1"
-      children:
-      	- name: "MV connection #1"
-        - name: "Low Voltage #1"
-        - name: "Low Voltage #2"
-    - name: "Medium Voltage #2"
-      children:
-        - name: "Low Voltage #3"
-        - name: "Low Voltage #4"
-        - name: "Low Voltage #5"
-
+name: "High Voltage #1"
+children:
+  - name: "Medium Voltage #1"
+    children:
+      - name: "MV connection #1"
+      - name: "Low Voltage #1"
+      - name: "Low Voltage #2"
+  - name: "Medium Voltage #2"
+    children:
+      - name: "Low Voltage #3"
+      - name: "Low Voltage #4"
+      - name: "Low Voltage #5"
 ```
 The above YML file can be translated into a visual network as seen below:
 
 ![image](https://raw.githubusercontent.com/quintel/documentation/master/images/basic_topology.png)
 
-## Specifying the network components
+## Specifying properties of network components
 
-The capacities (and possibly other properties) of transformers between MV and LV networks can be specified by double clicking them and changing their attributes.
+The capacities (and possibly other properties) of transformers between MV and LV networks can be specified by changing their attributes in the network YML:
 
-**WE ARE STILL DECIDING HOW THIS WILL WORK**
+```
+---
+name: "High Voltage #1"
+children:
+  - name: "Medium Voltage #1"
+    capacity: 1000.0              <========== SPECIFIES THE CAPACITY ==========<<<
+    children:
+      - name: "MV connection #1"
+      - name: "Low Voltage #1"
+      - name: "Low Voltage #2"
+  - name: "Medium Voltage #2"
+    children:
+      - name: "Low Voltage #3"
+      - name: "Low Voltage #4"
+      - name: "Low Voltage #5"
+
+```
+### Units
+The convention for units is as follows:
+
+* capacity: **kW**
+* investment_costs: **EUR**
+* economic_lifetime: **years**
+
 
 ## Connecting technologies to the network
 
 After the characteristics of the network have been specified, you can connect the various technologies in the testing ground to the network by editing the **connection matrix**. This matrix lists all technologies in rows and their technical properties and connections to the network in columns:
 
-|technology|capacity|efficiency|Investment Cost|connection|...|
+|technology|connection|capacity|efficiency|Investment Cost|Load profile|...|
 |---|---|---|---|---|---|
-|heat pump 1| 2.5 kW| 4.0  |1.5 kEUR| Low Voltage #1  |   |
-|heat pump 2| 3.0 kW| 4.5  |3.0 kEUR| Low Voltage #2  |   |
-|solar panel 1| 1.5 kWp| 1.0 |2.5 kEUR| Low Voltage #2  |   |
+|heat pump 1| Low Voltage #1  | 2.5 kW| 4.0  |1500 EUR| heat_pump_profile_1  |
+|heat pump 2| Low Voltage #2  | 3.0 kW| 4.5  |3000 EUR|   |
+|solar panel 1| Low Voltage #2  | 1.5 kWp| 1.0 |2500 EUR| solar_pv_profile_2  |
 |...   |   |   |   |   |   |
 
 Note that the technical properties of the technologies are given by the ETM. Admin users can change technical properties but this may result in local scenario's that cannot be translated back to the national ETM.
@@ -68,9 +90,12 @@ Note that the technical properties of the technologies are given by the ETM. Adm
 
 Now that you have connected all producing and consuming technologies to the network, the load on the network components can be calculated. The ETM provides two options:
 
-* Use **four predifined moments** (winter day, winter evening, summer day, summer evening) for which the typical peak demand/production for the available technologies has been determined.
-* Use **time-series with arbitrary time-resolution** to describe demand/production for the available technologies. These profiles typically contain hourly values for the whole year.
+* Time-resolved: use **time-series with arbitrary time-resolution** to describe demand/production for the available technologies. These profiles typically contain hourly values for the whole year.
+* Single time-step: use the **maximum capacity** for the available technologies. If no load profile has been specified, the capacity of a technology will be used to initialize the load.
+
 
 ## Results
 
-After the load calculation finishes, the maximum load on the components of the network can be inspected.
+For the 'single time-step' calculation, the loads of all components in the network are shown between parenthesis:
+
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/load_calculation_topology.png)
