@@ -1,6 +1,6 @@
 # Local testing ground scenarios
 
-Together with Alliander, "pilot/testing ground"-specific functionality has been added to the ETM. Use of a new testing ground scenario begins with the design of a national scenario. Subsequently, the national scenario can be scaled to the size of the testing ground.
+Together with Alliander, "testing ground"-specific functionality has been added to the ETM. Use of a new testing ground scenario begins with the design of a national scenario. Subsequently, the national scenario can be scaled to the size of the testing ground.
 
 ## Scaling ETM scenarios to testing ground level
 
@@ -62,5 +62,4 @@ The interface for the testing ground scenario is identical to the [standard ETM 
 * The section on storage (it will be replaced by more detailed calculations on testing ground level)
 * The section on production of primary energy carriers is removed
 * The section on network costs (it is replaced by the more detailed calculations on testing ground level)
-* The section on fuel chain emissions
-* The section on international import/export of electricity
+* The section on fuel chain emissions is omitted

@@ -1,6 +1,6 @@
 # Network calculations for testing grounds
 
-The recently added [testing ground functionality](testing_ground.md) alows the user to scale down a national ETM scenario to the size of a typical pilot project. In this section we describe new functionality that let's you
+The [testing ground functionality](testing_ground.md) alows the user to scale down a national ETM scenario to the size of a typical pilot project. This scaled scenario can be imported in the testing ground environment of the ETM. In this section we describe new functionality that let's you
 
 * specify the network topology on local testing ground level
 * choose the capacities of network components
@@ -42,7 +42,7 @@ children:
 ```
 The above YML file can be translated into a visual network as seen below:
 
-![image](https://raw.githubusercontent.com/quintel/documentation/master/images/basic_topology.png)
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150409_topology.png)
 
 ## Specifying properties of network components
 
@@ -70,32 +70,43 @@ The convention for units is as follows:
 
 * capacity: **kW**
 * investment_costs: **EUR**
-* economic_lifetime: **years**
 
 
 ## Connecting technologies to the network
 
-After the characteristics of the network have been specified, you can connect the various technologies in the testing ground to the network by editing the **connection matrix**. This matrix lists all technologies in rows and their technical properties and connections to the network in columns:
+After the characteristics of the network have been specified, you can connect the various technologies in the testing ground to the network by editing the **technology matrix**. This matrix lists all technologies in rows and their technical properties and connections to the network in columns:
 
-|technology|connection|capacity|efficiency|Investment Cost|Load profile|...|
-|---|---|---|---|---|---|---|
-|heat pump 1| Low Voltage #1  | 2.5 kW| 4.0  |1500 EUR| heat_pump_profile_1  | |
-|heat pump 2| Low Voltage #2  | 3.0 kW| 4.5  |3000 EUR|   | |
-|solar panel 1| Low Voltage #2  | 1.5 kWp| 1.0 |2500 EUR| solar_pv_profile_2  | |
-|...   |   |   |   |   |   | |
+|technology|connection|type|capacity [kW]|demand [kWh]|investment [EUR]|load profile|...|
+|---|---|---|---|---|---|---|---|---|
+|heat pump 1| Low Voltage #1  | households_space_heater_heatpump_air_water_electricity |2.5| |1500| heat_pump_profile_1  | |
+|base load 1| Low Voltage #2  |base_load| 3.0| |3000|   | |
+|solar panel 1| Low Voltage #2 |households_solar_pv_solar_radiation | 1.5| |2500| solar_pv_profile_2  | |
+|...   |   |   |   |  | |
+
+The columns of the technology matrix have the following meaning:
+
+* technology: the name of a technology (or base-load) as it will appear on screen
+* connection: the end-point of the network that the technology or base-load is connected to
+* type: the technology in the ETM that a technology corresponds with. This is used to automatically assign the correct load profile from the load-profile library (see below). The base-load profiles use the special key 'base_load'
+* capacity: the capacity of the technology. This is used to scale the load profiles for technologies
+* demand: the yearly demand of the household. This is used to scale the base-load profiles
+* investment: the investment costs in euros
+* load profile: the 'key' of the load (or base-load) profile. Every profile is uniquely identified by its key which can be specified when creating the profile (see below)
 
 Note that the technical properties of the technologies are given by the ETM. Admin users can change technical properties but this may result in local scenario's that cannot be translated back to the national ETM.
 
 ## Calculating load
 
-Now that you have connected all producing and consuming technologies to the network, the load on the network components can be calculated. The ETM provides two options:
-
-* Time-resolved: use **time-series with arbitrary time-resolution** to describe demand/production for the available technologies. These profiles typically contain hourly values for the whole year.
-* Single time-step: use the **maximum capacity** for the available technologies. If no load profile has been specified, the capacity of a technology will be used to initialize the load.
+Now that you have connected all producing and consuming technologies to the network, the load on the network components can be calculated. The calculation is based on the scaled profiles which describe load for the available technologies. These profiles typically contain hourly values for the whole year. If no load profile has been specified, the capacity of a technology will be used to initialize the load.
 
 
 ## Results
 
-For the 'single time-step' calculation, the loads of all components in the network are shown between parenthesis:
+The resulting load-curves for each network component can be inspected by selecting the component in the network with a single mouse-click.
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150409_load_chart.png)
 
-![image](https://raw.githubusercontent.com/quintel/documentation/master/images/load_calculation_topology.png)
+Using the bottom panel of the chart, a specific time-window can be selected for closer inspection of the load.
+
+If a capacity has been specified for a component of the network and if the load exceeds that capacity for at least one time-step in the calculation, the component is colored red. The capacity is also shown in the load chart.
+
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150409_load_chart_capacity.png)
