@@ -11,7 +11,7 @@ The [testing ground functionality](testing_ground.md) alows the user to scale do
 
 On the level of a typical testing ground, the network consists of one or several medium-voltage (MV) nets which support several low-voltage (LV) nets (see Figure 1 below for an example of a network topology).
 
-![image](https://raw.githubusercontent.com/quintel/documentation/master/images/network.png "The network topology interface")
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/network.png "Example of a network")
 
 The high-voltage (HV) net is assumed to lie outside of the testing ground and serves as a source/sink for demand/supply of electricity for the testing ground as a whole.
 
@@ -103,10 +103,11 @@ Now that you have connected all producing and consuming technologies to the netw
 ## Results
 
 The resulting load-curves for each network component can be inspected by selecting the component in the network with a single mouse-click.
-![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150409_load_chart.png)
+
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150410_load_chart.png)
 
 Using the bottom panel of the chart, a specific time-window can be selected for closer inspection of the load.
 
 If a capacity has been specified for a component of the network and if the load exceeds that capacity for at least one time-step in the calculation, the component is colored red. The capacity is also shown in the load chart.
 
-![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150409_load_chart_capacity.png)
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150410_load_chart_capacity.png)
