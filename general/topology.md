@@ -53,7 +53,6 @@ The capacities (and possibly other properties) of transformers between MV and LV
 name: "High Voltage #1"
 children:
   - name: "Medium Voltage #1"
-    capacity: 1000.0              <========== SPECIFIES THE CAPACITY ==========<<<
     children:
       - name: "MV connection #1"
       - name: "Low Voltage #1"
@@ -61,6 +60,7 @@ children:
   - name: "Medium Voltage #2"
     children:
       - name: "Low Voltage #3"
+        capacity: 0.15              <========== SPECIFIES THE CAPACITY ==========<<<
       - name: "Low Voltage #4"
       - name: "Low Voltage #5"
 
