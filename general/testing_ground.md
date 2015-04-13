@@ -1,11 +1,7 @@
-# Local testing ground scenarios
 
-Together with Alliander, "testing ground"-specific functionality has been added to the ETM. Use of a new testing ground scenario begins with the design of a national scenario. Subsequently, the national scenario can be scaled to the size of the testing ground.
+# Scaling ETM scenarios to testing ground level
 
-
-## Scaling ETM scenarios to testing ground level
-
-### Selecting the national reference scenario
+## Selecting the national reference scenario
 
 There are two ways to specify the national reference scenario for the local testing ground:
 
@@ -14,7 +10,7 @@ There are two ways to specify the national reference scenario for the local test
 
 Existing scenario's can be scaled directly. For a new scenario, the country and end-year must first be chosen.
 
-### Scaling the national scenario to testing ground level
+## Scaling the national scenario to testing ground level
 
 Before scaling the national scenario to testing ground level, you can specify the scaling variable. There are two options:
 
@@ -42,7 +38,7 @@ All energy in the national scenario will be multiplied by 0.00001 to get the tes
 
 Note: It may happen that scaling results in fractional numbers (e.g., 123.4 combi boilers.). In those cases, the number will be rounded to the closest integer. Exceptions to this rule are large power plants. It is possible to place 0.3 nuclear power plants in the testing ground.
 
-### Excluding sectors from the testing ground
+## Excluding sectors from the testing ground
 
 There are some sectors in the ETM that are less relevant for small-scale pilot projects:
 
@@ -54,7 +50,9 @@ You can exclude these from your testing ground by using the checkboxes in the sc
 
 However, if you choose to include these sectors in the testing ground scenario, their energy demand and production will be scaled with the scaling factor as described above.
 
-## The ETM interface for the testing ground scenario
+## Adapting the testing ground scenario
+
+The scaled scenario still has most of its properties equal to the national scenario that it originated from. The percentage of electric cars, or the number of solar panels is per household is still the same. You can now use the familiar professional interface of the ETM to update your testing ground scenario.
 
 The interface for the testing ground scenario is identical to the [standard ETM interface](Interface.md) with some modifications:
 
@@ -64,3 +62,5 @@ The interface for the testing ground scenario is identical to the [standard ETM 
 * The section on production of primary energy carriers is removed
 * The section on network costs (it is replaced by the more detailed calculations on testing ground level)
 * The section on fuel chain emissions is omitted
+
+
