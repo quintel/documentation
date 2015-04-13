@@ -11,7 +11,7 @@ Create (or load) a scenario in the professional version of the ETM. This scenari
 
 ## Step 2) Scale the national scenario to testing ground size
 
-Scale your national scenario to the size of the testing ground using the [scaling interface](https://github.com/quintel/documentation#testing-ground). You can exclude the industry, agriculture and energy sector from your testing ground. After the scenario is scaled, you can continue to edit your testing ground scenario by adding, for example, more electric vehicles and solar panels.
+Scale your national scenario to the size of the testing ground using the [scaling interface](http://beta.pro.et-model.com/scaled). You can exclude the industry, agriculture and energy sector from your testing ground. After the scenario is scaled, you can continue to edit your testing ground scenario by adding, for example, more electric vehicles and solar panels.
 
 ## Step 3) Specify the electricity network
 
