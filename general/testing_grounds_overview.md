@@ -29,11 +29,11 @@ The load calculation interface (see image) shows you what the load on each of th
 ## Step 6) Scale the testing ground scenario up to national size
 
 Scale your testing ground scenario to national size by pressing the "creat national scenario" button:
-![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150415_button.png)
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150413_button.png)
 
 When scaling your testing ground scenario up to national size, the changes in number of households, solar PV panels, heat pumps and electric vehicles are translated to slider settings in the ETM interface. Optionally excluded sectors are re-introduced from the original national scenario.
 
 ## Step 7) Merge testing ground scenario with a national scenario
 
 In the "scenario merging interface" (see image below), one or several scenario's can be merged. For each scenario, a weighting factor can be specified which determines in which ratio the scenario's will be 'mixed'. Specify equal weights for two the national and the testing ground scenario, for example, to mix them with a 50/50 ratio.
-![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150415_merge.png)
+![image](https://raw.githubusercontent.com/quintel/documentation/master/images/20150413_merge.png)
