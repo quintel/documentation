@@ -109,7 +109,7 @@ These profiles typically contain hourly values for the whole year. If no load pr
 To associate a load profile with a technology in the technology matrix, three requirements need to be met
 
 * A **capacity** has to be defined. To scale the amplitude of the load profiles, the capacity of the technology in kW is used. Note that for producing technologies (e.g., solar panels) the capacity needs to be provided as a negative number.
-* The **key** of the load profile needs to be given. The key is defined when a load profile is first uploaded and is a unique identifier. You can find the key on the info page of a load profile [(see for example the solar profile for Amsterdam)](http://ivy.et-engine.com/load_profiles/225):
+* The **key** of the load profile needs to be given. The key is defined when a load profile is first uploaded and is a unique identifier. You can find the key on the info page of a load profile [(see for example the solar profile for Amsterdam)](http://ivy.et-engine.com/load_profiles/225): 
 ![image](https://raw.githubusercontent.com/quintel/documentation/master/images/load_profile_key.png)
 * The **type** of the technology should correspond with the allowed technologies for the selected load profile. This is to prevent errors and to allow for the automatic association of profiles with technologies.
 
