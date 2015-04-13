@@ -2,6 +2,7 @@
 
 Together with Alliander, "testing ground"-specific functionality has been added to the ETM. Use of a new testing ground scenario begins with the design of a national scenario. Subsequently, the national scenario can be scaled to the size of the testing ground.
 
+
 ## Scaling ETM scenarios to testing ground level
 
 ### Selecting the national reference scenario
