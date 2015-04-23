@@ -33,7 +33,7 @@ Any component (node) of the network can have the following attributes:
 * investment_cost: the cost of investment in EUR
 * economic_lifetime: the economic lifetime in years
 * units: the number of units of the component
-* children: one or more connections to the rest of the network. The 'children' attribute is the last to be specified as is must be followed by the definitions of child nodes.
+* children: one or more connections to the rest of the network. The 'children' attribute is the **last** to be specified as it must be followed by the definitions of child nodes.
 
 Each attribute has a **keyword** (listed above) and a **value** which are seperated by a colon (':')
 
