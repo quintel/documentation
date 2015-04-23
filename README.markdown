@@ -166,7 +166,7 @@ We call this type of information 'assumptions'.
 The energy balance, together with the assumptions will be forged into a dataset 
 that can initialize the ETM. This process is done in the Dataset Analysis which 
 can be found in the 
-[ETDataset repository](https://github.com/quintel/etdataset).
+[ETDataset repository](https://github.com/quintel/etdataset-public).
 
 ## <a name="start_code"></a> Start with code
 
