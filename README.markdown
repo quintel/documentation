@@ -154,8 +154,7 @@ model).
 We currently use the [IEA](http://www.iea.org/) energy balances because they 
 are available for all countries, in the same format and can be bought online.
 The energy balance is a matrix of numbers that describe the energy flows of a 
-country broken down in carrier (along on axis) and sectors, applications etc. (
-along the other axis)
+country broken down in carrier (along one axis) and sectors, applications etc (along the other axis)
 
 Apart from the energy balance, the ETM needs information about the current state of
 affairs in the country you want to model in the ETM. Such information includes 
@@ -170,7 +169,7 @@ can be found in the
 A different kind of assumptions we have made are the technical and financial parameters such as 'efficiency' or 'operating and maintenance costs' for all the technologies and energy carriers used in the model. Each technology's attributes are based on our research of publically available sources as much as possible. Most technological assumptions are not country-specific, but global. All these can also be found in the 
 [ETDataset repository](https://github.com/quintel/etdataset-public).
 
-For more information on where to find all this information, please refer to the specific documentation in the README.md located in the root directory.
+For more information on where to find all this information, please refer to the specific documentation in the README.md located in the root directory. You will see this by scrolling down after clicking the link to the ETDataset repository.
 
 ## <a name="start_code"></a> Start with code
 
@@ -199,6 +198,6 @@ README.md located in the root directory.
 The Energy Transition Model has been created by 
 [Quintel Intelligence](http://quintel.com/). We are a small company with big
 ambitions when it comes to energy modeling. Our [team](http://quintel.com/team) 
-consists of people from various diciplines who share a passion for energy.
+consists of people from various disciplines who share a passion for energy.
 
-Please look at our [company website](http://quintel.com/) for more information.
+Please have a look at our [company website](http://quintel.com/) for more information.
