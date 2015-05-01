@@ -3,7 +3,7 @@
 This page serves to define and clarify the various concepts used in the ETM.
 
 ## Business case
-The balance of income and expenses for a selected stakeholder in the energy chain.
+The balance and overview of revenues and expenses for a selected stakeholder in the energy chain for a certain period in time.
 
 ## Edge
 The connection between two nodes. In the context of an electricity network, edges would represent the cables.
@@ -12,7 +12,12 @@ The connection between two nodes. In the context of an electricity network, edge
 The various stakeholders needed to cover the steps from generation to consumption of energy. An energy chain typically includes entities that are concerned with generation, transmission, distribution, sale en consumption of energy.
 
 ## Ivy
-Working title for the calculation suite being developped by Alliander and Quintel Intelligence for detailed calculations in local energy situations (testing grounds).
+Working title for the calculation suite being developped by Alliander and Quintel Intelligence for detailed calculations in local energy situations ('testing grounds').
+
+#### New ideas:
+* Local Energy Solutions (LES)
+* ETM Local
+* ETM Infra
 
 ## Local scenario
 The combination of a scaled scenario, and a topology.
