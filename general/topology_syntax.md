@@ -16,6 +16,8 @@ children:
       - name: "Low Voltage #3"
       - name: "Low Voltage #4"
       - name: "Low Voltage #5"
+        capacity: 10
+        stakeholder: system operator
 ```
 
 We will now describe the syntax of the topology YAML in detail.
@@ -34,6 +36,7 @@ Any component (node) of the network can have the following attributes:
 * economic_lifetime: the economic lifetime in years
 * units: the number of units of the component
 * children: one or more connections to the rest of the network. The 'children' attribute is the **last** to be specified as it must be followed by the definitions of child nodes.
+* stakeholder: the 'owner' of the node.
 
 Each attribute has a **keyword** (listed above) and a **value** which are seperated by a colon (':')
 
@@ -45,3 +48,13 @@ Keywords following the 'name' keyword need to have the same indentation. This en
 ## Units
 The 'units' keyword has a special function: it multiplies the capacity and investment cost of the component. This can be used to group many components of the same type.
 No other attributes of the component are multiplied by the 'units'. This also holds for the 'children'. The user is responsible for keeping things consistent: if a transformator is given a 'units' equal to 200, the children need to be adjusted accordingly.
+
+## Stakeholders
+The possible stakeholders are listed below
+* customer
+* cooperation
+* system operator
+* producer
+* supplier (usually not associated with a network component)
+* aggregator (usually not associated with a network component)
+* government (usually not associated with a network component)
