@@ -23,7 +23,7 @@ For applications in local testing grounds, the MV- and LV networks are most rele
 * the number of LV networks connected to the MV networks
 * The number of direct connections to the MV net (for wind-turbines or larger CHP)
 
-For details on the syntax of the topology file please consult the [topology syntax page](https://github.com/quintel/documentation/general/topology_syntax).
+For details on the syntax of the topology file please consult the [topology syntax page](https://github.com/quintel/documentation/blob/master/general/topology_syntax.md).
 
 An example of a simple network in YML format is given below:
 
