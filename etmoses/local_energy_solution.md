@@ -54,7 +54,7 @@ However, if you choose to include these sectors in the testing ground scenario, 
 
 The scaled scenario still has most of its properties equal to the national scenario that it originated from. The percentage of electric cars, or the number of solar panels is per household is still the same. You can now use the familiar professional interface of the ETM to update your testing ground scenario.
 
-The interface for the testing ground scenario is identical to the [standard ETM interface](Interface.md) with some modifications:
+The interface for the testing ground scenario is identical to the [standard ETM interface](../general/Interface.md) with some modifications:
 
 * The sectors excluded in the scaling step (optional) are removed from the interface
 * The "other" sector (this is a statistical residual and irrelevant to the pilot)
