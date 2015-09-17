@@ -1,23 +1,22 @@
 # ETMoses documentation
 
-The [testing ground functionality](testing_ground.md) alows the user to scale down a national ETM scenario to the size of a typical pilot project. This scaled scenario can be imported in the testing ground environment of the ETM. In this section we describe new functionality that let's you
+[ETMoses](http://beta.moses.et-model.com) allows the user to scale down a national ETM scenario to the size of a typical pilot project. This scaled scenario can be imported in ETMoses and investigate the impact of the scaled down scenario on the load on the network. In addition, the user can implement strategies to spread or shift load and study the effect of different market models.
 
-* specify the network topology on local testing ground level
-* choose the capacities of network components
-* attach producing and consuming technologies to the network
-* calculate load/used capacity for the components of the network
+The meaningfulness of the results from ETMoses highly depends on the quality of the input data. Generally speaking the input data consists of load, use and availability profiles and technological specifications. Below you can find references to separate documents describing he sources and logic for these input data.
 
-
-This documentation is twofold: on the one hand it describes how to work woth ETMoses; on the other it summarizes the sources behind the data that is used in ETMoses.
-
+In addition, several how-to guides can be accessed from this document.
 
 ## How-to guides
+
+- [Local testing ground scenarios](local_energy_solution_overview.md)
+- [Scaling ETM scenarios to testing ground level](local_energy_solution.md)
+- [The topology YAML](topology_syntax.md)
 
 
 ## Source documentation
 
-
-
+- [Profiles used for network calculation](profiles.md)
+- [Technical specifications](technical_specifications.md)
 
 
 
