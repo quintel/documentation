@@ -168,7 +168,7 @@ The heat pump heats the buffer and no heat is extracted.
 
 Within a regular 15 minute time step (dt_15), the regimes described above follow each other. Not every regime is 'visited' in any time step. We now turn to calculating how much time each regime takes and what the E_ext, V_ext and T_ext are for each sub-step. We will also keep track of V_d (the volume of water that still needs to be heated), T_b (the instantaneous buffer temperature) and other relevant variables such as the remainder of the time, dt_left.
 
-![](regimes.png =800x)
+![Regimes](./regimes.png)
 
 **Fig: 1**: *The different regimes for an example where T_d = 40. NOTE: the pure heating regime is not shown because it spans the same parameter space as the cooling/heating regime.*
 
