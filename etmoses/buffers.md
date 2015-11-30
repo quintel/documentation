@@ -8,8 +8,8 @@ The buffers are characterized by the following specifications:
 
 | Buffer |Size| T_min |T_max | T_low | T_high |Profiles | Allowed technologies |
 |---|---|---|---|---|---|---|---|
-|Space heating|100 liter *|15|60 |30 *|40|heating demand|space heating technologies|
-|Domestic hot water|100 liter *|15|90 |35 *|50|hot water demand|hot water technologies|
+|Space heating|100 liter *|15|60 |30 |40|heating demand|space heating technologies|
+|Domestic hot water|100 liter *|15|90 |35 |50|hot water demand|hot water technologies|
 
 \* attributes that the user should be able to adjust, defaults are shown.  
 
