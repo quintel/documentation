@@ -30,7 +30,7 @@ Besides these variables we need thre more to describe the state of the water tha
 
 Buffers must be associated with profiles which describe the demand. Profiles describing space heating demand and hot water demand are characterized by 35040 values which are normalized such that the suface area under their 'curve' is 1/4. If the curves are later 'scaled' with the yearly demand for heat (in kWh), the resulting curve represents the instantaneous heat demand in kW for each 15 minute interval of the year.
 
-Profiles also are characterised by a temperature (T_demand): that of the water thats is required to fulfill the demand. This temperature is fixed throughout the year. Currently we will fix these temperatures to 50 degrees for hot water and 35 degrees for space heating. Later, they can become flexible. 
+Profiles also are characterised by a temperature (T_demand): that of the water thats is required to fulfill the demand. This temperature is fixed throughout the year. Currently we will fix these temperatures to 50 degrees for hot water and 40 degrees for space heating. Later, they can become flexible. 
 
 ## Technologies 
 
