@@ -1,10 +1,7 @@
 # Average cost of gasinfrastructure for households
 
-_For purposese of doing social cost analysis of energy systems with both gas- and electric infrastructure it is necessary to know
-average infrastructural cost per household. In phase 1 this is a rough but realistic estimation. In phase 2 it would be possible for users
-to configurate more advanced settings (f.e. biogasproduction or rural areas). According to tariff experts of Liander the gastariffs of 
-gridoperators are costoriented and so reflect the __average__ cost gasinfrastructure per household in standard situations. More information
-can be found on: [www.liander.nl/consument/aansluitingen/tarieven](https://www.liander.nl/consument/aansluitingen/tarieven)
+_For purposes of doing social cost analysis of energy systems with both gas- and electric infrastructure it is necessary to know
+average infrastructural cost per household. In phase 1 this is a rough but realistic estimation. In phase 2 it would be possible for users to configurate more advanced settings (f.e. biogasproduction or rural areas). According to tariff experts of Liander the gastariffs of gridoperators are costoriented and so reflect the __average__ cost gasinfrastructure per household in standard situations. More information can be found on: [www.liander.nl/consument/aansluitingen/tarieven](https://www.liander.nl/consument/aansluitingen/tarieven)
 
 ## Specified per individual household
 * capacitiy tariff (investments & operational cost in gasnetwork + meteringcost + transportcost of gas)
