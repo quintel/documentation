@@ -148,6 +148,8 @@ In this regime we make the following simplifying assumption:
 
 * the flow of water in the heat exchanger is adjusted to result in a constant heat (energy) exchange. This is realistic in the sense that the temperature and pressure of the water that come out of the shower remain constant. If, instead, We would keep the flow speed of the water through the heat exchange constant, the amount of cold water that needs to be mixed in declines over time and so would the pressure of the resulting flow of demanded water at T_d.
 
+NOTE: We should check if T_b stays above T_low, otherwise we need to go into the heating/cooling regime.
+
 ### The 'cooling' regime
 When T_b < T_d and the buffer is cooling down from a temperature higher than T_low, the buffer only cools down and the temperature evolution is given by (II).
 
@@ -379,7 +381,7 @@ Now the heat pump is not strong enough to keep the buffer at T_low. Because the 
 T_b as a function of time is given by:
 
 ```
-T_b(t) = X + (T_i - X - T_min) * Exp(- R_d t / V_b) + T_min,
+T_b(t) = X + (T_i - X - T_min) * Exp(- R_d * t / V_b) + T_min,
 ```
 where
 
