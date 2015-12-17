@@ -3,7 +3,7 @@
 The neighbourhood battery is a P2P storage technology which is located somewhere higher up in the network (typically not at the level of residences). Its main functions are:
 
 * Balancing supply and demand by storing electricity in times of excess production and discharging in times of demand
-* Preventing congestion of the transformer(s) and cable(s) of which it is a child
+* Preventing congestion of the transformer(s) and cable(s) of which it is a descendant node
 
 ## What the user can adjust
 
