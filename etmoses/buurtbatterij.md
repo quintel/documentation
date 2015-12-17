@@ -17,7 +17,7 @@ The properties of the P2P technology serve as the starting point. The most impor
 A new one:
 
 * The fraction of the battery which should be reserved for congestion management [kWh]. If this is set to 20%, the battery cannot be discharged further than 10% and cannot be charged further than 90% for the purpose of 'balancing'. 
-![](./buurtbatterij_design.png)
+![](./buurtbatterij_design.png =300x)
 
 The battery will actively charge or discharge to return to a state **between the limits set by the user**. So, if a congestion management event has discharged the battery to 5% full with the above setting of 20%, it will actively charge to 10% if no further congestion occurs and if doing so does not result in congestion. If no excess electricity production is available, the battery will use electricity from the grid.
 
