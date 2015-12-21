@@ -1,6 +1,6 @@
 # The topology YAML
 
-As we have seen in the [topology documentation page](https://github.com/quintel/documentation/blob/master/general/topology.md), a network structure can be defined in YAML format:
+As we have seen in the [topology documentation page](https://github.com/quintel/documentation/blob/master/etmoses/topology.md), a network structure can be defined in YAML format:
 
 ```
 ---
