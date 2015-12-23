@@ -1,8 +1,8 @@
 # Network impact calculation
 
-The network impact calculation is a module that currently only works for the Dutch version of the ETM. The calculation determines the investment required in the electricity grid depending on the choices made by the users. For example, in a scenario with a large share of electric heaters the capacity of the current electricity grid is not sufficient to meet all demand.
+The network impact calculation is a module that currently only works for the Dutch version of the ETM. The calculation determines the investment required in the electricity grid depending on the choices made by the users. For example, in a scenario with a large share of electric heaters the capacity of the current electricity grid is not sufficient to transport all demand.
 
-The results of the Network Impact calculation are two graphs on the front end of the model: ‘Required additional infrastructure investments’ and ‘Annual infrastructure costs’. The first graph shows the total additional investment required in the electricity grid for certain scenarios and the second shows these costs in annual costs including operation and maintenance costs and interest.
+The results of the network impact calculation are displayed in a chart in the front end of the model (‘Required additional infrastructure investments’). This chart shows the total additional investment required in the electricity grid for the current scenario. In addition, the annualized investment costs including operation and maintenance costs and interest for the required network expansion are  included in the costs dashboard item in the front end of the model.
 
 Network calculation definitions
 -------------------------------
@@ -19,7 +19,7 @@ The change in the peak load is called the peak load delta. The network impact ca
 
 **(Network) Impact**
 
-The required network expansion is determined by finding the required network capacity (MVA) necessary to meet the future scenario. A higher impact therefore means a larger capacity of cables and transformers is required in a given scenario. In the ETM impact is often expressed in Euro by multiplying the required capacity by the cost coefficients (EUR/MVA).
+The required network expansion is determined by finding the required network capacity (MVA) necessary to meet loads in the future scenario. A higher impact therefore means a larger capacity of cables and transformers is required in a given scenario. In the ETM impact is often expressed in Euro by multiplying the required capacity by the cost coefficients (EUR/MVA).
 
 **Capacity**
 
@@ -27,7 +27,7 @@ Cables and transformers have a maximum capacity; they can only carry so much ele
 
 **Simultaneousness**
 
-Each technology has a certain peak load; however these peak loads do not occur at the same time. Therefore to describe the overlap between peak loads the term simultaneousness is used. Simultaneousness is the probability that two peaks fall in the same time. Simultaneousness has a maximum value of 100%. Example: Electric vehicles have a simultaneousness of 19% in the summer and winter evenings periods. This is because not everyone will charge their electric vehicle at the same time. Heat pumps on the other hand have a simultaneousness of 100%, this is because it is certain that on a very cold day all the heat pumps will be on at the same time.
+Each technology has a certain peak load; however these peak loads do not occur at the same time. Therefore to describe the overlap between peak loads the term simultaneousness is used. Simultaneousness is the probability that two peaks fall in the same time. Example: Electric vehicles have a simultaneousness of ~25% in the summer and winter evenings periods. This is because not everyone will charge their electric vehicle at the same time. Heat pumps on the other hand have a simultaneousness of 100%, this is because it is certain that on a very cold day all the heat pumps will be on at the same time.
 
 Network calculation basics
 --------------------------
@@ -38,14 +38,14 @@ The six levels that are defined are: Low voltage network (LV network), Medium/Lo
 
 The following figure shows a schematic of the electricity grid and the model considered by the ETM. ![](../images/Schematic_of_electricity_grid.jpg "fig:Schematic of electricity grid.jpg")
 
-The most important difference between the actual grid and the model used in the ETM is that the ETM model consists of only one component per level (i.e. instead of taking into account the thousands of cables and transformers that compose the actual grid, the ETM views these as a single cable or transformer for each level.)
+In reality each voltage level consists of many individual assets (cable or transformers). These assets do not have the same degree of occupancy; some will have hardly any available capacity, while others have ample. Since we cannot model each individual asset, we have grouped the assets in a representative amount of bins, each bin representing an identical amount of capacity. We assign an average availability to each of the capacity bins in that voltage level. We then distribute the peak load evenly over the bins and determine for each bin how much capacity needs to be added. The total required additional capacity is the sum of these extra capacities per bin.
 
-To calculate the network impact both a bottom up and a top down calculation are used. The bottom up calculation is used to calculate the impact on the LV network up to the HV/MV transformer and the top down calculation is used for the impact on the HV network.
+To calculate the network impact both a bottom up and a top down calculation are used. The bottom up calculation is used to calculate the impact on the LV network up to and including the HV/MV transformer and the top down calculation is used for the impact on the HV network.
 
 Network impact bottom up calculation
 ------------------------------------
 
-The bottom up calculation is used to calculate the impact of a user's scenario on the LV network up to the HV/MV transformer level.
+The bottom up calculation is used to calculate the impact of a user's scenario on the LV network up to and including the HV/MV transformer level.
 
 The approach assumes that the networks are connected in linear fashion and that any electricity produced at the lowest level flows up through the higher levels. This implies that for each level it is necessary to consider what the impact is at the current level as well as what the impact is of the flow of electricity from lower levels. This concept is depicted in the following figure:
 
@@ -55,19 +55,17 @@ To calculate the impact at a given level it is necessary to know what technologi
 
 ![](../images/Network_example_calculation.jpg "Network example calculation.jpg")
 
-1. The technologies that affect the electricity grid (such as heat pumps, solar panels, electric vehicles, etc.) are split into two categories: supply and demand technologies. For each technology the delta peak load of a single unit is calculated and multiplied by the simultaneousness.
+1. The technologies that affect the electricity grid (such as heat pumps, solar panels, electric vehicles, etc.) are connected to a specific voltage level. For each technology the delta peak load of a single technology is calculated and multiplied by the simultaneousness. These technologies include both supply and demand technologies.
 
 2. The peak loads for the supply and demand technologies are summed up.
 
-3. The peak load of the supply and demand is compared and the maximum delta peak load is found.
+3. For each level of the electricity network a total capacity and an occupied capacity are defined. These capacities are added up to give the total capacity for that voltage level. As described above, the assets in each voltage level are binned into a representative number of bins with equal capacity and per bin the average availability is defined.
 
-4. For each level of the electricity network a total capacity and an occupied capacity are defined. The max delta peak load is added on top of the currently occupied capacity.
+4. The peak load as derived in step 2 is divided equally over the bins mentioned in step 3 and for each bin we determine if there is still enough available capacity to facilitate the peak load. If not the assets in that bin will be expanded by the lacking capacity.
 
-5. If the occupied capacity plus the delta peak load capacity exceed the total capacity then investments are required in the electricity grid.
+5. The required investment is calculated by multiplying the difference in capacity by the network expansion coefficients.
 
-6. The required investment is calculated by multiplying the difference in capacity by the network expansion coefficients.
-
-7. To calculate the impact at the next level the impact of the previous level is taken into account along with the simultaneousness.
+6. To calculate the impact at the next level the impact of the previous level is taken into account along with the simultaneousness.
 
 Network top down calculation
 ----------------------------
