@@ -1,11 +1,11 @@
 # The Energy Transition Model
 
-The [Energy Transition Model](http://www.energytransitionmodel.com) (ETM) 
+The [Energy Transition Model](https://energytransitionmodel.com/) (ETM) 
 is an interactive tool for energy modeling. It allows you to create and explore 
 scenario's for the energy future of various countries. 
 The ETM brings the facts and tools to capture your vision for the future!
 
-![ETM interfaces](https://f.cloud.github.com/assets/1303760/1742063/e35852d2-63f1-11e3-8ade-484d65a4302f.png)
+![ETM interfaces](images/20160809-screenshot-ETM-interfaces.png)
 
 ## We are open source!
 
@@ -34,37 +34,29 @@ want to **change, extend, re-design** or **re-use** any part of the ETM.
 
 ## <a name="users_doc"></a>Documentation for users
 
-The [Energy Transition Model](http://www.energytransitionmodel.com) has 
+The [Energy Transition Model](https://energytransitionmodel.com/) has 
 three main interfaces:
 
-* The [Professional interface](http://pro.et-model.com/): over 300 sliders, 
+* The [Professional interface](https://pro.energytransitionmodel.com/): over 300 sliders, 
 100+ charts and tables and much more. The starting point for a detailed
 energy scenario for various countries and end-years.
-* The [Energy Game](http://etflex.et-model.com/): lets you explore the 
+* The [Energy Game](https://light.energytransitionmodel.com/): lets you explore the 
 energy future of the Netherlands in a fun, visual way.
-* The [Energy Mixer](http://mixer.et-model.com/): a questionaire type of 
-interface that creates a scenario based on your answers. This interface is
-aimed more at non-technical people then the other interfaces.
+* The [ETM Stakeholder analysis](https://moses.energytransitionmodel.com/) (formerly known as ETMoses): lets you create, inspect and share local energy solutions and perform stakeholder analyses.  
 
 From here on, we will focus on the professional interface.
 
-![](http://f.cl.ly/items/291h3S0g3E2U3L1T0Z2H/Screen%20Shot%202013-12-10%20at%2013.38.35.png)
+![](images/20160809-screenshot-pro-ETM.png)
 
 The professional interface allows you to influence all the main aspects of the 
 energy system:
 
-
-* [**Targets**](/general/targets.md): set goals for your scenario and see if you can reach them. 
-Targets can be set for CO<sub>2</sub> reduction, renewability, total cost,
-max import etc.
+* [**Targets**](/general/targets.md): set goals for your scenario and see if you can reach them. Targets can be set for CO<sub>2</sub> reduction, renewability, total cost, max import etc.
 * [**Demand**](/general/demand.md): what happens to energy consumption in the future? 
-* [**Costs**](/general/costs.md): specify what you think will happen to the costs of carriers and 
-technologies. Setting the costs provides the canvas on which your scenario is
-painted. 
-NOTE: these costs do not include taxes or subsidies and are, 
-therefore, less dependent on governement influences than prices.
-* [**Supply**](/general/supply.md): which technologies will we use to produce heat and electricity 
-in the future?
+* [**Flexibility**](/general/flexibility.md): future energy system will most likely be characterized by times of excess electricity due to the volatile nature of the electricity production. Flexibility technologies, like battery storage and power to gas allow you to deal with this excess electricity.
+* [**Supply**](/general/supply.md): which technologies will we use to produce heat and electricity in the future?
+* [**Costs**](/general/costs.md): specify what you think will happen to the costs of carriers and technologies. Setting the costs provides the canvas on which your scenario ispainted. NOTE: these costs do not include taxes or subsidies and are, therefore, less dependent on governement influences than prices.
+
 
 ### Basics of the Professional interface 
 
@@ -74,7 +66,8 @@ You can interact with the ETM trough **sliders**:
 
 ![Active slider with share](https://f.cloud.github.com/assets/1303760/1733125/deb716b8-632f-11e3-97bd-032db6dfe9b9.png)
 
-Sliders can be moved by either 
+Sliders can be moved by either:
+
 * **dragging** the slider itself (using the mouse)
 * **clicking** the minus and plus signs that appear when the mouse hovers over a 
 slider
@@ -88,13 +81,10 @@ information that you are interested in.
 
 At any time, the ETM contains information about **two** scenarios:
 
-* The **start-scenario**: this scenario is fixed and is used to calculate how much 
-your choices for the future affect things like CO<sub>2</sub> emissions.
+* The **start-scenario**: this scenario is fixed and is used to calculate how much your choices for the future affect things like CO<sub>2</sub> emissions.
 * The **future scenario**: this scenario is initially identical to the 
 start-scenario but will reflect the changes you make in the ETM, using the 
-sliders available. 
-The philosophy of the ETM is: the future will be equal to the present, 
-unless you change things. This is to make the effects of single measures
+sliders available. The philosophy of the ETM is: the future will be equal to the present, unless you change things. This is to make the effects of single measures
 really clear.
 
 #### <a name="energy_calc"></a>The energy calculation
@@ -103,7 +93,7 @@ really clear.
 you effectively change the energy flow in the ETM. This energy flow can be 
 represented as a **graph** such as shown below:
 
-![Simplified version of the Graph that is at the core of the ETM](/images/Graph.jpg)
+![Simplified version of the Graph that is at the core of the ETM](images/Graph.jpg)
 
 The **nodes** are represented by **converters** who convert or 
 transport energy (possibly with loss). The **edges** (the connections) are the 
@@ -120,16 +110,16 @@ More information on the calculation methods of the ETM can be found on our
 
 ## <a name="contr_doc"></a>Documentation for contributers
 
-The [Energy Transition Model](http://www.energytransitionmodel.com) consists of 
+The [Energy Transition Model](https://energytransitionmodel.com/) consists of 
 a centrally hosted [computation engine](https://github.com/quintel/etengine) 
 that can be accessed by three web-interfaces and an 
-[API](http://et-model.com/api). The interfaces are 
+[API](https://energytransitionmodel.com/api). The interfaces are 
 
-* The [Energy Game](http://etflex.et-model.com/) hosted on 
+* The [Energy Game](https://light.energytransitionmodel.com/) hosted on 
 [github.com/quintel/etflex](https://github.com/quintel/etflex)
-* The [Professional interface](http://pro.et-model.com/) hosted on 
+* The [Professional interface](https://pro.energytransitionmodel.com/) hosted on 
 [github.com/quintel/etmodel](https://github.com/quintel/etmodel)
-* The [Energy Mixer](http://mixer.et-model.com/) hosted on [github.com/quintel/energymixer](https://github.com/quintel/energymixer)
+* The [ETM Stakeholder analysis](https://moses.energytransitionmodel.com/) hosted on [github.com/quintel/etmoses](https://github.com/quintel/etmoses)
 
 ### Under the hood: Structure of the code
 
@@ -138,7 +128,7 @@ The different parts of the ETM can be schematically represented as shown below:
 ![](http://f.cl.ly/items/2a1x0m062V2N310k2p40/Screen%20Shot%202013-12-13%20at%2013.17.18.png)
 
 The user can interact with ETModel (through the professional interface), 
-ETFlex (the game interface) and Mixer (the questionaire interface). 
+ETFlex (the game interface) and ETM Stakeholder analysis (the local energy solutions interface). 
 
 ## Where to start?
 
