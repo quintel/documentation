@@ -11,13 +11,8 @@ The connection between two nodes. In the context of an electricity network, edge
 ## Energy chain
 The various stakeholders needed to cover the steps from generation to consumption of energy. An energy chain typically includes entities that are concerned with generation, transmission, distribution, sale en consumption of energy.
 
-## Ivy
-Working title for the calculation suite being developped by Alliander and Quintel Intelligence for detailed calculations in local energy situations ('testing grounds').
-
-#### New ideas:
-* Local Energy Solutions (LES)
-* ETM Local
-* ETM Infra
+## ETM Stakeholder analysis
+Calculation suite being developped by Alliander and Quintel Intelligence for detailed calculations in local energy situations ('testing grounds'). Formerly known as ETMoses.
 
 ## Local scenario
 The combination of a scaled scenario, and a topology.
@@ -26,7 +21,7 @@ The combination of a scaled scenario, and a topology.
 The rules for interaction between the stakeholders that form an energy chain.
 
 ## Merit
-The [Merit module](https://github.com/quintel/merit) is a calculation module developed by Quintel Intelligence which can run in stand-alone mode or coupled to the ETM. It can be used for time-resolved calculations to match supply and demand. At the heart of this calculation lies the ordering of dispatchable power plants according to their marginal cost, the *merit order*.
+The [Merit module](https://github.com/quintel/merit) is a calculation module developed by Quintel Intelligence which can run in stand-alone mode or coupled to the ETM. It can be used for time-resolved calculations to match supply and demand and flexibility options like battery storage. At the heart of this calculation lies the ordering of dispatchable power plants according to their marginal cost, the *merit order*.
 
 ## National Scenario
 An ETM scenario which is used as a reference for the local scenario and represents the 'normal situation'. 
