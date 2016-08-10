@@ -5,17 +5,19 @@ Introduction
 
 The Energy Transition Model (ETM) allows the user to explore the future of the energy system in several different geographical regions. The model starts out with the current energy situation in the region, based on extensive research by Quintel and its partners. Select a region, a future year and a difficulty level to start the model. It will start without any changes to the present day energy system. The user can then use sliders to input assumptions about how the system will change in the future. The ETM immediately calculates the results of any measures taken and presents it to the user using graphs and a dashboard. In this way a user can create a scenario that showcases a possible future energy system.
 
-The model consists of 4 major areas:
+The model consists of 5 major areas:
 
 -   **[Targets](targets.md):** where users set their policy targets that they are later evaluated against
 -   **[Demand](demand.md):** where users set the future demand of energy in 6 economic sectors (households, non-residential buildings, transport, industry, agriculture and other)
--   **[Costs](costs.md):** where users specify their estimations of future energy costs
+-   **[Flexibility](flexibility.md):** where users set the technologies to deal with excess electricity
 -   **[Supply](supply.md):** where users set how and what energy is supplied in the future
+-   **[Costs](costs.md):** where users specify their estimations of future energy costs
+
 
 The model uses data on energy consumption and production and present day state-of-the-art technology data. The use of underlying assumptions has been minimized and assumptions about changes in the future are left to the user as much as possible. With the sliders in the interface a user can influence the future state of the model. If no slider is available to set a certain change in the future, no assumption is made by the ETM.
 **Note:** The user is responsible for the internal consistency of all assumptions, as no automatic correction of inconsistent assumptions takes place.
 
-The energy system is approached as an ‘energy flow’ or Sankey diagram based on a network of interconnected ‘energy convertors’. Energy converters convert energy carriers into other energy and losses, for example a gas heater converts gas into heat and loss. This network of converters is called a ‘graph’. The ETM uses two graphs, a static one for the present and a dynamic one for the future situation; the latter can be influenced using the sliders in the interface. The model does not calculate transition paths and does not take into account feedback loops (e.g. high costs do not depress demand).
+The energy system is approached as an ‘energy flow’ or Sankey diagram based on a network of interconnected ‘energy converters’. Energy converters convert energy carriers into other energy and losses, for example a gas heater converts gas into heat and loss. This network of converters is called a ‘graph’. The ETM uses two graphs, a static one for the present and a dynamic one for the future situation; the latter can be influenced using the sliders in the interface. The model does not calculate transition paths and does not take into account feedback loops (e.g. high costs do not depress demand).
 
 Interface
 ---------
@@ -24,7 +26,7 @@ Interface
 
 ### Layout
 
-The layout of the ETM is based on its four main topics (Targets, Demand, Costs and Supply), which are located in the tabs at the top of each page. Each main topic is divided into several sub-topics. These are are described further on the dedicated pages of each main topic.
+The layout of the ETM is based on its five main topics (Targets, Demand, Flexibility, Supply and Costs), which are located in the tabs at the left of each page. Each main topic is divided into several sub-topics. These are are described further on the dedicated pages of each main topic.
 
 #### Targets
 
@@ -38,17 +40,23 @@ Allows the user to set targets for sustainability, dependence on other countries
 
 Allows the user to change the way energy is used and what energy demand will be in the future in the sectors: Households, Non-residential buildings, Transport, Industry, Agriculture and Other.
 
-#### Cost
+#### Flexibility
 
-*Main article: [Costs](costs.md)*
+*Main article: [Flexibility](flexibility.md)*
 
-Allows the user to input his assumptions on how costs for fuels, electricity production technologies and CO<sub>2</sub> emission will change.
+Large amount of volatile electricity producertion will most likely result in times when supply exceeds demand. In order to deal with this excess electricity, the user can install several flexibility technologies like batteries and power to gas. 
 
 #### Supply
 
 *Main article: [Supply](supply.md)*
 
 Allows the user to determine which technologies are used for central electricity and heat production and also how green transport fuels will be.
+
+#### Cost
+
+*Main article: [Costs](costs.md)*
+
+Allows the user to input his assumptions on how costs for fuels, electricity production technologies and CO<sub>2</sub> emission will change.
 
 ### Charts
 
@@ -64,14 +72,17 @@ The dashboard is the row of numbers at the bottom of each page. It shows the mos
 
 -   Energy use: Percentage difference in primary energy use between current situation and scenario
 -   CO<sub>2</sub> emissions: Percentage difference in energetic CO<sub>2</sub> emissions due to final energy consumption between 1990 and the scenario year
+-   Domestic CO<sub>2</sub> emissions: Percentage difference in energetic CO<sub>2</sub> emissions due to final energy consumption between 1990 and the scenario year, excluding the CO<sub>2</sub> emissions of imported electricity
 -   Energy imports: Share of primary energy that is imported
 -   Loss of load: Indicator showing the chance that production capacity is less than demand
 -   Cost: Total yearly cost of energy supply in current year's euros
--   Costs per household: The total yearly cost of energy divided by the number of households
--   Bio footprint: Land area necessary to grow all the biomass used compared to the arable land in your country
+-   Costs per home: The total yearly cost of energy divided by the number of households
+-   Employment: Percentage difference in local employment between the start year and the scenario
+-   Profitable plants: Percentage of plants installed in the scenario that make a profit as calculated by the merit order calculation
+-   Bio-footprint: Land area necessary to grow all the biomass used compared to the arable land in your country
 -   Renewables: Percentage of final energy consumption that is renewable
--   Renewable electricity: Percentage of final energy consumption that is renewably produced
--   Goals: Indicator showing how many of your own preset goals you have reached in the scenario
+-   Renewable el.: Percentage of final energy consumption that is renewably produced
+-   Targets: Indicator showing how many of your own preset targets you have reached in the scenario
 
 You can click on each of the indicators in the dashboard to get a pop-up with detailed information on each of the subjects. For more information on the dashboard items see the main article on the Dashboard.
 
@@ -235,9 +246,8 @@ Currently, the network costs are only calculated for the Netherlands. These cost
 
 *Main article: [Merit order](merit_order.md)*
 
-In future energy scenarios it is very likely that power plants will operate differently than they do now due to factors such as fuel price and market penetration of renewables. The merit order calculation determines the operating hours of power plants based on the power production park created by the user. The calculation shows that if for example the amount of wind electricity production increases the operating hours of conventional power plants decreases.
+In future energy scenarios it is very likely that power plants will operate differently than they do now due to factors such as fuel price and market penetration of renewables. The merit order calculation determines the operating hours of power plants based on the power production park created by the user. The calculation shows that if for example the amount of wind electricity production increases the operating hours of conventional power plants decreases. The merit order calculation also determines if hours occur when volatile and must-run electricity production exceeds demand. This user can decide what to do with this excess electricity, e.g. storing it in batteries for later use or converting it to gas with a power to gas unit.
 
-Currently the merit order calculation only works for the Netherlands.
 
 ### Loss of load calculations
 
@@ -248,6 +258,8 @@ The calculation shows the probability that available electricity production capa
 ### Electricity storage calculations
 
 *Main article: [Storage and conversion of electricity](storage.md)*
+
+*These static electricity storage calculations have largely been replaced by a more dynamic excess electricity calculation that is part of the merit order calculation. The main results of the electricity storage calculation are, however, still available in the front-end of the ETM.*
 
 For large installed capacities of wind turbines and solar PV, it may become possible that production of wind and solar power exceeds the demand for electricity. The 'Electricity storage' module of the ETM displays cost trends of technologies that can absorb excess electricity as a function of installed wind and solar capacity. If very large installed volatile capacities are installed, it might become economically interesting to build first conversion units that reduce the amount of curtailment.
 

@@ -1,8 +1,10 @@
 # Storage
 
+*These static electricity storage calculations have largely been replaced by a more dynamic excess electricity calculation that is part of the merit order calculation. The main results of the electricity storage calculation are, however, still available in the front-end of the ETM.*
+
 The largest obstacle in integrating large amounts of wind or solar power into the grid is the frequent mismatch between generation and demand. This can lead to both shortage and excess.
 
-This page serves to explain the storage and conversion sidebar item in the ETM (Electricity storage). It is available in the professional version of the ETM in the Supply \> [Electricity storage](http://energytransitionmodel.com/scenario/supply/electricity_storage) slide.
+This page serves to explain the [Flexibility -> Flexibility options -> Wind power production cost slide](https://pro.energytransitionmodel.com/scenario/flexibility/electricity_storage/wind-power-production-cost) in the ETM.
 
 Introduction
 ------------

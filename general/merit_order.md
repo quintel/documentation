@@ -1,57 +1,66 @@
 # Merit Order
 
+For Dutch readers: Het oorspronkelijke project is uitgevoerd met subsidie van het Ministerie van Economische Zaken, voor het TKI Gas uitgevoerd door Agentschap NL. Translation: The original project was supported by subsidies from the Ministry of economic affairs.
+
+This page serves to explain the merit order implementation in the ETM in cooperation with Energie Nederland in Q4 2012 and the subsequent update in 2016. The Merit Order Module is available in the professional version of the ETM in 
+the Cost \> Merit Order slide as shown in Figure 1.
+
 ![Figure 1: Merit Order slide in the ETM.](../images/Mo_slide.png "Figure 1: Merit Order slide in the ETM.")
-
-For Dutch readers: Het project is uitgevoerd met subsidie van het Ministerie van Economische Zaken, voor het TKI Gas uitgevoerd door Agentschap NL. Translation: This project was supported by subsidies from the Ministry of economic affairs.
-
-This pages serves to explain the merit order implementation in the ETM in cooperation with Energie Nederland Q4 2012. The Merit Order Module is available in the professional version of the ETM in the Cost \> Merit Order slide as shown in Figure 1.
 
 Introduction
 ------------
 
-The main purpose of the module is to calculate full load hours for power plants, based on and their relative marginal costs and the hourly demand for electricity.
+The merit order module calculates the hourly electricity mix based on the demand for electricity and the installed capacities and marginal costs of the electricity producing technologies (called producers from now on). The two main results of this calculation are the full load hours for these producers and the amount of excess electricity that is used by the different flexibility technologies.
 
-The ETM usually does not match electricity generation and demand. When producers (gas plants, coal plants, wind turbines etc.) are built, the model assumes that these producers are operating regardless of the actual need for electricity. If the production exceeds the annual demand for electricity, the surplus is exported. Similarly, electricity scarcity will be balanced with importing electricity.
+As of 2016, the merit order calculation is switched on by default. The user can switch the merit order calculation off. In that case the ETM does not match electricity generation and demand. When producers (gas plants, coal plants, wind turbines etc.) are built, the model assumes that these producers are operating regardless of the actual need for electricity. If the production exceeds the annual demand for electricity, the surplus is exported. Similarly, electricity scarcity will be balanced with importing electricity.
 
-The merit order module manages power plants in a smarter way. Power plants are turned on and off in order to follow the electricity demand, which actually varies over the course of time. Instead of having a plant running just because it exists, the merit order will only allow a plant to operate when its output is required (this is under the presumption that the power plant is [dispatchable](#producers) and can be turned off). At times oflow demand, only those producers are turned on that generate electricity at lowest costs. If the demand increases from one hour to the next, additional (and more expensive) producers are switched on. Based on this mechanism, the amount of time is calculated that each power plant actually needs to run in order to fulfill the electricity demand. In other words, the merit order calculates the full load hours of each participant.
+With the merit order switched on, the merit order module manages power plants in a smarter way. Power plants are turned on and off in order to follow the electricity demand, which actually varies over the course of time. Instead of having a plant running just because it exists, the merit order will only allow a plant to operate when its output is required (this is under the presumption that the power plant is [dispatchable](#producers) and can be turned off). At times of low demand, only those producers are turned on that generate electricity at lowest costs. If the demand increases from one hour to the next, additional (and more expensive) producers are switched on. Based on this mechanism, the amount of time is calculated that each power plant actually needs to run in order to fulfill the electricity demand. In other words, the merit order calculates the full load hours of each participant.
 
 The term 'merit order' refers to the order in which dispatchable plants are used to fill up the demand for electricity. This order is based on the marginal costs (in units of 'euro per MWh of produced electricity') of these plants, which are essentially the costs of producing an extra unit of electricity.
 
 It is important to note that turning on the merit order module will take control over how electricity is generated in the ETM. You will find that the merit order turns off all the expensive power plants when they are not needed (for example because you installed too many, [see example below](#installing_too_many_power_plants)).
 
-The full load hours (output of the the merit order module) are used in the ETM for the scenario in the 'future' year, impacting, among others, CO2 emissions, costs, import&export, total energy use and renewable percentages of electricity and energy. In addition, the module calculates financial metrics for producers such as **profit** and **profitability** ([defined below](#profitability)).
+Some electricity producers, like wind turbines, cannot be turned off at will as their production is determined by outside factors, like wind in this case. This also holds for must-run producers, i.e. combined heat and power plants (CHPs), whose electricity production is determined by their heat demand. For scenario's with large capacities of these volatile and must-run producers, their total electricity production might exceed the electricity demand. To make most use of this excess electricity, the user can include flexibility options in his scenario. These flexibility options are described in a [dedicated section](flexibility.md).
+
+The full load hours and the use of the various flexibility options (outputs of the the merit order module) are used in the ETM for the scenario in the 'future' year, impacting, among others, CO2 emissions, costs, import&export, total energy use and renewable percentages of electricity and energy. In addition, the module calculates financial metrics for producers such as **profit** and **profitability** ([defined below](#profitability)).
 
 Displaying outputs of the Merit Order Module
 --------------------------------------------
 
 #### Switching the module on and off
 
-The module can be switched on and off using the switch on the Merit Order slide or by using the checkbox in settings menu, see Figure 1.
+The module can be switched on and off using the switch on the Merit Order slide or by using the checkbox in settings menu, see Figure 1. As of 2016, the merit order is switched on by default.
 
 #### The Merit Order table and chart
 
-![Figure 3: Merit Order table (left) and Merit Order graph (right).](../images/Mo_charts.png "Figure 3: Merit Order table (left) and Merit Order graph (right).")
+There are five dedicated output elements associated with the Merit Order module: two tables and three charts. The first two charts provide insight in the result of the merit order calculation by showing the hourly electricity mix and the hourly electricity price.
 
-There are three dedicated output elements associated with the Merit Order module: two tables and a chart. In Figure 3, the table and chart that show information about full load hours and marginal costs. The table associated with profitability is shown in Figure 5 and will be discussed in the next sub-section.
+![Figure 2: Merit Order hourly supply chart](../images/20160809-screenshot-hourly-supply.png)
 
-The table shown in Figure 3 lists all electricity producers in the ETM. There are two classes of producers distinguished in the context of the Merit Order, the producers whose full load hours are *independent* of the outcome of the Merit Order calculation. This class includes **volatile** producers of electricity such as solar panels and wind turbines which produce electricity *irrespective* of the demand and **must-run** producers (generally CHPs whose primary objective is to fulfill a heat demand of some sort). The second class is made up of **dispatchable** producers and includes nuclear, coal and gas plants. In contrast to the volatiles, the plants have the capability to react to variations in demand. For the producers, the following properties are displayed in the *Merit Order Table*:
+![Figure 3: Merit Order hourly price chart](../images/20160809-screenshot-hourly-price.png)
+
+In Figure 4, the table and chart that show information about full load hours and marginal costs. The table associated with profitability is shown in Figure 5 and will be discussed in the next sub-section.
+
+![Figure 4: Merit Order table (left) and Merit Order graph (right).](../images/Mo_charts.png "Figure 4: Merit Order table (left) and Merit Order graph (right).")
+
+The table shown in Figure 4 lists all electricity producers in the ETM. There are two classes of producers distinguished in the context of the Merit Order, the producers whose full load hours are *independent* of the outcome of the Merit Order calculation. This class includes **volatile** producers of electricity such as solar panels and wind turbines which produce electricity *irrespective* of the demand and **must-run** producers (generally CHPs whose primary objective is to fulfill a heat demand of some sort). The second class is made up of **dispatchable** producers and includes nuclear, coal and gas plants. In contrast to the volatiles, the plants have the capability to react to variations in demand. For the producers, the following properties are displayed in the *Merit Order Table*:
 
 -   Position in the Merit Order: The position in the merit order is simply the order based on the marginal cost.
 -   Marginal costs: The costs concerned with producing an extra unit of electricity.
 -   Available capacity: The available capacity is equal to the installed capacity of a producer multiplied by its **availability**.
 -   Availability is a factor that describes how much of the year this producer can run. For example, the (3rd generation) nuclear power plant in the ETM has an availability of 0.9 which means it can run for 0.9 \* 8760 = 7884 hours per year.
 -   Full load hours future: The full load hours of the 'future' year are being calculated by the Merit Order module.
--   Full load hours present: The full load hours of the 'present' are fixed to the 2010 values.
+-   Full load hours present: The full load hours of the 'present' are fixed to the values of the start year of the scenario.
 
 Note that some technologies are grouped in this table: solar panels, wind turbines and must-run CHPs. Their full load hours are a weighted average, where the installed capacity is used as weight.
 
-The *Merit Order Chart* (Figure 3, tight side) shows the installed capacity of electricity producers, sorted in ascending order of their class (volatiles and must-run first, then dispatchables) and marginal costs (lower cost first). This chart is dynamic and reacts to changes made to the model. In particular, fuel prices and installed number of units of the producers in the merit order. Increasing the coal price, for example, can interchange the (merit!) order of coal and gas-plants in the chart.
+The *Merit Order Chart* (Figure 4, right side) shows the installed capacity of electricity producers, sorted in ascending order of their class (volatiles and must-run first, then dispatchables) and marginal costs (lower cost first). This chart is dynamic and reacts to changes made to the model. In particular, fuel prices and installed number of units of the producers in the merit order. Increasing the coal price, for example, can interchange the (merit!) order of coal and gas-plants in the chart.
 
 ### Using the dashboard item: Profitability
 
-![Figure 4: Selecting the 'profitability' dashboard item.](../images/Mo_dashboard_selection.png "fig:Figure 4: Selecting the 'profitability' dashboard item.") ![Figure 5: Profitability table.](../images/Mo_profitability_chart.png "fig:Figure 5: Profitability table.")
+![Figure 5: Selecting the 'profitability' dashboard item.](../images/Mo_dashboard_selection.png "fig:Figure 5: Selecting the 'profitability' dashboard item.") ![Figure 6: Profitability table.](../images/Mo_profitability_chart.png "fig:Figure 6: Profitability table.")
 
-You can click on the 'change' button in the dashboard (see Figure 1, lower- right corner) to choose the profitability dashboard item. This will show the percentage of profitable power plants. More detailed information about profitability of electricity producers can be obtained by clicking the dashboard item which will open the table shown in Figure 5. We define three categories of profitability:
+You can click on the 'change' button in the dashboard (see Figure 1, lower- right corner) to choose the profitability dashboard item. This will show the percentage of profitable power plants. More detailed information about profitability of electricity producers can be obtained by clicking the dashboard item which will open the table shown in Figure 6. We define three categories of profitability:
 
 1.  Profitable
 2.  Conditionally profitable
@@ -76,7 +85,7 @@ Both **users** and **producers** of electricity are called **participants** of t
 
 All devices that consume electricity are **users**. Currently, this is the total demand for the Netherlands (which represents the sum of all electricity demands). The total demand curve is currently the sum of all electricity consumption of the Netherlands **plus** losses in the electricity network and all power plant"s own electricity consumption. The ETM provides the Merit Order Module with the total annual electricity demand (currently about 420 Petajoule) and a pattern that represents a distribution curve. From this, the Merit Order Module derives the total electricity demand for each hour of the year.
 
-In Figure 6, a cartoon of a demand profile is shown in blue. It has 8760 datapoints (units of MW), one for every hour of the year.
+In Figure 7, a cartoon of a demand profile is shown in blue. It has 8760 datapoints (units of MW), one for every hour of the year.
 
 ##### <a name="producers"></a>Producers
 
@@ -188,7 +197,7 @@ Examples
 
 #### <a name="installing_too_many_power_plants"></a>Installing too many power plants
 
-![Figure 7: Merit oder off.](../images/Merit_order_example1_off.png "fig:Figure 7: Merit oder off.") ![Figure 8: Merit oder on.](../images/Merit_order_example1_on.png "fig:Figure 8: Merit oder on.")
+![Figure 8: Merit oder off.](../images/Merit_order_example1_off.png "fig:Figure 8: Merit oder off.") ![Figure 9: Merit oder on.](../images/Merit_order_example1_on.png "fig:Figure 9: Merit oder on.")
 
 To understand a first direct consequence of turning on the merit order module, try the following: *Add more pulverized coal plants* in the ‘Supply’ section. As long as the merit order module is turned off, the total electricity generation in the production graph will exceed the demand (see Figure 7). When you *turn on* the merit order module, it will only allow dispatchable power plants to run if there is a demand. In consequence, you will find, that the electricity production is reduced to the actual demand of your scenario (see Figure 8).
 
