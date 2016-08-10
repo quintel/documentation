@@ -4,7 +4,8 @@ Introduction
 Energy consumption labelling is used to determine how energy efficient household appliances are. The energy labels typically range from class A+++ to class D with  A+++ being the most efficient class and D the least efficient class. The European Union (EU) established an energy consumption labelling scheme for household appliances and it is necessary for all  manufactures to include an energy label with their appliances. The energy label can define the energy efficiency class to a colour code associated with a letter (from A+++ to D).
 
 The ETM allows the user to increase or decrease the energy efficiency level of several types of appliances. These changes in efficiencies are matched to an energy class for each type of appliance with the maximum increase in efficiency corresponding to class A+++ and the maximimum efficiency decrease corresponding to  class D.  
-This page discusses the methods used to determine the relation between energy labels and efficiency improvement and the data underlying the modeling. 
+
+This page discusses the methods used to determine the relation between energy labels and efficiency improvement and the data underlying the modeling. 
 
 Modeling
 --------
@@ -26,9 +27,17 @@ The table below presents the EEI of each energy label of Dish washers.
 
 
 The label also contains information on:
--   the energy consumption in kWh /cycle-   the washing cycle efficiency class -   the drying cycle efficiency class -   the capacity as a number of place settings-   the water consumption in litres per cycle-   noise in dB(A)
-<strong> Fridge/Freezer</strong>
-
+
+-   the energy consumption in kWh /cycle
+-   the washing cycle efficiency class 
+-   the drying cycle efficiency class 
+-   the capacity as a number of place settings
+-   the water consumption in litres per cycle
+-   noise in dB(A)
+
+<strong> Fridge/Freezer</strong>
+
+
 The table below presents the EEI of each energy label of Fridges/Freezers.
 
 
@@ -36,15 +45,28 @@ The table below presents the EEI of each energy label of Fridges/Freezers.
 
 The label also contains information on:
 
--   the annual energy consumption in kWh/year-   the capacity of fresh foods in litres for refrigerators and combined appliances-   the capacity of frozen foods in litres for freezers and combined appliances-   the noise in dB(A)<strong> Washing machine</strong>
-The table below presents the EEI of each energy label of Washing machines.
+
+-   the annual energy consumption in kWh/year
+-   the capacity of fresh foods in litres for refrigerators and combined appliances
+-   the capacity of frozen foods in litres for freezers and combined appliances
+-   the noise in dB(A)
+
+<strong> Washing machine</strong>
+
+
+The table below presents the EEI of each energy label of Washing machines.
 
 
 ![Figure 4: Washing machine labelling.](../images/Washing_machine_labelling.png "Figure 4: Washing machine labelling.")
 
 The label also contains information on:
 
--   the annual energy consumption in kWh/year-   the annual water consumption in litres -   the capacity for the standard 60 °C cotton programme at full load or the standard 40 °C cotton programme at full load, whichever is the lower, in kg-   the spin-drying efficiency class-   the noise during the washing and spinning phases, for the standard 60 °C cotton programme at full load, in dB(A)
+
+-   the annual energy consumption in kWh/year
+-   the annual water consumption in litres 
+-   the capacity for the standard 60 °C cotton programme at full load or the standard 40 °C cotton programme at full load, whichever is the lower, in kg
+-   the spin-drying efficiency class
+-   the noise during the washing and spinning phases, for the standard 60 °C cotton programme at full load, in dB(A)
 
 
 <strong> Dryer</strong>
@@ -56,22 +78,41 @@ The table below presents the EEI of each energy label of Dryers.
 
 The label also contains information on:
 
--   the annual energy consumption, based on 160 drying cycles of the standard cotton programme at full and partial load, and the consumption of the low-power modes, in kWh/year-   the type of household tumble drier (air-vented, condenser or gas-fired)-   the cycle time corresponding to the standard cotton programme at full load, in minutes-    the capacity for the standard cotton programme at full load, in kg-   the noise during the drying phase, for the standard cotton programme at full load, in dB(A)<strong> Television</strong>
-The table below presents the EEI of each energy label of Televisions.
+
+-   the annual energy consumption, based on 160 drying cycles of the standard cotton programme at full and partial load, and the consumption of the low-power modes, in kWh/year
+-   the type of household tumble drier (air-vented, condenser or gas-fired)
+-   the cycle time corresponding to the standard cotton programme at full load, in minutes
+-    the capacity for the standard cotton programme at full load, in kg
+-   the noise during the drying phase, for the standard cotton programme at full load, in dB(A)
+
+<strong> Television</strong>
+
+
+The table below presents the EEI of each energy label of Televisions.
 
 
 ![Figure 6: Television labelling.](../images/Television_labelling.png "Figure 6: Television labelling.")
 
 The label also contains information on:
 
--   the on-mode power consumption in Watts-   the annual on-mode energy consumption, in kWh/year-   the visible screen diagonal in inches and centimetres
-<strong>Vacuum cleaner</strong>
-The energy labelling of the vacuum cleaners can be determined from the Maximun kWh/year, which is presented in the table below. 
+
+-   the on-mode power consumption in Watts
+-   the annual on-mode energy consumption, in kWh/year
+-   the visible screen diagonal in inches and centimetres
+
+
+<strong>Vacuum cleaner</strong>
+
+
+The energy labelling of the vacuum cleaners can be determined from the Maximun kWh/year, which is presented in the table below. 
 
 ![Figure 7: Vacuum cleaner labelling.](../images/vacuum_cleaner_labelling.png "Figure 7: Vacuum cleaner labelling.")
 
 The label also contains information on:
--   the annual energy consumption in kWh/year-   the cleaning performance-   the dust re-emission in mg/m3
+
+-   the annual energy consumption in kWh/year
+-   the cleaning performance
+-   the dust re-emission in mg/m3
 
 
 The data on the energy consumption labelling of appliances and the current energy labelling in the Netherlands are based on the following publicly available literature:
@@ -98,13 +139,14 @@ The EEI adjusted for the current energy class of each appliance is used as the s
 
 ![Figure 9: Energy efficiency equation.](../images/energy_efficiency_equation.png "Figure 9: Energy efficiency equation.")
 
-where the Δ% refers to the change of the annual energy consumption of the appliance and the EEIn refers to the EEI adjusted of the current energy class. The maximum value of the % change of each appliance is the change of the annual energy consumption in order to reach the most efficiency energy class (A+++) and the minimum value is the change of the annual energy consumption in order to reach the least efficiency energy class (D).
+where the Δ% refers to the change of the annual energy consumption of the appliance and the EEIn refers to the EEI adjusted of the current energy class. The maximum value of the % change of each appliance is the change of the annual energy consumption in order to reach the most efficiency energy class (A+++) and the minimum value is the change of the annual energy consumption in order to reach the least efficiency energy class (D).
+
 All the appliances have an energy class range from A+++ to D, except from the dryers. The least energy efficiency class for the dryers is C. For the simplicity of the calculations, it is assumed that the energy class range for the dryers is also from A+++ to D.
 
 A more detailed description of the % energy efficiency change of the appliances is shown in the table below. 
  
 
-||Min. %|Current energy label| Max. % |
+|Min. %|Current energy label| Max. % |
 |---------|-----|---------------------|
 |Dish washer|-34%|A|35%|
 |Fridge / Freezer|-132%|A+|66%|
