@@ -276,3 +276,11 @@ Currently, the climate impact is only calculated for the Netherlands.
 ### Insulation
 
 *Main article: [Insulation](insulation.md)*
+
+### CO<sub>2</sub> from biomass
+
+*Main article: [Climate relevant CO<sub>2</sub> emissions from biomass](co2_biomass.md)*
+<p>
+Climate change is not induced by the annual CO<sub>2</sub> emissions, but by the total amount of CO<sub>2</sub> present in the air. Virtually any form of combustion contributes to the amount of CO<sub>2</sub> in the air.
+<p>
+Usually no CO<sub>2</sub> emissions are attributed to biomass as biomass absorbs as much CO<sub>2</sub> as is emitted during combustion (over the complete life cycle). However, the CO<sub>2</sub> emitted by combustion of biomass is not always absorbed within a time-scale that is relevant for climate change. The ETM allows to explore the (potential) amount of these climate relevant CO<sub>2</sub> emissions from biomass.
