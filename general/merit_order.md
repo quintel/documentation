@@ -85,7 +85,7 @@ Both **users** and **producers** of electricity are called **participants** of t
 
 All devices that consume electricity are **users**. Currently, this is the total demand for the Netherlands (which represents the sum of all electricity demands). The total demand curve is currently the sum of all electricity consumption of the Netherlands **plus** losses in the electricity network and all power plant"s own electricity consumption. The ETM provides the Merit Order Module with the total annual electricity demand (currently about 420 Petajoule) and a pattern that represents a distribution curve. From this, the Merit Order Module derives the total electricity demand for each hour of the year.
 
-In Figure 7, a cartoon of a demand profile is shown in blue. It has 8760 datapoints (units of MW), one for every hour of the year.
+In Figure 6, a cartoon of a demand profile is shown in blue. It has 8760 datapoints (units of MW), one for every hour of the year.
 
 ##### <a name="producers"></a>Producers
 
