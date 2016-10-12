@@ -45,7 +45,7 @@ Note: Steam & hot water (monetized heat) is not a primary energy carrier, it is 
 
 ### Dashboard CO<sub>2</sub> calculation
 
-In the [dashboard](dashboard.md) CO<sub>2</sub> calculation we calculate the CO<sub>2</sub> emission associated with all final energy consumption in the area. Therefore these numbers do not include CO<sub>2</sub> emission from the conversion sector within the area that is associated with exported energy (currently only electricity). CO<sub>2</sub> that is emited outside the area to produce electricity that is final energy consumption in the area is included. This calculation principle is commonly called **insert name of principle here**
+In the [dashboard](dashboard.md) CO<sub>2</sub> calculation we calculate the CO<sub>2</sub> emission associated with all final energy consumption in the area. Therefore these numbers do not include CO<sub>2</sub> emission from the conversion sector within the area that is associated with exported energy (currently only electricity). CO<sub>2</sub> that is emited outside the area to produce electricity that is final energy consumption in the area is included. Note that this method deviates from the standard way CO<sub>2</sub>-emissions are measured, as normally any emission outside the target area would not be included, whereas all energetic emissions in the area would be. 
 
 ### Table "CO<sub>2</sub> emissions with im- or export"
 
