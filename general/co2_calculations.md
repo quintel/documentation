@@ -17,7 +17,7 @@ Some of the energy used in areas is not used in an energetic fashion, emitting C
 General calculation method
 --------------------------
 
-The model calculates CO<sub>2</sub> emissions associated with the energy output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the CO<sub>2</sub> emission of that converter's energy output is and takes his share. This process continues until it reaches the primary converters, where the CO<sub>2</sub> emission is calculated on the basis of the energy carriers and emission factors. In this process CO<sub>2</sub> emission related to distribution and conversion losses etc. is included.
+The model calculates CO<sub>2</sub> emissions associated with the energy output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the CO<sub>2</sub> emissions of that converter's energy output are and takes his share. This process continues until it reaches the primary converters, where the CO<sub>2</sub> emissions are calculated on the basis of the energy carriers and emission factors. In this process CO<sub>2</sub> emissions related to distribution and conversion losses etc. are included.
 
 The emission factors for energy carriers depend on the mix of origins for those carriers. For example, coal from different regions of origin has different carbon content and hence emission factors differ. The mix of origin is set to the current mix for a country. For the Netherlands, the future mix can be changed by the user in the 'Fuel chain emissions' section under [Supply](supply.md). The default emission factors can be found in the table below.
 
@@ -25,7 +25,7 @@ The emission factor for imported electricity is assumed to be the same as the re
 
 For converters that have CO<sub>2</sub> capture and storage (CCS) abilities, the associated CO<sub>2</sub> emissions of its energy output are reduced by the capture factor. The capture factor of CCS technologies in the model is 85%.
 
-Because the CO<sub>2</sub> emission calculation is based on energy flows, the model calculates only *energetic* CO<sub>2</sub> emissions. This does not include CO<sub>2</sub> emissions from final non-energy consumption, fugitive emissions, industrial process, solvent and other product use, agriculture, LULUCF (Land Use, Land Use Change, and Forestry), and other. For more information on these definitions click [here](http://www.eea.europa.eu/publications/emep-eea-emission-inventory-guidebook-2009/part-b-sectoral-guidance-chapters).
+Because the CO<sub>2</sub> emissions calculation is based on energy flows, the model calculates only *energetic* CO<sub>2</sub> emissions. This does not include CO<sub>2</sub> emissions from final non-energy consumption, fugitive emissions, industrial process, solvent and other product use, agriculture, LULUCF (Land Use, Land Use Change, and Forestry), and other. For more information on these definitions click [here](http://www.eea.europa.eu/publications/emep-eea-emission-inventory-guidebook-2009/part-b-sectoral-guidance-chapters).
 
 | Energy Carrier | Emission factor | Source |
 |----------------|-----------------|--------|
@@ -45,7 +45,7 @@ Note: Steam & hot water (monetized heat) is not a primary energy carrier, it is 
 
 ### Dashboard CO<sub>2</sub> calculation
 
-In the [dashboard](dashboard.md) CO<sub>2</sub> calculation we calculate the CO<sub>2</sub> emission associated with all final energy consumption in the area. Therefore these numbers do not include CO<sub>2</sub> emission from the conversion sector within the area that is associated with exported energy (currently only electricity). CO<sub>2</sub> that is emited outside the area to produce electricity that is final energy consumption in the area is included. Note that this method deviates from the standard way CO<sub>2</sub>-emissions are measured, as normally any emission outside the target area would not be included, whereas all energetic emissions in the area would be. 
+In the [dashboard](dashboard.md) CO<sub>2</sub> calculation we calculate the CO<sub>2</sub> emissions associated with all final energy consumption in the area. Therefore these numbers do not include CO<sub>2</sub> emissions from the conversion sector within the area that is associated with exported energy (currently only electricity). CO<sub>2</sub> that is emited outside the area to produce electricity that is final energy consumption in the area is included. Note that this method deviates from the standard way CO<sub>2</sub> emissions are measured, as normally any emission outside the target area would not be included, whereas all energetic emissions in the area would be. 
 
 ### Table "CO<sub>2</sub> emissions with im- or export"
 
