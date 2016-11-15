@@ -16,7 +16,7 @@ The number in the [dashboard](dashboard.md) shows the percentage of final *energ
 
 #### Renewable electricity
 
-The renewable electricity percentage is calculated by using the definition of the European Comission, according to Directive [2009/28/EC](http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=Oj:L:2009:140:0016:0062:en:PDF). This definition divides the amount of renewable electricity production by the gross final electricity demand. Gross final electricity demand according to the definition of the EC includes energy sector own use of electricity and transmission losses. For the Netherlands the ETM calculates without the electricity, CHP and heat plants' own use of electricity, as this is not included in gross final consumption in Dutch national statistics [see this document](http://refman.et-model.com/publications/1562).
+The renewable electricity percentage is calculated by using the definition of the European Comission, according to Directive [2009/28/EC](http://eur-lex.europa.eu/eli/dir/2009/28/oj). This definition divides the amount of renewable electricity production by the gross final electricity demand. Gross final electricity demand according to the definition of the EC includes energy sector own use of electricity and transmission losses. For the Netherlands the ETM calculates without the electricity, CHP and heat plants' own use of electricity, as this is not included in gross final consumption in Dutch national statistics [see this document](http://refman.et-model.com/publications/1562).
 
 The calculation implies that the renewable electricity percentage can be greater than 100% if, for example, the electricity production is significantly higher than the demand.
 
