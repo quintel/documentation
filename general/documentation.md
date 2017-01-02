@@ -44,7 +44,7 @@ Allows the user to change the way energy is used and what energy demand will be 
 
 *Main article: [Flexibility](flexibility.md)*
 
-Large amount of volatile electricity producertion will most likely result in times when supply exceeds demand. In order to deal with this excess electricity, the user can install several flexibility technologies like batteries and power to gas. 
+Large amount of volatile electricity production will most likely result in times when supply exceeds demand. In order to deal with this excess electricity, the user can install several flexibility technologies like batteries and power to gas. 
 
 #### Supply
 
