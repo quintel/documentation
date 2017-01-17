@@ -74,5 +74,19 @@ alongside with it - locally. You can than select your newly created dataset
 from the select box and create a new scenario with it.
 select your newly created dataset
 
+### Which inputs can I edit?
+
+In theory all inputs that are in the `etsource/inputs/` folder can be used as an initializer
+input to manipulate certain properties of the graph. These properties for example can be
+the number of units or the demand of a certain node. For the sake of consistency and to apply
+an arbitrary guideline; the initializer inputs will live inside of `etsource/inputs/initializer_inputs`.
+
+### How do I apply these initializer inputs?
+
+### Format of an initializer input
+
+### Validation and conflicts
+
+
 TODO:
 - Verify with JB if it's possible to create a template for xls.
