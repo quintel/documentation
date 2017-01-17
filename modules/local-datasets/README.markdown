@@ -1,7 +1,7 @@
 Local datasets
 ==============
 
-### How to create a local dataset?
+# How to create a local dataset?
 
 In `etdataset` there's a file called `local_dataset.xls`. This will serve as
 a template for future local datasets. Inside that xls file are two fields.
@@ -47,7 +47,7 @@ These files will be named `graph.yml` and `#{ derived_dataset }.ad`. Other files
 like `time_curves` will be copied over and scaled in the new dataset folder.
 The way it will look inside of ETSource is:
 
-````bash
+```bash
 datasets/ameland
 ├── ameland.derived_dataset.ad
 ├── graph.yml
@@ -58,34 +58,37 @@ datasets/ameland
     ├── energy_extraction_lignite_time_curve.csv
     ├── energy_extraction_natural_gas_time_curve.csv
     └── energy_extraction_uranium_oxide_time_curve.csv
-````
+```
 
 Also at the click of that button another file is created inside of `etdataset`.
 Called `#{ derived_dataset }.xls` in here you can read the attributes from the
 `#{ derived_dataset }.ad` that lives inside of `etsource`. You can edit and
 update values off the `#{ derived_dataset }.ad` file.
 
-### Testing a local dataset
+# Testing a local dataset
 
-#### Through ETModel + ETEngine
+## Through ETModel + ETEngine
 
 Testing a local dataset would go through running ETModel - and ETEngine
 alongside with it - locally. You can than select your newly created dataset
 from the select box and create a new scenario with it.
 select your newly created dataset
 
-### Which inputs can I edit?
+
+# Editing a local dataset
+
+## Which inputs can I edit?
 
 In theory all inputs that are in the `etsource/inputs/` folder can be used as an initializer
 input to manipulate certain properties of the graph. These properties for example can be
 the number of units or the demand of a certain node. For the sake of consistency and to apply
 an arbitrary guideline; the initializer inputs will live inside of `etsource/inputs/initializer_inputs`.
 
-### How do I apply these initializer inputs?
+## How do I apply these initializer inputs?
 
-### Format of an initializer input
+## Format of an initializer input
 
-### Validation and conflicts
+## Validation and conflicts
 
 
 TODO:
