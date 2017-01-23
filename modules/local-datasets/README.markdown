@@ -65,6 +65,8 @@ Called `#{ derived_dataset }.xls` in here you can read the attributes from the
 `#{ derived_dataset }.ad` that lives inside of `etsource`. You can edit and
 update values off the `#{ derived_dataset }.ad` file.
 
+----
+
 # Testing a local dataset
 
 ## Through ETModel + ETEngine
@@ -72,8 +74,9 @@ update values off the `#{ derived_dataset }.ad` file.
 Testing a local dataset would go through running ETModel - and ETEngine
 alongside with it - locally. You can than select your newly created dataset
 from the select box and create a new scenario with it.
-select your newly created dataset
 
+
+-----
 
 # Editing a local dataset
 
@@ -84,7 +87,41 @@ input to manipulate certain properties of the graph. These properties for exampl
 the number of units or the demand of a certain node. For the sake of consistency and to apply
 an arbitrary guideline; the initializer inputs will live inside of `etsource/inputs/initializer_inputs`.
 
+There are a few types of `initializer inputs` you can create: 
+
+### General rules and conventions
+
+1. An initializer input must be treated as any input and therefor must have a unique filename within the `inputs` folder.
+2. The `update_period` of an initializer input is not needed and neither should it be used in the filename to avoid confusion. <sup>*1<sup>.
+3. There should be a `USER_INPUT()` present in the `query` key of an initializer input.
+
+[1] = The update period of an initializer input is implictly always set to both, which means that for the present and the future graph the value should be set. If that's not the case than that is a bug.
+
+### Share groups
+
+Share groups always consist of a set of `initializer inputs` in which you can set a group of sliders: 
+
+{ needs image of group of sliders ETModel }
+
+The syntax of the share is as follows:
+
+```ruby
+# Example update the share of a households_space_heater_combined_network_gas
+- query = UPDATE(LINK(households_space_heater_combined_network_gas,households_useful_demand_for_space_heating_after_insulation_and_solar_heater), share, DIVIDE(USER_INPUT(),100))
+- share_group = test_heating_households
+- priority = 0
+- unit = %
+```
+
+Keep in mind that the `share_group` should be unique per group of initializer inputs.
+
+### Demands of a node
+### `number_of_units` of a certain node
+### `child_share` or `parent_share` of an edge
+
 ## How do I apply these initializer inputs?
+
+`- init.<name-of-input> = <value>`
 
 ## Format of an initializer input
 
