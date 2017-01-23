@@ -109,14 +109,36 @@ The syntax of the share is as follows:
 # Example update the share of a households_space_heater_combined_network_gas
 - query = UPDATE(LINK(households_space_heater_combined_network_gas,households_useful_demand_for_space_heating_after_insulation_and_solar_heater), share, DIVIDE(USER_INPUT(),100))
 - share_group = test_heating_households
-- priority = 0
 - unit = %
+
+# Optional
+- priority = 0
 ```
 
 Keep in mind that the `share_group` should be unique per group of initializer inputs.
 
 ### Demands of a node
+
+```ruby
+# Example update the demand of energy production bio oil
+- query = UPDATE(V(energy_production_bio_oil), demand, USER_INPUT())
+- unit = #
+
+# Optional
+- priority = 0
+```
+
 ### `number_of_units` of a certain node
+
+```ruby
+# Example update the demand of energy production bio oil
+- query = UPDATE(V(energy_production_bio_oil), number_of_units, USER_INPUT())
+- unit = #
+
+# Optional
+- priority = 0
+```
+
 ### `child_share` or `parent_share` of an edge
 
 ## How do I apply these initializer inputs?
@@ -124,6 +146,8 @@ Keep in mind that the `share_group` should be unique per group of initializer in
 `- init.<name-of-input> = <value>`
 
 ## Format of an initializer input
+
+The only mandatory key inside of an initializer input is the `query` key. In there you'd specify a GQL to update a certain part of the graph.
 
 ## Validation and conflicts
 
