@@ -101,7 +101,7 @@ There are a few types of `initializer inputs` you can create:
 
 Share groups always consist of a set of `initializer inputs` in which you can set a group of sliders: 
 
-{ needs image of group of sliders ETModel }
+![sliders](http://i.imgur.com/54k18GK.png)
 
 The syntax of the share is as follows:
 
@@ -116,6 +116,8 @@ The syntax of the share is as follows:
 ```
 
 Keep in mind that the `share_group` should be unique per group of initializer inputs.
+
+Not all values for a share group need to be set. In the example image above only the `households_space_heater_coal_share` was set to 10%. ETEngine knows how to balance this out succesfully. 
 
 ### Demands of a node
 
