@@ -131,7 +131,7 @@ Keep in mind that the `share_group` should be unique per group of initializer in
 ### `number_of_units` of a certain node
 
 ```ruby
-# Example update the demand of energy production bio oil
+# Example update the number_of_units of energy production bio oil
 - query = UPDATE(V(energy_production_bio_oil), number_of_units, USER_INPUT())
 - unit = #
 
