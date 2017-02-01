@@ -3,6 +3,14 @@ Local datasets
 
 # How to create a local dataset?
 
+From ETSource run
+
+`rake scale NUMBER_OF_RESIDENCES=x DERIVED_DATASET=name FULL_DATASET=name`
+
+# How to create a local dataset with Excel?
+
+**NOTE: This is currently not how it works but how it hopefully will work (unless somebody has a better vision)**
+
 In `etdataset` there's a file called `local_dataset.xls`. This will serve as
 a template for future local datasets. Inside that xls file are two fields.
 
@@ -48,9 +56,37 @@ like `time_curves` will be copied over and scaled in the new dataset folder.
 The way it will look inside of ETSource is:
 
 ```bash
-datasets/ameland
-├── ameland.derived_dataset.ad
+datasets/test
+├── fce
+│   ├── bio_ethanol.yml
+│   ├── biodiesel.yml
+│   ├── coal.yml
+│   ├── crude_oil.yml
+│   ├── greengas.yml
+│   ├── lng.yml
+│   ├── natural_gas.yml
+│   ├── uranium_oxide.yml
+│   └── wood_pellets.yml
 ├── graph.yml
+├── load_profiles
+│   ├── agriculture_chp.csv
+│   ├── buildings_chp.csv
+│   ├── dhw_normalized.csv
+│   ├── industry_chp.csv
+│   ├── readme.md
+│   ├── river.csv
+│   ├── solar_pv.csv
+│   ├── total_demand.csv
+│   ├── wind_coastal.csv
+│   ├── wind_inland.csv
+│   └── wind_offshore.csv
+├── network
+│   ├── network_hv_mv_trafo_distribution.csv
+│   ├── network_lv_net_distribution.csv
+│   ├── network_mv_d_net_distribution.csv
+│   ├── network_mv_lv_trafo_distribution.csv
+│   └── network_mv_t_net_distribution.csv
+├── test.derived.ad
 └── time_curves
     ├── energy_distribution_woody_biomass_time_curve.csv
     ├── energy_extraction_coal_time_curve.csv
@@ -58,6 +94,8 @@ datasets/ameland
     ├── energy_extraction_lignite_time_curve.csv
     ├── energy_extraction_natural_gas_time_curve.csv
     └── energy_extraction_uranium_oxide_time_curve.csv
+
+4 directories, 33 files
 ```
 
 Also at the click of that button another file is created inside of `etdataset`.
