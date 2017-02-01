@@ -1,13 +1,13 @@
 Local datasets
 ==============
 
-# How to create a local dataset?
+## How to create a local dataset?
 
 From ETSource run
 
 `rake scale NUMBER_OF_RESIDENCES=x DERIVED_DATASET=name FULL_DATASET=name`
 
-# How to create a local dataset with Excel?
+## How to create a local dataset with Excel?
 
 **NOTE: This is currently not how it works but how it hopefully will work (unless somebody has a better vision)**
 
@@ -53,7 +53,15 @@ NUMBER_OF_RESIDENCES=#{ number_of_residences }`. Through this job 2 unique
 files will be created relevant to the local dataset inside of `etsource`.
 These files will be named `graph.yml` and `#{ derived_dataset }.ad`. Other files
 like `time_curves` will be copied over and scaled in the new dataset folder.
-The way it will look inside of ETSource is:
+
+Also at the click of that button another file is created inside of `etdataset`.
+Called `#{ derived_dataset }.xls` in here you can read the attributes from the
+`#{ derived_dataset }.ad` that lives inside of `etsource`. You can edit and
+update values off the `#{ derived_dataset }.ad` file.
+
+---
+
+## File structure of a local dataset
 
 ```bash
 datasets/test
@@ -98,16 +106,11 @@ datasets/test
 4 directories, 33 files
 ```
 
-Also at the click of that button another file is created inside of `etdataset`.
-Called `#{ derived_dataset }.xls` in here you can read the attributes from the
-`#{ derived_dataset }.ad` that lives inside of `etsource`. You can edit and
-update values off the `#{ derived_dataset }.ad` file.
-
 ----
 
-# Testing a local dataset
+## Testing a local dataset
 
-## Through ETModel + ETEngine
+### Through ETModel + ETEngine
 
 Testing a local dataset would go through running ETModel - and ETEngine
 alongside with it - locally. You can than select your newly created dataset
@@ -116,9 +119,9 @@ from the select box and create a new scenario with it.
 
 -----
 
-# Editing a local dataset
+## Editing a local dataset
 
-## Which inputs can I edit?
+### Which inputs can I edit?
 
 In theory all inputs that are in the `etsource/inputs/` folder can be used as an initializer
 input to manipulate certain properties of the graph. These properties for example can be
