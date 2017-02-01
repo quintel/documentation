@@ -108,23 +108,22 @@ The syntax of the share is as follows:
 ```ruby
 # Example update the share of a households_space_heater_combined_network_gas
 - query = UPDATE(LINK(households_space_heater_combined_network_gas,households_useful_demand_for_space_heating_after_insulation_and_solar_heater), share, DIVIDE(USER_INPUT(),100))
-- share_group = test_heating_households
-- unit = %
 
 # Optional
 - priority = 0
+- update_type = '%'
+- share_group = ''
 ```
 
 Keep in mind that the `share_group` should be unique per group of initializer inputs.
 
-Not all values for a share group need to be set. In the example image above only the `households_space_heater_coal_share` was set to 10%. ETEngine knows how to balance this out succesfully. 
+All values for a share group need to be set and add up to 100%.
 
 ### Demands of a node
 
 ```ruby
 # Example update the demand of energy production bio oil
 - query = UPDATE(V(energy_production_bio_oil), demand, USER_INPUT())
-- unit = #
 
 # Optional
 - priority = 0
@@ -135,13 +134,14 @@ Not all values for a share group need to be set. In the example image above only
 ```ruby
 # Example update the number_of_units of energy production bio oil
 - query = UPDATE(V(energy_production_bio_oil), number_of_units, USER_INPUT())
-- unit = #
 
 # Optional
 - priority = 0
 ```
 
 ### `child_share` or `parent_share` of an edge
+
+To be specified
 
 ## How do I apply these initializer inputs?
 
@@ -153,6 +153,13 @@ The only mandatory key inside of an initializer input is the `query` key. In the
 
 ## Validation and conflicts
 
+To validate an initializer input and a derived dataset you can run the following command from ETSource:
 
-TODO:
-- Verify with JB if it's possible to create a template for xls.
+`rspec spec/validate_spec.rb`
+
+There are certain don'ts for editing a local dataset. Here's a list:
+
+- Don't change the `interconnector_capacity` of a dataset. The reason for this is that this attribute is used inside the exported `graph.yml` and changing that value will result in the fact that nothing will update or change in your scenario.
+- Don't change the `number_of_residences` for that same reason. 
+- Don't use intializer inputs to change area attributes
+- Don't update the `scaling` attributes. The `has_*` attributes are blank and they should stay that way, editing them won't result in any changes. If you do however feel like changing `has_industry` use the `has_industry` attribute from the `.ad` file. 
