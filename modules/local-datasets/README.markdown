@@ -111,7 +111,7 @@ The syntax of the share is as follows:
 
 # Optional
 - priority = 0
-- update_type = '%'
+- update_type = '% | factor'
 - share_group = ''
 ```
 
