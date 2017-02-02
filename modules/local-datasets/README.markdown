@@ -54,10 +54,10 @@ Also at the click of that button another file is created inside of `etdataset`. 
 
 ## Contents of a local dataset
 
-The structure of a local dataset is described [here](). The main contents of a local datasets are the `#{ derived_dataset }.ad` and the `graph.yml`. 
+The structure of a local dataset is described [here](https://github.com/quintel/documentation/blob/master/modules/local-datasets/README.markdown#file-structure-of-a-local-dataset). The main contents of a local datasets are the `#{ derived_dataset }.ad` and the `graph.yml`. 
 
 - `#{ derived_dataset }`.ad contains a dataset with a similar structure to a full dataset.
-- `graph.yml` contains the energy graph
+- `graph.yml` contains the energy graph. A snippet of the graph can be found [here](https://github.com/quintel/documentation/tree/master/modules/local-datasets#snippet-of-graphyml-contents).
   - Ensures that the `DerivedDataset` is immune to accidental changes caused by changes to its `base_dataset`
   - It is already scaled down
     - *Exception:* The node attributes `typical_input_capacity` and `electricity_output_capacity` are not scaled down - neither in the graph nor later (this is consistent with the old ETE scenario scaling)
