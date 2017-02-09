@@ -18,3 +18,8 @@ is needed is because there's going to be a growth of local datasets.
 7. A user needs to be able to review a change
 8. A user needs to be able to edit his own change
 9. A user needs to export the dataset to ETSource
+10. A user needs to be able to destroy a dataset
+
+### Technical
+
+See [technical documentation](TECHNICAL.md).
