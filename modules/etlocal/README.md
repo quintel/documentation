@@ -11,12 +11,12 @@ technical for most people. The reason why this is needed is because there's
 going to be an expected growth of local datasets.
 
 A local dataset needs to be edited with the utmost care. It should not be
-possible to edit it without any bit of proof. Each change needs to be
-carefully thought through. In order to achieve that each change is carefully
-managed, a set of users need to be able to review each change that has been
+possible to edit a value without any bit of proof. Each change needs to be
+carefully thought through. In order to achieve that, each change is carefully
+managed and a set of users need to be able to review each change that has been
 made.
 
-After a series of changes the local dataset needs to be exported to ETSource
+After a series of changes, a local dataset needs to be moved to ETSource
 in order to be applicable for scenarios.
 
 ### Use cases
