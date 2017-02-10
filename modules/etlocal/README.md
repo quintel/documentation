@@ -1,6 +1,6 @@
 # ETlocal
 
-- Location of repository: [here](https://github.com/quintel/etlocal)
+Location of repository: [here](https://github.com/quintel/etlocal)
 
 ### Background
 
@@ -35,7 +35,6 @@ in order to be applicable for scenarios.
 12. A user needs to be able to edit his own change (for a limited period of time)
 13. A user needs to export the dataset to ETSource
 14. A user needs to be able to destroy a dataset
-
 
 ### Technical
 
