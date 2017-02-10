@@ -1,5 +1,7 @@
 # ETlocal
 
+- Location of repository: [here](https://github.com/quintel/etlocal)
+
 ### Background
 
 There needs to be a possibility to change local datasets for outside users.
