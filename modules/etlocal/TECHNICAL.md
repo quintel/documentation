@@ -1,5 +1,7 @@
 # ETLocal - Technical
 
+## Implementations
+
 ETLocal will contain the following implementations:
 
 - Authentication
@@ -25,3 +27,15 @@ ETLocal will contain the following implementations:
 ### Discussion platform
 
 ### Background workers
+
+---
+
+## Implications
+
+### ETModel
+
+### ETEngine
+
+### ETSource
+
+### ETDataset
