@@ -36,6 +36,10 @@ in order to be applicable for scenarios.
 13. A user needs to export the dataset to ETSource
 14. A user needs to be able to destroy a dataset
 
+### Planning
+
+See [planning](PLANNING.md).
+
 ### Technical
 
 See [technical documentation](TECHNICAL.md).
