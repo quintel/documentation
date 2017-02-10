@@ -3,14 +3,16 @@
 ### Background
 
 There needs to be a possibility to change local datasets for outside users.
-A user need to be able to create and edit datasets without having the knowledge
-of git itself. Git has proven to be to technical for most people. The reason
-why this is needed is because there's going to be a growth of local datasets.
+A user needs to be able to create and edit a dataset without having the knowledge
+of git itself or to require direct access to ETSource. Git has proven to be to
+technical for most people. The reason why this is needed is because there's
+going to be an expected growth of local datasets.
 
 A local dataset needs to be edited with the utmost care. It should not be
 possible to edit it without any bit of proof. Each change needs to be
-carefully thought through. In order to achieve this a set of users need
-to be able to review each change that has been made.
+carefully thought through. In order to achieve that each change is carefully
+managed, a set of users need to be able to review each change that has been
+made.
 
 After a series of changes the local dataset needs to be exported to ETSource
 in order to be applicable for scenarios.
@@ -24,9 +26,13 @@ in order to be applicable for scenarios.
 5. A user needs to be able to change a value of a dataset
 6. A user needs to be able to deliver proof for a change of a value
 7. A user needs to be able to review a change
-8. A user needs to be able to edit his own change
-9. A user needs to export the dataset to ETSource
-10. A user needs to be able to destroy a dataset
+8. The editors of an edit to a value need to have a vote on that change
+9. An edit needs to be automatically applied/rejected (based on vote) within a certain time-frame
+10. A user needs to be able to edit his own change (for a limited period of time)
+11. A user needs to export the dataset to ETSource
+12. A user needs to be able to destroy a dataset
+13. A user needs to be able to see the history and past sources of each change.
+
 
 ### Technical
 
