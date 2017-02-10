@@ -37,3 +37,8 @@ in order to be applicable for scenarios.
 ### Technical
 
 See [technical documentation](TECHNICAL.md).
+
+### Out of scope
+
+The editing of a non-local dataset is not possible with this application.
+Mainly due to the proprietary energy balances.
