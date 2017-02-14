@@ -2,6 +2,14 @@
 
 Location of repository: [here](https://github.com/quintel/etlocal)
 
+### Promise to customer
+
+Quoted:
+
+"Quintel builds an independent, transparant, open source online place where all
+information and knowledge about the current situation on the island will be
+maintained and where all the involved parties can edit and update it."
+
 ### Background
 
 There needs to be a possibility to change local datasets for outside users.
