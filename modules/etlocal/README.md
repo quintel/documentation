@@ -4,11 +4,21 @@ Location of repository: [here](https://github.com/quintel/etlocal)
 
 ### Promise to customer
 
-Quoted:
+*Quoted:*
 
 "Quintel builds an independent, transparant, open source online place where all
 information and knowledge about the current situation on the island will be
 maintained and where all the involved parties can edit and update it."
+
+"At the moment different sets of data, float around on multiple locations about
+the energy situation on the island. Multiple parties have done studies and make
+use of these different sets of data. Because of that the starting situation is
+very unclear for all parties. Quintel proposes to create an independent,
+transparant, open source online place where all information and knowledge
+about the current situation on the island will be maintained and where
+all the involved parties can edit and update it, so as to create consistency
+about the starting situation. This will also provide insights and overview
+about the energy system of Ameland."
 
 ### Background
 
