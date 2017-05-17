@@ -1,3 +1,7 @@
+*All this has been moved to [Trello](https://trello.com/b/f1S1p2PQ/etlocal-backlog).*
+
+---
+
 **13-02-2017**
 - [Brainstorm ETLocal](https://calendar.google.com/calendar/render#eventpage_6%7Ceid-a25sNWJramhkdHJ1dTlsYWVqNGYxdWRrMjggZ2VyYXJkLndlc3RlcmhvZkBxdWludGVsLmNvbQ-1-0-)
 - Conclude brainstorm in [README.md](README.md)
@@ -17,3 +21,5 @@
 - Start setting priorities for issues and features
 - Making a time estimate
 - Discussing what is in/out of scope for now. 
+
+
