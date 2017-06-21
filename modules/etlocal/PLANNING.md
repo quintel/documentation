@@ -13,13 +13,11 @@
 
 **16-02-2017**
 - [Have a technical meeting with Antw](..)
-  - Decide what would be the correct approach -> separate application or integrate with ETEngine? 
+  - Decide what would be the correct approach -> separate application or integrate with ETEngine?
   - Dicuss wireframes in general
   - Technical design?
 
 **17-02-2017**
 - Start setting priorities for issues and features
 - Making a time estimate
-- Discussing what is in/out of scope for now. 
-
-
+- Discussing what is in/out of scope for now.

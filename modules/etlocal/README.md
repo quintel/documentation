@@ -42,31 +42,24 @@ in order to be applicable for scenarios.
 1. A user needs to sign in
 2. A user needs to sign out
 3. A user needs to be able to retrieve his/her password when lost
-4. A user needs to create a new dataset
-5. A user needs to update that dataset
-6. A user needs to be able to change a value of a local dataset
-7. A user needs to be able to see the history and past sources of each change to each value of a local dataset.
-8. A user must deliver proof to a change of a value of a local dataset
-9. A user needs to be able to edit his own change (for a limited period of time)
-10. A user needs to export the dataset to ETSource
-11. A user needs to be able to destroy a dataset
-12. A user needs to be able to clone a dataset
+4. A user needs to update that dataset
+5. A user needs to be able to change a value of a local dataset
+6. A user needs to be able to see the history and past sources of each change to each value of a local dataset.
+7. A user must deliver proof to a change of a value of a local dataset
+8. A user needs to be able to edit his own change (for a limited period of time)
+9. A user needs to export the dataset to ETSource
+10. A user needs to be able to destroy a dataset
+11. A user needs to be able to clone a dataset
 
 **Optional (when amount of users increases)**
 
-9. A user needs to be able to review a change of a value of a local dataset
-10. The previous editors of a change to a value of a local dataset, need to have a vote on that perticular change
-11. A change to a value of a local dataset needs to be automatically applied/rejected (based on vote) within a certain time-frame
+12. A user needs to be able to review a change of a value of a local dataset
+13. The previous editors of a change to a value of a local dataset, need to have a vote on that perticular change
+14. A change to a value of a local dataset needs to be automatically applied/rejected (based on vote) within a certain time-frame
+15. A user needs to be able to visualize the attributes from the datasets on a map
+16. A user needs to be able to visualize other non-attributes related to certain regions on a map
+17.
 
 ### Planning
 
 See [planning](PLANNING.md).
-
-### Technical
-
-See [technical documentation](TECHNICAL.md).
-
-### Out of scope
-
-The editing of a non-local dataset is not possible with this application.
-Mainly due to the proprietary energy balances.
