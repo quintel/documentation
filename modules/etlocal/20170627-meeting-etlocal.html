@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ETLocal - Things and stuff an other stuff</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      img{ width: 100% }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# ETLocal
+## 05-07 | The 3 routes of
+
+---
+
+# Goal of meeting
+
+Giving information and reaching consensus about the direction and priorities
+of ETLocal.
+
+---
+
+# Agenda
+
+1. Visual interface
+2. Analyses
+3. ETM Integration
+
+---
+
+class: center, middle
+
+# Visual interface
+### ~50days
+
+---
+
+# Visual interface
+
+- Adding multiple layers of static information
+- Adding multiple layers of dynamic information (i.e. results from ETM)
+- Adding an interface to switch between layers
+
+<!--
+  The multiple layers of static information are for exploring the neigborhood.
+  The multiple layers of dynamic information can be integrated into:
+  - The scenario report
+  - As a result of a slider group
+  - Seeing a summary of multiple scenarios
+-->
+
+---
+
+# Visual interface
+
+**Target audience**
+
+Energy analysts / energy hobbyists
+
+**Why?**
+
+Users like images to give insight into their current situation.
+
+<!--
+  For example: where are my geothermal sources? Do I have them?
+  Which roofs can be used for solar power.
+-->
+
+---
+
+class: center, middle
+
+# Analyses
+### ~40days
+
+---
+
+# Analyses
+
+- Expanding the analyses with new sets of input
+- Making all the graph assumptions editable from the front-end
+- Adding validations
+- Showing insight into the analyses flow
+
+---
+
+# Analyses
+
+**Target audience**
+
+Energy analysts / Quintellers / pro-ETM-users
+
+**Why?**
+
+Improving the analyses improves the quality and changeability of the present
+situation of a region for a scenario.
+
+---
+
+class: center, middle
+
+# ETM Integration
+### ~40days
+
+---
+
+# ETM Integration
+
+- Moving the interface of ETLocal into ETModel
+- Making it possible to create a present situation for a scenario of any region
+for which there's a base dataset
+- Changing the dataset selector
+
+---
+
+# ETM Integration
+
+**Target audience**
+
+Quintel developers / Researchers
+
+**Why?**
+
+Creating a scenario for every possible region is needed to make ETLocal
+actual 'used' and to be able to explore possible energy futures for your region.
+
+Moving all interface elements into ETModel is needed for Quintel as a company,
+maintaining multiple interfaces is a pain, ETModel is already mature enough.
+I.e. move everything into ETModel.
+
+---
+
+class: center, middle
+
+# Discuss!
+
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
+
