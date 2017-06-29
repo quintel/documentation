@@ -14,7 +14,6 @@
         font-weight: normal;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-      img{ width: 100% }
     </style>
   </head>
   <body>
@@ -23,131 +22,206 @@
 class: center, middle
 
 # ETLocal
-## 05-07 | The 3 routes of
+## 05-07
 
 ---
 
-# Goal of meeting
+# Doel van de meeting
 
-Giving information and reaching consensus about the direction and priorities
-of ETLocal.
+Informeren en consensus bereiken over de richting en prioriteiten van ETlocal.
 
 ---
 
 # Agenda
 
-1. Visual interface
-2. Analyses
-3. ETM Integration
+1. Wat is ETLocal nu?
+2. Waar kan ETLocal heen gaan?
+3. Keuzes
 
 ---
 
 class: center, middle
 
-# Visual interface
-### ~50days
-
----
-
-# Visual interface
-
-- Adding multiple layers of static information
-- Adding multiple layers of dynamic information (i.e. results from ETM)
-- Adding an interface to switch between layers
-
-<!--
-  The multiple layers of static information are for exploring the neigborhood.
-  The multiple layers of dynamic information can be integrated into:
-  - The scenario report
-  - As a result of a slider group
-  - Seeing a summary of multiple scenarios
--->
-
----
-
-# Visual interface
-
-**Target audience**
-
-Energy analysts / energy hobbyists
-
-**Why?**
-
-Users like images to give insight into their current situation.
-
-<!--
-  For example: where are my geothermal sources? Do I have them?
-  Which roofs can be used for solar power.
--->
+# Wat is ETLocal nu?
 
 ---
 
 class: center, middle
 
-# Analyses
-### ~40days
+# 1. Visuele interface
 
 ---
 
-# Analyses
+# Visuele interface [1/2]
 
-- Expanding the analyses with new sets of input
-- Making all the graph assumptions editable from the front-end
-- Adding validations
-- Showing insight into the analyses flow
+<img src="images/2.1.png" style="width:350px"/>
 
----
+*Wat kan het?*
 
-# Analyses
-
-**Target audience**
-
-Energy analysts / Quintellers / pro-ETM-users
-
-**Why?**
-
-Improving the analyses improves the quality and changeability of the present
-situation of a region for a scenario.
+Plot de 7 huidige startwaarden op 3 niveau's van Nederland
 
 ---
 
-class: center, middle
+# Visuele interface [2/2]
 
-# ETM Integration
-### ~40days
+*Wat kan het nog niet?*
 
----
-
-# ETM Integration
-
-- Moving the interface of ETLocal into ETModel
-- Making it possible to create a present situation for a scenario of any region
-for which there's a base dataset
-- Changing the dataset selector
-
----
-
-# ETM Integration
-
-**Target audience**
-
-Quintel developers / Researchers
-
-**Why?**
-
-Creating a scenario for every possible region is needed to make ETLocal
-actual 'used' and to be able to explore possible energy futures for your region.
-
-Moving all interface elements into ETModel is needed for Quintel as a company,
-maintaining multiple interfaces is a pain, ETModel is already mature enough.
-I.e. move everything into ETModel.
+- In/uitzoomen om een beter beeld te krijgen van visuele informatie
+- Meedere lagen selecteren
+- Niet mouse-overen om bijv. waardes uit te lezen
+- Legend moet beter
+- Er is geen keuzevrijheid om de kleurenschaal te bepalen (logaritmisch, lineair, etc.)
 
 ---
 
 class: center, middle
 
-# Discuss!
+# 2. Analyse
 
+---
+
+# Analyse [1/2]
+
+<img src="images/3.png" style="width:350px"/>
+
+*Wat kan het?*
+
+- Analyseren van start waarden naar 'initializer inputs'
+- Exporteren 'initializer inputs' naar *bestaande* dataset ETSource
+
+---
+
+# Analyse [2/2]
+
+*Wat kan het nog niet?*
+
+- Functioneert alleen als een rake task
+- Moet uiteindelijk aansluiten op initialiseren van huidige situatie van een scenario
+- Je kan de output niet direct testen
+
+---
+
+class: center, middle
+
+# 3. Dataset editor
+
+---
+
+# Dataset editor [1/2]
+
+*Wat kan het?*
+
+- Startwaardes aanpassen regio's
+- Geschiedenis bijhouden wie/wat/waarom heeft aangepast (git log)
+- Basis validaties
+
+---
+
+# Dataset editor [2/2]
+
+*Wat kan het nog niet?*
+
+- Er is geen status voor een regio / dataset (bijv. frozen?, in review?, open?)
+- Valideren of de analyse breekt door het aanpassen van een getal
+
+---
+
+class: center, middle
+
+# Waar kan ETLocal heen gaan?
+
+---
+
+class: center, middle
+
+# 1. Visuele interface
+
+---
+
+# Visuele interface [1/2]
+
+- Toevoegen van meerdere lagen statische informatie
+- Toevoegen van meerdere lagen dynamische informatie (i.e. resultaten van ETM)
+(denk aan bijv. scenario report, dashboard waardes, etc.)
+
+---
+
+# Visuele interface [2/2]
+
+**Doelgroep**
+
+Lokale gemeente ambtenaar
+
+**Waarom is dit nodig?**
+
+- Het is een aangetoond gebrek in ETModel t.o.v. de 'concurrentie'
+- Gebruikers hebben m.b.v. een kaart iets meer visuele context over hun omgeving
+
+---
+
+class: center, middle
+
+# 2. Analyse
+
+---
+
+# Analyse [1/2]
+
+- Uitbreiden analyse nieuwe startwaarden
+- Alle waarden die worden aangenomen tijdens de analyse zelf moeten kunnen worden aangepast
+- De flow van de startwaarden naar de uiteindelijke huidige situatie van een scenario moet inzichtelijk worden
+
+---
+
+# Analyse [2/2]
+
+**Doelgroep**
+
+Quintellers
+
+**Waarom?**
+
+..
+
+---
+
+class: center, middle
+
+# 3. ETM Integratie
+
+---
+
+# ETM Integratie [1/2]
+
+- Verplaatsen interface onderdelen ETLocal &rarr; ETModel
+- Het mogelijk maken een huidige situatie te initialiseren voor een scenario
+  voor elke regio van een niet-lokale dataset.
+- Het dataset keuze menu moet worden vervangen met iets netters
+
+---
+
+# ETM Integratie [2/2]
+
+**Doelgroep**
+
+Quintel developers
+
+**Waarom?**
+
+Een scenario aan kunnen maken voor elke regio is nodig om ETLocal
+bruikbaar te maken en het zo nodig te maken om elke energietoekomst te kunnen
+verkennen.
+
+Het verplaatsen van alle interface elementen in ETModel is nodig voor
+de onderhoudbaarheid van de applicaties ETModel.
+
+---
+
+class: center, middle
+
+# Keuzes
+
+---
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
