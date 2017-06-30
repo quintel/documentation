@@ -26,23 +26,20 @@ class: center, middle
 
 ---
 
-# Doel van de meeting
-
-Informeren en consensus bereiken over de richting en prioriteiten van ETlocal.
-
----
-
 # Agenda
 
 1. Wat is ETLocal nu?
 2. Waar kan ETLocal heen gaan?
-3. Keuzes
+3. Beslispunten
 
 ---
 
 class: center, middle
 
 # Wat is ETLocal nu?
+
+1. Visuele interface (Huidige - en korte-termijn nieuwe functionaliteit)
+2. Dataset generator (Huidige - en korte-termijn nieuwe functionaliteit)
 
 ---
 
@@ -54,11 +51,25 @@ class: center, middle
 
 # Visuele interface [1/2]
 
-<img src="images/2.1.png" style="width:350px"/>
+<img src="images/2.1.png" style="width:350px; margin-right:40px; float: left;"/>
 
 *Wat kan het?*
 
-Plot de 7 huidige startwaarden op 3 niveau's van Nederland
+Plot 6 startwaarden ...
+
+- Electriciteitsverbruik per huishouden
+- Gasverbruik per huishouden
+- Aantal inwoners
+- Aantal auto's
+- Aantal woonhuizen
+- Dakoppervlakte beschikbaar zon
+
+
+...  op 3 niveau's van Nederland
+
+- Provincies
+- Gemeentes
+- Wijken
 
 ---
 
@@ -67,68 +78,63 @@ Plot de 7 huidige startwaarden op 3 niveau's van Nederland
 *Wat kan het nog niet?*
 
 - In/uitzoomen om een beter beeld te krijgen van visuele informatie
-- Meedere lagen selecteren
+- Het visualiseren van meerdere lagen
 - Niet mouse-overen om bijv. waardes uit te lezen
-- Legend moet beter
 - Er is geen keuzevrijheid om de kleurenschaal te bepalen (logaritmisch, lineair, etc.)
 
 ---
 
 class: center, middle
 
-# 2. Analyse
+# 2. Dataset generator
 
 ---
 
-# Analyse [1/2]
+# Dataset generator [1/4]
 
-<img src="images/3.png" style="width:350px"/>
+<img src="images/1.png" style="width:550px"/>
+
+---
+
+# Dataset generator [2/4]
 
 *Wat kan het?*
 
-- Analyseren van start waarden naar 'initializer inputs'
+- Start waarden + aannames transformeren naar 'initializer inputs'
+  - Startwaarden (bv. electriciteitsverbuik, gasverbruik, etc.)
+  - Aannames (bv. hoeveel procent electriciteit gaat naar ruimteverwarming)
+- Deze waarden + aannames vastleggen
+- Geschiedenis bijhouden wie/wat/waarom heeft aangepast (git log)
 - Exporteren 'initializer inputs' naar *bestaande* dataset ETSource
 
 ---
 
-# Analyse [2/2]
+# Dataset generator [3/4]
+
+---
+
+# Dataset generator [4/4]
+
+<img src="images/3.png" style="width:350px"/>
 
 *Wat kan het nog niet?*
 
-- Functioneert alleen als een rake task
+- Analyse niet aanroepbaar vanuit interface
 - Moet uiteindelijk aansluiten op initialiseren van huidige situatie van een scenario
-- Je kan de output niet direct testen
-
----
-
-class: center, middle
-
-# 3. Dataset editor
-
----
-
-# Dataset editor [1/2]
-
-*Wat kan het?*
-
-- Startwaardes aanpassen regio's
-- Geschiedenis bijhouden wie/wat/waarom heeft aangepast (git log)
-- Basis validaties
-
----
-
-# Dataset editor [2/2]
-
-*Wat kan het nog niet?*
-
+  - Transfomeren startwaarden &rarr; initializer inputs
+  - Schalen Nederlandse dataset
+  - Opzetten huidige situatie scenario (present)
 - Er is geen status voor een regio / dataset (bijv. frozen?, in review?, open?)
-- Valideren of de analyse breekt door het aanpassen van een getal
 
 ---
 
 class: center, middle
 
 # Waar kan ETLocal heen gaan?
+
+1. Visuele interface (Lange termijn functionaliteit)
+2. Dataset generator (Lange termijn functionaliteit)
+3. ETM Integratie (Project)
 
 ---
 
@@ -141,8 +147,7 @@ class: center, middle
 # Visuele interface [1/2]
 
 - Toevoegen van meerdere lagen statische informatie
-- Toevoegen van meerdere lagen dynamische informatie (i.e. resultaten van ETM)
-(denk aan bijv. scenario report, dashboard waardes, etc.)
+- Toevoegen van meerdere lagen dynamische informatie (i.e. results from ETM)
 
 ---
 
@@ -150,7 +155,7 @@ class: center, middle
 
 **Doelgroep**
 
-Lokale gemeente ambtenaar
+?
 
 **Waarom is dit nodig?**
 
@@ -161,11 +166,11 @@ Lokale gemeente ambtenaar
 
 class: center, middle
 
-# 2. Analyse
+# 2. Dataset generator
 
 ---
 
-# Analyse [1/2]
+# Dataset generator [1/2]
 
 - Uitbreiden analyse nieuwe startwaarden
 - Alle waarden die worden aangenomen tijdens de analyse zelf moeten kunnen worden aangepast
@@ -173,15 +178,15 @@ class: center, middle
 
 ---
 
-# Analyse [2/2]
+# Dataset generator [2/2]
 
 **Doelgroep**
 
-Quintellers
+?
 
 **Waarom?**
 
-..
+
 
 ---
 
@@ -202,24 +207,16 @@ class: center, middle
 
 # ETM Integratie [2/2]
 
-**Doelgroep**
-
-Quintel developers
-
 **Waarom?**
 
-Een scenario aan kunnen maken voor elke regio is nodig om ETLocal
-bruikbaar te maken en het zo nodig te maken om elke energietoekomst te kunnen
-verkennen.
-
-Het verplaatsen van alle interface elementen in ETModel is nodig voor
-de onderhoudbaarheid van de applicaties ETModel.
+- Alles in 1
+-
 
 ---
 
 class: center, middle
 
-# Keuzes
+# Beslispunten
 
 ---
 
