@@ -102,7 +102,7 @@ class: center, middle
 
 - Start waarden + aannames transformeren naar 'initializer inputs'
   - Startwaarden (bv. electriciteitsverbuik, gasverbruik, etc.)
-  - Aannames (bv. hoeveel procent electriciteit gaat naar ruimteverwarming)
+  - Aannames (bv. hoeveel procent electriciteit gaat naar ruimteverwarming, slider groups)
 - Deze waarden + aannames vastleggen
 - Geschiedenis bijhouden wie/wat/waarom heeft aangepast (git log)
 - Exporteren 'initializer inputs' naar *bestaande* dataset ETSource
@@ -110,6 +110,61 @@ class: center, middle
 ---
 
 # Dataset generator [3/4]
+
+Status
+
+<table cellpadding="4" style="font-size: 80%;">
+  <tr>
+    <td></td>
+    <td>Huishoudens</td>
+    <td>Gebouwen</td>
+    <td>Transport</td>
+    <td>Industrie</td>
+    <td>Landbouw</td>
+    <td>Supply</td>
+    <td>Overig</td>
+  </tr>
+  <tr>
+    <td>Startwaarden zijn aan te passen</td>
+    <td><div style="background-color: green;"><br/></div></td>
+    <td><div style="background-color: orange;"><br/></div></td>
+    <td><div style="background-color: orange;"><br/></div></td>
+    <td><div style="background-color: green;"><br/></div></td>
+    <td><div style="background-color: green;"><br/></div></td>
+    <td><div style="background-color: green;"><br/></div></td>
+    <td><div style="background-color: red;"><br/></div></td>
+  </tr>
+  <tr>
+    <td>Aannames zijn aan te passen</td>
+    <td><div style="background-color: orange;"><br/></div></td>
+    <td><div style="background-color: red;"><br/></div></td>
+    <td><div style="background-color: red;"><br/></div></td>
+    <td><div style="background-color: red;"><br/></div></td>
+    <td><div style="background-color: orange;"><br/></div></td>
+    <td><div style="background-color: red;"><br/></div></td>
+    <td><div style="background-color: red;"><br/></div></td>
+  </tr>
+  <tr>
+    <td>Moeilijkheidsgraad verbeteren huidige implementatie</td>
+    <td><div style="background-color: green;"><br/></div></td>
+    <td><div style="background-color: green;"><br/></div></td>
+    <td><div style="background-color: orange;"><br/></div></td>
+    <td><div style="background-color: red;"><br/></div></td>
+    <td><div style="background-color: orange;"><br/></div></td>
+    <td><div style="background-color: orange;"><br/></div></td>
+    <td><div style="background-color: orange;"><br/></div></td>
+  </tr>
+  <tr>
+    <td>Percentage compleet</td>
+    <td>80%</td>
+    <td>30%</td>
+    <td>30%</td>
+    <td>50%</td>
+    <td>50%</td>
+    <td>30%</td>
+    <td>0%</td>
+  </tr>
+</table>
 
 ---
 
@@ -125,6 +180,8 @@ class: center, middle
   - Schalen Nederlandse dataset
   - Opzetten huidige situatie scenario (present)
 - Er is geen status voor een regio / dataset (bijv. frozen?, in review?, open?)
+- Communiceert nog geen kwaliteit van input
+- Mist inzicht in gemaakt rekenstappen
 
 ---
 
@@ -144,23 +201,64 @@ class: center, middle
 
 ---
 
-# Visuele interface [1/2]
+# Visuele interface [1/10]
 
 - Toevoegen van meerdere lagen statische informatie
 - Toevoegen van meerdere lagen dynamische informatie (i.e. results from ETM)
 
+<!--
+  TODO: TOEVOEGEN SLIDES MET VOORBEELDEN
+-->
+
 ---
 
-# Visuele interface [2/2]
+# Visuele interface - statisch [2/10]
 
-**Doelgroep**
+*BAG panden*
 
-?
+<img src="images/6.png" style="width:450px"/>
+
+---
+
+# Visuele interface - statisch [3/10]
+
+*Agrarsich areaal Nederland*
+
+<img src="images/7.png" style="width:500px"/>
+
+---
+
+# Visuele interface - statisch [4/10]
+
+*Binnenvaart routes*
+
+<img src="images/8.png" style="width:500px"/>
+
+---
+
+# Visuele interface - statisch [5/10]
+
+*Windsnelheden boven 100m*
+
+<img src="images/9.png" style="width:500px"/>
+
+---
+
+# Visuele interface - statisch [6/10]
+
+*Potentieel warmte opslag gesloten WKO systemen per buurt*
+
+<img src="images/10.png" style="width:500px"/>
+
+---
+
+# Visuele interface [10/10]
 
 **Waarom is dit nodig?**
 
+- In het verkennende stadium van mensen behoefte aan geoegrafische context
+voorafgaand aan energetische vragen
 - Het is een aangetoond gebrek in ETModel t.o.v. de 'concurrentie'
-- Gebruikers hebben m.b.v. een kaart iets meer visuele context over hun omgeving
 
 ---
 
@@ -175,18 +273,15 @@ class: center, middle
 - Uitbreiden analyse nieuwe startwaarden
 - Alle waarden die worden aangenomen tijdens de analyse zelf moeten kunnen worden aangepast
 - De flow van de startwaarden naar de uiteindelijke huidige situatie van een scenario moet inzichtelijk worden
+- Startwaarden + aannames inladen van een andere regio
 
 ---
 
 # Dataset generator [2/2]
 
-**Doelgroep**
-
-?
-
 **Waarom?**
 
-
+?
 
 ---
 
@@ -199,8 +294,7 @@ class: center, middle
 # ETM Integratie [1/2]
 
 - Verplaatsen interface onderdelen ETLocal &rarr; ETModel
-- Het mogelijk maken een huidige situatie te initialiseren voor een scenario
-  voor elke regio van een niet-lokale dataset.
+- Een ETM hebben voor elke regio
 - Het dataset keuze menu moet worden vervangen met iets netters
 
 ---
@@ -210,13 +304,25 @@ class: center, middle
 **Waarom?**
 
 - Alles in 1
--
+- Scenarios kunnen aanmaken elke regio
 
 ---
 
 class: center, middle
 
 # Beslispunten
+
+---
+
+# Voorgesteld proces
+
+- 2 wekelijkse sprint waar ik (Gerard) aan gaat werken
+- Duidelijke deliverables (updates hierover gaan naar qi@quintel.com)
+- Ideeen / inspiratie / vragen / concerns &rarr; mail mij, plan meeting
+
+---
+
+# Voorgestelde sprint
 
 ---
 
