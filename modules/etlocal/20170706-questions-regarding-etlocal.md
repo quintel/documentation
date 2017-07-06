@@ -1,0 +1,23 @@
+# Questions regarding ETLocal
+
+- **Dataset generator**
+  - What does ETLocal need to become to be prefered above Excel?
+    - What does Excel look like currently?
+    - What is the difference between Excel and ETLocal?
+      - What if I were to create 5 datasets, how different would these 5 Excels look?
+      - What is the difference between the Excel for a:
+        - municipality?
+        - neighborhood?
+        - district?
+        - province?
+  - What are typical start values?
+    - What are you looking for?
+    - How uniform are those values?
+  - Application splits?
+    - In how many % of the cases is the Dutch standard the correct default?
+  - How stable does a dataset need to be?
+    - What if the Dutch dataset changes, does a dataset need to change with it?
+- **Visualization**
+  - How does the visualization help with starting a dataset?
+  - How does the visualization help with starting a scenario?
+  - Visualizing results of ETM?
