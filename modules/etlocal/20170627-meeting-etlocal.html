@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ETLocal - Things and stuff an other stuff</title>
+    <title>ETLocal - Meeting</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -92,12 +92,6 @@ class: center, middle
 
 # Dataset generator [1/4]
 
-<img src="images/1.png" style="width:550px"/>
-
----
-
-# Dataset generator [2/4]
-
 *Wat kan het?*
 
 - Start waarden + aannames transformeren naar 'initializer inputs'
@@ -106,6 +100,12 @@ class: center, middle
 - Deze waarden + aannames vastleggen
 - Geschiedenis bijhouden wie/wat/waarom heeft aangepast (git log)
 - Exporteren 'initializer inputs' naar *bestaande* dataset ETSource
+
+---
+
+# Dataset generator [2/4]
+
+<img src="images/1.png" style="width:550px"/>
 
 ---
 
@@ -174,14 +174,13 @@ Status
 
 *Wat kan het nog niet?*
 
-- Analyse niet aanroepbaar vanuit interface
-- Moet uiteindelijk aansluiten op initialiseren van huidige situatie van een scenario
-  - Transfomeren startwaarden &rarr; initializer inputs
-  - Schalen Nederlandse dataset
-  - Opzetten huidige situatie scenario (present)
-- Er is geen status voor een regio / dataset (bijv. frozen?, in review?, open?)
-- Communiceert nog geen kwaliteit van input
-- Mist inzicht in gemaakt rekenstappen
+- Vanuit de interface analyse aanroepen
+- Gekoppeld scenarios starten met het ETM
+- Status (bijv. frozen?, in review?, open?) voor een regio bijhouden
+- Communiceren over kwaliteit van de input
+- Inzicht geven in gemaakte rekenstappen
+- Alle mogelijke startwaarden aanpassen (bijv. isolatie)
+- Alle relevante aannames aanpassen (bijv. percentage hot water buildings)
 
 ---
 
@@ -205,10 +204,8 @@ class: center, middle
 
 - Toevoegen van meerdere lagen statische informatie
 - Toevoegen van meerdere lagen dynamische informatie (i.e. results from ETM)
-
-<!--
-  TODO: TOEVOEGEN SLIDES MET VOORBEELDEN
--->
+- Toevoegen van informatie over de lagen (bijv. bronvermelding)
+- Bijhouden bronnen lagen (ETDataset lagen)
 
 ---
 
@@ -248,7 +245,33 @@ class: center, middle
 
 *Potentieel warmte opslag gesloten WKO systemen per buurt*
 
+(reeds beschikbaar)
+
 <img src="images/10.png" style="width:500px"/>
+
+---
+
+# Visuele interface - statisch [7/10]
+
+*Locaties windturbines*
+
+<img src="images/11.png" style="width:500px"/>
+
+---
+
+# Visuele interface - statisch [8/10]
+
+*Warmtenetten*
+
+<img src="images/12.png" style="width:500px"/>
+
+---
+
+# Visuele interface - statisch [9/10]
+
+*Hoogspanning*
+
+<img src="images/13.png" style="width:500px"/>
 
 ---
 
@@ -270,8 +293,6 @@ class: center, middle
 
 # Dataset generator [1/2]
 
-- Uitbreiden analyse nieuwe startwaarden
-- Alle waarden die worden aangenomen tijdens de analyse zelf moeten kunnen worden aangepast
 - De flow van de startwaarden naar de uiteindelijke huidige situatie van een scenario moet inzichtelijk worden
 - Startwaarden + aannames inladen van een andere regio
 
@@ -281,7 +302,12 @@ class: center, middle
 
 **Waarom?**
 
-?
+- Huidige Excel methodiek:
+  - niet transparant
+  - niet schaalbaar (wat als meer dan 1000 datasets?)
+  - niet bruikbaar voor derden
+  - niet versiebeheerd
+  - geen validaties
 
 ---
 
@@ -317,12 +343,16 @@ class: center, middle
 # Voorgesteld proces
 
 - 2 wekelijkse sprint waar ik (Gerard) aan gaat werken
-- Duidelijke deliverables (updates hierover gaan naar qi@quintel.com)
-- Ideeen / inspiratie / vragen / concerns &rarr; mail mij, plan meeting
+- 2 wekelijkse sprint-meeting waarin:
+  - De deliverables worden gedemo'd
+  - Project backlog (duidelijke deliverables) afstemmen
+- Ideëen / inspiratie / vragen / concerns, loop bij mij langs
 
 ---
 
 # Voorgestelde sprint
+
+- Definieren, voorbereiden, afstemmen user stories / deliverables sprint 2
 
 ---
 
@@ -333,5 +363,24 @@ class: center, middle
       var slideshow = remark.create();
     </script>
   </body>
+
+  <!--
+    Feedback
+    - API CBS mogelijkheden?
+    - Klimaatmonitor doorgerekende deel CBS
+    - Gemeentes (grootste) hebben alleen behoefte aan industrie, landbouw
+    - Gebruikers: gemeentelijke wethouders , gea, ruimtelijke schil
+    - ETLocal, ETMoses visueel initialiseren
+    - Smart future/proofed cities (Vlaams) frontje jatten
+    - Te laten zien om te laten zien -> :(
+    - Data opschonen, mogelijk doel van applicatie
+    - Verwachte bevolking voorbeeld verschillende data voor datasets, data voor
+      scenario
+    - Visuele informatie, demo'en, etc. informatie geving.
+      - Database van een gemeente? (Downloaden?)
+        - ?
+    - Aansluiting huidige gemaakte datasets, ETLocal datasets
+    -
+    -->
 </html>
 
