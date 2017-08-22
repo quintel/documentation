@@ -81,7 +81,7 @@ class: center, middle
 # To summarize
 
 - Made it possible to download a dataset as a full zip file
-- Restructured the interface (again)
+- Restructured the interface
 - Finalized schematic of the households analysis
   - Various discussions led to finalized households analysis
 
@@ -97,20 +97,22 @@ class: center, middle
 
 # Project deliverables + preliminary planning
 
-<table cellpadding='4' border='1' style="border-collapse: collapse;">
+To eliminate the use of Excel:
+
+<table cellpadding='4' border='1' style="border-collapse: collapse; font-size: 80%;">
   <tbody>
     <tr>
       <td>
-      <td>Households</td>
-      <td>Buildings</td>
-      <td>Industry</td>
-      <td>Agriculture + Other</td>
-      <td>Supply</td>
-      <td>Transport</td>
+      <td><strong>Households</strong></td>
+      <td><strong>Buildings<strong></td>
+      <td><strong>Industry</strong></td>
+      <td><strong>Agriculture + Other</strong></td>
+      <td><strong>Supply</strong></td>
+      <td><strong>Transport</strong></td>
     </tr>
     <tr>
-      <td>Excel</td>
-      <td>0</td>
+      <td><strong>Excel</strong></td>
+      <td style="background-color: green;">1</td>
       <td>0~</td>
       <td>0?</td>
       <td>0?</td>
@@ -118,43 +120,43 @@ class: center, middle
       <td>0?</td>
     </tr>
     <tr>
-      <td>Discussion</td>
+      <td><strong>Discussion</strong></td>
+      <td style="background-color: green;">0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><strong>Schematic</strong></td>
+      <td style="background-color: green;">3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td><strong>Code design</strong></td>
+      <td style="background-color: yellow;">2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><strong>Discussion code design</strong></td>
+      <td style="background-color: yellow;">1</td>
+      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>1</td>
       <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
     </tr>
     <tr>
-      <td>Schematic</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Code design</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>Discussion code design</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>Code implementation</td>
+      <td><strong>Code implementation</strong></td>
       <td>3</td>
       <td>2</td>
       <td>2</td>
@@ -163,7 +165,7 @@ class: center, middle
       <td>2</td>
     </tr>
     <tr>
-      <td>Merging</td>
+      <td><strong>Merging</strong></td>
       <td>0.5</td>
       <td>0.5</td>
       <td>0.5</td>
@@ -172,7 +174,7 @@ class: center, middle
       <td>0.5</td>
     </tr>
     <tr>
-      <td>Bugs</td>
+      <td><strong>Bugs</strong></td>
       <td>1</td>
       <td>1</td>
       <td>1</td>
@@ -181,18 +183,31 @@ class: center, middle
       <td>1</td>
     </tr>
   </tbody>
-  <tfoot>
+  <tfoot style="background-color: #ccc;">
     <tr>
-      <td>Total</td>
-      <td>12.5</td>
-      <td>8.5</td>
-      <td>9.5</td>
-      <td>8.5</td>
-      <td>9.5</td>
-      <td>9.5</td>
+      <td><strong>Total</strong></td>
+      <td><strong>7.5</strong></td>
+      <td><strong>8.5</strong></td>
+      <td><strong>9.5</strong></td>
+      <td><strong>8.5</strong></td>
+      <td><strong>9.5</strong></td>
+      <td><strong>9.5</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Sprints</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
     </tr>
   </tfoot>
 </table>
+
+(6 sprints + 1) x 2 weeks = 14 weeks
+
+~ done by the end of november
 
 ---
 
@@ -202,8 +217,6 @@ class: center, middle
 - Households analysis
   - Technical design (3 days)
   - Actual implementation (3 days)
-
-  [ Tijd schatting aanpassen ]
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
