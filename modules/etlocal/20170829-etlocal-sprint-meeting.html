@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ETLocal - Meeting</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# ETLocal
+## Sprint meeting
+
+---
+
+# Agenda
+
+1. Overview
+2. What did we do the previous sprint?
+3. What didn't we do?
+4. What are we going to do?
+
+---
+
+# Overview:
+
+<img src="images/39.png" width="100%"/>
+
+---
+
+# What did we do the previous sprint?
+
+- Technically designing the analyzes flow
+- Cleaning up and re-evaluating the initializer inputs
+- Prototyped a more robust version of the initializer inputs
+
+---
+
+# What didn't we do?
+
+- Implement a full (households) analysis
+
+*Why?*
+
+The analysis lean heavily on the foundation of the initializer inputs.
+If the initializer inputs are instable, so will the analysis.
+
+---
+
+# (Previous) Project deliverables + preliminary planning
+
+To eliminate the use of Excel:
+
+<table cellpadding='4' border='1' style="border-collapse: collapse; font-size: 70%;">
+  <tbody>
+    <tr>
+      <td>
+      <td><strong>Households</strong></td>
+      <td><strong>Buildings<strong></td>
+      <td><strong>Industry</strong></td>
+      <td><strong>Agriculture + Other</strong></td>
+      <td><strong>Supply</strong></td>
+      <td><strong>Transport</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Excel</strong></td>
+      <td style="background-color: green;">1</td>
+      <td>0~</td>
+      <td>0?</td>
+      <td>0?</td>
+      <td>0?</td>
+      <td>0?</td>
+    </tr>
+    <tr>
+      <td><strong>Discussion</strong></td>
+      <td style="background-color: green;">0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><strong>Schematic</strong></td>
+      <td style="background-color: green;">3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td><strong>Code design</strong></td>
+      <td style="background-color: yellow;">2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><strong>Discussion code design</strong></td>
+      <td style="background-color: yellow;">1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><strong>Code implementation</strong></td>
+      <td>3</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><strong>Merging</strong></td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td><strong>Bugs</strong></td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+  <tfoot style="background-color: #ccc;">
+    <tr>
+      <td><strong>Total</strong></td>
+      <td><strong>7.5</strong></td>
+      <td><strong>8.5</strong></td>
+      <td><strong>9.5</strong></td>
+      <td><strong>8.5</strong></td>
+      <td><strong>9.5</strong></td>
+      <td><strong>9.5</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Sprints</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+    </tr>
+  </tfoot>
+</table>
+
+(6 sprints + 1) x 2 weeks = 14 weeks
+
+~ done by the end of november
+
+---
+
+# (New) Project deliverables + preliminary planning
+
+To eliminate the use of Excel:
+
+<table cellpadding='4' border='1' style="border-collapse: collapse; font-size: 70%;">
+  <tbody>
+    <tr>
+      <td>
+      <td><strong>Households</strong></td>
+      <td><strong>Buildings<strong></td>
+      <td><strong>Industry</strong></td>
+      <td><strong>Agriculture + Other</strong></td>
+      <td><strong>Supply</strong></td>
+      <td><strong>Transport</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Initializer inputs robustness</strong></td>
+      <td colspan="6" style="background-color: yellow;">Pending (5)</td>
+    </tr>
+    <tr>
+      <td><strong>General discussion analysis</strong></td>
+      <td colspan="6" style="background-color: yellow;">Pending (4)</td>
+    </tr>
+    <tr>
+      <td><strong>Code implementation</strong></td>
+      <td colspan="6" style="background-color: red;">Not started (5)</td>
+    </tr>
+    <tr>
+      <td><strong>Bugs</strong></td>
+      <td colspan="6" style="background-color: red;">Not started (5)</td>
+    </tr>
+    <tr>
+      <td><strong>Excel</strong></td>
+      <td>1</td>
+      <td>0~</td>
+      <td>0?</td>
+      <td>0?</td>
+      <td>0?</td>
+      <td>0?</td>
+    </tr>
+    <tr>
+      <td><strong>Updating nodes and edges</strong></td>
+      <td>3</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><strong>Merging</strong></td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>0.5</td>
+    </tr>
+  </tbody>
+  <tfoot style="background-color: #ccc;">
+    <tr>
+      <td><strong>Total</strong></td>
+      <td><strong>4.5</strong></td>
+      <td><strong>2.5</strong></td>
+      <td><strong>2.5</strong></td>
+      <td><strong>2.5</strong></td>
+      <td><strong>2.5</strong></td>
+      <td><strong>2.5</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Sprints</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+    </tr>
+  </tfoot>
+</table>
+
+(6 sprints + 1) x 2 weeks = 14 weeks
+
+~ done by the end of november
+
+---
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
