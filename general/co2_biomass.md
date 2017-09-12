@@ -17,13 +17,13 @@ The carbon budget which gives a likely chance (> 66%) of remaining within a temp
 <p>
 ![](../images/20160817-carbon-countdown.png)
 <p>
-*How many years of current emissions would use up the IPCC's carbon budgets for different levels of warming? [(Carbon Brief, 2014)](#references)*
+How many years of current emissions would use up the IPCC's carbon budgets for different levels of warming? [(Carbon Brief, 2014)](#references)
 <p>
 The risk of climate change depends on the cumulative CO<sub>2</sub> emissions which in turn depend on the annual greenhouse gas emissions. To remain within a temperature rise of 1.5 <sup>o</sup>C in 2050 a CO2 reduction of roughly 50% is needed.
 
 ![](../images/20160819-ipcc-risk-climate-change.png)
 <p>
-*The relationship between risks from climate change, temperature change, cumulative carbon dioxide (CO2) emissions and changes in annual greenhouse gas (GHG) emissions by 2050. [(IPCC, 2014)](#references)*
+The relationship between risks from climate change, temperature change, cumulative carbon dioxide (CO2) emissions and changes in annual greenhouse gas (GHG) emissions by 2050. [(IPCC, 2014)](#references)
 
 ### Carbon debt
 Carbon debt is created when biomass is used for energy production. In short, CO<sub>2</sub> is emitted instantaneously whilst the regrowth of biomass takes time. Furthermore direct emission levels of biomass are sometimes higher than the emissions of fossil fuels. Diminishing carbon stock by land-use change can also contribute to carbon debt. (based on: [PBL/Alterra, 2013](#references))
@@ -38,7 +38,7 @@ The typical life cycles of the three types of biomass (gaseous, liquid and sold)
 ### Gaseous biomass
 Gaseous biomass can be produced through fermentation and gasification. Most common is production of biogas from (wet) biomass through (anaerobic) fermentation. This (wet) biomass consists of organic material such as biodegradable waste, sludge, waste from landfills, industrial residues and animal waste products (for example cow manure).
 <p>
-CE Delft carried out a study regarding the sustainability of biomass. They concluded that: "*Biogas based on manure or residual flows (roadside grass, natural, organic waste and sewage sludge) scores (very) well on sustainability aspects. Biogas based on manure scores extra well because emissions in the chain are reduced. Biogas from raw materials which are also used as animal feed do not score well on sustainability criteria. It is possible that use of these commodity chains for biogas production leads to additional emissions.*" (translated [CE Delft, 2013](#references)).
+CE Delft carried out a study regarding the sustainability of biomass. They concluded that: "Biogas based on manure or residual flows (roadside grass, natural, organic waste and sewage sludge) scores (very) well on sustainability aspects. Biogas based on manure scores extra well because emissions in the chain are reduced. Biogas from raw materials which are also used as animal feed do not score well on sustainability criteria. It is possible that use of these commodity chains for biogas production leads to additional emissions." (translated [CE Delft, 2013](#references)).
 <p>
 Gasification of solid biomass is still uncommon. The climate impact may be higher than that of fermentation because the life cycle of solid biomass is longer than that of wet biomass (waste) streams. More information about the life cycle of solid biomass can be found below.
 
@@ -50,18 +50,18 @@ An important aspect of using wood for energy is that wood growth and natural dec
 <p>
 ![](../images/20160819-increment-curves-trees.png)
 <p>
-*Typical carbon increment curves for an even-aged stand of trees ([PBL/
-Alterra, 2013](#references))*
+Typical carbon increment curves for an even-aged stand of trees ([PBL/
+Alterra, 2013](#references))
 <P>
 ![](../images/20160819-rotation-cycle-trees.png)
 <P>
-*Typical specifications of various wood species ([PBL/Alterra, 2013](#references))*
+Typical specifications of various wood species ([PBL/Alterra, 2013](#references))
 <p>
 Use of pruning and waste wood accelerates the natural decomposition process. Typical half-lives for natural decay in forests ranges from 2-5 years for bark to 10-35 years for dead trees.
 
 ![](../images/20160819-decay-of-wood.png)
 <p>
-*Typical half-time values (in years) for the decay of wood residue in forests ([PBL/Alterra, 2013](#references))*
+Typical half-time values (in years) for the decay of wood residue in forests ([PBL/Alterra, 2013](#references))
 <P> 
 There are also tree-species with a short rotation. Willow has an rotation cycle of several years. Using this type of biomass however involves risk of land change (LUC and ILUC).
 
