@@ -20,7 +20,8 @@ The carbon budget which gives a likely chance (> 66%) of remaining within a temp
 How many years of current emissions would use up the IPCC's carbon budgets for different levels of warming? [(Carbon Brief, 2014)](#references)
 <p>
 The risk of climate change depends on the cumulative CO<sub>2</sub> emissions which in turn depend on the annual greenhouse gas emissions. To remain within a temperature rise of 1.5 <sup>o</sup>C in 2050 a CO2 reduction of roughly 50% is needed.
-
+<p>
+![](../images/20160819-ipcc-risk-climate-change.png)
 ![](../images/20160819-ipcc-risk-climate-change.png)
 <p>
 The relationship between risks from climate change, temperature change, cumulative carbon dioxide (CO2) emissions and changes in annual greenhouse gas (GHG) emissions by 2050. [(IPCC, 2014)](#references)
