@@ -1,12 +1,16 @@
 # Climate relevant CO<sub>2</sub> emissions from biomass
 
-Climate change is not induced by the annual CO<sub>2</sub> emissions, but by the total amount of CO<sub>2</sub> present in the air. Virtually any form of combustion contributes to the amount of CO<sub>2</sub> in the air.</p>Usually no CO<sub>2</sub> emissions are attributed to biomass as biomass absorbs as much CO<sub>2</sub> as is emitted during combustion (over the complete life cycle). The life cycle of biomass varies from a couple of months to over a century. To have a 66% chance of remaining below a temperature rise of 2 <sup>o</sup>C roughly 20 years of current emission can be emitted. Exceeding this temperature increase can have irreversible consequences. The CO<sub>2</sub> emitted by combustion of biomass is not always absorbed within a time-scale that is relevant for climate change.</p>Which part of the CO<sub>2</sub> emissions from biomass is relevant to the environment is uncertain and speculative. With the ETM the potential CO<sub>2</sub> emission from combustion of biomass can be explored. 
+Climate change is not induced by the annual CO<sub>2</sub> emissions, but by the total amount of CO<sub>2</sub> present in the air. Virtually any form of combustion contributes to the amount of CO<sub>2</sub> in the air.
+</p>
+Usually no CO<sub>2</sub> emissions are attributed to biomass as biomass absorbs as much CO<sub>2</sub> as is emitted during combustion (over the complete life cycle). The life cycle of biomass varies from a couple of months to over a century. To have a 66% chance of remaining below a temperature rise of 2 <sup>o</sup>C roughly 20 years of current emission can be emitted. Exceeding this temperature increase can have irreversible consequences. The CO<sub>2</sub> emitted by combustion of biomass is not always absorbed within a time-scale that is relevant for climate change.
+</p>
+Which part of the CO<sub>2</sub> emissions from biomass is relevant to the environment is uncertain and speculative. With the ETM the potential CO<sub>2</sub> emission from combustion of biomass can be explored. 
 <p>
 This part of the documentation provides background information on carbon budget, carbon debt, considerations for various types of biomass and policy.
 
 Background
 -------------
-###Carbon budget
+### Carbon budget
 The IPCC has quantified global **carbon budgets**, for various scenario's of climate change [(IPCC, 2013)](#references). The budgets estimate the amount of CO<sub>2</sub> we can still emit while having a likely chance of remaining within a certain level of temperature rise (1.5 <sup>o</sup>C, 2 <sup>o</sup>C, 3 <sup>o</sup>C) with respect to pre-industrial levels.
 <p>
 The carbon budget which gives a likely chance (> 66%) of remaining within a temperature rise of 2 <sup>o</sup>C will be used up with 20 years of the current annual CO<sub>2</sub> emission. 
@@ -21,10 +25,10 @@ The risk of climate change depends on the cumulative CO<sub>2</sub> emissions wh
 <p>
 *The relationship between risks from climate change, temperature change, cumulative carbon dioxide (CO2) emissions and changes in annual greenhouse gas (GHG) emissions by 2050. [(IPCC, 2014)](#references)*
 
-###Carbon debt
+### Carbon debt
 Carbon debt is created when biomass is used for energy production. In short, CO<sub>2</sub> is emitted instantaneously whilst the regrowth of biomass takes time. Furthermore direct emission levels of biomass are sometimes higher than the emissions of fossil fuels. Diminishing carbon stock by land-use change can also contribute to carbon debt. (based on: [PBL/Alterra, 2013](#references))
 
-###Land-use change
+### Land-use change
 Changes of land-use can either be direct or indirect. An example of direct land-use Change (LUC) is the cutting down of a forest to grow biomass on the created farmland. When, for example, farmland for food is converted into farmland for biomass and the food production is moved to forest-converted farmland there is Indirect Land-Use Change. (Based on: [EC, 2010](#references)). The United Nations Framework Convention on Climate Change (UNFCCC) refers to LUC and ILUC as "land-use, land-use change and forestry" (LULUCF).
 
 Types of biomass
