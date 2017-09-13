@@ -15,15 +15,19 @@ The IPCC has quantified global **carbon budgets**, for various scenario's of cli
 <p>
 The carbon budget which gives a likely chance (> 66%) of remaining within a temperature rise of 2 <sup>o</sup>C will be used up with 20 years of the current annual CO<sub>2</sub> emission. 
 <p>
+
 ![](../images/20160817-carbon-countdown.png)
+
 <p>
 How many years of current emissions would use up the IPCC's carbon budgets for different levels of warming? [(Carbon Brief, 2014)](#references)
 <p>
 The risk of climate change depends on the cumulative CO<sub>2</sub> emissions which in turn depend on the annual greenhouse gas emissions. To remain within a temperature rise of 1.5 <sup>o</sup>C in 2050 a CO2 reduction of roughly 50% is needed.
 <p>
+
 ![](../images/20160819-ipcc-risk-climate-change.png)
+
 <p>
-The relationship between risks from climate change, temperature change, cumulative carbon dioxide (CO2) emissions and changes in annual greenhouse gas (GHG) emissions by 2050. [(IPCC, 2014)](#references)
+The relationship between risks from climate change, temperature change, cumulative carbon dioxide (CO2) emissions and changes in annual greenhouse gas (GHG) emissions by 2050. [(IPCC, 2014)](#references).
 
 ### Carbon debt
 Carbon debt is created when biomass is used for energy production. In short, CO<sub>2</sub> is emitted instantaneously whilst the regrowth of biomass takes time. Furthermore direct emission levels of biomass are sometimes higher than the emissions of fossil fuels. Diminishing carbon stock by land-use change can also contribute to carbon debt. (based on: [PBL/Alterra, 2013](#references))
@@ -48,18 +52,23 @@ The raw materials for liquid biomass (corn, sugar beet, palm) are commonly grown
 ### Solid biomass
 An important aspect of using wood for energy is that wood growth and natural decay both take time whilst, when the wood is used for energy, CO<sub>2</sub> is emitted almost instantaneously. Final felling and replanting a forest, for example, reduces the uptake of CO<sub>2</sub> as mature forests grow faster than young forests. After final felling, CO<sub>2</sub> fixation rates are initially relatively low, but increase again as forests regrow. Regrowth after logging takes 20 to 100 years (for example poplar grows fast, birch and pine have a long regrowth-time).
 <p>
+
 ![](../images/20160819-increment-curves-trees.png)
+
 <p>
 Typical carbon increment curves for an even-aged stand of trees ([PBL/
 Alterra, 2013](#references))
 <P>
+
 ![](../images/20160819-rotation-cycle-trees.png)
+
 <P>
 Typical specifications of various wood species ([PBL/Alterra, 2013](#references))
 <p>
 Use of pruning and waste wood accelerates the natural decomposition process. Typical half-lives for natural decay in forests ranges from 2-5 years for bark to 10-35 years for dead trees.
 
 ![](../images/20160819-decay-of-wood.png)
+
 <p>
 Typical half-time values (in years) for the decay of wood residue in forests ([PBL/Alterra, 2013](#references))
 <P> 
