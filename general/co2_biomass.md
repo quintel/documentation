@@ -91,9 +91,8 @@ The Netherlands generally follows EU policy when it comes to sustainability. So,
 In the National Energy Accord (Nationaal Energieakkoord) was agreed that sustainability criteria will be formulated to encourage the use of biomass in coal-fired plants. It was agreed that this is done taking into account aspects such as carbon debt, ILUC and conditions for responsible forestry. In April concept regulation was submitted that restricts SDE+ subsidies to woody biomass that has been produced sustainably (<a href="#ref">EZ, 2016</a>).
 
 
-
-References
 <a name="ref"></a>
+References
 ----------
 
 
