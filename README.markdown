@@ -62,7 +62,7 @@ energy system:
 
 #### Interacting with the ETM
 
-You can interact with the ETM trough **sliders**:
+You can interact with the ETM through **sliders**:
 
 ![Active slider with share](https://f.cloud.github.com/assets/1303760/1733125/deb716b8-632f-11e3-97bd-032db6dfe9b9.png)
 
