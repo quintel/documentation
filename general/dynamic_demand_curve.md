@@ -1,6 +1,6 @@
 # Dynamic electricity demand curve
 
-The behaviour of heat pumps and electric vehiclesis modelled ecplicitely and on an hourly scale. This can be viewed in the "dynamic demand curve" chart. This document explains which profiles were used to model the behaviour of these technologies.
+The behaviour of heat pumps and electric vehicles is modelled explicitely and on an hourly scale. This can be viewed in the "dynamic demand curve" chart. This document explains which profiles were used to model the behaviour of these technologies.
 
 ![](../images/20170921_dynamic_demand_curve.png)
 
