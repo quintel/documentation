@@ -53,7 +53,7 @@ transparent present situations for usage inside of ETModel.
 [ ETSource ] ----------- |
                        | |
                        V V
-[ Front-end ] <-> [ Machinery ] <-> [ ETModel ]
+[ ETlocal front-end ] <-> [ Machinery ] <-> [ ETModel ]
 ```
 
 <hr/>
@@ -70,14 +70,14 @@ Dependencies:
 # Machinery
 
 ```
-[ Interface for ETEngine ] <-> [ Dataset ] <->* [ Input from ETLocal ]
+[ Input from ETLocal ] <-> [ Dataset ] <->* [ Interface for ETEngine ]
 ```
 
 *Problem:*
 - Both the interface for ETEngine and the input for ETlocal are 'fluid'.
 - The interface for ETEngine is being 'solidified'
   - Initializer methods (or graph methods) are called to life <span style="color:green;">✔</span>
-  - But where do they need to be set?
+  - But what do they need to set?
 
 <!--
 (in other words: how do we need to initialize the graph?)
