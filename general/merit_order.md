@@ -111,7 +111,7 @@ This can also be seen in Figure 6.: The violet and green curves are used to sati
 
 ##### Current Load Profiles
 
-The volatiles and must-runs have a-priori defined curves that deterimine their 'on-time'. The following profiles are used to determine the hourly production by scaling them with the installed capacity of the respective participant.
+The volatiles and must-runs have a-priori defined curves that determine their 'on-time'. The following profiles are used to determine the hourly production by scaling them with the installed capacity of the respective participant.
 
 -   demand industry CHPs
 -   agricultural CHPs
