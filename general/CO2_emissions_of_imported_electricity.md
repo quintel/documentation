@@ -10,12 +10,14 @@ In many cases the imported electricity also caused CO<sub>2</sub> emissions due 
 
 The default choice for imported electricity is the Dutch electricity mix: 527 gCO<sub>2</sub>/kWh or 146,39 gCO<sub>2</sub>/MJ (<a href="#ref">CBS, 2015</a>). The CBS (National statistical office) has chosen the 'integral method' to calculate the CO2 emissions of the electricity mix. 
 
-The reason to choose the Dutch average is that most datasets of the ETM are regional datasets, which do import mostly electricity from the Dutch grid, which mostly exists of the Dutch electricy mix. If you do not agree with this default value you are free to set a value yourself.
+The reason to choose the Dutch average is that most datasets of the ETM are regional datasets of the Netherlands. These regions do import mostly electricity from the Dutch grid, which mostly exists of the Dutch electricy mix. If you do not agree with this default value you are free to set a value yourself. 
 
 
 ## **Table with optional values**
 
+We offer you two tables to support your choice. Table 1 offers country specific values, and Table 2 offers carrier-technology specific values. 
 
+**Country specific values**
 The European Environment Agency offers an overview of all European Union countries and their gCO<sub>2</sub> emission per kWh. On their website you can select a specific country and you can select the average of all the 28 European Union member states in from 1990 til 2014 (<a href="#ref">EEA, 2017</a>). However if you only desire the value of 2014, then you can find it in the following table:
 
 
@@ -57,6 +59,7 @@ Table 1: Table with optional 2014-values by country, from: (<a href="#ref">EEA, 
 
 <p>
 
+**Carrier-technology specific values**
 ![](../images/20180111_carrier-technology_co2_emissions.png)
 
 
