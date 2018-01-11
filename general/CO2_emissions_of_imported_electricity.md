@@ -53,14 +53,12 @@ Sweden				| 10.5
 United Kingdom	| 388.8
 
 
-Table 1: Table with optional 2014-values by country, from: EEA, 2017, https://www.eea.europa.eu/data-and-maps/daviz/co2-emission-intensity-3#tab-googlechartid_chart_11_filters=%7B%22rowFilters%22%3A%7B%7D%3B%22columnFilters%22%3A%7B%22pre_config_ugeo%22%3A%5B%22European%20Union%20(28%20countries)%22%5D%7D%7D 
-
+Table 1: Table with optional 2014-values by country, from: (<a href="#ref">EEA, 2017</a>)
 
 
 ![](../images/Carrier-technology emissions of electricity.png)
 
-
-(<a href="#ref">Turkoni et al., 2013</a>)
+Table with carrier-technology dependent CO<sub>2</sub> emissions / kWh, from: (<a href="#ref">Turkoni et al., 2013</a>)
 
 <a name="ref"></a>
 References
