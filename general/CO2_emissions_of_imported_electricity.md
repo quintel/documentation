@@ -55,9 +55,12 @@ United Kingdom	| 388.8
 
 Table 1: Table with optional 2014-values by country, from: (<a href="#ref">EEA, 2017</a>)
 
+<p>
 
-![](../images/Carrier-technology emissions of electricity.png)
+![](../images/20160819-ipcc-risk-climate-change.png)
 
+<p>
+  
 Table with carrier-technology dependent CO<sub>2</sub> emissions / kWh, from: (<a href="#ref">Turkoni et al., 2013</a>)
 
 <a name="ref"></a>
