@@ -16,10 +16,10 @@ The reason to choose the Dutch average is that most datasets of the ETM are regi
 ## **Table with optional values**
 
 
-The European Environment Agency offers an overview of all European Union countries and their CO2 emission per kWh. On their website you can select a specific country and you can select the average of all the 28 European Union member states in from 1990 til 2014 (<a href="#ref">EEA, 2017</a>). However if you only desire the value of 2014, then you can find it in the following table:
+The European Environment Agency offers an overview of all European Union countries and their CO<sub>2</sub>/ emission per kWh. On their website you can select a specific country and you can select the average of all the 28 European Union member states in from 1990 til 2014 (<a href="#ref">EEA, 2017</a>). However if you only desire the value of 2014, then you can find it in the following table:
 
 
-Member State		| gCO2 emission / kWh
+Member State		| gCO<sub>2</sub>/ emission / kWh
 ------------- | -------------
 European Union (28 countries)| 275.9 
 Austria			| 60.1
