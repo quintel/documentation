@@ -57,7 +57,9 @@ Table 1: Table with optional 2014-values by country, from: (<a href="#ref">EEA, 
 
 <p>
 
-![](../images/20160819-ipcc-risk-climate-change.png)
+![](../images/20180111_carrier-technology_co2_emissions.png)
+
+
 
 <p>
   
