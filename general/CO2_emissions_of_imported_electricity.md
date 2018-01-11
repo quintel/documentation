@@ -57,9 +57,10 @@ United Kingdom	| 388.8
 
 Table 1: Table with optional 2014-values by country, from: (<a href="#ref">EEA, 2017</a>)
 
-<p>
 
 **Carrier-technology specific values**
+<p>
+  
 ![](../images/20180111_carrier-technology_co2_emissions.png)
 
 
