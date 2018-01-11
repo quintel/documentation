@@ -22,8 +22,8 @@ The European Environment Agency offers an overview of all European Union countri
 Table 1: Interactive table with optional values by country, from: EEA, 2017,(<a href="#ref">EEA, 2017</a>)
 
 
-![](..//images/Carrier-technology emissions of electricity.png)
 
+![](../images/20160819-ipcc-risk-climate-change.png)
 
 (<a href="#ref">Turkoni et al., 2013</a>)
 
