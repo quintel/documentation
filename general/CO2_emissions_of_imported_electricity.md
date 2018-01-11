@@ -77,4 +77,4 @@ References
 - CBS, 2015: https://www.cbs.nl/nl-nl/achtergrond/2017/06/rendementen-en-co2-emissie-elektriciteitsproductie-2015
 
 - Turconi et al., 2013: Life cycle assessment (LCA) of electricity generation
-technologies: Overview, comparability and limitations. Renewable and Sustainable Energy Reviews, 28, 555-565. DOI: 10.1016/j.rser.2013.08.013
+technologies: Overview, comparability and limitations. Renewable and Sustainable Energy Reviews, 28, 555-565. DOI: 10.1016/j.rser.2013.08.013 , see: https://refman.energytransitionmodel.com/publications/2078 
