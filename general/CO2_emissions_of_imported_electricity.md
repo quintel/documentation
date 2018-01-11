@@ -23,7 +23,7 @@ Table 1: Interactive table with optional values by country, from: EEA, 2017,(<a 
 
 
 
-![](../images/20160819-ipcc-risk-climate-change.png)
+![](../images/images/Carrier-technology emissions of electricity.png)
 
 (<a href="#ref">Turkoni et al., 2013</a>)
 
