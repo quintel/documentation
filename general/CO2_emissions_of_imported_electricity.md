@@ -19,7 +19,7 @@ The European Environment Agency offers an overview of all European Union countri
 
 <iframe width='988' height='967' src='https://www.eea.europa.eu/data-and-maps/daviz/co2-emission-intensity-3/embed-chart?chart=googlechartid_chart_11&chartWidth=975&chartHeight=600&padding=fixed&customStyle=.googlechart_view{margin-left:0px%3B}'></iframe>
 
-Table 1: Interactive table with optional values by country, from: EEA, 2017, https://www.eea.europa.eu/data-and-maps/daviz/co2-emission-intensity-3#tab-googlechartid_chart_11_filters=%7B%22rowFilters%22%3A%7B%7D%3B%22columnFilters%22%3A%7B%22pre_config_ugeo%22%3A%5B%22European%20Union%20(28%20countries)%22%5D%7D%7D 
+Table 1: Interactive table with optional values by country, from: EEA, 2017,(<a href="#ref">EEA, 2017</a>)
 
 
 ![](..//)
