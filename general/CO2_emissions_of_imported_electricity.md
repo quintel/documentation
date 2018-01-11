@@ -63,7 +63,7 @@ Table 1: Table with optional 2014-values by country, from: (<a href="#ref">EEA, 
 
 <p>
   
-Table with carrier-technology dependent CO<sub>2</sub> emissions / kWh, from: (<a href="#ref">Turkoni et al., 2013</a>)
+Table 2: with carrier-technology dependent CO<sub>2</sub> emissions / kWh, from: (<a href="#ref">Turkoni et al., 2013</a>). Note: this is data from a Life Cycle Assessment and has a larger scope than the emissions at the production plant only. 
 
 <a name="ref"></a>
 References
