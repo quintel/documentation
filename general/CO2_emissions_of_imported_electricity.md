@@ -69,4 +69,3 @@ References
 
 - Turconi et al., 2013: Life cycle assessment (LCA) of electricity generation
 technologies: Overview, comparability and limitations. Renewable and Sustainable Energy Reviews, 28, 555-565. DOI: 10.1016/j.rser.2013.08.013
-
