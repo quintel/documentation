@@ -30,9 +30,9 @@ class: center, middle
 
 0. Preface
 1. Current status
-2. Decision #1
-3. New features
-4. Future
+2. Decision
+3. Next sprint - new features
+4. Future sprints
 
 ---
 
@@ -49,17 +49,37 @@ transparent present situations for usage inside of ETModel.
 
 <a href"https://beta-local.energytransitionmodel.com/" target="_blank">https://beta-local.energytransitionmodel.com/</a>
 
+---
+
+# To summarize
+
+**Initializer methods:**
+
+- Tested and working (thanks Michiel)
+
+**ETlocal front-end:**
+
+- You can create a dataset with ETLocal
+- Refinery validates before every change to guarantee stability
+
+---
+
+# Next challenges
+
+**1) One or many versions of a region?**
+
 ETLocal is currently in a phase where a user can edit local datasets based of
 The Netherlands; one of every province, municipality, district or neighborhood.
-Everybody with an account can change it's values. This is not great and
-pretty unstable.
+Everybody with an account can change it's values. This can be improved.
+
+**2) Which attributes do we need to ask about a dataset?**
 
 Another issue is that the values in the front-end of ETLocal are currently
 unanswerable without the use of a secondary tool to calculate them.
 
 ---
 
-# Decision #1:
+# Decision:
 
 ETLocal must support it's users to create a new dataset* for an existing
 region.
@@ -86,19 +106,24 @@ default dataset'.
 
 ---
 
-# New features (1/6)
+# New features (1/4)
 
 ### ETLocal must hold a set of default values which we can call 'The Quintel default dataset'.
 
+**Conditions:**
+
+- Default users can view all *public* datasets and edit their own datasets.
+- Quintel users can view/edit *all* datasets.
+
+**Features:**
+
 - Create 2 groups 'default' and 'quintel' (being respectively non-admin, admin) **(2 hours)**.
 - Assign all current datasets to the 'Quintel' group **(2 hours)**
-- Only users who are part of the 'Quintel' group can edit 'Quintel' datasets.
-- Users who are part of the 'default' group can only 'view' the Quintel datasets.
 - Set permissions for user groups **(2 days)**
 
 ---
 
-# New features (2/6)
+# New features (2/4)
 
 ### A user must be able to set his dataset to public or private.
 
@@ -107,12 +132,12 @@ default dataset'.
 - Every cloned dataset is by default private, unless explicitly published by the user
 
 **Features:**
-- Add the possibility to switch between public/private for a dataset **(2 hours)**.
+- Add the possibility to switch between public/private for a dataset **(1 day)**.
 
 ---
 
 
-# New features (3/6)
+# New features (3/4)
 
 ### A user must be able to clone/fork these defaults into his own dataset.
 
@@ -122,16 +147,7 @@ default dataset'.
 
 ---
 
-# New features (4/6)
-
-### Depending on the group you are in, you'll have different access levels to ETLocal.
-
-- Default users can view all public datasets and edit their own datasets.
-- Quintel users can view/edit all datasets.
-
----
-
-# New features (5/6)
+# New features (4/4)
 
 ### A user must be able to destroy his own dataset.
 
@@ -176,8 +192,12 @@ default dataset'.
 
 The next sprints will be about:
 
-1. Adding basic user authorization and the possibility to clone a dataset (2 weeks)
-2. Discovering and discussing the possible transformations that are needed in order to come to a front-end which suits the needs of our users (2 weeks)
+1. Adding basic user authorization and the possibility to clone a dataset + discovering and discussing the possible transformations that are needed in order to come to a front-end which suits the needs of our users **(2 weeks)**
+2. Improving the front-end further as specified with the points from sprint 1 **(2 weeks)**
+3. **-- MVP Done --**
+4. ? **(2 weeks)**
+5. ? **(2 weeks)**
+
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
