@@ -1,4 +1,4 @@
-   # **Costs of imported electricity**
+# **Costs of imported electricity**
 
 ## **Introduction**
 When a country or region has a (temporal) higher electricity demand than production electricity needs to be imported from neighbouring countries or regions. 
@@ -6,7 +6,7 @@ When a country or region has a (temporal) higher electricity demand than product
 The imported electricity has also created costs in this neighbouring country or region. 
 
 
-##  **Default settings**
+## **Default settings**
 
 The default setting for the costs of imported electricity is the average costs of Central West European (CWE) electricity mix: 35 €/MWh or 3.5 ct/KWh. This is a rough estimate from the Quarterly Report on European Electricity Markets
 (<a href="#ref">European Commission, 2016</a>). 
