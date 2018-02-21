@@ -22,7 +22,7 @@ We offer you a chart to support your choice. Chart 1 shows the montly electricit
 <p>
 Chart 1 shows the CO2 emissions of some carrier-technology combinations.
   
-![](../images/Monthly trading Volumes and prices in Central Western Europe.png)
+![](../images/Monthly_trading_Volumes_and_prices_in_Central_Western_Europe.png)
 
 <p>
   
