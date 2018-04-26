@@ -1,8 +1,8 @@
-# Fact-sheet over energie-mix
+# Factsheet over energiemix
 
 In samenwerking met het Gelders Energieakkoord en bureau Over Morgen is het Energietransitiemodel (ETM) uitgebreid met de optie om een geautomatiseerd factsheet te produceren voor je scenario.
 De originele factsheet zoals ontworpen door Over Morgen is aangepast zodat deze beter aansluit op het ETM. 
-Deze aansluiting is dusdanig dat ETM uitkomsten worden gegroepeerd in categorieën die gehanteerd worden door Over Morgen.
+Deze aansluiting is dusdanig dat ETM-uitkomsten worden gegroepeerd in categorieën die gehanteerd worden door Over Morgen.
 
 ![Figure 1: Flexibility options selector](../images/20180423_factsheet.png)
 
@@ -16,8 +16,8 @@ Hieronder wordt per onderdeel beschreven welke keuzes er gemaakt zijn in de weer
 
 ## Grafiek 1: Energievraag eindgebruik
 
-De grafiek toont het eindgebruik van energie voor het huidige en het toekomstjaar. Met eindgebruik bedoelen we alle energie die een sector inkomt.
-Deze grafiek is zo ontworpen dat alle eindgebruik van het ETM ergens is ondergebracht.
+De grafiek toont het eindgebruik van energie voor het huidige jaar en het toekomstjaar. Met eindgebruik bedoelen we alle energie die een sector inkomt (energie 'aan de meter').
+Deze grafiek is zo ontworpen dat alle eindgebruik van een gebied in het ETM ergens is ondergebracht.
 
 Het ETM onderscheidt de volgende sectoren:
 
@@ -45,11 +45,11 @@ Deze categorieën zijn als volgt opgebouwd:
 ### Benzine / diesel / LPG
 
 Bevat de volgende dragers:
-* aardolie
-* LPG
-* Kerosine
-* Diesel
 * Benzine
+* Diesel
+* LPG
+* Aardolie
+* Kerosine
 * Zware stookolie
 * Steenkool
 * Kolengas
@@ -84,8 +84,8 @@ voor de volgende sectoren:
 ### Biomassa en -brandstof
 
 Bevat de volgende dragers:
-* Wood-pellets (en andere houtige biomassa)
-* Bioethanol
+* Houtpellets (en andere houtige biomassa)
+* Bio-ethanol
 * Biodiesel
 * Biokerosine
 * Bio-LNG
@@ -101,13 +101,13 @@ Zonthermische warmte voor zonnecollectoren.
 
 ### Elektriciteit
 
-Electriciteitsgebruik. Dit kan elektriciteit zijn die lokaal wordt opgewekt met zon PV of elektriciteit die elders wordt opgewekt.
+Elektriciteitsgebruik. Dit kan elektriciteit zijn die lokaal wordt opgewekt met zon-PV of elektriciteit die elders wordt opgewekt.
 
 ## Grafiek 2: Energiebronnen
 
-Deze grafiek toont een aantal energiebronnen welke in de sectie "Opgave per thema" verder worden uitgewerkt. 
+Deze grafiek toont een aantal energiebronnen dat in de sectie "Opgave per thema" verder wordt uitgewerkt. 
 
-NB: Deze categorieën sluiten niet aan op de primair gebruik categorieën van het ETM maar hebben afwijkende definities om de nadruk te leggen op aspecten die bureau Over Morgen in haar sessies uitlicht.
+NB: Deze categorieën sluiten niet aan op de categorieën voor primair gebruik in het ETM maar hebben afwijkende definities om de nadruk te leggen op aspecten die bureau Over Morgen in haar sessies uitlicht.
 
 De volgende categorieën worden onderscheiden:
 * Fossiel (overig)
@@ -127,22 +127,22 @@ Deze categorieën zijn als volgt opgebouwd:
 
 Bevat alle gebruik van de volgende energiedragers:
 * Aardolie
+* Benzine
+* Diesel
 * Steenkool
 * Bruinkool
 * Uraniumoxide
 * Niet-biogeen afval
-* Benzine
 * Kerosine
-* Diesel
 * Zware stookolie
 * Overige elektriciteit*
 
-\* Dit is de hoeveelheid eletriciteit die nog nodig is om aan de jaarvraag te voldoen na aftrek van opwek door zon en wind. Het ETM rekent op uurbasis uit hoeveel elektriciteit er nodig is naast zon en wind om het systeem in balans te houden (op de uren dat het niet waait en de zon niet schijnt moet ook aan de vraag worden voldaan). Om aan te sluiten bij het verhaal van Over Morgen is de elektriciteit benodigd voor deze balanshandhaving niet opgenomen in het factsheet. Met andere woorden: er is aangenomen dat elektriciteit van zon en wind kan worden opgeslagen en later kan worden ingezet. Mocht er dan toch te weinig totale elektriciteitsproductie van zon en wind zijn, dan wordt de extra benodigde elektriciteit in deze categorie meegenomen.
+\* Dit is de hoeveelheid elektriciteit die nog nodig is om aan de jaarvraag te voldoen na aftrek van opwek door zon en wind. Het ETM rekent op uurbasis uit hoeveel elektriciteit er nodig is naast zon en wind om het systeem in balans te houden (op de uren dat het niet waait en de zon niet schijnt moet ook aan de vraag worden voldaan). Om aan te sluiten bij het verhaal van Over Morgen is de elektriciteit benodigd voor deze balanshandhaving niet opgenomen in het factsheet. Met andere woorden: er is aangenomen dat elektriciteit van zon en wind kan worden opgeslagen en later kan worden ingezet. Mocht er dan toch te weinig totale elektriciteitsproductie van zon en wind zijn, dan wordt de extra benodigde elektriciteit in deze categorie meegenomen.
 
 ### Biobrandstof
 
 De volgende dragers worden samengenomen in deze categorie:
-* Bioethanol
+* Bio-ethanol
 * Biodiesel
 * Biokerosine
 * Bio-LNG
@@ -165,62 +165,62 @@ Bevat de volgende dragers:
 Bevat de volgende dragers:
 * Waterstof (gemaakt buiten de regio)
 
-Lokaal geproduceerde waterstof wordt vooralsnog niet als een 'primaire' drager gerekend. Als power-to-gas wordt toegepast, wordt de primaire drager als elektriciteit gerekend (omdat deze in de regel duurzaam wordt opgewekt). Het is ook mogelijk om stoom-methaan reforming (SMR) toe te passen om zogenaamde grijze of blauwe (met CCS) waterstof te maken. In dat geval is aardagas de voornaamste primaire drager.
+Lokaal geproduceerde waterstof wordt vooralsnog niet als een 'primaire' drager gerekend. Als power-to-gas wordt toegepast, wordt de primaire drager als elektriciteit gerekend (omdat deze in de regel duurzaam wordt opgewekt). Het is ook mogelijk om stoom-methaan reforming (SMR) toe te passen om zogenaamde grijze of blauwe (met CCS) waterstof te maken. In dat geval is aardgas de voornaamste primaire drager.
 
 ### Individuele zonthermie
 
-Dit is de warmte welke wordt opgewekt met zonnecollectoren in huishoudens en gebouwen.
+Dit is de warmte die wordt opgewekt met zonnecollectoren in huishoudens en gebouwen.
 
 ### Houtsoortige biomassa
 
 Bevat:
 * Houtpellets
-* Getorrificeerde houtpellets (welke kunnen worden ingezet als bio-kolen in bijstookcentrales)
+* Getorrificeerde houtpellets (die kunnen worden ingezet als bio-kolen in bijstookcentrales)
 
 ### Omgevingswarmte
 
-Deze categorie omvat alle omgevingswarmte/-koude die door warmtepompen is gebruikt voor ruimteverwarming, koeling en warm tapwaterbereiding. Dit omvat restwarmte uit de lucht en de ondiepe bodem maar geen aardwarmte/geothermie.
+Deze categorie omvat alle omgevingswarmte/-koude die door warmtepompen is gebruikt voor ruimteverwarming, koeling en warm tapwater. Dit omvat restwarmte uit de lucht en de ondiepe bodem maar geen aardwarmte/geothermie.
 
 NB: Omdat omgevingswarmte niet als eindgebruik wordt gerekend is deze categorie een belangrijke reden dat het totaal van de grafiek "Energievraag eindgebruik" niet overeenkomt met het totaal van de grafiek "Energiebronnen".
 
 ### Restwarmte en diepe geothermie
 
 Deze categorie bevat warmte uit:
-* Geothermie (zowel voor lokale warmtenetten in de gebouwde omgeving als de landbouwsector als centrale geothermie die kan worden ingezet in het centrale warmtenet waar ook de industrie op is aangesloten)
+* Geothermie (zowel voor lokale warmtenetten in de gebouwde omgeving, de landbouwsector en centrale geothermie die kan worden ingezet in het centrale warmtenet waar ook de industrie op is aangesloten)
 * Restwarmte*
 
 \* Onder restwarmte worden de volgende energiestromen gerekend: 
 * Warmte uit centrale elektriciteitsproductie die wordt ingevoed op het centrale warmtenet
-* Warmte uit lokale WKK centrales in gebouwde omgeving, landbouw en industrie. Het is te bestrijden dat warmte uit WKK als restwarmte moet worden gerekend. Is de hoofdtaak van de WKK om elektriciteit te maken? Dan wel.
+* Warmte uit lokale WKK-centrales in de gebouwde omgeving, landbouw en industrie. Het is te bestrijden dat warmte uit WKK als restwarmte moet worden gerekend. Is de hoofdtaak van de WKK om elektriciteit te maken? Dan wel.
 
 ### Zonnepanelen
 
-Alle elektriciteit geproduceerd met zon PV op daken en zonneweides. Ook de elektriciteit welke specifiek voor waterstofproductie wordt opgewekt valt hieronder.
+Alle elektriciteit geproduceerd met zon-PV op daken en zonneweides. Ook de elektriciteit die specifiek voor waterstofproductie wordt opgewekt valt hieronder.
 
 ### Windturbines
 
-Alle elektriciteit geproduceerd met wind op land, aan de kust en op zee. Ook de elektriciteit welke specifiek voor waterstofproductie wordt opgewekt valt hieronder.
+Alle elektriciteit geproduceerd met wind op land, aan de kust en op zee. Ook de elektriciteit die specifiek voor waterstofproductie wordt opgewekt valt hieronder.
 
 ## Opgave per thema
 
-Deze sectie van de factsheet verbindt vraag en aanbod door per thema te laten zien welke bronnen de vraag invullen en hoeveel (opgesteld) vermogen of productie-eenheden dat betekent.
-De getallen voor de thema's tellen niet op tot de categorieën uit de linker grafieken. De reden is dat bijvoorbeeld wind- of zonnestroom wordt ingezet om waterstof te maken. De betreffende energie wordt dus zowel bij Wind/Zon als bij (Herniewbaar) gas getoond.
+Deze sectie van de factsheet verbindt vraag en aanbod door per thema te laten zien welke bronnen de vraag invullen en hoeveel (opgesteld) vermogen of productie-eenheden daarvoor nodig zijn.
+De getallen voor de thema's tellen niet op tot de categorieën uit de linkergrafieken. De reden is dat bijvoorbeeld wind- of zonnestroom kan worden ingezet om waterstof of warmte te maken. De betreffende energie kan dus zowel bij de thema's Wind/Zon, (Herniewbaar) gas, Collectieve Warmte en Individuele Warmte worden getoond.
 
 Hieronder wordt per thema beschreven hoe de getallen corresponderen met de uitkomsten van het Energietransitiemodel.
 
 ### Wind
 
-Het totaal aantal Joules komt overeen met de productie van wind in de aanbod grafiek (grafiek 2).
+Het totaal aantal Joules komt overeen met de productie van wind in de aanbodgrafiek (grafiek 2).
 
 ### Zon
 
-Het totaal aantal Joules is de som van elektriciteit uit zon PV en met zonnecollectoren geproduceerde warmte.
+Het totaal aantal Joules is de som van elektriciteit uit zon-PV en warmte uit zonnecollectoren.
 
-Het aantal panelen op daken wordt bepaald door het aantal panelen met standaard afmeting 1.6 vierkante meter in de huishoudens en gebouwen sector op te tellen en af te ronden op duizendtallen. Zon PV panelen hebben een piekvermogen van 2.72 kW in het ETM. De getallen in het facthseet zijn echter aangepast zodat ze representatief zijn voor een piekvermogen van 3.5 kW welke wordt gehanteerd door Over Morgen.
+Het aantal panelen op daken wordt bepaald door het aantal panelen met standaard afmeting 1.6 vierkante meter in de huishoud- en gebouwensector op te tellen en af te ronden op duizendtallen. Zonnepanelen hebben een piekvermogen van 2.72 kW in het ETM. De getallen in het factsheet zijn echter aangepast zodat ze representatief zijn voor een piekvermogen van 3.5 kW dat wordt gehanteerd door Over Morgen.
 
-Het totale opgestelde vermogen van PV zonnepanelen bevat alle PV panelen in het ETM:
-* op huishoudens
-* op gebouwen
+Het totale opgestelde vermogen van zonnepanelen bevat alle PV-panelen in het ETM:
+* op daken bij huishoudens
+* op daken bij gebouwen
 * zonneweides
 * zonneweides voor waterstofproductie
 
@@ -229,7 +229,7 @@ Het totale opgestelde vermogen van PV zonnepanelen bevat alle PV panelen in het 
 Het totaal aantal Joules komt overeen met de post "collectieve warmte" in het eindjaar van de vraag-grafiek. Dit bevat dus alle verkochte warmte (warmte die buiten de sector zelf wordt opgewekt) plus geothermie in de landbouw. Ook WKK en ketels voor lokale warmtenetten maken hier onderdeel van uit.
 Deze warmte kan zowel worden gebruikt voor ruimterverwarming als voor de bereiding van warm tapwater.
 
-De volgende sub-categorieën worden onderscheiden:
+De volgende subcategorieën worden onderscheiden:
 * Geothermie
 * Restwarmte
 * Warmtepompen
@@ -244,11 +244,11 @@ Dit bevat geothermie in huishoudens, gebouwen, de landbouwsector en centrale geo
 In deze categorie zit warmte uit:
 * WKK voor belevering van lokale warmtenetten
 * WKK voor industrie en landbouw
-* electriciteitscentrales
+* elektriciteitscentrales
 
 #### Warmtepompen
 
-Dit bevat alle warmte geleverd door collectieve warmtepompen. 
+Deze categorie bevat alle warmte geleverd door collectieve warmtepompen. 
 
 #### Overig
 
@@ -260,7 +260,7 @@ In deze categorie wordt collectieve warmte uit de volgende technologieën sameng
 * Centrale olieketel
 * Centrale gasketel
 * Centrale afvalverbrandingsketel
-* Centrale gas back-up ketel
+* Centrale gasgestookte back-upketel
 
 ### Individuele Warmte
 
@@ -280,7 +280,7 @@ In deze sectie worden de volgende energiestromen opgeteld:
 * Warmte van individuele olieketels
 * Warmte van individuele kolengasketels
 
-Deze ketels en technologieën kunnen in de huishoudens, gebouwen, landbouw en industriesector staan.
+Deze ketels en technologieën kunnen in de huishoudens, gebouwen, landbouw en industrie staan.
 
 ### (Hernieuwbaar) Gas
 
