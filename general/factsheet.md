@@ -191,7 +191,7 @@ Deze categorie bevat warmte uit:
 
 \* Onder restwarmte worden de volgende energiestromen gerekend: 
 * Warmte uit centrale elektriciteitsproductie die wordt ingevoed op het centrale warmtenet
-* Warmte uit lokale WKK-centrales in de gebouwde omgeving, landbouw en industrie. Het is te bestrijden dat warmte uit WKK als restwarmte moet worden gerekend. Is de hoofdtaak van de WKK om elektriciteit te maken? Dan wel.
+* Warmte uit lokale WKK-centrales in de gebouwde omgeving, landbouw en industrie.
 
 ### Zonnepanelen
 
@@ -264,7 +264,7 @@ In deze categorie wordt collectieve warmte uit de volgende technologieën sameng
 
 ### Individuele Warmte
 
-Warmte kan worden gebruikt voor ruimteverwarming en voor bereiding van warm tapwater.
+Warmte kan worden gebruikt voor ruimteverwarming en voor warm tapwater.
 
 In deze sectie worden de volgende energiestromen opgeteld:
 * Warmte/koude uit individuele warmtepompen
@@ -294,19 +294,19 @@ Het totaal aantal Joules is de optelling van de volgende energiestromen:
 ### Biomassa
 
 Het totaal aantal Joules is de optelling van de volgende energiestromen:
-* Houtige biomassa (houtpellets) voor individuele ruimteverwarming en warm tapwater
-* Biobrandstoffen voor vervoer (Bio-ethanol, Biodiesel en Bio-LNG)
+* Houtige biomassa (houtpellets) voor individuele ruimteverwarming in de gebouwde omgeving
+* Biobrandstoffen voor vervoer (bio-ethanol, biodiesel en bio-LNG)
 * Overige biomassa*
 
 \* Deze categorie bevat de volgende energiestromen:
 
-* Houtige biomassa voor landbouw WKK
-* Houtige biomassa voor collectieve WKK in gebouwen
+* Houtige biomassa voor WKK in de landbouw
+* Houtige biomassa voor collectieve WKK in gebouwen (utiliteitsbouw)
 * Overig biomassagebruik in gebouwen (niet verder gedefinieerd op de energiebalans)
-* Houtige biomassa in centrale (ultra supercritische) bijstook WKK centrales
-* Houtige biomassa in centrale (ultra supercritische) bijstook electriciteitscentrales
+* Houtige biomassa in centrale (ultra superkritische) bijstook WKK-centrales
+* Houtige biomassa in centrale (ultra superkritische) bijstook elektriciteitscentrales
 * Houtige biomassa in centrale biomassaketel
 * Houtige biomassa voor koken in huishoudens
 * Houtige biomassa voor warm tapwater in huishoudens
-* Houtige biomassa in industrie (zowel energetisch als niet-energetisch)
+* Houtige biomassa in industrie
 * Houtige biomassa in de "overige" sector
