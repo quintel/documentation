@@ -1,4 +1,4 @@
-# Network impact calculation
+# Network impact calculation [UNDER CONSTRUCTION!]
 
 The network impact calculation is a module that currently only works for the Dutch version of the ETM. The calculation determines the investment required in the electricity grid depending on the choices made by the users. For example, in a scenario with a large share of electric heaters the capacity of the current electricity grid is not sufficient to transport all demand.
 

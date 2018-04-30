@@ -1,6 +1,6 @@
 # Cost calculations
 
-The Energy Transition Model calculates the total cost of the yearly energy supply for the region. The total cost is broken down in five categories: heat, electricity, fuels, non-energetic fuels, and network costs.
+The Energy Transition Model calculates the total cost of the yearly energy supply for the region. The total cost is broken down in seven categories: heat, electricity, fuels, non-energetic fuels, flexibility, hydrogen and network costs.
 
 -   The costs for electricity includes costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable.
 
@@ -9,6 +9,10 @@ The Energy Transition Model calculates the total cost of the yearly energy suppl
 -   The energetic fuel costs are based the final demand of the transportation sector and the given energy carriers costs, and refinery costs.
 
 -   The non-energetic fuel costs are calculated with the final demand of non-energetic fuels and the given energy carriers costs.
+
+-   Flexibility costs are the sum of operation and maintenance and depreciation costs for flex-options such as power-to-power and power-to-heat.
+
+-   The costs for the production and transport of hydrogen are grouped into one category. This includes operation and maintenance and depreciation costs for electrolysers and pipes.
 
 -   The network cost include the annual maintenance costs for both the electricity as the gas network, but also account for additional costs that have to be made in case the network has to be improved due to choices for specific technologies which may affect the infrastructure requirements.
 
@@ -47,6 +51,19 @@ Non-energetic fuels
 -------------------
 
 Besides the energetic use of fuels, fuels are also used non-energetically. This calculation determines the costs based on the final demand of non-energetic use of fuels in all sectors. Multiplied with the given energy carriers costs, this results in the total costs for non-energetic fuels.
+
+Flexibility
+-----------
+
+Flexibility costs are the sum of operation and maintenance and depreciation costs for flex-options such as power-to-power and power-to-heat. Power-to-gas is included in the cost of hydrogen category.
+
+Hydrogen
+--------
+
+The costs of hydrogen are the sum of the costs of
+* Hydrogen production technologies such as power-to-gas using dedicated solar of wind farms and steam methane reforming (SMR)
+* Hydrogen transport options including trucks and pipelines
+* Imported hydrogen which has a price which can be adjusted by the user
 
 Network
 -------
