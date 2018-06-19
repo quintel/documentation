@@ -28,7 +28,7 @@ The change in the peak load is called the peak load delta. The network impact ca
 
 **Capacity**
 
-Cables and transformers have a maximum capacity; they can only carry so much electricity at any instant. Capacity is expressed in Volt-Ampere, the units for complex power. In the ETM Mega Volt-Amperes (MVA) are often used. For the ETM it is sufficient to consider the complex power (MVA) and the real power (MW) although in reality the complex power is slightly larger than the real power.
+Cables and transformers have a maximum capacity; they can only carry so much electricity at any instant. Capacity is expressed in Volt-Ampere, the units for complex power. In the ETM Mega Volt (MV) is often used. For the ETM it is sufficient to consider the real power (MW) although in reality the complex power Mega Volt-Ampere (MVA) and is slightly larger than the real power.
 
 
 ## Calculation in steps:
