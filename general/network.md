@@ -56,10 +56,12 @@ The second step in the netwerk calculation is the peak load calculation per net 
 In the dataset which describes a region there are step sizes defined per net level. This means that when capacity needs to be built, that it is built with a certain capacity step. Per net level the following steps are followed to calculate the required capacity: 
 
 *	Calculation of capacity of net present, by using a given % of spare capacity:
-Net capacity present = net peak load present / (100% - net spare capacity)
+
+	* Net capacity present = net peak load present / (100% - net spare capacity)
 
 *	IF the future peak is larger than the usable capacity:
-IF (net level peak load future > net level capacity present),
+
+	* IF (net level peak load future > net level capacity present),
 
 *	THEN calculate the new capacity of the future net, with taking in account certain step sizes: 
 net level capacity future = net level capacity present + net level capacity per step size * net level new step sizes needed
