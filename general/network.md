@@ -53,6 +53,8 @@ The second step in the netwerk calculation is the peak load calculation per net 
 *	MV/HV transformers: The used capacity for the LV/MV transformer is equal to the needed capacity for the MV net.
 *	HV-net: The used capacity for the HV network is calculated by the max total demand or total supply on the HV level. A net calculation would always be '0', because the dispatchables would fill up all differences.
 
+![](../images/net_loads.jpg " net_loads.jpg")
+
 
 ### Step 3: Required net calculation
 In the dataset which describes a region there are step sizes defined per net level. This means that when capacity needs to be built, that it is built with a certain capacity step. Per net level the following steps are followed to calculate the required capacity: 
