@@ -4,6 +4,15 @@ The network impact calculation is a module that currently only works for the Dut
 
 The results of the network impact calculation are displayed in a chart in the front end of the model (‘Required additional infrastructure investments’). This chart shows the total additional investment required in the electricity grid for the current scenario. In addition, the annualized investment costs including operation and maintenance costs and interest for the required network expansion are  included in the costs dashboard item in the front end of the model.
 
+This network calculation is commissioned and supervised by Netbeheer Nederland.
+
+##Goal & Scope:
+*	The network calculation in the Energy transition model must provide an initial insight into the grid reinforcement associated with an energy scenario.
+
+*	The target group of the network calculation is the average user of the ETM.
+
+*	The network calculation does not have the goal of achieving the same level of detail as the tools of different network operators.
+
 Network calculation definitions
 -------------------------------
 
@@ -25,59 +34,48 @@ The required network expansion is determined by finding the required network cap
 
 Cables and transformers have a maximum capacity; they can only carry so much electricity at any instant. Capacity is expressed in Volt-Ampere, the units for complex power. In the ETM Mega Volt-Amperes (MVA) are often used. For the ETM it is sufficient to consider the complex power (MVA) and the real power (MW) although in reality the complex power is slightly larger than the real power.
 
-**Simultaneousness**
 
-Each technology has a certain peak load; however these peak loads do not occur at the same time. Therefore to describe the overlap between peak loads the term simultaneousness is used. Simultaneousness is the probability that two peaks fall in the same time. Example: Electric vehicles have a simultaneousness of ~25% in the summer and winter evenings periods. This is because not everyone will charge their electric vehicle at the same time. Heat pumps on the other hand have a simultaneousness of 100%, this is because it is certain that on a very cold day all the heat pumps will be on at the same time.
 
-Network calculation basics
---------------------------
+##Calculation in steps:
+The network calculation consists of four different steps: Dynamic demand curve, peak load calculation, required net calculation, and cost calculation. 
 
-Unlike most calculations in the ETM, this one involves load on the grid, not energy flow through the grid. For this reason, all calculations are performed in the query layer, not in the graph. To calculate the required investment the ETM uses a model of the Dutch electricity grid consisting of six levels, a simplified version of the actual electricity grid.
+###Step 1: Dynamic demand curve
+The first step of the network calculation is the addition of the new technologies to the dynamic demand curve. We have the hourly profiles of the technologies and ordered these profiles to different net levels. 
 
-The six levels that are defined are: Low voltage network (LV network), Medium/Low voltage transformer (MV/LV transformer), Medium voltage distribution network (MV distribution network or MV-D network), Medium voltage transport network (MV transport network or MV-T network), High/Medium voltage transformer (HV/MV transformer), and High voltage network (HV network).
 
-The following figure shows a schematic of the electricity grid and the model considered by the ETM. ![](../images/Schematic_of_electricity_grid.jpg "fig:Schematic of electricity grid.jpg")
+ 
+###Step 2: Peak load calculation per net level
+The second step in the netwerk calculation is the peak load calculation per net level (LV, LV/MV, MV, MV/HV, and HV). With this calculation we want to find the used capacity of the network.
 
-In reality each voltage level consists of many individual assets (cable or transformers). These assets do not have the same degree of occupancy; some will have hardly any available capacity, while others have ample. Since we cannot model each individual asset, we have grouped the assets in a representative amount of bins, each bin representing an identical amount of capacity. We assign an average availability to each of the capacity bins in that voltage level. We then distribute the peak load evenly over the bins and determine for each bin how much capacity needs to be added. The total required additional capacity is the sum of these extra capacities per bin.
+*	LV-net: The used LV capacity is calculated by the maximum net peak on the LV net. This is the hour that the difference between supply and demand is the largest.
+*	LV/MV transformers: The used capacity for the LV/MV transformer is equal to the needed capacity for the LV net.
+*	MV-net: The used capacity of the MV network is calculated by the supply and demand directly at the MV level. This is the same as the calculation at the LV net, except that this also includes the hourly residual demand-supply from the LV net.  
+*	MV/HV transformers: The used capacity for the LV/MV transformer is equal to the needed capacity for the MV net.
+*	HV-net: The used capacity for the HV network is calculated by the max total demand or total supply on the HV level. A net calculation would always be '0', because the dispatchables would fill up all differences.
 
-To calculate the network impact both a bottom up and a top down calculation are used. The bottom up calculation is used to calculate the impact on the LV network up to and including the HV/MV transformer and the top down calculation is used for the impact on the HV network.
 
-Network impact bottom up calculation
-------------------------------------
+###Step 3: Required net calculation
+In the dataset which describes a region there are step sizes defined per net level. This means that when capacity needs to be built, that it is built with a certain capacity step. Per net level the following steps are followed to calculate the required capacity: 
 
-The bottom up calculation is used to calculate the impact of a user's scenario on the LV network up to and including the HV/MV transformer level.
+*	Calculation of capacity of net present, by using a given % of spare capacity:
+Net capacity present = net peak load present / (100% - net spare capacity)
 
-The approach assumes that the networks are connected in linear fashion and that any electricity produced at the lowest level flows up through the higher levels. This implies that for each level it is necessary to consider what the impact is at the current level as well as what the impact is of the flow of electricity from lower levels. This concept is depicted in the following figure:
+*	IF the future peak is larger than the usable capacity:
+IF (net level peak load future > net level capacity present),
 
-![](../images/Network_bottom_up_calculation.jpg " Network bottom up calculation.jpg")
+*	THEN calculate the new capacity of the future net, with taking in account certain step sizes: 
+net level capacity future = net level capacity present + net level capacity per step size * net level new step sizes needed
 
-To calculate the impact at a given level it is necessary to know what technologies are found at that level. The impact is determined by calculating the peak load deltas of relevant technologies and determining whether the network needs to be expanded or not. The following schematic and the explanation following shows how the calculation works:
+	* net level capacity per step size = A fixed step size when you need to increase the capacity of the net. 
 
-![](../images/Network_example_calculation.jpg "Network example calculation.jpg")
+	* net level new step sizes needed = The CEIL of: (net level peak load future - net level capacity present) / net level capacity per step size
 
-1. The technologies that affect the electricity grid (such as heat pumps, solar panels, electric vehicles, etc.) are connected to a specific voltage level. For each technology the delta peak load of a single technology is calculated and multiplied by the simultaneousness. These technologies include both supply and demand technologies.
+###Step 4: Cost calculation
+The costs calculation calculates the total investment costs and the yearly costs of capital, operation and maintenance (CAPEX and OPEX).
 
-2. The peak loads for the supply and demand technologies are summed up.
+The costs calculation uses two main inputs for CAPEX: 
+*	Total built capacity: The former capacity calculation offers the total built capacity per net level. This built capacity is the input for the costs calculation.
+*	Costs per capacity: In the dataset which describes a region there are costs per step sizes defined per net level. This means that when capacity needs to be built, that a single step has certain in euro per KW.
 
-3. For each level of the electricity network a total capacity and an occupied capacity are defined. These capacities are added up to give the total capacity for that voltage level. As described above, the assets in each voltage level are binned into a representative number of bins with equal capacity and per bin the average availability is defined.
+These two inputs multiplied give the total investment costs. Together with the lifetime and the weighted average costs of capital, the yearly costs of capital are calculated. When the operation and maintenance costs are added the total yearly costs of the electricity new are calculated per net level. 
 
-4. The peak load as derived in step 2 is divided equally over the bins mentioned in step 3 and for each bin we determine if there is still enough available capacity to facilitate the peak load. If not the assets in that bin will be expanded by the lacking capacity.
-
-5. The required investment is calculated by multiplying the difference in capacity by the network expansion coefficients.
-
-6. To calculate the impact at the next level the impact of the previous level is taken into account along with the simultaneousness.
-
-Network top down calculation
-----------------------------
-
-The second part of the network impact calculation is the top down calculation used to calculate the impact on the HV network. Since central production technologies such as coal and nuclear power plants are so large it is almost always necessary to invest in the HV network. Therefore, for the top down calculation a different approach is used.
-
-The following rules of thumb provided by TenneT are used to determine the required investment in the HV network based on the number of megawatts of installed capacity.
-
-- On the HV network, 1600MW can be added without requiring additional investments.
-
-- If the newly installed capacity is higher than 1600MW, then the costs for network expansion are 20% of the installed capacity. For example: If 2000MW is installed, the network costs are 400MEuro.
-
-- Additionally, if the total decentral capacity is larger than 30GW the costs are 25% instead 20%.
-
-- For import and export the available capacity is 4200MW. If the total import or export is greater than this value, the extra required capacity is determined by considering interconnectors as power plants with a capacity of 400MW and a capacity factor of 62%.
