@@ -26,10 +26,6 @@ Peak load refers to the maximum load that occurs in a given period of time. In t
 
 The change in the peak load is called the peak load delta. The network impact calculation is a comparison calculation; the required network expansion is determined by how much the peak load changes with respect to the current situation.
 
-**(Network) Impact**
-
-The required network expansion is determined by finding the required network capacity (MVA) necessary to meet loads in the future scenario. A higher impact therefore means a larger capacity of cables and transformers is required in a given scenario. In the ETM impact is often expressed in Euro by multiplying the required capacity by the cost coefficients (EUR/MVA).
-
 **Capacity**
 
 Cables and transformers have a maximum capacity; they can only carry so much electricity at any instant. Capacity is expressed in Volt-Ampere, the units for complex power. In the ETM Mega Volt-Amperes (MVA) are often used. For the ETM it is sufficient to consider the complex power (MVA) and the real power (MW) although in reality the complex power is slightly larger than the real power.
