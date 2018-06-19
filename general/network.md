@@ -58,6 +58,9 @@ In the dataset which describes a region there are step sizes defined per net lev
 *	Calculation of capacity of net present, by using a given % of spare capacity:
 
 	* Net capacity present = net peak load present / (100% - net spare capacity)
+	
+	![](../images/spare_capacity.jpg " spare_capacity.jpg")
+
 
 *	IF the future peak is larger than the usable capacity:
 
@@ -78,4 +81,7 @@ The costs calculation uses two main inputs for CAPEX:
 *	**Costs per capacity**: In the dataset which describes a region there are costs per step sizes defined per net level. This means that when capacity needs to be built, that a single step has certain in euro per KW.
 
 These two inputs multiplied give the total investment costs. Together with the lifetime and the weighted average costs of capital, the yearly costs of capital are calculated. When the operation and maintenance costs are added the total yearly costs of the electricity new are calculated per net level. 
+
+
+![](../images/overview_network_cost_calculation.jpg " overview_network_cost_calculation.jpg")
 
