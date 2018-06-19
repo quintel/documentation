@@ -6,7 +6,7 @@ The results of the network impact calculation are displayed in a chart in the fr
 
 This network calculation is commissioned and supervised by Netbeheer Nederland.
 
-##Goal & Scope:
+## Goal & Scope:
 *	The network calculation in the Energy transition model must provide an initial insight into the grid reinforcement associated with an energy scenario.
 
 *	The target group of the network calculation is the average user of the ETM.
@@ -35,16 +35,14 @@ The required network expansion is determined by finding the required network cap
 Cables and transformers have a maximum capacity; they can only carry so much electricity at any instant. Capacity is expressed in Volt-Ampere, the units for complex power. In the ETM Mega Volt-Amperes (MVA) are often used. For the ETM it is sufficient to consider the complex power (MVA) and the real power (MW) although in reality the complex power is slightly larger than the real power.
 
 
-
-##Calculation in steps:
+## Calculation in steps:
 The network calculation consists of four different steps: Dynamic demand curve, peak load calculation, required net calculation, and cost calculation. 
 
-###Step 1: Dynamic demand curve
+### Step 1: Dynamic demand curve
 The first step of the network calculation is the addition of the new technologies to the dynamic demand curve. We have the hourly profiles of the technologies and ordered these profiles to different net levels. 
 
-
  
-###Step 2: Peak load calculation per net level
+### Step 2: Peak load calculation per net level
 The second step in the netwerk calculation is the peak load calculation per net level (LV, LV/MV, MV, MV/HV, and HV). With this calculation we want to find the used capacity of the network.
 
 *	LV-net: The used LV capacity is calculated by the maximum net peak on the LV net. This is the hour that the difference between supply and demand is the largest.
@@ -54,7 +52,7 @@ The second step in the netwerk calculation is the peak load calculation per net 
 *	HV-net: The used capacity for the HV network is calculated by the max total demand or total supply on the HV level. A net calculation would always be '0', because the dispatchables would fill up all differences.
 
 
-###Step 3: Required net calculation
+### Step 3: Required net calculation
 In the dataset which describes a region there are step sizes defined per net level. This means that when capacity needs to be built, that it is built with a certain capacity step. Per net level the following steps are followed to calculate the required capacity: 
 
 *	Calculation of capacity of net present, by using a given % of spare capacity:
@@ -70,12 +68,12 @@ net level capacity future = net level capacity present + net level capacity per 
 
 	* net level new step sizes needed = The CEIL of: (net level peak load future - net level capacity present) / net level capacity per step size
 
-###Step 4: Cost calculation
+### Step 4: Cost calculation
 The costs calculation calculates the total investment costs and the yearly costs of capital, operation and maintenance (CAPEX and OPEX).
 
 The costs calculation uses two main inputs for CAPEX: 
-*	Total built capacity: The former capacity calculation offers the total built capacity per net level. This built capacity is the input for the costs calculation.
-*	Costs per capacity: In the dataset which describes a region there are costs per step sizes defined per net level. This means that when capacity needs to be built, that a single step has certain in euro per KW.
+*	**Total built capacity**: The former capacity calculation offers the total built capacity per net level. This built capacity is the input for the costs calculation.
+*	**Costs per capacity**: In the dataset which describes a region there are costs per step sizes defined per net level. This means that when capacity needs to be built, that a single step has certain in euro per KW.
 
 These two inputs multiplied give the total investment costs. Together with the lifetime and the weighted average costs of capital, the yearly costs of capital are calculated. When the operation and maintenance costs are added the total yearly costs of the electricity new are calculated per net level. 
 
