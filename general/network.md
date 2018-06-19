@@ -41,6 +41,8 @@ The network calculation consists of four different steps: Dynamic demand curve, 
 ### Step 1: Dynamic demand curve
 The first step of the network calculation is the addition of the new technologies to the dynamic demand curve. We have the hourly profiles of the technologies and ordered these profiles to different net levels. 
 
+![](../images/dynamic_demand_lv.jpg " dynamic_demand_lv.jpg")
+![](../images/dynamic_demand_hv.jpg " dynamic_demand_hv")
  
 ### Step 2: Peak load calculation per net level
 The second step in the netwerk calculation is the peak load calculation per net level (LV, LV/MV, MV, MV/HV, and HV). With this calculation we want to find the used capacity of the network.
