@@ -69,7 +69,7 @@ In the dataset which describes a region there are step sizes defined per net lev
 *	THEN calculate the new capacity of the future net, with taking in account certain step sizes: 
 net level capacity future = net level capacity present + net level capacity per step size * net level new step sizes needed
 
-	* net level capacity per step size = A fixed step size when you need to increase the capacity of the net. 
+	* net level capacity per step size = A fixed step size when you need to increase the capacity of the net. This step size is based on 2 KW extra capacity per household. The steps at the lv net are based on 100 houses (200 KW), the mv net on 1000 household (2 MW), and the hv net on 10.000 households (20 MW). 
 
 	* net level new step sizes needed = The CEIL of: (net level peak load future - net level capacity present) / net level capacity per step size
 
