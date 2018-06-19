@@ -59,7 +59,7 @@ In the dataset which describes a region there are step sizes defined per net lev
 
 	* Net capacity present = net peak load present / (100% - net spare capacity)
 	
-	![](../images/spare_capacity.jpg " spare_capacity.jpg")
+	![](../images/total_capacity.jpg " total_capacity.jpg")
 
 
 *	IF the future peak is larger than the usable capacity:
