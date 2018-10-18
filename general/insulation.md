@@ -18,7 +18,7 @@ We have based the insulation savings, costs and employment on the following publ
 and the following websites:
 
 -   [www.wbs-ltd.co.uk](http://www.wbs-ltd.co.uk/wetherby-systems/system-components/insulants/)
--   [www.isobouw.nl](http://www.isobouw.nl/File.aspx?id=2e2903b1-9413-455a-92e5-23446ca2a12b)
+-   www.isobouw.nl
 
 Modeling
 --------
@@ -29,7 +29,7 @@ In this section we describe the modeling methods used for our insulation impleme
 
 ![Figure 2: Insulation slider for buildings.](../images/Sliders_buildings.png "Figure 2: Insulation slider for buildings.")
 
-The R-value is a measure for the quality of the insulation of a building (or house). It is **inversely proportional** to the 'leakiness' factor U (Also see [http://en.wikipedia.org/wiki/R-value\_(insulation) Wikipedia](http://en.wikipedia.org/wiki/R-value_(insulation) Wikipedia "wikilink")):
+The R-value is a measure for the quality of the insulation of a building (or house). It is **inversely proportional** to the 'leakiness' factor U (Also see [Wikipedia about R-value insulation](http://en.wikipedia.org/wiki/R-value_(insulation))):
 
 `  R = 1 / U.                                (1)`
 
