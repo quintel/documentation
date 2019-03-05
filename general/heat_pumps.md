@@ -1,6 +1,6 @@
 # Heat pumps
 
-In 2017 improvements to the way heat pumps are modelled in the ETM have been implemented. These improvements include temperature dependency of the COP of heat pumps air and hybrid heat pumps and the addition of buffers for hot water and space heating. For hybrid heat pumps (HHP) the user can use sliders that determine when the HHP switches to gas. 
+In 2017 improvements to the way heat pumps are modelled in the ETM have been implemented. These improvements include temperature dependency of the COP of heat pumps air and hybrid heat pumps and the addition of buffers for hot water and space heating. For hybrid heat pumps (HHP) the user can use sliders that determine when the HHP switches to gas or hydrogen. 
 
 ## Temperature dependency of COP
 Heat pumps extract heat from air (HHP and heat pump air) or water (heat pump ground). The coefficient of performance (COP) is influenced by the temperature of the source from which heat is extracted. 
@@ -37,17 +37,19 @@ More information about the sources behind specifications of heat pump ground can
 ### Space heating - Hybrid heat pumps
 For temperature dependency of COP of HHP's the same parameters are used as for heat pump air.
 
-More information about the sources behind specifications of hybrid heat pumps ground can be found here: [Documentation hybrid heat pump - space heating](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_space_heater_hybrid_heatpump_air_water_electricity.converter.xlsx), and here: [Documentation hybrid heat pump - hot water](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_water_heater_hybrid_heatpump_air_water_electricity.converter.xlsx)
+More information about the sources behind specifications of hybrid heat pumps (on gas) ground can be found here: [Documentation hybrid heat pump (gas) - space heating](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_space_heater_hybrid_heatpump_air_water_electricity.converter.xlsx), and here: [Documentation hybrid hydrogen heat pump (gas) - hot water](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_water_heater_hybrid_heatpump_air_water_electricity.converter.xlsx)
+
+More information about the sources behind specifications of hybrid heat pumps (on hydrogen) ground can be found here: [Documentation hybrid heat pump (hydrogen) - space heating](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity.converter.xlsx), and here: [Documentation hybrid hydrogen heat pump (hydrogen) - hot water](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_water_heater_hybrid_hydrogen_heatpump_air_water_electricity.converter.xlsx)
 
 
 
 **Threshold-COP**
 
-The COP of (hybrid) heat pumps is dependent of ambient temperature. When COP is low is can be desirable (for example for financial reasons) to only use the gas part of the hybrid heat pump. 
+The COP of (hybrid) heat pumps is dependent on ambient temperature. When the COP is low it can be desirable (for example for financial reasons) to only use the gas or hydrogen part of the hybrid heat pump. 
 <p>
-The default threshold COP represents using the electric part of the hybrid heat pump maximally for space heating and using gas for hot water. 
+The default threshold COP represents using the electric part of the hybrid heat pump maximally for space heating and using gas or hydrogen for hot water. 
 
-An other option is to *optimize the HHP financially* for the user. With the following assumptions:
+Another option is to *optimize the HHP (on gas) financially* for the user. With the following assumptions:
 
 - Gas price 0.065 euro/kWh
 - Electricity price 0.22 euro/kWh
@@ -58,6 +60,8 @@ this leads to cut off COP's of:
 
 - Cut-off COP hot water = 3.05
 - Cut-off COP space heating = 3.61 `
+
+For the HHP (on hydrogen) we adopted these cut-off COP's for hot water and space heating.
 
 
 ### Space heating - Heat pump ground
@@ -80,7 +84,7 @@ In the future buffers can also be used to store larger amounts of heat.
 ### Hybrid heat pump
 Most hybrid heat pumps are self-regulating. They don't need a buffer to protect the compressor.
 
-With the default settings the hybrid heat pump supplies hot water with gas. In that case a buffer for hot water is not needed.
+With the default settings the hybrid heat pump supplies hot water with either gas or hydrogen. In that case a buffer for hot water is not needed.
 By lowering the threshold COP the electric part of the hybrid heat pump can also supply hot water. In that case it is advised to install a buffer for hot water (typically 5 kWh).
 
 ## References
