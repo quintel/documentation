@@ -3,7 +3,9 @@ Introduction
 
 Insulation can be used to bring down the amount of heating we need for our houses to stay comfortable. The ETM allows you to choose insulation levels for each housing type and for all buildings (in the Commercial and Public Services, shortly CaPS, sector) separately. This page discusses the modeling methods used for the implementation of insulation in the ETM and the data that underlies the modeling.
 
-![Figure 1: Insulation sliders households.](../images/insulation_sliders_households.png "Figure 1: Insulation sliders households")
+
+![Figure 1: Insulation sliders households](../images/insulation_sliders_households.png "Figure 1: Insulation sliders households")
+
 
 ![Figure 2: Insulation sliders buildings](../images/insulation_sliders_buildings.png "Figure 2: Insulation sliders buildings")
 
