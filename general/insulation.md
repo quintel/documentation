@@ -20,11 +20,11 @@ We have distinguished five housing types for modelling heat demand in households
 Heat demand reduction
 --------
 
-There are five insulation sliders for each housing type and there is one insulation slider for all buildings in general. The insulation sliders set the heat demand reduction, which is the fraction of heat demand that is saved through insulation. We derive the heat demand reduction from the Energie-Index (EI) of the houses and buildings within a region, which is retrieved from BAG-data for the Netherlands. However, the mapping between heat demand reduction and the EI is ambiguous, because the EI does not only depend on the insulation level. Instead it is based on 150 different factors (source: [RVO](https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/gebouwen/wetten-en-regels-gebouwen/bestaande-bouw/energie-index)), including the presence of solar panels or the type of heating technology installed, which both do not influence the heat demand of a building. Additionally, the EI is not definitive for many houses yet.
+There are five insulation sliders for each housing type and there is one insulation slider for all buildings in general. The insulation sliders set the heat demand reduction, which is the fraction of heat demand that is saved through insulation. We derive the heat demand reduction from the "Energie-Index" (EI) of the houses and buildings within a region, which is retrieved from BAG-data for the Netherlands. The EI represents the energy performance of the house/buildings: how energy-efficient is it? Unfortunately, the mapping between heat demand reduction and the EI is ambiguous, because the EI does not only depend on the insulation level. Instead it is based on 150 different factors (source: [RVO](https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/gebouwen/wetten-en-regels-gebouwen/bestaande-bouw/energie-index)), including the presence of solar panels or the type of heating technology installed, which both do not influence the heat demand of a building. Additionally, the EI is not definitive for many houses yet. Energy labels are the simplified version of the EI.
 
-Despite the above reasoning, we chose to use the EI, because there is no other data available. It still gives a reasonable insight into the average insulation level of a region. This is the mapping that we used to translate the the EI into a heat demand reduction for each housing type relative to a label G house:
+Despite the above reasoning, we chose to use the EI, because there is no other data available. It still gives a reasonable insight into the average insulation level of a region. This is the mapping that we used to translate the the EI into a heat demand reduction for each housing type relative to the lowest possible energy label G:
 
-| Energy label |	Energie-Index | Detached | Corner| Terraced | Semi-detached | Apartement |
+| Energy label | Energie-Index | Detached | Corner| Terraced | Semi-detached | Apartement |
 | ---- | ----|---- |---- | --- |---|--- |
 | G	| > 2.7 |	0% | 	0% |	0% |	0% |	0% |
 | F |	2.41 - 2.7 |	4% | 	3% |	3% |	4% | 3% |
@@ -38,7 +38,7 @@ Despite the above reasoning, we chose to use the EI, because there is no other d
 | A+++ |	< 0.4 | 67% |  69% | 69% |	69% | 67% |
 
 
-For utility buildings we calculated the heat demand reduction relative to a label E building:
+For utility buildings we calculated the heat demand reduction relative to a label E building, because there was not sufficient data available for lower energy levels:
 
 | Energy label | Energie-Index | Buildings |
 | ------ | ------ | ------ |
@@ -72,14 +72,14 @@ The insulation costs for houses are based on the Ecofys report ['De systeemkoste
 
 ![Figure 4: Insulation costs existing houses](../images/insulation_costs_existing_houses.png "Figure 4: Insulation costs existing houses")
 
-When the number of houses increases for a certain housing type, the newly built insulation costs are taken into account for these newly built houses. If the insulation level of that housing type is not set on "high" insulation, we use interpolated insulation costs. The insulation costs in the table below only include the materials used.
+When the number of houses increases for a certain housing type, the newly built insulation costs are taken into account for these newly built houses. If the insulation level of that housing type is not set on "high" insulation, we use interpolated insulation costs. The insulation costs in the table below only include the materials used (so cost of labor are not included).
 
 ![Figure 5: Insulation costs newly built houses](../images/insulation_costs_new_houses.png "Figure 5: Insulation costs newly built houses")
 
 Low, medium and high insulation in the report is roughly specified as:
 ![Figure 6: Insulation levels Ecofys](../images/insulation_levels_Ecofys.png "Figure 6: Insulation levels Ecofys")
 
-To link the insulation costs to specific heat demand reductions we used [ECN heat demand profiles](https://github.com/quintel/modeling_experiments/blob/master/heat_demand_profiles/input_data/Ecofys_ECN_heating_profiles.csv) that have been used for the Ecofys study. We summed the total heat demand for each insulation level and each housing type and then calculated the heat demand reduction. The calculation resulted in the following mapping between low/medium/high insulation and heat demand reduction:
+To link the insulation costs to specific heat demand reductions we used [ECN heat demand profiles](https://github.com/quintel/modeling_experiments/blob/master/heat_demand_profiles/input_data/Ecofys_ECN_heating_profiles.csv) that have been used for the Ecofys study. These heat demand profiles are available for each housing type and the three insulation levels. We first summed the total heat demand per year for each insulation level and each housing type. Then we calculated the heat demand reduction for each housing type relative to the heat demand of the low insulated house. The calculation resulted in the following mapping between low/medium/high insulation and heat demand reduction:
 
 | Housing type | Low | Medium | High |
 | ------ | ------ | ------ |-----|
@@ -91,14 +91,14 @@ To link the insulation costs to specific heat demand reductions we used [ECN hea
 
 The insulation sliders are continuous and not limited to only three choices (low / medium / high). Therefore, the insulation costs have been interpolated; the resulting .csv-files can be found [here](https://github.com/quintel/etsource/tree/master/datasets/nl/real_estate).
 
-NOTE: The insulation costs for households are dependent on the level of insulation in the present year: e.g. going from low to medium insulation is cheaper than going from medium to high insulation.
+NOTE: The insulation costs for houses are not a fixed amount per % heat demand reduction, but instead the costs depend on the level of insulation in the present year: e.g. going from 0 to 30% is cheaper than going from 30% to 60% insulation.
 
 ### Buildings
 
 The insulation costs for buildings could not be retrieved from the Ecofys study. Instead, the costs originate from the BAG-data used in the Vesta energy model ([Vesta Utiliteiten BAG (2016)](https://github.com/RuudvandenWijngaart/VestaDV/blob/master/data/20160706_Utiliteiten_BAG.csv) & [Vesta Utiliteiten Nieuwbouw BAG (2016)](https://github.com/RuudvandenWijngaart/VestaDV/blob/master/data/20160525_Utiliteiten_Nieuwbouw_BAG.csv)):
 
 - In these datasets the insulations costs are given for each insulation jump and each type of utility building. Since the ETM only models an average utility building, a weighted average has been calculated for the insulation costs. We did this based on the Dutch distribution of floor area between the different utility building types ([ECN](https://www.rijksoverheid.nl/documenten/rapporten/2017/11/01/rapport-verkenning-utiliteitsbouw)).
-- The datasets report minimum and maximum insulation costs, based on taking the insulation measures on a natural vs. unnatural/independent moment. For new buildings we have assumed the insulation costs to be the minimum and for existing buildings we have taken the average of the minimum and maximum costs.
+- The datasets report minimum and maximum insulation costs, based on taking the insulation measures on a natural vs. independent moment, respectively. A natural moment would be when several buildings are renovated at once, so insulation would cost less money than when one building is separately insulated on an independent moment. For new buildings we have assumed the insulation costs to be the minimum and for existing buildings we have taken the average of the minimum and maximum costs.
 
 The above assumptions result in the following insulation costs for an average utility building:
 
@@ -112,6 +112,18 @@ The above assumptions result in the following insulation costs for an average ut
 Heat demand profiles
 --------
 
-The ETM models heating in buildings and households on an hourly basis through [Fever](https://github.com/quintel/documentation/blob/master/general/fever.md).
+The ETM models heating in households and buildings on an hourly basis in the so-called ["Fever" calculation](https://github.com/quintel/documentation/blob/master/general/fever.md). For this calculation hourly heat demand profiles for houses and buildings are needed. 
 
-[To be continued.....]
+### Households
+
+The housing type and insulation level both have influence on the heat demand profile of a house. High insulated apartments for example have a flatter profile than low insulated detached houses. As we cannot specify heating technologies per housing type in the ETM, one average hourly heat demand profile is constructed for the housing stock in general and used in the Fever calculation. 
+
+The households heat demand profiles originated from the ECN heat demand profiles from 1987, which was a year with a very cold winter ([link to profiles](https://github.com/quintel/modeling_experiments/blob/master/heat_demand_profiles/input_data/Ecofys_ECN_heating_profiles.csv)). These profiles are available for each of the five housing types and low / medium / high insulation. We modified these profiles to fit 2015 with [this script](https://github.com/quintel/modeling_experiments/blob/master/heat_demand_profiles/heat_demand_profile_generator.py), since the 2015 heat demand profiles are not publicly available. 
+
+The insulation sliders influence the heat demand profile of that specific housing type; it is interpolated between the low, medium and high insulation heat demand profile. The average heat demand profile for the housing stock in general is than constructed based on the shares of the different housing types. This results in the following heat demand profile (including hot water demand) for the Netherlands when there would be 50% low insulated detached houses and 50% high insulated terraced houses:
+![Figure 7: Heat demand profile terraced houses](../images/heat_demand_profile_households.png)
+
+### Buildings
+
+For buildings the heat demand profile was harder to construct, since no public heat demand profiles are available. This is the profile that is used for the time-resolved calculation ([link](https://github.com/quintel/etsource/blob/master/datasets/nl/load_profiles/buildings_heating.csv)):
+![Figure 8: Heat demand profile buildings](../images/heat_demand_profile_buildings.png)
