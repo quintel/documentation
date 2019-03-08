@@ -121,9 +121,11 @@ The housing type and insulation level both have influence on the heat demand pro
 The households heat demand profiles originated from the ECN heat demand profiles from 1987, which was a year with a very cold winter ([link to profiles](https://github.com/quintel/modeling_experiments/blob/master/heat_demand_profiles/input_data/Ecofys_ECN_heating_profiles.csv)). These profiles are available for each of the five housing types and low / medium / high insulation. We modified these profiles to fit 2015 with [this script](https://github.com/quintel/modeling_experiments/blob/master/heat_demand_profiles/heat_demand_profile_generator.py), since the 2015 heat demand profiles are not publicly available. 
 
 The insulation sliders influence the heat demand profile of that specific housing type; it is interpolated between the low, medium and high insulation heat demand profile. The average heat demand profile for the housing stock in general is than constructed based on the shares of the different housing types. This results in the following heat demand profile (including hot water demand) for the Netherlands when there would be 50% low insulated detached houses and 50% high insulated terraced houses:
+
 ![Figure 7: Heat demand profile terraced houses](../images/heat_demand_profile_households.png)
 
 ### Buildings
 
 For buildings the heat demand profile was harder to construct, since no public heat demand profiles are available. This is the profile that is used for the time-resolved calculation ([link](https://github.com/quintel/etsource/blob/master/datasets/nl/load_profiles/buildings_heating.csv)):
+
 ![Figure 8: Heat demand profile buildings](../images/heat_demand_profile_buildings.png)
