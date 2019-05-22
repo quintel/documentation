@@ -7,7 +7,7 @@ The hourly demand/supply is determined using the annual demand/supply and a curv
 
 *Example of hourly demand - hydrogen demand*
 
-In 2019 we made an inventory of all profiles available and updated all our profiles and their documentation. This project was carried out in close collaboration with the modelling community. On the 3th of July we closed the project with a mini-symposium. In this mini-symposium we shared our findings, struggles and discussed possibilities of further improvement of curves used in energy modelling. 
+In 2019 we made an inventory of all curves available and updated all ETM-curves and their documentation. This project was carried out in close collaboration with the modelling community. On the 3th of July we closed the project with a mini-symposium. In this mini-symposium we shared our findings, struggles and discussed possibilities of further improvement of curves used in energy modelling. 
 
 
 ## Overview of curves
@@ -17,7 +17,7 @@ We define demand curves, supply curves and time curves. The tables below show a 
 ### Demand
 
 |Sector|Subsector|Source|Method|Comment|
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 |**Households**|Space heating|TNO|TNO curves fitted to temperature and irradiance which enables to generate curves for all years|Update with TNO heat loss calculation when data becomes available|
 ||Hot water|[Jordan (2001)](https://refman.energytransitionmodel.com/publications/2065)|Distribution function based on average Dutch household|-|
 ||Cooling|[KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)|Directly derived from temperature curve (flh of cooling technology 400h)|Update with TNO heat loss calculation when data becomes available|
@@ -37,7 +37,7 @@ We define demand curves, supply curves and time curves. The tables below show a 
 ### Supply
 
 |Sector|Source|Method|
-|---|---|---|---|
+|---|---|---|
 |Solar|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|
 |Wind|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|
 |Other|River|Flat curve||
@@ -54,10 +54,10 @@ For the Netherlands the time curves are based on:
 * Crude oil: [NLOG](https://www.nlog.nl/sites/default/files/jaarverslag%20delfstoffen%20en%20aardwarmt%20in%20nederland%20-%202017.pdf)
 * Other carriers: The Primes reference scenario in [EC\_2016\_Trends to 2050 reference scenario 2016](https://refman.energytransitionmodel.com/publications/2096)
 
-For all other countries the time curves are based on The Primes reference scenario.
+For all other countries the time curves are based on The Primes reference scenario 2016.
 
 ## Details
-[ETDataset - curves](https://github.com/quintel/etdataset-public/tree/master/curves) contains all raw data, scripts and futher explanaitions.
+[ETDataset - curves](https://github.com/quintel/etdataset-public/tree/master/curves) contains all raw data, scripts and futher explanations.
 
 
 ## Discussion
@@ -65,8 +65,8 @@ Feedback on the curves we use is very welcome!
 If you have a comment or a better source please let us know, you can:
 
 * [Open an issue in ETDataset](https://github.com/quintel/etdataset-public/issues/new) and assign a team memeber of Quintel, eg:
-	* Chaelkruip 
-	* Dorinevandervlies
-	* Marliekeverweij
-	* Roosdekok
+	* [Chael Kruip](https://github.com/Chaelkruip)
+	* [Dorine van der Vlies](https://github.com/Dorinevandervlies)
+	* [Marlieke Verweij](https://github.com/marliekeverweij)
+	* [Roos de Kok](https://github.com/Redekok) 
 * E-mail us: [info@quintel.com](info@quintel.com)
