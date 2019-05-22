@@ -25,9 +25,9 @@ We define demand curves, supply curves and time curves. The tables below show a 
 |**Buildings**|Space heating|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|G2A|Update with TNO heat loss calculation when data becomes available|
 ||Cooling|[KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)|Directly derived from temperature curve (flh of cooling technology 400h)|Update with TNO heat loss calculation when data becomes available|
 ||Appliances|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E3A curve|-|
-|**Transport**|Electric vehicles|[Movares](https://refman.energytransitionmodel.com/publications/2055) and [ELaad]((https://www.livinglabsmartcharging.nl/nl/praktijk/slim-laden-voorkomt-overbelasting1-energienetwerk))|**Movares**: week and weekend days for <br> 1) charging everywhere <br> 2) charging at home <br> 3) fast charging. <br> **ELaad**: repeating average day for <br >4) smart charging <br>5) regular charging|Update when ELaad publishes new curves|
-||Passenger trains, trams/metro|[Movares](https://refman.energytransitionmodel.com/publications/2055)|Charging everywhere|Aim to update with measured data (Pro Rail)|
-||Electric busses, electric bicycles, electric trucks, electric motorcycles|[Movares](https://refman.energytransitionmodel.com/publications/2055)|Charging at home|Update when specific data becomes available|
+|**Transport**|Electric vehicles|[Movares](https://refman.energytransitionmodel.com/publications/2055) and [ELaad]((https://www.livinglabsmartcharging.nl/nl/praktijk/slim-laden-voorkomt-overbelasting1-energienetwerk))|Profiles available: <br>**Movares**: week and weekend days for <br> 1) charging everywhere <br> 2) charging at home <br> 3) fast charging. <br> **ELaad**: repeating average day for <br >4) smart charging <br>5) regular charging<br>Default curve for cars is charging everywhere.|Update when ELaad publishes new curves|
+||Passenger trains, trams/metro, electric bicycle, motorcycles|[Movares](https://refman.energytransitionmodel.com/publications/2055)|Charging everywhere|Aim to update with measured data (Pro Rail)|
+||Electric busses, electric trucks, freight trains|[Movares](https://refman.energytransitionmodel.com/publications/2055)|Charging at home (curve peaks during night)|Update when specific data becomes available|
 ||Hydrogen trucks, hydrogen busses, hydrogen cars|-|Flat curve|-|-|
 |**Industry**|All sectors exept "other"|-|Flat curve||
 ||Other|Gasterra|G2C profile|-|-|
