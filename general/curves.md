@@ -18,7 +18,7 @@ We define demand curves, supply curves and time curves. The tables below show a 
 
 |Sector|Subsector|Source|Method|Comment|
 |---|---|---|---|---|
-|**Households**|Space heating|TNO|TNO curves fitted to temperature and irradiance which enables to generate curves for all years|Update with TNO heat loss calculation when data becomes available|
+|**Households**|Space heating|TNO|TNO curves fitted to temperature and irradiance which enables to generate curves for all years <br> Collective technologies use G1A curve.|Update with TNO heat loss calculation when data becomes available|
 ||Hot water|[Jordan (2001)](https://refman.energytransitionmodel.com/publications/2065)|Distribution function based on average Dutch household|-|
 ||Cooling|[KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)|Directly derived from temperature curve (flh of cooling technology 400h)|Update with TNO heat loss calculation when data becomes available|
 ||Appliances|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E1A curve|-|
