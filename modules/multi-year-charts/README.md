@@ -1,7 +1,7 @@
 # Meerjarengrafieken
 
-[Link](https://beta-pro.energytransitionmodel.com/multi-year-charts) naar de interface<br>
-[Link](https://github.com/quintel/multi-year-charts) naar de Github repository
+[Link](https://beta-pro.energytransitionmodel.com/multi_year_charts) naar de interface<br>
+[Link](https://github.com/quintel/multi-year-charts) naar de (private) Github repository
 
 ### Achtergrond
 
@@ -17,7 +17,7 @@ De interface beschikt over onderstaande functionaliteiten:
     * CO<sub>2</sub>-uitstoot (uitgesplitst naar sector en/of energiedrager-groep)
     * Herkomst van de opgewekte energie (uitgesplitst naar energiedrager-groep)
 3. Invoervelden om keuzes te maken voor de verschillende zichtjaren
-4. Opslaan en delen van scenario's
+4. Opslaan en delen van sessies
 
 ### Hoe werkt het?
 
@@ -25,16 +25,16 @@ Hieronder staat per functionaliteit een korte uitleg beschreven:
 
 ##### 1. Openen van een 2050 scenario in de interface
 
-Ga naar de [BETA-versie](https://beta-pro.energytransitionmodel.com/) van het Energietransitiemodel en klik op ['Probeer nu'](https://myc-beta.energytransitionmodel.com/) onder de Multi-year charts.
+Ga naar de [BETA-versie](https://beta-pro.energytransitionmodel.com/) van het Energietransitiemodel en klik op ['Probeer nu'](https://beta-pro.energytransitionmodel.com/multi_year_charts) onder de Multi-year charts.
 
 ![](open1.png)
 
-Om de meerjarengrafiekeninterface te gebruiken, wordt de gebruiker gevraagd om in te loggen. Zodra er succesvol ingelogd is, wordt een lijst met opgeslagen scenario's getoond. De gebruiker kan er voor kiezen om door te gaan met een bestaande sessie (links) of om een nieuwe sessie te starten (rechts). Door een van de (2050) scenario's aan te klikken, wordt de meerjarengrafiekeninterface geopend.
+Om de meerjarengrafiekeninterface te gebruiken, wordt de gebruiker gevraagd om in te loggen. Zodra er succesvol ingelogd is, worden er twee lijsten met scenario's/sessies getoond. De gebruiker kan er voor kiezen om door te gaan met een bestaande sessie (links) of om een nieuwe sessie te starten (rechts). Door een van de (2050) scenario's aan te klikken, wordt de meerjarengrafiekeninterface geopend.
 
 ![](open2.png)
 
 ##### 2. Drietal grafieken met verschillende zichtjaren
-In de interface wordt een drietal grafieken getoond: eindgebruik energie (uitgesplitst naar sector en/of energiedrager-groep), CO<sub>2</sub>uitstoot (uitgesplitst naar sector en/of energiedrager-groep), en herkomst van de opgewekte energie (uitgesplitst naar energiedrager-groep). Voor elke grafiek worden de datapunten voor het startjaar (2015) en toekomstjaar (2050) overgenomen uit het onderliggende scenario. De datapunten voor de zichtjaren op het transitiepad (2023, 2030 en 2040) worden lineair **(?)** geïnterpoleerd tussen de waarden van het start- en toekomstjaar. 
+In de interface wordt een drietal grafieken getoond: eindgebruik energie (uitgesplitst naar sector en/of energiedrager-groep), CO<sub>2</sub>uitstoot (uitgesplitst naar sector en/of energiedrager-groep), en herkomst van de opgewekte energie (uitgesplitst naar energiedrager-groep). Voor elke grafiek worden de datapunten voor het startjaar (2015) en toekomstjaar (2050) overgenomen uit het onderliggende scenario. De datapunten voor de zichtjaren op het transitiepad (2023, 2030 en 2040) worden lineair geïnterpoleerd tussen de waarden van het start- en toekomstjaar. 
 
 ![](grafieken1b.png)
 
@@ -54,14 +54,16 @@ Via de invoervelden kunnen de onderliggende waarden voor de invoervelden voor al
 Door op een waarde te klikken, wordt een vereenvoudigde versie van het Energietransitiemodel geopend waar de gebruiker de schuifjes kan updaten voor het desbetreffende jaar. Zodra alle aanpassingen zijn doorgevoerd, kunnen de instellingen opgeslagen worden door linksonder op 'Gereed' te klikken. De waarde is dan ook aangepast in het overzicht van alle invoervelden en daarmee ook in de meerjarengrafieken.
 
 ![](invoervelden2.png)
-
 ![](invoervelden3.png)
-
 ![](invoervelden4.png)
-
 ![](invoervelden5.png)
 
-##### 4. Opslaan en delen van scenario's
-...
+##### 4. Opslaan en delen van sessies
 
-WIP
+De meerjarengrafieken sessies worden automatisch opgeslagen. Om later verder te gaan met een sessie, kan de gebruiker links in het startscherm (onder "Ga door met een bestaande sessie..") de desbetreffende sessie opzoeken en openen. 
+
+![](open3.png)
+
+Om een sessie te delen met anderen, kan de gebruiker de bijbehorende link doorsturen. In dit voorbeeld is dat dus de volgende URL: https://myc-beta.energytransitionmodel.com/1079852,1079853,1079854,1079855.
+
+![](delen.png) 
