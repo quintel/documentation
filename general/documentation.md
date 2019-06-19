@@ -89,9 +89,9 @@ You can click on each of the indicators in the dashboard to get a pop-up with de
 Modeling logic
 --------------
 
-### No feedback
+### Start from present, set parameters individually
 
-The model is linear and does not use feedback loops (it is not an equilibrium model). This also means that demand and supply are not dependent on prices. The user sets the demand, cost and supply parameters independently and is responsible for internal consistency. This is done deliberately, so the user may learn:
+An exploration in the ETM starts from the present situation. The user sets the demand, cost and supply parameters independently and is responsible for internal consistency. This is done deliberately, so the user may learn:
 1. How sensitive critical outcomes are to even slight variations in assumptions for the future
 2. Which particular assumptions for the future most impact the user's particular interests
 
