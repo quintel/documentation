@@ -20,14 +20,12 @@ We define demand curves, supply curves and time curves. The tables below show a 
 |---|---|---|---|---|
 |**Households**|Space heating|TNO|TNO curves fitted to temperature and irradiance which enables to generate curves for all years <br> Collective technologies use G1A curve.|Update with TNO heat loss calculation when data becomes available|
 ||Hot water|[Jordan (2001)](https://refman.energytransitionmodel.com/publications/2065)|Distribution function based on average Dutch household|-|
-||Cooling|[KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)|Directly derived from temperature curve (flh of cooling technology 400h)|Update with TNO heat loss calculation when data becomes available|
+||Cooling|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E1A curve|[Argumentation of method](https://github.com/quintel/etdataset-public/tree/master/curves/demand/households/cooling), update with TNO heat loss calculation when data becomes available|
 ||Appliances|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E1A curve|-|
-||Heat network heaters|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|G1A curve|Insulation currently has no impact on heat demand curve|
-|**Buildings**|Space heating|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|G2A curve|Update with TNO heat loss calculation when data becomes available|
-||Cooling|[KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)|Directly derived from temperature curve (flh of cooling technology 400h)|Update with TNO heat loss calculation when data becomes available|
+|**Buildings**|Space heating|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|G2A|Update with TNO heat loss calculation when data becomes available|
+||Cooling|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E3A curve|[Argumentation of method](https://github.com/quintel/etdataset-public/tree/master/curves/demand/buildings/cooling), update with TNO heat loss calculation when data becomes available
 ||Appliances|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E3A curve|-|
-||Heat network heaters|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|G2A curve||
-|**Transport**|Electric vehicles|[Movares](https://refman.energytransitionmodel.com/publications/2055) and [ELaad]((https://www.livinglabsmartcharging.nl/nl/praktijk/slim-laden-voorkomt-overbelasting1-energienetwerk))|Profiles available: <br>**Movares**: week and weekend days for <br> 1) charging everywhere <br> 2) charging at home <br> 3) fast charging. <br> **ELaad**: repeating average day for <br >4) smart charging <br>5) regular charging<br>Default curve for cars is charging everywhere.|Update when ELaad publishes new curves|
+|**Transport**|Electric vehicles|[Movares](https://refman.energytransitionmodel.com/publications/2055) and [ELaad]((https://www.livinglabsmartcharging.nl/nl/praktijk/slim-laden-voorkomt-overbelasting1-energienetwerk))|Profiles available: <br>**Movares**: week and weekend days for <br> 1) charging everywhere <br> 2) charging at home <br> 3) fast charging. <br> **ELaad**: repeating average day for <br >4) smart charging <br>5) regular charging<br>Default curve for cars is charging everywhere.|-|
 ||Passenger trains, trams/metro, electric bicycle, motorcycles|[Movares](https://refman.energytransitionmodel.com/publications/2055)|Charging everywhere|Aim to update with measured data (Pro Rail)|
 ||Electric busses, electric trucks, freight trains|[Movares](https://refman.energytransitionmodel.com/publications/2055)|Charging at home (curve peaks during night)|Update when specific data becomes available|
 ||Hydrogen trucks, hydrogen busses, hydrogen cars|-|Flat curve|-|-|
@@ -41,11 +39,9 @@ We define demand curves, supply curves and time curves. The tables below show a 
 |Sector|Source|Method|
 |---|---|---|
 |Solar|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|
-|Wind|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|.
+|Wind|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|
 |Other|River|Flat curve||
 ||Dispatchable technologies|Production determined by [merit order](https://github.com/quintel/documentation/blob/master/general/merit_order.md)|
-
-For NL2015 the OPSD data is incomplete (< 98% of data points available) Hence, different sources (SoDa: Solar Radiation Data for PV and Ecofys data for wind) have been used to generate this curve.
 
 ### Time curves
 Time curves define how the national production of energy carriers changes over the years (up to 2040)
