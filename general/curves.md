@@ -43,6 +43,8 @@ We define demand curves, supply curves and time curves. The tables below show a 
 |Other|River|Flat curve||
 ||Dispatchable technologies|Production determined by [merit order](https://github.com/quintel/documentation/blob/master/general/merit_order.md)|
 
+For NL2015 the OPSD data is incomplete (< 98% of data points available) Hence, different sources (SoDa: Solar Radiation Data for PV and Ecofys data for wind) have been used to generate this curve.
+
 ### Time curves
 Time curves define how the national production of energy carriers changes over the years (up to 2040)
 
