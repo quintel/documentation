@@ -11,7 +11,13 @@ There are many different biomass resource streams; too many to model each one in
 -   **Oil-containing biomass**: rapeseed, sunflower seeds, oil palm, used frying fats. 
 -   **Biogenic waste**
 
-TNO researched the potential of each biomass country for each country modelled in the ETM. When biomass demand exceeds this potential, then biomass will be imported from outside the region. For the Netherlands TNO researched the potentials in great detail. The potentials of over 30 biomass streams have been quantified. 
+TNO researched the potential of each biomass category for each country modelled in the ETM. When biomass demand exceeds this potential, then biomass will be imported from outside the region. For the Netherlands TNO researched the potentials in great detail. The potentials of over 30 biomass streams have been quantified and are shown in ***a table*** below. The ETM allows users to adjust maximum biomass potentials for each biomass category with these sliders:
+
+![Biomass potential sliders](../images/biomass_potential_sliders.png)
+
+The set potentials are shown in the "Biomass demand and potential" chart along with the total demand of each biomass category. This gives the user a feeling of how much biomass is still regionally available.
+
+![Biomass demand and potential](../images/biomass_demand_and_potential.png)
 
 Biomass can be used in different places throughout the model: 
 - as green gas in the gas network
@@ -21,25 +27,27 @@ Biomass can be used in different places throughout the model:
 - as biocoal or bio-oil in power plants
 - to produce hydrogen through gasification
 
-The conversion from biomass resources into biofuels can be 
+To get a quick overview of all future biomass streams and conversions, there is a sankey-chart visualizing these:
 
+![Biomass sankey](../images/biomass_sankey.png)
 
-
-
-Charts
-
-Specs
 
 Input data
 ------------
 
-The ETM allows users to set maximum biomass potentials for each biomass category. 
+### Green gas production costs
+
+Invoegen: Tabelletje met groengasproductiekosten van 3 technologieën
+
+### Biofuel costs
+
+Invoegen: Plaatje cost-sliders
 
 ### Dutch biomass potential
 
-Tabelletje met totale potentie
-
+Invoegen: Tabelletje met totale potentie
 Excel toevoegen?!
+Invoegen: bronnen gebruikt voor biomass potential
 
 | Sector                                                                      | Biomassastroom                          | Categorie | Potentie PJ \(droge stof basis\) | Verdeelsleutel van nationale naar gemeentelijke potentie                                  |
 |-----------------------------------------------------------------------------|-----------------------------------------|-----------|----------------------------------|---------------------------------------------------------------------------------------|
@@ -77,3 +85,5 @@ Excel toevoegen?!
 | Energieteelt                                                                | Totale natte energieteelt               | nat       | 3\.5                             | Totaal agrarisch terrein                                                              |
 |                                                                             | Totale droge energieteelt               | droog     | 1\.2                             | Totaal agrarisch terrein                                                              |
 |                                                                             | Grassoorten op zoute grond              | nat       | 12                               | Noord Beveland 10% Veere 20% Vlissingen 10% Middelburg 10% Texel 10% Het Hogeland 40% |
+
+
