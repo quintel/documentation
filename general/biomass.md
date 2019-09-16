@@ -33,7 +33,7 @@ To get a quick overview of all future biomass streams and conversions, there is 
 
 Users can adjust the costs of biofuels with sliders for greengas, biogas, wood, biodiesel and bio-ethanol. The costs that are used in the present year are researched by TNO:
 
-![Biomass costs sliders](../images/biomass_potential_sliders.png)
+![Biomass costs sliders](../images/biomass_biofuel_costs.png)
 
 Input data
 ------------
