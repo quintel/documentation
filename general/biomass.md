@@ -1,17 +1,17 @@
 # Biomass
 
-There is a growing interest in using biomass as energy carrier, for instance for heat production, electricity production, transport fuel or as a feedstock for the chemical industry. However, biomass is often grown at the expense of food crops and stimulates deforestation. Careful consideration is required when using large amounts of biomass. The modelling of biomass streams in the ETM has been updated in 2019 in close collaboration with Gasunie, GasTerra, TKI Nieuw Gas and TNO. TNO has supported this project by researching all required data.
+There is a growing interest in using biomass as energy carrier, for instance for heat production, electricity production, transport fuel or as a feedstock for the chemical industry. However, biomass is often grown at the expense of food crops and stimulates deforestation. Careful consideration is required when using large amounts of biomass. We've updated the modelling of biomass streams in the ETM in 2019 in close collaboration with Gasunie, GasTerra, TKI Nieuw Gas and TNO. TNO supported this project by researching all required data.
 
 Modelling principals
 ------------
 
-There are many different biomass resource streams; too many to model each one individually. Therefore we have chosen to distinguish these four biomass categories:
+There are many different biomass resource streams; too many to model each one individually. Therefore we choose to distinguish these four biomass categories:
 -   **Wet biomass**: residues from the food and beverage industry, agricultural residual streams, sewage sludge, aquatic biomass, cultivated grain products, etc. 
 -   **Dry biomass**: residual streams from forestry (tree tops, stumps, bark, branches), recycled waste wood, residual streams from agriculture (straw), and fast-growing bio-energy crops (elephant grass, willow, poplar)
 -   **Oil-containing biomass**: rapeseed, sunflower seeds, oil palm, used frying fats. 
 -   **Biogenic waste**
 
-TNO researched the potential of each biomass category for each country modelled in the ETM. When biomass demand exceeds this potential, then biomass will be imported from outside the region. For the Netherlands TNO researched the potentials in great detail. The potentials of over 30 biomass streams have been quantified and are shown in the last table below. The ETM allows users to adjust maximum biomass potentials for each biomass category with these sliders:
+TNO researched the potential of each biomass category for each country modelled in the ETM. When biomass demand exceeds this potential, then biomass will be imported from outside the region. For the Netherlands TNO researched the potentials in great detail. The potentials of over 30 biomass streams have been quantified and are shown in the last table of this document. The ETM allows users to adjust maximum biomass potentials for each biomass category with these sliders:
 
 ![Biomass potential sliders](../images/biomass_potential_sliders.png)
 
@@ -48,8 +48,6 @@ TNO has researched the production cost for greengas producing technologies and c
 | Input capacity         | MW input | 20                       | 70               | 8\.33               |
 | Investment costs       | EUR      | 19                       | 130              | 4\.7                |
 | Fixed yearly O&M costs | EUR/jaar | 3                        | 9\.5             | 0\.23               |
-
-
 
 ### Dutch biomass potential
 
