@@ -11,7 +11,7 @@ There are many different biomass resource streams; too many to model each one in
 -   **Oil-containing biomass**: rapeseed, sunflower seeds, oil palm, used frying fats. 
 -   **Biogenic waste**
 
-TNO researched the potential of each biomass category for each country modelled in the ETM. When biomass demand exceeds this potential, then biomass will be imported from outside the region. For the Netherlands TNO researched the potentials in great detail. The potentials of over 30 biomass streams have been quantified and are shown in ***a table*** below. The ETM allows users to adjust maximum biomass potentials for each biomass category with these sliders:
+TNO researched the potential of each biomass category for each country modelled in the ETM. When biomass demand exceeds this potential, then biomass will be imported from outside the region. For the Netherlands TNO researched the potentials in great detail. The potentials of over 30 biomass streams have been quantified and are shown in the last table below. The ETM allows users to adjust maximum biomass potentials for each biomass category with these sliders:
 
 ![Biomass potential sliders](../images/biomass_potential_sliders.png)
 
@@ -31,23 +31,35 @@ To get a quick overview of all future biomass streams and conversions, there is 
 
 ![Biomass sankey](../images/biomass_sankey.png)
 
+Users can adjust the costs of biofuels with sliders for greengas, biogas, wood, biodiesel and bio-ethanol. The costs that are used in the present year are researched by TNO:
+
+![Biomass costs sliders](../images/biomass_potential_sliders.png)
 
 Input data
 ------------
 
 ### Green gas production costs
+TNO has researched the production cost for greengas producing technologies and came to the following costs:
 
-Invoegen: Tabelletje met groengasproductiekosten van 3 technologieën
+|                        |   unit   | Wet gasification \(SCW\) | Dry gasification | Anaerobic digestion |
+|------------------------|----------|--------------------------|------------------|---------------------|
+| Efficiency             | %        | 70                       | 70               | 48                  |
+| Production costs       | EUR/MWh  | 41\.33                   | 75\.79           | 63\.57              |
+| Input capacity         | MW input | 20                       | 70               | 8\.33               |
+| Investment costs       | EUR      | 19                       | 130              | 4\.7                |
+| Fixed yearly O&M costs | EUR/jaar | 3                        | 9\.5             | 0\.23               |
 
-### Biofuel costs
 
-Invoegen: Plaatje cost-sliders
 
 ### Dutch biomass potential
 
-Invoegen: Tabelletje met totale potentie
-Excel toevoegen?!
-Invoegen: bronnen gebruikt voor biomass potential
+TNO has researched the potential biomass production in the Netherlands for 2030 and came to the following total potentials (sorry, in Dutch only):
+
+|                              | unit | wet biomass | dry biomass | oil\-containing biomass | biogenic waste |
+|------------------------------|------|-------------|-------------|-------------------------|----------------|
+| Dutch biomass potential 2030 | PJ   | 16\.8       | 47\.4       | 10\.5                   | 21\.6          |
+
+These total potentials originate from the following underlying biomassa streams:
 
 | Sector                                                                      | Biomassastroom                          | Categorie | Potentie PJ \(droge stof basis\) | Verdeelsleutel van nationale naar gemeentelijke potentie                                  |
 |-----------------------------------------------------------------------------|-----------------------------------------|-----------|----------------------------------|---------------------------------------------------------------------------------------|
@@ -86,4 +98,10 @@ Invoegen: bronnen gebruikt voor biomass potential
 |                                                                             | Totale droge energieteelt               | droog     | 1\.2                             | Totaal agrarisch terrein                                                              |
 |                                                                             | Grassoorten op zoute grond              | nat       | 12                               | Noord Beveland 10% Veere 20% Vlissingen 10% Middelburg 10% Texel 10% Het Hogeland 40% |
 
+The Dutch national potentials were subdivided to municipal potentials by using the 'verdeelsleutel' for each individual biomass stream from the most right column in the table above. 
 
+These sources have been mainly used for researching the biomass potential:
+- Koppejan, J., W. Elbersen, M. Meeusen, P. Bindraban (2009): Beschikbaarheid van Nederlandse biomassa voor elektriciteit en warmte in 2020. Procede Biomass BV, Enschede, november 2009  https://www.rvo.nl/sites/default/files/bijlagen/Beschikbaarheid%20van%20Nederlandse%20biomassa%20voor%20warmte%20en%20elektriciteit%20in%202020.pdf
+- Schulze, P., J. Holstein, H. Vlap (2017) Biomassapotentieel in Nederland. Verkennende studie naar vrij beschikbaar biomassapotentieel voor energieopwekking in Nederland. GCS.17.R.10032629.2, DNV-GL, Arnhem, 6 april 2017
+https://www.fluxenergie.nl/wp-content/uploads/2017/04/DNVGL_Rapport_Biomassabeschikbaarheid-in-Nederland.pdf
+- Boosten, M., J. Oldenburger, J. Kremers, J. van den Briel, N. Spliethof, D. Borgman (2018): Beschikbaarheid van Nederlandse verse houtachtige biomassa in 2030 en 2050. Studie naar binnenlands potentieel en toekomstige vraag vanuit energie en biobased ontwikkelingen. Probos, Wageningen, juni 2018.https://www.rvo.nl/sites/default/files/2018/07/Beschikbaarheid-van-Nederlandse-verse-houtige-biomassa-in-2030-en-2050.PDF
