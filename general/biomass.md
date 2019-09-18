@@ -49,15 +49,17 @@ TNO has researched the production cost for greengas producing technologies and c
 | Investment costs       | EUR      | 19                       | 130              | 4\.7                |
 | Fixed yearly O&M costs | EUR/jaar | 3                        | 9\.5             | 0\.23               |
 
+Caution: the production costs of green gas are not optimize; this mainly goes for the gasification technologies. Since the technologies are fairly new, there are not many practical examples on which the costs are based.
+
 ### Dutch biomass potential
 
-TNO has researched the potential biomass production in the Netherlands for 2030 and came to the following total potentials (sorry, in Dutch only):
+TNO has researched the potential biomass production in the Netherlands for 2030 and came to the following total potentials:
 
 |                              | unit | wet biomass | dry biomass | oil\-containing biomass | biogenic waste |
 |------------------------------|------|-------------|-------------|-------------------------|----------------|
 | Dutch biomass potential 2030 | PJ   | 16\.8       | 47\.4       | 10\.5                   | 21\.6          |
 
-These total potentials originate from the following underlying biomassa streams:
+These total potentials originate from the following underlying biomassa streams (sorry, in Dutch only):
 
 | Sector                                                                      | Biomassastroom                          | Categorie | Potentie PJ \(droge stof basis\) | Verdeelsleutel van nationale naar gemeentelijke potentie                                  |
 |-----------------------------------------------------------------------------|-----------------------------------------|-----------|----------------------------------|---------------------------------------------------------------------------------------|
