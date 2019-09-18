@@ -49,7 +49,7 @@ TNO has researched the production cost for greengas producing technologies and c
 | Investment costs       | EUR      | 19                       | 130              | 4\.7                |
 | Fixed yearly O&M costs | EUR/jaar | 3                        | 9\.5             | 0\.23               |
 
-Caution: the production costs of green gas are not optimize; this mainly goes for the gasification technologies. Since the technologies are fairly new, there are not many practical examples on which the costs are based.
+Caution: the production costs of green gas are not optimized; this mainly the case for the gasification technologies. Since these technologies are fairly new, there are not many practical examples on which the costs are based.
 
 ### Dutch biomass potential
 
