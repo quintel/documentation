@@ -1,6 +1,6 @@
 # Curves
 
-The ETM uses hourly curves to model (electricity and hydrogen) demand and supply. 
+The ETM uses hourly curves to model (electricity, hydrogen and gas) demand and supply. 
 The hourly demand/supply is determined using the annual demand/supply and a curve.
 
 ![Hourly hydrogen demand chart](../images/20181002_hydrogen_demand.png)
