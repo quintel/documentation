@@ -7,7 +7,7 @@ For The Netherlands it is possible to select one of three weather years with ext
 ## Temperature
 Users can adjust the average temperature. The outdoor temperature slider sets the temperature with respect to the start year. This change in average temperature results in a change in heating and cooling demand.
 
-To translate a temperature change into a change in useful demand, it is assumed that people will start heating their homes when the outside temperature drops beneath 18 °C and will cool their homes when it rises above 23 °C. The change in useful demand for heating and cooling is directly related to a change in degree-days [1](http://en.wikipedia.org/wiki/Degree_day). To find the relation between the average outdoor temperature and the degree-days we have used temperature measurements from the observatory at "De Bilt" in the Netherlands for the year 2010. Figure 1. below shows these temperature measurements in degrees centigrade. Also plotted are the threshold temperatures above and below which we assume cooling and heating is required.
+To translate a temperature change into a change in useful demand, it is assumed that people will start heating their homes when the outside temperature drops beneath 18 °C and will cool their homes when it rises above 23 °C. The change in useful demand for heating and cooling is directly related to a change in degree-days [1](http://en.wikipedia.org/wiki/Degree_day). To find the relation between the average outdoor temperature and the degree-days we have used temperature measurements from the observatory at "De Bilt" in the Netherlands for the year 2010. Figure 1 below shows these temperature measurements in degrees centigrade. Also plotted are the threshold temperatures above and below which we assume cooling and heating is required.
 
 
 <p align="center">
@@ -49,7 +49,7 @@ The production profiles can be downloaded as csv-files in the *Data export*-sect
 *Figure 2: Production curves can be downloaded in the Data export-section of the ETM*
 
 ## Weather conditions
-*This feature is currently only available for The Netherlands.*
+*This feature is currently only available for (regions in) The Netherlands.*
 
 The Netherlands have experienced extreme cold periods in the past, as well as periods with little wind and sun. This may happen again in the future, and low temperatures may negatively affect the ability for air and hybrid heat pumps to satisfy demand. Besides that, a lack of wind and sun may negatively affect the electricity production from wind and solar power. To explore these effects for a scenario for (a region within) the Netherlands a year with extreme weather conditions can be selected.
 
@@ -65,7 +65,7 @@ The default wind production curves which are based on measured production data p
 ### Solar PV
 The default solar PV production curves which are based on measured production data provided by the Open Power System Data platform (read more about [solar curves](https://github.com/quintel/etdataset-public/blob/master/curves/supply/solar/README.md)) are not available for the weather years (1987, 1997, 2004).
 
-For weather years we use measured irradiation data (Source: [KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)). The shape of the curve equals the shape of irradiation data. Full load hours for solar PV are based of total solar irradiation of the weather year. FLH of the weather year are determined using information about total solar irradiation and FLH of the reference year 2015. More information can be found on [ETDataset - curves solar - weather years](https://github.com/quintel/etdataset/tree/weather_years/curves/supply/solar/script/weather_years).
+For weather years we use measured irradiation data (Source: [KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)). The shape of the curve equals the shape of irradiation data. Full load hours for solar PV are based on the total solar irradiation of the weather year. FLH of the weather year are determined using information about total solar irradiation and FLH of the reference year 2015. More information can be found on [ETDataset - curves solar - weather years](https://github.com/quintel/etdataset/tree/weather_years/curves/supply/solar/script/weather_years).
 
 ### Temperature
 Just as for default setting for weather years temperature curves are based on measured data from The Bilt. (Source: [KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)). For each weather year the average temperature is compared with the average temperature of the default year. If a user selects a weather year this value is used to set the temperature slider.
@@ -77,9 +77,9 @@ Weather years use the [standard method](https://github.com/quintel/etdataset-pub
 Feedback on the weather years is very welcome!
 If you have a comment or a suggestion please let us know, you can:
 
-* [Open an issue in ETDataset](https://github.com/quintel/etdataset-public/issues/new) and assign a team memeber of Quintel, eg:
-	* [Chael Kruip](https://github.com/Chaelkruip)
-	* [Dorine van der Vlies](https://github.com/Dorinevandervlies)
+* [Open an issue in ETDataset](https://github.com/quintel/etdataset-public/issues/new) and assign a team member of Quintel, e.g.:
+	* [Chael Kruip](https://github.com/chaelkruip)
+	* [Dorine van der Vlies](https://github.com/dorinevandervlies)
 	* [Marlieke Verweij](https://github.com/marliekeverweij)
-	* [Roos de Kok](https://github.com/Redekok) 
+	* [Roos de Kok](https://github.com/redekok) 
 * E-mail us: [info@quintel.com](info@quintel.com)
