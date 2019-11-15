@@ -9,10 +9,7 @@ Users can adjust the average temperature. The outdoor temperature slider sets th
 
 To translate a temperature change into a change in useful demand, it is assumed that people will start heating their homes when the outside temperature drops beneath 18 °C and will cool their homes when it rises above 23 °C. The change in useful demand for heating and cooling is directly related to a change in degree-days [1](http://en.wikipedia.org/wiki/Degree_day). To find the relation between the average outdoor temperature and the degree-days we have used temperature measurements from the observatory at "De Bilt" in the Netherlands for the year 2010. Figure 1 below shows these temperature measurements in degrees centigrade. Also plotted are the threshold temperatures above and below which we assume cooling and heating is required.
 
-
-<p align="center">
-  <img src=" ../images/Degree_days_shaded.png " width="450" height="300">
-</p>
+![](../images/Degree_days_shaded.png)
 *Figure 1: Temperature curve in the Bilt for 2010*
 
 To calculate degree-days for a given temperature threshold, the area between the threshold temperature and the curve is integrated. For heating this is the area **under** the 18 degree threshold and **above** the curve (shaded area in figure 1).Shifting the whole curve up (for increasing outdoor temperatures) or down (for decreasing outdoor temperatures) changes the shaded areas and thus the degree-days. 
@@ -21,15 +18,11 @@ To calculate degree-days for a given temperature threshold, the area between the
 The Figures below show the surface areas for heating (left Figure) and cooling (right Figure) as a function of temperature change (with respect to the 2010 average).
 
 
-[//]: #  <p align="center">
-  <img src="../images/Heat_factor.png" width="450" height="250">
-</p>
+![](../images/Heat_factor.png)
 *Figure 2: Effect of average temperature on heating demand* 
 
 
-<p align="center">
-  <img src="../images/Cool_factor.png" width="450" height="250">
-</p>
+![](../images/Cool_factor.png)
 *Figure 3: Effect of average temperature on cooling demand*
 
 The functional relations described above are used to scale the useful demand for heating and cooling. For heating the functional relation is almost linear. For cooling, it is strongly non-linear with demand almost vanishing for a 5 degree drop in temperature and increasing more than tenfold for a five degree increase. This is a result of the fact that the cooling threshold temperature is only slightly below the maximum temperature measured at De Bilt (see Figure 1.). The surface area (and thus the degree-days) associated with cooling essentially describes the high temperature 'peak' of the temperature curve and is therefore very sensitive to temperature changes. -->
@@ -43,9 +36,7 @@ Changing the FLH's results in a change in annual produced electricity and shape 
 
 The production profiles can be downloaded as csv-files in the *Data export*-section of the ETM: Results > Data export > Merit order price > Load curves.
 
-<p align="center">
-  <img src=" ../images/download_load_curves.png " width="450" height="350">
-</p>
+![](../images/download_load_curves.png)
 *Figure 2: Production curves can be downloaded in the Data export-section of the ETM*
 
 ## Weather conditions
