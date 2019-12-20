@@ -38,7 +38,10 @@ We define demand curves, supply curves and time curves. The tables below show a 
 
 |Sector|Source|Method|
 |---|---|---|
-|Solar|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|
+|Solar PV|["Open Power System Data platform"](https://data.open-power-system-data.org)
+|Profile from measured data, adjusted to match country specific full load hours|
+|Solar Thermal|["KNMI"](https://knmy.readthedocs.io/en/latest/)
+|Profile from measured data, adjusted to solar-thermal behaviour|
 |Wind|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|
 |Other|River|Flat curve||
 ||Dispatchable technologies|Production determined by [merit order](https://github.com/quintel/documentation/blob/master/general/merit_order.md)|
