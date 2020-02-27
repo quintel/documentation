@@ -39,7 +39,7 @@ Input data
 ------------
 
 ### Green gas production costs
-TNO has researched the production cost for greengas producing technologies and came to the following costs:
+TNO has researched the production cost for greengas producing technologies:
 
 |                        |   unit   | Wet gasification \(SCW\) | Dry gasification | Anaerobic digestion |
 |------------------------|----------|--------------------------|------------------|---------------------|
@@ -53,13 +53,13 @@ Caution: the production costs of green gas are not optimized; this is mainly the
 
 ### Dutch biomass potential
 
-TNO has researched the potential biomass production in the Netherlands for 2030 and came to the following total potentials:
+TNO has researched the potential biomass production in the Netherlands for 2030:
 
 |                              | unit | wet biomass | dry biomass | oil\-containing biomass | biogenic waste |
 |------------------------------|------|-------------|-------------|-------------------------|----------------|
 | Dutch biomass potential 2030 | PJ   | 16\.8       | 47\.4       | 10\.5                   | 21\.6          |
 
-These total potentials originate from the following underlying biomassa streams (sorry, in Dutch only):
+These total potentials originate from the underlying biomassa streams depicted below (sorry, in Dutch only):
 
 | Sector                                                                      | Biomassastroom                          | Categorie | Potentie PJ \(droge stof basis\) | Verdeelsleutel van nationale naar gemeentelijke potentie                                  |
 |-----------------------------------------------------------------------------|-----------------------------------------|-----------|----------------------------------|---------------------------------------------------------------------------------------|
@@ -100,8 +100,6 @@ These total potentials originate from the following underlying biomassa streams 
 
 The Dutch national potentials were subdivided to municipal potentials by using the 'verdeelsleutel' for each individual biomass stream from the most right column in the table above. 
 
-These sources have been mainly used for researching the biomass potential:
-- Koppejan, J., W. Elbersen, M. Meeusen, P. Bindraban (2009): Beschikbaarheid van Nederlandse biomassa voor elektriciteit en warmte in 2020. Procede Biomass BV, Enschede, november 2009  https://www.rvo.nl/sites/default/files/bijlagen/Beschikbaarheid%20van%20Nederlandse%20biomassa%20voor%20warmte%20en%20elektriciteit%20in%202020.pdf
-- Schulze, P., J. Holstein, H. Vlap (2017) Biomassapotentieel in Nederland. Verkennende studie naar vrij beschikbaar biomassapotentieel voor energieopwekking in Nederland. GCS.17.R.10032629.2, DNV-GL, Arnhem, 6 april 2017
-https://www.fluxenergie.nl/wp-content/uploads/2017/04/DNVGL_Rapport_Biomassabeschikbaarheid-in-Nederland.pdf
-- Boosten, M., J. Oldenburger, J. Kremers, J. van den Briel, N. Spliethof, D. Borgman (2018): Beschikbaarheid van Nederlandse verse houtachtige biomassa in 2030 en 2050. Studie naar binnenlands potentieel en toekomstige vraag vanuit energie en biobased ontwikkelingen. Probos, Wageningen, juni 2018.https://www.rvo.nl/sites/default/files/2018/07/Beschikbaarheid-van-Nederlandse-verse-houtige-biomassa-in-2030-en-2050.PDF
+### TNO report
+
+The TNO report with all data is accessible [here](https://refman.energytransitionmodel.com/publications/2100).
