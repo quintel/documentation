@@ -4,7 +4,7 @@ The Energy Transition Model calculates the total cost of the yearly energy suppl
 
 -   The costs for electricity includes costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable.
 
--   The costs for heat producing devices are calculated in the same fashion as those of electricity producing devices. This calculation therefore also entails costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable.
+-   The costs for heat producing devices are calculated in the same fashion as those of electricity producing devices. This calculation therefore also entails costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable. In addition, [district heating network costs](!heat_infrastructure_costs.md) are included.
 
 -   The energetic fuel costs are based the final demand of the transportation sector and the given energy carriers costs, and refinery costs.
 

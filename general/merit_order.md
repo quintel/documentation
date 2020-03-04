@@ -2,10 +2,10 @@
 
 For Dutch readers: Het oorspronkelijke project is uitgevoerd met subsidie van het Ministerie van Economische Zaken, voor het TKI Gas uitgevoerd door Agentschap NL. Translation: The original project was supported by subsidies from the Ministry of economic affairs.
 
-This page serves to explain the merit order implementation in the ETM in cooperation with Energie Nederland in Q4 2012 and the subsequent update in 2016. The Merit Order Module is available in the professional version of the ETM in 
+This page serves to explain the merit order implementation in the ETM in cooperation with Energie Nederland in Q4 2012 and the subsequent update in 2016. The Merit Order Module is available in the professional version of the ETM in
 the Cost \> Merit Order slide as shown in Figure 1.
 
-![Figure 1: Merit Order slide in the ETM.](../images/Mo_slide.png "Figure 1: Merit Order slide in the ETM.")
+![Figure 1: Merit Order slide in the ETM.](../images/merit_order_slide.png "Figure 1: Merit Order slide in the ETM.")
 
 Introduction
 ------------
@@ -20,7 +20,7 @@ The term 'merit order' refers to the order in which dispatchable plants are used
 
 It is important to note that turning on the merit order module will take control over how electricity is generated in the ETM. You will find that the merit order turns off all the expensive power plants when they are not needed (for example because you installed too many, [see example below](#installing_too_many_power_plants)).
 
-Some electricity producers, like wind turbines, cannot be turned off at will as their production is determined by outside factors, like wind in this case. This also holds for must-run producers, i.e. combined heat and power plants (CHPs), whose electricity production is determined by their heat demand. For scenario's with large capacities of these volatile and must-run producers, their total electricity production might exceed the electricity demand. To make most use of this excess electricity, the user can include flexibility options in his scenario. These flexibility options are described in a [dedicated section](flexibility.md).
+Some electricity producers, like wind turbines, cannot be turned off at will as their production is determined by outside factors, like wind in this case. This also holds for must-run producers, such as biogas CHPs. For scenario's with large capacities of these volatile and must-run producers, their total electricity production might exceed the electricity demand. To make most use of this excess electricity, the user can include flexibility options in their scenario. These flexibility options are described in a [dedicated section](flexibility.md).
 
 The full load hours and the use of the various flexibility options (outputs of the the merit order module) are used in the ETM for the scenario in the 'future' year, impacting, among others, CO2 emissions, costs, import&export, total energy use and renewable percentages of electricity and energy. In addition, the module calculates financial metrics for producers such as **profit** and **profitability** ([defined below](#profitability)).
 
@@ -43,7 +43,7 @@ In Figure 4, the table and chart that show information about full load hours and
 
 ![Figure 4: Merit Order table (left) and Merit Order graph (right).](../images/Mo_charts.png "Figure 4: Merit Order table (left) and Merit Order graph (right).")
 
-The table shown in Figure 4 lists all electricity producers in the ETM. There are two classes of producers distinguished in the context of the Merit Order, the producers whose full load hours are *independent* of the outcome of the Merit Order calculation. This class includes **volatile** producers of electricity such as solar panels and wind turbines which produce electricity *irrespective* of the demand and **must-run** producers (generally CHPs whose primary objective is to fulfill a heat demand of some sort). The second class is made up of **dispatchable** producers and includes nuclear, coal and gas plants. In contrast to the volatiles, the plants have the capability to react to variations in demand. For the producers, the following properties are displayed in the *Merit Order Table*:
+The table shown in Figure 4 lists all electricity producers in the ETM. There are two classes of producers distinguished in the context of the Merit Order, the producers whose full load hours are *independent* of the outcome of the Merit Order calculation. This class includes **volatile** producers of electricity such as solar panels and wind turbines which produce electricity *irrespective* of the demand and **must-run** producers. The second class is made up of **dispatchable** producers and includes nuclear, coal and gas plants. In contrast to the volatiles, the plants have the capability to react to variations in demand. For the producers, the following properties are displayed in the *Merit Order Table*:
 
 -   Position in the Merit Order: The position in the merit order is simply the order based on the marginal cost.
 -   Marginal costs: The costs concerned with producing an extra unit of electricity.
@@ -89,12 +89,12 @@ In Figure 6, a cartoon of a demand profile is shown in blue. It has 8760 datapoi
 
 ##### <a name="producers"></a>Producers
 
-A producer is an electricity producing technology, such as a nuclear power plant, wind turbine or local CHP.
+A producer is an electricity producing technology, such as a nuclear power plant or wind turbine.
 
 The Merit Order Module considers three types of producers:
 
 -   Volatile (e.g. wind turbine, solar panel)
--   Must-Run (e.g. CHPs that fulfill a heat demand)
+-   Must-Run (e.g. biogas CHPs)
 -   Dispatchable (e.g. coal or gas power plant)
 
 These three producers each play a different role in the Merit Order Module.
@@ -113,14 +113,12 @@ This can also be seen in Figure 6.: The violet and green curves are used to sati
 
 The volatiles and must-runs have a-priori defined curves that determine their 'on-time'. The following profiles are used to determine the hourly production by scaling them with the installed capacity of the respective participant.
 
--   demand industry CHPs
--   agricultural CHPs
--   buildings CHPs
 -   solar pv panels
 -   offshore wind turbines
 -   coastal wind turbines
 -   inland wind turbines
 -   hydro river
+-   biogas CHPs (flat curve)
 
 Dispatchables do not have a load profile defined yet, because their time-resolved production will be calculated by the MO module.
 
@@ -136,7 +134,7 @@ After assigning the dispatchables for all hours of the year, the total full load
 
 #### Electricity Price
 
-Thirdly, the Merit Order Module sets an electricity price for each hour. The plant with the highest operating cost will come online last and it can set the price for electricity. This price is equal to the marginal costs of the participant that is the first one that is not running at all. This reflects the assumption that a producer will try to sell his electricity for a price that is as high as possible but still (infinitely) smaller than the cost of the participant that is the first one not producing. Note, that the model searches for the next producer that would actually be available in your scenario. If no 'more expensive' participant is available because all participants are running, the Merit Order Module will set a certain maximum price. Some special cases may be encountered:
+Thirdly, the Merit Order Module sets an electricity price for each hour. The plant with the highest operating cost will come online last and it can set the price for electricity. This price is equal to the marginal costs of the participant that is the first one that is not running at all. This reflects the assumption that a producer will try to sell their electricity for a price that is as high as possible but still (infinitely) smaller than the cost of the participant that is the first one not producing. Note, that the model searches for the next producer that would actually be available in your scenario. If no 'more expensive' participant is available because all participants are running, the Merit Order Module will set a certain maximum price. Some special cases may be encountered:
 
 -   If no 'more expensive' participant is available, the electricity price is determined by 7.22 \* operating cost of the most expensive participant. This reflects the highest market price that can currently be observed in electricity trading during times of extreme shortage (around 600 EUR/MWh).
 -   If a scenario does not have any dispatchables at all, the modul will assign the maximum price of 600 EUR/MWh.
@@ -169,6 +167,15 @@ On an hourly scale: For the participants that are cheaper than the price setting
 #### Must Runs and Volatiles
 
 The full load hours of a **must run** or **volatile** participant are determined by outside factors, and have to be supplied when this participant is added. The full load hours of **volatile** and **must-run** technologies already take the availability of these technologies into account. The full load hours of volatile and must-run participants is not changed by the Merit Order Module.
+
+#### Marginal costs of CHPs
+To calculate the marginal costs of CHPs the ETM makes a distinction between two types of plants:
+- CHPs without a steam cycle
+- CHPs with a steam cycle
+
+For CHPs without a steam cycle, e.g. gas engines and turbines, heat is an unavoidable by-product of electricity production. As such, we assign the full fuel costs of these plants to electricity production.
+
+For CHPs with a steam cycle we only take into account the part of fuel costs into account required for electricity production. For example, suppose that a CHP has a 50% electrical efficiency, a 40% heat efficiency and 10% loss. To calculate marginal costs of electricity production we take into account ```50% + (50/90)*10 = 56%``` of the fuel costs.
 
 ### Financial output
 
