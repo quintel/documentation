@@ -29,11 +29,11 @@ Displaying outputs of the Merit Order Module
 
 #### Switching the module on and off
 
-The module can be switched on and off using the switch on the Merit Order slide or by using the checkbox in settings menu, see Figure 1. As of 2016, the merit order is switched on by default.
+The module can be switched on and off using the switch on the Merit Order slide, see Figure 1. The merit order is switched on by default.
 
 #### The Merit Order table and chart
 
-There are five dedicated output elements associated with the Merit Order module: two tables and three charts. The first two charts provide insight in the result of the merit order calculation by showing the hourly electricity mix and the hourly electricity price.
+There are five dedicated figures associated with the Merit Order module: two tables and three charts. The first two charts provide insight in the result of the merit order calculation by showing the hourly electricity mix and the hourly electricity price.
 
 ![Figure 2: Merit Order hourly supply chart](../images/20160809-screenshot-hourly-supply.png)
 
@@ -134,20 +134,14 @@ After assigning the dispatchables for all hours of the year, the total full load
 
 #### Electricity Price
 
-Thirdly, the Merit Order Module sets an electricity price for each hour. The plant with the highest operating cost will come online last and it can set the price for electricity. This price is equal to the marginal costs of the participant that is the first one that is not running at all. This reflects the assumption that a producer will try to sell their electricity for a price that is as high as possible but still (infinitely) smaller than the cost of the participant that is the first one not producing. Note, that the model searches for the next producer that would actually be available in your scenario. If no 'more expensive' participant is available because all participants are running, the Merit Order Module will set a certain maximum price. Some special cases may be encountered:
-
--   If no 'more expensive' participant is available, the electricity price is determined by 7.22 \* operating cost of the most expensive participant. This reflects the highest market price that can currently be observed in electricity trading during times of extreme shortage (around 600 EUR/MWh).
--   If a scenario does not have any dispatchables at all, the modul will assign the maximum price of 600 EUR/MWh.
--   If dispatchable plants are installed, but no dispatchable plant is running because the demand is entirely fulfilled by volatile and must-run producers, the price is set to the operation costs of the cheapest dispatchable participant.
+Thirdly, the Merit Order Module sets an electricity price for each hour. The plant with the highest operating cost that will come online last sets the price for electricity.
 
 ### Scope
 
 Currently, the Merit Order Module has some limitations:
 
--   Some power plants that may be installed by the user are not considered by the Merit Order Module at all. Geothermal and concentrated solar power are currently not implemented. Any contribution from these plants will just be added to the annual electricity production determined by the merit order module.
--   Only the installed dispatchable participants can be price-setting plants. The module sets a maximum price if the dispatchables cannot set a price. All volatile and must-run participants are not capable of setting the electricity price.
--   Electricity import from other countries is limited: Electricity is only imported if turning on all available national generation units is not sufficient to satisfy demand. In reality it might be a cheaper option to import electricity from a neighboring country, instead of running very expensive domestic plants. A consequence of this constraint is that importing electricity is very expensive. The module currently imports electricity at the maximum possible electricity price.
--   Electricity export to other countries is limited: The merit order only assigns domestic dispatchable power plants until the hourly demand is met. Therefore, dispatchable power plants are not used to produce electricity for export purposes. Export of electricity can only happen at times of very 'overproduction' from volatile and must-run power plants. If the production from wind, solar and must-run CHP plants is (temporarily) higher than the demand, the excess is exported.
+-   Only the installed dispatchable participants can be price-setting plants. All volatile and must-run participants are not capable of setting the electricity price.
+-   Electricity export to other countries is limited: The merit order only assigns domestic dispatchable power plants until the hourly demand is met. Therefore, dispatchable power plants are not used to produce electricity for export purposes. Export of electricity can only happen at times of 'overproduction' from volatile and must-run power plants. If the production from wind, solar and must-run CHP plants is (temporarily) higher than the demand, the excess is exported.
 
 Output
 ------
