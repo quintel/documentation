@@ -30,7 +30,7 @@ For apartment blocks the ETM takes into account costs for indoor pipelines to di
 
 _The costs and number of apartments with(out) block heating can be set per region in the ETM. The numbers above are default values_
 
-For other housing types (e.g. terraced houses or detached houses), no indoor costs are taken into account. We assume that heat is supplied at high enough temperatures to be used directly (70+ °C).
+For other housing types (e.g. terraced houses or detached houses), no indoor costs are taken into account. We assume that heat is supplied at high enough temperatures to be used directly (>70 °C).
 
 #### Buildings
 For non-residential buildings, we take into account two types of indoor costs:
@@ -74,7 +74,7 @@ Distribution pipelines are shared by both residences and non-residential buildin
 
 _Pipeline costs can be set per region in the ETM. The numbers above are default values_
 
-The required length of pipelines (for both distribution and connection pipelines) varies per region. Rural areas typically require longer pipeline networks than urban areas to connect the same amount of residences. In addition, average pipeline length per connection can vary within the same region as well: densely populated areas typically require less pipeline length per connected building than less densely populated areas.
+The required length of pipelines (for both distribution and connection pipelines) varies per region. Rural areas typically require longer distribution pipeline networks than urban areas to connect the same amount of residences. In addition, average pipeline length per connection can vary within the same region as well: densely populated areas typically require less pipeline length per connected building than less densely populated areas.
 
 To account for this, the ETM distinguishes between five 'length' brackets: A different average pipeline length per connection (and hence different pipeline costs per connection) is assumed depending on how many residences and buildings are connected to the network. I.e.:
 * Bracket 1 specifies the average required pipeline length per residence/building if up top 20% of residences/buildings are connected to a district heating network. For each residence/building connected up to 20% of the total housing/building stock, the same average required pipeline length is assumed.
