@@ -45,9 +45,9 @@ More information about the sources behind specifications of hybrid heat pumps (o
 
 The efficiency of hybrid heat pumps (HHP) is dependent on the ambient temperature and is depicted by the coefficient of performance (COP). The COP becomes lower as the outside temperature decreases. In the ETM it is possible to set the COP for which the HHP must switch between electricity and gas. You can choose a setting that is most financially attractive for the consumer, but you can also choose a setting that produces less impact on the electricity network 
 <p>
-To help you decide the cost-optimal COP setting from a consumer perspective, a special chart is added to the ETM. It shows how much it costs to make a unit of heat with the HHP. For the gas part, these costs are independent of the COP (and therefore the outside temperature). The costs for the electrical part are decreasing with increasing COP (and increasing outside temperature). The intersection of the two curves is the cost-optimal COP setting for the given cost price gas and electricity. This assumed cost price of gas and electricity can be set with sliders. 
+To help you decide the cost-optimal COP setting from a consumer perspective, a special chart is added to the ETM. It shows how much it costs to make a unit of heat with the HHP for space heating. For the gas part, these costs are independent of the COP (and therefore the outside temperature). The costs for the electrical part are decreasing with increasing COP (and increasing outside temperature). The intersection of the two curves is the cost-optimal COP setting for space heating for the given cost price gas and electricity. This assumed cost price of gas and electricity can be set with sliders. 
 
-![](../images/20200313_HHP_cost_optimal_COP_chart.png)
+![](../images/20200320_HHP_cost_optimal_COP_chart.png)
 
 ![](../images/20200313_HHP_COP_gas_electricity_costs_sliders.png)
 
@@ -57,15 +57,11 @@ The assumptions below:
 - Electricity price 22.5 ct/kWh
 - Gas efficiency space heating = 1.07
 
-lead to a cut off COP of:
-
-- Cut-off COP space heating = 2.6
-
-(For the HHP (on hydrogen) we adopted the same cut-off COP)
+lead to a cut off COP for space heating of **2.6**. This cut-off COP is used in the start situation of your scenario. For the HHP on hydrogen we adopted the same cut-off COP.
 
 When you're interested in the impact of HHPs on the electricity grid, you can have a look at the chart that is shown when clicking on the 'Annual'-button in the right corner of the chart. This chart shows the hourly gas and electricity demand of HHPs. 
 
-[insert chart when ready]
+![](../images/20200320_hourly_demand_HHP_households.png)
 
 ### Space heating - Heat pump ground
 The COP of heat pump ground is independent of the ambient temperature. The temperature of the reservoir in the ground from which the heat pump extracts heat is considered constant.
