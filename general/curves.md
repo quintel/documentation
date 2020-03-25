@@ -1,13 +1,13 @@
 # Curves
 
-The ETM uses hourly curves to model (electricity, hydrogen and gas) demand and supply. 
+The ETM uses hourly curves to model (electricity, hydrogen and gas) demand and supply.
 The hourly demand/supply is determined using the annual demand/supply and a curve.
 
 ![Hourly hydrogen demand chart](../images/20181002_hydrogen_demand.png)
 
 *Example of hourly demand - hydrogen demand*
 
-In 2019 we made an inventory of all curves available and updated all ETM-curves and their documentation. This project was carried out in close collaboration with the modelling community. On the 3th of July we closed the project with a mini-symposium. In this mini-symposium we shared our findings, struggles and discussed possibilities of further improvement of curves used in energy modelling. 
+In 2019 we made an inventory of all curves available and updated all ETM-curves and their documentation. This project was carried out in close collaboration with the modelling community. On the 3th of July we closed the project with a mini-symposium. In this mini-symposium we shared our findings, struggles and discussed possibilities of further improvement of curves used in energy modelling.
 
 
 ## Overview of curves
@@ -18,7 +18,7 @@ We define demand curves, supply curves and time curves. The tables below show a 
 
 |Sector|Subsector|Source|Method|Comment|
 |---|---|---|---|---|
-|**Households**|Space heating|TNO|TNO curves fitted to temperature and irradiance which enables to generate curves for all years <br> Collective technologies use G1A curve.|Update with TNO heat loss calculation when data becomes available|
+|**Households**|Space heating|TNO|TNO curves fitted to temperature and irradiance which enables to generate curves for all years. Curves have been smoothed to show the average load of a cluster of 300 houses rather than an individual house. This results in lower and more realistic total demand peaks.|Update with TNO heat loss calculation when data becomes available|
 ||Hot water|[Jordan (2001)](https://refman.energytransitionmodel.com/publications/2065)|Distribution function based on average Dutch household|-|
 ||Cooling|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E1A curve|[Argumentation of method](https://github.com/quintel/etdataset-public/tree/master/curves/demand/households/cooling), update with TNO heat loss calculation when data becomes available|
 ||Appliances|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E1A curve|-|
@@ -62,16 +62,16 @@ For the Netherlands the time curves are based on:
 For all other countries the time curves are based on The Primes reference scenario 2016.
 
 ## Details
-[ETDataset - curves](https://github.com/quintel/etdataset-public/tree/master/curves) contains all raw data, scripts and futher explanations.
+[ETDataset - curves](https://github.com/quintel/etdataset-public/tree/master/curves) contains all raw data, scripts and further explanations.
 
 
 ## Discussion
 Feedback on the curves we use is very welcome!
 If you have a comment or a better source please let us know, you can:
 
-* [Open an issue in ETDataset](https://github.com/quintel/etdataset-public/issues/new) and assign a team memeber of Quintel, eg:
+* [Open an issue in ETDataset](https://github.com/quintel/etdataset-public/issues/new) and assign a team member of Quintel, eg:
 	* [Chael Kruip](https://github.com/Chaelkruip)
 	* [Dorine van der Vlies](https://github.com/Dorinevandervlies)
 	* [Marlieke Verweij](https://github.com/marliekeverweij)
-	* [Roos de Kok](https://github.com/Redekok) 
+	* [Roos de Kok](https://github.com/Redekok)
 * E-mail us: [info@quintel.com](info@quintel.com)
