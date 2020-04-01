@@ -56,9 +56,9 @@ More information about the sources behind specifications of HHPs (on hydrogen) g
 **Threshold-COP**
 
 The efficiency of hybrid heat pumps (HHPs) is dependent on the ambient temperature and is depicted by the coefficient of performance (COP). The COP becomes lower as the outside temperature decreases. In the ETM it is possible to set the COP for which the HHP must switch between electricity and gas. You can choose a setting that is most financially attractive for the consumer, but you can also choose a setting that produces less impact on the electricity network 
-<p>
+
 ![](../images/20200401_threshold_COP_sliders.png)
-<p>
+
 Check out the threshold COP sliders in the ETM in the **[Flexibility → Net load](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-behavior-of-hybrid-heat-pumps)** section.
 
 To help you decide the cost-optimal COP setting from a consumer perspective, a special chart is added to the ETM. It shows how much it costs to make a unit of heat with the HHP for space heating. For the gas part, these costs are independent of the COP (and therefore the outside temperature). The costs for the electrical part are decreasing with increasing COP (and increasing outside temperature). The intersection of the two curves is the cost-optimal COP setting for space heating for the given cost price gas and electricity. This assumed cost price of gas and electricity can be set with sliders. 
