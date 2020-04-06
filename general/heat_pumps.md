@@ -3,7 +3,7 @@
 Below you can find more information about the heat pumps that are modeled in the Energy Transition Model. It gives insight in the [temperature dependency of the COP](#Temperature-dependency-of-COP) of different heat pumps and [heat buffers](#Buffers) for hot water and space heating.  
 
 ## Temperature dependency of COP
-Heat pumps extract heat from air or water:
+Heat pumps uses electricity to efficiently extract heat from air or water. The ETM models three types of heat pumps:
 * [Air-source heat pumps](#Air-source-heat-pumps) (Air)
 * [Hybrid heat pumps](#Hybrid-heat-pumps) (Air)
 * [Ground-source heat pumps](#Ground-source-heat-pump) (Water)
@@ -41,13 +41,15 @@ Where T is the ambient temperature.
 More information about the sources behind specifications of heat pump ground can be found here: [Documentation heat pump air - space heating](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_space_heater_heatpump_air_water_electricity.converter.xlsx) and here: [Documentation heat pump air - hot water](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_water_heater_heatpump_air_water_electricity.converter.xlsx).
 
 ### Hybrid heat pumps
-For temperature dependency of COP of hybrid heat pumps (HHPs) different parameters are used than for air-source heat pumps (ASHPs). HHPs are most often installed in less insulated houses compared to air-source heat pumps and additionally these houses have different heat delivery systems, so the required output temperature of HHPs is higher than for ASHPs. Instead of 35°C output temperature, which is used for ASHPs, we assumed 44°C output temperature for HHPs. With this output temperature and the cost-optimal threshold COP (about the threshold COP you can find more information below), the HHP electricity share for houses with energylabel B is 53.5%. 
+For temperature dependency of COP of hybrid heat pumps (HHPs) different parameters are used than for air-source heat pumps (ASHPs). HHPs are most often installed in less insulated houses compared to air-source heat pumps and additionally these houses have different heat delivery systems, so the required output temperature of HHPs is higher than for ASHPs. Instead of 35°C output temperature, which is used for ASHPs, we assumed 45°C output temperature for HHPs. With this output temperature and the cost-optimal threshold COP (about the threshold COP you can find more information below), the HHP electricity share for houses with energylabel B is 64%. 
+
+![](../images/20200402_COP_hhp_outside_temp.png)
 
 ![](../images/20200401_hhp_gas_elec_share.png)
 
 The equation used is:
 
-`  COP (T) = 2.277 + 0.0564 * T  		(3)`
+`  COP (T) = 2.323 + 0.0578 * T  		(3)`
 
 More information about the sources behind specifications of HHPs (on gas) ground can be found here: [Documentation hybrid heat pump (gas) - space heating](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_space_heater_hybrid_heatpump_air_water_electricity.converter.xlsx), and here: [Documentation hybrid heat pump (gas) - hot water](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_water_heater_hybrid_heatpump_air_water_electricity.converter.xlsx)
 
