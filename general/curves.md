@@ -38,13 +38,11 @@ We define demand curves, supply curves and time curves. The tables below show a 
 
 |Sector|Source|Method|
 |---|---|---|
-|Solar PV|["Open Power System Data platform"](https://data.open-power-system-data.org)
-|Profile from measured data, adjusted to match country specific full load hours|
-|Solar Thermal|["KNMI"](https://knmy.readthedocs.io/en/latest/)
-|Profile from measured data, adjusted to solar-thermal behaviour|
+|Solar PV|["Open Power System Data platform"](https://data.open-power-system-data.org) |Profile from measured data, adjusted to match country specific full load hours|
+|Solar Thermal|["KNMI"](https://knmy.readthedocs.io/en/latest/) |Profile from measured data, adjusted to solar-thermal behaviour|
 |Wind|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|
 |Other|River|Flat curve||
-||Dispatchable technologies|Production determined by [merit order](https://github.com/quintel/documentation/blob/master/general/merit_order.md)|
+|Dispatchable technologies||Production determined by [merit order](https://github.com/quintel/documentation/blob/master/general/merit_order.md)|
 
 For NL2015 the OPSD data is incomplete (< 98% of data points available) Hence, different sources (SoDa: Solar Radiation Data for PV and Ecofys data for wind) have been used to generate this curve.
 
@@ -59,7 +57,7 @@ For the Netherlands the time curves are based on:
 * Crude oil: [NLOG](https://www.nlog.nl/sites/default/files/jaarverslag%20delfstoffen%20en%20aardwarmt%20in%20nederland%20-%202017.pdf)
 * Other carriers: The Primes reference scenario in [EC\_2016\_Trends to 2050 reference scenario 2016](https://refman.energytransitionmodel.com/publications/2096)
 
-For all other countries the time curves are based on The Primes reference scenario 2016.
+For all other countries the time curves are based on the Primes reference scenario 2016.
 
 ## Details
 [ETDataset - curves](https://github.com/quintel/etdataset-public/tree/master/curves) contains all raw data, scripts and further explanations.
