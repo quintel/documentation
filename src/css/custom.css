@@ -213,13 +213,21 @@ article .container {
   padding-left: 0;
 }
 
-.api-request-details kbd, .api-request-details .endpoint {
+.api-request-details .endpoint {
   font-family: var(--ifm-font-family-monospace);
   font-size: var(--ifm-code-font-size);
 }
 
-.api-request-details kbd {
-  color: var(--ifm-code-color);
+.api-request-details code.type {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.api-request-details code.type:before {
+  content: "(";
+}
+
+.api-request-details code.type:after {
+  content: ")";
 }
 
 /* "#" links in headers. */

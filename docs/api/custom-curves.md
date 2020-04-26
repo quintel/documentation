@@ -4,6 +4,9 @@ title: Custom scenario curves
 sidebar_label: Custom scenario curves
 ---
 
+import endpointData from '@site/data/api/custom-curves';
+import ApiEndpoint from '@site/src/components/ApiEndpoint';
+
 Curves are used extensively within the ETM to control the behavior of some technologies. Some of these vary depending on the region selected for a scenario, while others are generated dynamically based on choices made by the end-user.
 
 In some cases it's possible for a user to upload a custom curve which will be used instead of the defaults. For example, uploading a curve to change the price of imported electricity changes when it is profitable to import electricity rather than generating it domestically.
@@ -12,7 +15,7 @@ In some cases it's possible for a user to upload a custom curve which will be us
 
 Endpoints which provide data about a curve (or curves), will return the following information:
 
-* `type` - the curve type (`"interconnector_1_price"`, etc).
+* `type` - the [curve type](#curve-types).
 * `name` - the name of the original file uploaded.
 * `size` - size of the original file in bytes.
 * `date` - the date the file was uploaded.
@@ -39,21 +42,7 @@ The API accepts curves describing the hourly price of the six electricity interc
 
 Fetches a listing of all custom curves attached to the scenario. A scenario with no custom curves will return an empty array. To get the data for a single curve, see the [Get a custom curve](#get-a-custom-curve) endpoint.
 
-<dl className="api-request-details">
-  <dt>Endpoint:</dt>
-  <dd className="endpoint">
-    GET /api/v3/scenarios/{`{scenario_id}`}/custom_curves
-  </dd>
-  <dt>Path parameters:</dt>
-  <dd>
-    <ul>
-      <li>
-        <kbd>scenario_id</kbd> (number) –
-        the scenario ID the custom curves belong to
-      </li>
-    </ul>
-  </dd>
-</dl>
+<ApiEndpoint data={endpointData.index} />
 
 ```http title="Example request"
 GET /api/v3/scenarios/0/custom_curves HTTP/2
@@ -87,25 +76,7 @@ Content-Type: application/json; charset=utf-8
 
 Retrieves information about a single attached curve. To get the data for all attached curves, see the [Get all custom curves](#get-all-custom-curves) endpoint.
 
-<dl className="api-request-details">
-  <dt>Endpoint:</dt>
-  <dd className="endpoint">
-    GET /api/v3/scenarios/{`{scenario_id}`}/custom_curves/{`{curve_type`}}
-  </dd>
-  <dt>Path parameters:</dt>
-  <dd>
-    <ul>
-      <li>
-        <kbd>scenario_id</kbd> (number) –
-        the scenario ID the custom curve belongs to
-      </li>
-      <li>
-        <kbd>curve_type</kbd> (string) –
-        see <a href="#curve-types">curve types</a>
-      </li>
-    </ul>
-  </dd>
-</dl>
+<ApiEndpoint data={endpointData.show} />
 
 ```http title="Example request"
 GET /api/v3/scenarios/0/custom_curves/interconnector_1_price HTTP/2
@@ -139,33 +110,7 @@ Uploads a custom curve using `multipart/form-data` content.
 
 The uploaded file must be plain text containing 8,760 numeric values, each on a separate line. Should the file have fewer or more than 8,760 values - or contain values which are not numbers - the request will be rejected.
 
-<dl className="api-request-details">
-  <dt>Endpoint:</dt>
-  <dd className="endpoint">
-    GET /api/v3/scenarios/{`{scenario_id}`}/custom_curves/{`{curve_type}`}
-  </dd>
-  <dt>Path parameters:</dt>
-  <dd>
-    <ul>
-      <li>
-        <kbd>scenario_id</kbd> (number) –
-        the scenario ID the custom curve belongs to
-      </li>
-      <li>
-        <kbd>curve_type</kbd> (string) –
-        see <a href="#curve-types">curve types</a>
-      </li>
-    </ul>
-  </dd>
-  <dt>Parameters:</dt>
-  <dd>
-    <ul>
-      <li>
-        <kbd>file</kbd> (binary) - data of the to be attached to the scenario
-      </li>
-    </ul>
-  </dd>
-</dl>
+<ApiEndpoint data={endpointData.update} />
 
 ```http title="Example request"
 PUT /api/v3/scenarios/0/custom_curves/interconnector_1_price HTTP/2
@@ -217,25 +162,7 @@ curl \
 
 Removes the uploaded curve of the named type.
 
-<dl className="api-request-details">
-  <dt>Endpoint:</dt>
-  <dd className="endpoint">
-    GET /api/v3/scenarios/{`{scenario_id}`}/custom_curves/{`{curve_type}`}
-  </dd>
-  <dt>Path parameters:</dt>
-  <dd>
-    <ul>
-      <li>
-        <kbd>scenario_id</kbd> (number) –
-        the scenario ID the custom curve belongs to
-      </li>
-      <li>
-        <kbd>curve_type</kbd> (string) –
-        see <a href="#curve-types">curve types</a>
-      </li>
-    </ul>
-  </dd>
-</dl>
+<ApiEndpoint data={endpointData.destroy} />
 
 ```http title="Example request"
 DELETE /api/v3/scenarios/0/custom_curves/interconnector_1_price HTTP/2
