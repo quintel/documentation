@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'ETM documentation',
   url: 'https://docs.energytransitionmodel.com',
   baseUrl: '/',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/logo.svg',
   organizationName: 'quintel', // Usually your GitHub org/user name.
   projectName: 'documentation', // Usually your repo name.
   themeConfig: {
