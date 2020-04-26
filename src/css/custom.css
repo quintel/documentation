@@ -59,6 +59,10 @@ h1, h2, h3 {
   border-bottom: 1px solid var(--ifm-contents-border-color)
 }
 
+.navbar__items:not(.navbar__items--right) {
+  flex: 2 0 0;
+}
+
 .navbar .navbar__link {
   color: var(--ifm-menu-color);
   font-weight: 500;
