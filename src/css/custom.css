@@ -134,6 +134,14 @@ h1 {
   line-height: 1.1875rem;
 }
 
+.contents:before {
+  content: "On this page";
+  color: var(--ifm-color-emphasis-700);
+  display: block;
+  font-weight: bold;
+  margin-left: var(--ifm-contents-padding-vertical);
+}
+
 .contents .contents__link {
   display: inline-block;
 }
