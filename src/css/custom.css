@@ -59,6 +59,15 @@ h1 {
   border-bottom: 1px solid var(--ifm-contents-border-color)
 }
 
+.navbar .navbar__link {
+  color: var(--ifm-menu-color);
+  font-weight: normal;
+}
+
+.navbar .navbar__link:not(.navbar__link--active):hover {
+  color: var(--ifm-font-base-color);
+}
+
 .navbar .navbar__search .navbar__search-input {
   width: 17rem;
 }

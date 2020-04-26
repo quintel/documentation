@@ -19,6 +19,24 @@ module.exports = {
         src: 'img/logo.svg',
       },
       links: [
+        {
+          to: '/main/intro',
+          label: 'For Users',
+          activeBasePath: '/main',
+          position: 'left',
+        },
+        {
+          to: '/contrib/intro',
+          label: 'For Contributors',
+          activeBasePath: '/contrib',
+          position: 'left',
+        },
+        {
+          to: '/api/intro',
+          label: 'API Reference',
+          activeBasePath: '/api',
+          position: 'left',
+        },
       ],
     },
     footer: {
@@ -29,7 +47,7 @@ module.exports = {
           items: [
             {
               label: 'For end-users',
-              to: '/',
+              to: '/main',
             },
             {
               label: 'For contributors',

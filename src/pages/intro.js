@@ -1,8 +1,8 @@
 import React from 'react';
 import { Redirect } from '@docusaurus/router';
 
-function Home() {
+function Intro() {
   return <Redirect to="/main/intro" />;
 }
 
-export default Home;
+export default Intro;
