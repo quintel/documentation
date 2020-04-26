@@ -2,8 +2,10 @@
   from = "/"
   to = "/main/intro"
   status = 302
+  force = true
 
 [[redirects]]
   from = "/intro"
   to = "/main/intro"
   status = 302
+  force = true
