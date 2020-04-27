@@ -24,11 +24,12 @@
   --ifm-menu-link-padding-vertical: 0.25rem;
 
   --ifm-menu-color-active: var(--ifm-link-color);
-  --ifm-link-hover-color: var(--ifm-font-base-color);
+  --ifm-link-hover-color: var(--ifm-font-color-base);
 
   --ifm-font-size-base: 16px;
   --ifm-line-height-base: 1.7;
   --ifm-leading: 1rem;
+  --ifm-heading-line-height: 1;
 
   --ifm-menu-color: var(--ifm-color-emphasis-700);
   --ifm-contents-link-color: var(--ifm-menu-color);
@@ -55,7 +56,15 @@ h1, h2, h3 {
 }
 
 header h1 {
-  margin-top: -0.5rem;
+  margin-top: -0.25rem;
+}
+
+.markdown h2 {
+  --ifm-h2-font-size: 1.5rem;
+}
+
+.markdown h3 {
+  --ifm-h3-font-size: 1.25rem;
 }
 
 /* Center the main docs UI. */
@@ -91,11 +100,6 @@ header h1 {
 
 .col + .col {
   padding-left: 0;
-}
-
-div[class^="docSidebarContainer"] {
-  /* Make sidebar extend all the way to the footer. */
-  margin-bottom: -3.75rem;
 }
 
 /* Custom colors for the sidebar scrollbar. */
@@ -135,7 +139,7 @@ div[class^="docSidebarContainer"] {
 }
 
 .navbar .navbar__link:not(.navbar__link--active):hover {
-  color: var(--ifm-font-base-color);
+  color: var(--ifm-font-color-base);
 }
 
 .navbar .navbar__search .navbar__search-input {
@@ -143,7 +147,7 @@ div[class^="docSidebarContainer"] {
 }
 
 .menu .menu__link {
-  color: var(--ifm-font-base-color);
+  color: var(--ifm-font-color-base);
   font-size: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -160,7 +164,7 @@ div[class^="docSidebarContainer"] {
 .menu .menu__link:hover,
 .menu .menu__list .menu__list .menu__link:hover {
   background: none;
-  color: var(--ifm-font-base-color);
+  color: var(--ifm-font-color-base);
 }
 
 .menu .menu__list .menu__list {
@@ -168,7 +172,7 @@ div[class^="docSidebarContainer"] {
 }
 
 .menu .menu__list .menu__list a[href="#!"] {
-  color: var(--ifm-font-base-color);
+  color: var(--ifm-font-color-base);
   margin-top: 0.5rem;
 }
 
@@ -208,7 +212,7 @@ div[class^="sidebar_"] {
 
 /* Add the normal hover color for the "Documentation home" link. */
 .menu .menu__list .menu__link[href="/"]:not([aria-current="page"]):hover {
-  color: var(--ifm-font-base-color);
+  color: var(--ifm-font-color-base);
 }
 
 .menu .menu__link.menu__link--active:not(.menu__link--sublist),
@@ -243,7 +247,7 @@ div[class^="sidebar_"] {
 
 .contents .contents__link:hover,
 .contents .contents__link:hover code {
-  color: var(--ifm-font-base-color);
+  color: var(--ifm-font-color-base);
 }
 
 div[class^="mdxCodeBlock_"] {
@@ -350,7 +354,7 @@ li ul, li ol {
 }
 
 .alert a:hover {
-  color: var(--ifm-font-base-color);
+  color: var(--ifm-font-color-base);
 }
 
 .alert.alert--secondary {
