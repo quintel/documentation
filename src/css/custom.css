@@ -375,6 +375,6 @@ table th, table td {
 }
 
 .menu a.menu__link--active[href="/api/custom-curves"]:after {
-  color: #d4dfff;
-  border-color: #d4dfff;
+  color: #e8eeff;
+  border-color: #e8eeff;
 }
