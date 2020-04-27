@@ -200,6 +200,12 @@ div[class^="sidebar_"] {
   color: white;
 }
 
+.menu .menu__list .menu__list .menu__link--active {
+  /* Increase the font-weight of active items which are not at the top-level
+     in the sidebar (those are already bold). */
+  font-weight: 500;
+}
+
 /* ToC sidebar */
 .contents {
   line-height: 1.1875rem;
