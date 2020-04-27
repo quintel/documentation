@@ -100,11 +100,12 @@ div[class^="docSidebarContainer"] {
 
 /* Custom colors for the sidebar scrollbar. */
 @media (min-width: 997px) {
-  div[class^="sidebar_"]::-webkit-scrollbar-track {
+  div[class^="sidebar_"]::-webkit-scrollbar-track,
+  div[class^="sidebar_"]::-webkit-scrollbar-thumb {
     background: #f1f3fb !important;
   }
 
-  div[class^="sidebar_"]::-webkit-scrollbar-thumb {
+  div[class^="sidebar_"]:hover::-webkit-scrollbar-thumb {
     background: #c3c7d8 !important;
   }
 
