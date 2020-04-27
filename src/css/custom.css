@@ -269,52 +269,6 @@ article .container {
   margin-right: 0;
 }
 
-.api-request-details {
-  border-bottom: 2px solid #ddd;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: var(--ifm-leading);
-  width: 100%;
-}
-
-.api-request-details dt, .api-request-details dd {
-  border-top: 2px solid #ddd;
-  padding: 1rem;
-}
-
-.api-request-details dt {
-  width: 22%;
-  font-weight: bold;
-}
-
-.api-request-details dd {
-  width: 78%;
-  margin: 0;
-}
-
-.api-request-details ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-.api-request-details .endpoint {
-  font-family: var(--ifm-font-family-monospace);
-  font-size: var(--ifm-code-font-size);
-}
-
-.api-request-details code.type {
-  color: var(--ifm-color-emphasis-700);
-}
-
-.api-request-details code.type:before {
-  content: "(";
-}
-
-.api-request-details code.type:after {
-  content: ")";
-}
-
 /* "#" links in headers. */
 .hash-link {
   color: var(--ifm-color-emphasis-500);

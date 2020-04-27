@@ -1,0 +1,45 @@
+.main {
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--ifm-leading);
+  width: 100%;
+}
+
+.main dt, .main dd {
+  border-top: 2px solid #ddd;
+  padding: 1rem;
+}
+
+.main dt {
+  width: 22%;
+  font-weight: bold;
+}
+
+.main dd {
+  width: 78%;
+  margin: 0;
+}
+
+.main ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.endpoint {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: var(--ifm-code-font-size);
+}
+
+.type {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.type:before {
+  content: "(";
+}
+
+.type:after {
+  content: ")";
+}

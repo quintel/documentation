@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './ApiEndpoint.module.css'
 
 const formatParams = (params) => {
   if (!params || !params.length) {
@@ -7,8 +8,8 @@ const formatParams = (params) => {
 
   const formatted = params.map(param =>
     <li key={param.name}>
-      <code className="param-name">{param.name}</code>{' '}
-      <code className="type">{param.type}</code>{' '}
+      <code>{param.name}</code>{' '}
+      <code className={styles.type}>{param.type}</code>{' '}
       &ndash;{' '}
       <span dangerouslySetInnerHTML={{ __html: param.description }} />
     </li>
@@ -25,9 +26,9 @@ const ApiEndpoint = ({ data }) => {
   const params = formatParams(data.parameters);
 
   return (
-    <dl className="api-request-details">
+    <dl className={styles.main}>
       <dt>Endpoint</dt>
-      <dd className="endpoint">{data.method} {data.endpoint}</dd>
+      <dd className={styles.endpoint}>{data.method} {data.endpoint}</dd>
       {pathParams ? <dt>Path parameters</dt> : null}
       {pathParams ? <dd>{pathParams}</dd> : null}
       {params ? <dt>Parameters</dt> : null}
