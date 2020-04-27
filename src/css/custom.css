@@ -37,7 +37,7 @@
   --ifm-spacing-horizontal: 1.5rem;
   --ifm-container-width: 1140px;
 
-  --custom-sidebar-color: #f1f3fa;
+  --custom-blue-background-color: #f1f3fa;
 }
 
 .markdown {
@@ -76,7 +76,7 @@ header h1 {
 
 /* Adds a colored "Docs" after the ETM title. */
 .navbar__title:after {
-  background: var(--custom-sidebar-color);
+  background: var(--custom-blue-background-color);
   border-radius: 4px;
   color: var(--ifm-color-primary);
   content: "Docs";
@@ -196,7 +196,7 @@ div[class^="docSidebarContainer"] {
 
 /* Gradient on sidebar. */
 div[class^="sidebar_"] {
-  background: linear-gradient(90deg, #fff, var(--custom-sidebar-color));
+  background: linear-gradient(90deg, #fff, var(--custom-blue-background-color));
 }
 
 /* "Documentation home" link on API and Contrib sidebars. */
@@ -358,7 +358,7 @@ li ul, li ol {
 }
 
 .alert.alert--info {
-  --ifm-alert-background-color: #eef1fb;
+  --ifm-alert-background-color: var(--custom-blue-background-color);
   --custom-alert-font-color: #5c668a;
   color: var(--custom-alert-font-color);
   border-color: #bcc2d8;
