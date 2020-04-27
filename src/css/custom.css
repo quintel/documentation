@@ -32,6 +32,10 @@
 
   --ifm-menu-color: var(--ifm-color-emphasis-700);
   --ifm-contents-link-color: var(--ifm-menu-color);
+  --ifm-contents-padding-left: 1rem;
+
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-container-width: 1140px;
 }
 
 .markdown {
@@ -46,6 +50,35 @@ h1 {
 
 h1, h2, h3 {
   font-weight: 600;
+}
+
+header h1 {
+  margin-top: -0.5rem;
+}
+
+/* Center the main docs UI. */
+.main-wrapper {
+  margin: 0 auto;
+  max-width: calc(var(--ifm-container-width) + 300px);
+}
+
+.main-wrapper .container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.navbar__inner {
+  max-width: calc(var(--ifm-container-width) - 3rem + 300px);
+  margin: 0 auto;
+}
+
+.col + .col {
+  padding-left: 0;
+}
+
+div[class^="docSidebarContainer"] {
+  /* Make sidebar extend all the way to the footer. */
+  margin-bottom: -3.75rem;
 }
 
 .docusaurus-highlight-code-line {
@@ -126,6 +159,11 @@ h1, h2, h3 {
   font-size: 0.875rem;
   font-weight: normal;
   text-transform: none;
+}
+
+/* Gradient on sidebar. */
+div[class^="sidebar_"] {
+  background: linear-gradient(90deg, #fff, #f1f3fb);
 }
 
 /* "Documentation home" link on API and Contrib sidebars. */
