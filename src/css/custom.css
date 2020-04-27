@@ -188,6 +188,11 @@ div[class^="sidebar_"] {
   text-transform: none;
 }
 
+/* Add the normal hover color for the "Documentation home" link. */
+.menu .menu__list .menu__link[href="/"]:not([aria-current="page"]):hover {
+  color: var(--ifm-font-base-color);
+}
+
 .menu .menu__link.menu__link--active:not(.menu__link--sublist),
 .menu .menu__link.menu__link--active:hover,
 .menu .menu__list .menu__list .menu__link.menu__link--active:hover {
