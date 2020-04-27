@@ -331,15 +331,19 @@ li ul, li ol {
   color: var(--custom-alert-font-color);
 }
 
+.alert a:hover {
+  color: var(--ifm-font-base-color);
+}
+
 .alert.alert--secondary {
   border-color: var(--ifm-color-gray-400);
 }
 
 .alert.alert--info {
-  --ifm-alert-background-color: #eaf5f9;
-  --custom-alert-font-color: #506665;
+  --ifm-alert-background-color: #eef1fb;
+  --custom-alert-font-color: #5c668a;
   color: var(--custom-alert-font-color);
-  border-color: #c5dde4;
+  border-color: #bcc2d8;
 }
 
 .alert.alert--warning {
