@@ -36,6 +36,8 @@
 
   --ifm-spacing-horizontal: 1.5rem;
   --ifm-container-width: 1140px;
+
+  --custom-sidebar-color: #f1f3fa;
 }
 
 .markdown {
@@ -70,6 +72,21 @@ header h1 {
 .navbar__inner {
   max-width: calc(var(--ifm-container-width) - 3rem + 300px);
   margin: 0 auto;
+}
+
+/* Adds a colored "Docs" after the ETM title. */
+.navbar__title:after {
+  background: var(--custom-sidebar-color);
+  border-radius: 4px;
+  color: var(--ifm-color-primary);
+  content: "Docs";
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 0.375rem;
+  margin-top: -1px;
+  padding: 0 0.25rem;
+  text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .col + .col {
@@ -178,7 +195,7 @@ div[class^="docSidebarContainer"] {
 
 /* Gradient on sidebar. */
 div[class^="sidebar_"] {
-  background: linear-gradient(90deg, #fff, #f1f3fb);
+  background: linear-gradient(90deg, #fff, var(--custom-sidebar-color));
 }
 
 /* "Documentation home" link on API and Contrib sidebars. */
