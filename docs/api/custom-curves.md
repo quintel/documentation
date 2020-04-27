@@ -15,7 +15,7 @@ Curves are used extensively within the ETM to control the behavior of some techn
 
 In some cases it's possible for a user to upload a custom curve which will be used instead of the defaults. For example, uploading a curve to change the price of imported electricity changes when it is profitable to import electricity rather than generating it domestically.
 
-### Curve data
+### The Curve object
 
 Endpoints which provide data about a curve (or curves), will return the following information:
 
