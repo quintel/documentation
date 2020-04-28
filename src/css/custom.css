@@ -78,6 +78,12 @@ header h1 {
   margin-right: 0;
 }
 
+@media (max-width: 1320px) and (min-width: 997px) {
+  .main-wrapper .container {
+    max-width: initial;
+  }
+}
+
 .navbar__inner {
   max-width: calc(var(--ifm-container-width) - 3rem + 300px);
   margin: 0 auto;
@@ -130,7 +136,7 @@ header h1 {
 }
 
 .navbar__items:not(.navbar__items--right) {
-  flex: 2 0 0;
+  flex: 2 2 auto;
 }
 
 .navbar .navbar__link {
@@ -143,7 +149,7 @@ header h1 {
 }
 
 .navbar .navbar__search .navbar__search-input {
-  width: 17rem;
+  width: 14rem;
 }
 
 .menu .menu__link {
@@ -201,6 +207,7 @@ header h1 {
 /* Gradient on sidebar. */
 div[class^="sidebar_"] {
   background: linear-gradient(90deg, #fff, var(--custom-blue-background-color));
+  min-width: 230px;
 }
 
 /* "Documentation home" link on API and Contrib sidebars. */
