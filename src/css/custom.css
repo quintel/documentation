@@ -19,6 +19,8 @@
   --ifm-code-color: #e3116c;
 
   --ifm-navbar-shadow: none;
+  --ifm-navbar-search-input-background-color: var(--ifm-color-emphasis-100);
+  --ifm-navbar-search-input-placeholder-color: var(--ifm-color-emphasis-600);
 
   --ifm-menu-link-padding-horizontal: 0.5625rem;
   --ifm-menu-link-padding-vertical: 0.25rem;
@@ -149,6 +151,8 @@ header h1 {
 }
 
 .navbar .navbar__search .navbar__search-input {
+  border: 1px solid var(--ifm-contents-border-color);
+  border-radius: 4px;
   width: 14rem;
 }
 
