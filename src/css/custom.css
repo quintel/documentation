@@ -153,7 +153,15 @@ header h1 {
 .navbar .navbar__search .navbar__search-input {
   border: 1px solid var(--ifm-contents-border-color);
   border-radius: 4px;
+  transition: all 0.15s ease-in;
   width: 14rem;
+}
+
+
+.navbar .navbar__search .navbar__search-input:focus {
+  background-color: #fff;
+  border-color: #b8c6de;
+  box-shadow: 0 0 0 3px #dbe0f1;
 }
 
 .menu .menu__link {
