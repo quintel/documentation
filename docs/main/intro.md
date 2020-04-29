@@ -4,6 +4,10 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
+import BrowserWarning from '@site/src/components/BrowserWarning';
+
+<BrowserWarning />
+
 The [Energy Transition Model](https://energytransitionmodel.com/) (ETM) is an
 open-source interactive tool for energy modeling. It allows you to create and
 explore scenarios for the energy future of various countries. The ETM brings the
