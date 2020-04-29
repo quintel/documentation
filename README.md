@@ -1,8 +1,16 @@
-# Website
+# ETM Documentation
 
-This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+Please update your links: documentation is now published and searchable at **https://docs.energytransitionmodel.com**
 
-### Installation
+This repository contains the source for the [ETM Docs website](https://docs.energytransitionmodel.com). It's built using Docusaurus 2; please see [Installation](#installation) for instructions on getting up-and-running.
+
+## Adding documentation
+
+Please see [the published documentation](https://docs.energytransitionmodel.com/contrib/authoring-docs) for details on how to add, change, and remove documents ([in-repo link](https://github.com/quintel/documentation/blob/docusaurus/docs/contrib/authoring-docs.md)).
+
+## Installation
+
+If you wish to preview the site locally, you should [start by installing Yarn](https://yarnpkg.com/getting-started/install). Then running `yarn` will install the dependencies.
 
 ```
 $ yarn
@@ -26,8 +34,4 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-```
-$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Deployment happens automatically when your changes are pushed to the master branch.
