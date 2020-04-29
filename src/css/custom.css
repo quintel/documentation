@@ -282,6 +282,15 @@ div[class^="copyButton_"] {
   color: #f6f8fa !important;
 }
 
+.docusaurus-highlight-code-line {
+  background: #e2e7ec;
+}
+
+kbd {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: var(--ifm-code-font-size);
+}
+
 article .container {
   /* Don't center-align the main content block. */
   margin-left: 0;

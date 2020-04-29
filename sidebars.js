@@ -100,6 +100,13 @@ module.exports = {
         'contrib/waste-outputs',
       ],
     },
+    {
+      type: "category",
+      label: 'Adding new features',
+      items: [
+        'contrib/authoring-docs',
+      ],
+    },
   ],
   apiSidebar: [
     { type: "link", href: "/", label: "← Documentation home" },
