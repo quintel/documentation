@@ -6,7 +6,7 @@ The Energy Transition Model calculates the total cost of the yearly energy suppl
 
 -   The costs for electricity includes costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable.
 
--   The costs for heat producing devices are calculated in the same fashion as those of electricity producing devices. This calculation therefore also entails costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable. In addition, [district heating network costs](!heat_infrastructure_costs.md) are included.
+-   The costs for heat producing devices are calculated in the same fashion as those of electricity producing devices. This calculation therefore also entails costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable. In addition, [district heating network costs](heat-infrastructure-costs.md) are included.
 
 -   The energetic fuel costs are based the final demand of the transportation sector and the given energy carriers costs, and refinery costs.
 
@@ -22,17 +22,17 @@ The costs are all expressed in current years Euros. Inflation is not taken into 
 
 ## Electricity production
 
-*Main article: [ Electricity and heat production costs](heat_and_electricity_cost.md)*
+*Main article: [ Electricity and heat production costs](heat-and-electricity-cost.md)*
 
-The costs of electricity production are a simple sum of all electricity producing devices in the scenario (eg. power plants, solar panels, CHPs). Per electricity producing unit, the total costs are calculated. This calculation includes costs for fuel, operation and maintenance, financing costs and costs for CO<sub>2</sub> emission credits if applicable. The same calculation is used for both electricity and heat costs, which is explained in more detail [here](heat_and_electricity_cost.md).
+The costs of electricity production are a simple sum of all electricity producing devices in the scenario (eg. power plants, solar panels, CHPs). Per electricity producing unit, the total costs are calculated. This calculation includes costs for fuel, operation and maintenance, financing costs and costs for CO<sub>2</sub> emission credits if applicable. The same calculation is used for both electricity and heat costs, which is explained in more detail [here](heat-and-electricity-cost.md).
 
 The total electricity produced in these converters is usually not an exact match with the demand of electricity in the scenario. When importing electricity, the costs are set to the average local production costs of electricity. In other words: imported electricity costs the same as locally produced electricity. Possible revenues of exported electricity are not taken into account. If your production exceeds your demand, the costs of the resulting excess of electricity are counted towards the total.
 
 ## Heat production
 
-*Main article: [ Electricity and heat production costs](heat_and_electricity_cost.md)*
+*Main article: [ Electricity and heat production costs](heat-and-electricity-cost.md)*
 
-Just like the costs for electricity production, the calculation for heat producing devices (eg. households heating appliances, industrial burners etc.) include costs for fuel, operation and maintenance, financing costs and costs for CO<sub>2</sub> emission credits if applicable. More details on this calculation are explained [here](heat_and_electricity_cost.md).
+Just like the costs for electricity production, the calculation for heat producing devices (eg. households heating appliances, industrial burners etc.) include costs for fuel, operation and maintenance, financing costs and costs for CO<sub>2</sub> emission credits if applicable. More details on this calculation are explained [here](heat-and-electricity-cost.md).
 
 It is assumed that the total heat produced in the converters corresponds with the use of heat in the scenario, and no heat is imported or exported.
 
@@ -70,7 +70,7 @@ The network costs are currently only calculated in the Netherlands, because this
 
 ## Weighted average cost of capital
 
-The ETM calculates the cost of capital for installed assets in the energy system, such as power plants, energy infrastructure and heating techonologies. As all costs in the ETM are expressed in current year Euros (i.e. no inflation), the WACC is in real terms as well. All technologies in the ETM are grouped into four 'risk categories': Households, Power infrastructure, Mature technologies and Immature technologies. For each of these categories a different default WACC is used, which can be changed by the user in the Costs section of the model. A more detailed specification of the categories can be found below:
+The ETM calculates the cost of capital for installed assets in the energy system, such as power plants, energy infrastructure and heating technologies. As all costs in the ETM are expressed in current year Euros (i.e. no inflation), the WACC is in real terms as well. All technologies in the ETM are grouped into four 'risk categories': Households, Power infrastructure, Mature technologies and Immature technologies. For each of these categories a different default WACC is used, which can be changed by the user in the Costs section of the model. A more detailed specification of the categories can be found below:
 
 * Households (real WACC: 2%). This category includes:
 	* Heating and cooling technologies such as boilers, heat pumps etc.
