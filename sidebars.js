@@ -120,6 +120,8 @@ module.exports = {
           label: 'Endpoints',
           items: [
             'api/custom-curves',
+            'api/flexibility-order',
+            'api/heat-network-order',
           ],
         },
       ],
