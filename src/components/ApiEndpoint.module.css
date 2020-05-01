@@ -1,4 +1,4 @@
-.main {
+.apiEndpoint {
   border-bottom: 2px solid #ddd;
   display: flex;
   flex-wrap: wrap;
@@ -6,22 +6,22 @@
   width: 100%;
 }
 
-.main dt, .main dd {
+.apiEndpoint dt, .apiEndpoint dd {
   border-top: 2px solid #ddd;
   padding: 1rem;
 }
 
-.main dt {
+.apiEndpoint dt {
   width: 22%;
   font-weight: bold;
 }
 
-.main dd {
+.apiEndpoint dd {
   width: 78%;
   margin: 0;
 }
 
-.main ul {
+.apiEndpoint ul {
   list-style: none;
   margin: 0;
   padding-left: 0;

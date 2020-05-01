@@ -11,7 +11,7 @@ const BrowserWarning = () => {
 
   if (isIE) {
     content = (
-      <div className={`admonition alert ${styles.main}`}>
+      <div className={`admonition alert ${styles.browserWarning}`}>
         <div className="admonition-heading">
           <h5>Internet Explorer is not supported</h5>
         </div>

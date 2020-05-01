@@ -1,23 +1,23 @@
-.main {
+.browserWarning {
   border: none;
   border-left: 0.5rem solid #f7c748;
   background-color: #ffe59e;
   padding: 1.5rem;
 }
 
-.main, .main a {
+.browserWarning, .browserWarning a {
   color: #866719;
 }
 
-.main a {
+.browserWarning a {
   text-decoration: underline;
 }
 
-.main a:hover {
+.browserWarning a:hover {
   color: #1c1e21;
 }
 
-.main h5 {
+.browserWarning h5 {
   font-size: 1rem;
   font-weight: 600;
   margin: 0.25rem 0 0.5rem;
@@ -25,6 +25,6 @@
   line-height: 1;
 }
 
-.main strong {
+.browserWarning strong {
   font-weight: 600;
 }

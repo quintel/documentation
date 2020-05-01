@@ -26,7 +26,7 @@ const ApiEndpoint = ({ data }) => {
   const params = formatParams(data.parameters);
 
   return (
-    <dl className={styles.main}>
+    <dl className={styles.apiEndpoint}>
       <dt>Endpoint</dt>
       <dd className={styles.endpoint}>{data.method} {data.endpoint}</dd>
       {pathParams ? <dt>Path parameters</dt> : null}
