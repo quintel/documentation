@@ -75,6 +75,8 @@ When switched on, the ETM automatically installs sufficient storage volume to st
 ##### Storage as dispatchable
 Heat storage is considered a dispatchable heat source. This means that heat will be drawn from storage during moments that heat demand exceeds must-run supply. By default, heat storage comes first in the heat merit order, which means that in case of a shortage in supply, heat is drawn from storage before other dispatchables (like gas burners) are switched on. Of course it is only possible to draw heat from storage if this heat has been put into storage earlier on in the year. The user can change the merit order positions in the Merit order subsection. Moving heat storage to a lower position in the merit order results in a slower depletion of stored heat. See [Merit order](#Merit-order).
 
+The output capacity of heat storage is unlimited by default. This means that there is no limit to the amount of heat that can be drawn from storage in one hour (given that enough heat is available in the storage). Users can limit this with a slider. A lower output capacity can result in a slower depletion of heat storage. A consequence of this could be that other dispatchable heat sources (such as gas heaters) need to be switched on earlier: if the output capacity of storage is insufficient to meet demand in a given hour, other dispatchables need to be switched to guarantee that enough heat is supplied.
+
 ![Heat storage per hour](/img/docs/20200214_heat_storage_per_hour.png)
 
 ##### The 'heat year'
