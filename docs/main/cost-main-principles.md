@@ -18,3 +18,8 @@ The cost calculation in the ETM adheres to the following principles:
 * All costs are expressed in real terms. This means that inflation is not taken into account.
 
 * All investment costs are depreciated using the [straight line depreciation](http://en.wikipedia.org/wiki/Depreciation#Straight-line_depreciation) method.
+
+## Disclaimer
+:::note
+The ETM was not created for in-depth cost analyses, but for scenario creation. Since its focus is energy, rather than costs, the ETM makes no claim to be exhaustive in the scope of its cost calculation. The resulting energy system costs are therefore best compared to those of other scenarios created with the ETM. Please be cautious when comparing the outcomes to cost estimates from other models.
+:::
