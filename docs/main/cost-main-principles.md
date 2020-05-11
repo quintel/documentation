@@ -13,7 +13,7 @@ The cost calculation in the ETM adheres to the following principles:
 
 * The ETM calculates the social _costs_ of the future energy system, not the *prices* of energy for specific stakeholders. Taxes, subsidies, levies etc. are therefore not taken into account.
 
-* The cost calculation only encompasses costs that are directly related to the energy system, i.e. the production and distribution of electricity, heat, gas, hydrogen and various other energy carriers. This means that the ETM takes into account investments for heating and cooling technologies but not for other applications, such as cars, lighting, household appliances etc. Only the fuel costs of these applications are accounted for. An overview per sector can be found [here](cost-overview.md).
+* The cost calculation only encompasses costs that are directly related to the energy system, i.e. the production and distribution of electricity, heat, gas, hydrogen and various other energy carriers. This means that the ETM takes into account investments for heating and cooling technologies but not for other applications, such as cars, lighting, household appliances etc. Only the fuel costs of these applications are accounted for. An overview per sector can be found [here](cost-overview-per-sector.md).
 
 * All costs are expressed in real terms. This means that inflation is not taken into account.
 
