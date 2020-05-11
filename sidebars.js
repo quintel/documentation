@@ -29,11 +29,13 @@ module.exports = {
       type: "category",
       label: 'Costs',
       items: [
-        'main/costs',
-        'main/cost-calculations',
-        'main/costs-imported-electricity',
+        'main/cost-main-principles',
+        'main/cost-annual-chart',
+        'main/cost-overview-per-sector',
         'main/heat-and-electricity-cost',
+        'main/cost-wacc',
         'main/heat-infrastructure-costs',
+        'main/costs-imported-electricity',
       ],
     },
     {
