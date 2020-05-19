@@ -13,12 +13,11 @@ open-source interactive tool for energy modeling. It allows you to create and
 explore scenarios for the energy future of various countries. The ETM brings the
 facts and tools to capture your vision for the future!
 
-![ETM interfaces](/img/docs/20160809-screenshot-ETM-interfaces.png)
+![ETM interfaces](/img/docs/20200513-screenshot-ETM-scenario.png)
 
-## Parts of the ETM
+## Documentation parts
 
-The ETM consist of many parts, all with their own specific documentation and
-user manuals. The main goal of this document is to provide you with the
+The main goal of this document is to provide you with the
 information you are looking for. Whether you are a user, a contributor, an
 energy expert or a developer, the links below should get you started right away!
 
