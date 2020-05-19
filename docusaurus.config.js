@@ -21,21 +21,25 @@ module.exports = {
       links: [
         {
           label: 'For Users',
+          // Fake "to" link so that "For Users" is given an active style.
+          to: '/main/intro',
           activeBasePath: '/main',
           position: 'left',
           items: [
             {
               label: 'User Manual',
-              href: '#',
-              activeBasePath: '/main',
+              href: '/main/intro',
+              target: '',
             },
             {
               label: 'Technical Documentation',
-              href: '#'
+              href: '/main/tech/intro',
+              target: '',
             },
             {
               label: 'Data Sources',
-              href: '#'
+              href: '/main/data/intro',
+              target: '',
             },
           ]
         },
