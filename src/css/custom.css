@@ -164,6 +164,12 @@ header h1 {
   box-shadow: 0 0 0 3px #dbe0f1;
 }
 
+.navbar .dropdown .dropdown__menu .dropdown__link {
+  color: var(--ifm-menu-color);
+  font-weight: 500;
+  font-size: inherit;
+}
+
 .menu .menu__link {
   color: var(--ifm-font-color-base);
   font-size: 0.875rem;
