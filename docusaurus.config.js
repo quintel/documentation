@@ -20,10 +20,24 @@ module.exports = {
       },
       links: [
         {
-          to: '/main/intro',
           label: 'For Users',
           activeBasePath: '/main',
           position: 'left',
+          items: [
+            {
+              label: 'User Manual',
+              href: '#',
+              activeBasePath: '/main',
+            },
+            {
+              label: 'Technical Documentation',
+              href: '#'
+            },
+            {
+              label: 'Data Sources',
+              href: '#'
+            },
+          ]
         },
         {
           to: '/contrib/intro',

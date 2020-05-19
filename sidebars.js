@@ -28,6 +28,10 @@ module.exports = {
   techdocsSidebar: [
     { type: "link", href: "/", label: "← Documentation home" },
     {
+      type: "doc",
+      id: "techdocs/intro",
+    },
+    {
       type: "category",
       label: "The ETM Interface",
       items: [
@@ -106,6 +110,10 @@ module.exports = {
   ],
   dataSidebar: [
     { type: "link", href: "/", label: "← Documentation home" },
+    {
+      type: "doc",
+      id: "data/intro",
+    },
   ],
   contribSidebar: [
     { type: "link", href: "/", label: "← Documentation home" },
