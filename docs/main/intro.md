@@ -55,15 +55,15 @@ From here on, we will focus on the professional interface.
 The professional interface allows you to influence all the main aspects of the
 energy system:
 
-* [**Demand**](/general/demand): what happens to energy consumption in the
+* [**Demand**](demand.md): what happens to energy consumption in the
   future?
-* [**Flexibility**](/general/flexibility): future energy system will most
+* [**Flexibility**](flexibility.md): future energy system will most
   likely be characterized by times of excess electricity due to the volatile
   nature of the electricity production. Flexibility technologies, like battery
   storage and power to gas allow you to deal with this excess electricity.
-* [**Supply**](/general/supply): which technologies will be used produce heat
+* [**Supply**](supply.md): which technologies will be used produce heat
   and electricity in the future?
-* [**Costs**](/general/costs): specify what you think will happen to the
+* [**Costs**](cost-main-principles.md): specify what you think will happen to the
   costs of carriers and technologies. Setting the costs provides the canvas on
   which your scenario is painted. NOTE: these costs do not include taxes or
   subsidies and are, therefore, less dependent on government influences than
@@ -114,7 +114,7 @@ coal, electricity, useable_heat etc.).
 
 The ETM is **demand driven** meaning that moving a slider in the demand sector,
 the graph is traverse from left to right. From 'useful demand' (heating, hot
-water, car-kilometers) to 'primary demand' (the extraction of gas, import of
+water, car kilometers) to 'primary demand' (the extraction of gas, import of
 coal etc.)
 
 More information on the calculation methods of the ETM can be found on our
