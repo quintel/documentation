@@ -18,9 +18,9 @@ The main interface contains a structure that the user should know in order to na
 
 The items on the left of the screen contain the main topics of the ETM:
 
-1. [Demand](/demand)
-2. [Costs](/costs)
-3. [Supply](/supply)
+1. [Demand](demand.md)
+2. [Costs](cost-main-principles.md)
+3. [Supply](supply.md)
 
 Clicking one of these categories opens the relevant section of the ETM. On the left side of the screen all the sub-topics are shown. The sub-topics are again divided into sub-sub-topics called 'slides'. Sliders are organized by slide. By clicking on a slide a user opens the overview of sliders relevant for this slide. Additionally, a chart is loaded that will show the effect of a slider when a user touches it.
 
