@@ -11,7 +11,7 @@ Alternatively, users can select an historic 'weather year': a consistent set of 
 Outdoor temperature impacts heating and cooling demand in households, buildings and agriculture. A lower average temperature leads to a higher heating demand and a lower cooling demand in those sectors. Conversely, a higher average temperature decreases heating demand and increases cooling demand.
 
 ## Impact on heating demand
-The ETM assumes that space heating demand in households, buildings and agriculture is temperature-dependent, as well as cooling demand in households and buildings (see [below](#Impact-on-cooling-demand)).  Other energy applications, such as hot water, appliances, transportation and industrial processes are assumed to be temperature *in*dependent.
+The ETM assumes that space heating demand in households, buildings and agriculture is temperature-dependent, as well as cooling demand in households and buildings (see [below](#impact-on-cooling-demand)).  Other energy applications, such as hot water, appliances, transportation and industrial processes are assumed to be temperature *in*dependent.
 
 The temperature dependent demand is assumed to increase by 15.1% per degree C below the average. This relationship is assumed to be linear and works both ways: a 1 degree C increase leads to a 15.1% lower demand.
 
@@ -58,12 +58,12 @@ A temperature change not only impacts heating demand, but cooling demand in hous
 
 As opposed to heating, the relationship between cooling and temperature is not linear. The ETM assumes the following relationship:
 
-cool_factor = 1.0 + 0.5669449x + 0.1598105x<sup>2</sup> + 0.0253755 x<sup>3</sup> + 0.00163210 x<sup>4</sup> (where x is the change in temperature in degrees C)
+<code>cool_factor = 1.0 + 0.5669449x + 0.1598105x<sup>2</sup> + 0.0253755x<sup>3</sup> + 0.00163210x<sup>4</sup></code> (where x is the change in temperature in degrees C)
 
 The useful demand for cooling is multiplied with this cool factor.
 
-This formula has been derived using a degree day approach.
-To translate a temperature change into a change in useful demand, it is assumed that people will cool their homes when the outdoor temperature rises above 23 °C. The change in useful demand cooling is directly related to a change in degree-days [1](http://en.wikipedia.org/wiki/Degree_day). Figure 1 below shows the temperature measurements in degrees centigrade. Also plotted are the threshold temperatures above which we assume cooling is required (circled area above the green line).
+This formula has been derived using a degree day approach [source](http://en.wikipedia.org/wiki/Degree_day).
+To translate a temperature change into a change in useful demand, it is assumed that people will cool their homes when the outdoor temperature rises above 23 °C. The change in useful demand cooling is directly related to a change in degree-days. Figure 1 below shows the temperature measurements in degrees centigrade. Also plotted are the threshold temperatures above which we assume cooling is required (circled area above the green line).
 
 ![](/img/docs/Degree_days_shaded.png)
 *Figure 1: Temperature curve in the Bilt for 2010*
