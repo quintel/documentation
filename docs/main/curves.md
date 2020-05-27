@@ -30,10 +30,10 @@ We define demand curves, supply curves and time curves. The tables below show a 
 ||Passenger trains, trams/metro, electric bicycle, motorcycles|[Movares](https://refman.energytransitionmodel.com/publications/2055)|Charging everywhere|Aim to update with measured data (Pro Rail)|
 ||Electric busses, electric trucks, freight trains|[Movares](https://refman.energytransitionmodel.com/publications/2055)|Charging at home (curve peaks during night)|Update when specific data becomes available|
 ||Hydrogen trucks, hydrogen busses, hydrogen cars|-|Flat curve|-|-|
-|**Industry**|All sectors except "other"|-|Flat curve||
-||Other|Gasterra|G2C profile|-|-|
-|**Agriculture**|Electricity|-|Flat curve|-|
-||Heat|-|Flat curve|Update when specific data becomes available|
+|**Industry**|All sectors except "food", "paper" and "other"|-|Flat curve||
+||Food, Paper and Other|Gasterra|G2C profile|-|-|
+|**Agriculture**|Electricity|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E3A curve|-|
+||Heat|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|G2A|Update when specific data becomes available|
 
 ### Supply
 

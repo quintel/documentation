@@ -52,6 +52,7 @@ module.exports = {
         'main/renewability',
         'main/useful-demand',
         'main/weather-conditions',
+        'main/outdoor-temperature'
       ],
     },
     {

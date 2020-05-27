@@ -6,18 +6,9 @@ For all datasets the average temperature and full load hours of wind turbines an
 
 ## Temperature
 
-Users can adjust the average temperature. The outdoor temperature slider sets the temperature with respect to the start year. This change in average temperature results in a change in heating and cooling demand.
+Users can adjust the average temperature. The outdoor temperature slider sets the temperature with respect to the start year. This change in average temperature results in a change in heating and cooling demand in households, buildings and agriculture.
 
-To translate a temperature change into a change in useful demand, it is assumed that people will start heating their homes when the outside temperature drops beneath 18 °C and will cool their homes when it rises above 23 °C. The change in useful demand for heating and cooling is directly related to a change in degree-days [1](http://en.wikipedia.org/wiki/Degree_day). To find the relation between the average outdoor temperature and the degree-days we have used temperature measurements from the observatory at "De Bilt" in the Netherlands for the year 2010. Figure 1 below shows these temperature measurements in degrees centigrade. Also plotted are the threshold temperatures above and below which we assume cooling and heating is required.
-
-![](/img/docs/Degree_days_shaded.png)
-*Figure 1: Temperature curve in the Bilt for 2010*
-
-To calculate degree-days for a given temperature threshold, the area between the threshold temperature and the curve is integrated. For heating this is the area **under** the 18 degree threshold and **above** the curve (shaded area in figure 1).Shifting the whole curve up (for increasing outdoor temperatures) or down (for decreasing outdoor temperatures) changes the shaded areas and thus the degree-days.
-
-:::note
-The effects of insulation are taken into account separately in the ETM. The slider described in this text, directly changes the useful demand for heating and cooling and the resulting useful demand can be (further) diminished by effects of insulation.
-:::
+The impact of a temperature change on energy demand is based on a 'degree days' formula defined by the Dutch gas TSO Gasunie Transport Services. More information can be found [here](outdoor-temperature.md).
 
 ## Full load hours
 
@@ -55,7 +46,7 @@ For weather years we use measured irradiation data (Source: [KNMI](https://proje
 
 ### Temperature
 
-Just as for default setting for weather years, temperature curves are based on measured data from The Bilt. (Source: [KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)). For each weather year the average temperature is compared with the average temperature of the default year. If a user selects a weather year this value is used to set the temperature slider.
+Just as for default setting for weather years, temperature curves are based on measured data from The Bilt. (Source: [KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)). For each weather year the average temperature is compared with the average temperature of the default year. If a user selects a weather year this value is used to set the temperature slider. This has an impact on the energy demand for heating and cooling in households, buildings and agriculture. For more information, see the [outdoor temperature](outdoor_temperature.md) section.
 
 ### Space heating
 
