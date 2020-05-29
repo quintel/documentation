@@ -130,6 +130,23 @@ Secondly, the module tests how much additional producers are needed to satisfy t
 
 After assigning the dispatchables for all hours of the year, the total full load hours are calculated for each participant.
 
+#### Price-sensitive demands
+
+Some demands in the merit order will be satisfied only if they are willing to pay for electricity at the current price. These are called "price-sensitive demands".
+
+:::info Beta-only feature
+This feature is not yet available on the live version of the Energy Transition Model, but will be launched in the near future. You can try it out today on the ["beta" testing server](https://beta-pro.energytransitionmodel.com).
+:::
+
+There are two situations in which a price-sensitive demand will be given energy:
+
+1. There is an excess of electricity in the hour, resulting from volatile or must-run producers.
+2. The price of electricity from dispatchables is less than the cut-off price the demand is willing to pay.
+
+For example, if a scenario has three dispatchable producers available, with prices of €10, €20, and €30, and the demand is willing to pay at most €25, then the first two dispatchables may be used to satisfy the demand, but not the third.
+
+This behavior is used to model electricity interconnectors, whereby electricity will be exported to other region when there is an excess, or they are willing to pay more than the current price of electricity. The price paid by the interconnector may be set with the "Interconnector price" slider, or by uploading [a custom curve](costs-imported-electricity.md#uploaded-price-curves).
+
 #### Electricity Price
 
 Thirdly, the Merit Order Module sets an electricity price for each hour. The plant with the highest operating cost that will come online last sets the price for electricity.
