@@ -34,8 +34,8 @@
   --ifm-heading-line-height: 1;
 
   --ifm-menu-color: var(--ifm-color-emphasis-700);
-  --ifm-contents-link-color: var(--ifm-menu-color);
-  --ifm-contents-padding-left: 1rem;
+  --ifm-toc-link-color: var(--ifm-menu-color);
+  --ifm-toc-padding-left: 1rem;
 
   --ifm-spacing-horizontal: 1.5rem;
   --ifm-container-width: 1140px;
@@ -112,16 +112,21 @@ header h1 {
 
 /* Custom colors for the sidebar scrollbar. */
 @media (min-width: 997px) {
-  div[class^="sidebar_"]::-webkit-scrollbar-track,
-  div[class^="sidebar_"]::-webkit-scrollbar-thumb {
-    background: #f1f3fb !important;
+  .menu::-webkit-scrollbar {
+    width: 7px;
   }
 
-  div[class^="sidebar_"]:hover::-webkit-scrollbar-thumb {
+  .menu::-webkit-scrollbar-track,
+  .menu::-webkit-scrollbar-thumb {
+    background: #f1f3fb !important;
+    border-radius: 10px;
+  }
+
+  .menu:hover::-webkit-scrollbar-thumb {
     background: #c3c7d8 !important;
   }
 
-  div[class^="sidebar_"]::-webkit-scrollbar-thumb:hover {
+  .menu::-webkit-scrollbar-thumb:hover {
     background: #a7acbf !important;
   }
 }
@@ -134,7 +139,7 @@ header h1 {
 }
 
 .navbar {
-  border-bottom: 1px solid var(--ifm-contents-border-color)
+  border-bottom: 1px solid var(--ifm-toc-border-color)
 }
 
 .navbar__items:not(.navbar__items--right) {
@@ -151,7 +156,7 @@ header h1 {
 }
 
 .navbar .navbar__search .navbar__search-input {
-  border: 1px solid var(--ifm-contents-border-color);
+  border: 1px solid var(--ifm-toc-border-color);
   border-radius: 4px;
   transition: all 0.15s ease-in;
   width: 14rem;
@@ -248,24 +253,24 @@ div[class^="sidebar_"] {
 }
 
 /* ToC sidebar */
-.contents {
+.table-of-contents {
   line-height: 1.1875rem;
 }
 
-.contents:before {
+.table-of-contents:before {
   content: "On this page";
   color: var(--ifm-color-emphasis-700);
   display: block;
   font-weight: bold;
-  margin-left: var(--ifm-contents-padding-vertical);
+  margin-left: var(--ifm-toc-padding-vertical);
 }
 
-.contents .contents__link {
+.table-of-contents .table-of-contents__link {
   display: inline-block;
 }
 
-.contents .contents__link:hover,
-.contents .contents__link:hover code {
+.table-of-contents .table-of-contents__link:hover,
+.table-of-contents .table-of-contents__link:hover code {
   color: var(--ifm-font-color-base);
 }
 
