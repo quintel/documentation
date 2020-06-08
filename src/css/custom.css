@@ -146,12 +146,12 @@ header h1 {
   flex: 2 2 auto;
 }
 
-.navbar .navbar__link {
+.navbar__link:not(.navbar__link--active) {
   color: var(--ifm-menu-color);
   font-weight: 500;
 }
 
-.navbar .navbar__link:not(.navbar__link--active):hover {
+.navbar__link:not(.navbar__link--active):hover {
   color: var(--ifm-font-color-base);
 }
 
