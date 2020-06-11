@@ -7,10 +7,6 @@ sidebar_label: Custom scenario curves
 import endpointData from '@site/data/api/custom-curves';
 import ApiEndpoint from '@site/src/components/ApiEndpoint';
 
-:::warning Experimental
-This feature is currently available only on our experimental "beta" version of the ETM. The exact implementation is still subject to change.
-:::
-
 Curves are used extensively within the ETM to control the behavior of various technologies. Most these curves vary depending on the region selected for a scenario, while others are generated dynamically based on choices made by the end-user.
 
 In some cases it's possible for a user to upload a custom curve, which will be used instead of the defaults. For example, uploading a curve to change the price of imported electricity changes when it is profitable to import electricity rather than generating it domestically.
