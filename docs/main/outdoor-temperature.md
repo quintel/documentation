@@ -13,7 +13,14 @@ Outdoor temperature impacts heating and cooling demand in households, buildings 
 ## Impact on heating demand
 The ETM assumes that space heating demand in households, buildings and agriculture is temperature-dependent, as well as cooling demand in households and buildings (see [below](#impact-on-cooling-demand)).  Other energy applications, such as hot water, appliances, transportation and industrial processes are assumed to be temperature *in*dependent.
 
-The temperature dependent demand is assumed to increase by 15.1% per degree C below the average. This relationship is assumed to be linear and works both ways: a 1 degree C increase leads to a 15.1% lower demand.
+The temperature dependent demand is assumed to increase by approximately 15.1% per degree C below the average. This relationship is assumed to be linear and works both ways: a 1 degree C increase leads to a 15.1% lower demand.
+
+Formally:
+
+<code>heat_factor = 1.0 - 0.1507409694x</code>
+(where x is the change in temperature in degrees C)
+
+This heat factor is applied to all temperature-dependent useful demand nodes in the ETM.
 
 Below, the sources and assumptions behind these numbers are explained in detail.
 
@@ -50,7 +57,7 @@ For the year 2017, the temperature dependent L-gas demand is around 49% of total
  * Around 1.4 bcm is used for electricity generation in agricultural CHPs (temperature independent) ([source, p.18](https://refman.energytransitionmodel.com/publications/2115))
  * This leaves 12.3 bcm out of 25.2 bcm temperature dependent demand
 
- Given the estimated 7.4% increase of total L-gas demand per degree C below average, this means that the temperature dependent part of L-gas demand increases by 15.1% per degree C below average (`0.074 / 0.49 = 15.1%`).
+ Given the estimated 7.4% increase of _total_ L-gas demand per degree C below average, this means that the _temperature dependent_ part of L-gas demand increases by approximately two times that amount per degree C below average (unrounded: 15.07409694%). Since roughly half of gas demand does not vary with temperature, the other half is twice as sensitive to get an average of 7.4%.
 
 
 ## Impact on cooling demand
