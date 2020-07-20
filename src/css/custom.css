@@ -391,6 +391,11 @@ table th, table td {
   vertical-align: top;
 }
 
+article p code {
+  font-size: 1rem;
+  letter-spacing: -0.35px;
+}
+
 /* Add "New" tag to some sidebar items. */
 .menu a[href="/api/custom-curves"]:after {
   -webkit-font-smoothing: initial;
