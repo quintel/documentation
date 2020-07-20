@@ -107,6 +107,7 @@ module.exports = {
       items: [
         'contrib/intro',
         'contrib/fever',
+        'contrib/molecules',
         'contrib/waste-outputs',
       ],
     },
