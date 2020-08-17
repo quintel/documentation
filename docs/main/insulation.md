@@ -107,7 +107,7 @@ The above assumptions result in the following insulation costs for an average ut
 Heat demand profiles
 --------
 
-The ETM models heating in households and buildings on an hourly basis in the so-called ["Fever" calculation](https://github.com/quintel/documentation/blob/master/general/fever.md). For this calculation hourly heat demand profiles for houses and buildings are needed.
+The ETM models heating in households and buildings on an hourly basis in the so-called ["Fever" calculation](/contrib/fever). For this calculation hourly heat demand profiles for houses and buildings are needed.
 
 ### Households
 
