@@ -4,6 +4,61 @@ title: Molecules
 
 The flows of molecules is modelled in ETEngine using a graph, separate from the energy graph. Nodes and edges for the molecule graph are stored in [graphs/molecules](https://github.com/quintel/etsource/tree/master/graphs/molecules).
 
+Molecule flows are calculated for both the present and future graphs, although the available features differ when Causality (hourly load calculations) is enabled.
+
+Node documents in ETSource have two attributes which configure flows between the graphs:
+
+* `from_energy` – Allows setting a demand on a molecule node, based on a demand in the energy graph. Only supported on nodes in the molecule graph.
+
+* `from_molecules` – Allows setting a demand on an energy node, based on a demand in the molecule graph. Only supported on nodes in the energy graph when Causality is enabled.
+
+## Without Causality
+
+When no hourly loads are calculated, the energy and molecule graphs are each calculated once.
+
+1. Energy graph is calculated.
+2. Molecule demands are set, configured with the `from_energy` attribute.
+3. Molecule graph is calculated.
+
+A consequence of this process is that energy flows may influence the molecule graph, but molecule flows will not cause any changes to the energy graph. Causality is always disabled for the present graph, and is disabled for the future graph whenever the end-user turns off the Merit Order in ETModel.
+
+## With Causality
+
+When Causality is enabled, the energy and molecule graphs are each calculated twice. This allows for demands in the molecule graph to set demands in the energy graph, which may then be accounted for in Causality calculations. This is most useful when you wish to account for the electricity demand resulting from CO<sub>2</sub> storage.
+
+1. Energy graph is calculated.
+2. Molecule demands are set, configured with the `from_energy` attribute.
+3. Molecule graph is calculated.
+4. Some energy demands are set or updated, based on flows in the molecule graph, configured by the `from_molecules` attribute.
+5. Hourly loads are calculated with Causality.
+6. Energy graph is re-calculated (updated demands set in step 4 are now accounted for).
+7. Molecule graph is re-calculated, accounting for changes resulting from Causality in step 5.
+
+### Circular dependencies
+
+The energy and molecule graphs may have a circular dependency. For example, if demand for electricity causes emission of CO<sub>2</sub>, CO<sub>2</sub> is then stored, which causes an increase in demand for electricity. This increase in electricity demand might cause further CO<sub>2</sub> emissions, further changing the molecule graph.
+
+Presently there is no way to resolve this without continually repeating steps 4-7, with performance constraints currently prohibiting this. For this reason, such circularities are not fully accounted for: demands set on the energy graph as a result of molecule flows (step 4) are therefore based on the first graph calculation (step 1), which doesn't account for changes made by Causality and the Merit Order.
+
+### Setting Causality demands
+
+When using the `from_molecules` attribute on an energy node, care must be taken to ensure the demand is included in the Causality calculation (for example, the electricity merit order, network gas, etc). Changes to an energy node demand _will not_ propagate through the graph until _after_ Causality has been calculated.
+
+Therefore, `from_molecules` may only be used on nodes which will not in any way influence the demand of any carrier calculated by Causality, or must be placed on a node directly used in a Causality calculation. For example, an energy node which represents CO<sub>2</sub> storage in the energy graph:
+
+```python
+# Configure that the energy node demand is based on a demand in the
+# molecule graph.
+
+- from_molecules.source = molecules_sequestration_co2
+- from_molecules.conversion = 1.0
+
+# The node participates directly in the Merit Order as a consumer.
+
+- merit_order.type = consumer
+- merit_order.group = flat
+```
+
 ## Initial calculation in Refinery
 
 The molecule graph may have shares set on edges, just like the energy graph, but all nodes have a demand of zero.
@@ -18,7 +73,14 @@ Demands in the molecule graph are based on demands calculated in the energy grap
 > Electricity: 1,000,000,000 MJ<br/>
 > CO<sub>2</sub> emitted: 100,000,000g (100T)
 
-The `from_energy` attribute on molecule nodes is used to inform the node from which energy node to calculate the molecule flow, and which inputs or outputs to use.
+The `from_energy` attribute on molecule nodes is used to inform the node from which energy node to calculate the molecule flow, and which inputs or outputs to use. The `from_molecules` attribute may be used on an electricity node to set a demand based on a value in the molecule graph [only when Causality is enabled](#with-causality).
+
+Energy nodes using `from_molecules` should have an initial demand set by ETSource, so that a value can be determined during the first calculation of the energy graph. Typically this involves adding it to the "preset_demand" group and setting a default demand of zero:
+
+```
+- groups = [preset_demand]
+~ demand = 0.0
+```
 
 ### The `source` attribute
 
@@ -95,4 +157,31 @@ For every 1MJ of useable heat output, 0.25kg of molecules will be set on the mol
 - from_energy.source = industry_aluminium_burner_network_gas
 - from_energy.direction = output
 - from_energy.conversion.useable_heat = 0.25
+```
+
+#### Molecule flow is based on a carrier attribute
+
+Rather than hard-coding a conversion value, you may instead read an attribute from a carrier. In place of a numeric value, use `carrier: attribute_name`.
+
+In this example, the molecule demand will be equal to the demand of the energy node multiplied by the the coal carrier's `co2_conversion_per_mj` attribute:
+
+```
+- from_energy.source = energy_power_ultra_supercritical_coal
+- from_energy.direction = input
+- from_energy.conversion.coal = carrier: co2_conversion_per_mj
+```
+
+If the demand for coal by the coal power plant is 100PJ, and the `co2_conversion_per_mj` is 0.05, then the molecule node will have a demand of 5PJ.
+
+#### Energy demand is based on molecule demand
+
+An energy node may have a demand set by the demand of a molecule node by using `from_molecules` on the energy node. The node belongs to the "preset_demand" group with a demand of zero; this demand will be used for the first calculation of the energy graph, but overwritten by the `from_molecules` value prior to the second calculation.
+
+```
+- groups = [preset_demand]
+
+- from_molecules.source = molecules_sequestration_co2
+- from_molecules.conversion = 1.0
+
+~ demand = 0.0
 ```
