@@ -6,7 +6,7 @@ Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Kli
 
 | Huishoudens  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
-|  ***Eindverbruik***  |  |  |  |  |
+|  ***Eindgebruik***  |  |  |  |  |
 |  Aardgas | Klimaatmonitor  | Let op het ETM gebruikt de niet-temperatuurgecorrigeerde data  | gaswoningen | Totaal gasgebruik woningen |
 |  Elektriciteit | Klimaatmonitor  | Inclusief 'zonnestroom gebruik achter de meter woningen'   | el_woningen_incl_zonachtermeter | Totaal elektriciteitsgebruik woningen (incl. zonnestroom achter de meter)|
 |  Collectieve warmte | Klimaatmonitor  | 'Stadswarmte woningen (niet-temperatuurgecorrigeerd)'  | warmwontier2 | Stadswarmte woningen (schatting, tier 2) |
@@ -17,7 +17,7 @@ Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Kli
 
 | Gebouwen (utiliteitsbouw)  | Bron  | Opmerking  |KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
-|  ***Eindverbruik***   |  |  |  |  |
+|  ***Eindgebruik***   |  |  |  |  |
 |  Aardgas | Klimaatmonitor  | Som van publieke en commerciële dienstverlening  |   gascomdv + gaspubldv | Gasgebruik Commerciële Dienstverlening, Gasgebruik Publieke Dienstverlening |
 |  Elektriciteit | Klimaatmonitor (bewerking)  | Som van publieke en commerciële dienstverlening, met een aantal bewerkingen: <ul><li>Inclusief 'zonnestroom gebruik achter de meter'</li><li>We schatten het verbruik van elektrische laadpalen o.b.v het aantal elektrische voertuigen in een regio. Dit verbruik trekken we af van de dienstensector en tellen we op bij de transportsector.</li><li>Hetzelfde doen we voor treinen, trams en metro's op basis van het aantal (trein)reizigers per gemeente/regio</li><li>Het verbruik van de ICT-sector (SBI J) verplaatsen we naar de industrie</li></ul> De reden voor deze bewerkingen is dat het ETM zo nauwkeurig mogelijk in kaart probeert te brengen met welk doel energie uiteindelijk gebruikt wordt. Zodat de gebruiker vervolgens aannames kan doen in het model over hoe dit in de toekomst gaat veranderen. Laadpalen vallen statitisch gezien onder de dienstensector, maar voorzien in een mobiliteitsbehoefte.   | elpubldv + elcomdv - elektrpers - ovintrein - ovinovov - energie_j | Elektriciteitsgebruik Publieke Dienstverlening, Elektriciteitsgebruik Commerciële Dienstverlening, Aantal geregistreerde elektrische personenauto's (FEV en PHEV), Gereisde kilometers trein, Gereisde kilometers bus/tram/metro,  Energiegebruik Informatie en communicatie (SBI J)|
 |  Collectieve warmte | Klimaatmonitor  | O.a. 'WKO utiliteitsbouw'. Zie [warmte] (#warmte)   |  |  |
@@ -28,7 +28,7 @@ Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Kli
 
 | Transport  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
-|  ***Eindverbruik***   |  |  |  |  |
+|  ***Eindgebruik***   |  |  |  |  |
 |  Diesel (wegverkeer) | Klimaatmonitor  | 'Energiegebruik wegverkeer totaal (diesel, benzine, LPG en aardgas)' en 'energiegebruik mobiele werktuigen'. Dit is inclusief verbruik op snelwegen. We splitsen deze gegevens uit naar energiedrager (diesel, bezine, LPG en aardgas) op basis van de door Klimaatmonitor gerapporteerde CO<sub>2</sub>-uitstoot van diesel-, benzine-, LPG- en aardgasvoertuigen in een regio. Voor diesel en benzine houden we rekening met bijmening van biobrandstoffen ('biobrandstoffengebruik in wegverkeer' en 'biobrandstoffengebruik mobiele werktuigen')  | energie_wegverk_tot + energie_mobwerk| Energiegebruik wegverkeer totaal (diesel, benzine, LPG en aardgas), Energiegebruik mobiele werktuigen (diesel, benzine en LPG) |
 |  Benzine (wegverkeer) | Klimaatmonitor  | Zie diesel  |  |  |
 |  LPG (wegverkeer) | Klimaatmonitor  | Zie diesel  |  |  |
@@ -44,14 +44,14 @@ Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Kli
 
 | Landbouw  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
-|  ***Eindverbruik***   |  |  |  |  |
+|  ***Eindgebruik***   |  |  |  |  |
 |  Aardgas | Klimaatmonitor (bewerking o.b.v. Emissieregistratie) | 'Gas geleverd aan landbouw, bosbouw en visserij (SBI A)'. Klimaatmonitor maakt geen onderscheid tussen eindgebruik en gasgebruik van WKK’s. Dit is met name relevant voor regio's met veel glastuinbouw. [Emissieregistratie] (http://emissieregistratie.nl/erpubliek/bumper.nl.aspx) heeft hier CO<sub>2</sub>-gegevens over ('Aardgasverbruik landbouw (WKK)' en 'niet-WKK'). Op basis hiervan splitsen wij het gasgebruik uit. Het gas dat naar WKK’s gaat, tellen we niet als eindgebruik maar komt in het ETM terug als eindgebruik voor (collectieve) warmte en elektriciteit.  | vbrzg_a | Gas geleverd aan Landbouw, bosbouw en visserij (SBI A) |
 |  Elektriciteit | Klimaatmonitor (bewerking)  | 'Elektriciteitsgebruik landbouw, bosbouw en visserij (SBI A)'. We verhogen dit getal met elektriciteit uit gas-WKK's (zie boven).  | vbrze_a | Elektriciteit geleverd aan Landbouw, bosbouw en visserij (SBI A) |
 |  (Collectieve) warmte | Klimaatmonitor (bewerking) | Optelling van 'Geothermie warmte (diepe bodemenergie)' en warmte uit gas-WKK's (zie boven).   |  geothermtj   | Geothermie warmte (diepe bodemenergie) (tier 2/3) |
 
 | Industrie  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
-|  ***Eindverbruik***   |  |  |     |  |
+|  ***Eindgebruik***   |  |  |     |  |
 |  Aardgas | Klimaatmonitor (bewerking o.b.v. Emissieregistratie) | Optelling van 'Gas geleverd aan industrie (SBI C)', 'Gasgebruik winning van delfstoffen (SBI B)', 'Gasgebruik Winning en distr. van water; afval- en afvalwaterbeheer en sanering (SBI E)' en 'Gasgebruik Bouwnijverheid (SBI F) '. <br />Het ETM deelt de industrie op in 10 verschillende subsectoren zoals metaal, chemie, voedsel etc. Wij schatten het gasgebruik per subsector door de bovenstaande optelling onder te verdelen naar rato van de CO<sub>2</sub>-uitstoot per subsector. Bijvoorbeeld: Als de voedselindustrie 40% van de CO<sub>2</sub>-emissies uitstoot van de gehele industrie in een gemeente dan kennen wij in die gemeente 40% van het gasverbruik toe aan de voedselsector.| vbrzg_btot, vbrzg_ctot,vbrzg_etot,vbrzg_ftot | Gas geleverd aan industrie (SBI C), Gasgebruik winning van delfstoffen (SBI B), Gasgebruik Winning en distr. van water; afval- en afvalwaterbeheer en sanering (SBI E), Gasgebruik Bouwnijverheid (SBI F) |
 |  Elektriciteit | Klimaatmonitor (bewerking o.b.v. Emissieregistratie)  | Vergelijkbaar met aardgas, met als verschil dat we hier ook 'Elektriciteitsgebruik Informatie en Communicatie (SBI J)' meenemen. In Klimaatmonitor hoort dit verbruik bij de dienstensector. | vbrze_b, vbrze_c,vbrze_e,vbrze_f,vbrze_j |Elektriciteit geleverd aan industrie (SBI C), Elektriciteitsgebruik winning van delfstoffen (SBI B), Elektriciteitsgebruik Winning en distr. van water; afval- en afvalwaterbeheer en sanering (SBI E), Elektriciteitsgebruik Bouwnijverheid (SBI F) , Elektriciteitsgebruik Informatie en Communicatie (SBI J) |
 |  (Collectieve) warmte, olie, kolen en feedstock | Geen gegevens m.u.v. staal, aluminium, kunstmest en raffinage | In sommige industrieën worden naast aardgas en elektriciteit ook andere energiedragers gebruikt, zoals olie, kolen en stoom. Klimaatmonitor heeft hier geen regionale gegevens over. Wij nemen deze energie daarom standaard niet mee, maar kunnen dit desgewenst wel bijschatten op basis van landelijke gegevens. Voor de staal-, aluminium- en kunstmestindustrie en de raffinagesector doen wij standaard *wel* bijschattingen, omdat de verbruiken van deze (grootschalige) industrie goed is te bepalen aan de hand van de Nederlandse energiebalans.  |   |  |
@@ -60,13 +60,13 @@ Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Kli
 |---|---|---|---|---|
 |  ***Verbruik***   |  |  |     |  |
 |  Elektriciteit | Klimaatmonitor | 'Elektriciteitsgebruik Productie en distr. elektriciteit, gas, stoom en gekoelde lucht (SBI D)' | vbrze_d | Elektriciteitsgebruik Productie en distr. elektriciteit, gas, stoom en gekoelde lucht (SBI D) |
-| Netverliezen (elektriciteit) | Quintel | Bijschatting Quintel o.b.v. landelijk gemiddelde. Deze energie wordt niet als eindverbruik gerekend en is daarom geen onderdeel van het 'totaal energiegebruik/eindverbruik' van een regio.  |  |
+| Netverliezen (elektriciteit) | Quintel | Bijschatting Quintel o.b.v. landelijk gemiddelde. Deze energie wordt niet als Eindgebruik gerekend en is daarom geen onderdeel van het 'totaal energiegebruik/eindgebruik' van een regio.  |  |
 |  Aardgas | Geen gegevens  | Klimaatmonitor heeft geen gegevens over het gasgebruik in de energiesector, zoals voor de productie van stoom voor de industrie.  |   |  |
 ||
 | ***Productie*** | | |  |  |
 | Wind | Klimaatmonitor |   | windtjbrutnorm | Wind op land hern. elektriciteit genormaliseerd (tier 1/2) |
 | Zon | Klimaatmonitor | 'Zonnestroom (tier 1)'. Uitsplitsing naar zon op dak voor huishoudens, zon op dak voor overige gebouwen en zonnevelden gebeurt op basis van (bekende) vermogens die Klimaatmonitor rapporteert. | zonpvtj | Zonnestroom (tier 1) |
-| Waterkracht | Klimaatmonitor | 'Hern. nelet| watertjbrutnorm | Waterkracht hern. elektriciteit genormaliseerd (tier 1)|
+| Waterkracht | Klimaatmonitor | | watertjbrutnorm | Waterkracht hern. elektriciteit genormaliseerd (tier 1)|
 
 | Overig | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
@@ -79,7 +79,7 @@ Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Kli
 | Landbouwgrond | CBS |  |  |
 ||
 | ***Emissies*** | | |  |  |
-| Emissies 1990 | Emissieregistratie | 'CO<sub>2</sub>-uitstoot incl. elektriciteitsgebruik' |   |  |
+| Emissies 1990 | Emissieregistratie (bewerking) | |   |  |
 | Emissies van 'overige broeikasgassen' (methaan e.d.) voor gebouwde omgeving, transport, industrie en landbouw | Emissieregistratie | |  |  |
 ||
 | ***Potenties*** | | |  |  |
@@ -94,6 +94,7 @@ Het ETM maakt ook een inschatting van het 'nuttig gebruik' per sector. Bijvoorbe
 
 TO DO:
 Aanbodkant
+1990 emissies
 Uitleg warmte
 Uitleg bijschattingen/filling the blanks
 Verwijzing ETLocal
