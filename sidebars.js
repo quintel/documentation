@@ -82,6 +82,13 @@ module.exports = {
       ],
     },
     {
+      type: "category",
+      label: 'Data',
+      items: [
+        'main/databronnen_regios',
+      ],
+    },
+    {
       type: "link",
       label: "For Contributors",
       href: "/contrib/intro"

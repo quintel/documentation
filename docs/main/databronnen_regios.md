@@ -1,32 +1,35 @@
+---
+title: Regionale data in het ETM
+---
 
 Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Klimaatmonitor naar het Energietransitiemodel.
 
 | Huishoudens  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
-|  ***Eindverbruik***  |  |  |  |  |   
-|  Aardgas | Klimaatmonitor  | Let op het ETM gebruikt de niet-temperatuurgecorrigeerde data  | gaswoningen | Totaal gasgebruik woningen |   
+|  ***Eindverbruik***  |  |  |  |  |
+|  Aardgas | Klimaatmonitor  | Let op het ETM gebruikt de niet-temperatuurgecorrigeerde data  | gaswoningen | Totaal gasgebruik woningen |
 |  Elektriciteit | Klimaatmonitor  | Inclusief 'zonnestroom gebruik achter de meter woningen'   | el_woningen_incl_zonachtermeter | Totaal elektriciteitsgebruik woningen (incl. zonnestroom achter de meter)|
 |  Collectieve warmte | Klimaatmonitor  | 'Stadswarmte woningen (niet-temperatuurgecorrigeerd)'  | warmwontier2 | Stadswarmte woningen (schatting, tier 2) |
-|  Biomassa | Klimaatmonitor  | 'Houtkachels woningen' en 'Houtskool') | houtwontj + houtskool | Houtkachels woningen hern. warmte, Houtskool hern. warmte (tier 1)|  
+|  Biomassa | Klimaatmonitor  | 'Houtkachels woningen' en 'Houtskool') | houtwontj + houtskool | Houtkachels woningen hern. warmte, Houtskool hern. warmte (tier 1)|
 ||
-|  ***Opwek***   | |  |   
-|  Zon | Klimaatmonitor (bewerking) | 'Zonnestroom (tier 1)'. We splitsen dit uit naar zon op dak voor huishoudens, zon op dak voor bedrijven en zonneparken op basis van 'Vermogen geregistreerde zonnepanelen woningen/bedrijven/veld- of drijvende opstelling') |   
+|  ***Opwek***   | |  |
+|  Zon | Klimaatmonitor (bewerking) | 'Zonnestroom (tier 1)'. We splitsen dit uit naar zon op dak voor huishoudens, zon op dak voor bedrijven en zonneparken op basis van 'Vermogen geregistreerde zonnepanelen woningen/bedrijven/veld- of drijvende opstelling') |
 
 | Gebouwen (utiliteitsbouw)  | Bron  | Opmerking  |KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
-|  ***Eindverbruik***   |  |  |  |  |   
+|  ***Eindverbruik***   |  |  |  |  |
 |  Aardgas | Klimaatmonitor  | Som van publieke en commerciële dienstverlening  |   gascomdv + gaspubldv | Gasgebruik Commerciële Dienstverlening, Gasgebruik Publieke Dienstverlening |
 |  Elektriciteit | Klimaatmonitor (bewerking)  | Som van publieke en commerciële dienstverlening, met een aantal bewerkingen: <ul><li>Inclusief 'zonnestroom gebruik achter de meter'</li><li>We schatten het verbruik van elektrische laadpalen o.b.v het aantal elektrische voertuigen in een regio. Dit verbruik trekken we af van de dienstensector en tellen we op bij de transportsector.</li><li>Hetzelfde doen we voor treinen, trams en metro's op basis van het aantal (trein)reizigers per gemeente/regio</li><li>Het verbruik van de ICT-sector (SBI J) verplaatsen we naar de industrie</li></ul> De reden voor deze bewerkingen is dat het ETM zo nauwkeurig mogelijk in kaart probeert te brengen met welk doel energie uiteindelijk gebruikt wordt. Zodat de gebruiker vervolgens aannames kan doen in het model over hoe dit in de toekomst gaat veranderen. Laadpalen vallen statitisch gezien onder de dienstensector, maar voorzien in een mobiliteitsbehoefte.   | elpubldv + elcomdv - elektrpers - ovintrein - ovinovov - energie_j | Elektriciteitsgebruik Publieke Dienstverlening, Elektriciteitsgebruik Commerciële Dienstverlening, Aantal geregistreerde elektrische personenauto's (FEV en PHEV), Gereisde kilometers trein, Gereisde kilometers bus/tram/metro,  Energiegebruik Informatie en communicatie (SBI J)|
 |  Collectieve warmte | Klimaatmonitor  | O.a. 'WKO utiliteitsbouw'. Zie [warmte] (#warmte)   |  |  |
 |  Biomassa | Klimaatmonitor  | Zie [warmte] (#warmte) |    |  |
 ||||
-|  ***Opwek***   | |  |   |  |  
+|  ***Opwek***   | |  |   |  |
 |  Zon | Klimaatmonitor (bewerking)  | Zie huishoudens  |     |  |
 
 | Transport  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
-|  ***Eindverbruik***   |  |  |  |  |   
-|  Diesel (wegverkeer) | Klimaatmonitor  | 'Energiegebruik wegverkeer totaal (diesel, benzine, LPG en aardgas)' en 'energiegebruik mobiele werktuigen'. Dit is inclusief verbruik op snelwegen. We splitsen deze gegevens uit naar energiedrager (diesel, bezine, LPG en aardgas) op basis van de door Klimaatmonitor gerapporteerde CO<sub>2</sub>-uitstoot van diesel-, benzine-, LPG- en aardgasvoertuigen in een regio. Voor diesel en benzine houden we rekening met bijmening van biobrandstoffen ('biobrandstoffengebruik in wegverkeer' en 'biobrandstoffengebruik mobiele werktuigen')  | energie_wegverk_tot + energie_mobwerk| Energiegebruik wegverkeer totaal (diesel, benzine, LPG en aardgas), Energiegebruik mobiele werktuigen (diesel, benzine en LPG) |  
+|  ***Eindverbruik***   |  |  |  |  |
+|  Diesel (wegverkeer) | Klimaatmonitor  | 'Energiegebruik wegverkeer totaal (diesel, benzine, LPG en aardgas)' en 'energiegebruik mobiele werktuigen'. Dit is inclusief verbruik op snelwegen. We splitsen deze gegevens uit naar energiedrager (diesel, bezine, LPG en aardgas) op basis van de door Klimaatmonitor gerapporteerde CO<sub>2</sub>-uitstoot van diesel-, benzine-, LPG- en aardgasvoertuigen in een regio. Voor diesel en benzine houden we rekening met bijmening van biobrandstoffen ('biobrandstoffengebruik in wegverkeer' en 'biobrandstoffengebruik mobiele werktuigen')  | energie_wegverk_tot + energie_mobwerk| Energiegebruik wegverkeer totaal (diesel, benzine, LPG en aardgas), Energiegebruik mobiele werktuigen (diesel, benzine en LPG) |
 |  Benzine (wegverkeer) | Klimaatmonitor  | Zie diesel  |  |  |
 |  LPG (wegverkeer) | Klimaatmonitor  | Zie diesel  |  |  |
 |  Aardgas (wegverkeer) | Klimaatmonitor  | Zie diesel  |  |  |
@@ -36,12 +39,12 @@ Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Kli
 | Diesel (railverkeer) | Klimaatmonitor | 'Energiegebruik railverkeer (alleen diesel)' | energie_rail  | Energiegebruik railverkeer (alleen diesel) |
 | Diesel (scheepvaart) | Klimaatmonitor | 'Energiegebruik zeescheepvaart en visserij' en 'Energiegebruik binnen- en recreatievaart' |  energie_zeevaart + energie_binnenvaart | Energiegebruik zeescheepvaart en visserij (diesel en stookolie), Energiegebruik binnen- en recreatievaart (diesel en benzine) |
 ||
-|  ***Overig***   |  |  |   |  | 
+|  ***Overig***   |  |  |   |  |
 | Aantal fietskilometers | Quintel / Klimaatmonitor| Geen informatie beschikbaar op gemeenteniveau. We verdelen het totaal aantal fietskilometers in Nederland (Klimaatmonitor) onder op basis van het aantal inwoners per gemeente. We nemen aan dat 16% van deze kilometers met een elektrische fiets afgelegd worden ([Nederlands gemiddelde 2017] (https://fietsberaad.nl/Kennisbank/Elektrische-fiets-goed-voor-2-procent-van-alle-rit)).| ovinfiets | Gereisde kilometers fiets |
 
 | Landbouw  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
-|  ***Eindverbruik***   |  |  |  |  |   
+|  ***Eindverbruik***   |  |  |  |  |
 |  Aardgas | Klimaatmonitor (bewerking o.b.v. Emissieregistratie) | 'Gas geleverd aan landbouw, bosbouw en visserij (SBI A)'. Klimaatmonitor maakt geen onderscheid tussen eindgebruik en gasgebruik van WKK’s. Dit is met name relevant voor regio's met veel glastuinbouw. [Emissieregistratie] (http://emissieregistratie.nl/erpubliek/bumper.nl.aspx) heeft hier CO<sub>2</sub>-gegevens over ('Aardgasverbruik landbouw (WKK)' en 'niet-WKK'). Op basis hiervan splitsen wij het gasgebruik uit. Het gas dat naar WKK’s gaat, tellen we niet als eindgebruik maar komt in het ETM terug als eindgebruik voor (collectieve) warmte en elektriciteit.  | vbrzg_a | Gas geleverd aan Landbouw, bosbouw en visserij (SBI A) |
 |  Elektriciteit | Klimaatmonitor (bewerking)  | 'Elektriciteitsgebruik landbouw, bosbouw en visserij (SBI A)'. We verhogen dit getal met elektriciteit uit gas-WKK's (zie boven).  | vbrze_a | Elektriciteit geleverd aan Landbouw, bosbouw en visserij (SBI A) |
 |  (Collectieve) warmte | Klimaatmonitor (bewerking) | Optelling van 'Geothermie warmte (diepe bodemenergie)' en warmte uit gas-WKK's (zie boven).   |  geothermtj   | Geothermie warmte (diepe bodemenergie) (tier 2/3) |
@@ -67,21 +70,21 @@ Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Kli
 
 | Overig | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
-|  ***Geografisch/demografisch***   |  |  |   
-|  Aantal inwoners | Klimaatmonitor |  | wbbevtot | Bevolking |  
-|  Aantal huizen per huistype | BAG (bewerking Quintel) | Quintel berekent het aantal rijtjeshuizen, appartementen, vrijstaande huizen en twee-onder-een-kaphuizen op basis van de Basisregistratie Adressen en Gebouwen |  |  |  
-| Gemiddeld energielabel per huistype | EP-online en RVO (bewerking Quintel) | Quintel berekent het gemiddelde energielabel per huistype op basis van de energielabeldatabase EP-online. Deze database bevat alleen huizen met een definitief energielabel. Voor de huizen zonder definitief label schatten we het energielabel op basis van het huistype en bouwjaar (RVO). |  |  |  
-| Aantal utiliteitsgebouwen | CBS |  |  |  
-| Aantal personenauto's | Klimaatmonitor |   | wbnpauto | Personenauto's totaal |  
-| Landbouwgrond | CBS |  |  |  
+|  ***Geografisch/demografisch***   |  |  |
+|  Aantal inwoners | Klimaatmonitor |  | wbbevtot | Bevolking |
+|  Aantal huizen per huistype | BAG (bewerking Quintel) | Quintel berekent het aantal rijtjeshuizen, appartementen, vrijstaande huizen en twee-onder-een-kaphuizen op basis van de Basisregistratie Adressen en Gebouwen |  |  |
+| Gemiddeld energielabel per huistype | EP-online en RVO (bewerking Quintel) | Quintel berekent het gemiddelde energielabel per huistype op basis van de energielabeldatabase EP-online. Deze database bevat alleen huizen met een definitief energielabel. Voor de huizen zonder definitief label schatten we het energielabel op basis van het huistype en bouwjaar (RVO). |  |  |
+| Aantal utiliteitsgebouwen | CBS |  |  |
+| Aantal personenauto's | Klimaatmonitor |   | wbnpauto | Personenauto's totaal |
+| Landbouwgrond | CBS |  |  |
 ||
-| ***Emissies*** | | |  |  |  
-| Emissies 1990 | Emissieregistratie | 'CO<sub>2</sub>-uitstoot incl. elektriciteitsgebruik' |   |  |  
-| Emissies van 'overige broeikasgassen' (methaan e.d.) voor gebouwde omgeving, transport, industrie en landbouw | Emissieregistratie | |  |  |  
+| ***Emissies*** | | |  |  |
+| Emissies 1990 | Emissieregistratie | 'CO<sub>2</sub>-uitstoot incl. elektriciteitsgebruik' |   |  |
+| Emissies van 'overige broeikasgassen' (methaan e.d.) voor gebouwde omgeving, transport, industrie en landbouw | Emissieregistratie | |  |  |
 ||
-| ***Potenties*** | | |  |  |  
-| Zon op dak voor huishoudens en gebouwen | Diverse bronnen | Afhankelijk van beschikbare data. Het ETM rekent met netto geschikt dakoppervlak: het aantal m<sub>2</sub> dat volledig bedekt kan worden met zonnepanelen.  |  |  
-| Biomassastromen | TNO | Zie [onze documentatie](https://github.com/quintel/documentation/blob/master/general/biomass.md) voor een uitgebreide uitleg van de schatting van de biomassapotentie per regio.  |  |  
+| ***Potenties*** | | |  |  |
+| Zon op dak voor huishoudens en gebouwen | Diverse bronnen | Afhankelijk van beschikbare data. Het ETM rekent met netto geschikt dakoppervlak: het aantal m<sub>2</sub> dat volledig bedekt kan worden met zonnepanelen.  |  |
+| Biomassastromen | TNO | Zie [onze documentatie](https://github.com/quintel/documentation/blob/master/general/biomass.md) voor een uitgebreide uitleg van de schatting van de biomassapotentie per regio.  |  |
 
 
 
