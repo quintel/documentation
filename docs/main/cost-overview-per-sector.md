@@ -61,3 +61,14 @@ Below you can find an overview per sector of the different costs taken into acco
 | Heat | For each heater, the ETM takes into account investment, O&M and input fuel costs. For imports, costs per GJ can be set in the model.
 | Hydrogen | For each installed hydrogen plant, the ETM takes into account investment, O&M and input fuel costs. For imports, costs per MWh can be set in the model.
 | Other carriers (natural gas, coal, oil, transport fuels, biomass etc.) | Costs per unit (MWh, barrel, tonne etc.) can be set in the model
+
+## Carbon capture, utilisation and storage (CCUS)
+|  ***Subject***   | ***Cost components***  |
+|---|---|
+| Capture of CO<sub>2</sub> in industry | Investment, O&M, fuel costs
+| Capture of CO<sub>2</sub> in energy sector | Investment, O&M, fuel costs
+| Direct Air Capture of CO<sub>2</sub> | Investment, O&M, fuel costs
+| Sequestration of CO<sub>2</sub> | Investment, O&M, fuel costs
+| Utilisation of captured CO<sub>2</sub> (production of synthetic methanol and kerosene) | Investment, O&M, fuel costs
+| CO<sub>2</sub> infrastructure | Investment, O&M for transportation via pipelines and ships
+

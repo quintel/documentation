@@ -2,7 +2,7 @@
 title: Total annual costs calculation
 ---
 
-The main cost figure in the ETM is the total yearly cost KPI that can be found in the model's Dashboard. The yearly total cost KPI is broken down into ten categories: [heat](#heat), [electricity](#electricity), [hydrogen](#hydrogen), [transport fuels](#transport-fuels), [non-energetic fuels (feedstock)](#non-energetic-fuels), [energy infrastructure](#infrastructure), [CCS in industry](#ccs-in-industry), [insulation](#insulation), [flexibility](#flexibility), and [vehicles](#vehicles).
+The main cost figure in the ETM is the total yearly cost KPI that can be found in the model's Dashboard. The yearly total cost KPI is broken down into ten categories: [heat](#heat), [electricity](#electricity), [hydrogen](#hydrogen), [transport fuels](#transport-fuels), [non-energetic fuels (feedstock)](#non-energetic-fuels), [energy infrastructure](#infrastructure), [insulation](#insulation), [flexibility](#flexibility), [vehicles](#vehicles) and [carbon capture, utilisation and storage (CCUS)](#carbon-capture-utilisation-and-storage-ccus).
 
 ![Annual costs chart](/img/docs/annual-cost-chart.png)
 
@@ -47,9 +47,6 @@ The network cost include annual investment and maintenance costs for both the po
 Hydrogen and district heating infrastructure costs are included in the [Hydrogen](#hydrogen) and [Heat](#heat) categories.
 :::
 
-### CCS in industry
-This category includes costs for Carbon Capture and Sequestration (CCS) in the industry sector. The ETM takes into account a fixed amount per tonne CO<sub>2</sub> captured. Users can change this amount with a slider.
-
 ### Insulation
 This category includes costs for insulation in the households and buildings sector. More information can be found [here](insulation.md).
 
@@ -63,3 +60,14 @@ Costs for power-to-hydrogen are included in the [Hydrogen](#hydrogen) category.
 
 ### Vehicles
 This category includes (additional) investment costs in electric cars and hydrogen cars. By default, these costs are zero. Users can change this if desired.
+
+### Carbon capture, utilisation and storage (CCUS)
+This category includes depreciation costs, costs of capital, operation and maintenance costs for:
+* carbon capture technologies (in industry, energy sector, DAC)
+* sequestration of CO<sub>2</sub>
+* utilisation of CO<sub>2</sub> (production of synthetic methanol, kerosene)
+* transport of CO<sub>2</sub> (via pipelines, ships)
+
+:::note
+Energy costs (fuel costs) for CO<sub>2</sub> capture, sequestration, transport and storage are included in the Electricity (e.g. compression) and Hydrogen (e.g. feedstock input for synthetic methanol or kerosene) series.
+:::
