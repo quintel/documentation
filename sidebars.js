@@ -11,18 +11,20 @@ module.exports = {
         'main/interface',
         'main/dashboard',
         'main/documentation',
-        'main/factsheet',
-        'main/nomenclature',
-        'main/res-comparison',
       ],
     },
     {
       type: "category",
       label: 'Carbon Emissions',
       items: [
-        'main/co2-calculations',
+        'main/co2-main-principles',
+        'main/co2-overview-per-sector',
+        'main/co2-emission-factors',
+        'main/co2-1990-emissions',
+        'main/co2-emissions-import-export',
         'main/co2-biomass',
-        'main/co2-emissions-of-imported-electricity',
+        'main/co2-ccus',
+        'main/co2-negative-emissions'
       ],
     },
     {
@@ -35,7 +37,7 @@ module.exports = {
         'main/heat-and-electricity-cost',
         'main/cost-wacc',
         'main/heat-infrastructure-costs',
-        'main/costs-imported-electricity',
+        'main/costs-imported-electricity'
       ],
     },
     {
@@ -86,6 +88,14 @@ module.exports = {
       label: 'Data',
       items: [
         'main/databronnen_regios',
+        'main/res-comparison',
+      ],
+    },
+    {
+      type: "category",
+      label: 'Misc',
+      items: [
+        'main/factsheet',
       ],
     },
     {
