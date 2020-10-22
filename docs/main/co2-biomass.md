@@ -5,9 +5,9 @@ sidebar_label: "Emissions from biomass"
 
 Climate change is not induced by the annual CO<sub>2</sub> emissions, but by the total amount of CO<sub>2</sub> present in the air. Virtually any form of combustion contributes to the amount of CO<sub>2</sub> in the air.
 
-Usually no CO<sub>2</sub> emissions are attributed to biomass as biomass absorbs as much CO<sub>2</sub> as is emitted during combustion (over the complete life cycle). The life cycle of biomass varies from a couple of months to over a century. To have a 66% chance of remaining below a temperature rise of 2 <sup>o</sup>C roughly 20 years of current emission can be emitted. Exceeding this temperature increase can have irreversible consequences. The CO<sub>2</sub> emitted by combustion of biomass is not always absorbed within a time-scale that is relevant for climate change.
+According to international standards, no CO<sub>2</sub> emissions are attributed to biomass as biomass is assumed to absorb as much CO<sub>2</sub> as is emitted during combustion (over the complete life cycle). The life cycle of biomass varies from a couple of months to over a century. To have a 66% chance of remaining below a temperature rise of 2 <sup>o</sup>C roughly 20 years of current emissions can be emitted. Exceeding this temperature increase can have irreversible consequences. The CO<sub>2</sub> emitted by combustion of biomass is not always absorbed within a time-scale that is relevant for climate change.
 
-Which part of the CO<sub>2</sub> emissions from biomass is relevant to the environment is uncertain and speculative. With the ETM the potential CO<sub>2</sub> emission from combustion of biomass can be explored.
+Which part of the CO<sub>2</sub> emissions from biomass is relevant to the environment is uncertain and speculative. With the ETM the potential CO<sub>2</sub> emissions from combustion of biomass can be explored.
 
 This part of the documentation provides background information on carbon budget, carbon debt, considerations for various types of biomass and policy.
 
@@ -85,9 +85,9 @@ Sustainability criteria must be met by all biofuels, whether produced within the
 
 ### Policy in The Netherlands
 
-The Netherlands generally follows EU policy when it comes to sustainability. So, for the use of liquid biofuels binding requirements are in place. There are currently no obligatory sustainability criteria for solid and gaseous biomass. A voluntary standard, NTA 8080, is available for organizations that can demonstrate that the biomass they use is sustainable.
+The Netherlands generally follows EU policy when it comes to sustainability. So, for the use of liquid biofuels binding requirements are in place. There are currently no obligatory sustainability criteria for solid and gaseous biomass. A voluntary standard, NTA 8080, is available for organisations that can demonstrate that the biomass they use is sustainable.
 
-In the National Energy Accord (Nationaal Energieakkoord) was agreed that sustainability criteria will be formulated to encourage the use of biomass in coal-fired plants. It was agreed that this is done taking into account aspects such as carbon debt, ILUC and conditions for responsible forestry. In April concept regulation was submitted that restricts SDE+ subsidies to woody biomass that has been produced sustainably ([EZ, 2016](#references)).
+In the National Energy Accord (Nationaal Energieakkoord) was agreed that sustainability criteria will be formulated to encourage the use of biomass in coal-fired plants. It was agreed that this is done taking into account aspects such as carbon debt, ILUC and conditions for responsible forestry. In April 2016 concept regulation was submitted that restricts SDE+ subsidies to woody biomass that has been produced sustainably ([EZ, 2016](#references)).
 
 ## References
 
