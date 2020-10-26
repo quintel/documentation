@@ -1,8 +1,6 @@
 ---
 title: Main principles
 ---
-
-## Main principles
 The ETM calculates the total CO<sub>2</sub> emissions for both the present and future. By default, it uses the following principles:
 
 * Emissions are assigned to the sector energy is _used_ in, rather than the _place_ of emissions. This means that emissions related to the production of, for example, electricity are attributed to all sectors using electricity (households, industry etc.) rather than to the power sector. A consequence of this approach is that the ETM by default _does_ take into account emissions of imported energy carriers (imported electricity, heat, hydrogen etc.) and _does not_ take into account emissions of exported energy carriers. More information can be found in the [import and export section](co2-emissions-import-export.md).
