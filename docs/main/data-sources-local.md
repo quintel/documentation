@@ -1,8 +1,7 @@
 ---
 title: Regionale data in het ETM
 ---
-
-Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Klimaatmonitor naar het Energietransitiemodel.
+Op deze pagina staat een overzicht van de gebruikte data voor de Nederlandse gemeenten, (RES-)regio's en provincies in het Energietransitiemodel. De standaard databronnen, aannames en methoden staan op deze pagina beschreven. Per regio kan hiervan worden afgeweken op basis van lokale informatie. De actuele stand van zaken per regio is te vinden op [ETLocal](#etlocal).
 
 ## Huishoudens
 |  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
@@ -66,13 +65,14 @@ Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Kli
 |---|---|---|---|---|
 |  ***Verbruik***   |  |  |     |  |
 |  Elektriciteit | Klimaatmonitor | 'Elektriciteitsgebruik Productie en distr. elektriciteit, gas, stoom en gekoelde lucht (SBI D)' | vbrze_d | Elektriciteitsgebruik Productie en distr. elektriciteit, gas, stoom en gekoelde lucht (SBI D) |
-| Netverliezen (elektriciteit) | Quintel | Bijschatting Quintel o.b.v. landelijk gemiddelde. Deze energie wordt niet als Eindgebruik gerekend en is daarom geen onderdeel van het 'totaal energiegebruik/eindgebruik' van een regio.  |  |
+| Netverliezen (elektriciteit) | Quintel | Bijschatting Quintel o.b.v. landelijk gemiddelde. Deze energie wordt niet als eindgebruik gerekend en is daarom geen onderdeel van het 'totaal energiegebruik/eindgebruik' van een regio.  |  |
 |  Aardgas | Geen gegevens  | Klimaatmonitor heeft geen gegevens over het gasgebruik in de energiesector, zoals voor de productie van stoom voor de industrie.  |   |  |
 ||
 | ***Productie*** | | |  |  |
 | Wind | Klimaatmonitor |   | windtjbrutnorm | Wind op land hern. elektriciteit genormaliseerd (tier 1/2) |
 | Zon | Klimaatmonitor | 'Zonnestroom (tier 1)'. Uitsplitsing naar zon op dak voor huishoudens, zon op dak voor overige gebouwen en zonnevelden gebeurt op basis van (bekende) vermogens die Klimaatmonitor rapporteert. | zonpvtj | Zonnestroom (tier 1) |
 | Waterkracht | Klimaatmonitor | | watertjbrutnorm | Waterkracht hern. elektriciteit genormaliseerd (tier 1)|
+| Warmte | Klimaatmonitor | Zie [warmte](#warmte) | | |
 
 ## Overige gegevens
 | | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
@@ -91,19 +91,54 @@ Hieronder staat een overzicht van de gebruikte bronnen voor de omzetting van Kli
 ||
 | ***Potenties*** | | |  |  |
 | Zon op dak voor huishoudens en gebouwen | Diverse bronnen | Afhankelijk van beschikbare data. Het ETM rekent met netto geschikt dakoppervlak: het aantal m<sub>2</sub> dat volledig bedekt kan worden met zonnepanelen.  |  |
-| Biomassastromen | TNO | Zie [onze documentatie](https://github.com/quintel/documentation/blob/master/general/biomass.md) voor een uitgebreide uitleg van de schatting van de biomassapotentie per regio.  |  |
-
+| Biomassastromen | TNO | Zie [onze documentatie](biomass.md) voor een uitgebreide uitleg van de schatting van de biomassapotentie per regio.  |  |
 
 
 ## Warmte
+De collectieve warmtevraag (vraag van 'warmtenetten') van huishoudens, gebouwen en landbouw wordt afgeleid uit de volgende gegevens op Klimaatmonitor:
 
-Het ETM maakt ook een inschatting van het 'nuttig gebruik' per sector. Bijvoorbeeld: Hoeveel van het eindgebruik aardgas van huishoudens wordt gebruikt voor ruimteverwarming, hoeveel voor warm water en hoeveel voor koken?
+* Vraag van stadsverwarming woningen
+* Productie van hernieuwbare warmte en warmte uit afvalverbranding (deels fossiel)
 
-TO DO:
-Aanbodkant
-1990 emissies
-Uitleg warmte
-Uitleg bijschattingen/filling the blanks
-Verwijzing ETLocal
-Contactgegevens
-FAQ: zware industrie, warmte, help telt niet op
+De laatste categorie zit aan de aanbodzijde van het energiesysteem. Omdat deze warmte ergens gebruikt wordt, rekent Klimaatmonitor deze productie bij de totale vraag. De productie van deze warmte wordt niet altijd volledig ingevoed op een warmtenet. Warmte kan ook direct gebruikt worden op de plek waar het geproduceerd wordt. Klimaatmonitor onderscheidt 8 bronnen van (hernieuwbare) warmteproductie:
+
+1. Geothermie
+2. WKO
+3. Warmte uit biogas
+4. Houtskoolgebruik in huishoudens
+5. Warmte uit afvalverbranding (hernieuwbaar en fossiel)
+6. Biomassaketels bij bedrijven
+7. Decentrale biomassa-WKK
+8. Bijstook van biomassa in elektriciteitscentrales
+
+Klimaatmonitor geeft voor sommige van deze categorieën niet aan in welke sector de geproduceerde warmte gebruikt wordt. In het ETM worden de volgende aannames gedaan:
+1. Geothermie wordt gerekend als warmte(net)-vraag in de landbouw, aangezien op dit moment nagenoeg alle geothermieproductie in deze sector plaatsvindt.
+2. WKO wordt toegekend aan de gebouwen/dienstensector. In het ETM komt dit terug als warmte(net)-vraag, gevoed door een warmtepomp.
+3. Biogas wordt toegekend aan de gebouwen/dienstensector. In het ETM komt dit terug als warmte(net)-vraag, gevoed door een biogas-WKK. In werkelijkheid wordt biogas ook in de landbouw en industrie gebruikt, maar vaak is er onvoldoende informatie om het aandeel van elke sector te bepalen.
+4. Houtskool komt in het ETM terug als biomassavraag in de huishoudsector.
+
+Voor categorie 5-8 ligt het iets ingewikkelder. Klimaatmonitor neemt aan dat deze warmte altijd wordt ingevoed op een warmtenet. Aangezien Klimaatmonitor data heeft over de warmtenetvraag van huishoudens, kan het zijn dat de warmteproductie van categorie 5-8 volledig naar de huishoudsector gaat. In het ETM komt dit terug als een warmte(net)-vraag van huishoudens, gevoed door (respectievelijk) afvalverbrandingsinstallaties, biomassaketels en  biomassa-WKK (voor zowel 7 als 8).
+
+Als de warmtenetvraag van huishoudens op Klimaatmonitor _kleiner_ is dan de productie van categorie 5-8, wordt het verschil als warmtevraag van de gebouwen/dienstensector gerekend. Meer informatie hierover kan gevonden worden in de [Rapportage energiegebruik](https://klimaatmonitor.databank.nl/dashboard/dashboard/rapportages/) op Klimaatmonitor, passage over 'Ontdubbeling stadsverwarming woningen en hernieuwbare warmte'.
+
+Voor de landbouw in gemeentes met glastuinbouw rekent het ETM een deel van de gasvraag ook als vraag naar warmte(net), namelijk het deel van het gas dat gebruikt wordt in een WKK. Zie [landbouw](#landbouw).
+
+De reden dat (8), bijstook van biomassa in elektriciteitscentrales, in het ETM terugkomt als biomassa-WKK is omdat Klimaatmonitor alleen data heeft over de hernieuwbare warmte, niet over de fossiele warmte die ook uit de centrale komt.
+
+## Emissies 1990
+Zie het aparte artikel over [1990-emissies](co2-1990-emissions.md).
+
+## Ontbrekende data
+Voor sommige regio's ontbreekt data voor een bepaalde sector of drager op Klimaatmonitor. Bijvoorbeeld omdat informatie vertrouwelijk is of herleidbaar naar individuele bedrijven. Quintel doet in dit geval een zo goed mogelijke schatting op basis van informatie die wel beschikbaar is. We proberen de ordegrootte te bepalen van de ontbrekende data. Hiervoor gebruiken we (een combinatie van) de volgende methodes:
+* We kijken of data wel beschikbaar is voor eerdere jaren.
+* We kijken of data wel beschikbaar is voor een hoger regionaal niveau. Bijvoorbeeld: Voor een gemeente kijken we of er wel gegevens op RES- of provincieniveau zijn. Dit geeft een idee van de grootte van de ontbrekende gemeenten.
+* We kijken of data wel beschikbaar is op totaalniveau en voor andere sectoren/dragers. Bijvoorbeeld: Soms is het totaal energiegebruik van een gemeente bekend en het verbruik in een aantal sectoren. Dit geeft een idee van de grootte van de ontbrekende sectoren.
+
+Belangrijk is dat het totale energiegebruik en het totale energiegebruik per hoofdcategorie (elektriciteit, gas & warmte, vervoer) op Klimaatmonitor zoveel mogelijk leidend is.
+
+_Voorbeeld:_ Volgens Klimaatmonitor is het totale elektriciteitsgebruik in regio X 100 TJ. Voor landbouw en industrie is er geen data gepubliceerd vanwege vertrouwelijkheid, maar deze verbruiken zijn wel verwerkt in het totale elektriciteitsgebruik. Voor de andere sectoren telt het elektriciteitsgebruik op tot 60 TJ. Quintel schat het verbruik van landbouw en industrie met behulp van bovenstaande methodes. Het totaal van landbouw en industrie kan niet hoger zijn dan 40 TJ, omdat anders het totaal van 100 TJ wordt overschreden.
+
+## ETLocal
+Uitgebreide informatie over de gebruikte data en bronnen per regio in het ETM is te vinden op [ETLocal](https://beta-local.energytransitionmodel.com/). Hier kun je de regio op de kaartlaag selecteren en vervolgens per sector de input-data bekijken.
+
+**Let op:** ETLocal is op dit moment nog in ontwikkeling. De dienst kan daardoor instabiel zijn en/of aan verandering onderhevig.

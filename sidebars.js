@@ -87,8 +87,7 @@ module.exports = {
       type: "category",
       label: 'Data',
       items: [
-        'main/databronnen_regios',
-        'main/res-comparison',
+        'main/data-sources-local'
       ],
     },
     {
