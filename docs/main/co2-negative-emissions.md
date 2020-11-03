@@ -1,7 +1,7 @@
 ---
 title: Negative emissions
 ---
-The ETM supports so-called 'negative' emissions. Negative emissions arise when more CO<sub>2</sub> is drawn from the ambient air than is added to it. In the ETM, there is two ways for negative emission to emerge:
+The ETM supports so-called 'negative' emissions. Negative emissions arise when more CO<sub>2</sub> is drawn from the ambient air than is added to it. In the ETM, there are two ways to bring about negative emissions:
 
 * By applying carbon capture to power and hydrogen production plants using biomass. This is possible for:
   * Coal-fired power plants with biomass co-firing
