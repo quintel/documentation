@@ -1,22 +1,18 @@
 ---
-title: Carbon emissions from imported electricity
-sidebar_label: Emissions from imported electricity
+title: Carbon emissions from import
+sidebar_label: Emissions from import
 ---
 
 ## Introduction
-When a country or region has a (temporal) higher electricity demand than production electricity needs to be imported from neighbouring countries or regions.
+In the ETM, various carriers can be imported from outside the area of your interest. For electricity, (collective) heat and hydrogen, there are no domestic on-the-spot CO<sub>2</sub> emissions: these carriers are produced elsewhere and hence CO<sub>2</sub> emissions resulting from this production also take place outside your area. One of the [main principles](co2-main-principles.md) of the ETM CO<sub>2</sub> calculation is that emissions are assigned to the location where energy is _used_, rather than _produced_. This means that, by default, the ETM _does_ take into account emissions of imported carriers.
 
-In many cases the imported electricity also causes CO<sub>2</sub> emissions due to production, transportation, and other life cycle relate emissions.
+The default emission factors for imported electricity, heat and hydrogen can be found in the [emission factor article](co2-emission-factors.md). In the model, the user can change these emission factors.
 
-## Default settings
+The sections below provide more background on the emissions of imported electricity.
 
-The default setting for imported electricity is the Dutch electricity mix: 527 gCO<sub>2</sub>/kWh or 146,39 gCO<sub>2</sub>/MJ ([CBS, 2015](#references)). The CBS (National statistical office) has chosen the 'integral method' to calculate the CO2 emissions of the electricity mix.
+## Imported electricity
 
-The reason to choose the Dutch average is that most datasets of the ETM are regional datasets of the Netherlands. These regions do import mostly electricity from the Dutch grid, which mostly exists of the Dutch electricity mix. In the ETM the user can overwrite this default setting, both for the present and the future situation.
-
-## Table with optional values
-
-We offer you two tables to support your choice. Table 1 shows country specific values, and Table 2 shows carrier-technology specific values.
+The default setting for imported electricity depends on the chosen region and starting year. The user can change this default setting for both the present and future year in the ETM's [Flexibility → Import/Export section](https://pro.energytransitionmodel.com/scenario/flexibility/electricity_import_export/electricity-interconnectors). The tables below give some guidance in choosing an appropriate emission factor in your scenario.
 
 ### Country specific values
 
