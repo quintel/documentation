@@ -21,7 +21,7 @@ If no 'custom' emission factor is specified, the following 'default' emission fa
 
 _Source: [EU Joint Research Centre](http://refman.et-model.com/publications/1708)_
 
-The emission factors for electricity, hydrogen and (collective) heat depend on the installed production technologies, which varies per ETM scenario. E.g. a scenario with lots of coal-fired power plants will have a more carbon-intensive power supply than a scenario with nuclear power plants. If [carbon capture](co2-ccus.md) is applied to energy production technologies using biomass as input, a carrier may have a [negative emission factor](co2-negative-emissions.md). This means that any sector using this carrier will see a decrease in its emissions. This, for example, applies to:
+The emission factors for electricity, hydrogen and (collective) heat depend on the installed production technologies, which vary per ETM scenario. E.g. a scenario with lots of coal-fired power plants will have a more carbon-intensive power supply than a scenario with nuclear power plants. If [carbon capture](co2-ccus.md) is applied to energy production technologies using biomass as input, a carrier may have a [negative emission factor](co2-negative-emissions.md). This means that any sector using this carrier will see a decrease in its emissions. This, for example, applies to:
 * Coal-fired power plants with biomass co-firing
 * Gas-fired power plants using green gas
 * Hydrogen production with biomass gasification technology

@@ -2,7 +2,7 @@
 title: Overview of emissions per sector
 ---
 
-The ETM's main CO<sub>2</sub> is displayed below. This chart is shown when clicking on the CO<sub>2</sub> dashboard item at the bottom of your screen and in the [overview section](https://pro.energytransitionmodel.com/scenario/overview/introduction/total-co-sub-2-sub-emissions).
+The ETM's main CO<sub>2</sub> chart is displayed below. This chart is shown when clicking on the CO<sub>2</sub> dashboard item at the bottom of your screen and in the [overview section](https://pro.energytransitionmodel.com/scenario/overview/introduction/total-co-sub-2-sub-emissions).
 
 ![District heating share in households](/img/docs/total_co2_emissions.png)
 
@@ -10,7 +10,7 @@ The following is included per category:
 
 |  ***Category***   | ***Scope***  |
 |---|---|
-| 1990 emissions | Includes all energetic CO<sub>2</sub> emissions and fertilizer feedstock emissions. Other green house gases and non-energetic CO<sub>2</sub> is excluded. 1990 emissions of international transport can be included optionally and are displayed as a separate series. See [1990 emissions](#1990-emissions)
+| 1990 emissions | Includes all energetic CO<sub>2</sub> emissions and fertilizer feedstock emissions. Other green house gases and non-energetic CO<sub>2</sub> are excluded. 1990 emissions of international transport can be included optionally and are displayed as a separate series. See [1990 emissions](#1990-emissions)
 | Net CO<sub>2</sub> emissions | Shows the total net CO<sub>2</sub> emissions. If a scenario contains [negative emissions](co2-negative-emissions.md), the red line can be lower than the highest bar as the line shows the sum of both positive and negative emission sectors.
 | Households | Includes all energetic CO<sub>2</sub> related to final energy demand in the households sector. Emissions associated with the production of electricity, hydrogen and district heating are assigned to this sector based on how much of each carrier is used. For electricity, local production of solar PV is incorporated in the [emission factor](co2-emission-factors.md) of electricity. Biomass emissions are excluded by default.
 | Buildings | See households.

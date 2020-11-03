@@ -2,7 +2,7 @@
 title: 1990 emissions
 ---
 
-The ETM compares future CO<sub>2</sub> emissions to 1990 emission levels, as this is a common reference point in (inter)national climate policy. In contrast to the present and future scenario year, the 1990 emissions number is not calculated (dynamically) by the model but instead is a fixed input number researched for each region.
+The ETM compares future CO<sub>2</sub> emissions to 1990 emission levels, as this is a common reference point in (inter)national climate policy. In contrast to the present and future scenario year, the 1990 emissions number is not calculated (dynamically) by the model, but instead is a fixed input number researched for each region.
 
 ## Country-level data
 For all countries in the ETM, the 1990 emissions number is based on data from the [European Environmental Agency](https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-16). The following categories are included:
