@@ -46,7 +46,7 @@ Gaseous biomass can be produced through fermentation and gasification. Most comm
 
 CE Delft carried out a study regarding the sustainability of biomass. They concluded that: "Biogas based on manure or residual flows (roadside grass, natural, organic waste and sewage sludge) scores (very) well on sustainability aspects. Biogas based on manure scores extra well because emissions in the chain are reduced. Biogas from raw materials which are also used as animal feed do not score well on sustainability criteria. It is possible that use of these commodity chains for biogas production leads to additional emissions." (translated [CE Delft, 2013](#references)). 
 
-Since then, quite a few innovations in biogas production have occurred, like high-pressure fermentation processes, which allows for separation of produced methane and CO<sub>2</sub> in a single phase, thereby creating biogas with higher concentrations of methane.  
+Since then, quite a few innovations in biogas production have occurred, like high-pressure fermentation processes, which allows for separation of produced methane and CO<sub>2</sub> in a single phase, thereby creating biogas with higher concentrations of methane. [Andreas Lemmer, 2019](#references).
 
 Gasification of solid biomass is relatively still uncommon, but the first commercial plants are being built. The climate impact may be higher than that of fermentation, because the life cycle of solid biomass is longer than that of wet biomass (waste) streams. More information about the life cycle of solid biomass can be found below.
 
@@ -109,6 +109,8 @@ on indirect land-use change related to biofuels and bioliquids](http://refman.en
 - IPCC, 2013: [Summary for Policymakers](http://refman.energytransitionmodel.com/publications/2043). In: Climate Change 2013: The Physical Science Basis. Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change [Stocker, T.F., D. Qin, G.-K. Plattner, M. Tignor, S.K. Allen, J. Boschung, A. Nauels, Y. Xia, V. Bex and P.M. Midgley (eds.)]. Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA.
 
 - IPCC, 2014: [Climate Change 2014](http://refman.energytransitionmodel.com/publications/2042): Synthesis Report. Contribution of Working Groups I, II and III to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change [Core Writing Team, R.K. Pachauri and L.A. Meyer (eds.)]. IPCC, Geneva, Switzerland, 151 pp.
+
+- Lemmer, Andreas, 2019: [High pressure fermentation for biomethane production](https://www.biogaschannel.com/en/video/research/13/fermentazione-ad-alta-pressione-la-produzione-di-b/1695/).
 
 - PBL/Alterra, 2013: [Climate effects of wood used for bioenergy](http://refman.energytransitionmodel.com/publications/2044), PBL publication number 1182,
 Alterra report 2455. The Hague: PBL Netherlands Environmental Assessment Agency.
