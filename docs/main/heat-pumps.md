@@ -88,28 +88,6 @@ The COP of heat pump ground is independent of the ambient temperature. The tempe
 
 More information about the sources behind specifications of heat pump ground can be found here: [Documentation heat pump ground - space heating](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_space_heater_heatpump_ground_water_electricity.converter.xlsx)
 
-## Buffers
-
-In the ETM all heat pumps have the option to install buffer for space heating and a buffer for hot water.
-
-The default settings of these buffers represent a common setup of heat pumps in households. However, in the future these buffers might also be used to store larger amounts of heat.
-
-### Heat pump air and heat pump ground
-
-Currently most heat pumps (air) are installed without a buffer for space heating. Most heat pumps (air) require a buffer to prevent unnecessarily frequent on and off switching of the compressors. In the default settings of the ETM the buffer for hot water takes care of this.
-
-In the current situation the hot water buffer represents a tank of 100 liter (which is typical for a Dutch household) and has a storage capacity of 5 kWh.
-
-In the future buffers can also be used to store larger amounts of heat.
-
-### Hybrid heat pump
-
-Most hybrid heat pumps are self-regulating. They don't need a buffer to protect the compressor.
-
-With the default settings the hybrid heat pump supplies hot water with either gas or hydrogen. In that case a buffer for hot water is not needed. By lowering the threshold COP the electric part of the hybrid heat pump can also supply hot water. In that case it is advised to install a buffer for hot water (typically 5 kWh).
-
-Check out the heat buffer sliders in the ETM in the **[Flexibility → Net load](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-buffers-for-heat-pumps)** section.
-
 ## References
 
 - Ecofys, 2015: [Systeemkosten van warmte voor woningen](https://refman.energytransitionmodel.com/publications/2063)
