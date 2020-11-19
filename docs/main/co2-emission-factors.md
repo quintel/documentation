@@ -25,7 +25,6 @@ The emission factors for electricity, hydrogen and (collective) heat depend on t
 * Coal-fired power plants with biomass co-firing
 * Gas-fired power plants using green gas
 * Hydrogen production with biomass gasification technology
-* Hydrogen production with steam methane reforming using green gas
 
 The emission factors of _imported_ electricity, hydrogen and heat can be set in the model. See the [import and export](co2-emissions-import-export.md) article for more information. The following default factors are used in case no country-specific data has been specified:
 
