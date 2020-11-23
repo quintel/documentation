@@ -40,7 +40,6 @@ Content-Type: application/json; charset=utf-8
     "power_to_heat_industry",
     "power_to_heat_district_heating_boiler",
     "power_to_heat_district_heating_heatpump",
-    "power_to_kerosene",
     "export"
   ]
 }
@@ -73,7 +72,6 @@ Accept: application/json
       "opac",
       "power_to_gas",
       "power_to_heat_industry",
-      "power_to_kerosene",
       "export"
     ]
   }
@@ -95,7 +93,6 @@ Content-Type: application/json; charset=utf-8
     "opac",
     "power_to_gas",
     "power_to_heat_industry",
-    "power_to_kerosene",
     "export"
   ]
 }
