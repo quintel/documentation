@@ -1,6 +1,6 @@
 ---
 id: user-curves
-title: User-defined curves
+title: User-uploaded curves
 ---
 
 Advanced users of the ETM are allowed to upload custom curves, which will be used in place of those stored in ETSource.
