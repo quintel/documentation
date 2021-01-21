@@ -51,10 +51,6 @@ html {
   -webkit-font-smoothing: revert;
 }
 
-body {
-  background: linear-gradient(to right, #f1f3fa 49%, white 50%);
-}
-
 main {
   background: white;
 }
@@ -124,6 +120,16 @@ header h1 {
 
 .col + .col {
   padding-left: 0;
+}
+
+
+/* Sidebar background */
+div[class^="docPage"] {
+  box-shadow: -1000px 0 0 #f1f3fa;
+}
+
+div[class^="docSidebarContainer"] {
+  background: #f1f3fa;
 }
 
 /* Custom colors for the sidebar scrollbar. */
