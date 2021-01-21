@@ -41,7 +41,7 @@ For non-residential buildings, we take into account two types of indoor costs:
 * Indoor pipelines
 * Heat meters
 
-Indoor pipeline costs are based on peak heat demand of buildings. We assume a fixed investment per kW. Peak demand is calculated dynamically by the ETM and depends on hourly demand profiles, insulation levels etc. See [heat network documentation](heat_networks.md) for more information about the hourly heat calculation.
+Indoor pipeline costs are based on peak heat demand of buildings. We assume a fixed investment per kW. Peak demand is calculated dynamically by the ETM and depends on hourly demand profiles, insulation levels etc. See [heat network documentation](heat-networks.md) for more information about the hourly heat calculation.
 
 | Description   |  Value   | Source |
 |---|---|---|
@@ -134,7 +134,7 @@ The required station capacity (and associated costs) are calculated based on the
 Station costs can be set per region in the ETM. The numbers above are default values.
 :::
 
-The costs of the primary heat sources and dispatchable/back-up heat sources are not part of the heat exchanger costs. These costs are calculated separately, in a similar fashion as (e.g.) [power plants](/cost-calculations).
+The costs of the primary heat sources and dispatchable/back-up heat sources are not part of the heat exchanger costs. These costs are calculated separately, in a similar fashion as (e.g.) [power plants](cost-annual-chart.md).
 
 ### Primary pipelines
 
@@ -189,7 +189,7 @@ The yearly infrastructure costs per year are the sum of:
 * O&M costs of indoor and outdoor infrastructure
 * Storage costs
 
-Yearly capital costs depend on the assumed weighted average cost of capital rate (WACC). By default, a real WACC of 4% is assumed and depreciation is assumed to be linear ('straight line'). This means that the cost of capital per year equal ``(total investment costs / 2) * WACC``. See the WACC section of the [cost documentation](/cost-calculations) for more information.
+Yearly capital costs depend on the assumed weighted average cost of capital rate (WACC). By default, a real WACC of 4% is assumed and depreciation is assumed to be linear ('straight line'). This means that the cost of capital per year equal ``(total investment costs / 2) * WACC``. See the WACC section of the [cost documentation](cost-annual-chart.md) for more information.
 
 Yearly depreciation costs are calculated by dividing total investment costs by the technical lifetime of the infrastructure. This is assumed to be 30 years (source: Vesta MAIS)
 

@@ -22,7 +22,7 @@ Part of the differences can be explained by the difference in year the datasets 
 
 * **Final demand:** See figure and explanation below
 * **Inhabitants:** No differences
-* **Areable land:** [CBS data](c) is used for this parameter. In the national dataset non-cultural areable land is subtarcted from areable land. In the RES datasets all areable land is taken into account.
+* **Areable land:** CBS data is used for this parameter. In the national dataset non-cultural areable land is subtarcted from areable land. In the RES datasets all areable land is taken into account.
 * **Wind:** Offshore wind is not part of the RES datasets, it is part of the NL dataset
 * **Solar:** Most of the differences can be explained by the difference in year the datasets are based on. The NL dataset is based on 2015, the RES datasets are based on 2016. Source: [klimaatmonitor](https://klimaatmonitor.databank.nl/Jive?workspace_guid=3cb85006-aa69-4c0f-8cd8-688768e57511)
 

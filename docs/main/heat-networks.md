@@ -35,11 +35,11 @@ The user can set the installed capacities of various heating sources in the 'Sup
 'Must-run' sources include all heat sources that supply heat according to a pre-defined production curve, regardless of whether there is heat demand at that moment. For example, solar thermal farms produce heat when the sun is out even if there is no demand for that heat at that moment. The ETM models the following must-run sources:
 * Solar thermal
 * Geothermal. We assume that geothermal heat wells produce a constant flow of heat throughout the year.
-* Residual heat from the industry sector. We assume that heat production follows industrial activity. See [Residual Heat](residual_heat_industry.md) for more information.
+* Residual heat from the industry sector. We assume that heat production follows industrial activity. See [Residual Heat](residual-heat-industry.md) for more information.
 * Imported heat from outside the region. We assume that this heat has a flat (constant) production profile.
 * All CHPs:
  * For biogas CHPs we assume a constant production.
- * For all other CHPs we assume that their production is determined by the 'merit order' of the electricity market. If the electricity price in a given hour is high enough, CHPs will be switched on. This means that heat is a 'by-product' and that heat production is not necessarily aligned with heat demand. See documentation about the [electricity merit order](merit_order.md)
+ * For all other CHPs we assume that their production is determined by the 'merit order' of the electricity market. If the electricity price in a given hour is high enough, CHPs will be switched on. This means that heat is a 'by-product' and that heat production is not necessarily aligned with heat demand. See documentation about the [electricity merit order](merit-order.md)
 
 Since the heat production of must-run heat sources in a given hour does not react to heat demand in that hour, it is possible that during some moments more heat is produced than is needed. It is assumed that this heat is dumped or, if [heat storage](#Heat-storage) is enabled, stored for later use.
 
@@ -103,7 +103,7 @@ For other regions in the ETM, such as municipalities or neighbourhoods, there is
 If district heating in the built environment plays a significant role in your scenario, it is advised to change the distribution losses to the percentages recommended above.
 
 ### Infrastructure costs
-See [heat infrastructure costs](heat_infrastructure_costs.md)
+See [heat infrastructure costs](heat-infrastructure-costs.md)
 
 
 ## Industrial heat network
@@ -113,4 +113,4 @@ Heat networks in the industry sector are modelled in a much simpler fashion. Sup
 
 For heaters and geothermal, total production per year equals installed capacity times a fixed number of full load hours. More information can be found when clicking the '?' icon next to a heat source and opening that 'Technical and financial properties' table.
 
-For CHPs, full load hours are scenario dependent: they are determined by the electricity merit order. Industry CHPs will produce whenever the electricity price is lower than their marginal production costs. For more information, see the CHP section in the [merit order](merit_order.md) documentation for more information.
+For CHPs, full load hours are scenario dependent: they are determined by the electricity merit order. Industry CHPs will produce whenever the electricity price is lower than their marginal production costs. For more information, see the CHP section in the [merit order](merit-order.md) documentation for more information.

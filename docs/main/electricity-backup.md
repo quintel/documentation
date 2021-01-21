@@ -2,13 +2,13 @@
 title: Electricity backup
 ---
 
-This page documents information about the "flexibility of electricity production" project. This project was completed in cooperation with GasTerra in the period June 2011 through March 2012 and consists of two parts: the loss of load calculation and the flexibility of electricity backup calculation. In the ETM, the calculations are found [here](http://pro.et-model.com/scenario/supply/electricity_backup/security-of-supply#security-of-supply). The loss of load calculation received a major update in 2014 and detailed information can be found [here](/loss-of-load-expectation).
+This page documents information about the "flexibility of electricity production" project. This project was completed in cooperation with GasTerra in the period June 2011 through March 2012 and consists of two parts: the loss of load calculation and the flexibility of electricity backup calculation. In the ETM, the calculations are found [here](http://pro.et-model.com/scenario/supply/electricity_backup/security-of-supply#security-of-supply). The loss of load calculation received a major update in 2014 and detailed information can be found [here](loss-of-load-expectation).
 
 ## Introduction
 
 The calculations in this part of the ETM were implemented to communicate the limitations of volatile electricity production in contributing to security of supply and the necessity for backup when building scenarios with large shares of technologies such as wind turbines and solar PV panels. The calculation consists of two parts: the loss of load calculation and the flexibility of electricity backup calculation.
 
-Details on the loss of load calculation can be found [here](/loss-of-load-expectation.md).
+Details on the loss of load calculation can be found [here](loss-of-load-expectation.md).
 
 The flexibility of electricity backup calculation offers a comparison between fossil fuel technologies in terms of their ability to serve as backup for volatile electricity production. The comparison is made by considering only the costs and CO2 emissions exclusive to providing backup for volatile electricity production.
 

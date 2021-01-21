@@ -27,7 +27,7 @@ The cost of capital is the amount of money that is spent yearly to finance the r
 Where:
 
 -   Average investment = (initial investment + initial investment for Carbon Capture and Storage (CCS) + installing costs + Decommissioning Costs ) / 2
--   WACC = [Weighted average cost of capital](wacc.md)
+-   WACC = [Weighted average cost of capital](cost-wacc.md)
 -   Construction Time = the time it takes to construct a typical plant of this type
 -   Technical Lifetime = the average amount of time that a plant can continue operating
 

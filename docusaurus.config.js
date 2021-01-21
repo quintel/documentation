@@ -50,15 +50,15 @@ module.exports = {
           items: [
             {
               label: "For end-users",
-              to: "/main",
+              to: "/main/intro",
             },
             {
               label: "For contributors",
-              to: "/contrib",
+              to: "/contrib/intro",
             },
             {
               label: "For developers and API users",
-              to: "/api",
+              to: "/api/intro",
             },
           ],
         },

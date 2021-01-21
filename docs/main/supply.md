@@ -14,7 +14,7 @@ The Supply tab covers the central production of both electricity and heat, as we
 
 ## Supply/Demand Balance
 
-Having determined energy consumption in the [Demand](/demand) section, the user has the opportunity to specify how electricity and heat production should take place. Of course, supply and demand of electricity must be in balance. The ETM assure this balance exists, by importing any shortages or exporting surpluses. Electricity is easily imported or exported via interconnection capacity on the grid. As there are few options for electricity storage and no options for just dumping electricity, it is important to maintain the electricity balance.
+Having determined energy consumption in the [Demand](demand.md) section, the user has the opportunity to specify how electricity and heat production should take place. Of course, supply and demand of electricity must be in balance. The ETM assure this balance exists, by importing any shortages or exporting surpluses. Electricity is easily imported or exported via interconnection capacity on the grid. As there are few options for electricity storage and no options for just dumping electricity, it is important to maintain the electricity balance.
 
 Heat on the other hand, can be and is often dumped. Too much heat production will just lead to waste in the ETM, whereas a surplus of electricity will lead to exports. In the households and buildings sectors the heat demand and supply are automatically balanced in the model by adjusting the supply of heat to the demand. This is achieved by linking the local demand for heat to decentralised heat producing technologies.
 
@@ -32,7 +32,7 @@ Options are biomass, wind, hydro electric, geothermal, solar and waste-fired pow
 
 ## Fossil heat
 
-Options are Combined Heat and Power (CHP) plants and dedicated heat plants. The CHPs cannot actually be built here as they can be built under [Electricity](/supply#electricity).
+Options are Combined Heat and Power (CHP) plants and dedicated heat plants. The CHPs cannot actually be built here as they can be built under [Electricity](supply.md#electricity).
 
 ## Renewable heat
 
@@ -53,11 +53,11 @@ This allows the user to compare life cycle emissions for different electricity g
 
 ## Electricity backup
 
-Information is given about the security of supply and the backup options. See [Electricity backup](/electricity-backup) for more information.
+Information is given about the security of supply and the backup options. See [Electricity backup](electricity-backup.md) for more information.
 
 ## Electricity storage
 
-Information is given about excess electricity and various electricity storage technologies. See [Storage](/storage) for more information.
+Information is given about excess electricity and various electricity storage technologies. See [Storage](storage.md) for more information.
 
 ## Import/Export
 

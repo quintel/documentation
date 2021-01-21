@@ -32,7 +32,7 @@ The following paragraphs describe how excess electricity is modeled and how the 
 
 ### Excess electricity
 
-Since the modeling of excess events cannot be done with annual average figures in the ETM, the amount of excess had to be forecasted outside the ETM. A separate model is created that operates with the same extrinsic inputs as the [merit order](/merit-order). In particular, all required information regarding non-dispatchable producers area loaded in the external model (number of units, availability, effective capacity). Furthermore, the profiles of the merit order module are used to derive the hourly electricity production of non-dispatchables (wind, solar, hydro and CHPs).
+Since the modeling of excess events cannot be done with annual average figures in the ETM, the amount of excess had to be forecasted outside the ETM. A separate model is created that operates with the same extrinsic inputs as the [merit order](merit-order.md). In particular, all required information regarding non-dispatchable producers area loaded in the external model (number of units, availability, effective capacity). Furthermore, the profiles of the merit order module are used to derive the hourly electricity production of non-dispatchables (wind, solar, hydro and CHPs).
 
 The scenario used for forecasting excess electricity represents a 'present' scenario (ETM), with the only exception that the number of units of solar PV and wind turbines can be increased. The ratio of the present number of units remains constant, i.e. a doubling in wind and solar capacity results in twice the number of units for all participants operating on solar and wind energy. The electricity demand is kept constant and all profiles remain unchanged.
 
@@ -70,7 +70,7 @@ or
 
 ![Left](/img/docs/Levelized_cost_definition.jpg)
 
-Deriving the cost curves for conversion technologies for Figure 4 is rather complex and CPU- intensive. Furthermore, the simulation of excess electricity and its conversion is only possible with the information of the merit order module and with an hourly calculation. The simulation can only produce indicative results because there are many [assumptions](/storage#assumptions-in-simulating-excess-electricity-and-levelized-costs) and many uncertainties in the [technology characterization]. For these reasons, the chart has to be static and cannot adapt to slider settings.
+Deriving the cost curves for conversion technologies for Figure 4 is rather complex and CPU- intensive. Furthermore, the simulation of excess electricity and its conversion is only possible with the information of the merit order module and with an hourly calculation. The simulation can only produce indicative results because there are many [assumptions](storage.md#assumptions-in-simulating-excess-electricity-and-levelized-costs) and many uncertainties in the [technology characterization]. For these reasons, the chart has to be static and cannot adapt to slider settings.
 
 ## Assumptions in simulating Excess Electricity and Levelized Costs
 
@@ -94,7 +94,7 @@ Deriving the cost curves for conversion technologies for Figure 4 is rather comp
 
 * The storage and conversion technologies are only permitted to convert excess electricity. In other words, it is not considered that electricity is bought from the grid at times of a positive residual demand.
 
-* The simulation is based on many inputs that originate from the [merit order module](merit_order.md). In particular, the profiles for electricity demand and wind & solar production stay constant, regardless of future changes in demand or installed generation capacity.
+* The simulation is based on many inputs that originate from the [merit order module](merit-order.md). In particular, the profiles for electricity demand and wind & solar production stay constant, regardless of future changes in demand or installed generation capacity.
 
 ## Characterization of conversion technologies
 

@@ -66,7 +66,7 @@ There are several issues related to this improvement, however:
 
 ### Insulation
 
-For insulation of households, the employment is calculated analogously to costs. Based on the Rc value (equivalently: slider position) of the houses, a combination of insulation improvements is assumed. These improvements have a cost associated with them. We have added man-hours in precisely the same way, using standardized installation guides. More details can be found on the [Insulation](/insulation) page.
+For insulation of households, the employment is calculated analogously to costs. Based on the Rc value (equivalently: slider position) of the houses, a combination of insulation improvements is assumed. These improvements have a cost associated with them. We have added man-hours in precisely the same way, using standardized installation guides. More details can be found on the [Insulation](insulation) page.
 
 ## Use
 

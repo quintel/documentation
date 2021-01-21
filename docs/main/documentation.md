@@ -8,11 +8,10 @@ The Energy Transition Model (ETM) allows the user to explore the future of the e
 
 The model consists of 5 major areas:
 
-* **[Targets](targets.md):** where users set their policy targets that they are later evaluated against
 * **[Demand](demand.md):** where users set the future demand of energy in 6 economic sectors (households, non-residential buildings, transport, industry, agriculture and other)
 * **[Flexibility](flexibility.md):** where users set the technologies to deal with excess electricity
 * **[Supply](supply.md):** where users set how and what energy is supplied in the future
-* **[Costs](costs.md):** where users specify their estimations of future energy costs
+* **[Costs](cost-main-principles.md):** where users specify their estimations of future energy costs
 
 The model uses data on energy consumption and production and present day state-of-the-art technology data. The use of underlying assumptions has been minimized and assumptions about changes in the future are left to the user as much as possible. With the sliders in the interface a user can influence the future state of the model. If no slider is available to set a certain change in the future, no assumption is made by the ETM.
 **Note:** The user is responsible for the internal consistency of all assumptions, as no automatic correction of inconsistent assumptions takes place.
@@ -25,13 +24,7 @@ The energy system is approached as an ‘energy flow’ or Sankey diagram based 
 
 ### Layout
 
-The layout of the ETM is based on its five main topics (Targets, Demand, Flexibility, Supply and Costs), which are located in the tabs at the left of each page. Each main topic is divided into several sub-topics. These are are described further on the dedicated pages of each main topic.
-
-#### Targets
-
-*Main article: [Targets](targets.md)*
-
-Allows the user to set targets for sustainability, dependence on other countries for energy, costs of energy and the maximum area use for renewable technologies. These targets are not used as input to the ETM's calculations and do not set hard boundaries in the model. They allow the user to see for which areas he is meeting his targets and for which he needs to make a bigger effort to achieve them.
+The layout of the ETM is based on its four main topics (Demand, Flexibility, Supply and Costs), which are located in the tabs at the left of each page. Each main topic is divided into several sub-topics. These are are described further on the dedicated pages of each main topic.
 
 #### Demand
 
@@ -53,7 +46,7 @@ Allows the user to determine which technologies are used for central electricity
 
 #### Cost
 
-*Main article: [Costs](costs.md)*
+*Main article: [Costs](cost-main-principles.md)*
 
 Allows the user to input his assumptions on how costs for fuels, electricity production technologies and CO<sub>2</sub> emission will change.
 
@@ -96,13 +89,13 @@ An exploration in the ETM starts from the present situation. The user sets the d
 ### Calculation
 
 The ETM calculates the energy consumption and associated parameters such as costs and CO<sub>2</sub> in a bottom up fashion starting from what is called 'useful demand', via 'final demand' to 'primary demand'.
-[Useful demand](useful_demand.md) is the demand for heat for heating houses, or for transportation, for example.
+[Useful demand](useful-demand.md) is the demand for heat for heating houses, or for transportation, for example.
 **Final demand** is the consumption of energy carriers in order to meet useful demand, e.g. gas for heating houses or gasoline for transportation.
 **Primary demand** is the consumption of primary energy carriers, some of which may be converted to other carriers, e.g. coal converted into cokes or mineral oil into oil fractions like gasoline.
  The ETM uses the following approach to calculate how useful demand determines demand for primary energy carriers:
 
 -   The energy system is approached as an ‘energy flow’ or Sankey diagram based on a network of interconnected ‘energy convertors’ with links (or edges) between them.
-    -   Energy converters convert energy carriers into other energy and losses, examples are gas heaters, electric cars, nuclear power plants, power lines etc. All converters have [attributes](converter_attributes.md) assigned.
+    -   Energy converters convert energy carriers into other energy and losses, examples are gas heaters, electric cars, nuclear power plants, power lines etc. All converters have attributes assigned.
     -   The network of converters is called a ‘graph’. A partial schematic version is shown below (to be read from left to right).
     -   The ETM uses two graphs, a static one for the present and a dynamic one for the future situation; the latter can be influenced using the sliders in the interface.
 
@@ -150,29 +143,29 @@ The ETM performs a number of calculations each time the user alters a slider. Fi
 
 ### Energy flow calculations
 
-The energy flow calculations are the most important calculations in the model, as all other calculations are related to these calculations. The model calculates the flow of energy through the entire network of converters (or, equivalently: vertices, nodes), which calculates the [primary demand](/primary-energy) based on the [useful demand](/useful-demand) and how these are provided. When this initial calculation is completed, the other calculations are done based on the outcome.
+The energy flow calculations are the most important calculations in the model, as all other calculations are related to these calculations. The model calculates the flow of energy through the entire network of converters (or, equivalently: vertices, nodes), which calculates the [primary demand](primary-energy.md) based on the [useful demand](useful-demand.md) and how these are provided. When this initial calculation is completed, the other calculations are done based on the outcome.
 
 ### Primary energy calculations
 
-*Main article: [Primary energy](/primary-energy)*
+*Main article: [Primary energy](primary-energy.md)*
 
-The model calculates primary consumption associated with the output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the primary consumption of that converter's output is and takes his share. This process continues until it reaches the primary converters. At the primary converters, the primary consumption is determined using the [physical content method](/primary-energy#physical-content-method). Hence the associated primary consumption can be calculated for every converter, including those that represent non-energetic consumption (for example feedstock in the chemical industry) and those that export energy (currently only electricity is exported).
+The model calculates primary consumption associated with the output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the primary consumption of that converter's output is and takes his share. This process continues until it reaches the primary converters. At the primary converters, the primary consumption is determined using the [physical content method](primary-energy.md#physical-content-method). Hence the associated primary consumption can be calculated for every converter, including those that represent non-energetic consumption (for example feedstock in the chemical industry) and those that export energy (currently only electricity is exported).
 
 ### CO<sub>2</sub> emissions calculations
 
-*Main article: [CO<sub>2</sub> calculations](/co2-calculations)*
+*Main article: [CO<sub>2</sub> calculations](co2-emission-factors.md#calculation-of-co2-emissions)*
 
 The model calculates CO<sub>2</sub> emissions for the current year and the scenario year. The CO<sub>2</sub> emission for the year 1990 is a fixed number taken from `area data`. The model calculates CO<sub>2</sub> emissions associated with the energy output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the CO<sub>2</sub> emission of that converter's energy output is and takes his share. This process continues until it reaches the primary converters, where the CO<sub>2</sub> emission is calculated on the basis of the energy carriers and emission factors. In this process CO<sub>2</sub> emission related to distribution and conversion losses etc. is included.
 
 ### Import calculations
 
-*Main article: [Import calculations](/import-calculations)*
+*Main article: [Import calculations](import-calculations.md)*
 
 The energy import shows the percentage of energy that is imported from outside of the area. For each area, the input data prescribes the amount of energy that is produced/extracted from within the area for a number of future years. If more energy is produced/extracted than needed, the excess energy is exported (except for steam/hot water). To calculate how large the total imported energy is compared to the total energy use of the area, this total amount of energy import is divided by the total primary energy used in the region. The total primary energy used in the region includes the primary energy used to produce electricity that is exported.
 
 ### Cost calculations
 
-*Main article: [Cost calculations](/cost-calculations)*
+*Main article: [Cost calculations](cost-annual-chart.md)*
 
 The Energy Transition Model calculates the total cost of energy supply for the region. The total cost is broken down in five categories: electricity, heat, (energetic) fuels, non-energetic fuels, and network costs.
 
@@ -190,7 +183,7 @@ The costs are all expressed in current year euros. Inflation is not taken into a
 
 ### Employment calculations
 
-*Main article: [Employment](/employment)*
+*Main article: [Employment](employment.md)*
 
 The Energy Transition Model calculates the change in employment (in units of Full Time Equivalent, or FTE) for many technologies in the model. Labour is subdivided into five classes:
 
@@ -211,7 +204,7 @@ The ETM makes a rough estimation of how much arable land equivalent a region nee
 * Waste streams for direct combustion
 * Waste streams for co-digestion into biogas
 
-Any biomass that is not domestically produced (see [Import calculations](/import-calculations) for information on domestic production curves) is imported. The research team has determined which energy crop is the most efficient for each of the categories listed above. Regardless of whether biomass is homegrown or imported the ETM calculates impact on arable land somewhere in the world and expresses this in multiples of the region's own arable land area as shown in the [Dashboard](/dashboard).
+Any biomass that is not domestically produced (see [Import calculations](import-calculations.md) for information on domestic production curves) is imported. The research team has determined which energy crop is the most efficient for each of the categories listed above. Regardless of whether biomass is homegrown or imported the ETM calculates impact on arable land somewhere in the world and expresses this in multiples of the region's own arable land area as shown in the [Dashboard](dashboard.md).
 
 
 |**Energy Carrier**|Typical production|Comment|
@@ -225,7 +218,7 @@ Any biomass that is not domestically produced (see [Import calculations](/import
 
 ### Renewables
 
-*Main article: [Renewables](/renewability)*
+*Main article: [Renewables](renewability.md)*
 
 The ETM calculates the renewable share of all energy flows in the model on the basis of the output. For example: if in a country the 75 PJ of electricity is supplied as follows: 50 PJ from an efficient natural gas power-plant which requires 100 PJ gas input, and 25 PJ from an inefficient biogas power-plant which requires 100 PJ biogas input, then the renewable share of the electricity supplied is 25 / 75 = 33%. By taking the proper sum of energy flows the renewable share of any desired part of the energy system can be calculated.
 
@@ -241,19 +234,19 @@ Currently, the network costs are only calculated for the Netherlands. These cost
 
 ### Merit order calculations
 
-*Main article: [Merit order](/merit-order)*
+*Main article: [Merit order](merit-order.md)*
 
 In future energy scenarios it is very likely that power plants will operate differently than they do now due to factors such as fuel price and market penetration of renewables. The merit order calculation determines the operating hours of power plants based on the power production park created by the user. The calculation shows that if for example the amount of wind electricity production increases the operating hours of conventional power plants decreases. Merit order calculations also determine if hours occur where volatile and must-run electricity production exceeds demand. This user can decide what to do with this excess electricity, e.g. storing it in batteries for later use or converting it to gas with a power to gas unit.
 
 ### Loss of load calculations
 
-*Main article: [Loss of load](/loss-of-load-expectation)*
+*Main article: [Loss of load](loss-of-load-expectation.md)*
 
 The calculation shows the probability that available electricity production capacity is less than the expected demand. Such a calculation is an important consideration when planning a power system and similar, but more elaborate, versions of this calculation are always conducted by the Transmission System Operators of a country. The loss of load dashboard item can be accessed via the flexible dashboard by clicking 'Change' on the bottom right corner of the Energy Transition Model interface.
 
 ### Electricity storage calculations
 
-*Main article: [Storage and conversion of electricity](/storage)*
+*Main article: [Storage and conversion of electricity](storage.md)*
 
 :::note
 These static electricity storage calculations have largely been replaced by a more dynamic excess electricity calculation that is part of the merit order calculation. The main results of the electricity storage calculation are, however, still available in the front-end of the ETM.
@@ -265,19 +258,17 @@ Currently, the module "Electricity storage and conversion" is static and only wo
 
 ### Climate change
 
-*Main article: [Climate change](/climate)*
-
 Climate change has a direct impact on the useful demand for heating and cooling of households and buildings. When the average outdoor temperature rises, the useful demand for heating decreases and the useful demand for cooling increases. These effects are reversed for a drop in average outdoor temperature.
 
 Currently, the climate impact is only calculated for the Netherlands.
 
 ### Insulation
 
-*Main article: [Insulation](/insulation)*
+*Main article: [Insulation](insulation.md)*
 
 ### CO<sub>2</sub> from biomass
 
-*Main article: [Climate relevant CO<sub>2</sub> emissions from biomass](/co2-biomass)*
+*Main article: [Climate relevant CO<sub>2</sub> emissions from biomass](co2-biomass.md)*
 
 Climate change is not induced by the annual CO<sub>2</sub> emissions, but by the total amount of CO<sub>2</sub> present in the air. Virtually any form of combustion contributes to the amount of CO<sub>2</sub> in the air.
 

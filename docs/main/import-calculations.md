@@ -4,7 +4,7 @@ title: Import calculations
 
 ![Energy import in the dashboard](/img/docs/Screen_Shot_2011-08-08_at_11.58.32_AM.png)
 
-The [dashboard](/dashboard) shows the percentage of primary energy consumption that is imported and the pop-up shows a breakdown of the net energy imports per carrier group. International marine and aviation bunkers are not included. This page describes the calculation method.
+The [dashboard](dashboard.md) shows the percentage of primary energy consumption that is imported and the pop-up shows a breakdown of the net energy imports per carrier group. International marine and aviation bunkers are not included. This page describes the calculation method.
 
 ## How import is calculated
 
