@@ -1,87 +1,90 @@
 module.exports = {
-  title: 'Energy Transition Model',
-  tagline: 'ETM documentation',
-  url: 'https://docs.energytransitionmodel.com',
-  baseUrl: '/',
-  favicon: 'img/logo.svg',
-  organizationName: 'quintel', // Usually your GitHub org/user name.
-  projectName: 'documentation', // Usually your repo name.
+  title: "Energy Transition Model",
+  tagline: "ETM documentation",
+  url: "https://docs.energytransitionmodel.com",
+  baseUrl: "/",
+  favicon: "img/logo.svg",
+  organizationName: "quintel", // Usually your GitHub org/user name.
+  projectName: "documentation", // Usually your repo name.
   themeConfig: {
-    sidebarCollapsible: false,
+    sidebarCollapsible: true,
     prism: {
-      theme: require('prism-react-renderer/themes/github'),
-      additionalLanguages: ['http'],
+      theme: require("prism-react-renderer/themes/github"),
+      additionalLanguages: ["http"],
+    },
+    colorMode: {
+      disableSwitch: true,
     },
     navbar: {
-      title: 'Energy Transition Model',
+      title: "Energy Transition Model",
       logo: {
-        alt: 'Logo',
-        src: 'img/logo.svg',
+        alt: "Logo",
+        src: "img/logo.svg",
       },
-      links: [
+      items: [
         {
-          to: '/main/intro',
-          label: 'For Users',
-          activeBasePath: '/main',
-          position: 'left',
+          to: "/main/intro",
+          label: "For Users",
+          activeBasePath: "/main",
+          position: "left",
         },
         {
-          to: '/contrib/intro',
-          label: 'For Contributors',
-          activeBasePath: '/contrib',
-          position: 'left',
+          to: "/contrib/intro",
+          label: "For Contributors",
+          activeBasePath: "/contrib",
+          position: "left",
         },
         {
-          to: '/api/intro',
-          label: 'API Reference',
-          activeBasePath: '/api',
-          position: 'left',
+          to: "/api/intro",
+          label: "API Reference",
+          activeBasePath: "/api",
+          position: "left",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Learn',
+          title: "Learn",
           items: [
             {
-              label: 'For end-users',
-              to: '/main',
+              label: "For end-users",
+              to: "/main",
             },
             {
-              label: 'For contributors',
-              to: '/contrib',
+              label: "For contributors",
+              to: "/contrib",
             },
             {
-              label: 'For developers and API users',
-              to: '/api',
+              label: "For developers and API users",
+              to: "/api",
             },
           ],
         },
         {
-          title: 'Us',
+          title: "Us",
           items: [
             {
-              label: 'Energy Transition Model',
-              href: 'https://energytransitionmodel.com',
+              label: "Energy Transition Model",
+              href: "https://energytransitionmodel.com",
             },
             {
-              label: 'Quintel Intelligence',
-              href: 'https://quintel.com',
+              label: "Quintel Intelligence",
+              href: "https://quintel.com",
             },
           ],
         },
         {
-          title: 'Social',
+          title: "Social",
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/quintel',
+              label: "GitHub",
+              href: "https://github.com/quintel",
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/ETM_Quintel',
+              label: "Twitter",
+              href: "https://twitter.com/ETM_Quintel",
             },
           ],
         },
@@ -89,21 +92,20 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Quintel Intelligence`,
     },
     algolia: {
-      apiKey: '9fe615263d52073aca054075b329ebd5',
-      indexName: 'energytransitionmodel',
+      apiKey: "9fe615263d52073aca054075b329ebd5",
+      indexName: "energytransitionmodel",
     },
-    disableDarkMode: true,
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: "/",
+          sidebarPath: require.resolve("./sidebars.js"),
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
