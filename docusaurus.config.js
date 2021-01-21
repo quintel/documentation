@@ -95,6 +95,10 @@ module.exports = {
       apiKey: "9fe615263d52073aca054075b329ebd5",
       indexName: "energytransitionmodel",
     },
+    googleAnalytics: {
+      trackingID: "UA-112913764-5",
+      anonymizeIP: true,
+    },
   },
   presets: [
     [
