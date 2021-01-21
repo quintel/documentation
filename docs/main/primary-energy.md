@@ -6,11 +6,11 @@ Primary energy is energy found in nature that has not been subjected to any conv
 
 ## Primary energy calculation method
 
-The model calculates primary consumption associated with the output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the primary consumption of that converter's output is and takes his share. This process continues until it reaches the primary converters. At the primary converters, the primary consumption is determined using the [physical content method](/primary-energy#physical-content-method). Hence the associated primary consumption can be calculated for every converter, including those that represent *non-energetic* consumption (for example feedstock in the chemical industry) and those that export energy (currently only electricity is exported as a carrier where transformation losses occur).
+The model calculates primary consumption associated with the output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the primary consumption of that converter's output is and takes his share. This process continues until it reaches the primary converters. At the primary converters, the primary consumption is determined using the [physical content method](primary-energy.md#physical-content-method). Hence the associated primary consumption can be calculated for every converter, including those that represent *non-energetic* consumption (for example feedstock in the chemical industry) and those that export energy (currently only electricity is exported as a carrier where transformation losses occur).
 
 ## "Energy use" in the dashboard
 
-*Main article: [Dashboard](/dashboard)*
+*Main article: [Dashboard](dashboard.md)*
 
 The "Energy use" in the dashboard is the primary consumption associated with total (inland) final consumption. This includes primary consumption that results from final non-energy consumption (for example feedstock in the chemical industry). It does not include primary consumption that results from exports. This also means that, *contrary to IEA/EC conventions*, the losses which are typically incurred in the conversion sector are only included for the part of the inland final consumption, not for the exports.
 

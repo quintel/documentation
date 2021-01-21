@@ -36,7 +36,7 @@ The ETM allows you to explore a future hydrogen economy by allowing you to use h
 * transport vehicles (cars, busses and trucks)
 * electricity production (hydrogen gas turbines)
 
-Each of these options has its own hourly demand profile. For electricity production the demand profile is determined by the electricity market in your scenario. See [Merit Order](merit_order.md) for more information.
+Each of these options has its own hourly demand profile. For electricity production the demand profile is determined by the electricity market in your scenario. See [Merit Order](merit-order.md) for more information.
 
 ![Hourly hydrogen demand chart](/img/docs/20181002_hydrogen_demand.png)
 

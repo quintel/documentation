@@ -46,7 +46,7 @@ For weather years we use measured irradiation data (Source: [KNMI](https://proje
 
 ### Temperature
 
-Just as for default setting for weather years, temperature curves are based on measured data from The Bilt. (Source: [KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)). For each weather year the average temperature is compared with the average temperature of the default year. If a user selects a weather year this value is used to set the temperature slider. This has an impact on the energy demand for heating and cooling in households, buildings and agriculture. For more information, see the [outdoor temperature](outdoor_temperature.md) section.
+Just as for default setting for weather years, temperature curves are based on measured data from The Bilt. (Source: [KNMI](https://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)). For each weather year the average temperature is compared with the average temperature of the default year. If a user selects a weather year this value is used to set the temperature slider. This has an impact on the energy demand for heating and cooling in households, buildings and agriculture. For more information, see the [outdoor temperature](outdoor-temperature.md) section.
 
 ### Space heating
 
@@ -61,4 +61,4 @@ Feedback on the weather years is very welcome! If you have a comment or a sugges
   * [Dorine van der Vlies](https://github.com/dorinevandervlies)
   * [Marlieke Verweij](https://github.com/marliekeverweij)
   * [Roos de Kok](https://github.com/redekok)
-* E-mail us: [info@quintel.com](info@quintel.com)
+* [Contact us directly](https://energytransitionmodel.com/contact).
