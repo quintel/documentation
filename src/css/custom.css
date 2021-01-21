@@ -15,12 +15,12 @@
   --ifm-color-primary-lighter: #7d94da;
   --ifm-color-primary-lightest: #a0b0e4;
 
+  --ifm-color-gray-900: #323537;
+
   --ifm-code-font-size: 93.75%;
   --ifm-code-color: #e3116c;
 
   --ifm-navbar-shadow: none;
-  --ifm-navbar-search-input-background-color: var(--ifm-color-emphasis-100);
-  --ifm-navbar-search-input-placeholder-color: var(--ifm-color-emphasis-600);
 
   --ifm-menu-link-padding-horizontal: 0.5625rem;
   --ifm-menu-link-padding-vertical: 0.25rem;
@@ -33,14 +33,30 @@
   --ifm-leading: 1rem;
   --ifm-heading-line-height: 1;
 
-  --ifm-menu-color: var(--ifm-color-emphasis-700);
+  /* This is exactly between emphasis-800 and 700; one of which is too dark and the other
+     is too light. */
+  --ifm-menu-color: #767d87;
   --ifm-toc-link-color: var(--ifm-menu-color);
   --ifm-toc-padding-left: 1rem;
 
   --ifm-spacing-horizontal: 1.5rem;
   --ifm-container-width: 1140px;
 
+  --ifm-transition-fast: 125ms;
+
   --custom-blue-background-color: #f1f3fa;
+}
+
+html {
+  -webkit-font-smoothing: revert;
+}
+
+body {
+  background: linear-gradient(to right, #f1f3fa 49%, white 50%);
+}
+
+main {
+  background: white;
 }
 
 .markdown {
@@ -50,7 +66,7 @@
 
 h1 {
   font-size: 2.25rem !important;
-  margin-bottom: 2.25rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 h1, h2, h3 {
@@ -118,7 +134,7 @@ header h1 {
 
   .menu::-webkit-scrollbar-track,
   .menu::-webkit-scrollbar-thumb {
-    background: #f1f3fb !important;
+    background: transparent !important;
     border-radius: 10px;
   }
 
@@ -155,25 +171,15 @@ header h1 {
   color: var(--ifm-font-color-base);
 }
 
-.navbar .navbar__search .navbar__search-input {
-  border: 1px solid var(--ifm-toc-border-color);
-  border-radius: 4px;
-  transition: all 0.15s ease-in;
-  width: 14rem;
-}
-
-
-.navbar .navbar__search .navbar__search-input:focus {
-  background-color: #fff;
-  border-color: #b8c6de;
-  box-shadow: 0 0 0 3px #dbe0f1;
-}
-
 .menu .menu__link {
   color: var(--ifm-font-color-base);
   font-size: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;
+
+  /* Show subcategory expanders right next to the text, rather than on the right */
+  justify-content: left;
+  gap: 0.25rem;
 }
 
 .menu a[href="#!"]:hover {
@@ -194,11 +200,6 @@ header h1 {
   margin-left: 0;
 }
 
-.menu .menu__list .menu__list a[href="#!"] {
-  color: var(--ifm-font-color-base);
-  margin-top: 0.5rem;
-}
-
 .menu .menu__list .menu__list .menu__list {
   margin-left: 0.5rem;
 }
@@ -213,6 +214,17 @@ header h1 {
   }
 }
 
+.menu a.menu__link.menu__link--sublist[href="#!"]:hover {
+  /* Show cursor pointer on list items which expand a subcategory. */
+  cursor: pointer;
+}
+
+/* Menu category expanders. */
+.menu__link--sublist:after {
+  background-size: 1.5rem;
+  opacity: 0.75
+}
+
 /* Sub-category items. */
 .menu .menu__list .menu__list .menu__link {
   color: var(--ifm-menu-color);
@@ -221,10 +233,15 @@ header h1 {
   text-transform: none;
 }
 
+/* Fix for missing sidebar border. */
+div[class^="docSidebarContainer"] {
+  width: 301px !important;
+}
+
 /* Gradient on sidebar. */
 div[class^="sidebar_"] {
-  background: linear-gradient(90deg, #fff, var(--custom-blue-background-color));
   min-width: 230px;
+  /* max-width: 299px; */
 }
 
 /* "Documentation home" link on API and Contrib sidebars. */
@@ -240,21 +257,20 @@ div[class^="sidebar_"] {
 }
 
 .menu .menu__link.menu__link--active:not(.menu__link--sublist),
-.menu .menu__link.menu__link--active:hover,
-.menu .menu__list .menu__list .menu__link.menu__link--active:hover {
+.menu .menu__link.menu__link--active:not(.menu__link--sublist):hover {
   background: var(--ifm-menu-color-active);
   color: white;
 }
 
-.menu .menu__list .menu__list .menu__link--active {
-  /* Increase the font-weight of active items which are not at the top-level
-     in the sidebar (those are already bold). */
-  font-weight: 500;
+/* Active category names. */
+.menu .menu__list .menu__link.menu__link--sublist.menu__link--active {
+  color: var(--ifm-font-color-base);
 }
 
 /* ToC sidebar */
 .table-of-contents {
   line-height: 1.1875rem;
+  font-size: 0.875rem;
 }
 
 .table-of-contents:before {
@@ -332,7 +348,7 @@ li ul, li ol {
 .alert {
   border-width: 0;
   border-left-style: solid;
-  border-left-width: 0.5rem;
+  border-left-width: 0.375rem;
   border-radius: 0;
 }
 

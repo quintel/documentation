@@ -1,5 +1,5 @@
 ---
-title: "Advanced: Outdoor temperature"
+title: Outdoor temperature
 ---
 
 The ETM allows users to explore the impact of changes in outdoor temperature on energy demand using the temperature slider in the weather conditions section.

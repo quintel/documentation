@@ -1,5 +1,5 @@
 ---
-title: "Advanced: Heat infrastructure costs"
+title: Heat infrastructure costs
 ---
 
 Below you can find more information about the heat infrastructure cost calculation in the Energy Transition Model. The methodology and data behind this calculation is based on

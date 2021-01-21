@@ -1,5 +1,5 @@
 ---
-title: "Advanced: Costs of imported electricity"
+title: Costs of imported electricity
 ---
 
 ## Introduction
