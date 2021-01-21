@@ -1,5 +1,5 @@
 ---
-title: "Advanced: Cost methods"
+title: Cost methods
 ---
 
 This page describes how costs are calculated for individual converters in the model. The calculations are designed to be standardised so that they can be used for several types of plants (electricity, heat, hydrogen etc.). These calculations are done for each converter.

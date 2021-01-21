@@ -1,5 +1,5 @@
 ---
-title: "Advanced: Cost of capital"
+title: Cost of capital
 ---
 
 The ETM calculates the cost of capital for installed assets in the energy system, such as power plants, energy infrastructure and heating technologies. As all costs in the ETM are expressed in real terms (i.e. no inflation), the WACC is in real terms as well. All technologies in the ETM are grouped into four 'risk categories': Households, Power infrastructure, Mature technologies and Immature technologies. For each of these categories a different default WACC is used, which can be changed by the user in the Costs section of the model. A more detailed specification of the categories can be found below:
