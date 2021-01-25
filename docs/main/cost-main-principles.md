@@ -1,5 +1,5 @@
 ---
-title: Main principles
+title: Costs
 ---
 
 The Energy Transition Model calculates the total cost of the yearly energy supply for a scenario. This is the sum of depreciation costs, cost of capital, operation and maintenance costs, and fuel costs of various components of the energy system.
@@ -21,7 +21,4 @@ The cost calculation in the ETM adheres to the following principles:
 
 * All investment costs are depreciated using the [straight line depreciation](http://en.wikipedia.org/wiki/Depreciation#Straight-line_depreciation) method.
 
-## Disclaimer
-:::note
-The ETM was not created for in-depth cost analyses, but for scenario creation. Since its focus is energy, rather than costs, the ETM makes no claim to be exhaustive in the scope of its cost calculation. The resulting energy system costs are therefore best compared to those of other scenarios created with the ETM. Please be cautious when comparing the outcomes to cost estimates from other models.
-:::
+_Note: The ETM was not created for in-depth cost analyses, but for scenario creation. Since its focus is energy, rather than costs, the ETM makes no claim to be exhaustive in the scope of its cost calculation. The resulting energy system costs are therefore best compared to those of other scenarios created with the ETM. Please be cautious when comparing the outcomes to cost estimates from other models._

@@ -2,9 +2,8 @@
 title: Overview of emissions per sector
 ---
 
-The ETM's main CO<sub>2</sub> chart is displayed below. This chart is shown when clicking on the CO<sub>2</sub> dashboard item at the bottom of your screen and in the [overview section](https://pro.energytransitionmodel.com/scenario/overview/introduction/total-co-sub-2-sub-emissions).
-
-![District heating share in households](/img/docs/total_co2_emissions.png)
+This page explains the sectors and their emissions that are taken into account in the ETM. The chart below (which is also visible in the dashboard) displays these sectors and emissions. 
+The ETM's main CO2 chart is displayed below. 
 
 The following is included per category:
 

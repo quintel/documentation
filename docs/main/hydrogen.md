@@ -2,7 +2,11 @@
 title: Hydrogen
 ---
 
-There is a growing interest in using hydrogen as energy carrier, for instance for heat production, electricity production, transport fuel or as a feedstock for the chemical industry. Hydrogen could be a solution to bridge the growing imbalance between energy demand and supply due to the increased volatile production of solar and wind electrcity. The ETM allows you to explore a future hydrogen economy by allowing you to add various options for hydrogen demand, supply, transport and storage to your energy scenario. The ETM calculates the resulting hydrogen demand and supply in your scenario for every hour per year. To make sure that for each hour supply matches demand storage buffers are used. Below, more information can be found about each of these options.
+There is a growing interest in using hydrogen as energy carrier, for instance for heat production, electricity production, transport fuel or as a feedstock for the chemical industry. Hydrogen could be a solution to bridge the growing imbalance between energy demand and supply due to the increased volatile production of solar and wind electricity. 
+
+The ETM allows you to explore a future hydrogen economy by allowing you to add various options for hydrogen demand, supply, transport and storage to your energy scenario. The ETM calculates the resulting hydrogen demand and supply in your scenario for every hour per year. To make sure that for each hour supply matches demand storage buffers are used. 
+
+This page contains more information about the options for hydrogen in the ETM. 
 
 ## Hydrogen production
 
@@ -11,12 +15,13 @@ Several hydrogen production routes are implemented in the ETM:
 1. Steam methane reforming (SMR)
 2. Steam methane reforming with CCS
 3. Biomass gasification
-4. Dedicated H<sub>2</sub> production by offshore wind farms
-5. Dedicated H<sub>2</sub> production by solar PV farms
-6. H2 production from excess electricity
-7. Import from abroad
+4. Biomass gasifiction with CCS
+5. Dedicated H<sub>2</sub> production by offshore wind farms
+6. Dedicated H<sub>2</sub> production by solar PV farms
+7. H2 production from excess electricity
+8. Import from abroad
 
-The first three production routes, SMR, SMR + CCS and biomass gasification are mature technologies that are used all over the world. In the ETM it is assumed that these technologies have a flat production profile, i.e. they produce a constant amount of hydrogen throughout the year.
+SMR biomass gasification are mature technologies that are used all over the world. In the ETM it is assumed that these technologies have a flat production profile, i.e. they produce a constant amount of hydrogen throughout the year.
 
 Options 4 and 5, dedicated wind and solar farms are renewable energy plants, built solely for hydrogen production, that turn renewable electricity directly into hydrogen using electrolysis. To date such dedicated plants are not (yet) used at a large scale. The production profile is determined by solar and wind weather curves.
 

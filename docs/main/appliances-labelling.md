@@ -2,19 +2,18 @@
 title: Appliances labelling
 ---
 
-Energy consumption labelling is used to determine how energy efficient household appliances are. The energy labels typically range from class A+++ to class D with  A+++ being the most efficient class and D the least efficient class. The European Union (EU) established an energy consumption labelling scheme for household appliances and it is necessary for all  manufactures to include an energy label with their appliances. The energy label can define the energy efficiency class to a colour code associated with a letter (from A+++ to D).
+Energy consumption labelling is used to determine how energy efficient household appliances are. You can change the energy labelling in the demand > household section in the ETM. This page describes the relation between energy labels and efficiency improvement of appliances used in the ETM. 
 
-The ETM allows the user to increase or decrease the energy efficiency level of several types of appliances. These changes in efficiencies are matched to an energy class for each type of appliance with the maximum increase in efficiency corresponding to class A+++ and the maximum efficiency decrease corresponding to  class D.
+## Energy labels
+The European Union (EU) established an energy consumption labelling scheme for household appliances, and it is necessary for all manufactures to include an energy label with their appliances. The energy label can define the energy efficiency class to a colour code associated with a letter, typically ranging from class A+++ to class D with A+++ being the most efficient class and D the least efficient class. The ETM allows you to increase or decrease the energy efficiency level of several types of appliances. These changes in efficiencies are matched to an energy class for each type of appliance. 
 
-This page discusses the methods used to determine the relation between energy labels and efficiency improvement and the data underlying the modeling.
-
-## Modeling
+## Energy labels and efficiency
 
 ![Labelling slide.](/img/docs/labelling_slide.png)
 
 The data on the current energy class of the household appliances in the Netherlands shows that it is different for each appliance. The starting point of the slider refers to the current energy class of the appliance and the icon above the slider can specify the energy class. The user can change the energy class of the appliance according to how efficient it will be in the future.
 
-The energy class of each appliance can be determined with the  Energy Efficiency Index (EEI), which is based on the annual energy consumption of the appliance.
+The energy class of each appliance can be determined with the Energy Efficiency Index (EEI), which is based on the annual energy consumption of the appliance.
 
 A more detailed description of the EEI of each appliance is described below.
 
@@ -111,14 +110,12 @@ and the following websites:
 -   [http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32010R1062&qid=1395837474289&from=EN](http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32010R1062&qid=1395837474289&from=EN)
 -    [http://www.top10energyefficiency.org.uk/dishwashers](http://www.top10energyefficiency.org.uk/dishwashers)
 
-
-The limits of the annual energy consumption in each energy class are based on the EEI. The relation between the EEI and the energy label is not linear; therefore the EEI needed to be adjusted. The EEI adjusted was calculated with the linearization method and the results are shown in the graph below. With the linearization method a straight line was drawn in order to define the new values for the EEI adjusted. The EEI adjusted is used instead of the EEI in order to be able to be used the same icon with the energy classes for all the appliances in the ETM, as the steps from the one energy class to another are equal on the icon.
-
+## Adjusting the EEI
+The limits of the annual energy consumption in each energy class are based on the EEI. The relation between the EEI and the energy label is not linear; therefore the EEI needed to be adjusted. The adjusted EEI was calculated with the linearization method and the results are shown in the graph below. With the linearization method a straight line was drawn in order to define the new values for the adjusted EEI. The adjusted EEI is used instead of the EEI in order to be able to be used the same icon with the energy classes for all the appliances in the ETM, as the steps from the one energy class to another are equal on the icon.
 
 ![EEI adjusted.](/img/docs/EEI_adjusted.png)
 
-
-The EEI adjusted for the current energy class of each appliance is used as the starting point in order to calculate the energy efficiency change from the current energy class to another. The energy efficiency change of the appliance is linked with the annual energy consumption of the appliance. The change of the one energy class to another can be calculated with the following equation
+The adjusted EEI for the current energy class of each appliance is used as the starting point in order to calculate the energy efficiency change from the current energy class to another. The energy efficiency change of the appliance is linked with the annual energy consumption of the appliance. The change of the one energy class to another can be calculated with the following equation
 
 ![Energy efficiency equation.](/img/docs/energy_efficiency_equation.png)
 
@@ -127,7 +124,6 @@ where the Δ% refers to the change of the annual energy consumption of the appli
 All the appliances have an energy class range from A+++ to D, except from the dryers. The least energy efficiency class for the dryers is C. For the simplicity of the calculations, it is assumed that the energy class range for the dryers is also from A+++ to D.
 
 A more detailed description of the % energy efficiency change of the appliances is shown in the table below.
-
 
 |Min. %|Current energy label| Max. % |
 |---------|-----|---------------------|

@@ -2,99 +2,88 @@
 title: Dashboard
 ---
 
-The dashboard in the Energy Transition Model is the overview at the bottom of the page, which contains information on the most essential performance indicators of the scenario. The user can click on each of the indicators in the dashboard to get a pop-up with detailed information on each of the subjects. This page explains both the number indicator and the pop-up window.
+The dashboard of the Energy Transition Model is an overview containing the most essential performance indicators of the scenario at the bottom of the page. You can click on each of the indicators in the dashboard to get a pop-up with a chart and more detailed information on each of the subjects. By clicking 'Change' at the bottom right of the dashboard you can customize the dashboard. The following text defines the performance indicators used within the dashboard. The pages (Energy use (Primary energy use), CO2 emissions, Costs (dashboard), Renewables, Summary) within this section give a more detailed description of the calculations used to produce the dashboard items. 
 
-As of November 2011 the dynamic dashboard has been introduced. Users can now customize the dashboard they see in the model by clicking 'Change' at the bottom right of the dashboard.
+## Energy use
 
-![A screenshot of the dashboard, which supplies information on a number of performance indicators of your scenario.](/img/docs/Dashboard.jpg)
+### Primary energy use 
+The percentage under ‘energy use’ on the dashboard shows difference in total primary energy consumption between the present and the future (based on your scenario). This includes all types of energy and non-energy consumption (e.g. natural gas consumption for fertilizer) within the ETM. Primary energy consumption as a result from exports is not included. This means losses incurred in the conversion sector before exporting energy are excluded. 
 
-Energy use
-----------
+_Check out: the Energy use (Primary demand) page for more information._
 
-*Main article: [Primary energy](primary-energy.md)*
+## CO2 emissions
 
-The chart shows the total primary energy consumption resulting from the total final consumption. This includes primary consumption that results from final non-energy consumption. It does not include primary consumption that results from exports. (This also means that the losses which are typically incurred in the conversion sector are only included for the part of the inland final consumption, not for the exports)
+### CO2 emissions relative to 1990
+This percentage shows the change in CO2 emission between 1990 and the final year of the scenario. The chart shows the CO2 emissions in 1990, in the present year and final year. CO2 emissions shown here are the total energetic CO2 emissions resulting from the total final energy consumption. This does not include CO2 emissions from non-energy consumption, exports, fugitive emissions, industrial processes, solvents and other product use, LULUCF, and other. It does include the CO2 emission reduction due to CO2 capture and storage and the emissions from feedstock. 
 
-For more information on the primary energy calculation click [here](primary-energy.md).
+### Domestic CO2 emissions
+Percentage difference in energetic CO2 emissions due to final energy consumption between 1990 and the scenario year, excluding the CO2 emissions of imported electricity and including emissions of exported electricity.
 
-CO<sub>2</sub> emissions
-------------------------
+### CO2 emissions relative to start year
+This percentage shows the change in CO2 emission between the starting year and final year of your scenario. The scope and chart are similar to CO2 emission relative to 1990. 
 
-*Main article: [CO<sub>2</sub> calculations](co2-emission-factors.md#calculation-of-co2-emissions)*
+_Checkout: the CO2 emissions section within the Dashboard section for more information on definitions and calculations._
 
-The percentage shows the change in CO<sub>2</sub> emissions between 1990 and the scenario year. The chart shows the CO<sub>2</sub> emissions in 1990, in the current year and in the scenario year. The target CO<sub>2</sub> emissions is set by the user in the section "goals - sustainability targets".
+## Energy imports
+### Net foreign energy imports 
+The percentage shows the amount of imported primary energy (imports - exports) compared to the total primary energy consumption. In this case conversion losses due to export are included in the total primary energy consumption (a ‘territorial’ approach). The chart shows the total amount of energy import as a result of the total energy import of different types of energy carriers for the present and final scenario year. 
 
-CO<sub>2</sub> emissions shown here are the total *energetic* CO<sub>2</sub> emissions resulting from the total final *energy* consumption. This does not include CO<sub>2</sub> emissions from final non-energy consumption, fugitive emissions, industrial process, solvent and other product use, agriculture, LULUCF, and other. It also does not include CO<sub>2</sub> emissions resulting from exports. The CO<sub>2</sub> emission reduction of CO<sub>2</sub> capture and storage is taken into account.
+_Checkout: the Energy Imports page in the Dashboard section for more information._
 
-![Energy import in the dashboard](/img/docs/Import_chart.jpg)
+## Costs 
+### Annual energy costs 
+The number shows the total yearly cost of energy supply for your scenario. The chart displays the costs for the present (left) and final scenario year (right) composed of the costs for different types of energy production. 
 
-The 1990 value is taken from the [area data file](https://github.com/quintel/etsource/blob/master/datasets/nl/nl.ad). The values for the current year and the scenario year are calculated. For more information on the CO<sub>2</sub> emission calculation click [here](co2-emission-factors.md#calculation-of-co2-emissions).
+_Checkout: the Total annual costs page under Dashboard > Costs para for further information._
 
-Energy imports
---------------
+## Annual energy cost per household 
+The number shows the total yearly cost of energy supply divided by the total number of households. The chart displays the costs for the present (left) and final scenario year (right) composed of the costs for different types of energy production. 
 
-*Main article: [Import calculations](import-calculations.md)*
+## Profitability of power plants 
+Percentage of plants installed in your scenario that make a profit. 
 
-The percentage is the net amount of imported primary energy (imports - exports) divided by the total primary consumption. The total primary consumption includes the conversion losses incurred from generation of electricity that is exported. (this approach is sometimes called the 'territorial' approach, as opposed to the 'final consumption' approach)
+_Note: The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [here](cost-annual-chart.md) for more information on the cost calculation._
 
-The chart shows the net imported amount (net export is negative) of each primary energy carrier and the sum of all carriers in a waterfall type chart. The left chart is for the current year, and the right chart is for the scenario year.
+_Checkout: the Profitability of power plants page under Dashboard > Costs calculations for dashboard for further information._
 
-Cost
-----
+_Checkout: the general Costs section which explains how costs are defined and calculated in the ETM in general._ 
 
-*Main article: [Cost calculations](cost-annual-chart.md)*
+## Biomass
 
-The number shows the total yearly cost of energy supply in your region in the scenario.
+### Primary biomass use 
+The primary biomass use item within the dashboard explains the total amount of primary available energy in wet biomass, dry biomass, oil-based biomass or biogenic waste. The chart shows the total bio resource demand within your region and relates the demand to the potential of each bio resource category.
 
-The chart shows the these costs both for the current situation (left) and the scenario (right). It also shows the contribution to the costs from the supply of heat, supply of electricity, supply of transport fuels, and the supply of non-energetically used fuels (for example feedstock in the chemical industry, or oil used as lubricant in the transport sector).
+### Final biomass use 
+The final biomass use displays the total amount of final energy produced due to the usage of biomass. The final biomass is calculated by subtracting the energy losses when using biomass to produce energy from the total primary biomass use. 
 
-The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [here](cost-annual-chart.md) for more information on the cost calculation.
+### Share of biomass import 
+The total share of biomass import is the amount of imported biomass (in joule) compared to the of the total amount of primary biomass use. The amount of biomass that is imported from outside your region is defined by looking at the total potential of biomass within your region compared to the total demand of biomass. The Sankey-diagram attached to this dashboard item displays this difference. 
 
-Costs per household
--------------------
+_Check out: the Biomass page under Supply for more information._
 
-*Main article: [Cost calculations](cost-annual-chart.md)*
+## Renewables
+### Total share of renewable energy 
+The number shows the percentage of final energy consumption that is supplied by renewable sources in your scenario. The chart shows the percentage for the present year and final scenario year. 
 
-The number shows the total yearly cost of energy supply divided by the number of households.
+### Total share of renewable electricity 
+The percentage of final electricity consumption that is renewably produced. 
 
-The chart shows the these costs both for the current situation (left) and the scenario (right). It also shows the contribution to the costs from the supply of heat, supply of electricity, supply of transport fuels, and the supply of non-energetically used fuels (for example feedstock in the chemical industry, or oil used as lubricant in the transport sector).
+### Share of renewable energy in households 
+The percentage of final energy consumption in households that is renewably produced. 
 
-The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [here](cost-annual-chart.md) for more information on the cost calculation.
+_Checkout: the Renewables page within this Dashboard section for more information._
 
-Bio-footprint
--------------
+## Summary
 
-*Main article: [Footprint calculations](documentation.md#biofootprint-calculations)*
+### Loss of load expectation 
+The loss of load dashboard item shows the number of hours in which the capacity for electricity production is expected to be less than the demand. It is calculated by comparing the peak electricity demand with the total installed capacity. The variability of volatile electricity production (i.e. Solar PV and wind turbines) is also taken into account. The graph displays the peak electricity demand compared to the installed electricity production for the present and future. The electricity production capacity is split into volatile production, which is unreliable, and dispatchable production, which is reliable. To avoid a loss of load it is important that there is sufficient reliable electricity capacity to meet the peak electricity demand. 
 
-The number shows how much arable land you need to grow the biomass used in your scenario expressed in multiples of your region's total *arable land* area (taken from area data). Biomass includes solid biomass, biofuels (liquid), and biogasses (including green gas).
+_Check out: the Loss of load page in the Flexibility > Electricity hour calculations section for more information._
 
-The graphic shows the necessary arable land for both the current year, and the scenario, by blue pictures of your region. Be aware that 1 blue picture of your region means that you need 1 times the *arable land* area of your region, **not** 1 times the total area of your region to grow the biomass.
+### Number of blackout hours 
+The total number of blackout hours can be determined using the hourly electricity production calculations compared to the hourly electricity demand. If regional electricity production and the maximum amount of electricity import is not enough to satisfy the demand, a blackout will occur. The graph shows the hourly electricity production compared to the hourly electricity demand. 
 
-For more information on the calculation of the bio-footprint click [here](documentation.md#biofootprint_calculations).
+### Number of hours with excess electricity 
+As a result of large numbers of wind turbines and solar panels installed, the supply of electricity can be larger than the demand. The number of hours with excess electricity displays this event. If you include flexibility options in your scenario, the number of excess events decreases.
 
-Renewables
-----------
-
-*Main article: [Renewables](renewability.md)*
-
-The number shows the percentage of final *energy* consumption that is supplied by renewable sources in the scenario.
-
-The chart shows this percentage both for the current situation and the scenario. The percentage for the current situation is also calculated by the ETM. This percentage may be slightly different from the number in official statistics due to a different definition or due to necessary simplifications in the ETM. The main article [renewables](renewability.md) provides more information on these differences.
-
-Renewable electricity
----------------------
-
-*Main article: [Renewables](renewability.md)*
-
-The number shows the percentage of final *electricity* consumption that is renewably produced. The calculation uses the definition as used by the European Commission (Directive [2009/28/EC](http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=Oj:L:2009:140:0016:0062:en:PDF)). Also see the main article for more information.
-
-The chart shows this percentage both for the current situation and the scenario. The percentage for the current situation is also calculated by the ETM. This percentage may be slightly different from the number in official statistics due to a different definition or due to necessary simplifications in the ETM. The main article [renewables](renewability.md) provides more information on these differences.
-
-Loss of load
-------------
-
-*Main article: [Electricity backup](electricity-backup.md)*
-
-The loss of load dashboard item shows the probability that electricity production capacity is less than expected demand. The loss of load probability is calculated by comparing the peak electricity demand of a country with the installed capacity. In this calculation, consideration is also given for the variability of volatile electricity production (i.e. Solar PV and wind turbines).
-
-The pop-up shows the peak electricity demand as well as the installed electricity production capacity. The installed capacity is split into reliable and unreliable capacity. Unreliable capacity is that from volatile energy sources which is not available at all times of the day and/or year. To avoid a non-zero loss of load probability it is important that there is sufficient reliable capacity to meet the peak electricity demand, for example by adding gas CCGTs to function as backup for volatile electricity production.
+_Check out: the Flexibility section for more information._

@@ -1,35 +1,45 @@
 ---
-title: Interface
+title: "Interface"
 ---
 
-## The start screen
+This page explains the main features displayed in the interface of the ETM. 
+You will land in the ETM interface after starting or opening a scenario. Here you will find the following topics:
 
-In the start screen a user can select to start with a new scenario, load an existing demo scenario. If the user was already working on a scenario immediately before navigating to the start screen, he can also continue with this scenario by clicking "Continue with current scenario".
+### 1. Head banner
+Here you can go back to the scenario landing page by clicking on the logo, choose your language (English or Dutch) or sign in if you have an ETM account. Using your account you can save scenario’s or open previously saved scenario’s. If you want to create an account click on the ‘sign in’ button and choose ‘sign up’. 
 
-If the user selects "Start a new scenario" he can choose the country that he wants to model, the end year of the model and the difficulty level of the interface. The difficulty level determines how many sliders are visible in the model.
+### 2. Scenario toolbar
+In the ‘scenario toolbar’ your current scenario name and end year is visible. To the right you can save the scenario by clicking ‘save scenario’. This option is only available when you have an account and are logged in. Under ‘Actions’ you have the option to save the scenario with a new name by clicking ‘save scenario as…’ or reset the entire scenario by clicking ‘reset scenario’. 
 
-In the top right of the screen the user can also login to his/her account, or create one. There are additional links to information about Quintel, our partners and our education program.
+### 3. Introduction 
+A short introduction to the ETM will guide you in creating your (first) scenario. 
 
-![The start screen of the ETM](/img/docs/Start_screen.png)
+### 4. Toolbar
+The toolbar allows you to influence the main elements of the future energy system in your region:
+Demand: 	what happens to energy consumption in the future? 
+Supply: 	which technologies will be used to produce heat, electricity and fuel in the future?
+Flexibility: 	future energy systems will most likely be characterized by times of excess electricity due to the volatile nature of the electricity production. Flexibility technologies, like battery storage and power to gas allow you to deal with this excess electricity.
+Costs: 	specify what you think will happen to the costs of carriers and technologies. 
 
-## The main interface
+Checkout: the Detailed Explanations section for more information on calculations and definitions. 
 
-The main interface contains a structure that the user should know in order to navigate the model effectively.
+### 5. Tools and sliders
+In the ETM you can use sliders to manipulate the current situation to produce a future energy scenario. You can either:
+* drag the slider 
+* use the + and – when more precision is needed
+* or type directly into the slider by clicking on the number.
+The reset button will reset this slider to the current amount. When you need more information about a particular slider the help (?) button will explain the details. 
 
-The items on the left of the screen contain the main topics of the ETM:
+When you do not touch a single slider the future will be regarded as identical to the starting year situation. If you do change a slider this will have a direct effect on the energy flow which is calculated within the model and therefore have an effect on the energy system as a whole. 
 
-1. [Demand](demand.md)
-2. [Costs](cost-main-principles.md)
-3. [Supply](supply.md)
+### 6. Graphics 
+Different types of charts and graphics give direct feedback on the effect of your scenario choices. The help (?) button can provide more information about the specific graph. The change chart button (..) lets you pick and view a different chart from the list. The table button (..) converts the chart to a table. The lock button (..) locks the chart while you can continue working on your scenario in different topics or energy system components. With the widen button (..) you can enlarge the graph to spot the details. The ‘+ see more charts’ button at the top allows you to see multiple graphs at the same time. 
 
-Clicking one of these categories opens the relevant section of the ETM. On the left side of the screen all the sub-topics are shown. The sub-topics are again divided into sub-sub-topics called 'slides'. Sliders are organized by slide. By clicking on a slide a user opens the overview of sliders relevant for this slide. Additionally, a chart is loaded that will show the effect of a slider when a user touches it.
+### 7. Results
+In the results tab you can find different overviews portraying the outcomes based on your scenario. The ‘visuals’ tab contains a number of different formats all portraying different aspects of your energy scenario. The ‘scenario report’ is the most comprehensive containing a textual and graphic explanation of your scenario. Other sub-tabs (‘Energy Mix Inforgraphic’, ‘CO2 footprint’, ‘Graph and energy flows’ and ‘CCUS’) each portray a different visual explanation of your scenario. The ‘data export’ tab under the ‘visuals’ tab lets you export data generated in the ETM (CSV) which can serve as input for your own graphs or other models.
 
-The results of touching a slider are further shown in the dashboard at the bottom of the screen. Every time a user touches a slider the values in the dashboard are updated and arrows show the direction of the change.
+### 8. Dashboard 
+The dashboard shows direct feedback on the most important outcomes of your scenario. The change button to the right makes it possible to show a different numerical output on the dashboard. The numbers shown in the dashboard and ETM as a whole always reflect the difference between the start- and end year you have chosen for your scenario except for the item that show the difference in CO2 emissions from 1990. 
 
-A user can change the settings for the scenario under settings in the top right corner. The user can also save, load and reset his scenario and change the language of the interface here. In order to save or load a scenario a user has to create an account.
-
-On pages that have a tutorial available there is a button that can be clicked by the user. This will open a separate window with video tutorials.
-
-In the top right the user can see the end year of the model and the flag of the area that he is creating a scenario for.
-
-![The main screen of the ETM](/img/docs/20110428_main_screen_with_highlights.png)
+Checkout: the Dashboard section for more information. 
+ 

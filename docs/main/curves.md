@@ -11,7 +11,7 @@ _Image: Example of hourly demand - hydrogen demand_
 
 ## Overview of curves
 
-We define demand curves, supply curves and time curves. The tables below show a brief overview of the sources and methods currently used.
+The ETM had three types of curves: demand curves, supply curves and time curves. The tables below show a brief overview of the sources and methods currently used.
 
 ### Demand
 

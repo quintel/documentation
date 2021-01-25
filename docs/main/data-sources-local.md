@@ -1,6 +1,9 @@
 ---
 title: Regionale data in het ETM
 ---
+
+_Note: Regional data (ET-local) is currently only available in Dutch, this information is therefore only provided in Dutch._
+
 Op deze pagina staat een overzicht van de gebruikte data voor de Nederlandse gemeenten, (RES-)regio's en provincies in het Energietransitiemodel. De standaard databronnen, aannames en methoden staan op deze pagina beschreven. Per regio kan hiervan worden afgeweken op basis van lokale informatie. De actuele stand van zaken per regio is te vinden op [ETLocal](#etlocal).
 
 ## Huishoudens
@@ -136,9 +139,9 @@ Voor sommige regio's ontbreekt data voor een bepaalde sector of drager op Klimaa
 
 Belangrijk is dat het totale energiegebruik en het totale energiegebruik per hoofdcategorie (elektriciteit, gas & warmte, vervoer) op Klimaatmonitor zoveel mogelijk leidend is.
 
-_Voorbeeld:_ Volgens Klimaatmonitor is het totale elektriciteitsgebruik in regio X 100 TJ. Voor landbouw en industrie is er geen data gepubliceerd vanwege vertrouwelijkheid, maar deze verbruiken zijn wel verwerkt in het totale elektriciteitsgebruik. Voor de andere sectoren telt het elektriciteitsgebruik op tot 60 TJ. Quintel schat het verbruik van landbouw en industrie met behulp van bovenstaande methodes. Het totaal van landbouw en industrie kan niet hoger zijn dan 40 TJ, omdat anders het totaal van 100 TJ wordt overschreden.
+_Voorbeeld: Volgens Klimaatmonitor is het totale elektriciteitsgebruik in regio X 100 TJ. Voor landbouw en industrie is er geen data gepubliceerd vanwege vertrouwelijkheid, maar deze verbruiken zijn wel verwerkt in het totale elektriciteitsgebruik. Voor de andere sectoren telt het elektriciteitsgebruik op tot 60 TJ. Quintel schat het verbruik van landbouw en industrie met behulp van bovenstaande methodes. Het totaal van landbouw en industrie kan niet hoger zijn dan 40 TJ, omdat anders het totaal van 100 TJ wordt overschreden._
 
 ## ETLocal
 Uitgebreide informatie over de gebruikte data en bronnen per regio in het ETM is te vinden op [ETLocal](https://beta-local.energytransitionmodel.com/). Hier kun je de regio op de kaartlaag selecteren en vervolgens per sector de input-data bekijken.
 
-**Let op:** ETLocal is op dit moment nog in ontwikkeling. De dienst kan daardoor instabiel zijn en/of aan verandering onderhevig.
+_Note: ETLocal is op dit moment nog in ontwikkeling. De dienst kan daardoor instabiel zijn en/of aan verandering onderhevig._

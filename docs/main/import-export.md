@@ -2,6 +2,8 @@
 title: Import and export of electricity
 ---
 
+This page explains how import and export of electricity between countries in the EU will effect the future electricity market. 
+
 ## Integration of the electricity markets
 
 The electricity market is one of the last markets in the EU facing cross-border integration. Most industries are already competing in the EU Single Market. The proposal of the European Commission to create a common European energy policy was an important step towards harmonising national markets into working regional markets and finally a pan-European market.

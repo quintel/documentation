@@ -21,11 +21,11 @@ For regional datasets, no uniform, international source exists detailing histori
 
 For subregions of the Netherlands, data is used from [RIVM](http://emissieregistratie.nl/erpubliek/bumper.nl.aspx). They report 1990 emissions on a municipality level. However, this data does not comply with the [main principles](co2-main-principles.md) of the ETM's CO<sub>2</sub> calculation:
 
-
 * Emissions are reported by geographical location. This means that a municipality with a power plant within its border is assigned the full emissions of the plant. Conversely, no emissions for electricity use are taken into account for municipalities without power plants.
 * The regional data does not conform to IPCC definitions. This means that emissions of biomass are included.
 
-To be able to compare 1990 emissions to the present and future emission levels calculated by the ETM, Quintel applies the following correction method to the data:
+## Correction method
+To be able to compare 1990 emissions to the present and future emission levels calculated by the ETM, the following data correction is applied:
 
 * First, for all municipalities 1990 CO<sub>2</sub> emissions are calculated for all sectors _except_ the energy sector
 * Secondly, each municipality total is divided by the Dutch total, both excluding energy sector emissions. This results in a 'scaling factor' per municipality. For example, municipality X has 3% of total Dutch 1990 emissions excluding the energy sector.
