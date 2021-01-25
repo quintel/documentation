@@ -1,6 +1,7 @@
 ---
 title: Overview of costs per sector
 ---
+
 Below you can find an overview per sector of the different costs taken into account by the ETM.
 
 ## Households

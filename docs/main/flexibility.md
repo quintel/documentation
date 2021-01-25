@@ -2,41 +2,37 @@
 title: Flexibility
 ---
 
-Wind turbines and solar panels are subject to volatile natural patterns. The electricity that they produce might therefore not always be used to match demand directly. This mismatch will lead to excess electricity, in particular in scenarios with large amounts of volatile production capacity. To prevent curtailment of this excess electricity, the ETM contains several flexibility technologies that can make good use of it.
+Wind turbines and solar panels are subject to volatile natural patterns. It can be difficult to match this volatile pattern with the demand pattern. As a result, excesses in electricity can occur, especially with a large capacity of volatile production. To prevent curtailment of this excess electricity, the ETM contains several flexibility technologies to prevent this electricity going to waste. This page explains the different flexibility options in the ETM. 
 
-## Implementation in merit order module
+_Checkout: the Merit Order page for more information on how the ETM deals with volatile, must-run and dispatchable production._
 
-As described in [the merit order documentation](merit-order.md), the merit order module of the ETM calculates the hourly electricity mix based on the demand for electricity and the installed capacities and marginal costs of the electricity producing technologies. The merit order module distinguishes three types of electricity producers: volatile, must-run and dispatchable producers. The latter can be switched on or off depending on the demand for electricity. The first two, however, will produce electricity based on volatile natural patterns or based on heat demand and are therefore not coupled to the electricity demand. For scenario's with large installed capacities of volatile and must-run producers, electricity production might exceed demand. The merit order module keeps track of the amount of excess electricity at each hour and lets the user decide what to do with this electricity. The various flexibility options are described below.
+_Checkout: the hydrogen page for further explanations on the hydrogen hour calculations._
 
-## Flexibility options
+## Order of flexibility options
 
-### Order of flexibility options
+The ETM contains several technologies to deal with excess electricity. You can decide which of these options to use first, second and so on, by changing the order of the options in the flexibility options selector. Curtailment is always the last resort and hence locked in the last position. The flexibility options are modelled such that excess electricity is first used by the technology that is position 1. Once the full capacity of the technology is reached or its entire volume is filled (in case of batteries), any remaining excess electricity will be used by the technology in position 2 and so on.
 
-The ETM contains several technologies to deal with excess electricity. The user can decide which of these options to use first, second and so on, by changing the order of the options in the flexibility options selector. Curtailment is always the last resort and hence locked in the last position. The flexibility options are modelled such that excess electricity is first used by the technology that is position 1. Once the full capacity of the technology is reached or its entire volume is filled (in case of batteries), any remaining excess electricity will be used by the technology in position 2 and so on.
+## Storage in batteries
 
-![Figure 1: Flexibility options selector](/img/docs/20160809-screenshot-flex-options.png)
+A home battery that can be used to store excess electricity. You can set the percentage of households that is equipped with such battery. The specs of these batteries are documented in its [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/households/households_flexibility_p2p_electricity.converter.xlsx). The electricity that is stored in the home battery will be supplied back to the grid as soon as the excess electricity event has ended.
 
-### Storage in batteries
+## Storage in electric vehicles
 
-A home battery that can be used to store excess electricity. The user can set the percentage of households that is equipped with such battery. The specs of these batteries are documented in its [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/households/households_flexibility_p2p_electricity.converter.xlsx). The electricity that is stored in the home battery will be supplied back to the grid as soon as the excess electricity event has ended.
+You can set the percentage of his car battery storage volume that can be used to store excess electricity. In order for this to have any effect, you first needs to include electric vehicles in his scenario. The specs of these electric vehicles are described in their [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/transport/transport_car_using_electricity.converter.xlsx). The electricity that is stored in the electric vehicles will be supplied back to the grid as soon as the excess electricity event has ended.
 
-### Storage in electric vehicles
+## Conversion to heat
 
-The user can set the percentage of his car battery storage volume that can be used to store excess electricity. In order for this to have any effect, the user first needs to include electric vehicles in his scenario. The specs of these electric vehicles are described in their [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/transport/transport_car_using_electricity.converter.xlsx). The electricity that is stored in the electric vehicles will be supplied back to the grid as soon as the excess electricity event has ended.
+Converting excess electricity into heat is easy. At times of excess electricity supply, an electric boiler can be used to (pre-)heat water for hot water consumption. If the volume of the boiler is selected appropriately, the boiler will on average be emptied once a day, leaving it ready to convert more excess electricity. You can set the percentage of households that is equipped with a power-to-heat boiler. And the end of a merit order run, the heat generated by power-to-heat for the entire year will be subtracted from the heat demand that needs to be fulfilled by the other heating technologies. The specs of power-to-heat are described in a [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/households/households_flexibility_p2h_electricity.converter.xlsx).
 
-### Conversion to heat
+## Conversion to gas
 
-Converting excess electricity into heat is easy. At times of excess electricity supply, an electric boiler can be used to (pre-)heat water for hot water consumption. If the volume of the boiler is selected appropriately, the boiler will on average be emptied once a day, leaving it ready to convert more excess electricity. The user can set the percentage of households that is equipped with a power-to-heat boiler. And the end of a merit order run, the heat generated by power-to-heat for the entire year will be subtracted from the heat demand that needs to be fulfilled by the other heating technologies. The specs of power-to-heat are described in a [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/households/households_flexibility_p2h_electricity.converter.xlsx).
+Excess electricity can be used to produce hydrogen in an electrolysis process. In the ETM, the hydrogen produced by power-to-gas will be used in the transport sector, provided that you have included hydrogen cars in your scenario. Any excess hydrogen will be exported. You can set the percentage of hydrogen cars in the car technology slide and review the origin of the hydrogen used by these cars in the hydrogen production slide. You can decide how many power-to-gas plants to built; their specs are documented in a [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/energy_flexibility_p2g_electricity.converter.xlsx).
 
-### Conversion to gas
+## Export
 
-Excess electricity can be used to produce hydrogen in an electrolysis process. In the ETM, the hydrogen produced by power-to-gas will be used in the transport sector, provided that you have included hydrogen cars in your scenario. Any excess hydrogen will be exported. The user can set the percentage of hydrogen cars in the car technology slide and review the origin of the hydrogen used by these cars in the hydrogen production slide. The user can decide how many power-to-gas plants to built; their specs are documented in a [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/energy_flexibility_p2g_electricity.converter.xlsx).
+Excess electricity can be exported to neighbouring countries through the interconnectors between these countries. The capacity of these interconnectors is limited and can be adjusted. Also, at times of excess electricity, the neighbouring countries will most likely also have to deal with this excess electricity. Hence you can squeeze the available interconnector capacity to avoid overestimating the amount of electricity that can be exported.
 
-### Export
-
-Excess electricity can be exported to neighbouring countries through the interconnectors between these countries. The capacity of these interconnectors is limited and can be adjusted by the user. Also, at times of excess electricity, the neighbouring countries will most likely also have to deal with this excess electricity. Hence the user can squeeze the available interconnector capacity to avoid overestimating the amount of electricity that can be exported.
-
-### Curtailment
+## Curtailment
 Any remaining excess electricity will be curtailed by switching off the wind turbines and solar panels. Curtailment is always the last resort.
 
 ## Output

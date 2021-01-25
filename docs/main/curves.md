@@ -9,11 +9,9 @@ The hourly demand/supply is determined using the annual demand/supply and a curv
 
 *Example of hourly demand - hydrogen demand*
 
-In 2019 we made an inventory of all curves available and updated all ETM-curves and their documentation. This project was carried out in close collaboration with the modelling community. On the 3th of July we closed the project with a mini-symposium. In this mini-symposium we shared our findings, struggles and discussed possibilities of further improvement of curves used in energy modelling.
-
 ## Overview of curves
 
-We define demand curves, supply curves and time curves. The tables below show a brief overview of the sources and methods currently used.
+The ETM had three types of curves: demand curves, supply curves and time curves. The tables below show a brief overview of the sources and methods currently used.
 
 ### Demand
 
@@ -60,17 +58,5 @@ For the Netherlands the time curves are based on:
 
 For all other countries the time curves are based on the Primes reference scenario 2016.
 
-## Details
+_Checkout: the [ETDataset - curves](https://github.com/quintel/etdataset-public/tree/master/curves) as it contains all raw data, scripts and further explanations._
 
-[ETDataset - curves](https://github.com/quintel/etdataset-public/tree/master/curves) contains all raw data, scripts and further explanations.
-
-## Discussion
-Feedback on the curves we use is very welcome!
-If you have a comment or a better source please let us know, you can:
-
-* [Open an issue in ETDataset](https://github.com/quintel/etdataset-public/issues/new) and assign a team member of Quintel:
-  * [Chael Kruip](https://github.com/Chaelkruip)
-  * [Dorine van der Vlies](https://github.com/Dorinevandervlies)
-  * [Marlieke Verweij](https://github.com/marliekeverweij)
-  * [Roos de Kok](https://github.com/Redekok)
-* [Contact us directly](https://energytransitionmodel.com/contact).

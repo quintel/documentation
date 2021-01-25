@@ -2,7 +2,7 @@
 title: Dynamic electricity demand curve
 ---
 
-The behaviour of heat pumps and electric vehicles is modelled explicitly and on an hourly scale. This can be viewed in the "dynamic demand curve" chart. This document explains which profiles were used to model the behaviour of these technologies.
+The behaviour of heat pumps and electric vehicles is modelled explicitly and on an hourly scale. This can be viewed in the "dynamic demand curve" chart. This page explains which profiles were used to model the behaviour of these technologies.
 
 ![](/img/docs/20170921_dynamic_demand_curve.png)
 
@@ -18,13 +18,15 @@ The behaviour of heat pumps and electric vehicles is modelled explicitly and on 
 
 ### Electric vehicles
 
-The profiles used for demand of EV's are based on research performed by Movares ([Movares, 2013](#references)). The ETM allows selection of three different profiles:
+The ETM uses five different profiles to determine the demand of EV’s based on research performed by Movares (Movares, 2013) and Elaad. These five profiles are:
 
 - Charging at home
 - Charging everywhere
 - Fast charging
+- Charging smart (Elaad)
+- Charging regular (Elaad)
 
-In these profiles weekend days differ from week days.
+You can use these profiles to adjust the charging behaviour of electric cars. In all profiles weekend days are considered differently from weekdays. You can find these profiles in the Flexibility section under ‘Net load’> ‘Demand response – electric vehicles’. 
 
 ### Hot water
 
@@ -60,27 +62,21 @@ The space heating profiles used by ETM are based on profiles made by ECN and use
 * Semidetached house: 12%
 * Detached house: 15%
 
+_Source: ABF Research, 2014: [Ontwikkelingen op de woningmarkt – Socrates 2013](https://www.rijksoverheid.nl/documenten/rapporten/2014/06/18/ontwikkelingen-op-de-woningmarkt-socrates-2013)_
+
 For old houses the minimum slider settings gives the weighed average profile corresponding to low insulation. For new houses, which are currently more insulated than old houses, the minimum slider settings gives the weighed average profile corresponding to medium insulation. For both old and new houses the maximum slider setting gives the weighed average profile corresponding to high insulation.
 A slider setting which is between the minimum and the maximum insulation value gives a weighed mix of the profile corresponding to the minimum and the maximum value.
 
 ![](/img/docs/20170914_insulation_sliders.png)
 
-:::note
-In the ETM the insulation level can be set with sliders. The minimum slider setting corresponds to the current insulation level. The maximum slider setting corresponds to theoretically maximum insulation.
-:::
+_Note: In the ETM the insulation level can be set with sliders. The minimum slider setting corresponds to the current insulation level. The maximum slider setting corresponds to theoretically maximum insulation._
 
 The temperature curves that are used to make the space heating demand curves are based on KNMI measurements in The Bilt ([KNMI, 2017](#references)).
 
 The default temperature curve and corresponding profiles is the same as the base year. In 1987, the Netherlands experienced an exceptional cold snap in the second week of January, which significantly increased the demand for space heating. This may happen again in the future, and low temperatures may negatively affect the ability for air and hybrid heat pumps to satisfy demand. In the ETM “cold snap” can be selected to use the 1987 heat demand and air temperature.
 
-### Other
+_Checkout: the [Curves page](curves) for more information._
 
-All other electricity demand is currently shown as one group and is colorless.
+_Sources: other sources used are Ecofys, 2015 ([Systeemkosten van warmte voor woningen](https://refman.energytransitionmodel.com/publications/2063)) and Jordan, 2010 ([Realistic Domestic Hot-Water Profiles in Different Time Scales](https://refman.energytransitionmodel.com/publications/2065))_
 
-## References
 
-* ABF Research, 2014: [Ontwikkelingen op de woningmarkt – Socrates 2013](https://www.rijksoverheid.nl/documenten/rapporten/2014/06/18/ontwikkelingen-op-de-woningmarkt-socrates-2013)
-* Ecofys, 2015: [Systeemkosten van warmte voor woningen](https://refman.energytransitionmodel.com/publications/2063)
-* Jordan, 2010: [Realistic Domestic Hot-Water Profiles in Different Time Scales](https://refman.energytransitionmodel.com/publications/2065)
-* Movares, 2013: [Laadstrategie elektrisch wegvervoer](https://refman.energytransitionmodel.com/publications/2055)
-* KNMI, 2017: [Uurgegevens van het weer in Nederland](http://projects.knmi.nl/klimatologie/uurgegevens/selectie.cgi)

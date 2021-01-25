@@ -2,7 +2,7 @@
 title: Network impact calculation
 ---
 
-The network impact calculation is a module that currently only works for the Dutch version of the ETM. The calculation determines the investment required in the electricity grid depending on the choices made by the users. For example, in a scenario with a large share of electric heaters the capacity of the current electricity grid is not sufficient to transport all demand.
+The network impact calculation determines the investment required in the electricity grid depending on the choices made by the users. For example, in a scenario with a large share of electric heaters the capacity of the current electricity grid is not sufficient to transport all demand.
 
 The results of the network impact calculation are displayed in a chart in the front end of the model (‘Required additional infrastructure investments’). This chart shows the total additional investment required in the electricity grid for the current scenario. In addition, the annualized investment costs including operation and maintenance costs and interest for the required network expansion are  included in the costs dashboard item in the front end of the model.
 
@@ -30,8 +30,7 @@ The change in the peak load is called the peak load delta. The network impact ca
 
 ### Capacity
 
-Cables and transformers have a maximum capacity; they can only carry so much electricity at any instant. Capacity is expressed in Volt-Ampere, the units for complex power. In the ETM Mega Volt (MV) is often used. For the ETM it is sufficient to consider the real power (MW) although in reality the complex power Mega Volt-Ampere (MVA) and is slightly larger than the real power.
-
+Cables and transformers have a maximum capacity; they can only carry so much electricity at any instant. 
 
 ## Calculation in steps:
 The network calculation consists of four different steps: Dynamic demand curve, peak load calculation, required net calculation, and cost calculation.

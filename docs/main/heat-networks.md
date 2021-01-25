@@ -2,23 +2,13 @@
 title: Heat networks
 ---
 
-Below you can find more information about heat networks in the Energy Transition Model:
-* [District heating networks](#District-heating-networks) delivering heat to households, buildings and agriculture:
-  * [Demand of district heating](#Demand)
-  * [Supply of district heating](#Supply)
-    * [Must-run heat sources](#Must-run)
-    * [Dispatchable heat sources](#Dispatchable)
-    * [Merit order](#Merit-order)
-  * [Heat storage](#Heat-storage)
-  * [Transport and distribution losses](#Transport-and-distribution-losses)
-  * [Infrastructure costs](#Infrastructure-costs)
-* [Industrial steam networks](#Industrial-heat-network) supplying heat to various industrial sub sectors
+Below you can find more information about heat networks in the Energy Transition Model.
 
 ## District heating networks
 The demand, supply and storage of heat for district heating networks in households, buildings and agriculture is calculated on an hourly basis.
 
 ### Demand
-In the households, buildings and agriculture section of the model, the user can make assumptions about the share of heat demand that will be supplied by district heating networks in the future. For example, in the scenario below, 40% of residences is assumed to be connected to district heating networks.
+In the households, buildings and agriculture section of the model, you can make assumptions about the share of heat demand that will be supplied by district heating networks in the future. For example, in the scenario below, 40% of residences is assumed to be connected to district heating networks.
 
 ![District heating share in households](/img/docs/20200212_district_heating_demand_share_in_households.png)
 
@@ -27,7 +17,7 @@ The resulting district heating demands from households, buildings and agricultur
 ![Hourly district heating demand](/img/docs/20200213_hourly_district_heating_demand.png)
 
 ### Supply
-The user can set the installed capacities of various heating sources in the 'Supply' tab. The ETM distinguishes between two types of heat sources:
+You can set the installed capacities of various heating sources in the 'Supply' tab. The ETM distinguishes between two types of heat sources:
 * 'Must-run' sources
 * Dispatchable sources
 
@@ -52,30 +42,30 @@ Dispatchable heat sources include all heat sources that can be turned on and off
 * Heat storage. See the [Storage](#Heat-storage) section below.
 * A back-up/emergency heater using network gas
 
-For each of these heaters the user can set the installed capacity in the 'District Heating' section of the ETM. The only exception to this is the back-up heater. The ETM automatically determines the required amount of back-up capacity to ensure that supply always meet demand in every hour. If back-up is installed, this will show up as 'heat shortage' in the 'Demand and supply' chart (see below). The user can decrease this shortage by increasing the installed capacity of other dispatchables.
+For each of these heaters you can set the installed capacity in the 'District Heating' section of the ETM. The only exception to this is the back-up heater. The ETM automatically determines the required amount of back-up capacity to ensure that supply always meet demand in every hour. If back-up is installed, this will show up as 'heat shortage' in the 'Demand and supply' chart (see below). You can decrease this shortage by increasing the installed capacity of other dispatchables.
 
 ![Heat supply and demand](/img/docs/20200214_heat_shortage.png)
 
 #### Merit Order
-When multiple dispatchable sources are installed, a heat 'merit order' determines which dispatchable switches on first. The back-up burner always comes last ('lender of last resort'). By default, the merit order is based on marginal production costs. This can be changed by the user in the Merit Order subsection of District Heating.
+When multiple dispatchable sources are installed, a heat 'merit order' determines which dispatchable switches on first. The back-up burner always comes last ('lender of last resort'). By default, the merit order is based on marginal production costs. This can be changed in the Merit Order subsection of District Heating.
 
 ![Heat supply and demand](/img/docs/20200214_heat_merit_order.png)
 
-_Example: Suppose that in hour X heat demand is 100 MW and that must-run sources supply 20 MW. This means that 80 MW will be supplied by dispatchables. Now suppose that the user installed 30 MW of biomass heaters, 50 MW of heat pumps and 20 MW of gas heaters and that they altered the heat merit order such that biomass comes first, followed by heat pumps and gas heaters. Since biomass is first in line, the heater will turn on in hour X, supplying 30 MW of the 80 MW residual demand. This leaves a residual demand of 50 MW. Thus, the heat pumps switch on as they are second in line, supplying 50 MW. The gas heaters will not switch on in this hour as heat demand has been fully met._
+_Example: Suppose that in hour X heat demand is 100 MW and that must-run sources supply 20 MW. This means that 80 MW will be supplied by dispatchables. Now suppose that you install 30 MW of biomass heaters, 50 MW of heat pumps and 20 MW of gas heaters and that you alter the heat merit order such that biomass comes first, followed by heat pumps and gas heaters. Since biomass is first in line, the heater will turn on in hour X, supplying 30 MW of the 80 MW residual demand. This leaves a residual demand of 50 MW. Thus, the heat pumps switch on as they are second in line, supplying 50 MW. The gas heaters will not switch on in this hour as heat demand has been fully met._
 
 ### Heat storage
 As seen above, must-run heat sources supply heat regardless of heat demand. As such, it is possible that heat is produced during hours of low or no heat demand. This heat is registered as a 'heat surplus'. One striking example is solar thermal farms, which produce a lot of heat during summer when heat demand is low.
 
-To avoid large amounts of dumped heat the user can decided to use (seasonal) heat storage. This can be done by switching the storage toggle to 'On'.
+To avoid large amounts of dumped heat you can decided to use (seasonal) heat storage. This can be done by switching the storage toggle to 'On'.
 
 ![Heat storage toggle](/img/docs/20200214_heat_storage_toggle.png)
 
 When switched on, the ETM automatically installs sufficient storage volume to store all heat surpluses of must-run producers. This heat can be used later on in the year, allowing for a more efficient use of must-run capacity and a lower need for dispatchables.
 
 ##### Storage as dispatchable
-Heat storage is considered a dispatchable heat source. This means that heat will be drawn from storage during moments that heat demand exceeds must-run supply. By default, heat storage comes first in the heat merit order, which means that in case of a shortage in supply, heat is drawn from storage before other dispatchables (like gas burners) are switched on. Of course it is only possible to draw heat from storage if this heat has been put into storage earlier on in the year. The user can change the merit order positions in the Merit order subsection. Moving heat storage to a lower position in the merit order results in a slower depletion of stored heat. See [Merit order](#Merit-order).
+Heat storage is considered a dispatchable heat source. This means that heat will be drawn from storage during moments that heat demand exceeds must-run supply. By default, heat storage comes first in the heat merit order, which means that in case of a shortage in supply, heat is drawn from storage before other dispatchables (like gas burners) are switched on. Of course it is only possible to draw heat from storage if this heat has been put into storage earlier on in the year. You can change the merit order positions in the Merit order subsection. Moving heat storage to a lower position in the merit order results in a slower depletion of stored heat. See [Merit order](#Merit-order).
 
-The output capacity of heat storage is unlimited by default. This means that there is no limit to the amount of heat that can be drawn from storage in one hour (given that enough heat is available in the storage). Users can limit this with a slider. A lower output capacity can result in a slower depletion of heat storage. A consequence of this could be that other dispatchable heat sources (such as gas heaters) need to be switched on earlier: if the output capacity of storage is insufficient to meet demand in a given hour, other dispatchables need to be switched to guarantee that enough heat is supplied.
+The output capacity of heat storage is unlimited by default. This means that there is no limit to the amount of heat that can be drawn from storage in one hour (given that enough heat is available in the storage). You can limit this with a slider. A lower output capacity can result in a slower depletion of heat storage. A consequence of this could be that other dispatchable heat sources (such as gas heaters) need to be switched on earlier: if the output capacity of storage is insufficient to meet demand in a given hour, other dispatchables need to be switched to guarantee that enough heat is supplied.
 
 ![Heat storage per hour](/img/docs/20200214_heat_storage_per_hour.png)
 
@@ -87,14 +77,14 @@ If this 'dumping' of excess heat in storage is significant, a 'hick-up' can be s
 ![Heat storage per hour](/img/docs/20200214_heat_storage_excess.png)
 
 ##### Storage losses
-Heat storage is subject to thermal losses. Users of the ETM can set a yearly loss percentage with a slider. This percentage is converted to a loss percentage per hour (``(yearly losses)^(1/8760)``). For every hour per year this hourly percentage is multiplied with the heat in storage at that moment to calculate storage losses in that hour.
+Heat storage is subject to thermal losses. You can set a yearly loss percentage with a slider. This percentage is converted to a loss percentage per hour (``(yearly losses)^(1/8760)``). For every hour per year this hourly percentage is multiplied with the heat in storage at that moment to calculate storage losses in that hour.
 
-This means that the total storage losses are typically (much) lower than the yearly loss percentage set by the user. If 100 TJ heat is stored and yearly losses are 20%, it is generally not the case that 20 TJ heat is lost. Only if heat storage is filled on day 1 and no heat is drawn from storage during the year, the total heat lost is equal to the yearly loss percentage. In practice the storage is filled over a longer period of time and also emptied over time, which means that heat is typically stored for a shorter period than a full year, resulting in lower losses.
+This means that the total storage losses are typically (much) lower than the yearly loss percentage set by you. If 100 TJ heat is stored and yearly losses are 20%, it is generally not the case that 20 TJ heat is lost. Only if heat storage is filled on day 1 and no heat is drawn from storage during the year, the total heat lost is equal to the yearly loss percentage. In practice the storage is filled over a longer period of time and also emptied over time, which means that heat is typically stored for a shorter period than a full year, resulting in lower losses.
 
 ### Transport and distribution losses
 District heating networks have significant heat losses. In the ETM this is taken into account by proportionally increasing demand for each hour per year.
 
-Loss is expressed as a percentage of total supply. This percentage can be changed by the user with a slider. For modern district heating networks a loss of 15-20% is common. For older networks, heat losses can range from 30%-40% or even higher.
+Loss is expressed as a percentage of total supply. This percentage can be changed by you with a slider. For modern district heating networks a loss of 15-20% is common. For older networks, heat losses can range from 30%-40% or even higher.
 
 Please note that the _default_ loss value for many regions in the ETM is either fairly low or even zero. For countries, losses are determined based on data from the energy balance of the International Energy Agency. In The Netherlands, for example, only a small percentage of houses and buildings is currently connected to a district heating network whereas relatively many agricultural buildings are, mainly in the greenhouse industry. These greenhouses are typically located close to each other, with most of the heat sources (CHPs) on-site. This results in low average losses of all district heating networks combined.
 
@@ -107,7 +97,7 @@ See [heat infrastructure costs](heat-infrastructure-costs.md)
 
 
 ## Industrial heat network
-Heat networks in the industry sector are modelled in a much simpler fashion. Supply and demand are calculated on a yearly basis. Users can set the heat demand for each industry sub sector and can select the heat sources in the 'Heat network sources' tab.
+Heat networks in the industry sector are modelled in a much simpler fashion. Supply and demand are calculated on a yearly basis. You can set the heat demand for each industry sub sector and can select the heat sources in the 'Heat network sources' tab.
 
 ![Heat sources in industry](/img/docs/2020025_industry_heat_sources.png)
 
