@@ -182,7 +182,9 @@ div[class^="docSidebarContainer"] {
   font-size: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;
+}
 
+.menu .menu__link.menu__link--sublist {
   /* Show subcategory expanders right next to the text, rather than on the right */
   justify-content: left;
   gap: 0.25rem;
