@@ -13,7 +13,7 @@ It is important to note that turning on the merit order module will take control
 
 Some electricity producers, like wind turbines, cannot be turned off at will as their production is determined by outside factors, like wind in this case. This also holds for must-run producers, such as biogas CHPs. For scenario's with large capacities of these volatile and must-run producers, their total electricity production might exceed the electricity demand. To make most use of this excess electricity, you can include flexibility options in their scenario. These flexibility options are described in a [dedicated section](/flexibility).
 
-The full load hours and the use of the various flexibility options (outputs of the merit order module) are used in the ETM for the scenario in the 'future' year, impacting, among others, CO2 emissions, costs, import and export, total energy use and renewable percentages of electricity and energy. In addition, the module calculates financial metrics for producers such as **profit** and **profitability** ([defined below](#profitability)).
+The full load hours and the use of the various flexibility options (outputs of the merit order module) are used in the ETM for the scenario in the 'future' year, impacting, among others, CO<sub>2</sub> emissions, costs, import and export, total energy use and renewable percentages of electricity and energy. In addition, the module calculates financial metrics for producers such as **profit** and **profitability** ([defined below](#profitability)).
 
 ## Displaying outputs of the Merit Order Module
 
@@ -228,6 +228,6 @@ This example gives you a feel for how the system profitability and the profitabi
 
 * Set the 'Gas CCGT' back to default, by clicking on the reset button left of the slider, and put the 'Coal price' to 250% in the Cost / Fuel Prices section
 
-  The consequence is that the marginal operation costs of all coal-driven plants are raised. Since the price setting plants is now changed for many hours of the year, the revenues changes for most participants. In the same way, you can analyse the effects caused by changing the natural gas price or the costs for emitting CO2.
+  The consequence is that the marginal operation costs of all coal-driven plants are raised. Since the price setting plants is now changed for many hours of the year, the revenues changes for most participants. In the same way, you can analyse the effects caused by changing the natural gas price or the costs for emitting CO<sub>2</sub>.
 
 The result of the merit order calculation is highly sensitive to changes in fuel prices and changes in the power plant complex. Unexpected jumps in the system profitability can be caused by a change in price setting plants or the rigid definition of thresholds (labelling participants green, yellow, and red).

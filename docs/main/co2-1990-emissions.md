@@ -2,7 +2,7 @@
 title: 1990 emissions
 ---
 
-The ETM compares future CO<sub>2</sub> emissions to 1990 emission levels, as this is a common reference point in (inter)national climate policy. In contrast to the present and future scenario year, the 1990 emissions number is not calculated (dynamically) by the model, but instead is a fixed input number researched for each region.
+The ETM compares future CO<sub>2</sub> emissions to 1990 emission levels, as this is a common reference point in (inter)national climate policy. In contrast to the present and future scenario year, the 1990 emissions number is not calculated (dynamically) by the model, but instead is a fixed input number researched for each region. You can view the CO<sub>2</sub> emissions of your scenario compared to 1990 by clicking on the dashboard item 'CO<sub>2</sub> relative to 1990'. This page explains which data is used within the ETM and how 1990 emissions are calculated per area. 
 
 ## Country-level data
 For all countries in the ETM, the 1990 emissions number is based on data from the [European Environmental Agency](https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-16). The following categories are included:
@@ -19,7 +19,7 @@ Other emissions, such as other feedstock and fugitive emissions are not included
 ## Regional-level data
 For regional datasets, no uniform, international source exists detailing historic emissions on a fine-grained geographical level. As such, 1990 emissions are researched for each region individually.
 
-For subregions of the Netherlands, data is used from [RIVM](http://emissieregistratie.nl/erpubliek/bumper.nl.aspx). They report 1990 emissions on a municipality level. However, this data does not comply with the [main principles](co2-main-principles.md) of the ETM's CO<sub>2</sub> calculation:
+For subregions of the Netherlands, data is used from [RIVM](http://emissieregistratie.nl/erpubliek/bumper.nl.aspx). They report 1990 emissions on a municipality level. However, this data does not comply with the [main principles](CO<sub>2</sub>-main-principles.md) of the ETM's CO<sub>2</sub> calculation:
 
 * Emissions are reported by geographical location. This means that a municipality with a power plant within its border is assigned the full emissions of the plant. Conversely, no emissions for electricity use are taken into account for municipalities without power plants.
 * The regional data does not conform to IPCC definitions. This means that emissions of biomass are included.

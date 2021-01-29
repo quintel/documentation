@@ -10,7 +10,7 @@ The calculations in this part of the ETM were implemented to communicate the lim
 
 Details on the loss of load calculation can be found [here](loss-of-load-expectation.md).
 
-The flexibility of electricity backup calculation offers a comparison between fossil fuel technologies in terms of their ability to serve as backup for volatile electricity production. The comparison is made by considering only the costs and CO2 emissions exclusive to providing backup for volatile electricity production.
+The flexibility of electricity backup calculation offers a comparison between fossil fuel technologies in terms of their ability to serve as backup for volatile electricity production. The comparison is made by considering only the costs and CO<sub>2</sub> emissions exclusive to providing backup for volatile electricity production.
 
 On this page an explanation is given about the project.
 
@@ -28,17 +28,17 @@ On this page an explanation is given about the project.
 
 The flexibility of electricity backup calculation was completed in March 2012 and will be deployed to the live ETM in July 2012.
 
-The flexibility of electricity backup calculation offers a comparison between fossil fuel technologies in terms of their ability to serve as backup for volatile electricity production. The comparison is made by considering only the costs and CO2 emissions exclusive to providing backup for volatile electricity production.
+The flexibility of electricity backup calculation offers a comparison between fossil fuel technologies in terms of their ability to serve as backup for volatile electricity production. The comparison is made by considering only the costs and CO<sub>2</sub> emissions exclusive to providing backup for volatile electricity production.
 
 ### In the ETM
 
 ![Screenshot of scatter plot showing comparison of backup options](/img/docs/Flexibility_scatter_plot.jpg)
 
-The backup for volatile electricity production module is found under the sidebar item “electricity backup” under the tab “supply”. It consists of a scatter plot comparing different electricity backup options based on the additional costs and emissions that would be incurred on top of the costs and emissions of volatile electricity production. Figure 2 shows a screenshot of the scatter plot. For example, based on the figure it is seen that a Gas CCGT plant had additional costs of approximately 5 EUR/MWhe and emissions of 23 kgCO2/MWhe. Some important things to understand about the values expressed in the scatter plot:
+The backup for volatile electricity production module is found under the sidebar item “electricity backup” under the tab “supply”. It consists of a scatter plot comparing different electricity backup options based on the additional costs and emissions that would be incurred on top of the costs and emissions of volatile electricity production. Figure 2 shows a screenshot of the scatter plot. For example, based on the figure it is seen that a Gas CCGT plant had additional costs of approximately 5 EUR/MWhe and emissions of 23 kgCO<sub>2</sub>/MWhe. Some important things to understand about the values expressed in the scatter plot:
 
 * Everything is expressed per MWhe of the volatile electricity production. For example: an offshore wind turbine has levelised electricity costs of approximately 165 EUR/MWhe, on top of this an additional 5 EUR are required for the costs of the backup when using as Gas CCGT.
 
-* The additional costs and emissions values are only those costs and emissions associated with the backup. For example: backup reserve capacity does more than only provide reserves, it also provides useful electricity. The costs associated with this useful electricity are disregarded. A Gas CCGT working at optimal efficiency produces electricity at costs of approximately 50 EUR/MWhe. When working to provide backup capacity, the Gas CCGT does not operate optimally and the electricity generation costs increase to 55 EUR/MWhe. Only the difference, 5 EUR/MWhe, is taken into account for the additional costs of backup capacity. This also applies for the CO2 emissions. (note: this 5 EUR/MWhe difference is not the same as the 5 EUR/MWhe that is seen in the chart as more than only reserve costs are taken into account. The first value is in MWhe of the Gas CCGT power plant itself and the value in the chart is in MWhe of the volatile electricity production, that these two are the same is therefore only a coincidence.)
+* The additional costs and emissions values are only those costs and emissions associated with the backup. For example: backup reserve capacity does more than only provide reserves, it also provides useful electricity. The costs associated with this useful electricity are disregarded. A Gas CCGT working at optimal efficiency produces electricity at costs of approximately 50 EUR/MWhe. When working to provide backup capacity, the Gas CCGT does not operate optimally and the electricity generation costs increase to 55 EUR/MWhe. Only the difference, 5 EUR/MWhe, is taken into account for the additional costs of backup capacity. This also applies for the CO<sub>2</sub> emissions. (note: this 5 EUR/MWhe difference is not the same as the 5 EUR/MWhe that is seen in the chart as more than only reserve costs are taken into account. The first value is in MWhe of the Gas CCGT power plant itself and the value in the chart is in MWhe of the volatile electricity production, that these two are the same is therefore only a coincidence.)
 
 ### Calculation
 

@@ -67,7 +67,7 @@ Where:
 
 Plants in certain sectors need to have emission rights for the CO<sub>2</sub> they emit. If they do, the amount of CO<sub>2</sub> emitted is calculated based on the carbon content of the energy carrier used, and whether part of the CO<sub>2</sub> is captured or not. The costs for CO<sub>2</sub>-emission is calculated by multiplying the emitted amount of CO<sub>2</sub> with the cost of CO<sub>2</sub>-emission rights in the area and the percentage of CO<sub>2</sub>-rights that has to be paid.
 
-![](/img/docs/CO2Emissions.jpg)
+![](/img/docs/co2Emissions.jpg)
 
 Where:
 

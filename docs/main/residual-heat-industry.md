@@ -27,7 +27,7 @@ Several types of residual heat are distinguished in the report. Only two types a
 
 ### ICT
 
-The potential of residual heat from data-centers is calculated with the same method that [Berenschot](https://www.berenschot.nl/actueel/2018/november/410-kton-co2-besparing/) used determining the residual heat potential of Dutch data-centers.
+The potential of residual heat from data-centers is calculated with the same method that [Berenschot](https://www.berenschot.nl/actueel/2018/november/410-kton-CO<sub>2</sub>-besparing/) used determining the residual heat potential of Dutch data-centers.
 
 ## Modelling principals
 

@@ -4,6 +4,8 @@ title: "Developing your scenario"
 
 The steps on this page can guide you in creating a sound scenario:
 
+![](/img/docs/workflow.svg)
+
 ### 1.	Scenario Goal
 Create a goal before starting a scenario to establish a focus point. What do you want to research or achieve? 
 Do you want to save energy, produce renewably or focus on decreasing emissions? 
@@ -21,7 +23,7 @@ The dashboard gives instant feedback considering the changes you made. To view a
 ### 5.	Saving, exporting and sharing your scenario
 If you want to further develop your scenario another time you can click on the ‘save scenario’ button in the scenario toolbar. If you are done creating your scenario you can share it with others and download your scenario report or use the visuals and data in the results section. 
 
-Note: The ETM is updated periodically. Save your scenario to ensure that outcomes stay stable over time!
+_Note: The ETM is updated periodically. Save your scenario to ensure that outcomes stay stable over time!_
 
  
 

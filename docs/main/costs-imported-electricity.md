@@ -1,6 +1,6 @@
 ---
 title: Costs of imported electricity
-=======
+---
 
 When a country or region has a (temporal) higher electricity demand than production, electricity needs to be imported from neighbouring countries or regions. This page shortly explains how the ETM deals with the cost of imported electricity and how you can adjust these settings. 
 

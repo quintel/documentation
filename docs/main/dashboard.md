@@ -2,27 +2,29 @@
 title: Dashboard
 ---
 
-The dashboard of the Energy Transition Model is an overview containing the most essential performance indicators of the scenario at the bottom of the page. You can click on each of the indicators in the dashboard to get a pop-up with a chart and more detailed information on each of the subjects. By clicking 'Change' at the bottom right of the dashboard you can customize the dashboard. The following text defines the performance indicators used within the dashboard. The pages (Energy use (Primary energy use), CO2 emissions, Costs (dashboard), Renewables, Summary) within this section give a more detailed description of the calculations used to produce the dashboard items. 
+The dashboard of the Energy Transition Model is an overview containing the most essential performance indicators of your scenario at the bottom of the page. You can click on each of the indicators in the dashboard to get a pop-up with a chart and more detailed information on each of the subjects. By clicking 'Change' at the bottom right of the dashboard you can customize the dashboard. The following text defines the performance indicators used within the dashboard. The pages (Energy use (Primary energy use), CO<sub>2</sub> emissions, Costs (dashboard), Renewables, Summary) within this section give a more detailed description of the calculations used to produce the dashboard items. 
+
+![Change dashboard](/img/docs/dashboard_overview.png)
 
 ## Energy use
 
 ### Primary energy use 
 The percentage under ‘energy use’ on the dashboard shows difference in total primary energy consumption between the present and the future (based on your scenario). This includes all types of energy and non-energy consumption (e.g. natural gas consumption for fertilizer) within the ETM. Primary energy consumption as a result from exports is not included. This means losses incurred in the conversion sector before exporting energy are excluded. 
 
-_Check out: the Energy use (Primary demand) page for more information._
+_Check out: the [Primary demand](primary-energy) page for more information._
 
-## CO2 emissions
+## CO<sub>2</sub> emissions
 
-### CO2 emissions relative to 1990
-This percentage shows the change in CO2 emission between 1990 and the final year of the scenario. The chart shows the CO2 emissions in 1990, in the present year and final year. CO2 emissions shown here are the total energetic CO2 emissions resulting from the total final energy consumption. This does not include CO2 emissions from non-energy consumption, exports, fugitive emissions, industrial processes, solvents and other product use, LULUCF, and other. It does include the CO2 emission reduction due to CO2 capture and storage and the emissions from feedstock. 
+### CO<sub>2</sub> emissions relative to 1990
+This percentage shows the change in CO<sub>2</sub> emission between 1990 and the final year of the scenario. The chart shows the CO<sub>2</sub> emissions in 1990, in the present year and final year. CO<sub>2</sub> emissions shown here are the total energetic CO<sub>2</sub> emissions resulting from the total final energy consumption. This does not include CO<sub>2</sub> emissions from non-energy consumption, exports, fugitive emissions, industrial processes, solvents and other product use, LULUCF, and other. It does include the CO<sub>2</sub> emission reduction due to CO<sub>2</sub> capture and storage and the emissions from feedstock. 
 
-### Domestic CO2 emissions
-Percentage difference in energetic CO2 emissions due to final energy consumption between 1990 and the scenario year, excluding the CO2 emissions of imported electricity and including emissions of exported electricity.
+### Domestic CO<sub>2</sub> emissions
+Percentage difference in energetic CO<sub>2</sub> emissions due to final energy consumption between 1990 and the scenario year, excluding the CO<sub>2</sub> emissions of imported electricity and including emissions of exported electricity.
 
-### CO2 emissions relative to start year
-This percentage shows the change in CO2 emission between the starting year and final year of your scenario. The scope and chart are similar to CO2 emission relative to 1990. 
+### CO<sub>2</sub> emissions relative to start year
+This percentage shows the change in CO<sub>2</sub> emission between the starting year and final year of your scenario. The scope and chart are similar to CO<sub>2</sub> emission relative to 1990. 
 
-_Checkout: the CO2 emissions section within the Dashboard section for more information on definitions and calculations._
+_Checkout: the [Emissions](co2-emissions) section within the Dashboard section for more information on definitions and calculations._
 
 ## Energy imports
 ### Net foreign energy imports 
@@ -42,7 +44,7 @@ The number shows the total yearly cost of energy supply divided by the total num
 ## Profitability of power plants 
 Percentage of plants installed in your scenario that make a profit. 
 
-_Note: The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [here](cost-annual-chart.md) for more information on the cost calculation._
+_Note: The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and / or heat. Click [here](cost-overview-per-sector.md) for more information on the cost calculation._
 
 _Checkout: the Profitability of power plants page under Dashboard > Costs calculations for dashboard for further information._
 
