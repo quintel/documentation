@@ -129,7 +129,7 @@ Voor de landbouw in gemeentes met glastuinbouw rekent het ETM een deel van de ga
 De reden dat (8), bijstook van biomassa in elektriciteitscentrales, in het ETM terugkomt als biomassa-WKK is omdat Klimaatmonitor alleen data heeft over de hernieuwbare warmte, niet over de fossiele warmte die ook uit de centrale komt.
 
 ## Emissies 1990
-Zie het aparte artikel over [1990-emissies](co2-1990-emissions.md).
+Zie het aparte artikel over [1990-emissies](CO<sub>2</sub>-1990-emissions.md).
 
 ## Ontbrekende data
 Voor sommige regio's ontbreekt data voor een bepaalde sector of drager op Klimaatmonitor. Bijvoorbeeld omdat informatie vertrouwelijk is of herleidbaar naar individuele bedrijven. Quintel doet in dit geval een zo goed mogelijke schatting op basis van informatie die wel beschikbaar is. We proberen de ordegrootte te bepalen van de ontbrekende data. Hiervoor gebruiken we (een combinatie van) de volgende methodes:

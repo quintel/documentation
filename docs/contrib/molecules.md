@@ -50,7 +50,7 @@ Therefore, `from_molecules` may only be used on nodes which will not in any way 
 # Configure that the energy node demand is based on a demand in the
 # molecule graph.
 
-- from_molecules.source = molecules_sequestration_co2
+- from_molecules.source = molecules_sequestration_CO<sub>2</sub>
 - from_molecules.conversion = 1.0
 
 # The node participates directly in the Merit Order as a consumer.
@@ -163,15 +163,15 @@ For every 1MJ of useable heat output, 0.25kg of molecules will be set on the mol
 
 Rather than hard-coding a conversion value, you may instead read an attribute from a carrier. In place of a numeric value, use `carrier: attribute_name`.
 
-In this example, the molecule demand will be equal to the demand of the energy node multiplied by the the coal carrier's `co2_conversion_per_mj` attribute:
+In this example, the molecule demand will be equal to the demand of the energy node multiplied by the the coal carrier's `CO<sub>2</sub>_conversion_per_mj` attribute:
 
 ```
 - from_energy.source = energy_power_ultra_supercritical_coal
 - from_energy.direction = input
-- from_energy.conversion.coal = carrier: co2_conversion_per_mj
+- from_energy.conversion.coal = carrier: CO<sub>2</sub>_conversion_per_mj
 ```
 
-If the demand for coal by the coal power plant is 100PJ, and the `co2_conversion_per_mj` is 0.05, then the molecule node will have a demand of 5PJ.
+If the demand for coal by the coal power plant is 100PJ, and the `CO<sub>2</sub>_conversion_per_mj` is 0.05, then the molecule node will have a demand of 5PJ.
 
 #### Energy demand is based on molecule demand
 
@@ -180,7 +180,7 @@ An energy node may have a demand set by the demand of a molecule node by using `
 ```
 - groups = [preset_demand]
 
-- from_molecules.source = molecules_sequestration_co2
+- from_molecules.source = molecules_sequestration_CO<sub>2</sub>
 - from_molecules.conversion = 1.0
 
 ~ demand = 0.0

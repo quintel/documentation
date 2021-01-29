@@ -2,7 +2,7 @@
 title: Appliances labelling
 ---
 
-Energy consumption labelling is used to determine how energy efficient household appliances are. You can change the energy labelling in the demand > household section in the ETM. This page describes the relation between energy labels and efficiency improvement of appliances used in the ETM. 
+Energy consumption labelling is used to determine how energy efficient household appliances are. You can change the energy labelling in the Demand > Households > [Insulation](https://pro.energytransitionmodel.com/scenario/demand/households/insulation) in the ETM. This page describes the relation between energy labels and efficiency improvement of appliances used in the ETM. 
 
 ## Energy labels
 The European Union (EU) established an energy consumption labelling scheme for household appliances, and it is necessary for all manufactures to include an energy label with their appliances. The energy label can define the energy efficiency class to a colour code associated with a letter, typically ranging from class A+++ to class D with A+++ being the most efficient class and D the least efficient class. The ETM allows you to increase or decrease the energy efficiency level of several types of appliances. These changes in efficiencies are matched to an energy class for each type of appliance. 

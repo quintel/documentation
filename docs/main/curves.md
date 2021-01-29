@@ -89,7 +89,6 @@ Your file should be a CSV file with 8,760 rows (one for each hour per year) each
 etc
 ```
 
-
 For **price curves**, the unit of the values is €/MWh. The price in each hour will be rounded to the nearest whole cent.
 
 For **supply** curves ('capacity profiles'), the sum of the profile should equal the total annual number of full load hours of the specific technology. This means that for each hour the profile should contain a value between 0 and 1 specifying the fraction of peak capacity used in that hour. E.g. a value of 0.5 means that 50% of peak capacity is utilised in that hour.

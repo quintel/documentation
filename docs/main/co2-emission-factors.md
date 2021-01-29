@@ -2,7 +2,7 @@
 title: Emission factors
 ---
 
-The following page displays all emission factors used in the calculation of (total) emissions.
+(Carbon) Emission factors describe the amount of CO<sub>2</sub> emissions emitted as a result of the generation of electricity. The following page displays all emission factors used in the calculation of (total) emissions in the ETM. This is mainly relevant when choosing a technique for the generation of energy in the (Supply)[https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants] section of the ETM.
 
 ## Overview
 The emission factors for energy carriers may vary per region. For example, the (organic) composition of coal or waste depends on where these carriers are sourced and hence so does their CO<sub>2</sub> content. The ETM supports this by specifying emission factors per country in the [ETDataset country analysis](https://github.com/quintel/etdataset-public).
@@ -23,12 +23,12 @@ If no 'custom' emission factor is specified, the following 'default' emission fa
 
 _Source: [EU Joint Research Centre](http://refman.et-model.com/publications/1708)_
 
-The emission factors for electricity, hydrogen and (collective) heat depend on the installed production technologies, which vary per ETM scenario. E.g. a scenario with lots of coal-fired power plants will have a more carbon-intensive power supply than a scenario with nuclear power plants. If [carbon capture](co2-ccus.md) is applied to energy production technologies using biomass as input, a carrier may have a [negative emission factor](co2-negative-emissions.md). This means that any sector using this carrier will see a decrease in its emissions. This, for example, applies to:
+The emission factors for electricity, hydrogen and (collective) heat depend on the installed production technologies, which vary per ETM scenario. E.g. a scenario with lots of coal-fired power plants will have a more carbon-intensive power supply than a scenario with nuclear power plants. If [carbon capture](CO<sub>2</sub>-ccus.md) is applied to energy production technologies using biomass as input, a carrier may have a [negative emission factor](CO<sub>2</sub>-negative-emissions.md). This means that any sector using this carrier will see a decrease in its emissions. This, for example, applies to:
 * Coal-fired power plants with biomass co-firing
 * Gas-fired power plants using green gas
 * Hydrogen production with biomass gasification technology
 
-The emission factors of _imported_ electricity, hydrogen and heat can be set in the model. See the [import and export](co2-emissions-import-export.md) article for more information. The following default factors are used in case no country-specific data has been specified:
+The emission factors of _imported_ electricity, hydrogen and heat can be set in the model. See the [import and export](CO<sub>2</sub>-emissions-import-export.md) article for more information. The following default factors are used in case no country-specific data has been specified:
 
 | Energy carrier | Emission factor (*kg CO<sub>2</sub> per MJ*)
 |----------------|-----------------

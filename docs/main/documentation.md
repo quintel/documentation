@@ -153,7 +153,7 @@ The model calculates primary consumption associated with the output of a specifi
 
 ### CO<sub>2</sub> emissions calculations
 
-*Main article: [CO<sub>2</sub> calculations](co2-emission-factors.md#calculation-of-co2-emissions)*
+*Main article: [CO<sub>2</sub> calculations](CO<sub>2</sub>-emission-factors.md#calculation-of-CO<sub>2</sub>-emissions)*
 
 The model calculates CO<sub>2</sub> emissions for the current year and the scenario year. The CO<sub>2</sub> emission for the year 1990 is a fixed number taken from `area data`. The model calculates CO<sub>2</sub> emissions associated with the energy output of a specific converter in a bottom-up fashion: Each converter 'asks' the converter one level higher what the CO<sub>2</sub> emission of that converter's energy output is and takes his share. This process continues until it reaches the primary converters, where the CO<sub>2</sub> emission is calculated on the basis of the energy carriers and emission factors. In this process CO<sub>2</sub> emission related to distribution and conversion losses etc. is included.
 
@@ -169,9 +169,9 @@ The energy import shows the percentage of energy that is imported from outside o
 
 The Energy Transition Model calculates the total cost of energy supply for the region. The total cost is broken down in five categories: electricity, heat, (energetic) fuels, non-energetic fuels, and network costs.
 
-- The costs for electricity include costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable.
+- The costs for electricity include costs for the fuel, operation and maintenance, financing costs and costs for CO<sub>2</sub> emission credits if applicable.
 
-- The costs for heat producing devices are calculated in the same fashion as those of electricity producing devices. This calculation therefore also entails costs for the fuel, operation and maintenance, financing costs and costs for CO2 emission credits if applicable.
+- The costs for heat producing devices are calculated in the same fashion as those of electricity producing devices. This calculation therefore also entails costs for the fuel, operation and maintenance, financing costs and costs for CO<sub>2</sub> emission credits if applicable.
 
 - The (energetic) fuel costs are based on the final demand of the transportation sector and the given energy carriers costs, and refinery costs.
 
@@ -268,7 +268,7 @@ Currently, the climate impact is only calculated for the Netherlands.
 
 ### CO<sub>2</sub> from biomass
 
-*Main article: [Climate relevant CO<sub>2</sub> emissions from biomass](co2-biomass.md)*
+*Main article: [Climate relevant CO<sub>2</sub> emissions from biomass](CO<sub>2</sub>-biomass.md)*
 
 Climate change is not induced by the annual CO<sub>2</sub> emissions, but by the total amount of CO<sub>2</sub> present in the air. Virtually any form of combustion contributes to the amount of CO<sub>2</sub> in the air.
 

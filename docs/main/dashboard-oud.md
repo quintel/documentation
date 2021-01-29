@@ -17,7 +17,7 @@ For more information on the primary energy calculation click [here](/primary-ene
 CO<sub>2</sub> emissions
 ------------------------
 
-*Main article: [CO<sub>2</sub> calculations](/co2-calculations)*
+*Main article: [CO<sub>2</sub> calculations](/CO<sub>2</sub>-calculations)*
 
 The percentage shows the change in CO<sub>2</sub> emissions between 1990 and the scenario year. The chart shows the CO<sub>2</sub> emissions in 1990, in the current year and in the scenario year. The target CO<sub>2</sub> emissions is set by the user in the section "goals - sustainability targets".
 
@@ -25,7 +25,7 @@ CO<sub>2</sub> emissions shown here are the total *energetic* CO<sub>2</sub> emi
 
 ![Energy import in the dashboard](/img/docs/Import_chart.jpg)
 
-The 1990 value is taken from the [area data file](https://github.com/quintel/etsource/blob/master/datasets/nl/nl.ad). The values for the current year and the scenario year are calculated. For more information on the CO<sub>2</sub> emission calculation click [here](/co2-calculations).
+The 1990 value is taken from the [area data file](https://github.com/quintel/etsource/blob/master/datasets/nl/nl.ad). The values for the current year and the scenario year are calculated. For more information on the CO<sub>2</sub> emission calculation click [here](/CO<sub>2</sub>-calculations).
 
 Energy imports
 --------------
