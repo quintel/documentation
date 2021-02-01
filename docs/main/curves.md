@@ -11,7 +11,7 @@ _Image: Example of hourly demand - hydrogen demand_
 
 ## Overview of curves
 
-The ETM had three types of curves: demand curves, supply curves and time curves. The tables below show a brief overview of the sources and methods currently used.
+We define demand curves, supply curves and time curves. The tables below show a brief overview of the sources and methods currently used.
 
 ### Demand
 
@@ -24,12 +24,13 @@ The ETM had three types of curves: demand curves, supply curves and time curves.
 |**Buildings**|Space heating|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|G2A|Update with TNO heat loss calculation when data becomes available|
 ||Cooling|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E3A curve|[Argumentation of method](https://github.com/quintel/etdataset-public/tree/master/curves/demand/buildings/cooling), update with TNO heat loss calculation when data becomes available
 ||Appliances|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E3A curve|-|
-|**Transport**|Electric vehicles|[Movares](https://refman.energytransitionmodel.com/publications/2055) and [ELaad](https://www.livinglabsmartcharging.nl/nl/praktijk/slim-laden-voorkomt-overbelasting1-energienetwerk)|Profiles available: <br/>**Movares**: week and weekend days for <br/> 1) charging everywhere <br/> 2) charging at home <br/> 3) fast charging. <br/> **ELaad**: repeating average day for <br/>4) smart charging <br/>5) regular charging<br/>Default curve for cars is charging everywhere.|-|
-||Passenger trains, trams/metro, electric bicycle, motorcycles|[Movares](https://refman.energytransitionmodel.com/publications/2055)|Charging everywhere|Aim to update with measured data (Pro Rail)|
-||Electric busses, electric trucks, freight trains|[Movares](https://refman.energytransitionmodel.com/publications/2055)|Charging at home (curve peaks during night)|Update when specific data becomes available|
+|**Transport**|Electric cars|[Movares](https://refman.energytransitionmodel.com/publications/2055) and [ELaad]((https://www.livinglabsmartcharging.nl/nl/praktijk/slim-laden-voorkomt-overbelasting1-energienetwerk))|Profiles available: <br/>**Movares**: week and weekend days for <br/> 1) charging everywhere <br/> 2) charging at home <br/> 3) fast charging. <br/> **ELaad**: repeating average day for <br/>4) smart charging <br/>5) regular charging<br/>Default curve for cars is charging everywhere.|-|
+||Passenger trains, trams/metro, electric bicycle, motorcycles|[Movares](https://refman.energytransitionmodel.com/publications/2055)| 1) Charging everywhere|Aim to update with measured data (Pro Rail)|
+||Electric busses, electric trucks, freight trains|[Movares](https://refman.energytransitionmodel.com/publications/2055)| 2) Charging at home (curve peaks during night)|Update when specific data becomes available|
 ||Hydrogen trucks, hydrogen busses, hydrogen cars|-|Flat curve|-|-|
-|**Industry**|All sectors except "food", "paper" and "other"|-|Flat curve||
-||Food, Paper and Other|Gasterra|G2C profile|-|-|
+|**Industry**|Heating demand in Food, Paper and Other|Gasterra|G2C profile|-|-|
+||Electricity demand in Food, Paper, Other and ICT |[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E3D curve|-|-|
+||Heating and electricity in all other sectors|-|Flat curve||
 |**Agriculture**|Electricity|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E3A curve|-|
 ||Heat|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|G2A|Update when specific data becomes available|
 
@@ -40,8 +41,8 @@ The ETM had three types of curves: demand curves, supply curves and time curves.
 |Solar PV|["Open Power System Data platform"](https://data.open-power-system-data.org) |Profile from measured data, adjusted to match country specific full load hours|
 |Solar Thermal|["KNMI"](https://knmy.readthedocs.io/en/latest/) |Profile from measured data, adjusted to solar-thermal behaviour|
 |Wind|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|
-|Other|River|Flat curve||
-|Dispatchable technologies||Production determined by [merit order](merit-order.md)|
+|Other|Geothermal heat, geothermal power, hydro, biogas CHP, waste incinerator|Flat curve||
+|Dispatchable technologies||Production determined by [merit order](/merit-order)|
 
 For NL2015 the OPSD data is incomplete (< 98% of data points available) Hence, different sources (SoDa: Solar Radiation Data for PV and Ecofys data for wind) have been used to generate this curve.
 
@@ -60,63 +61,24 @@ For all other countries the time curves are based on the Primes reference scenar
 
 _Checkout: the [ETDataset - curves](https://github.com/quintel/etdataset-public/tree/master/curves) as it contains all raw data, scripts and further explanations._
 
-## Modifying Curve Profiles
+## Modifying Profiles
 The ETM calculates the hourly production and demand of gas, electricity, heat and hydrogen. These curves can be modified by uploading your own curves in the ['Modify profiles'](https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section.
 
-### Types of curve profiles
+### Types of profiles
 You can upload three types of profiles:
 
-#### 1. Demand profiles
-These profiles specify the fraction of annual demand used in each hour of the year (8760 hours). The values in your uploaded curve do not matter: the ETM will convert your file to a new curve which respects the shape of your original. Example of profiles are: electric buses, industry heating.
+ 1. Demand profiles. These profiles specify the fraction of annual demand used in each hour of the year (8760 hours) for a specific category. The values in your uploaded curve do not matter: the ETM will convert your file to a new curve which respects the shape of your original. Example of profiles are: electric buses, industry heating.
 
-#### 2. Production profiles
-These profiles specify for each hour per year the fraction of installed capacity used in that hour. The sum of all hours should equal the total annual full load hours of that technology. Example of profiles are: solar PV, wind offshore.
+ 2. Production profiles ('capacity profiles'). These profiles specify for each hour per year the fraction of installed capacity used in that hour for a specific production technology. The sum of all hours should equal the total annual full load hours of that technology. Example of profiles are: solar PV, wind offshore.
 
-#### 3. Price curves
-These profiles specify a price for each hour per year. The unit is €/MWh. Example of a profile is: imported electricity.
+ 3. Price curves. These profiles specify a price for each hour per year. The unit is €/MWh. Example of a profile is: imported electricity.
 
-### Overview of curves you can modify
-The following table displays an overview of all curve profiles that can be changed. If necessary, extra comments are provided.
+### Uploading a custom profile
+In the curve upload section, you can choose a curve profile you want to overwrite using the curve upload form. Simply choose a profile by clicking on the drop-down menu and selecting the specific profile you want to overwrite. To upload your own curve profile you have to click on the 'Upload a custom curve' button below the drop-down menu. This will allow you to choose a file from your computer.
 
-|Type|Curve name|Extra comment|
-|---|---|---|
-|**Demand: Buildings**|Buildings heating|_Includes gas, hydrogen, district heating and electricity within the demand profile_|
-|**Demand: Industry electricity**|Chemicals electricity demand||
-||ICT electricity demand||
-||Metal electricity demand||
-||Other electricity demand||
-||Refineries electricity demand||
-|**Demand: Industry heat**|Chemicals heat demand|_Includes gas, hydrogen, district heating and electricity within the demand profile_|
-||Metal heat demand|_Includes gas, hydrogen, district heating and electricity within the demand profile_|
-||Other heat demand|_Includes gas, hydrogen, district heating and electricity within the demand profile_|
-||Refineries heat demand|_Includes gas, hydrogen, district heating and electricity within the demand profile_|
-|**Demand: Transport**|Electric buses|_This curve interacts with the [Demand response](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-electric-vehicles) curve within the ETM_|
-||Electric cars "charging at home"|_This curve interacts with the [Demand response](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-electric-vehicles) curve within the ETM_|
-||Electric cars "charging everywhere"|_This curve interacts with the [Demand response](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-electric-vehicles) curve within the ETM_|
-||Electric cars "fast charging"|_This curve interacts with the [Demand response](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-electric-vehicles) curve within the ETM_|
-||Electric cars "regular charging"|_This curve interacts with the [Demand response](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-electric-vehicles) curve within the ETM_|
-||Electric cars "smart charging"|_This curve interacts with the [Demand response](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-electric-vehicles) curve within the ETM_|
-||Electric trucks|_This curve interacts with the [Demand response](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-electric-vehicles) curve within the ETM_|
-|**Import/Export: Gases**|Gas export||
-||Gas import||
-||Hydrogen export||
-||Hydrogen import||
-|**Import/Export: Interconnectors**|Interconnector 1 price||
-||Interconnector 2 price||
-||Interconnector 3 price||
-||Interconnector 4 price||
-||Interconnector 5 price||
-||Interconnector 6 price||
-|**Supply: Electricity**|Hydropower (river)||
-||Solar PV||
-||Wind coastal||
-||Wind inland||
-||Wind offshore||
-|**Supply: Heat**|Geothermal heat||
-||Solar thermal||
+![Upload form](/img/docs/curve-upload-form.png)
 
-### Uploading a custom curve profile
-In the [Modify profiles](https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section within the ETM you can choose a curve profile you want to overwrite from the drop-down menu at the bottom of the page. You simply choose a profile by clicking on the drop-down menu and select the specific profile you want to overwrite. To upload your own curve profile you have to click on the 'Upload a custom curve' button below the drop-down menu. This will allow you to choose a file from your computer. Your file should be a CSV file formatted as follows...
+Your file should be a CSV file with 8,760 rows (one for each hour per year) each with a numeric value specifying the demand, supply or price over time.
 
 ```
 23.64
@@ -127,11 +89,16 @@ In the [Modify profiles](https://pro.energytransitionmodel.com/scenario/flexibil
 etc
 ```
 
-... with 8,760 rows (one for each hour per year) each with a numeric value which displays the demand, supply or price over time.
 
-For demand  curves (which also includes import/export curves) the numeric value is not important as the ETM will only use the shape of your profile. For supply curves the sum of the profile should equal the total annual number of full load hours of the specific technology. This means that for each hour the profile should contain a value between 0 and 1 specifying the fraction of peak capacity used in that hour. For price curves the numeric value should display the price of each hour of the year.
+For **price curves**, the unit of the values is €/MWh.
 
-_Note: When uploading a custom curve the ETM always prioritizes your curve above any standard curves used within the ETM. This means that even if you choose a different weather year (see ['Weather conditions'](https://pro.energytransitionmodel.comscenario/flexibility/flexibility_weather/extreme-weather-conditions)) any uploaded profiles will remain intact while other profiles will change according to that weather year._
+For **supply** curves ('capacity profiles'), the sum of the profile should equal the total annual number of full load hours of the specific technology. This means that for each hour the profile should contain a value between 0 and 1 specifying the fraction of peak capacity used in that hour. E.g. a value of 0.5 means that 50% of peak capacity is utilised in that hour.
+
+For **demand** curves (which also includes gas import/export curves) the unit used does not matter. The ETM will only use the _shape_ of your profile. For example, if your profile sums up to 500 and the first hour has a value of 5, 1% of the annual demand in the ETM is assigned to the first hour.
+
+Click on the question mark in the curve upload form for specific file instructions about the selected curve.
+
+_Note: When uploading a custom curve the ETM always prioritizes your curve over any standard curves used within the ETM. This means that even if you choose a different weather year (see ['Weather conditions'](https://pro.energytransitionmodel.comscenario/flexibility/flexibility_weather/extreme-weather-conditions)) any uploaded profiles will remain intact while other profiles will change according to that weather year._
 
 ### Results
 The chart on the right shows the profiles of all categories that can be modified. If you upload a custom profile, this is reflected in the chart. Note that if a technology is not present in your scenario, the chart series will be empty. By default, the chart shows the daily peak capacity of the profile for the whole year. Select a month or week in the dropdown menu to see the hourly values. You can download the hourly demand and supply curves in your scenario in the Results → [Data](https://pro.energytransitionmodel.com/scenario/data/data_export/energy-flows) export section.
