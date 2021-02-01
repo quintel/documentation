@@ -42,7 +42,7 @@ We define demand curves, supply curves and time curves. The tables below show a 
 |Solar Thermal|["KNMI"](https://knmy.readthedocs.io/en/latest/) |Profile from measured data, adjusted to solar-thermal behaviour|
 |Wind|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|
 |Other|Geothermal heat, geothermal power, hydro, biogas CHP, waste incinerator|Flat curve||
-|Dispatchable technologies||Production determined by [merit order](/merit-order)|
+|Dispatchable technologies||Production determined by [merit order](merit-order.md)|
 
 For NL2015 the OPSD data is incomplete (< 98% of data points available) Hence, different sources (SoDa: Solar Radiation Data for PV and Ecofys data for wind) have been used to generate this curve.
 
