@@ -116,7 +116,7 @@ The following table displays an overview of all curve profiles that can be chang
 ||Solar thermal||
 
 ### Uploading a custom curve profile
-In the [Modify profiles](https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section within the ETM you can choose a curve profile you want to overwrite from the drop-down menu at the bottom of the page. You simply choose a profile by clicking on the drop-down menu and select the specific profile you want to overwrite. To upload your own curve profile you have to click on the 'Upload a custom curve' button below the drop-down menu. This will allow you to choose a file from your computer. Your file should be formatted as a CSV file formatted as follows...
+In the [Modify profiles](https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section within the ETM you can choose a curve profile you want to overwrite from the drop-down menu at the bottom of the page. You simply choose a profile by clicking on the drop-down menu and select the specific profile you want to overwrite. To upload your own curve profile you have to click on the 'Upload a custom curve' button below the drop-down menu. This will allow you to choose a file from your computer. Your file should be a CSV file formatted as follows...
 
 ```
 23.64
@@ -127,7 +127,11 @@ In the [Modify profiles](https://pro.energytransitionmodel.com/scenario/flexibil
 etc
 ```
 
-... with 8,760 rows (one for each hour per year) each with a numeric value which displays the *relative* distribution of demand, supply or price over time. The unit for the numeric value is therefore irrelevant.
+... with 8,760 rows (one for each hour per year) each with a numeric value which displays the demand, supply or price over time.
+
+For demand  curves (which also includes import/export curves) the numeric value is not important as the ETM will only use the shape of your profile. For supply curves the sum of the profile should equal the total annual number of full load hours of the specific technology. This means that for each hour the profile should contain a value between 0 and 1 specifying the fraction of peak capacity used in that hour. For price curves the numeric value should display the price of each hour of the year.
+
+_Note: When uploading a custom curve the ETM always prioritizes your curve above any standard curves used within the ETM. This means that even if you choose a different weather year (see ['Weather conditions'](https://pro.energytransitionmodel.comscenario/flexibility/flexibility_weather/extreme-weather-conditions)) any uploaded profiles will remain intact while other profiles will change according to that weather year._
 
 ### Results
 The chart on the right shows the profiles of all categories that can be modified. If you upload a custom profile, this is reflected in the chart. Note that if a technology is not present in your scenario, the chart series will be empty. By default, the chart shows the daily peak capacity of the profile for the whole year. Select a month or week in the dropdown menu to see the hourly values. You can download the hourly demand and supply curves in your scenario in the Results → [Data](https://pro.energytransitionmodel.com/scenario/data/data_export/energy-flows) export section.
