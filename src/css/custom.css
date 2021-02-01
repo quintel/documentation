@@ -421,7 +421,7 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/api/custom-curves"]:after {
+.menu a[href="/api/__unused__"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -436,7 +436,34 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/api/custom-curves"]:after {
+.menu a.menu__link--active[href="/api/__unused__"]:after {
+  color: #e8eeff;
+  border-color: #e8eeff;
+}
+
+/* Add "New" tag to some sidebar items. */
+.menu a[href="/api/custom-curves"]:after,
+.menu a[href="/contrib/user-curves"]:after {
+  -webkit-font-smoothing: initial;
+  border-radius: 4px;
+  border: 1px solid #bac0d4;
+  content: "new";
+  color: #a0a6bb;
+  font-size: 11px;
+  font-weight: 400;
+  height: 1rem;
+  line-height: 1rem;
+  margin: 0.0625rem 0 0 0.375rem;
+  padding: 0 0.25rem;
+  text-transform: uppercase;
+}
+
+.menu a[href="/api/custom-curves"]:after {
+  content: "updated";
+}
+
+.menu a.menu__link--active[href="/api/custom-curves"]:after,
+.menu a.menu__link--active[href="/contrib/user-curves"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
 }
