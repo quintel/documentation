@@ -90,7 +90,7 @@ etc
 ```
 
 
-For **price curves**, the unit of the values is €/MWh.
+For **price curves**, the unit of the values is €/MWh. The price in each hour will be rounded to the nearest whole cent.
 
 For **supply** curves ('capacity profiles'), the sum of the profile should equal the total annual number of full load hours of the specific technology. This means that for each hour the profile should contain a value between 0 and 1 specifying the fraction of peak capacity used in that hour. E.g. a value of 0.5 means that 50% of peak capacity is utilised in that hour.
 
@@ -98,10 +98,26 @@ For **demand** curves (which also includes gas import/export curves) the unit us
 
 Click on the question mark in the curve upload form for specific file instructions about the selected curve.
 
-_Note: When uploading a custom curve the ETM always prioritizes your curve over any standard curves used within the ETM. This means that even if you choose a different weather year (see ['Weather conditions'](https://pro.energytransitionmodel.comscenario/flexibility/flexibility_weather/extreme-weather-conditions)) any uploaded profiles will remain intact while other profiles will change according to that weather year._
+
+### Interaction with Weather Years
+The ETM allows users to select different [weather years](weather-conditions.md). This affects all supply and demand profiles that are weather-dependent, such as heat demand and production of wind and solar power. When uploading a custom profile using the CSV upload form, **_the ETM always prioritizes the uploaded curve over any standard curves used within the ETM_**. This means that even if you choose a different weather year any uploaded profiles will remain intact while other profiles will change according to that weather year.
+
+
+### Comments on selected profiles
+The table below provides some additional information on selected categories.
+
+|Profile|Comment|
+|---|---|
+|**Demand: Buildings**|Includes all gas, hydrogen, district heating and electricity use for heating.|
+|**Demand: Industry heat**|Includes all gas, hydrogen and electricity use for heating|
+|**Demand: Industry electricity**|Includes electricity demand, except electricity used for heating (boilers, heat pumps etc.)|
+|**Demand: Electric cars**|You can upload 5 different profiles for electric cars. The ETM uses a mix of these profiles depending on your choices in the [Demand response - electric vehicles](https://pro.energytransitionmodel.com/scenario/flexibility/flexibilitynetload/demand-response-electric-vehicles) section.|
+|**Import/Export: Gases**| The ETM uses 'demand' type profiles for both import and export (see above). This means that the units used in your custom profile do not matter. The ETM will extract the _shape_ of your profile and apply that to the annual import/export volume.|
+|**Import/Export: Interconnectors**|See [imported electricity](costs-imported-electricity.md#uploaded-price-curves)|
+
 
 ### Results
-The chart on the right shows the profiles of all categories that can be modified. If you upload a custom profile, this is reflected in the chart. Note that if a technology is not present in your scenario, the chart series will be empty. By default, the chart shows the daily peak capacity of the profile for the whole year. Select a month or week in the dropdown menu to see the hourly values. You can download the hourly demand and supply curves in your scenario in the Results → [Data](https://pro.energytransitionmodel.com/scenario/data/data_export/energy-flows) export section.
+The chart on the right shows the profiles of all categories that can be modified. If you upload a custom profile, this is reflected in the chart. Note that if a technology is not present in your scenario, the chart series will be empty. By default, the chart shows the daily peak capacity of the profile for the whole year. Select a month or week in the dropdown menu to see the hourly values. You can download the hourly demand and supply curves in your scenario in the [Results → Data](https://pro.energytransitionmodel.com/scenario/data/data_export/energy-flows) export section.
 
 ![Modify profiles chart](/img/docs/modify_profiles.png)
 
