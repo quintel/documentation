@@ -1,52 +1,158 @@
 ---
 title: Flexibility
 ---
+## What is flexibility?
 
-Wind turbines and solar panels are subject to volatile natural patterns. The electricity that they produce might therefore not always be used to match demand directly. This mismatch will lead to excess electricity, in particular in scenarios with large amounts of volatile production capacity. To prevent curtailment of this excess electricity, the ETM contains several flexibility technologies that can make good use of it.
+[Link to Flexibility section in ETM](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_overview/what-is-flexibility)
 
-## Implementation in merit order module
+Natural patterns like seasons (yearly), the variations in weather (weekly), day and night and our rhythm of waking up, going to work, coming home, etc. cause both the need for energy and the availability of energy to fluctuate. Flexibility is about balancing energy supply and demand on all these timescales.
 
-As described in [the merit order documentation](merit-order.md), the merit order module of the ETM calculates the hourly electricity mix based on the demand for electricity and the installed capacities and marginal costs of the electricity producing technologies. The merit order module distinguishes three types of electricity producers: volatile, must-run and dispatchable producers. The latter can be switched on or off depending on the demand for electricity. The first two, however, will produce electricity based on volatile natural patterns or based on heat demand and are therefore not coupled to the electricity demand. For scenario's with large installed capacities of volatile and must-run producers, electricity production might exceed demand. The merit order module keeps track of the amount of excess electricity at each hour and lets the user decide what to do with this electricity. The various flexibility options are described below.
+For longer timescales, the amount or volume of energy supplied or used is more interesting. For shorter timescales, the ability to produce or use a certain amount of energy is more interesting. This is called capacity.
 
-## Flexibility options
+Some forms of flexibility are more suite to process large (fluctuations in) volumes of energy, others are more suitable large fluctuations in capacity. Only some are suited to both. Some examples are:
 
-### Order of flexibility options
+Suitable for large (fluctuations in) volume
+* Imports/exports of gas/hydrogen
+* Power-to-gas: hydrogen production from excess power
+* Storage of gas/hydrogen
+* Seasonal storage of heat
+* …
 
-The ETM contains several technologies to deal with excess electricity. The user can decide which of these options to use first, second and so on, by changing the order of the options in the flexibility options selector. Curtailment is always the last resort and hence locked in the last position. The flexibility options are modelled such that excess electricity is first used by the technology that is position 1. Once the full capacity of the technology is reached or its entire volume is filled (in case of batteries), any remaining excess electricity will be used by the technology in position 2 and so on.
+Suitable for large (fluctuations in) capacity
+* Storage in lithium-ion batteries
+* …
 
-![Figure 1: Flexibility options selector](/img/docs/20160809-screenshot-flex-options.png)
+Suitable for both volume and capacity
+* Imports/exports of electricity
+* Power-to-heat: heat production from excess power (with heat storage)
+* Curtailment of renewable power production
+* …
 
-### Storage in batteries
+On this page, you can see the ETM charts that we have added to show how supply and demand compare on various timescales. For these comparisons we deliberately do not show the contributions of flexibility technologies such as those mentioned above. Our intention is to only show the baseload demand and inflexible supply, meaning the demand and supply that is independent of other technologies in the energy system. This way, you can see how large the mismatch between supply and demand, and therefore, the need for flexibility is. For a full overview of the exact definitions of inflexible supply and baseload demand see the section [Definitions of inflexible supply and baseload demand](#definitions-of-inflexible-supply-and-baseload-demand)
 
-A home battery that can be used to store excess electricity. The user can set the percentage of households that is equipped with such battery. The specs of these batteries are documented in its [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/households/households_flexibility_p2p_electricity.converter.xlsx). The electricity that is stored in the home battery will be supplied back to the grid as soon as the excess electricity event has ended.
+Once you have evaluated the need for flexibility in your scenario, we invite you to address this need by tuning the amount of flexible technologies you have installed in your scenario, for example in the [Excess electricity](https://pro.energytransitionmodel.com/scenario/flexibility/excess_electricity/order-of-flexibility-options). An overview of these technologies in the can be found on the [Excess electricity documentation](excess-electricity.md).
 
-### Storage in electric vehicles
+## Chart 1: Monthly supply and demand volumes
 
-The user can set the percentage of his car battery storage volume that can be used to store excess electricity. In order for this to have any effect, the user first needs to include electric vehicles in his scenario. The specs of these electric vehicles are described in their [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/transport/transport_car_using_electricity.converter.xlsx). The electricity that is stored in the electric vehicles will be supplied back to the grid as soon as the excess electricity event has ended.
+![Chart 1: Monthly supply and demand volumes](/img/docs/20210202_Monthly_supply_and_demand_volumes.png)
 
-### Conversion to heat
+This chart shows the monthly total <i>volumes</i> for supply and demand of electricity, gas, hydrogen and heat. This gives you insight into the balance of your energy system throughout the year: when does imbalance occur? Which carriers are not in balance?
 
-Converting excess electricity into heat is easy. At times of excess electricity supply, an electric boiler can be used to (pre-)heat water for hot water consumption. If the volume of the boiler is selected appropriately, the boiler will on average be emptied once a day, leaving it ready to convert more excess electricity. The user can set the percentage of households that is equipped with a power-to-heat boiler. And the end of a merit order run, the heat generated by power-to-heat for the entire year will be subtracted from the heat demand that needs to be fulfilled by the other heating technologies. The specs of power-to-heat are described in a [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/households/households_flexibility_p2h_electricity.converter.xlsx).
+## Chart 2: Imbalance of monthly supply and demand volumes
 
-### Conversion to gas
+![Chart 2: Imbalance of monthly supply and demand volumes](/img/docs/20210202_Imbalance_of_monthly_supply_and_demand_volumes.png)
 
-Excess electricity can be used to produce hydrogen in an electrolysis process. In the ETM, the hydrogen produced by power-to-gas will be used in the transport sector, provided that you have included hydrogen cars in your scenario. Any excess hydrogen will be exported. The user can set the percentage of hydrogen cars in the car technology slide and review the origin of the hydrogen used by these cars in the hydrogen production slide. The user can decide how many power-to-gas plants to built; their specs are documented in a [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/energy_flexibility_p2g_electricity.converter.xlsx).
+This chart shows the monthly imbalance between supply and demand <i>volumes</i> for electricity, gas,
+hydrogen and heat. The imbalance is calculated by subtracting the baseload demand from the inflexible supply, this is called the "residual load". Negative values mean "surpluses" of energy and positive values "shortages". This chart gives insight into the balance of your energy system throughout the year: in which months does an imbalance occur? Which carriers are not in balance? Are these shortages or surpluses of energy?
 
-### Export
+## Chart 3: The need for flexibility: volume
 
-Excess electricity can be exported to neighbouring countries through the interconnectors between these countries. The capacity of these interconnectors is limited and can be adjusted by the user. Also, at times of excess electricity, the neighbouring countries will most likely also have to deal with this excess electricity. Hence the user can squeeze the available interconnector capacity to avoid overestimating the amount of electricity that can be exported.
+![Chart 3: The need for flexibility: volume](/img/docs/20210202_The_need_for_flexibility_volume.png)
 
-### Curtailment
-Any remaining excess electricity will be curtailed by switching off the wind turbines and solar panels. Curtailment is always the last resort.
+This chart gives a rough estimate for how much long-term flexibility (storage volume) is needed in your scenario. The blue (“uncorrected”) line in the chart is created by summing up the hourly imbalance for all relevant carriers at each hour. This curve is indicative because we do not take any losses of storage or conversion into account.
 
-## Output
+This curve gives a general impression of the extent to which the energy system is in balance over the year. In periods where demand exceeds supply (cold periods with no wind and little sunshine), the resulting curve dips as ‘storage’ gets depleted. In periods where supply is generally higher than demand (like sunny summer months), the curve rises again.
 
-To provide insight in the results of the merit order calculation regarding the flexibility options, two charts and a table are provided in the ETM. The first chart shows the hourly use of excess electricity. The second show the annual use of this excess electricity.
+By comparing the start and end point of this line, you can see whether the system is in surplus or deficit on an annual basis. The absolute difference shows how much room there is for surplus storage or surplus conversion losses to make up for any shortages, or how large the shortage is that needs to be filled with additional energy production or imports.
 
-![Figure 2: Merit Order hourly flexibility chart](/img/docs/20160810-screenshot-hourly-flex.png)
+The red (“corrected”) line shows the fluctuations in required storage volume if supply and demand would balance out over the year. This gives a rough estimate of your total required storage capacity to ensure that carriers can be used at the right time. This total required storage capacity can be read from the highest value of this line.
 
-![Figure 3: Merit Order use of excess electricity chart](/img/docs/20160810-screenshot-excess-el.png)
+This line is obtained by subtracting the annual surplus/deficit from the blue line. Because the cumulative nature of the curve, the correction of first hour is added to the correction of the second hour etc. until the last hour is corrected to coincide with the level of the first hour.
 
-Finally a table is available to provide insight in the available capacities and volumes of the flexibility technologies as well as, again, their annual usage.
+## Chart 4: The need for flexibility: capacity
 
-![Figure 4: Merit Order flexibility options table](/img/docs/20160810-screenshot-flex-options.png)
+![Chart 4: The need for flexibility: capacity](/img/docs/20210202_The_need_for_flexibility_capacity.png)
+
+This chart shows the monthly maximum <i>capacity</i> for supply and demand of electricity, gas, hydrogen and heat. This gives an indication of the capacity needed to deal with imbalance for each energy carrier. This capacity can be realized in the form of transport infrastructure or other flexibility options. For the electricity network the relation between transport infrastructure and flexibility options can be explored in more detail in the [Net load section in the ETM](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/peak-load-and-usable-capacity).
+
+## Definitions of inflexible supply and baseload demand
+
+For the comparisons in the flexibility charts above we deliberately do not show the contributions of flexibility technologies. Our intention is to only show the baseload demand and inflexible supply, meaning the demand and supply that is independent of other technologies in the energy system. This way, you can see how large the mismatch between supply and demand, and therefore, the need for flexibility is.
+
+### Electricity
+
+See the [Flexibility → Excess electricity](https://pro.energytransitionmodel.com/scenario/flexibility/excess_electricity/order-of-flexibility-options) section of the model.
+
+#### Inflexible suppply
+
+* Includes:
+  * Must-run / volatile: wind turbines, solar panels, hydro power, must-run nuclear plants
+* Excludes:
+  * Dispatchable electricity plants
+  * Batteries discharging: household batteries, vehicle-to-grid, large-scale batteries, etc.
+
+#### Baseload demand
+
+* Inlcudes:
+  * Final electricity demand in sectors
+  * Must-run heat pumps / boilers for district heating
+* Excludes:
+  * Storage: batteries charging
+  * Conversion: conversion to hydrogen (P2G), conversion to heat (P2H for industry or district heating)
+  * Curtailment
+  * Export
+
+### Gas
+
+#### Inflexible supply
+
+* Includes:
+  * Production green gas and LNG (flat curve)
+  * Extraction natural gas (flat curve)
+  * Import of natural gas (flat curve; constant import of gas to balance yearly production of gas
+* Excludes:
+  * Gas from storage (in the ETM, gas is automatically buffered throughout the year)
+
+#### Baseload demand
+
+* Includes:
+  * Final gas demand in sectors
+  * Export of gas (flat curve; constant export of gas to balance yearly production of gas)
+  * Distribution losses
+* Excludes:
+  * Gas used in dispatchable power plants and heat boilers for district heating
+  * Gas entering storage (in the ETM, gas is automatically buffered throughout the year)
+
+### Hydrogen
+
+See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/supply/hydrogen/hydrogen-production) section of the model.
+
+#### Inflexible supply
+
+* Includes:
+  * Must-run / volatile: windmolen op zee voor H2, solar PV plant for H2, steam methane reforming, biomass gasification
+  * Import of hydrogen (flat curve; constant import of hydrogen to balance yearly production of hydrogen)
+* Excludes:
+  * Hydrogen from storage (in the ETM, hydrogen is automatically buffered throughout the year)
+  * Hydrogen produced by power-to-gas
+
+#### Baseload demand
+
+* Includes:
+  * Final hydrogen demand in sectors
+  * Export of hydrogen (flat curve; constant export of hydrogen to balance yearly production of gas)
+  * Distribution losses
+* Excludes:
+  * Hydrogen used in dispatchable power plants and heat boilers for district heating
+  * Hydrogen entering storage (in the ETM, gas is automatically buffered throughout the year)
+
+### District heating
+
+See the [Supply → District heating](https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources) section of the model.
+
+#### Inflexible supply
+
+* Includes:
+  * Must-run / volatile: solar thermal, residual heat from industry, geothermal heat, constant import of heat
+* Excludes:Heat from seasonal storage
+  * Heat produced by power-to-heat
+  * Heat produced by CHPs, as CHPs participate as dispatchable power plants in the electricity merit order
+  * All dispatchable heat sources: collective heat pump, hydrogen heater, etc.
+
+#### Baseload demand
+
+* Includes:
+  * Final heat demand in sectors
+  * Losses: distribution losses, heat surplus (wasted)
+* Excludes:
+  * Heat entering seasonal storage

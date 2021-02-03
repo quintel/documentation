@@ -72,6 +72,7 @@ module.exports = {
         "main/curves",
         "main/dynamic-demand-curve",
         "main/flexibility",
+        "main/excess-electricity",
         "main/hydrogen",
         "main/import-calculations",
         "main/import-export",
