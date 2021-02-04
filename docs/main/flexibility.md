@@ -69,6 +69,8 @@ This chart shows the monthly maximum <i>capacity</i> for supply and demand of el
 
 For the comparisons in the flexibility charts above we deliberately do not show the contributions of flexibility technologies. Our intention is to only show the baseload demand and inflexible supply, meaning the demand and supply that is independent of other technologies in the energy system. This way, you can see how large the mismatch between supply and demand, and therefore, the need for flexibility is.
 
+We define technologies as flexible when they are deployed to ensure the hourly balance of the <i>energy system</i>. Dispatchable power plants for example are considered flexible because they only produce electricity to the extent that electricity shortages exist, and therefor balance the electricity system. Because we are interested in the balance of the energy system as a whole, any technology that contributes to the balance of a single energy carrier is considered a flexible technology for all energy carriers. This means for example that power-to-heat, which contributes to the balance of the electricity system, is also considered a flexible technology for district heating. Finally, it is important to note that the categorization of technologies according to this definition, is done based on the representation of each technology in the ETM. For example, the import of natural gas can be seen as a flexible technology in reality, but in the ETM it is represented as a flat curve and it is therefore categorized as an inflexible technology.
+
 ### Electricity
 
 See the [Flexibility → Excess electricity](https://pro.energytransitionmodel.com/scenario/flexibility/excess_electricity/order-of-flexibility-options) section of the model.
