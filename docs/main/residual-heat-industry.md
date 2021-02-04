@@ -2,7 +2,7 @@
 title:  Industrial residual heat
 ---
 
-There is a lot of heat available in industry that currently goes to waste. Using this residual heat as a source for heat networks could be an interesting way to reduce emissions. In the ETM it is now possible to re-use residual heat from the sectors below:
+There is a lot of heat available in industry that currently goes to waste. Using this residual heat as a source for heat networks could be an interesting way to reduce emissions. In the ETM you can re-use residual heat from the sectors below:
 
 -   Chemical industry
 -   Refineries
@@ -11,7 +11,7 @@ There is a lot of heat available in industry that currently goes to waste. Using
 
 The above sectors are chosen because of their high residual heat potential compared to other sectors and/or because these sectors are similarly modelled in the ETM.
 
-You can choose with sliders which part of available heat you want to re-use in heat networks.
+You can choose which part of available heat you want to re-use in heat networks in the Supply > ['District Heating'](https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources) section within the ETM.
 
 ![](/img/docs/residual_heat_industry_sliders.png)
 

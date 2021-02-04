@@ -2,9 +2,11 @@
 title: Dynamic electricity demand curve
 ---
 
-The behaviour of heat pumps and electric vehicles is modelled explicitly and on an hourly scale. This can be viewed in the "dynamic demand curve" chart. This page explains which profiles were used to model the behaviour of these technologies.
+The behaviour of heat pumps and electric vehicles is modelled explicitly and on an hourly scale. The chart 'Electricity demand per hour' gives an overview of the demand and in the Flexibility > [Modify profiles](https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section of the ETM you can view the specific demand of heat pumps and electric vehicles. This page explains which profiles were used to model the behaviour of these technologies.
 
-![](/img/docs/20170921_dynamic_demand_curve.png)
+_Checkout: the ['Curves'](curves) infopage for more information._
+
+![](/img/docs/dynamic_electricity_demand.png)
 
 ## Scope of implementation
 
@@ -74,8 +76,6 @@ _Note: In the ETM the insulation level can be set with sliders. The minimum slid
 The temperature curves that are used to make the space heating demand curves are based on KNMI measurements in The Bilt ([KNMI, 2017](#references)).
 
 The default temperature curve and corresponding profiles is the same as the base year. In 1987, the Netherlands experienced an exceptional cold snap in the second week of January, which significantly increased the demand for space heating. This may happen again in the future, and low temperatures may negatively affect the ability for air and hybrid heat pumps to satisfy demand. In the ETM “cold snap” can be selected to use the 1987 heat demand and air temperature.
-
-_Checkout: the [Curves page](curves) for more information._
 
 _Sources: other sources used are Ecofys, 2015 ([Systeemkosten van warmte voor woningen](https://refman.energytransitionmodel.com/publications/2063)) and Jordan, 2010 ([Realistic Domestic Hot-Water Profiles in Different Time Scales](https://refman.energytransitionmodel.com/publications/2065))_
 

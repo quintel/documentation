@@ -2,9 +2,11 @@
 title: Loss of load expectation
 ---
 
-The calculation returns the loss of load expectation (LOLE), i.e. the expected number of hours per year that a country's electricity production park cannot meet its demand. The result is displayed in the dashboard. 
+The Loss Of Load Expectation (LOLE) is the expected number of hours per year that a country's electricity production park cannot meet its demand. The LOLE is also calculated in the ETM and displayed in the dashboard. 
 
-The LOLE is an important consideration when planning a power system and similar, but more elaborate, versions of this calculation are conducted by the Transmission System Operators of a country (see e.g. [TenneT, 2012](http://www.tennet.eu/nl/nl/over-tennet/nieuws-pers-publicaties/publicaties/technische-publicaties/rapport-monitoring-leveringszekerheid-2011-2027.html) (Dutch)). A nonzero LOLE does not necessarily results in blackouts as electricity can be extracted from storage or imported from neighbouring countries. TenneT's brief allows a LOLE of 4 hours/year, but each country may have slightly different standards.
+![](/img/docs/security_of_supply.png)
+
+The LOLE is an important consideration when planning a power system and similar, but more elaborate, versions of this calculation are conducted by the Transmission System Operators of a country (see e.g. [TenneT, 2012](http://www.tennet.eu/nl/nl/over-tennet/nieuws-pers-publicaties/publicaties/technische-publicaties/rapport-monitoring-leveringszekerheid-2011-2027.html)). A nonzero LOLE does not necessarily results in blackouts as electricity can be extracted from storage or imported from neighbouring countries. TenneT's brief allows a LOLE of 4 hours/year, but each country may have slightly different standards.
 
 By displaying the LOLE in the ETM, you can see whether there is a sufficiently dispatchable electricity production that can meet the expected demand at all times of the year. This reminds you of the importance of having backup capacity, especially if scenarios have significant shares of volatile energy technologies.
 

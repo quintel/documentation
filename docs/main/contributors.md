@@ -12,7 +12,7 @@ Start with data if you want to know what data or publications were used for the 
 
 Start with code if you want to build on the ETM code.
 
-### Start with datas
+### Start with data
 The data-flow of the ETM starts with the energy balance of a country (or a group of countries as in the EU version of the model). We currently use the IEA energy balances because they are available for all countries, in the same format and can be bought online. The energy balance is a matrix of numbers that describe the energy flows of a country broken down in carrier (along one axis) and sectors, applications etc (along the other axis).
 
 Apart from the energy balance, the ETM needs information about the current state of affairs in the country you want to model in the ETM. Such information includes (amongst others) the number of inhabitants and the fraction of LED lamps. We call this type of information 'assumptions'.
@@ -20,7 +20,7 @@ Apart from the energy balance, the ETM needs information about the current state
 The energy balance, together with the assumptions will be forged into a dataset that can initialize the ETM. This process is done in the Dataset Analysis which can be found in the ETDataset repository.
 
 A different kind of assumptions we have made are the technical and financial parameters such as 'efficiency' or 'operating and maintenance costs' for all the technologies and energy carriers used in the model. Each technology's attributes are based on our research of publicly available sources as much as possible. Most technological assumptions are not country-specific, but global. All these can also be found in the ETDataset repository.
-s
+
 For more information on where to find all this information, please refer to the specific documentation in the README.md located in the root directory. You will see this by scrolling down after clicking the link to the ETDataset repository.
 
 ### Start with code

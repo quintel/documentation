@@ -83,8 +83,6 @@ The following table gives an overview of all curve profiles that can be changed 
 |**Demand: Industry electricity**|Chemicals electricity demand||
 |**Demand: Industry electricity**|Chemicals electricity demand||
 
-
-
 ### Uploading a curve profile
 In the Modify profiles sub-section within the ETM you can choose a curve profile you want to overwrite from the drop-down menu at the bottom of the page. You simply choose a profile by clicking on the drop-down menu and selecting the specific profile you want to overwrite. To upload your own curve profile you have to click on the 'Upload a custom curve' button below the drop-down menu. This will then allow you to choose a file from your computer. Your file should be formatted as a CSV file with 8,760 numeric values (one for each hour per year) with a numeric value specifying the *relative* distribution of demand over time. The unit in the file therefore does not matter as long as it represents your curve. For example:
 
@@ -99,6 +97,3 @@ etc
 
 ### Results
 The chart on the right shows the profiles of all categories that can be modified. If you upload a custom profile, this is reflected in the chart. Note that if a technology is not present in your scenario, the chart series will be empty. By default, the chart shows the daily peak capacity of the profile for the whole year. Select a month or week in the dropdown menu to see the hourly values. You can download the hourly demand and supply curves in your scenario in the Results → [Data](https://pro.energytransitionmodel.com/scenario/data/data_export/energy-flows) export section.
-
-
-

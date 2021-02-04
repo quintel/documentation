@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       type: "category",
-      label: "2. Detailed documentation",
+      label: "2. Detailed information",
       collapsed: false,
       items: [
         {
@@ -39,7 +39,7 @@ module.exports = {
         {
           Demand: [
             "main/demand",
-            "main/appliances-labelling",
+            "main/insulation",
           ],
         },
         {
@@ -47,19 +47,18 @@ module.exports = {
             "main/supply",
             "main/balancing-demand",
             "main/hydrogen",
+            "main/biomass",
             "main/co2-ccus",
           ],
         },
         {
           Flexibility: [
-            "main/flexibility",
+            "main/excess-electricity",
             {
               Electricity: [
               "main/dynamic-demand-curve",
-              "main/import-export",
               "main/loss-of-load-expectation",
               "main/network",
-              "main/storage",
               ],
             },
             {
@@ -80,7 +79,7 @@ module.exports = {
             "main/cost-main-principles",
             "main/merit-order",
             "main/cost-overview-per-sector",
-            "main/heat-and-electricity-cost",
+            "main/cost-methods",
             "main/cost-wacc",
             "main/heat-infrastructure-costs",
             "main/costs-imported-electricity",

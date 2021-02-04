@@ -15,7 +15,7 @@ This page shortly describes the different demand categories. The percentage disp
 
 _Note: Some values in the demand section display ‘useful demand’ compared to ‘final demand’ as the actual technologies used to create energy still have to be determined._
 
-_Checkout: the ‘Useful Demand’ page for more information on (useful) demand._
+_Checkout: the [‘Useful Demand’](useful-demand) infopage for more information._
 
 ## Households
 In the Households section the demand for energy in households is specified. The demand growth of energy and the technology mix that uses this energy can be specified. The focus is on technologies used for heating, insulation, cooking, cooling, lighting and appliances. Additionally, you can adjust the behaviour of inhabitants and specify the decentralized technologies used for heating (such as a heat pump) or electricity (such as roof top solar PV).

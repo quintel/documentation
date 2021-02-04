@@ -2,15 +2,15 @@
 title: Import calculations
 ---
 
-This page describes the calculation method used in the ETM to determine the energy imports. The method is demand driven, which means the amount of primary energy required to meet final consumption is calculated. 
+This page describes the calculation method used in the ETM to determine the energy imports displayed on the dashboard. 
 
-For each area, the input data includes domestic production curves (see below) that describe the amount of energy that is produced/extracted domestically for all years up to 2050. Depending on the scenario year, the amount of domestically produced or extracted energy may therefore differ.
+## Import calculation method
+The method is demand driven, which means the amount of primary energy required to meet final consumption is calculated. For each area, the input data includes domestic production curves (see below) that describe the amount of energy that is produced/extracted domestically for all years up to 2050. Depending on the scenario year, the amount of domestically produced or extracted energy may therefore differ.
 
 When the domestic demand for a carrier exceeds domestic production/extraction the remainder is imported. Vice versa, when domestic production/extraction of a carrier is higher than what is required, the excess amount is exported.
 
 ## Carriers
-
-This is determined for the following primary energy carriers:
+The import is determined for the following primary energy carriers:
 
 -   Coal
 -   Oil

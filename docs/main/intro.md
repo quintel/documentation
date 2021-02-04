@@ -13,7 +13,7 @@ ETM Info is created to aid (new) users and contributors to understand and use th
 ### 1. User Manual
 Shows you how to use the ETM. 
 
-### 2. Detailed Documentation
+### 2. Detailed Information
 Provides a more detailed explanation of different tools and topics within the ETM. 
 
 ### 3. Data Sources
@@ -22,10 +22,12 @@ An overview of all data used within the ETM accompanied by their respective sour
 ### 4. Modelling Principles
 An insight into the exact modelling principles behind the ETM. 
 
-### 5. API References
+### 5. For Contributors
+If you are contributing or would like to contribute to the development of the ETM, this page will grant you a short overview of the different possibilities for contributing. 
+
+### 6. API References
 Interested in exchanging data with the ETM? Here you can find the API references and documentation. 
 
-### 6. For Contributors
-If you are contributing or would like to contribute to the development of the ETM, this page will grant you a short overview of the different possibilities for contributing. 
+
 
 

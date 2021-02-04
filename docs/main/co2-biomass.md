@@ -5,11 +5,11 @@ sidebar_label: "Emissions from biomass"
 
 According to international standards, CO<sub>2</sub> emissions are not attributed to biomass as biomass is assumed to absorb as much CO<sub>2</sub> as is emitted during combustion (over the complete life cycle). However, climate change is not induced by annual CO<sub>2</sub> emissions, but by the total amount of CO<sub>2</sub> present in the air. Virtually any form of combustion contributes to the amount of CO<sub>2</sub> in the air. The life cycle of biomass varies from a couple of months to over a century. If we continue to emit a similar amount of CO<sub>2</sub>, we are estimated to reach 2 degrees within 20 years. This means that the CO<sub>2</sub> emitted by combustion of biomass is not always absorbed within a timescale that is relevant to delay climate change. 
 
-Which exact part of CO<sub>2</sub> emissions from biomass is relevant to the environment is uncertain and speculative. The ETM makes it possible to explore the potential CO<sub>2</sub> emissions of biomass combustion.
+Which exact part of CO<sub>2</sub> emissions from biomass is relevant to the environment is uncertain and speculative. The ETM makes it possible to explore the potential CO<sub>2</sub> emissions of biomass combustion in the Supply>Biomass>['CO<sub>2</sub> emissions from Biomass'](http://pro.energytransitionmodel.com/scenario/supply/biomass/co2-emissions-of-biomass) section.
 
 This page provides background information on the carbon debt, land-use change due to biomass and biomass policies.
 
-_Checkout: the general [Biomass](/biomass) page for more information on the use of biomass in the ETM._
+_Checkout: the [Biomass](/biomass) infopage for more information on the use of biomass in the ETM._
 
 ## Carbon debt
 Carbon debt is created when biomass is used for energy production. In short, CO<sub>2</sub> is emitted instantaneously whilst the regrowth of biomass takes time. Furthermore, direct emission levels of biomass are sometimes higher than the emissions of fossil fuels. Diminishing carbon stock by land-use change can also contribute to carbon debt. (based on: PBL/Alterra, 2013)

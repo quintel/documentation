@@ -2,9 +2,9 @@
 title: Regionale data in het ETM
 ---
 
-_Note: Regional data (ET-local) is currently only available in Dutch, this information is therefore only provided in Dutch._
+_Note: Regional data (ET-local) is currently only available in Dutch, this information is therefore provided in Dutch._
 
-Op deze pagina staat een overzicht van de gebruikte data voor de Nederlandse gemeenten, (RES-)regio's en provincies in het Energietransitiemodel. De standaard databronnen, aannames en methoden staan op deze pagina beschreven. Per regio kan hiervan worden afgeweken op basis van lokale informatie. De actuele stand van zaken per regio is te vinden op [ETLocal](#etlocal).
+Op deze pagina staat een overzicht van de gebruikte data voor de Nederlandse gemeenten, (RES-)regio's en provincies in het Energietransitiemodel. De standaard databronnen, aannames en methoden staan op deze pagina beschreven. Per regio kan hiervan worden afgeweken op basis van lokale informatie. De actuele stand van zaken per regio is te vinden op [ETLocal](#etlocal). Deze data wordt door het gehele model gebruikt om het startpunt van een scenario te bepalen. 
 
 ## Huishoudens
 |  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |

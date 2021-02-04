@@ -2,7 +2,7 @@
 title: Costs of imported electricity
 ---
 
-When a country or region has a (temporal) higher electricity demand than production, electricity needs to be imported from neighbouring countries or regions. This page shortly explains how the ETM deals with the cost of imported electricity and how you can adjust these settings. 
+When a country or region has a (temporary) higher electricity demand than production, electricity needs to be imported from neighbouring countries or regions. You can change this in the Flexibility > Import/Export > ['Interconnector 1'](https://pro.energytransitionmodel.com/scenario/flexibility/electricity_import_export/interconnector-1) sub-section. This page shortly explains how the ETM deals with the cost of imported electricity and how you can adjust these settings. 
 
 ## Default settings
 
@@ -23,6 +23,6 @@ Your file should be formatted as a CSV file with 8,760 numeric values – repres
 etc
 ```
 
-Before uploading, please ensure the file has a ".csv" file extension then visit the "Costs of imported electricity" page and click "Upload a custom curve". The price in each hour will be rounded to the nearest whole cent.
+Before uploading, please ensure the file has a ".csv" file extension then visit the Flexibility > Import/Export > ['Interconnector 1'](https://pro.energytransitionmodel.com/scenario/flexibility/electricity_import_export/interconnector-1) page and click "Upload a custom curve". The price in each hour will be rounded to the nearest whole cent.
 
 _Source:[European Commission, 2016: Quarterly Report on European Electricity Markets](https://ec.europa.eu/energy/sites/ener/files/documents/quarterly_report_on_european_electricity_markets_q4_2015-q1_2016.pdf); ([cached](https://refman.energytransitionmodel.com/publications/2079))_

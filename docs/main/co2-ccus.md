@@ -6,7 +6,7 @@ Carbon capture, utilisation and storage (CCUS) is an emissions reduction technol
 
 You can make choices regarding the application of carbon [capture](#capture), what [happens](#utilisation-and-storage) to this captured carbon, how it is [transported](#transport) and the [costs](#costs) associated with it.
 
-_Checkout: the [negative emissions](co2-negative-emissions) page for more information on negative emissions as an effect of CCUS._
+_Checkout: the [negative emissions](co2-negative-emissions) infopage for more information on negative emissions as an effect of CCUS._
 
 ## Capture
 The ETM models four types of carbon capture:

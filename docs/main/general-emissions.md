@@ -2,14 +2,14 @@
 title: General carbon emission calculations
 ---
 
-This page explains the general emission calculation approach behind the ETM. 
+This page explains the general emission calculation approach behind the ETM giving you an insight into which emissions are within the scope and which emissions are outside of this scope. 
 
 ## General emission calculations
 Emissions in the ETM are assigned to the specific sector that uses the energy. This is opposed to assigning emissions to the location in which they are emitted. This means that emissions related to the production of, for example, electricity are attributed to all sectors using electricity (households, industry etc.) rather than to the power sector. 
 
 A consequence of this approach is that the ETM considers emissions of imported energy carriers (imported electricity, heat, hydrogen etc.) but disregards emissions of exported energy carriers. 
 
-_Checkout: the Emission from imported electricity page which provides more information on this subject._
+_Checkout: the ['Emissions from imported electricity'](co2-emissions-import-export) infopage which provides more information on this subject._
 
 ## Scope of emissions 
 The ETM follows international conventions regarding the scope of CO<sub>2</sub> emissions. More precisely, this means that by default:
