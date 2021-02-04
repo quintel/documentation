@@ -2,7 +2,9 @@
 title: Costs (dashboard)
 ---
 
-This page explains the different categories that comprise the total annual costs displayed in the dashboard.  
+This page explains the different categories that comprise the total annual costs displayed on your dashboard in the ETM.
+
+![](/img/docs/costs_dashboard.png)
 
 ## Total annual costs
 The yearly total cost indicator is broken down into ten categories: [heat](#heat), [electricity](#electricity), [hydrogen](#hydrogen), [transport fuels](#transport-fuels), [non-energetic fuels (feedstock)](#non-energetic-fuels), [energy infrastructure](#infrastructure), [insulation](#insulation), [flexibility](#flexibility), [vehicles](#vehicles) and [carbon capture, utilisation and storage (CCUS)](#carbon-capture-utilisation-and-storage-ccus).
@@ -39,7 +41,7 @@ _Note: Hydrogen and district heating infrastructure costs are included in the [H
 ### Insulation
 This category includes costs for insulation in the households and buildings sector. 
 
-_Checkout: the [insulation page](insulation.md) for more information._
+_Checkout: the [insulation](insulation.md) infopage for more information._
 
 ### Flexibility
 This category includes costs related to flexibility options such as batteries and power-to-heat. Electricity input costs are not taken into account: all costs related to electricity production are included in the [Electricity](#electricity) category.

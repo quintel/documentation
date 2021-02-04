@@ -15,3 +15,4 @@ We determine the primary energy equivalent of an energy flow by calculating the 
 -   For combustible fuels (coal, oil, gas, biomass, waste and derived products) the primary energy form is the fuel itself. The physical energy is calculated on net calorific value basis.
 -   For nuclear, solar-thermal, geothermal, and heat-pumps; heat is the primary energy form. The physical energy calculation is different for these carriers (see table below)
 -   For hydro, wind, tide/wave/ocean and solar photovoltaic; electricity is the primary energy form. The physical energy is equal to the gross output of electricity.
+

@@ -1,15 +1,13 @@
 ---
 title: Flexibility
 ---
-## What is flexibility?
 
-[Link to Flexibility section in ETM](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_overview/what-is-flexibility)
+Natural patterns like seasons (yearly), the variations in weather (weekly), day and night and our rhythm of waking up, going to work, coming home, etc. cause both the need for energy and the availability of energy to fluctuate. Flexibility is about balancing energy supply and demand on all of these timescales. In the ETM you have the ability to choose and adjust how you deal with these fluctuations in the ['Flexibility'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_overview/what-is-flexibility) section. On this page, you can gain an understanding of the ETM charts in the flexibility section which show how supply and demand compare on various timescales. 
 
-Natural patterns like seasons (yearly), the variations in weather (weekly), day and night and our rhythm of waking up, going to work, coming home, etc. cause both the need for energy and the availability of energy to fluctuate. Flexibility is about balancing energy supply and demand on all these timescales.
-
+## Flexibility solutions based on different types of energy fluctuations
 For longer timescales, the amount or volume of energy supplied or used is more interesting. For shorter timescales, the ability to produce or use a certain amount of energy is more interesting. This is called capacity.
 
-Some forms of flexibility are more suite to process large (fluctuations in) volumes of energy, others are more suitable large fluctuations in capacity. Only some are suited to both. Some examples are:
+Some forms of flexibility are more suite to process large (fluctuations in) volumes of energy, others are more suitable for large fluctuations in capacity. Only some are suited to both. Some examples are:
 
 Suitable for large (fluctuations in) volume
 * Imports/exports of gas/hydrogen
@@ -28,9 +26,9 @@ Suitable for both volume and capacity
 * Curtailment of renewable power production
 * Large-scale electricity storage: pumped hydro storage 
 
-On this page, you can see the ETM charts that we have added to show how supply and demand compare on various timescales. For these comparisons we deliberately do not show the contributions of flexibility technologies such as those mentioned above. Our intention is to only show the baseload demand and inflexible supply, meaning the demand and supply that is independent of other technologies in the energy system. This way, you can see how large the mismatch between supply and demand, and therefore, the need for flexibility is. For a full overview of the exact definitions of inflexible supply and baseload demand see the section [Definitions of inflexible supply and baseload demand](#definitions-of-inflexible-supply-and-baseload-demand)
+For these comparisons the contributions of flexibility technologies such as those mentioned above are deliberately not shown. Only the baseload demand and inflexible supply is shown, meaning the demand and supply that is independent of other technologies in the energy system. In this way, you can see how large the mismatch between supply and demand is, and therefore, the need for flexibility solutions. For a full overview of the exact definitions of inflexible supply and baseload demand see the section [Definitions of inflexible supply and baseload demand](#definitions-of-inflexible-supply-and-baseload-demand).
 
-Once you have evaluated the need for flexibility in your scenario, we invite you to address this need by tuning the amount of flexible technologies you have installed in your scenario, for example in the [Excess electricity](https://pro.energytransitionmodel.com/scenario/flexibility/excess_electricity/order-of-flexibility-options). An overview of these technologies in the can be found on the [Excess electricity documentation](excess-electricity.md).
+Once you have evaluated the need for flexibility in your scenario, you can address this need by tuning the amount of flexible technologies you have installed in your scenario, for example in the ['Excess electricity'](https://pro.energytransitionmodel.com/scenario/flexibility/excess_electricity/order-of-flexibility-options) section in the ETM. An overview of these technologies can be found on the ['Excess electricity'](excess-electricity.md) infopage.
 
 ## Chart 1: Monthly supply and demand volumes
 
@@ -49,7 +47,7 @@ hydrogen and heat. The imbalance is calculated by subtracting the baseload deman
 
 ![Chart 3: The need for flexibility: volume](/img/docs/20210202_The_need_for_flexibility_volume.png)
 
-This chart gives a rough estimate for how much long-term flexibility (storage volume) is needed in your scenario. The blue (“uncorrected”) line in the chart is created by summing up the hourly imbalance for all relevant carriers at each hour. This curve is indicative because we do not take any losses of storage or conversion into account.
+This chart gives a rough estimate for how much long-term flexibility (storage volume) is needed in your scenario. The blue (“uncorrected”) line in the chart is created by summing up the hourly imbalance for all relevant carriers at each hour. This curve is indicative because losses of storage or conversion are not taken into account.
 
 This curve gives a general impression of the extent to which the energy system is in balance over the year. In periods where demand exceeds supply (cold periods with no wind and little sunshine), the resulting curve dips as ‘storage’ gets depleted. In periods where supply is generally higher than demand (like sunny summer months), the curve rises again.
 
@@ -67,9 +65,9 @@ This chart shows the monthly maximum <i>capacity</i> for supply and demand of el
 
 ## Definitions of inflexible supply and baseload demand
 
-For the comparisons in the flexibility charts above we deliberately do not show the contributions of flexibility technologies. Our intention is to only show the baseload demand and inflexible supply, meaning the demand and supply that is independent of other technologies in the energy system. This way, you can see how large the mismatch between supply and demand, and therefore, the need for flexibility is.
+For the comparisons in the flexibility charts above the contributions of flexibility technologies are deliberately not shown. Only the baseload demand and inflexible supply is shown, meaning the demand and supply that is independent of other technologies in the energy system. This way, you can see how large the mismatch between supply and demand, and therefore, the need for flexibility is.
 
-We define technologies as flexible when they are deployed to ensure the hourly balance of the <i>energy system</i>. Dispatchable power plants for example are considered flexible because they only produce electricity to the extent that electricity shortages exist, and therefore balance the electricity system. Because we are interested in the balance of the energy system as a whole, any technology that contributes to the balance of a single energy carrier is considered a flexible technology for all energy carriers. This means for example that power-to-heat, which contributes to the balance of the electricity system, is also considered a flexible technology for district heating.
+Technologies are defined as flexible when they are deployed to ensure the hourly balance of the <i>energy system</i>. Dispatchable power plants for example are considered flexible because they only produce electricity to the extent that electricity shortages exist, and therefore balance the electricity system. Since the balance of the energy system as a whole is most interesting, any technology that contributes to the balance of a single energy carrier is considered a flexible technology for all energy carriers. This means for example that power-to-heat, which contributes to the balance of the electricity system, is also considered a flexible technology for district heating.
 
 It is important to note that the categorization of technologies according to the definition of flexible technologies given above, is done based on the representation of each technology in the ETM. For example, the import of natural gas can be seen as a flexible technology in reality, but in the ETM it is represented as a flat curve and it is therefore categorized as an inflexible technology.
 

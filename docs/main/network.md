@@ -2,9 +2,11 @@
 title: Network impact calculation
 ---
 
-The network impact calculation determines the investment required in the electricity grid depending on the choices made by the users. For example, in a scenario with a large share of electric heaters the capacity of the current electricity grid is not sufficient to transport all demand.
+The network impact calculation determines the investment required in the electricity grid depending on your choices. For example, in a scenario with a large share of electric heaters the capacity of the current electricity grid is not sufficient to transport all demand. You can change infrastructure costs in the Costs > Infrastructure costs >['Electricity infrastructure costs'](https://pro.energytransitionmodel.com/scenario/costs/infrastructure/electricity-infrastructure-costs) section in the ETM.
 
-The results of the network impact calculation are displayed in a chart in the front end of the model (‘Required additional infrastructure investments’). This chart shows the total additional investment required in the electricity grid for the current scenario. In addition, the annualized investment costs including operation and maintenance costs and interest for the required network expansion are  included in the costs dashboard item in the front end of the model.
+The results of the network impact calculation are displayed in the chart ‘Required additional infrastructure investments’. This chart shows the total additional investment required in the electricity grid for the current scenario. In addition, the annualized investment costs including operation and maintenance costs and interest for the required network expansion are included in the costs dashboard item. 
+
+![](/img/docs/additional_infra.png)
 
 This network calculation is commissioned and supervised by Netbeheer Nederland.
 

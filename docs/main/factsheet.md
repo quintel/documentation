@@ -4,7 +4,7 @@ title: Energy mix factsheet
 
 _Note: the factsheet is only available in Dutch, therefore this description is also in Dutch._
 
-In samenwerking met het Gelders Energieakkoord en bureau Over Morgen is het Energietransitiemodel (ETM) uitgebreid met de optie om een geautomatiseerd factsheet te produceren voor je scenario.
+In samenwerking met het Gelders Energieakkoord en bureau Over Morgen is het Energietransitiemodel (ETM) uitgebreid met de optie om een geautomatiseerd factsheet te produceren voor je scenario. Deze is in het ETM te vinden bij Resultaten > Visuals > ['Energie-mix infographic'](https://pro.energytransitionmodel.com/scenario/data/data_visuals/energy-mix-infographic).
 De originele factsheet zoals ontworpen door Over Morgen is aangepast zodat deze beter aansluit op het ETM.
 Deze aansluiting is dusdanig dat ETM-uitkomsten worden gegroepeerd in categorieën die gehanteerd worden door Over Morgen.
 

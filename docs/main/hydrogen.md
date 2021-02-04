@@ -4,7 +4,7 @@ title: Hydrogen
 
 There is a growing interest in using hydrogen as energy carrier, for instance for heat production, electricity production, transport fuel or as a feedstock for the chemical industry. Hydrogen could be a solution to bridge the growing imbalance between energy demand and supply due to the increased volatile production of solar and wind electricity. 
 
-The ETM allows you to explore a future hydrogen economy by allowing you to add various options for hydrogen demand, supply, transport and storage to your energy scenario. The ETM calculates the resulting hydrogen demand and supply in your scenario for every hour per year. To make sure that for each hour supply matches demand storage buffers are used. 
+The ETM allows you to explore a future hydrogen economy by allowing you to add various options for hydrogen demand, supply, transport and storage to your energy scenario in the Supply > ['Hydrogen'](https://pro.energytransitionmodel.com/scenario/supply/hydrogen/hydrogen-production) sub-section. The ETM calculates the resulting hydrogen demand and supply in your scenario for every hour per year. To make sure that for each hour supply matches demand storage buffers are used. 
 
 This page contains more information about the options for hydrogen in the ETM. 
 

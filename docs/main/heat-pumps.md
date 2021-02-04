@@ -2,7 +2,7 @@
 title: Heat pumps
 ---
 
-This page explains how heat pumps are integrated within the ETM.
+This page explains how heat pumps are integrated within the ETM. You can choose to use heat pumps in households or buildings the ['Demand'](https://pro.energytransitionmodel.com/scenario/demand/households/space-heating-and-hot-water) section of the ETM. 
 
 ## Temperature dependency of COP
 

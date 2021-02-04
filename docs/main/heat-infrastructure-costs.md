@@ -2,8 +2,7 @@
 title: Heat infrastructure costs
 ---
 
-Below you can find more information on the heat infrastructure cost calculation. The methodology and data behind this calculation is based on 
-[Vesta MAIS](https://github.com/RuudvandenWijngaart/VestaDV), an energy model developed by the Dutch Environmental
+Below you can find more information on the heat infrastructure cost calculation in the Costs > ['Heat'](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) sub-section of the ETM. The methodology and data behind this calculation is based on [Vesta MAIS](https://github.com/RuudvandenWijngaart/VestaDV), an energy model developed by the Dutch Environmental
 Assessment Agency (PBL).
 
 ## Households and buildings costs
@@ -175,7 +174,7 @@ The yearly infrastructure costs per year are the sum of:
 
 Yearly capital costs depend on the assumed weighted average cost of capital rate (WACC). By default, a real WACC of 4% is assumed and depreciation is assumed to be linear ('straight line'). This means that the cost of capital per year equal ``(total investment costs / 2) * WACC``.
 
-_Checkout: the [WACC section](costs-wacc)_
+_Checkout: the ['Cost of Capital'](costs-wacc) infopage for more information._
 
 ## Agriculture and industry
 

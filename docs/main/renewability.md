@@ -2,7 +2,7 @@
 title: Renewables
 ---
 
-The following page describes the definitions of renewables used within the ETM as well as the calculation method for the share of renewables and share of renewable electricity. 
+The following page describes the definitions of renewables used within the ETM as well as the calculation method for the share of renewables and share of renewable electricity. You can choose different types of renewable energy production methods in the Supply > ['Renewable electricity'](https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines) section in the ETM. 
 
 ## Definitions of renewable share
 The renewable percentage that the ETM calculates may be different from the number that is published by official statistics. The main reason is that different organizations use different definitions for calculating a renewable percentage. 

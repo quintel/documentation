@@ -2,9 +2,9 @@
 title: Costs
 ---
 
-The Energy Transition Model calculates the total cost of the yearly energy supply for a scenario. This is the sum of depreciation costs, cost of capital, operation and maintenance costs, and fuel costs of various components of the energy system.
+The Energy Transition Model calculates the total cost of the yearly energy supply for a scenario. This is the sum of depreciation costs, cost of capital, operation and maintenance costs, and fuel costs of various components of the energy system. You can change these in the ['Costs'](https://pro.energytransitionmodel.com/scenario/costs/merit_order/merit-order) section of the ETM.
 
-In this section you can find a general explanation of the ETM's cost calculation, as well as more in-depth articles on specific subjects.
+On this page you can find a general explanation of the ETM's cost calculation principles.
 
 ## Principles
 The cost calculation in the ETM adheres to the following principles:

@@ -1,8 +1,8 @@
 ---
-title: Heat networks
+title: District heating
 ---
 
-Below you can find more information about heat networks in the Energy Transition Model.
+In the Supply > ['District heating'](https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources) section in the ETM you can specify the heat sources, transport losses and storage for district heating. If you want to know more about the modelling principles behind the use of district heating within the ETM, you can find more information below. 
 
 ## District heating networks
 The demand, supply and storage of heat for district heating networks in households, buildings and agriculture is calculated on an hourly basis.
@@ -93,8 +93,8 @@ For other regions in the ETM, such as municipalities or neighbourhoods, there is
 If district heating in the built environment plays a significant role in your scenario, it is advised to change the distribution losses to the percentages recommended above.
 
 ### Infrastructure costs
-See [heat infrastructure costs](heat-infrastructure-costs.md)
 
+_Checkout: the ['Heat infrastructure costs'](heat-infrastructure-costs.md) infopage for more information._
 
 ## Industrial heat network
 Heat networks in the industry sector are modelled in a much simpler fashion. Supply and demand are calculated on a yearly basis. You can set the heat demand for each industry sub sector and can select the heat sources in the 'Heat network sources' tab.

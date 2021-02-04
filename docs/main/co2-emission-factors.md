@@ -48,7 +48,6 @@ One exception to this rule is the final demand of 'refinery products' in the tra
 * Energetic demand of refineries, e.g. electricity and heat used in refinery processes, is already included in the final demand of the industry sector, and hence CO<sub>2</sub> emissions. To avoid double-counting, these emissions should not be taken into account when calculating the emissions of refinery products in transportation.
 * Refineries are highly complex industrial processes that are modelled in a simplified way in the ETM. More detail is required to trace back the exact energetic and feedstock inputs used to produce each refinery product. Using fixed factors avoids (slight) inconsistencies with emission factors typically found in the literature.
 
-
 For refinery products, the following default emission factors are used. Again note that these values may be overwritten with country-specific data.
 
 | Energy carrier | Emission factor (*kg CO<sub>2</sub> per MJ*) |
