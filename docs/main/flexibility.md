@@ -16,17 +16,17 @@ Suitable for large (fluctuations in) volume
 * Power-to-gas: hydrogen production from excess power
 * Storage of gas/hydrogen
 * Seasonal storage of heat
-* …
 
-Suitable for large (fluctuations in) capacity
+Suitable for large or sudden (fluctuations in) capacity
 * Storage in lithium-ion batteries
-* …
+* Storage in flywheels 
+* Dispatchable power and heat plants 
 
 Suitable for both volume and capacity
 * Imports/exports of electricity
 * Power-to-heat: heat production from excess power (with heat storage)
 * Curtailment of renewable power production
-* …
+* Large-scale electricity storage: pumped hydro storage 
 
 On this page, you can see the ETM charts that we have added to show how supply and demand compare on various timescales. For these comparisons we deliberately do not show the contributions of flexibility technologies such as those mentioned above. Our intention is to only show the baseload demand and inflexible supply, meaning the demand and supply that is independent of other technologies in the energy system. This way, you can see how large the mismatch between supply and demand, and therefore, the need for flexibility is. For a full overview of the exact definitions of inflexible supply and baseload demand see the section [Definitions of inflexible supply and baseload demand](#definitions-of-inflexible-supply-and-baseload-demand)
 
