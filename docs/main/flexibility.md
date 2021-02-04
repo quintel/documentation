@@ -78,17 +78,18 @@ See the [Flexibility → Excess electricity](https://pro.energytransitionmodel.c
 * Includes:
   * Must-run / volatile: wind turbines, solar panels, hydro power, must-run nuclear plants
 * Excludes:
-  * Dispatchable electricity plants
+  * Dispatchable power plants
   * Batteries discharging: household batteries, vehicle-to-grid, large-scale batteries, etc.
+  * Import
 
 #### Baseload demand
 
-* Inlcudes:
+* Includes:
   * Final electricity demand in sectors
   * Must-run heat pumps / boilers for district heating
 * Excludes:
-  * Storage: batteries charging
-  * Conversion: conversion to hydrogen (P2G), conversion to heat (P2H for industry or district heating)
+  * Batteries charging: household batteries, vehicle-to-grid, large-scale batteries etc.
+  * Conversion: power-to-hydrogen, power-to-heat (for industry or district heating)
   * Curtailment
   * Export
 
@@ -99,7 +100,7 @@ See the [Flexibility → Excess electricity](https://pro.energytransitionmodel.c
 * Includes:
   * Production green gas and LNG (flat curve)
   * Extraction natural gas (flat curve)
-  * Import of natural gas (flat curve; constant import of gas to balance yearly production of gas
+  * Import of natural gas (flat curve; constant import of gas to balance yearly production of gas)
 * Excludes:
   * Gas from storage (in the ETM, gas is automatically buffered throughout the year)
 
@@ -120,7 +121,7 @@ See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/sup
 #### Inflexible supply
 
 * Includes:
-  * Must-run / volatile: windmolen op zee voor H2, solar PV plant for H2, steam methane reforming, biomass gasification
+  * Must-run / volatile: dedicated offshore wind turbine or solar PV plant for H2, steam methane reforming, biomass gasification
   * Import of hydrogen (flat curve; constant import of hydrogen to balance yearly production of hydrogen)
 * Excludes:
   * Hydrogen from storage (in the ETM, hydrogen is automatically buffered throughout the year)
@@ -143,11 +144,13 @@ See the [Supply → District heating](https://pro.energytransitionmodel.com/scen
 #### Inflexible supply
 
 * Includes:
-  * Must-run / volatile: solar thermal, residual heat from industry, geothermal heat, constant import of heat
-* Excludes:Heat from seasonal storage
+  * Must-run / volatile: solar thermal, residual heat from industry, geothermal heat
+  * Import of heat (flat curve)
+* Excludes:
   * Heat produced by power-to-heat
   * Heat produced by CHPs, as CHPs participate as dispatchable power plants in the electricity merit order
-  * All dispatchable heat sources: collective heat pump, hydrogen heater, etc.
+  * Dispatchable heat sources: collective heat pump, hydrogen heater, etc.
+  * Heat from seasonal storage
 
 #### Baseload demand
 
