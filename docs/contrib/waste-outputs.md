@@ -75,7 +75,7 @@ ETSource will verify that the output carriers exist on the node. Create the outp
 
 Use of `waste_outputs` affects:
 
-* `CO<sub>2</sub>_emissions_costs_per_typical_input`
+* `co2_emissions_costs_per_typical_input`
 * `weighted_carrier_cost_per_mj`
 
 ... components of `marginal_costs` but does not affect total costs of the plant (no effect on `variable_costs`, `fuel_costs` etc).

@@ -40,7 +40,7 @@ For non-residential buildings, two types of indoor costs are taken into account:
 
 Indoor pipeline costs are based on peak heat demand of buildings. A fixed investment per kW is assumed. Peak demand is calculated dynamically by the ETM and depends on hourly demand profiles, insulation levels etc. 
 
-_Checkout: the [heat network documentation](heat_networks.md) for more information on the hourly heat calculation._
+_Checkout: the [heat network documentation](heat-networks) for more information on the hourly heat calculation._
 
 | Description   |  Value   | Source |
 |---|---|---|
@@ -121,7 +121,7 @@ The required station capacity (and associated costs) are calculated based on the
 
 _Note: Station costs can be set per region in the ETM. The numbers above are default values._
 
-The costs of the primary heat sources and dispatchable/back-up heat sources are not part of the heat exchanger costs. These costs are calculated separately, in a similar fashion as (e.g.) [power plants](cost-annual-chart.md).
+The costs of the primary heat sources and dispatchable/back-up heat sources are not part of the heat exchanger costs. These costs are calculated separately, in a similar fashion as (e.g.) power plants.
 
 ### Primary pipelines
 

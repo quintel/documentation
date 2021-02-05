@@ -24,8 +24,8 @@ Op deze pagina staat een overzicht van de gebruikte data voor de Nederlandse gem
 |  ***Eindgebruik***   |  |  |  |  |
 |  Aardgas | Klimaatmonitor  | Som van publieke en commerciële dienstverlening  |   gascomdv + gaspubldv | Gasgebruik Commerciële Dienstverlening, Gasgebruik Publieke Dienstverlening |
 |  Elektriciteit | Klimaatmonitor (bewerking)  | Som van publieke en commerciële dienstverlening, met een aantal bewerkingen: <ul><li>Inclusief 'zonnestroom gebruik achter de meter'</li><li>We schatten het verbruik van elektrische laadpalen o.b.v het aantal elektrische voertuigen in een regio. Dit verbruik trekken we af van de dienstensector en tellen we op bij de transportsector.</li><li>Hetzelfde doen we voor treinen, trams en metro's op basis van het aantal (trein)reizigers per gemeente/regio</li><li>Het verbruik van de ICT-sector (SBI J) verplaatsen we naar de industrie</li></ul> De reden voor deze bewerkingen is dat het ETM zo nauwkeurig mogelijk in kaart probeert te brengen met welk doel energie uiteindelijk gebruikt wordt. Zodat de gebruiker vervolgens aannames kan doen in het model over hoe dit in de toekomst gaat veranderen. Laadpalen vallen statitisch gezien onder de dienstensector, maar voorzien in een mobiliteitsbehoefte.   | elpubldv + elcomdv - elektrpers - ovintrein - ovinovov - energie_j | Elektriciteitsgebruik Publieke Dienstverlening, Elektriciteitsgebruik Commerciële Dienstverlening, Aantal geregistreerde elektrische personenauto's (FEV en PHEV), Gereisde kilometers trein, Gereisde kilometers bus/tram/metro,  Energiegebruik Informatie en communicatie (SBI J)|
-|  Collectieve warmte | Klimaatmonitor  | O.a. 'WKO utiliteitsbouw'. Zie [warmte] (#warmte)   |  |  |
-|  Biomassa | Klimaatmonitor  | Zie [warmte] (#warmte) |    |  |
+|  Collectieve warmte | Klimaatmonitor  | O.a. 'WKO utiliteitsbouw'. Zie [warmte](#warmte)   |  |  |
+|  Biomassa | Klimaatmonitor  | Zie [warmte](#warmte) |    |  |
 ||||
 |  ***Opwek***   | |  |   |  |
 |  Zon | Klimaatmonitor (bewerking)  | Zie huishoudens  |     |  |
@@ -45,13 +45,13 @@ Op deze pagina staat een overzicht van de gebruikte data voor de Nederlandse gem
 | Diesel (scheepvaart) | Klimaatmonitor | 'Energiegebruik zeescheepvaart en visserij' en 'Energiegebruik binnen- en recreatievaart' |  energie_zeevaart + energie_binnenvaart | Energiegebruik zeescheepvaart en visserij (diesel en stookolie), Energiegebruik binnen- en recreatievaart (diesel en benzine) |
 ||
 |  ***Overig***   |  |  |   |  |
-| Aantal fietskilometers | Quintel / Klimaatmonitor| Geen informatie beschikbaar op gemeenteniveau. We verdelen het totaal aantal fietskilometers in Nederland (Klimaatmonitor) onder op basis van het aantal inwoners per gemeente. We nemen aan dat 16% van deze kilometers met een elektrische fiets afgelegd worden ([Nederlands gemiddelde 2017] (https://fietsberaad.nl/Kennisbank/Elektrische-fiets-goed-voor-2-procent-van-alle-rit)).| ovinfiets | Gereisde kilometers fiets |
+| Aantal fietskilometers | Quintel / Klimaatmonitor| Geen informatie beschikbaar op gemeenteniveau. We verdelen het totaal aantal fietskilometers in Nederland (Klimaatmonitor) onder op basis van het aantal inwoners per gemeente. We nemen aan dat 16% van deze kilometers met een elektrische fiets afgelegd worden ([Nederlands gemiddelde 2017](https://fietsberaad.nl/Kennisbank/Elektrische-fiets-goed-voor-2-procent-van-alle-rit)).| ovinfiets | Gereisde kilometers fiets |
 
 ## Landbouw
 |  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
 |---|---|---|---|---|
 |  ***Eindgebruik***   |  |  |  |  |
-|  Aardgas | Klimaatmonitor (bewerking o.b.v. Emissieregistratie) | 'Gas geleverd aan landbouw, bosbouw en visserij (SBI A)'. Klimaatmonitor maakt geen onderscheid tussen eindgebruik en gasgebruik van WKK’s. Dit is met name relevant voor regio's met veel glastuinbouw. [Emissieregistratie] (http://emissieregistratie.nl/erpubliek/bumper.nl.aspx) heeft hier CO<sub>2</sub>-gegevens over ('Aardgasverbruik landbouw (WKK)' en 'niet-WKK'). Op basis hiervan splitsen wij het gasgebruik uit. Het gas dat naar WKK’s gaat, tellen we niet als eindgebruik maar komt in het ETM terug als eindgebruik voor (collectieve) warmte en elektriciteit.  | vbrzg_a | Gas geleverd aan Landbouw, bosbouw en visserij (SBI A) |
+|  Aardgas | Klimaatmonitor (bewerking o.b.v. Emissieregistratie) | 'Gas geleverd aan landbouw, bosbouw en visserij (SBI A)'. Klimaatmonitor maakt geen onderscheid tussen eindgebruik en gasgebruik van WKK’s. Dit is met name relevant voor regio's met veel glastuinbouw. [Emissieregistratie](http://emissieregistratie.nl/erpubliek/bumper.nl.aspx) heeft hier CO<sub>2</sub>-gegevens over ('Aardgasverbruik landbouw (WKK)' en 'niet-WKK'). Op basis hiervan splitsen wij het gasgebruik uit. Het gas dat naar WKK’s gaat, tellen we niet als eindgebruik maar komt in het ETM terug als eindgebruik voor (collectieve) warmte en elektriciteit.  | vbrzg_a | Gas geleverd aan Landbouw, bosbouw en visserij (SBI A) |
 |  Elektriciteit | Klimaatmonitor (bewerking)  | 'Elektriciteitsgebruik landbouw, bosbouw en visserij (SBI A)'. We verhogen dit getal met elektriciteit uit gas-WKK's (zie boven).  | vbrze_a | Elektriciteit geleverd aan Landbouw, bosbouw en visserij (SBI A) |
 |  (Collectieve) warmte | Klimaatmonitor (bewerking) | Optelling van 'Geothermie warmte (diepe bodemenergie)' en warmte uit gas-WKK's (zie boven).   |  geothermtj   | Geothermie warmte (diepe bodemenergie) (tier 2/3) |
 
@@ -129,7 +129,7 @@ Voor de landbouw in gemeentes met glastuinbouw rekent het ETM een deel van de ga
 De reden dat (8), bijstook van biomassa in elektriciteitscentrales, in het ETM terugkomt als biomassa-WKK is omdat Klimaatmonitor alleen data heeft over de hernieuwbare warmte, niet over de fossiele warmte die ook uit de centrale komt.
 
 ## Emissies 1990
-Zie het aparte artikel over [1990-emissies](CO<sub>2</sub>-1990-emissions.md).
+Zie het aparte artikel over [1990-emissies](co2-1990-emissions.md).
 
 ## Ontbrekende data
 Voor sommige regio's ontbreekt data voor een bepaalde sector of drager op Klimaatmonitor. Bijvoorbeeld omdat informatie vertrouwelijk is of herleidbaar naar individuele bedrijven. Quintel doet in dit geval een zo goed mogelijke schatting op basis van informatie die wel beschikbaar is. We proberen de ordegrootte te bepalen van de ontbrekende data. Hiervoor gebruiken we (een combinatie van) de volgende methodes:
