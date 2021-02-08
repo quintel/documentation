@@ -18,7 +18,7 @@ The coefficient of performance (COP) is influenced by the temperature of the sou
 
 ### Space heating
 
-The temperature dependency of the COP of air-source heat pumps (ASHPs) is based on research done by ECN and used by Ecofys in their report ['Systeemkosten van warmte voor woningen'](ahref="https://refman.energytransitionmodel.com/publications/2063").
+The temperature dependency of the COP of air-source heat pumps (ASHPs) is based on research done by ECN and used by Ecofys in their report ['Systeemkosten van warmte voor woningen'](https://refman.energytransitionmodel.com/publications/2063).
 
 The equation used is:
 
@@ -30,7 +30,7 @@ Where T is the ambient temperature.
 
 ### Hot water
 
-The temperature dependency of the COP of ASHPs is also based on research done by ECN and used by Ecofys in their report ['Systeemkosten van warmte voor woningen'](ahref="https://refman.energytransitionmodel.com/publications/2063").
+The temperature dependency of the COP of ASHPs is also based on research done by ECN and used by Ecofys in their report ['Systeemkosten van warmte voor woningen'](https://refman.energytransitionmodel.com/publications/2063).
 
 The equation used is:
 

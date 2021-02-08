@@ -24,13 +24,13 @@ Percentage difference in energetic CO<sub>2</sub> emissions due to final energy 
 ### CO<sub>2</sub> emissions relative to start year
 This percentage shows the change in CO<sub>2</sub> emission between the starting year and final year of your scenario. The scope and chart are similar to CO<sub>2</sub> emission relative to 1990. 
 
-_Checkout: the 'Detailed information > Dashboard > [Emissions](co2-emissions)' infopage for more information on definitions and calculations._
+_Checkout: the [Emissions](co2-main-principles) infopage for more information on definitions and calculations._
 
 ## Energy imports
 ### Net foreign energy imports 
 The percentage shows the amount of imported primary energy (imports - exports) compared to the total primary energy consumption. In this case conversion losses due to export are included in the total primary energy consumption (a ‘territorial’ approach). The chart shows the total amount of energy import as a result of the total energy import of different types of energy carriers for the present and final scenario year. 
 
-_Checkout: the 'Detailed information > Dashboard > [Energy Imports](import-calculations)' infopage in the Dashboard section for more information._
+_Checkout: the ['Energy Imports'](import-calculations) infopage in the Dashboard section for more information._
 
 ## Costs 
 ### Annual energy costs 

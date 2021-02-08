@@ -11,7 +11,7 @@ The term 'merit order' refers to the order in which dispatchable plants are used
 
 It is important to note that turning on the merit order module will take control over how electricity is generated in the ETM. You will find that the merit order turns off all the expensive power plants when they are not needed (for example because you installed too many, [see example below](#installing-too-many-power-plants)).
 
-Some electricity producers, like wind turbines, cannot be turned off at will as their production is determined by outside factors, like wind in this case. This also holds for must-run producers, such as biogas CHPs. For scenario's with large capacities of these volatile and must-run producers, their total electricity production might exceed the electricity demand. To make most use of this excess electricity, you can include flexibility options in their scenario. These flexibility options are described in a [dedicated section](/flexibility).
+Some electricity producers, like wind turbines, cannot be turned off at will as their production is determined by outside factors, like wind in this case. This also holds for must-run producers, such as biogas CHPs. For scenario's with large capacities of these volatile and must-run producers, their total electricity production might exceed the electricity demand. To make most use of this excess electricity, you can include flexibility options in their scenario. These flexibility options are described in a [dedicated section](flexibility).
 
 The full load hours and the use of the various flexibility options (outputs of the merit order module) are used in the ETM for the scenario in the 'future' year, impacting, among others, CO<sub>2</sub> emissions, costs, import and export, total energy use and renewable percentages of electricity and energy. In addition, the module calculates financial metrics for producers such as **profit** and **profitability** ([defined below](#profitability)).
 
@@ -48,7 +48,7 @@ The Merit Order Chart (right side) shows the installed capacity of electricity p
 
 These charts provide input for the profitability table on the dashboard.
 
-_Checkout: the profitability table on the [‘Costs (dashboard)’](costs-dashboard) infopage._
+_Checkout: the profitability table on the [‘Costs (dashboard)’](cost-dashboard) infopage._
 
 ## Implementation
 
@@ -192,7 +192,7 @@ Plant profitability =  -------------------------------------------
                           Total installed dispatchable capacity
 ```
 
-_Checkout: the profitability table on the [‘Costs (dashboard)’](costs-dashboard) infopage for more information._
+_Checkout: the profitability table on the [‘Costs (dashboard)’](cost-dashboard) infopage for more information._
 
 ### Examples
 

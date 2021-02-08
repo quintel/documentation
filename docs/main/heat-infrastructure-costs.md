@@ -174,7 +174,7 @@ The yearly infrastructure costs per year are the sum of:
 
 Yearly capital costs depend on the assumed weighted average cost of capital rate (WACC). By default, a real WACC of 4% is assumed and depreciation is assumed to be linear ('straight line'). This means that the cost of capital per year equal ``(total investment costs / 2) * WACC``.
 
-_Checkout: the ['Cost of Capital'](costs-wacc) infopage for more information._
+_Checkout: the ['Cost of Capital'](cost-wacc) infopage for more information._
 
 ## Agriculture and industry
 

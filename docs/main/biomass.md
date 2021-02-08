@@ -4,7 +4,7 @@ title: Biomass
 
 There is a growing interest in using biomass as energy carrier, for instance for: heat production, electricity production, transport fuel or as a feedstock for the chemical industry. However, biomass is often grown at the expense of food crops and stimulates deforestation. Careful consideration is required when using large amounts of biomass. In the Supply > [Biomass](https://pro.energytransitionmodel.com/scenario/supply/biomass/overview) section in the ETM you can specify biomass use. This page describes the biomass definitions used in the ETM, the application of biomass within the ETM as well as the biomass data that is used within the ETM. 
 
-_Checkout: how CO<sub>2</sub> emissions from biomass are regarded within the ETM on the [Carbon Emissions from Biomass](/CO<sub>2</sub>-biomass) infopage._
+_Checkout: how CO<sub>2</sub> emissions from biomass are regarded within the ETM on the [Carbon Emissions from Biomass](co2-biomass) infopage._
 
 ## Biomass categories
 There are many different biomass resource streams; too many to model each one individually. Therefore, the ETM distinguishes four biomass categories:

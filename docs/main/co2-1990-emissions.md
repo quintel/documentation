@@ -19,7 +19,7 @@ Other emissions, such as other feedstock and fugitive emissions are not included
 ## Regional-level data
 For regional datasets, no uniform, international source exists detailing historic emissions on a fine-grained geographical level. As such, 1990 emissions are researched for each region individually.
 
-For subregions of the Netherlands, data is used from [RIVM](http://emissieregistratie.nl/erpubliek/bumper.nl.aspx). They report 1990 emissions on a municipality level. However, this data does not comply with the [main principles](CO<sub>2</sub>-main-principles.md) of the ETM's CO<sub>2</sub> calculation:
+For subregions of the Netherlands, data is used from [RIVM](http://emissieregistratie.nl/erpubliek/bumper.nl.aspx). They report 1990 emissions on a municipality level. However, this data does not comply with the [main principles](co2-main-principles.md) of the ETM's CO<sub>2</sub> calculation:
 
 * Emissions are reported by geographical location. This means that a municipality with a power plant within its border is assigned the full emissions of the plant. Conversely, no emissions for electricity use are taken into account for municipalities without power plants.
 * The regional data does not conform to IPCC definitions. This means that emissions of biomass are included.

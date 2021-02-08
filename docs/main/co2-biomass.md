@@ -9,7 +9,7 @@ Which exact part of CO<sub>2</sub> emissions from biomass is relevant to the env
 
 This page provides background information on the carbon debt, land-use change due to biomass and biomass policies.
 
-_Checkout: the [Biomass](/biomass) infopage for more information on the use of biomass in the ETM._
+_Checkout: the ['Biomass'](biomass) infopage for more information on the use of biomass in the ETM._
 
 ## Carbon debt
 Carbon debt is created when biomass is used for energy production. In short, CO<sub>2</sub> is emitted instantaneously whilst the regrowth of biomass takes time. Furthermore, direct emission levels of biomass are sometimes higher than the emissions of fossil fuels. Diminishing carbon stock by land-use change can also contribute to carbon debt. (based on: PBL/Alterra, 2013)
