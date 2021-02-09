@@ -8,7 +8,11 @@ module.exports = {
       type: "category",
       label: "1. User Manual",
       collapsed: false,
-      items: ["main/starting-or-exploring", "main/interface", "main/developing-your"],
+      items: [
+        "main/starting-or-exploring",
+        "main/interface",
+        "main/developing-your",
+      ],
     },
     {
       type: "category",
@@ -21,26 +25,23 @@ module.exports = {
             "main/primary-energy",
             {
               Emissions: [
-              "main/co2-main-principles",
-              "main/general-emissions",
-              "main/co2-overview-per-sector",
-              "main/co2-emission-factors",
-              "main/co2-1990-emissions",
-              "main/co2-emissions-import-export",
-              "main/co2-biomass",
-              "main/co2-negative-emissions",
+                "main/co2-main-principles",
+                "main/general-emissions",
+                "main/co2-overview-per-sector",
+                "main/co2-emission-factors",
+                "main/co2-1990-emissions",
+                "main/co2-emissions-import-export",
+                "main/co2-biomass",
+                "main/co2-negative-emissions",
               ],
             },
             "main/import-calculations",
             "main/cost-dashboard",
             "main/renewability",
           ],
-        }, 
+        },
         {
-          Demand: [
-            "main/demand",
-            "main/insulation",
-          ],
+          Demand: ["main/demand", "main/insulation"],
         },
         {
           Supply: [
@@ -56,17 +57,17 @@ module.exports = {
             "main/excess-electricity",
             {
               Electricity: [
-              "main/dynamic-demand-curve",
-              "main/loss-of-load-expectation",
-              "main/network",
+                "main/dynamic-demand-curve",
+                "main/loss-of-load-expectation",
+                "main/network",
               ],
             },
             {
               Heat: [
-              "main/heat-networks",
-              "main/heat-pumps",
-              "main/insulation",
-              "main/residual-heat-industry",
+                "main/heat-networks",
+                "main/heat-pumps",
+                "main/insulation",
+                "main/residual-heat-industry",
               ],
             },
             "main/curves",
@@ -85,10 +86,8 @@ module.exports = {
             "main/costs-imported-electricity",
           ],
         },
-                {
-          Results: [
-            "main/factsheet",
-          ],
+        {
+          Results: ["main/factsheet"],
         },
       ],
     },
@@ -96,9 +95,7 @@ module.exports = {
       type: "category",
       label: "3. Data Sources",
       collapsed: true,
-      items: [
-        "main/data-sources-local",
-      ],
+      items: ["main/data-sources-local"],
     },
     {
       type: "category",
@@ -107,24 +104,56 @@ module.exports = {
       items: [
         "main/energy-calculations",
         "main/useful-demand",
-        "contrib/molecules",
       ],
     },
     {
-      type: "category",
+      type: "link",
       label: "5. For Contributors",
-      collapsed: true,
+      href: "/contrib/intro",
+    },
+    {
+      type: "link",
+      label: "6. API Reference",
+      href: "/api/intro",
+    },
+  ],
+  contribSidebar: [
+    { type: "link", href: "/", label: "← Documentation home" },
+    {
+      type: "category",
+      label: "For Contributors",
+      collapsed: false,
       items: [
         "contrib/intro",
         "contrib/fever",
+        "contrib/molecules",
         "contrib/waste-outputs",
       ],
     },
     {
       type: "category",
-      label: "6. API Reference",
-      collapsed: true,
+      label: "Adding new features",
+      collapsed: false,
+      items: ["contrib/authoring-docs"],
+    },
+  ],
+  apiSidebar: [
+    { type: "link", href: "/", label: "← Documentation home" },
+    {
+      type: "category",
+      label: "API Reference",
+      collapsed: false,
       items: ["api/intro"],
+    },
+    {
+      type: "category",
+      label: "Endpoints",
+      collapsed: false,
+      items: [
+        "api/custom-curves",
+        "api/flexibility-order",
+        "api/heat-network-order",
+      ],
     },
   ],
 };

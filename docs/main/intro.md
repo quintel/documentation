@@ -8,7 +8,7 @@ The [Energy Transition Model](https://energytransitionmodel.com/?locale=en) (ETM
 
 ![The ETM interface](/img/docs/etm.png)
 
-ETM Info is created to aid (new) users and contributors to understand and use the ETM. You can find the following topics within ETM Info:
+The ETM documentation is created to aid (new) users and contributors to understand and use the ETM. You can find the following topics within this documentation:
 
 ### 1. User Manual
 Shows you how to use the ETM. 
