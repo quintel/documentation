@@ -21,49 +21,12 @@ module.exports = {
         alt: "Logo",
         src: "img/logo.svg",
       },
-      items: [
-        {
-          to: "/main/intro",
-          label: "For Users",
-          activeBasePath: "/main",
-          position: "left",
-        },
-        {
-          to: "/contrib/intro",
-          label: "For Contributors",
-          activeBasePath: "/contrib",
-          position: "left",
-        },
-        {
-          to: "/api/intro",
-          label: "API Reference",
-          activeBasePath: "/api",
-          position: "left",
-        },
-      ],
     },
     footer: {
       style: "dark",
       links: [
         {
-          title: "Learn",
-          items: [
-            {
-              label: "For end-users",
-              to: "/main/intro",
-            },
-            {
-              label: "For contributors",
-              to: "/contrib/intro",
-            },
-            {
-              label: "For developers and API users",
-              to: "/api/intro",
-            },
-          ],
-        },
-        {
-          title: "Us",
+          title: "About Us",
           items: [
             {
               label: "Energy Transition Model",

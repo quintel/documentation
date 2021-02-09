@@ -2,11 +2,9 @@
 title: Energy mix factsheet
 ---
 
-:::info
-At this time, the factsheet is only available in Dutch.
-:::
+_Note: the factsheet is only available in Dutch, therefore this description is also in Dutch._
 
-In samenwerking met het Gelders Energieakkoord en bureau Over Morgen is het Energietransitiemodel (ETM) uitgebreid met de optie om een geautomatiseerd factsheet te produceren voor je scenario.
+In samenwerking met het Gelders Energieakkoord en bureau Over Morgen is het Energietransitiemodel (ETM) uitgebreid met de optie om een geautomatiseerd factsheet te produceren voor je scenario. Deze is in het ETM te vinden bij Resultaten > Visuals > ['Energie-mix infographic'](https://pro.energytransitionmodel.com/scenario/data/data_visuals/energy-mix-infographic).
 De originele factsheet zoals ontworpen door Over Morgen is aangepast zodat deze beter aansluit op het ETM.
 Deze aansluiting is dusdanig dat ETM-uitkomsten worden gegroepeerd in categorieën die gehanteerd worden door Over Morgen.
 
@@ -113,7 +111,7 @@ Elektriciteitsgebruik. Dit kan elektriciteit zijn die lokaal wordt opgewekt met 
 
 Deze grafiek toont een aantal energiebronnen dat in de sectie "Opgave per thema" verder wordt uitgewerkt.
 
-NB: Deze categorieën sluiten niet aan op de categorieën voor primair gebruik in het ETM maar hebben afwijkende definities om de nadruk te leggen op aspecten die bureau Over Morgen in haar sessies uitlicht.
+_Note: Deze categorieën sluiten niet aan op de categorieën voor primair gebruik in het ETM maar hebben afwijkende definities om de nadruk te leggen op aspecten die bureau Over Morgen in haar sessies uitlicht._
 
 De volgende categorieën worden onderscheiden:
 * Fossiel (overig)
@@ -188,9 +186,7 @@ Bevat:
 
 Deze categorie omvat alle omgevingswarmte/-koude die door warmtepompen is gebruikt voor ruimteverwarming, koeling en warm tapwater. Dit omvat restwarmte uit de lucht en de ondiepe bodem maar geen aardwarmte/geothermie.
 
-:::note
-Omdat omgevingswarmte niet als eindgebruik wordt gerekend is deze categorie een belangrijke reden dat het totaal van de grafiek "Energievraag eindgebruik" niet overeenkomt met het totaal van de grafiek "Energiebronnen".
-:::
+_Note: Omdat omgevingswarmte niet als eindgebruik wordt gerekend is deze categorie een belangrijke reden dat het totaal van de grafiek "Energievraag eindgebruik" niet overeenkomt met het totaal van de grafiek "Energiebronnen"._
 
 ### Restwarmte en diepe geothermie
 
@@ -311,7 +307,6 @@ Het totaal aantal Joules is de optelling van de volgende energiestromen:
 * Overige biomassa*
 
 \* Deze categorie bevat de volgende energiestromen:
-
 * Houtige biomassa voor WKK in de landbouw
 * Houtige biomassa voor collectieve WKK in gebouwen (utiliteitsbouw)
 * Overig biomassagebruik in gebouwen (niet verder gedefinieerd op de energiebalans)

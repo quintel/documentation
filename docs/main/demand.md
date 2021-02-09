@@ -2,7 +2,7 @@
 title: Demand
 ---
 
-On the Demand tab of the ETM a user can determine the future demand of energy for the sectors available in the area that the user is modeling at that moment. Usually these sectors are:
+On the Demand tab of the ETM you can determine the future demand of:
 
 * Households
 * Buildings
@@ -11,55 +11,39 @@ On the Demand tab of the ETM a user can determine the future demand of energy fo
 * Agriculture
 * Other
 
-Not all sectors are available for all areas, depending on the economic reality of that area.
+This page shortly describes the different demand categories. The percentage displayed under the sector describes the amount of primary energy consumed per sector compared to the total amount of primary energy consumed. If sectors are not present within your scenario area their demand is set to 0%. 
 
-Useful demand and final demand
-------------------------------
+_Note: Some values in the demand section display ‘useful demand’ compared to ‘final demand’ as the actual technologies used to create energy still have to be determined._
 
-Some values in the demand section are shown as useful demand. This is the demand of energy that is used to create useful output. This means, for example, that the demand of heat in households is shown, instead of the demand for the separate energy carriers used to create the heat. The reason for this is that many sliders actually affect useful demand. For example: Insulating houses affects useful heat demand. What technologies you then use to heat houses, determines final demand. Final demand is the amount of each energy carrier like electricity and gas, for example, that enters your house.
+_Checkout: the [‘Useful Demand’](useful-demand) infopage for more information._
 
-Final energy demand data are often published by national statistics agencies. Useful energy demand is harder to measure as it is not 'metered'.
+## Households
+In the Households section the demand for energy in households is specified. The demand growth of energy and the technology mix that uses this energy can be specified. The focus is on technologies used for heating, insulation, cooking, cooling, lighting and appliances. Additionally, you can adjust the behaviour of inhabitants and specify the decentralized technologies used for heating (such as a heat pump) or electricity (such as roof top solar PV).
 
-Households
-----------
+## Buildings
+The Buildings section contains all non-residential buildings in the services sector. This includes office buildings, schools and hospitals. Similar to the Households section, the focus lies on heating, cooling, ventilation, insulation, lighting and roof top solar PV. 
 
-In the Households sector the demand for energy in households is specified. The demand growth of energy and the technology mix that uses this energy can be specified. The focus is on technologies used for heating, insulation, cooking, cooling, lighting and appliances. Additionally, users can adjust the behavior of inhabitants and apply decentralised production of electricity.
+## Transportation
+The Transport section contains three sub-sections: Passenger transport, Freight transport and International transport. In the main Transport section you can adjust the efficiency improvements of different transport technologies. In the specific sub-sections you can adjust the type of technology. Emissions from international transport is not accounted for in your scenario but you can adjust this in the international transport sub-section.  
 
-Buildings
----------
+## Industry
+The Industry section contains the economic sector 'industry' as well as the energy sector (mining and refining). The industry sector is divided into twelve sub-sectors which are involved with. 
+* metal industry (Steel, Aluminum and Other metals)
+* chemical industry (Refineries, Fertilizers, Chemicals)
+* other industry (ICT, Food, Paper, Other)
 
-The Buildings sector is a sector not usually seen as a separate economic sector, it contains all the non-residential buildings (all buildings excluding households), including office buildings, schools and hospitals. Often the tertiary sector or services sector, if available, is used as the basis for the underlying data for this sector.
-
-Like in Households, the focus of this sector lies on the way buildings are heated, cooled, ventilated, insulated and lighted. Also here the user can install decentralised electricity production.
-
-Transportation
---------------
-
-The Transportation sector is equal to a similarly named economic sector used by statistics agencies. Here the user can specify the future fuel and technology mix in road and rail transport, apply growth to the different modalities in the model (cars, trucks, trains, inland navigation and domestic flights) and apply efficiency improvements to the different modalities in the model.
-
-Industry
---------
-
-The Industry sector contains the economic sector 'industry' and also includes the energy sector (mining and refining). The industry sector is divided into three sub-sectors:
-
-* the chemical industry
-* the metal industry
-* the other industry
+To alter the demand of each sub-sector you can change the demand for electricity and heat in each sector. 
 
 The level of detail of this sector depends on the sub-sector. Only a distinction is made between electricity and heat. There is no distinction between different temperatures of heat required.
 
-Agriculture
------------
+## Agriculture
+In the Agriculture section you can adjust the growth or decline of agricultural heat or electricity demand. Furthermore, you can adjust the technologies used for heating in the agricultural section.
 
-The Agriculture sector is equal to a similarly named economic sector often available in national energy statistics.
-
-Other
------
-
+## Other
 The Other sector contains all energy use not represented in the previous sectors. It differs slightly per region and is usually small. The following items are usually included under the other sector:
-
 * the construction sector
 * the army
 * the hydrological sector (dams, levies, etc)
 
 In some countries (like the Netherlands), the Other sector in the national energy statistics contains agriculture and the tertiary sector. If these sectors cannot be split from the Other sector it can be a big sector. Generally speaking this is not a preferable situation, because the options for changing demand are limited in the other sector.
+

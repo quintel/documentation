@@ -3,6 +3,7 @@ title: Curves
 ---
 
 The ETM uses hourly curves to model (electricity, hydrogen and gas) demand and supply.
+
 The hourly demand/supply is determined using the annual demand/supply and a set curve. It is also possible to use your own curves in the ETM by inserting them in Flexibility > [Modify profiles](https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves). This page gives an overview of the type of curves and explains how to modify these curves by inserting your own.
 
 ![Hourly hydrogen demand chart](/img/docs/20181002_hydrogen_demand.png)
@@ -11,7 +12,7 @@ _Image: Example of hourly demand - hydrogen demand_
 
 ## Overview of curves
 
-We define demand curves, supply curves and time curves. The tables below show a brief overview of the sources and methods currently used.
+The ETM had three types of curves: demand curves, supply curves and time curves. The tables below show a brief overview of the sources and methods currently used.
 
 ### Demand
 
@@ -89,7 +90,6 @@ Your file should be a CSV file with 8,760 rows (one for each hour per year) each
 etc
 ```
 
-
 For **price curves**, the unit of the values is €/MWh. The price in each hour will be rounded to the nearest whole cent.
 
 For **supply** curves ('capacity profiles'), the sum of the profile should equal the total annual number of full load hours of the specific technology. This means that for each hour the profile should contain a value between 0 and 1 specifying the fraction of peak capacity used in that hour. E.g. a value of 0.5 means that 50% of peak capacity is utilised in that hour.
@@ -120,11 +120,3 @@ The table below provides some additional information on selected categories.
 The chart on the right shows the profiles of all categories that can be modified. If you upload a custom profile, this is reflected in the chart. Note that if a technology is not present in your scenario, the chart series will be empty. By default, the chart shows the daily peak capacity of the profile for the whole year. Select a month or week in the dropdown menu to see the hourly values. You can download the hourly demand and supply curves in your scenario in the [Results → Data](https://pro.energytransitionmodel.com/scenario/data/data_export/energy-flows) export section.
 
 ![Modify profiles chart](/img/docs/modify_profiles.png)
-
-## Contact
-* [Open an issue in ETDataset](https://github.com/quintel/etdataset-public/issues/new) and assign a team member of Quintel:
-  * [Chael Kruip](https://github.com/Chaelkruip)
-  * [Dorine van der Vlies](https://github.com/Dorinevandervlies)
-  * [Marlieke Verweij](https://github.com/marliekeverweij)
-  * [Roos de Kok](https://github.com/Redekok)
-* [Contact us directly](https://energytransitionmodel.com/contact).

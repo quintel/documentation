@@ -2,17 +2,20 @@
 title: Biomass
 ---
 
-There is a growing interest in using biomass as energy carrier, for instance for heat production, electricity production, transport fuel or as a feedstock for the chemical industry. However, biomass is often grown at the expense of food crops and stimulates deforestation. Careful consideration is required when using large amounts of biomass. We've updated the modelling of biomass streams in the ETM in 2019 in close collaboration with Gasunie, GasTerra, TKI Nieuw Gas and TNO. TNO supported this project by researching all required data.
+There is a growing interest in using biomass as energy carrier, for instance for: heat production, electricity production, transport fuel or as a feedstock for the chemical industry. However, biomass is often grown at the expense of food crops and stimulates deforestation. Careful consideration is required when using large amounts of biomass. In the Supply > [Biomass](https://pro.energytransitionmodel.com/scenario/supply/biomass/overview) section in the ETM you can specify biomass use. This page describes the biomass definitions used in the ETM, the application of biomass within the ETM as well as the biomass data that is used within the ETM. 
 
-## Modelling principals
+_Checkout: how CO<sub>2</sub> emissions from biomass are regarded within the ETM on the [Carbon Emissions from Biomass](co2-biomass) infopage._
 
-There are many different biomass resource streams; too many to model each one individually. Therefore we choose to distinguish these four biomass categories:
+## Biomass categories
+There are many different biomass resource streams; too many to model each one individually. Therefore, the ETM distinguishes four biomass categories:
+
 -   **Wet biomass**: residues from the food and beverage industry, agricultural residual streams, sewage sludge, aquatic biomass, cultivated grain products, etc.
 -   **Dry biomass**: residual streams from forestry (tree tops, stumps, bark, branches), recycled waste wood, residual streams from agriculture (straw), and fast-growing bio-energy crops (elephant grass, willow, poplar)
 -   **Oil-containing biomass**: rapeseed, sunflower seeds, oil palm, used frying fats.
 -   **Biogenic waste**
 
-TNO researched the potential of each biomass category for each country modelled in the ETM. When biomass demand exceeds this potential, then biomass will be imported from outside the region. For the Netherlands TNO researched the potentials in great detail. The potentials of over 30 biomass streams have been quantified and are shown in the last table of this document. The ETM allows users to adjust maximum biomass potentials for each biomass category with these sliders:
+## Biomass potential
+TNO researched the potential of each biomass category for each country modelled in the ETM. When biomass demand exceeds this potential, biomass is imported from outside the region. For the Netherlands TNO researched the potentials in great detail. The potentials of over 30 biomass streams have been quantified and are shown in the last table of this document. The ETM allows users to adjust maximum biomass potentials for each biomass category with these sliders:
 
 ![Biomass potential sliders](/img/docs/biomass_potential_sliders.png)
 
@@ -20,6 +23,7 @@ The set potentials are shown in the "Biomass demand and potential" chart along w
 
 ![Biomass demand and potential](/img/docs/biomass_demand_and_potential.png)
 
+## Using biomass in the ETM
 Biomass can be used in different places throughout the model:
 - as green gas in the gas network
 - in biomass heaters for (local) heat networks
@@ -32,7 +36,8 @@ To get a quick overview of all future biomass streams and conversions, there is 
 
 ![Biomass sankey](/img/docs/biomass_sankey.png)
 
-Users can adjust the costs of biofuels with sliders for greengas, biogas, wood, biodiesel and bio-ethanol. The costs that are used in the present year are researched by TNO:
+## Biomass costs
+You can adjust the costs of biofuels with sliders for greengas, biogas, wood, biodiesel and bio-ethanol. The costs for biomass are researched by TNO.
 
 ![Biomass costs sliders](/img/docs/biomass_biofuel_costs.png)
 
@@ -101,6 +106,6 @@ These total potentials originate from the underlying biomassa streams depicted b
 
 The Dutch national potentials were subdivided to municipal potentials by using the 'verdeelsleutel' for each individual biomass stream from the most right column in the table above.
 
-### TNO report
+_Source: The TNO report with all data is accessible [here](https://refman.energytransitionmodel.com/publications/2100)._
 
-The TNO report with all data is accessible [here](https://refman.energytransitionmodel.com/publications/2100).
+_Collaboration: The biomass section within the ETM is shaped in close collaboration with Gasunie, GasTerra, TKI Nieuw Gas and TNO. TNO researched and delivered all required data._

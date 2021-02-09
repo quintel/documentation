@@ -2,8 +2,7 @@
 title: Heat infrastructure costs
 ---
 
-Below you can find more information about the heat infrastructure cost calculation in the Energy Transition Model. The methodology and data behind this calculation is based on
-[Vesta MAIS](https://github.com/RuudvandenWijngaart/VestaDV), an energy model developed by the Dutch Environmental
+Below you can find more information on the heat infrastructure cost calculation in the Costs > ['Heat'](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) sub-section of the ETM. The methodology and data behind this calculation is based on [Vesta MAIS](https://github.com/RuudvandenWijngaart/VestaDV), an energy model developed by the Dutch Environmental
 Assessment Agency (PBL).
 
 ## Households and buildings costs
@@ -22,7 +21,7 @@ These costs are annualised by taking into account:
 ### Indoor costs
 
 #### Households
-For apartment blocks the ETM takes into account costs for indoor pipelines to distribute heat to the separate apartment units. We make a distinction between apartment blocks that currently already have a collective block heating system and apartment blocks that do not. The latter require higher investments as no indoor infrastructure is currently available.
+For apartment blocks the ETM takes into account the costs for indoor pipelines to distribute heat to the separate apartment units. The ETM makes a distinction between apartment blocks that currently already have a collective block heating system and apartment blocks that do not. The latter require higher investments as no indoor infrastructure is currently available.
 
 | Description   |  Value   | Source |
 |:---|:---|:---|
@@ -30,29 +29,27 @@ For apartment blocks the ETM takes into account costs for indoor pipelines to di
 | Apartments without block heating  | 5984 euro per apartment   | [Vesta MAIS 4.0](https://github.com/RuudvandenWijngaart/VestaDV), average of lower and upper bound |
 | Share of apartments with block heating  | 15%    | [Vesta MAIS 4.0](https://github.com/RuudvandenWijngaart/VestaDV), average of lower and upper bound|
 
-:::note
-The costs and number of apartments with and without block heating can be set per region in the ETM. The numbers above are default values.
-:::
+_Note: The costs and number of apartments with and without block heating can be set per region in the ETM. The numbers above are default values._
 
-For other housing types (e.g. terraced houses or detached houses), no indoor costs are taken into account. We assume that heat is supplied at high enough temperatures to be used directly (>70 °C).
+For other housing types (e.g. terraced houses or detached houses), no indoor costs are taken into account. It is assumed that heat is supplied at high enough temperatures to be used directly (>70 °C).
 
 #### Buildings
-For non-residential buildings, we take into account two types of indoor costs:
+For non-residential buildings, two types of indoor costs are taken into account:
 * Indoor pipelines
 * Heat meters
 
-Indoor pipeline costs are based on peak heat demand of buildings. We assume a fixed investment per kW. Peak demand is calculated dynamically by the ETM and depends on hourly demand profiles, insulation levels etc. See [heat network documentation](heat-networks.md) for more information about the hourly heat calculation.
+Indoor pipeline costs are based on peak heat demand of buildings. A fixed investment per kW is assumed. Peak demand is calculated dynamically by the ETM and depends on hourly demand profiles, insulation levels etc. 
+
+_Checkout: the [heat network documentation](heat-networks) for more information on the hourly heat calculation._
 
 | Description   |  Value   | Source |
 |---|---|---|
 | Indoor pipelines  | 151 euro per kW peak demand  | [Vesta MAIS 4.0](https://github.com/RuudvandenWijngaart/VestaDV), average of lower and upper bound |
 | Peak demand  | Varies  | ETM, calculated dynamically |
 
-:::note
-Indoor pipeline costs can be set per region in the ETM. The numbers above are default values.
-:::
+_Note: Indoor pipeline costs can be set per region in the ETM. The numbers above are default values._
 
-In addition, we take into account costs for heat meters that connect indoor and outdoor distribution pipelines. Heat meters have a fixed cost component per connection and a variable cost component that depends on peak heat capacity.
+In addition, costs for heat meters that connect indoor and outdoor distribution pipelines are taken into accounr. Heat meters have a fixed cost component per connection and a variable cost component that depends on peak heat capacity.
 
 | Description   |  Value   | Source |
 |---|---|---|
@@ -60,20 +57,16 @@ In addition, we take into account costs for heat meters that connect indoor and 
 | Heat meter (variable part)  | 1.35 euro per kW peak demand  | [Vesta MAIS 4.0](https://github.com/RuudvandenWijngaart/VestaDV), average of lower and upper bound |
 | Peak demand  | Varies  | ETM, calculated dynamically |
 
-:::note
-Heat meter costs can be set per region in the ETM. The numbers above are default values.
-:::
+_Note: Heat meter costs can be set per region in the ETM. The numbers above are default values._
 
 ### (Secondary) distribution pipelines
-Distribution pipelines deliver heat to residences and buildings throughout a neighbourhood. We distinguish between two types of pipelines:
+Distribution pipelines deliver heat to residences and buildings throughout a neighbourhood. WTwo types of pipelines are distinguished:
 * Main distribution pipelines
 * Connection pipelines: pipelines from street level to front door, connecting a residence
 
 ![Distribution network](/img/docs/2020024_secondary_distribution_network.png)
 
-:::note
-The above image shows main distribution pipelines in blue, and connection pipelines in orange.
-:::
+_Note: The above image shows main distribution pipelines in blue, and connection pipelines in orange._
 
 Distribution pipelines are shared by both residences and non-residential buildings. Connection pipelines costs are only taken into account for residences. For other buildings it is assumed that heat distribution sub stations are placed directly in or near the building, eliminating the need for connection pipelines. See [Exchanger stations](#exchanger-stations) below for more info.
 
@@ -82,9 +75,7 @@ Distribution pipelines are shared by both residences and non-residential buildin
 | Pipelines per meter  | 1200 euro per meter | [Vesta MAIS 4.0](https://github.com/RuudvandenWijngaart/VestaDV), average of lower and upper bound assuming an average pipeline capacity of 7 MW |
 | Peak demand  | Varies  | ETM, calculated dynamically |
 
-:::note
-Pipeline costs can be set per region in the ETM. The numbers above are default values.
-:::
+_Note: Pipeline costs can be set per region in the ETM. The numbers above are default values._
 
 The required length of pipelines (for both distribution and connection pipelines) varies per region. Rural areas typically require longer distribution pipeline networks than urban areas to connect the same amount of residences. In addition, average pipeline length per connection can vary within the same region as well: densely populated areas typically require less pipeline length per connected building than less densely populated areas.
 
@@ -95,9 +86,9 @@ To account for this, the ETM distinguishes between five 'length' brackets: A dif
 
 Depending on the (weighted) average share of residences and buildings connected to district heating networks, the ETM uses a different average length per connected residence/building to determine the required pipeline length of the distribution and connection pipelines.
 
-These pipeline length brackets can be specified per region in the ETM. In this way we can distinguish between a city, with lower average pipeline networks per connection, and a rural region, with higher average pipeline lengths. For regions with both urban and rural parts (e.g. a country), the ETM can simulate that pipeline lengths (and thus costs) rise when the share of buildings connected to district heating networks increases: the 'low hanging fruit' (urban areas) is picked first, the more expensive, less densely populated areas follow later.
+These pipeline length brackets can be specified per region in the ETM. In this way it is possible to distinguish between a city, with lower average pipeline networks per connection, and a rural region, with higher average pipeline lengths. For regions with both urban and rural parts (e.g. a country), the ETM can simulate that pipeline lengths (and thus costs) rise when the share of buildings connected to district heating networks increases: the 'low hanging fruit' (urban areas) is picked first, the more expensive, less densely populated areas follow later.
 
-For all Dutch regions in the ETM, the average pipeline length per connection (both for distribution pipelines and connection pipelines) has been calculated based on an analysis by [Greenvis](https://greenvis.nl/) that is used by Vesta MAIS. For each neighbourhood in The Netherlands the required district heating pipeline length has been estimated based on OpenStreetMap data. We have aggregated this data per region in the ETM and calculated 5 length brackets per region: the neighbourhoods with the lowest length per connection are in bracket 1 etc.
+For all Dutch regions in the ETM, the average pipeline length per connection (both for distribution pipelines and connection pipelines) has been calculated based on an analysis by [Greenvis](https://greenvis.nl/) that is used by Vesta MAIS. For each neighbourhood in The Netherlands the required district heating pipeline length has been estimated based on OpenStreetMap data. This data is aggragated per region in the ETM and calculated 5 length brackets per region: the neighbourhoods with the lowest length per connection are in bracket 1 etc.
 
 The Dutch average can be found below. For non-Dutch regions this average is used, unless local data is available.
 
@@ -109,11 +100,9 @@ The Dutch average can be found below. For non-Dutch regions this average is used
 | Bracket 4 (up to 80% of housing/building stock connected)  | 7.0 meter per house/building |
 | Bracket 5 (up to 100% of housing/building stock connected)  | 10.0 meter per house/building |
 
-:::note
-For residences the ETM also takes into account additional connection pipelines on top of the lengths specified above.
+_Note: For residences the ETM also takes into account additional connection pipelines on top of the lengths specified above._
 
-Example: Suppose 52% of residences are connected to a district heating network. The ETM uses the average pipeline length specified by the 'third' bracket (5.8 meter per house/building, up to 60% connected) to determine pipeline costs.
-:::
+_Example: Suppose 52% of residences are connected to a district heating network. The ETM uses the average pipeline length specified by the 'third' bracket (5.8 meter per house/building, up to 60% connected) to determine pipeline costs._
 
 ![Distribution network](/img/docs/20200224_district_heating_share_brackets.png)
 
@@ -130,11 +119,9 @@ The required station capacity (and associated costs) are calculated based on the
 | Sub station | 135 euro per kW  | [Vesta MAIS 4.0](https://github.com/RuudvandenWijngaart/VestaDV), average of lower and upper bound |
 | Combined household and building peak demand | Varies  | ETM, calculated dynamically |
 
-:::note
-Station costs can be set per region in the ETM. The numbers above are default values.
-:::
+_Note: Station costs can be set per region in the ETM. The numbers above are default values._
 
-The costs of the primary heat sources and dispatchable/back-up heat sources are not part of the heat exchanger costs. These costs are calculated separately, in a similar fashion as (e.g.) [power plants](cost-annual-chart.md).
+The costs of the primary heat sources and dispatchable/back-up heat sources are not part of the heat exchanger costs. These costs are calculated separately, in a similar fashion as (e.g.) power plants.
 
 ### Primary pipelines
 
@@ -150,9 +137,7 @@ The following costs are taken into account:
 | Primary pipelines  | 200 euro per kW | [Vesta MAIS 4.0](https://github.com/RuudvandenWijngaart/VestaDV), average of lower and upper bound, assuming an average distance of 1.5 km and 10 MW pipeline capacity |
 | Supply peak of large-scale sources | Varies  | ETM, calculated dynamically |
 
-:::note
-Primary pipeline costs can be set per region in the ETM. The numbers above are default values.
-:::
+_Note: Primary pipeline costs can be set per region in the ETM. The numbers above are default values._
 
 ### Storage costs
 
@@ -163,7 +148,7 @@ The ETM does not make a distinction between investment and O&M costs for storage
 | Heat storage  | 20 euro per MWh | Research Quintel. See [ETDataset](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/energy_heat_network_storage.xlsx). |
 | Heat drawn from storage | Varies  | ETM, calculated dynamically |
 
-Note that these costs are costs for _storing_ heat only. Cost for _producing_ the stored heat are calculated separately.
+_Note: these costs are costs for storing heat only, cost for producing the stored heat are calculated separately._
 
 ## Operation and maintenance costs
 
@@ -174,9 +159,7 @@ The following operation and maintenance costs are taken into account:
 | Indoor infrastructure O&M | 2.5% of total investment costs per year | [Vesta MAIS 4.0](https://github.com/RuudvandenWijngaart/VestaDV) |
 | Outdoor infrastructure costs | 3% of total investment costs per year | [Vesta MAIS 4.0](https://github.com/RuudvandenWijngaart/VestaDV) |
 
-:::note
-O&M costs can be set per region in the ETM. The numbers above are default values.
-:::
+_Note: O&M costs can be set per region in the ETM. The numbers above are default values._
 
 Indoor infrastructure includes indoor pipelines for apartments and non-residential buildings; heat meters. Outdoor infrastructure includes distribution and connection pipelines; exchanger stations and sub stations; primary pipelines.
 
@@ -189,9 +172,9 @@ The yearly infrastructure costs per year are the sum of:
 * O&M costs of indoor and outdoor infrastructure
 * Storage costs
 
-Yearly capital costs depend on the assumed weighted average cost of capital rate (WACC). By default, a real WACC of 4% is assumed and depreciation is assumed to be linear ('straight line'). This means that the cost of capital per year equal ``(total investment costs / 2) * WACC``. See the WACC section of the [cost documentation](cost-annual-chart.md) for more information.
+Yearly capital costs depend on the assumed weighted average cost of capital rate (WACC). By default, a real WACC of 4% is assumed and depreciation is assumed to be linear ('straight line'). This means that the cost of capital per year equal ``(total investment costs / 2) * WACC``.
 
-Yearly depreciation costs are calculated by dividing total investment costs by the technical lifetime of the infrastructure. This is assumed to be 30 years (source: Vesta MAIS)
+_Checkout: the ['Cost of Capital'](cost-wacc) infopage for more information._
 
 ## Agriculture and industry
 

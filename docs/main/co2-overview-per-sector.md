@@ -2,10 +2,9 @@
 title: Overview of emissions per sector
 ---
 
-The ETM's main CO<sub>2</sub> chart is displayed below. This chart is shown when clicking on the CO<sub>2</sub> dashboard item at the bottom of your screen and in the [overview section](https://pro.energytransitionmodel.com/scenario/overview/introduction/total-co-sub-2-sub-emissions).
+In the ETM emissions from different sectors are taken into account to calculate the total emissions in your scenario. Every sector has a different scope when it comes to which emissions are taken into account and which are not. This page explains how this scope is defined in the ETM per sector which you can use to gain a better understanding of the total emissions displayed on the dashboard. 
 
-![District heating share in households](/img/docs/total_co2_emissions.png)
-
+## Emissions per sector
 The following is included per category:
 
 |  ***Category***   | ***Scope***  |

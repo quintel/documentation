@@ -2,7 +2,7 @@
 title: Cost methods
 ---
 
-This page describes how costs are calculated for individual converters in the model. The calculations are designed to be standardised so that they can be used for several types of plants (electricity, heat, hydrogen etc.). These calculations are done for each converter.
+This page describes how costs are calculated for individual heat- or electricity technologies in the ETM. The calculations are designed to be standardised so that they can be used for several types of plants (electricity, heat, hydrogen etc.). These calculations are done for each technology. In the ['Costs'](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) section of the ETM you can change costs related to the production, conversion or storage of energy. 
 
 This page gives an overview of all the components of the cost calculations.
 

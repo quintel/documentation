@@ -2,6 +2,8 @@
 title: Emission factors
 ---
 
+(Carbon) Emission factors describe the amount of CO<sub>2</sub> emissions emitted as a result of the generation of electricity. The following page displays all emission factors used in the calculation of (total) emissions in the ETM. This is mainly relevant when choosing a technique for the generation of energy in the (Supply)[https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants] section of the ETM.
+
 ## Overview
 The emission factors for energy carriers may vary per region. For example, the (organic) composition of coal or waste depends on where these carriers are sourced and hence so does their CO<sub>2</sub> content. The ETM supports this by specifying emission factors per country in the [ETDataset country analysis](https://github.com/quintel/etdataset-public).
 
@@ -39,12 +41,12 @@ _Source: [Mixed](https://github.com/quintel/etdataset-public/tree/master/carrier
 ## Calculation of CO<sub>2</sub> emissions
 For each sector and each final demand carrier, the associated CO<sub>2</sub> emissions are calculated by determining how much [primary energy](primary-energy.md) is needed to produce or supply this final demand and by multiplying this primary energy demand by the emission factor of the carrier. This means that all conversion and transportation losses are taken into account and assigned to the sector in which the final demand carriers are used.
 
-_Example. Suppose the household sector has a final electricity demand of 100 PJ. Also suppose that all power is produced using gas-fired power plants with an efficiency of 50%. Power transmission losses are assumed to be 5%. To supply 100 PJ electricity to the household sector, 105.3 PJ electricity needs to be produced: `105.3 * 5%` transmission losses leaves 100 PJ final demand. To produce this electricity, 210.6 PJ natural gas is needed (`105.3 / 50%` power plant efficiency). The total CO<sub>2</sub> emissions taken into account for household electricity demand equals `210.6 PJ * the emission factor of natural gas`._
+_Example: Suppose the household sector has a final electricity demand of 100 PJ. Also suppose that all power is produced using gas-fired power plants with an efficiency of 50%. Power transmission losses are assumed to be 5%. To supply 100 PJ electricity to the household sector, 105.3 PJ electricity needs to be produced: `105.3 * 5%` transmission losses leaves 100 PJ final demand. To produce this electricity, 210.6 PJ natural gas is needed (`105.3 / 50%` power plant efficiency). The total CO<sub>2</sub> emissions taken into account for household electricity demand equals `210.6 PJ * the emission factor of natural gas`._
 
+## Exception: Refinery products and emission factors
 One exception to this rule is the final demand of 'refinery products' in the transportation sector, such as diesel, gasoline and kerosene. To calculate the emissions associated with this final demand, the ETM simply multiplies the final demand of these carriers directly with fixed emission factors, rather than tracing back the primary energy demand. The reason for this is two-fold:
 * Energetic demand of refineries, e.g. electricity and heat used in refinery processes, is already included in the final demand of the industry sector, and hence CO<sub>2</sub> emissions. To avoid double-counting, these emissions should not be taken into account when calculating the emissions of refinery products in transportation.
 * Refineries are highly complex industrial processes that are modelled in a simplified way in the ETM. More detail is required to trace back the exact energetic and feedstock inputs used to produce each refinery product. Using fixed factors avoids (slight) inconsistencies with emission factors typically found in the literature.
-
 
 For refinery products, the following default emission factors are used. Again note that these values may be overwritten with country-specific data.
 
