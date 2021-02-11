@@ -54,6 +54,7 @@ module.exports = {
         },
         {
           Flexibility: [
+            "main/flexibility",
             "main/excess-electricity",
             {
               Electricity: [
