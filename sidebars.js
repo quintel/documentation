@@ -55,9 +55,9 @@ module.exports = {
         {
           Flexibility: [
             "main/flexibility",
-            "main/excess-electricity",
             {
               Electricity: [
+                "main/excess-electricity",
                 "main/dynamic-demand-curve",
                 "main/loss-of-load-expectation",
                 "main/network",
