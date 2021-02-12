@@ -38,14 +38,11 @@ Note that which `stats` keys are included vary depending on the curve `type`.
 
 ### Curve keys
 
-The API accepts curves describing the hourly price of the six electricity interconnectors. Any endpoint taking a `curve_key` path parameter expects one of these values:
+The API allows you to customise a number of curves used by the model's hourly calculations, such as interconnector price curves, capacity curves, and demand profiles. The full range of allowed keys and curve types can be found [in this configuration file](https://github.com/quintel/etsource/blob/production/config/user_curves.yml). Each key in the YAML document matches a curve `key` accepted by ETEngine. For example:
 
+* `electric_buses`
 * `interconnector_1_price`
-* `interconnector_2_price`
-* `interconnector_3_price`
-* `interconnector_4_price`
-* `interconnector_5_price`
-* `interconnector_6_price`
+* `weather/wind_offshore_baseline`
 
 ### Curve types
 
