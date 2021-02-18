@@ -19,6 +19,7 @@ Suitable for large or sudden (fluctuations in) capacity
 * Storage in lithium-ion batteries
 * Storage in flywheels 
 * Dispatchable power and heat plants 
+* Demand side response
 
 Suitable for both volume and capacity
 * Imports/exports of electricity
