@@ -8,7 +8,7 @@ The category bar chart shows query values in a stacked columns, split into diffe
 
 ## Chart options
 
-Create a category bar chart by setting the `output_element_type` to "category_bar".
+Create a category bar chart by setting the `output_element_type_name` to "category_bar".
 
 ### `config.period`
 
