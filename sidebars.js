@@ -102,10 +102,7 @@ module.exports = {
       type: "category",
       label: "4. Modelling Principles",
       collapsed: true,
-      items: [
-        "main/energy-calculations",
-        "main/useful-demand",
-      ],
+      items: ["main/energy-calculations", "main/useful-demand"],
     },
     {
       type: "link",
@@ -130,6 +127,12 @@ module.exports = {
         "contrib/molecules",
         "contrib/waste-outputs",
       ],
+    },
+    {
+      type: "category",
+      label: "Charts",
+      collapsed: false,
+      items: ["contrib/charts/category-bar"],
     },
     {
       type: "category",
