@@ -14,9 +14,9 @@ Create a category bar chart by setting the `output_element_type_name` to "catego
 
 The only option unique to the category bar chart is `config.period` whose value may be:
 
-* *(blank)* – When no `period` is specified, both present and future values are drawn on the chart.
-* "present" – Only values for the present are shown.
-* "future" – Only values for the future are shown.
+* **(blank)** – When no `period` is specified, both present and future values are drawn on the chart. You may omit the `config` attribute entirely when this is the case.
+* **present** – Only values for the present are shown.
+* **future** – Only values for the future are shown.
 
 For example:
 
