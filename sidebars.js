@@ -67,7 +67,6 @@ module.exports = {
               Heat: [
                 "main/heat-networks",
                 "main/heat-pumps",
-                "main/insulation",
                 "main/residual-heat-industry",
               ],
             },
