@@ -41,7 +41,7 @@ This chart shows the monthly total <i>volumes</i> for supply and demand of elect
 ![Chart 2: Imbalance of monthly supply and demand volumes](/img/docs/20210202_Imbalance_of_monthly_supply_and_demand_volumes.png)
 
 This chart shows the monthly imbalance between supply and demand <i>volumes</i> for electricity, gas,
-hydrogen and heat. The imbalance is calculated by subtracting the baseload demand from the inflexible supply, this is called the "residual load". Negative values mean "surpluses" of energy and positive values "shortages". This chart gives insight into the balance of your energy system throughout the year: in which months does an imbalance occur? Which carriers are not in balance? Are these shortages or surpluses of energy?
+hydrogen and heat. The imbalance is calculated by subtracting the inflexible supply from the baseload demand, this is called the "residual load". Negative values mean "surpluses" of energy and positive values "shortages". This chart gives insight into the balance of your energy system throughout the year: in which months does an imbalance occur? Which carriers are not in balance? Are these shortages or surpluses of energy?
 
 ## Chart 3: The need for flexibility: volume
 
