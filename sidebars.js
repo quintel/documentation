@@ -55,9 +55,9 @@ module.exports = {
         {
           Flexibility: [
             "main/flexibility",
-            "main/excess-electricity",
             {
               Electricity: [
+                "main/excess-electricity",
                 "main/dynamic-demand-curve",
                 "main/loss-of-load-expectation",
                 "main/network",
@@ -67,7 +67,6 @@ module.exports = {
               Heat: [
                 "main/heat-networks",
                 "main/heat-pumps",
-                "main/insulation",
                 "main/residual-heat-industry",
               ],
             },
@@ -102,10 +101,7 @@ module.exports = {
       type: "category",
       label: "4. Modelling Principles",
       collapsed: true,
-      items: [
-        "main/energy-calculations",
-        "main/useful-demand",
-      ],
+      items: ["main/energy-calculations", "main/useful-demand"],
     },
     {
       type: "link",
@@ -130,6 +126,12 @@ module.exports = {
         "contrib/molecules",
         "contrib/waste-outputs",
       ],
+    },
+    {
+      type: "category",
+      label: "Charts",
+      collapsed: false,
+      items: ["contrib/charts/category-bar"],
     },
     {
       type: "category",

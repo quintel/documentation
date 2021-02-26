@@ -16,12 +16,12 @@ _Note: CHPs are included in the Electricity category.
 Fuel costs of heating technologies using electricity or hydrogen are not included. These costs are taken into account in the [Electricity](#electricity) and [Hydrogen](#hydrogen) sections._
 
 ### Electricity
-Similar to the heat category, this includes all costs related to electricity production, including CHPs. In addition, costs of imported electricity are taken into account.
+Similar to the heat category, this includes all costs related to electricity production, including CHPs. In addition, costs of imported electricity are taken into account. This category also includes additional investment and O&M costs for power plants with carbon capture.
 
 _Note: The ETM does not compute revenues from electricity export._
 
 ### Hydrogen
-Similar to heat and electricity, this includes all costs related to hydrogen production. In addition, costs of imported hydrogen, hydrogen infrastructure costs and hydrogen storage costs are taken into account.
+Similar to heat and electricity, this includes all costs related to hydrogen production. In addition, costs of imported hydrogen, hydrogen infrastructure costs and hydrogen storage costs are taken into account. This category also includes additional investment and O&M costs for hydrogen plants with carbon capture.
 
 _Note: The ETM does not compute revenues from hydrogen export._
 
@@ -39,7 +39,7 @@ The network cost include annual investment and maintenance costs for both the po
 _Note: Hydrogen and district heating infrastructure costs are included in the [Hydrogen](#hydrogen) and [Heat](#heat) categories._
 
 ### Insulation
-This category includes costs for insulation in the households and buildings sector. 
+This category includes costs for insulation in the households and buildings sector.
 
 _Checkout: the [insulation](insulation.md) infopage for more information._
 
@@ -54,9 +54,9 @@ This category includes (additional) investment costs in electric cars and hydrog
 
 ### Carbon capture, utilisation and storage (CCUS)
 This category includes depreciation costs, costs of capital, operation and maintenance costs for:
-* carbon capture technologies (in industry, energy sector, DAC)
+* carbon capture technologies (in industry and DAC)
 * sequestration of CO<sub>2</sub>
 * utilisation of CO<sub>2</sub> (production of synthetic methanol, kerosene)
 * transport of CO<sub>2</sub> (via pipelines, ships)
 
-_Note: Energy costs (fuel costs) for CO<sub>2</sub> capture, sequestration, transport and storage are included in the Electricity (e.g. compression) and Hydrogen (e.g. feedstock input for synthetic methanol or kerosene) series._
+_Note: Additional investment and O&M costs for carbon capture in power plants and hydrogen plants is included in the Electricity and Hydrogen categories. Energy costs (fuel costs) for CO<sub>2</sub> capture, sequestration, transport and storage are included in the Electricity (e.g. compression) and Hydrogen (e.g. feedstock input for synthetic methanol or kerosene) series._
