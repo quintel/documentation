@@ -2,7 +2,7 @@
 title: Overview of costs per sector
 ---
 
-Below you can find an overview of the different cost components that are taken into account by the ETM per sector. You can use this to gain a better understanding of the cost calculations in the ETM and cost results in your scenario. 
+Below you can find an overview of the different cost components that are taken into account by the ETM per sector. You can use this to gain a better understanding of the cost calculations in the ETM and cost results in your scenario.
 
 ## Households
 |  ***Subject***   | ***Cost components***  |
@@ -40,7 +40,6 @@ Below you can find an overview of the different cost components that are taken i
 | Heating technologies | Investment, O&M, fuel costs
 | Appliances | Fuel costs
 | Feedstock | Fuel costs
-| CCS | Cost per captured tonne CO<sub>2</sub>
 
 ## Flexibility
 |  ***Subject***   | ***Cost components***  |
