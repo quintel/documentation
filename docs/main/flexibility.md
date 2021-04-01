@@ -76,7 +76,7 @@ It is important to note that the categorization of technologies according to the
 
 See the [Flexibility → Excess electricity](https://pro.energytransitionmodel.com/scenario/flexibility/excess_electricity/order-of-flexibility-options) section of the model.
 
-#### Inflexible suppply
+#### Inflexible supply
 
 * Includes:
   * Must-run / volatile: wind turbines, solar panels, hydro power, must-run nuclear plants
