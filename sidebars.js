@@ -23,18 +23,6 @@ module.exports = {
           Dashboard: [
             "main/dashboard",
             "main/primary-energy",
-            {
-              Emissions: [
-                "main/co2-main-principles",
-                "main/general-emissions",
-                "main/co2-overview-per-sector",
-                "main/co2-emission-factors",
-                "main/co2-1990-emissions",
-                "main/co2-emissions-import-export",
-                "main/co2-biomass",
-                "main/co2-negative-emissions",
-              ],
-            },
             "main/import-calculations",
             "main/cost-dashboard",
             "main/renewability",
@@ -73,6 +61,19 @@ module.exports = {
             "main/curves",
             "main/weather-conditions",
             "main/outdoor-temperature",
+          ],
+        },
+        {
+          Emissions: [
+            "main/co2-main-principles",
+            "main/greenhouse-gases",
+            "main/co2-overview-per-sector",
+            "main/co2-emission-factors",
+            "main/co2-1990-emissions",
+            "main/co2-emissions-import-export",
+            "main/co2-biomass",
+            "main/co2-negative-emissions",
+            "main/emissions-footprint"
           ],
         },
         {

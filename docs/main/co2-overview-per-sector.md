@@ -1,5 +1,6 @@
 ---
 title: Overview of emissions per sector
+sidebar_label: Emissions per sector
 ---
 
 In the ETM emissions from different sectors are taken into account to calculate the total emissions in your scenario. Every sector has a different scope when it comes to which emissions are taken into account and which are not. This page explains how this scope is defined in the ETM per sector which you can use to gain a better understanding of the total emissions displayed on the dashboard. 
