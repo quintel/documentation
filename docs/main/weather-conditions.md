@@ -44,5 +44,4 @@ Just as for default setting for weather years, temperature curves are based on m
 
 ### Space heating
 
-_Checkout: the [space heating curves](https://github.com/quintel/etdataset-public/tree/master/curves/demand/households/space_heating) for more details about space heating. 
->>>>>>> f0b6a83 (Documentation update of pages)
+See the [space heating curves](https://github.com/quintel/etdataset-public/tree/master/curves/demand/households/space_heating) for details 
