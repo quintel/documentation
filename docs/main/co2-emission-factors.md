@@ -2,7 +2,7 @@
 title: Emission factors
 ---
 
-(Carbon) Emission factors describe the amount of CO<sub>2</sub> emissions emitted as a result of the generation of electricity. The following page displays all emission factors used in the calculation of (total) emissions in the ETM. This is mainly relevant when choosing a technique for the generation of energy in the (Supply)[https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants] section of the ETM.
+(Carbon) emission factors describe the amount of CO<sub>2</sub> emissions emitted as a result of energy use. The following page displays all emission factors used in the calculation of (total) energetic CO<sub>2</sub> emissions in the ETM, as well as examples on how these emissions are calculated. For the calculation of non-energetic emissions and other greenhouse gases, please check the [Greenhouse gases](greenhouse-gases) article.
 
 ## Overview
 The emission factors for energy carriers may vary per region. For example, the (organic) composition of coal or waste depends on where these carriers are sourced and hence so does their CO<sub>2</sub> content. The ETM supports this by specifying emission factors per country in the [ETDataset country analysis](https://github.com/quintel/etdataset-public).

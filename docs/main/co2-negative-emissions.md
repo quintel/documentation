@@ -4,14 +4,14 @@ title: Negative emissions
 The ETM supports so-called 'negative' emissions. Negative emissions arise when more CO<sub>2</sub> is drawn from the ambient air than is added to it. In the ETM, there are two ways to bring about negative emissions:
 
 1. By applying carbon capture to processes using biomass. This is possible for:
-  * Coal-fired power plants with biomass co-firing
-  * Gas-fired power plants using green gas
-  * Hydrogen production with biomass gasification technology
-  * Direct use of biomass in industry, for both feedstock and combustion
+    * Coal-fired power plants with biomass co-firing
+    * Gas-fired power plants using green gas
+    * Hydrogen production with biomass gasification technology
+    * Direct use of biomass in industry, for both feedstock and combustion
 
 2. By using Direct Air Capture
 
-You can do this in the Supply > ['CCUS'](https://pro.energytransitionmodel.com/scenario/supply/ccus/capture-of-co2)
+You can make assumptions about this in the Emissions > ['CCUS'](https://pro.energytransitionmodel.com/scenario/emissions/ccus/capture-of-co2)
 
 Below, both routes are explained in more detail.
 
