@@ -5,8 +5,8 @@ This article contains background information for the following overview chart:
 
 ![](/img/docs/greenhouse-gas-footprint.png)
 
-In the Results & Data > Visuals > [Greenhouse gas footprint](http://localhost:4000/scenario/data/data_visuals/greenhouse-gas-footprint) section you can find and download a summary of all greenhouse gas emissions.
-The summary is based on the energetic CO<sub>2</sub> emissions calculated by the ETM based on energy demand and supply, as well as the energetic other greenhouse gases, non-energetic CO<sub>2</sub> and non-energetic other greenhouse gases determined in the Emissions > [Greenhouse gases](energytransitionmodel.com/scenario/emissions/other_emissions/overview) section in the ETM.
+In the Results & Data > Visuals > [Greenhouse gas footprint](https://pro.energytransitionmodel.com/scenario/data/data_visuals/greenhouse-gas-footprint) section you can find and download a summary of all greenhouse gas emissions.
+The summary is based on the energetic CO<sub>2</sub> emissions calculated by the ETM based on energy demand and supply, as well as the energetic other greenhouse gases, non-energetic CO<sub>2</sub> and non-energetic other greenhouse gases determined in the Emissions > [Greenhouse gases](https://pro.energytransitionmodel.com/scenario/emissions/other_emissions/overview) section in the ETM.
 
 This page shortly explains what falls under the different categories in every graph.
 

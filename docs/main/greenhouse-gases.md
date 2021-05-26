@@ -8,7 +8,7 @@ The ETM calculates the amount of CO<sub>2</sub> that is emitted as a result of e
 * Other greenhouse gas emissions which are emitted as a result of energy use, such as methane (CH<sub>4</sub>) or nitrous oxide (N<sub>2</sub>O)
 * Other greenhouse gas emissions from non-energetic activities, such as methane emissions from manure in agriculture
 
-You can adjust these greenhouse gas emission in the Emissions > [Greenhouse gases](energytransitionmodel.com/scenario/emissions/other_emissions/overview) section in the ETM. This page further explains how these ‘other emissions’ are defined within the ETM.
+You can adjust these greenhouse gas emission in the Emissions > [Greenhouse gases](https://pro.energytransitionmodel.com/scenario/emissions/other_emissions/overview) section in the ETM. This page further explains how these ‘other emissions’ are defined within the ETM.
 
 ## Types of greenhouse gases
 Apart from CO<sub>2</sub> there are many other greenhouse gases (GHG) that are important to consider when trying to decelerate climate change. The following greenhouse gases were taken into account for the calculation of other greenhouse gases (GHG):
@@ -20,7 +20,7 @@ Apart from CO<sub>2</sub> there are many other greenhouse gases (GHG) that are i
 -	nitrogen trifluoride (NF<sub>3</sub>)
 
 ## Emission categories per slider
-In the Emissions > [Greenhouse gases](energytransitionmodel.com/scenario/emissions/other_emissions/overview) section in the ETM you can adjust the future emissions of non-energetic CO<sub>2</sub> and other greenhouse gases using slider.
+In the Emissions > [Greenhouse gases](https://pro.energytransitionmodel.com/scenario/emissions/other_emissions/overview) section in the ETM you can adjust the future emissions of non-energetic CO<sub>2</sub> and other greenhouse gases using slider.
 
 Every slider corresponds with a (set of) categories defined by the UNFCCC, which are also used by the European Environment Agency (EEA). Categories that were not included within the calculation of emissions are ‘category 4. Land Use, Land-Use Change and Forestry (‘LULUCF’)’ and ‘category 6. Other Sector’. All CO<sub>2</sub>-emissions from ‘Catgory 1. Energy’ as well as the production of fertilizer (ammonia) described in ‘category 2.B.1’ are derived by the ETM based on energy demand and supply. Therefore these categories are not included as sliders in the Emissions section of the model but rather a result of the choices you make in the Demand and Supply sections.
 

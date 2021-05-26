@@ -26,7 +26,7 @@ _Checkout: the ['Emissions from imported electricity'](co2-emissions-import-expo
 
 * LULUCF (Land Use, Land Use Change, and Forestry) emissions are out of scope. For more information on these definitions click [here](http://www.eea.europa.eu/publications/emep-eea-emission-inventory-guidebook-2009/part-b-sectoral-guidance-chapters).
 
-* Other greenhouse gases and CO<sub>2</sub> emissions from non-energetic processes are calculated seperately. These emissions can be adjusted in the Emissions > [Greenhouse gases](energytransitionmodel.com/scenario/emissions/other_emissions/overview) section in the ETM. As stated briefly above, there are two exceptions to this:
+* Other greenhouse gases and CO<sub>2</sub> emissions from non-energetic processes are calculated seperately. These emissions can be adjusted in the Emissions > [Greenhouse gases](https://pro.energytransitionmodel.com/scenario/emissions/other_emissions/overview) section in the ETM. As stated briefly above, there are two exceptions to this:
 	* The ETM does include the calculation of CO<sub>2</sub> emissions resulting from natural gas feedstock in the fertilizer industry. This gas is used in Steam Methane Reformers to produce hydrogen feedstock. As this is closely tied to the energy system and virtually all of this CO<sub>2</sub> is emitted, it is included in the ETM.
 	* The ETM does include the calculation of emissions related to final demand of non-energetic hydrogen. Users can make explicit assumptions about how this hydrogen is produced in the [hydrogen section](https://pro.energytransitionmodel.com/scenario/supply/hydrogen/hydrogen-production). As such, the ETM is able to determine the emissions related to this.
 
