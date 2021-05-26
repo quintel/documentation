@@ -1,8 +1,14 @@
 ---
-title: Overview of emissions per sector
+title: Overview of emissions per sector chart
+sidebar_label: Emissions per sector chart
 ---
 
-In the ETM emissions from different sectors are taken into account to calculate the total emissions in your scenario. Every sector has a different scope when it comes to which emissions are taken into account and which are not. This page explains how this scope is defined in the ETM per sector which you can use to gain a better understanding of the total emissions displayed on the dashboard. 
+This article explains the following chart:
+![](/img/docs/co2-emissions-chart.png)
+
+This chart does not include other greenhouse gas emissions apart from CO<sub>2</sub>. Also, non-energetic CO<sub>2</sub> emissions are not included, with the exception of the Fertilizer industry and hydrogen feedstock use.
+
+In the ETM emissions from different sectors are taken into account to calculate the total emissions in your scenario. Every sector has a different scope when it comes to which emissions are taken into account and which are not. This page explains how this scope is defined in the ETM per sector which you can use to gain a better understanding of the total emissions displayed on the dashboard.
 
 ## Emissions per sector
 The following is included per category:
