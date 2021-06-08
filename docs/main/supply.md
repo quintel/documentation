@@ -36,5 +36,5 @@ In the Transport fuels section you can adjust the type of fuel used by road tran
 In the biomass section you can choose how much biomass should be used as green gass in the gas network or production, or as bio-coal or -oil in energy plants. Furthermore, you can specify the total amount of biomass available in your scenario region by adjusting the sliders in the ‘potential of biomass’ section. Since biomass emissions are officially not considered in the EU you have the possibility to change this in the ‘CO<sub>2</sub> emissions of biomass’ section.
 
 ## Fuel production
-Fuel production is supported by the extraction of energy carriers such as coal or natural gas (‘primary carriers’). These are converted to useful carriers such as electricity or heat. In the fuel production section it is not possible to adjust the production of such energy carriers (yet) due to the complexity of this topic for users. Rather, the annual production of these energy carriers is shown for your specific scenario region to give an insight into this process. 
+Fuel production is supported by the extraction of energy carriers such as coal or natural gas (‘primary carriers’). These are converted to useful carriers such as electricity or heat. In the fuel production section it is possible to adjust the production of such energy carriers.
 
