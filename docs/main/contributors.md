@@ -13,7 +13,7 @@ Start with data if you want to know what data or publications were used for the 
 Start with code if you want to build on the ETM code.
 
 ### Start with data
-The data-flow of the ETM starts with the energy balance of a country (or a group of countries as in the EU version of the model). We currently use the IEA energy balances because they are available for all countries, in the same format and can be bought online. The energy balance is a matrix of numbers that describe the energy flows of a country broken down in carrier (along one axis) and sectors, applications etc (along the other axis).
+The data-flow of the ETM starts with the energy balance of a country (or a group of countries as in the EU version of the model). We currently use the Eurostat energy balances because they are available for all European countries, in the same format and are publicly available online. The energy balance is a matrix of numbers that describe the energy flows of a country broken down in carrier (along one axis) and sectors, applications etc (along the other axis).
 
 Apart from the energy balance, the ETM needs information about the current state of affairs in the country you want to model in the ETM. Such information includes (amongst others) the number of inhabitants and the fraction of LED lamps. We call this type of information 'assumptions'.
 
