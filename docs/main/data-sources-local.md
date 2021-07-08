@@ -4,7 +4,7 @@ title: Regionale data in het ETM
 
 _Note: Regional data (ET-local) is currently only available in Dutch, this information is therefore provided in Dutch._
 
-Op deze pagina staat een overzicht van de gebruikte data voor de Nederlandse gemeenten, (RES-)regio's en provincies in het Energietransitiemodel. De standaard databronnen, aannames en methoden staan op deze pagina beschreven. Per regio kan hiervan worden afgeweken op basis van lokale informatie. De actuele stand van zaken per regio is te vinden op [ETLocal](#etlocal). Deze data wordt door het gehele model gebruikt om het startpunt van een scenario te bepalen. 
+Op deze pagina staat een overzicht van de gebruikte data voor de Nederlandse gemeenten, (RES-)regio's en provincies in het Energietransitiemodel. De standaard databronnen, aannames en methoden staan op deze pagina beschreven. Per regio kan hiervan worden afgeweken op basis van lokale informatie. De actuele stand van zaken per regio is te vinden op de [ETM Data Manager](#data-manager). Deze data wordt door het gehele model gebruikt om het startpunt van een scenario te bepalen.
 
 ## Huishoudens
 |  | Bron  | Opmerking  | KM code(s) | KM onderwerp(en) |
@@ -90,7 +90,7 @@ Op deze pagina staat een overzicht van de gebruikte data voor de Nederlandse gem
 ||
 | ***Emissies*** | | |  |  |
 | Emissies 1990 | Emissieregistratie (bewerking) | |   |  |
-| Emissies van 'overige broeikasgassen' (methaan e.d.) voor gebouwde omgeving, transport, industrie en landbouw | Emissieregistratie | |  |  |
+| Niet-energetische emissies en emissies van 'overige' broeikasgassen | Emissieregistratie | Zie [Broeikasgassen](#broeikasgassen)|  |  |
 ||
 | ***Potenties*** | | |  |  |
 | Zon op dak voor huishoudens en gebouwen | Diverse bronnen | Afhankelijk van beschikbare data. Het ETM rekent met netto geschikt dakoppervlak: het aantal m<sub>2</sub> dat volledig bedekt kan worden met zonnepanelen.  |  |
@@ -131,6 +131,17 @@ De reden dat (8), bijstook van biomassa in elektriciteitscentrales, in het ETM t
 ## Emissies 1990
 Zie het aparte artikel over [1990-emissies](co2-1990-emissions.md).
 
+## Broeikasgassen
+Het ETM berekent de CO<sub>2</sub>-uitstoot die vrijkomt bij het gebruik van energie ('energetische uitstoot') in een gebied op basis van de energiegebruiken van dat gebied. Voor het heden komt de data over deze energiegebruiken grotendeels van Klimaatmonitor, zoals hierboven beschreven.  Naast deze energetische CO<sub>2</sub>-uitstoot heeft het ETM ook gegevens over drie andere soorten uitstoot van broeikasgassen:
+1. Energetische uitstoot van andere broeikasgassen (zoals methaan dat vrijkomt in verwarmingsketels of lachgas in uitlaatgassen)
+2. Niet-energetische uitstoot van CO<sub>2</sub> (bijvoorbeeld door het gebruik van grondstoffen in de industrie)
+3. Niet-energetische uitstoot van andere broeikasgassen (zoals methaanuitstoot van landbouwdieren en vuilstortplaatsen).
+
+De data voor deze drie soorten uitstoot zijn afkomstig van Emissieregistratie. Emissieregistratie heeft per gemeente uitstootgegevens voor 13 verschillende broeikasgassen en ongeveer 350 verschillende emissieoorzaken. Quintel heeft per combinatie van broeikasgas en emissieoorzaak bepaald of deze emissieoorzaak energetisch of niet-energetisch is. Hiermee kan per gemeente voor de bovenstaande drie soorten uitstoot worden bepaald hoe hoog de uitstoot is.
+
+_Aandachtspunt: De data op gemeenteniveau van Emissieregistratie maakt geen onderscheid tussen emissies die meetellen volgens de richtlijnen van het IPCC en emissies die hiervoor niet meetellen (zoals uitstoot van biomassa of internationale lucht- en zeescheepvaart). Quintel filtert deze laatste emissies uit de data om aan te sluiten bij de IPCC-richtlijnen. Gebruikers kunnen er in het ETM zelf voor kiezen om uitstoot van biomassa en internationaal transport alsnog aan hun scenario toe te voegen._
+
+
 ## Ontbrekende data
 Voor sommige regio's ontbreekt data voor een bepaalde sector of drager op Klimaatmonitor. Bijvoorbeeld omdat informatie vertrouwelijk is of herleidbaar naar individuele bedrijven. Quintel doet in dit geval een zo goed mogelijke schatting op basis van informatie die wel beschikbaar is. We proberen de ordegrootte te bepalen van de ontbrekende data. Hiervoor gebruiken we (een combinatie van) de volgende methodes:
 * We kijken of data wel beschikbaar is voor eerdere jaren.
@@ -141,7 +152,5 @@ Belangrijk is dat het totale energiegebruik en het totale energiegebruik per hoo
 
 _Voorbeeld: Volgens Klimaatmonitor is het totale elektriciteitsgebruik in regio X 100 TJ. Voor landbouw en industrie is er geen data gepubliceerd vanwege vertrouwelijkheid, maar deze verbruiken zijn wel verwerkt in het totale elektriciteitsgebruik. Voor de andere sectoren telt het elektriciteitsgebruik op tot 60 TJ. Quintel schat het verbruik van landbouw en industrie met behulp van bovenstaande methodes. Het totaal van landbouw en industrie kan niet hoger zijn dan 40 TJ, omdat anders het totaal van 100 TJ wordt overschreden._
 
-## ETLocal
-Uitgebreide informatie over de gebruikte data en bronnen per regio in het ETM is te vinden op [ETLocal](https://beta-local.energytransitionmodel.com/). Hier kun je de regio op de kaartlaag selecteren en vervolgens per sector de input-data bekijken.
-
-_Note: ETLocal is op dit moment nog in ontwikkeling. De dienst kan daardoor instabiel zijn en/of aan verandering onderhevig._
+## Data Manager
+Uitgebreide informatie over de gebruikte data en bronnen per regio in het ETM is te vinden op de [ETM Data Manager](https://data.energytransitionmodel.com/). Hier kun je een regio selecteren en vervolgens per sector de input-data bekijken.
