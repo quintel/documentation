@@ -37,7 +37,6 @@ module.exports = {
             "main/balancing-demand",
             "main/hydrogen",
             "main/biomass",
-            "main/co2-ccus",
           ],
         },
         {
@@ -71,6 +70,7 @@ module.exports = {
             "main/co2-1990-emissions",
             "main/co2-emissions-import-export",
             "main/co2-biomass",
+            "main/co2-ccus",
             "main/co2-negative-emissions",
             "main/co2-overview-per-sector",
             "main/emissions-footprint"
