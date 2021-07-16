@@ -154,6 +154,7 @@ module.exports = {
       label: "Endpoints",
       collapsed: false,
       items: [
+        "api/scenario-basics",
         "api/custom-curves",
         "api/flexibility-order",
         "api/heat-network-order",
