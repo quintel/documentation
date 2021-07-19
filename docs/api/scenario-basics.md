@@ -92,7 +92,7 @@ Content-Type: application/json; charset=utf-8
 ### The `detailed` parameter
 
 The information supplied by the GET request will by default not contain slider settings. Adding
-the paramater `detailed` with a truthy value to the request will have the response include an extra
+the parameter `detailed` with a truthy value to the request will have the response include an extra
 object called `user_values`. This object contains a key, value pair for each slider that has been touched.
 
 ```http title="Example request"
@@ -132,7 +132,7 @@ be supplied:
 
 * `area_code` - the code of the desired area, default: 'nl'
 * `title` - title of the scenario, default: 'API'
-* `end_year` - end year of the scenario, integer, default: 2015
+* `end_year` - end year of the scenario, integer, default: 2050
 * `source` - identifier for the application creating the scenario (highly recommended), default: null
 
 <ApiEndpoint data={endpointData.create} />
@@ -215,11 +215,6 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-:::warning Balancing groups
-Some sliders are grouped in a 'share group' to together sum to 100%. An error will be returned if
-you try to set all inputs in such a group without making sure the group still makes exactly 100.0.
-:::
-
 ### Create a Scenario based on another Scenario
 
 Creates a scenario with another scenario as [preset](#preset-scenarios). The only data that needs to
@@ -272,7 +267,7 @@ A list of all available sliders for the scenario, with their min and max values,
 through the inputs endpoint: `GET /api/v3/scenarios/{scenario_id}/inputs`.
 :::
 
-Updates the user values of a scenario with the supplied `user_values`. The `detailed` parameter
+Updates the user values of a scenario with the provided `user_values`. The `detailed` parameter
 may also be supplied with the data.
 
 <ApiEndpoint data={endpointData.update} />
@@ -307,6 +302,11 @@ Content-Type: application/json; charset=utf-8
   }
 }
 ```
+
+:::warning Balancing groups
+Some sliders are grouped in a 'share group' to together sum to 100%. An error will be returned if
+you try to set all inputs in such a group without making sure the group still makes exactly 100.0.
+:::
 
 ## Query a Scenario
 
