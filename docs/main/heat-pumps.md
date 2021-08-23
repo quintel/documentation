@@ -66,7 +66,7 @@ _Checkout: the threshold COP sliders in the ETM in the [Flexibility → Net load
 
 To help you decide the cost-optimal COP setting from a consumer perspective, a special chart is added to the ETM. It shows how much it costs to make a unit of heat with the HHP for space heating. For the gas part, these costs are independent of the COP (and therefore the outside temperature). The costs for the electrical part are decreasing with increasing COP (and increasing outside temperature). The intersection of the two curves is the cost-optimal COP setting for space heating for the given cost price gas and electricity. This assumed cost price of gas and electricity can be set with sliders.
 
-![](/img/docs/20200320_HHP_cost_optimal_COP_chart.png)
+![](/img/docs/20210730_HHP_cost_optimal_COP_chart.png)
 
 ![](/img/docs/20200313_HHP_COP_gas_electricity_costs_sliders.png)
 
