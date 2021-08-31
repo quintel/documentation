@@ -73,7 +73,7 @@ module.exports = {
             "main/co2-ccus",
             "main/co2-negative-emissions",
             "main/co2-overview-per-sector",
-            "main/emissions-footprint"
+            "main/emissions-footprint",
           ],
         },
         {
@@ -125,6 +125,7 @@ module.exports = {
         "contrib/intro",
         "contrib/fever",
         "contrib/molecules",
+        "contrib/user-curves",
         "contrib/waste-outputs",
       ],
     },

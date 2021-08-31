@@ -11,10 +11,6 @@ Curves are used extensively within the ETM to control the behavior of various te
 
 In some cases it's possible for a user to upload a custom curve, which will be used instead of the defaults. For example, uploading a curve to change the price of imported electricity changes when it is profitable to import electricity rather than generating it domestically.
 
-:::danger Breaking API Change - February 2021
-Between the release of custom curves in mid-2020 and February 2021, the curve `key` was called `type`. After this time `type` was changed to describe the category to which the curve belongs, rather than being a unique key.
-:::
-
 ## The Curve object
 
 Endpoints which provide data about a curve (or curves), will return the following information:
@@ -136,6 +132,37 @@ Content-Type: application/json; charset=utf-8
   }
 ]
 ```
+
+#### `include_internal` parameter
+
+Some curves may be customised which are not normally included in the list of custom curves. This is because they are intended for internal use or for advanced users only. These curves are often not documented and may have dependencies on one another (such as household insulation).
+
+Sending the `include_internal` parameter will result in these curves appearing in the list of available curves.
+
+```http title="Example request"
+GET /api/v3/scenarios/0/custom_curves?include_internal=true HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+```
+
+```http title="Example response"
+HTTP/2 200 OK
+Content-Type: application/json; charset=utf-8
+
+[
+  {
+    "key": "weather/insulation_corner_houses_high",
+    "type": "profile",
+    "attached": false,
+    "overrides": [],
+    "internal": true
+  }
+]
+```
+
+:::info
+The Energy Transition Model can make no guarantees about the validity of your scenario results when customising internal curves.
+:::
 
 ## Get a custom curve
 
