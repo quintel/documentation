@@ -7,7 +7,7 @@ Advanced users of the ETM are allowed to upload custom curves, which will be use
 
 ## Defining a custom curve
 
-An ETSource configuration file – [config/user_curves.csv](https://github.com/quintel/etsource/blob/master/config/user_curves.yml) – defines which curves may be customized by visitors. Each custom CSV is listed as it would be in a merit order configuration, with any settings needed to instruct ETEngine how to process the uploads.
+An ETSource configuration file – [config/user_curves.yml](https://github.com/quintel/etsource/blob/master/config/user_curves.yml) – defines which curves may be customized by visitors. Each custom CSV is listed as it would be in a merit order configuration, with any settings needed to instruct ETEngine how to process the uploads.
 
 Keys are set as they would appear in a merit order configuration without the ".csv" suffix.
 
