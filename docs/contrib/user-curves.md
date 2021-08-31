@@ -78,6 +78,20 @@ There are several available reducers which may be configured using the `as` attr
 
 The `sets` attribute defines one or more inputs which will be set to the reduced curve value. The corresponding sliders in ETModel will be disabled. The input value will be removed if the user later removes their custom curve.
 
+## Internal curves
+
+Some advanced users wish to be able to customise curves that should not be available to the general public through ETModel. Examples include insulation curves, where uploading several curves is required in order for the scenario to function as expected, and for which there is little – or no – public documetation.
+
+A curve can be set as "internal" with the attribute:
+
+```yaml
+weather/insulation_corner_houses_high:
+  type: profile
+  internal: true
+```
+
+Internal curves will not appear in the list of available curves in ETModel.
+
 ## Limitations
 
 Users may only upload curves which exist as a CSV in ETSource. For example, customising [the buildings_cooling.csv file](https://github.com/quintel/etsource/blob/master/datasets/nl/curves/buildings_cooling.csv) is allowed, as is [the air_temperature.csv weather curve](https://github.com/quintel/etsource/blob/master/datasets/nl/curves/weather/default/air_temperature.csv), but changing a dynamic profile (such as "dynamic: ev_demand") is not.

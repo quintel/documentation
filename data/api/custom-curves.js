@@ -23,6 +23,12 @@ export default {
     ],
     parameters: [
       {
+        name: "include_internal",
+        type: "boolean",
+        description:
+          'see <a href="#include_internal-parameter">include_internal parameter</a>',
+      },
+      {
         name: "include_unattached",
         type: "boolean",
         description:
