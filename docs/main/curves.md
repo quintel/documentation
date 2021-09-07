@@ -41,11 +41,9 @@ The ETM had three types of curves: demand curves, supply curves and time curves.
 |---|---|---|
 |Solar PV|["Open Power System Data platform"](https://data.open-power-system-data.org) |Profile from measured data, adjusted to match country specific full load hours|
 |Solar Thermal|["KNMI"](https://knmy.readthedocs.io/en/latest/) |Profile from measured data, adjusted to solar-thermal behaviour|
-|Wind|["Open Power System Data platform"](https://data.open-power-system-data.org)|Profile from measured data, adjusted to match country specific full load hours|
+|Wind|["Open Power System Data platform"](https://data.open-power-system-data.org) and [Renewables.ninja](https://www.renewables.ninja/) |OPSD: Profile from measured data, adjusted to match country specific full load hours. Renewables.ninja: Modelled profiles available from 1980-present using satellite weather data. |
 |Other|Geothermal heat, geothermal power, hydro, biogas CHP, waste incinerator|Flat curve||
 |Dispatchable technologies||Production determined by [merit order](merit-order.md)|
-
-For NL2015 the OPSD data is incomplete (< 98% of data points available) Hence, different sources (SoDa: Solar Radiation Data for PV and Ecofys data for wind) have been used to generate this curve.
 
 ### Time curves
 Time curves define how the national production of energy carriers changes over the years (up to 2040)
