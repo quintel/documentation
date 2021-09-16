@@ -137,6 +137,12 @@ module.exports = {
     },
     {
       type: "category",
+      label: "Dataset manager",
+      collapsed: false,
+      items: ["contrib/dataset-manager/data-migrations"],
+    },
+    {
+      type: "category",
       label: "Adding new features",
       collapsed: false,
       items: ["contrib/authoring-docs"],
