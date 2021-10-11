@@ -1,6 +1,13 @@
 ---
-title: Excess Electricity
+title: Electricity conversion
 ---
+
+{WRITE}
+
+{SHORT DESCRIPTION OF TECHNOLOGY}
+{DESCRIPTION OF WILLINGNESS-TO-PAY}
+{EXPLANATION OF ACTIVE ROLE IN MARKET CLEARING}
+{REFERENCE TO MERIT ORDER}
 
 Wind turbines and solar panels are subject to volatile natural patterns. It can be difficult to match this volatile pattern with the demand pattern. As a result, excesses in electricity can occur, especially with a large capacity of volatile production. To prevent curtailment of this excess electricity, the ETM contains several flexibility technologies that can make good use of it. You can find these options in the Flexibility > ['Excess electricity'](https://pro.energytransitionmodel.com/scenario/flexibility/excess_electricity/order-of-flexibility-options) section of the ETM. This page explains the different flexibility options in the ETM. 
 

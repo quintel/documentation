@@ -1,0 +1,5 @@
+---
+title: Electricity storage
+---
+
+{WRITE}
