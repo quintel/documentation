@@ -40,13 +40,11 @@ Where T is the ambient temperature.
 
 ![](/img/docs/20170921_COP_water.png)
 
-More information about the sources behind specifications of heat pump ground can be found here: [Documentation heat pump air - space heating](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_space_heater_heatpump_air_water_electricity.converter.xlsx) and here: [Documentation heat pump air - hot water](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_water_heater_heatpump_air_water_electricity.converter.xlsx).
+More information about the sources behind specifications of heat pump ground can be found here: [Documentation heat pump air - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_heatpump_air_water_electricity.converter.xlsx) and here: [Documentation heat pump air - hot water](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_water_heater_heatpump_air_water_electricity.converter.xlsx).
 
 ## Hybrid heat pumps
 
 The COP of hybrid heat pumps (HHPs) is different from air-source heat pumps (ASHPs). HHPs are often installed in less insulated houses compared to air-source heat pumps and additionally these houses have different heat delivery systems, so the required output temperature of HHPs is higher than for ASHPs. Instead of 35°C output temperature, which is used for ASHPs, 45°C output temperature for HHPs is assumed. With this output temperature and the cost-optimal threshold COP (about the threshold COP you can find more information below), the HHP electricity share for houses with energy label B is 64%.
-
-![](/img/docs/20200402_COP_hhp_outside_temp.png)
 
 ![](/img/docs/20200401_hhp_gas_elec_share.png)
 
@@ -54,7 +52,7 @@ The equation used is:
 
 `  COP (T) = 2.323 + 0.0578 * T  		(3)`
 
-_Sources: [Documentation hybrid heat pump (gas) - space heating](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_space_heater_hybrid_heatpump_air_water_electricity.converter.xlsx), and here: [Documentation hybrid heat pump (gas) - hot water](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_water_heater_hybrid_heatpump_air_water_electricity.converter.xlsx)_
+_Sources: [Documentation hybrid heat pump (gas) - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_hybrid_heatpump_air_water_electricity.converter.xlsx), and here: [Documentation hybrid heat pump (gas) - hot water](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_water_heater_hybrid_heatpump_air_water_electricity.converter.xlsx)_
 
 ### Threshold-COP
 
@@ -62,7 +60,7 @@ The efficiency of hybrid heat pumps (HHPs) is dependent on the ambient temperatu
 
 ![](/img/docs/20200401_threshold_COP_sliders.png)
 
-_Checkout: the threshold COP sliders in the ETM in the [Flexibility → Net load](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-behavior-of-hybrid-heat-pumps)section._
+_Checkout: the threshold COP sliders in the ETM in the [Flexibility → Net load](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-behavior-of-hybrid-heat-pumps) section._
 
 To help you decide the cost-optimal COP setting from a consumer perspective, a special chart is added to the ETM. It shows how much it costs to make a unit of heat with the HHP for space heating. For the gas part, these costs are independent of the COP (and therefore the outside temperature). The costs for the electrical part are decreasing with increasing COP (and increasing outside temperature). The intersection of the two curves is the cost-optimal COP setting for space heating for the given cost price gas and electricity. This assumed cost price of gas and electricity can be set with sliders.
 
@@ -86,5 +84,5 @@ If you are interested in the impact of HHPs on the electricity grid, you can hav
 
 The COP of heat pump ground is independent of the ambient temperature. The temperature of the reservoir in the ground from which the heat pump extracts heat is considered constant.
 
-_Checkout: the specifications of ground heat pumps in [Documentation heat pump ground - space heating](https://github.com/quintel/etdataset/blob/master/nodes_source_analyses/households/households_space_heater_heatpump_ground_water_electricity.converter.xlsx)_
+_Checkout: the specifications of ground heat pumps in [Documentation heat pump ground - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_heatpump_ground_water_electricity.converter.xlsx)_
 
