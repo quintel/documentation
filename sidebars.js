@@ -123,6 +123,7 @@ module.exports = {
       collapsed: false,
       items: [
         "contrib/intro",
+        "contrib/always-on-battery-parks",
         "contrib/fever",
         "contrib/molecules",
         "contrib/user-curves",

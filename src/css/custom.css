@@ -28,6 +28,7 @@
   --ifm-menu-color-active: var(--ifm-link-color);
   --ifm-link-hover-color: var(--ifm-font-color-base);
 
+  --ifm-font-weight-bold: 600;
   --ifm-font-size-base: 16px;
   --ifm-line-height-base: 1.7;
   --ifm-leading: 1rem;
@@ -421,7 +422,7 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/api/__unused__"]:after {
+.menu a[href="/contrib/always-on-battery-parks"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -436,13 +437,13 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/api/__unused__"]:after {
+.menu a.menu__link--active[href="/contrib/always-on-battery-parks"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/contrib/user-curves"]:after {
+.menu a[href="/contrib/__unused"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -457,7 +458,7 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/contrib/user-curves"]:after {
+.menu a.menu__link--active[href="/contrib/__unused"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
 }
