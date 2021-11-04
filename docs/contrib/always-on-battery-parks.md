@@ -27,6 +27,13 @@ A battery park requires five nodes to be added to the graph:
 
 All edges between nodes are reversed share edges, except that from the battery to wasted storage which should be `inversed_flexible`.
 
+<div style={{ textAlign: "center" }}>
+  <img
+    alt=""
+    src={useBaseUrl("/img/docs/contrib/always-on-battery-park-edges.png")}
+  />
+</div>
+
 The "Wasted storage" node does not need to be unique to the battery park; many parks may share the same node.
 
 <div style={{ textAlign: "center" }}>
