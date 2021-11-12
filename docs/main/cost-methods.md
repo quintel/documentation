@@ -2,20 +2,33 @@
 title: Cost methods
 ---
 
-This page describes how costs are calculated for a scenario in the ETM. It describes the how costs are built up. The calculations are designed to be standardised so that they can be used for all nodes in the energy and molecule graph. 
+This page describes how costs are calculated for a scenario in the ETM. 
 
 The ETM had six main cost groups. These groups consist of sub groups. These subgroups are the sum of individual technologies and some additional modules. A detailed overview can be found in the ['datadump'](https://pro.energytransitionmodel.com/scenario/data/data_export/energy-flows). 
 
-All ['technologies'](https://github.com/quintel/etdataset/tree/master/nodes_source_analyses) and ['datasets'](https://github.com/quintel/etdataset/tree/master/source_analyses) (= regional specific costs like carriers) are researched. Many of these assumptions can be changed in the ['Costs'](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) section of the ETM.
+All ['technologies'](https://github.com/quintel/etdataset/tree/master/nodes_source_analyses) and ['datasets (or regions)'](https://github.com/quintel/etdataset/tree/master/source_analyses) are researched. Technologies have the same starting assumptions for all regions. Carrier costs can be different per region. WHen making a scenario, many of these assumptions can be changed in the ['Costs'](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) section of the ETM.
 
 ## Main cost groups
 The yearly costs of a scenario in the ETM is built up from all technologies and carriers, and C in a scenario. 
-1. **Buildings and installations:** Building and installation-related costs (CAPEX + OPEX) of sectors households, buildings, transport, agriculture, and industry. 
-2. **Energy Production:** Installation-related costs (CAPEX + OPEX) of the energy production sector. This includes: power plants, chp plants (including the industrial steam network), heat plants, dedicated hydrogen production, biomass treatment, and other intallations (synthetic kerosine, regasification of lng, and energy compressors for network gas). 
-3. **Infrastructure**: CAPEX + OPEX of the gas, heat, hydrogen, and electricity network. 
-4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). All G2P is associated with means of 'Energy production'.
-5. **Energy carriers and import:** All net primary demand of energy carriers. The carrier costs for export are is subtracted from the import costs. For example if gasoline (made in the country) is exported the neccessary imported crude oil costs are substracted from the total crude oil import.  
-6. **Carbon capture, sequestration and utilisation (CCSU):** CAPEX + OPEX of all CCUS technologies, including CO2 costs.
+1. **Buildings and installations:** Building and installation-related costs (CAPEX + OPEX) of sectors. Subgroups:
+  -  Households  
+  -  Buildings 
+  -  Transport 
+  -  Agriculture 
+  -  Industry 
+
+2. **Energy Production:** Installation-related costs (CAPEX + OPEX) of the energy production sector. Subgroups: 
+  -  Power plants
+  -  CHP plants (including the industrial steam network)
+  -  Heat plants 
+  -  Dedicated hydrogen production 
+  -  Biomass treatment
+  -  Other intallations (synthetic kerosine, regasification of lng, and energy compressors for network gas)
+
+4. **Infrastructure**: CAPEX + OPEX of the gas, heat, hydrogen, and electricity network. 
+5. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). All G2P is associated with means of 'Energy production'.
+6. **Energy carriers and import:** All net primary demand of energy carriers. The carrier costs for export are is subtracted from the import costs. For example if gasoline (made in the country) is exported the neccessary imported crude oil costs are substracted from the total crude oil import.  
+7. **Carbon capture, sequestration and utilisation (CCSU):** CAPEX + OPEX of all CCUS technologies, including CO2 costs.
 
 **Important:** Group 1-4 consists of the CAPEX and OPEX excluding fuels and CCUS costs, which are categorised separately in group 5 and 6. 
 
