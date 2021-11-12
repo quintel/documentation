@@ -6,17 +6,22 @@ This page describes how costs are calculated for individual heat- or electricity
 
 This page gives an overview of all the components of the cost calculations.
 
-## Total costs
+## Main cost groups
+The yearly costs of a scenario in the ETM is splitted in six main cost groups. 
+1. **Buildings and installations:** Building and installation-related costs (CAPEX + OPEX) of sectors households, buildings, transport, agriculture and industry. 
+2. **Energy Production:** Installation-related costs (CAPEX + OPEX) of the energy production sector. This includes: power plants, chp plants (including the industrial steam network), heat plants, dedicated hydrogen production, biomass treatment, and other intallations (synthetic kerosine, regasification of lng, and energy compressors for network gas). 
+3. **Infrastructure**: CAPEX + OPEX of the gas, heat, hydrogen, and electricity network. 
+4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). All G2P is associated with means of 'Energy production'.
+5. **Energy carriers and import:** All net primary demand of energy carriers.
+6. **Carbon capture, sequestration and utilisation (CCSU):** CAPEX + OPEX of all CCUS technologies, including CO2 costs.
 
-The total costs define the yearly total costs of a technology in euro's. The total costs are split up in the fixed and variable costs of the converter. It therefore  adds up Fixed costs and Variable costs (see below). The total costs are a combination of cost of capital, depreciation, and fixed operation and maintenance costs.
 
-![](/img/docs/TotalCosts.jpg)
+**Important:** Group 1-4 consists of the CAPEX and OPEX exclusive fuels and CCUS costs, which are categorised separately in group 5 and 6. 
 
-## Fixed costs
+## CAPEX and OPEX 
+The costs of group 1-4 consists of two variables: `capital_expenditures_excluding_ccs` and `operating_expenses_excluding_ccs`
+The costs define the yearly total costs of a technology in euros. The total costs are split up in the CAPEX and OPEX costs of the converter, exclusive fuel and CCS costs. 
 
-The fixed costs are the costs that have to be paid yearly, independent of the full load hours of the plant. When more plants are installed, the fixed costs will go up, but when only the number of full load hours changes, these costs remain the same.
-
-![](/img/docs/FixedCosts.jpg)
 
 #### Cost of capital
 
