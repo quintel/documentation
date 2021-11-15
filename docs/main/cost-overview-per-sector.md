@@ -2,7 +2,7 @@
 title: Overview of costs per sector
 ---
 
-Below you can find an overview of the different cost components that are taken into account by the ETM per sector. You can use this to gain a better understanding of the cost calculations in the ETM and cost results in your scenario.
+Below you can find an overview of the different cost components that are taken into account by the ETM per sector. You can use this to gain a better understanding of the cost calculations in the ETM and cost results in your scenario. For more information about CAPEX and OPEX, see: https://docs.energytransitionmodel.com/main/cost-methods. 
 
 ## Buildings and installantions (ex fuel and CCUS)
 ### Households
