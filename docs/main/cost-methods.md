@@ -40,8 +40,6 @@ The yearly costs of a scenario in the ETM is built up from all technologies, car
   
 6. **Carbon capture, sequestration and utilisation (CCSU):** CAPEX + OPEX of all CCUS technologies, including CO2 costs.
 
-
-
 ## CAPEX and OPEX 
 The costs of group 1-4 consists of two variables: CAPEX or `capital_expenditures_excluding_ccs` and OPEX or `operating_expenses_excluding_ccs`
 
