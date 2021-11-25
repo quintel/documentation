@@ -46,7 +46,7 @@ All costs of groups 1-4 consists of two variables: CAPEX or `capital_expenditure
 ### **CAPEX**
 Capital expenditures are major investments that are designed to be used for many years. The yearly costs for these investments are based on the total investment over lifetime, WACC and plant lifetime. CCUS and fuel costs are not in the CAPEX and OPEX of group 1-4. 
 
-![Change dashboard](/img/docs/costs_equation_capex.png)
+![](/img/docs/costs_equation_capex.png)
 
 Additional definitions:
 
@@ -61,7 +61,7 @@ Operating expenses include Operation and Maintenance (O&M) costs, without CCS. O
 * Variable O&M costs are costs that depend on the number of full load hours of the plant, for additional cleaning and service costs.
 * The fixed part are the costs that are made yearly, independent of whether the plant is used or not. Fixed O&M Costs are specified per year and found directly from research. This means that Fixed O&M Costs have no calculations associated with them.
 
-![Change dashboard](/img/docs/costs_equation_opex.png)
+![](/img/docs/costs_equation_opex.png)
 
 Additional definitions:
 
