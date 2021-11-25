@@ -33,6 +33,6 @@ This page explains the six main groups that comprise the total annual costs disp
   -  Power-to-heat (p2h)
   -  Storage (of hydrogen and heat) 
 
-5. **Energy carriers and import:** All net primary demand of energy carriers. The carrier costs for export are is subtracted from the import costs. For example if gasoline (made in the country) is exported the neccessary imported crude oil costs are substracted from the total crude oil import. Export profits are not accounted for. 
+5. **Energy carriers and import:** All net primary demand of energy carriers. The carrier costs for export are are subtracted from the import costs. For example if gasoline (made in the country) is exported the costs related to imported crude oil used for this export are substracted from the total crude oil import. Export profits are not accounted for. 
   
-6. **Carbon capture, sequestration and utilisation (CCSU):** CAPEX + OPEX of all CCUS technologies, including CO2 costs.
+6. **Carbon capture, sequestration and utilisation (CCSU):** CAPEX + OPEX of all CCUS technologies, including CO</sub>2<> costs.
