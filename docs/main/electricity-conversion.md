@@ -6,6 +6,14 @@ The Flexibility > ['Electricity conversion'](https://pro.energytransitionmodel.c
 
 _Checkout: the ['Flexibility'](flexibility) infopage for more information about the difference between flexible and inflexible supply and demand technologies._
 
+## Behaviour of technologies
+The behaviour of flexible demand technologies is determined mainly by the **installed capacity** and the **willingness-to-pay**. The installed capacity determines how much electricity each technology can consume in a given hour. The willingness-to-pay determines the maximum price that a technology is willing to pay to consume that electricity.
+
+### Willingness-to-pay
+When multiple flexible demand technologies are installed, each with their own willingness-to-pay, this creates a demand-side merit order. Inflexible (or baseload) demand is always served first in this merit order. This is because the willingness-to-pay of the baseload demand is effectively represented by the Value of Lost Load (['VoLL'](https://pro.energytransitionmodel.com/scenario/costs/costs_flexibility/value-of-lost-load)). Baseload demand is only curtailed when total supply falls short. In this case a shortage occurs and load is lost (see ['Loss of Load Expectation'](loss-of-load-expectation)). The costs that consumers incur for this loss of load is represented by the VoLL, which typically ranges between 3000 and 10000 euros/MWh and is therefore significantly higher than the typical willingness-to-pay of flexible demand technologies.
+
+The electricity market is cleared in each hour by matching the demand-side merit order with the supply-side merit order. This market clearing determines which flexible demand technologies are supplied in each hour and what the electricity price will be. If a flexible demand technology is price-setting in a given hour, the electricity price in that hour will be equal to the willingness-to-pay of that technology. On the ['Merit order'](merit-order) infopage the process of market clearing in the model is described in more detail, including an description of how the electricity price is set.
+
 ## Description of technologies
 
 ### Power-to-gas
@@ -18,17 +26,10 @@ In the ETM, electricity can be used to produce heat for either the district heat
 
 _Checkout: the ['Heat pumps'](heat-pumps) infopage to see how heat pumps work. For more information about the district heating and industrial heating networks, go to the ['District heating'](heat-networks) infopage._
 
-For the industrial heat network only electric boilers are available as a power-to-heat technology. It is important to note that in the ETM, these boilers can only be fitted to existing natural gas or hydrogen heaters. These boilers are available for the following sub-sectors: refineries, chemical, food and paper. You can determine the capacity of both the power-to-heat boilers and the heaters in the corresponding industry sub-sector under Demand  > ['Industry'](https://pro.energytransitionmodel.com/scenario/demand/industry/energy-demand-in-the-industry). The willingness-to-pay can be set under Flexibility > Electricity conversion > ['Conversion to heat for industry'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-industry).
-
-## Effect of willingness-to-pay
-{DESCRIPTION OF WILLINGNESS-TO-PAY}
-{EXPLANATION OF ACTIVE ROLE IN MARKET CLEARING}
-{EFFECT OF WTP ON MERIT ORDER, SEE MERIT ORDER}
-
-## Other types of flexible demand
+For the industrial heat network only electric boilers are available as a power-to-heat technology. It is important to note that in the ETM, these boilers are fitted to existing natural gas or hydrogen heaters. These boilers are available for the following sub-sectors: refineries, chemical, food and paper. You can determine the capacity of both the power-to-heat boilers and the heaters in the corresponding industry sub-sector under Demand  > ['Industry'](https://pro.energytransitionmodel.com/scenario/demand/industry/energy-demand-in-the-industry). The willingness-to-pay can be set under Flexibility > Electricity conversion > ['Conversion to heat for industry'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-industry).
 
 ### Electricity storage
-Storage options for excess electricity can be set under ['Storage'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_storage/electricity-storage) in the ETM. Here you can change the percentage of household batteries and car batteries that is used to store excess electricity from the grid which is then released at another moment. The specs of household batteries are documented in their [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/households/households_flexibility_p2p_electricity.converter.xlsx) and for electric vehicles in their [node source analysis](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/transport/transport_car_using_electricity.converter.xlsx). For both options you need to have installed household batteries or electric cars in your scenario in order to see an effect. You can also choose to store electricity in large-scale battery systems connected to the grid or underground pumped hydro storage.
+Consumption by electricity storage technologies, also known as power-to-power, is another form of flexible electricity demand. An example of this is charging by batteries. For electricity storage two types of behaviour are available: one that is based on willingness-to-pay and willingness-to-accept prices and another that uses a forecasting algorithm. On the ['Electricity storage'](electricity-storage) infopage you can read more about both types of behaviour.
 
 ### Export
-Excess electricity can be exported to neighbouring countries through the interconnectors between these countries. The capacity of these interconnectors is limited and can be adjusted in the Flexibility > ['Import/Export'](https://pro.energytransitionmodel.com/scenario/flexibility/electricity_import_export/interconnector-1) sub-section. Also, at times of excess electricity due to large amounts of solar or wind energy, neighbouring countries will most likely also have to deal with this excess electricity. To avoid unrealistic estimations of electricity that can be exported you can limit the interconnector capacity.
+Electricity can be exported to neighbouring countries through the interconnectors between these countries. The capacity of these interconnectors is limited and can be adjusted in the Flexibility > ['Import/Export'](https://pro.energytransitionmodel.com/scenario/flexibility/electricity_import_export/interconnector-1) sub-section. The behaviour of export is then very similar to flexible electricity conversion technologies. The main difference is that the willingness-to-pay of export is given by the price of the interconnector, which represents the electricity price in the neighbouring country. In the Import/Export sub-section you can change this price or upload an hourly price curve to model the hourly electricity price in the neighbouring country.

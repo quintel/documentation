@@ -2,4 +2,8 @@
 title: Electricity storage
 ---
 
-{WRITE}
+## Behaviour of technologies
+
+### Price-based behaviour
+
+### Forecasting behaviour
