@@ -166,6 +166,7 @@ module.exports = {
         "api/custom-curves",
         "api/flexibility-order",
         "api/heat-network-order",
+        "api/inputs",
       ],
     },
   ],
