@@ -19,7 +19,7 @@ Endpoints which provide information about inputs will return the following infor
 
 * `default` - The initial value of the input in a blank scenario. If the scenario is [based on parent scenario](https://docs.energytransitionmodel.com/api/scenario-basics#create-a-scenario-based-on-another-scenario), this will be the value of the input in the parent.
 * `disabled` - Indicates if the input is disabled; if so, a value may not be set.
-* `disables_inputs` - Appears only when setting a value for an input would cause another input to become inoperable.
+* `disabled_by` - Appears only when this input would be disabled if another has a value.
 * `max` - The maximum permitted value for the input.
 * `min` - The minimum permitted value for the input.
 * `share_group` - Indicates that the input belongs to the named group. All inputs within the group must have a value which sums to 100. This features is frequently used when you need to set the balance of various technologies (such as the proportion of gasoline, diesel, and electric vehicles).
@@ -27,6 +27,24 @@ Endpoints which provide information about inputs will return the following infor
 * `user` - The value set for the input by a user. Omitted if no value has been set.
 
 Do not rely on the above list being exhaustive: other keys may be present in rare situations, however these are for internal use only.
+
+## Mutually-exclusive inputs
+
+While the vast majority of inputs may be used together, a small number are incompatible with one another because they update the same thing, or their updates would conflict in some way. These inputs are called mutually-exclusive.
+
+Mutually-exclusive inputs can be identified through the API by the `disabled_by` attribute:
+
+```json
+{
+  "min": 0.0,
+  "max": 100.0,
+  "default": 10.0,
+  "unit": "%",
+  "disabled_by": ["one", "two"]
+}
+```
+
+In this example, if either the "one" or "two" inputs have a value, the input represented by the JSON will be disabled.
 
 ## Get all inputs for a scenario
 
