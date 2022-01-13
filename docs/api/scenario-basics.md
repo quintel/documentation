@@ -66,10 +66,7 @@ Host: engine.energytransitionmodel.com
 Accept: application/json
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "id": 12345,
   "title": "API",
@@ -101,10 +98,7 @@ Host: engine.energytransitionmodel.com
 Accept: application/json
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "id": 12345,
   "title": "API",
@@ -150,10 +144,7 @@ Accept: application/json
 }
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "id": 123456,
   "title": "API",
@@ -197,10 +188,7 @@ Accept: application/json
 }
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "id": 123456,
   "title": "API",
@@ -239,10 +227,7 @@ Accept: application/json
 }
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "id": 123456,
   "title": "API",
@@ -287,10 +272,7 @@ Accept: application/json
 }
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "scenario": {
     "id": 12345,
@@ -332,10 +314,7 @@ Accept: application/json
 }
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "scenario": {
     ...

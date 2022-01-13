@@ -7,7 +7,6 @@ module.exports = {
   organizationName: "quintel", // Usually your GitHub org/user name.
   projectName: "documentation", // Usually your repo name.
   themeConfig: {
-    sidebarCollapsible: true,
     prism: {
       theme: require("prism-react-renderer/themes/github"),
       additionalLanguages: ["http"],
@@ -52,7 +51,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Quintel Intelligence`,
+      copyright: `Copyright © ${new Date().getFullYear()} Quintel`,
     },
     algolia: {
       apiKey: "9fe615263d52073aca054075b329ebd5",
@@ -69,6 +68,7 @@ module.exports = {
       {
         docs: {
           routeBasePath: "/",
+          sidebarCollapsible: true,
           sidebarPath: require.resolve("./sidebars.js"),
         },
         theme: {

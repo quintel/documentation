@@ -25,10 +25,7 @@ Host: engine.energytransitionmodel.com
 Accept: application/json
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "order": [
     "household_batteries",
@@ -78,10 +75,7 @@ Accept: application/json
 }
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "order": [
     "mv_batteries",

@@ -21,6 +21,7 @@
   --ifm-code-color: #e3116c;
 
   --ifm-navbar-shadow: none;
+  --ifm-navbar-padding-horizontal: 1.5rem;
 
   --ifm-menu-link-padding-horizontal: 0.5625rem;
   --ifm-menu-link-padding-vertical: 0.25rem;
@@ -38,9 +39,9 @@
      is too light. */
   --ifm-menu-color: #767d87;
   --ifm-toc-link-color: var(--ifm-menu-color);
-  --ifm-toc-padding-left: 1rem;
+  --ifm-toc-padding-horizontal: 0.75rem;
 
-  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-spacing-horizontal: 2rem;
   --ifm-container-width: 1140px;
 
   --ifm-transition-fast: 125ms;
@@ -64,6 +65,11 @@ main {
 h1 {
   font-size: 2.25rem !important;
   margin-bottom: 1.5rem !important;
+}
+
+/* Spacing at top of content and side menu */
+.theme-doc-markdown, .table-of-contents {
+  margin-top: 1rem;
 }
 
 h1, h2, h3 {
@@ -111,10 +117,11 @@ header h1 {
   color: var(--ifm-color-primary);
   content: "Docs";
   display: inline-block;
+  line-height: 1;
   font-size: 12px;
   margin-left: 0.375rem;
-  margin-top: -1px;
-  padding: 0 0.25rem;
+  margin-top: -2px;
+  padding: 0.25rem;
   text-transform: uppercase;
   vertical-align: middle;
 }
@@ -129,8 +136,11 @@ div[class^="docPage"] {
   box-shadow: -1000px 0 0 #f1f3fa;
 }
 
-div[class^="docSidebarContainer"] {
+aside[class^="docSidebarContainer"] {
   background: #f1f3fa;
+
+  /* Fix for missing sidebar border. */
+  width: 301px !important;
 }
 
 /* Custom colors for the sidebar scrollbar. */
@@ -165,6 +175,10 @@ div[class^="docSidebarContainer"] {
   border-bottom: 1px solid var(--ifm-toc-border-color)
 }
 
+.navbar .navbar__brand .navbar__title {
+  font-weight: 600;
+}
+
 .navbar__items:not(.navbar__items--right) {
   flex: 2 2 auto;
 }
@@ -185,6 +199,17 @@ div[class^="docSidebarContainer"] {
   text-transform: uppercase;
 }
 
+.menu .menu__link,
+.menu .theme-doc-sidebar-item-link-level-2 a,
+.menu .theme-doc-sidebar-item-category-level-2 a {
+  line-height: 20px;
+}
+
+.menu .theme-doc-sidebar-item-link-level-2 a,
+.menu .theme-doc-sidebar-item-category-level-2 a {
+  margin-left: calc(0px - var(--ifm-menu-link-padding-horizontal));
+}
+
 .menu .menu__link.menu__link--sublist {
   /* Show subcategory expanders right next to the text, rather than on the right */
   justify-content: left;
@@ -193,6 +218,10 @@ div[class^="docSidebarContainer"] {
 
 .menu a[href="#!"]:hover {
   cursor: default;
+}
+
+.menu .menu__list {
+  margin-top: 0;
 }
 
 .menu .menu__list-item {
@@ -242,11 +271,6 @@ div[class^="docSidebarContainer"] {
   text-transform: none;
 }
 
-/* Fix for missing sidebar border. */
-div[class^="docSidebarContainer"] {
-  width: 301px !important;
-}
-
 /* Gradient on sidebar. */
 div[class^="sidebar_"] {
   min-width: 230px;
@@ -287,7 +311,7 @@ div[class^="sidebar_"] {
   color: var(--ifm-color-emphasis-700);
   display: block;
   font-weight: bold;
-  margin-left: var(--ifm-toc-padding-vertical);
+  margin-left: var(--ifm-toc-padding-horizontal);
 }
 
 .table-of-contents .table-of-contents__link {
@@ -299,9 +323,10 @@ div[class^="sidebar_"] {
   color: var(--ifm-font-color-base);
 }
 
-div[class^="mdxCodeBlock_"] {
+div[class^="codeBlockContainer"] {
   border-radius: 0 !important;
-  border: 1px solid var(--ifm-color-emphasis-200);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  box-shadow: none;
 }
 
 div[class^="codeBlockTitle_"] {
@@ -339,7 +364,9 @@ article .container {
 }
 
 code {
+  color: var(--ifm-code-color);
   background: none;
+  border: none;
   padding: 0;
 }
 
@@ -417,7 +444,7 @@ table th, table td {
 }
 
 article p code {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   letter-spacing: -0.35px;
 }
 

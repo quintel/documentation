@@ -61,10 +61,7 @@ Host: engine.energytransitionmodel.com
 Accept: application/json
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 [
   {
     "key": "interconnector_1_price",
@@ -96,10 +93,7 @@ Host: engine.energytransitionmodel.com
 Accept: application/json
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 [
   {
     "key": "interconnector_1_price",
@@ -145,10 +139,7 @@ Host: engine.energytransitionmodel.com
 Accept: application/json
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 [
   {
     "key": "weather/insulation_corner_houses_high",
@@ -176,10 +167,7 @@ Host: engine.energytransitionmodel.com
 Accept: application/json
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "key": "interconnector_1_price",
   "type": "price",
@@ -226,10 +214,7 @@ Content-Type: application/octet-stream
 --d39be313adf6549a--
 ```
 
-```http title="Example response"
-HTTP/2 200 OK
-Content-Type: application/json; charset=utf-8
-
+```json title="Example response"
 {
   "key": "interconnector_1_price",
   "type": "price",
