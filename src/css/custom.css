@@ -47,6 +47,12 @@
   --ifm-transition-fast: 125ms;
 
   --custom-blue-background-color: #f1f3fa;
+
+  /* Alerts */
+  --ifm-alert-border-left-width: 0.375rem;
+  --ifm-alert-border-radius: 0;
+  --ifm-alert-border-width: 0;
+  --ifm-alert-shadow: none;
 }
 
 html {
@@ -382,18 +388,17 @@ li ul, li ol {
 }
 
 .alert {
-  border-width: 0;
   border-left-style: solid;
-  border-left-width: 0.375rem;
-  border-radius: 0;
 }
 
 .alert a {
   color: var(--custom-alert-font-color);
+  text-decoration-color: var(--custom-alert-font-color);
 }
 
 .alert a:hover {
   color: var(--ifm-font-color-base);
+  text-decoration-thickness: revert;
 }
 
 .alert.alert--secondary {
