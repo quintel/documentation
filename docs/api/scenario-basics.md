@@ -33,12 +33,13 @@ The following attributes will always be `null` unless the requested scenario was
 * `ordering` - the number in the order of preset scenarios.
 * `display_group` - type of the preset scenario.
 
-When [a truthy value of the `detailed` parameter](#the-detailed-parameter) is sent with the request, the following object is also part of the response:
+When [a truthy value of the `detailed` parameter](#the-detailed-parameter) is sent with the request, the following objects are also part of the response:
 
 * `user_values` - object that contains the silders touched by a user in the scenario:
   * `slider_one` - the set value for slider_one.
   * `slider_two` - the set value for slider_two.
   * ...
+* `metadata` - object that contains custom metadata managed by the user of the scenario
 
 ### Preset Scenarios
 
@@ -92,6 +93,11 @@ The information supplied by the GET request will by default not contain slider s
 the parameter `detailed` with a truthy value to the request will have the response include an extra
 object called `user_values`. This object contains a key, value pair for each slider that has been touched.
 
+The `metadata` object will also be included in the response when `detailed` is set to `true`. This
+object can contain any data in JSON format up to 64Kb, and can be used to set custom values for the
+scenario. Such as identifiers for other models, descriptions, or tags. The ETM will never touch this
+object as it is purely meant as a place for users to store meta information about their scenario.
+
 ```http title="Example request"
 GET /api/v3/scenarios/12345?detailed=true HTTP/2
 Host: engine.energytransitionmodel.com
@@ -109,6 +115,11 @@ Accept: application/json
   "user_values": {
     "buildings_insulation_level": 40.3,
     "capacity_of_energy_power_hydro_river": 39.0
+  },
+  "metadata": {
+    "my_tags": ["high_insulation", "hydro_river"],
+    "my_identifier": 1010,
+    ...
   }
 }
 ```
@@ -289,6 +300,49 @@ Accept: application/json
 Some sliders are grouped in a 'share group' to together sum to 100%. An error will be returned if
 you try to set all inputs in such a group without making sure the group still makes exactly 100.0.
 :::
+
+## Add meta information to a Scenario
+Updates the scenario metadata with a new metadata object.
+
+The `metadata` object can contain any custom meta information about the scenario in JSON format up to
+64Kb. Examples of user defined metadata can be: custom tags that a user wishes to give to a scenario,
+internal identifiers (e.g. ID's from scenarios in other energy related models whose information was used in the
+ETM scenario) or custom descriptions. Please mind that, as the ETM leaves managing this data up to the user,
+the full metadata object of a scenario will be overwritten when a new metadata object is supplied in the
+request. Also, when cloning a scenario the metadata will not be cloned to the new scenario.
+
+Both `metadata` and `user_values` can be supplied with a request simultaneously.
+
+<ApiEndpoint data={endpointData.update} />
+
+```http title="Example request"
+PUT /api/v3/scenarios/12345 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+
+{
+  "scenario": {
+    "metadata": {
+      "my_tags": ["high_insulation", "hydro_river"],
+      "my_identifier": 1010
+    }
+  },
+  "detailed": true
+}
+```
+
+```json title="Example response"
+{
+  "scenario": {
+    "id": 12345,
+    ...
+    "metadata": {
+      "my_tags": ["high_insulation", "hydro_river"],
+      "my_identifier": 1010
+    }
+  }
+}
+```
 
 ## Query a Scenario
 
