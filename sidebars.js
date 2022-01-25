@@ -125,6 +125,7 @@ module.exports = {
         "contrib/intro",
         "contrib/always-on-battery-parks",
         "contrib/fever",
+        "contrib/inputs",
         "contrib/molecules",
         "contrib/user-curves",
         "contrib/waste-outputs",
