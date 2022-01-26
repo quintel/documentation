@@ -389,6 +389,10 @@ Accept: application/json
 }
 ```
 
+### Modifying a protected scenario
+
+A protected scenario cannot be updated through the API, with attempts receiving a 403 Forbidden response. If you accidentally mark a scenario as protected and wish to make futher changes, you may [create a new clone of your protected scenario](#create-a-scenario-based-on-another-scenario). The clone will not be protected and will accept your updates.
+
 ## Query a Scenario
 
 You can query a scenario using `gqueries`. These queries make calculations on the graph and return
