@@ -156,7 +156,7 @@ module.exports = {
       type: "category",
       label: "API Reference",
       collapsed: false,
-      items: ["api/intro"],
+      items: ["api/intro", "api/changelog"],
     },
     {
       type: "category",
