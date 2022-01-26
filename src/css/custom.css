@@ -475,6 +475,7 @@ article p code {
 }
 
 /* Add "Updated" tag to some sidebar items. */
+.menu a[href="/api/scenario-basics"]:after,
 .menu a[href="/api/inputs"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
@@ -490,6 +491,7 @@ article p code {
   text-transform: uppercase;
 }
 
+.menu a.menu__link--active[href="/api/scenario-basics"]:after,
 .menu a.menu__link--active[href="/api/inputs"]:after {
   color: #e8eeff;
   border-color: #e8eeff;

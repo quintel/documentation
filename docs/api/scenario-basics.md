@@ -23,7 +23,7 @@ scenario endpoint:
 * `source` - source through which the scenario was created, can be 'API' or 'ETM'.
 * `created_at` - date of creation.
 * `updates_at` - date of last update.
-* `protected` - default false, if set to true the scenario cannot be deleted.
+* `protected` - default false, see [protected scenarios](#protected-scenarios)
 * `esdl_exportable` - determines if the scenario can be exported as an ESDL file.
 
 The following attributes will always be `null` unless the requested scenario was or used a
@@ -344,11 +344,52 @@ Accept: application/json
 }
 ```
 
-## Query a Scenario
+## Protected scenarios
 
-:::info Work-in-Progress
-A list of all available gqueries is still being worked on.
+When you have finished fine-tuning your scenario you may mark it as protected by setting the `protected` attribute to true:
+
+```http title="Example request"
+PUT /api/v3/scenarios/12345 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+
+{
+  "scenario": {
+    "protected": true
+  }
+}
+```
+
+Protecting a scenario has two outcomes:
+
+1. It ensures that the scenario remains compatible with future versions of the ETM. The ETM is periodically updated with new features, and we may make changes to your scenario to ensure that the choices you made are preserved.
+
+  For example, if an input is renamed we will rename the slider value in your scenario to reflect this change. If an input were updated from having a value representing a percentage of demand to an absolute capacity value in MW, we will set the new MW value in your scenario such that the energy flows are as close as possible to those in your original scenario.
+
+2. The scenario becomes read-only and may no longer be changed by yourself or any other third-party. This prevents someone else from changing your scenario without your knowledge.
+
+:::warning Always mark important scenarios as protected
+It is highly recommended that you protect scenarios that you wish to keep long-term. The ETM makes no guarantee about the availability or accuracy of old unprotected scenarios.
 :::
+
+You may set slider values at the same time as changing the scenario to be protected. Your updates will be applied and the scenario protected against any future changes:
+
+```http2 title="Example request"
+PUT /api/v3/scenarios/12345 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+
+{
+  "scenario": {
+    "protected": true,
+    "user_values": {
+      "buildings_insulation_level": 35.7
+    }
+  }
+}
+```
+
+## Query a Scenario
 
 You can query a scenario using `gqueries`. These queries make calculations on the graph and return
 values for the present (start year) and future (end year), as well as the unit used.
@@ -387,3 +428,7 @@ Accept: application/json
   }
 }
 ```
+
+:::info Work-in-Progress
+A list of all available gqueries is still being worked on.
+:::
