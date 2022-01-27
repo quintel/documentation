@@ -5,10 +5,9 @@ sidebar_label: Changelog
 
 While we endeavour not to change the API in a backwards-incompatible way, this is not always possible. This page contains a history of changes to the API.
 
-Changes described on this page will already be live on our staging server, while those with a date in the future will not yet be live on the production server until the specified date.
-
-* **Production:** `engine.energytransitionmodel.com/api/v3`
-* **Staging:** `beta.engine.energytransitionmodel.com/api/v3`
+:::info Release dates
+Changes described on this page will already be live on our staging server, while those with a date in the future will not yet be live on the production server until the specified date. See [Introduction to the API → Environments](intro.md#environments) for more information.
+:::
 
 ### 1st February 2022
 
