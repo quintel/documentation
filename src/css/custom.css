@@ -400,6 +400,17 @@ li ul, li ol {
   text-transform: capitalize;
 }
 
+.admonition h5:after {
+  background: currentColor;
+  content: " ";
+  display: block;
+  height: 1px;
+  margin-bottom: -0.25rem;
+  margin-top: 1rem;
+  opacity: 0.25;
+  width: 100%;
+}
+
 .admonition .admonition-icon {
   display: none;
 }
