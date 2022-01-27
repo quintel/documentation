@@ -380,11 +380,22 @@ li ul, li ol {
   margin-top: var(--ifm-list-item-margin);
 }
 
+.admonition-heading .admonition-icon {
+  display: none;
+}
+
 .admonition h5 {
-  font-size: 1rem;
+  /* font-size: 1rem;
   font-weight: 500;
-  margin-top: 0.25rem;
+  margin-top: 0.25rem; */
   text-transform: capitalize;
+
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.25rem 0 1rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid black;
+  /* font-weight: bold; */
 }
 
 .alert {
@@ -454,6 +465,7 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
+.menu a[href="/main/battery-forecasting"]:after,
 .menu a[href="/contrib/always-on-battery-parks"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
@@ -469,6 +481,7 @@ article p code {
   text-transform: uppercase;
 }
 
+.menu a.menu__link--active[href="/main/battery-forecasting"]:after,
 .menu a.menu__link--active[href="/contrib/always-on-battery-parks"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
@@ -497,4 +510,18 @@ article p code {
 .menu a.menu__link--active[href="/api/inputs"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
+}
+
+/* Images with an border, useful for small screenshots. */
+
+.bordered-image {
+  text-align: center;
+  margin-bottom: var(--ifm-leading);
+}
+
+.bordered-image img {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 3px rgb(0 0 0 / 5%);
 }

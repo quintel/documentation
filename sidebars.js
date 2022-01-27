@@ -46,6 +46,7 @@ module.exports = {
               Electricity: [
                 "main/excess-electricity",
                 "main/dynamic-demand-curve",
+                "main/battery-forecasting",
                 "main/loss-of-load-expectation",
                 "main/network",
               ],
