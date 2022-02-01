@@ -3,6 +3,8 @@ title: Battery forecasting
 sidebar_label: Forecasting
 ---
 
+## Introduction
+
 In the Energy Transition Model, electric batteries will charge and discharge whenever it is cost-effective for them to do so. These batteries are governed by a willingness-to-pay – the price they are willing to pay to store electricity – and a willingness-to-access – the price they are willing to accept for discharging stored energy.
 
 While this ensures that batteries will not charge and discharge in such a way as would result in a loss, fixed prices can be inflexible and unrealistic. For example, setting a price suitable for winter months when prices tend to be higher, may result in behavior which is less suitable for the summer months.
