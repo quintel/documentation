@@ -4,10 +4,6 @@ title: Introduction to the API
 sidebar_title: Introduction to the API
 ---
 
-:::info Work-in-Progress
-We're in the process of moving our API documentation to this website. Documentation for some endpoints not included here can be found on [our legacy API docs page](https://energytransitionmodel.com/api).
-:::
-
 ## Versioning
 
 The ETM API is versioned as **v3**, but at the time of writing is not semantically versioned. While we seek not to change the public API in a way that would break clients, it's nonetheless constantly in development.
