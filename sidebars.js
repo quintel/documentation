@@ -165,10 +165,12 @@ module.exports = {
       collapsed: false,
       items: [
         "api/scenario-basics",
+        "api/areas",
         "api/custom-curves",
         "api/flexibility-order",
         "api/heat-network-order",
         "api/inputs",
+        "api/nodes",
       ],
     },
   ],
