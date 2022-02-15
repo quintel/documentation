@@ -1,17 +1,17 @@
 ---
-title: Battery forecasting
+title: Electricity storage forecasting
 sidebar_label: Forecasting
 ---
 
 ## Introduction
 
-In the Energy Transition Model, electric batteries will charge and discharge whenever it is cost-effective for them to do so. These batteries are governed by a willingness-to-pay – the price they are willing to pay to store electricity – and a willingness-to-access – the price they are willing to accept for discharging stored energy.
+In the Energy Transition Model, electricity storage technologies will charge and discharge whenever it is cost-effective for them to do so. These technologies are governed by a **willingness to pay** – the price they are willing to pay to store electricity – and a **willingness to accept** – the price they are willing to accept for discharging stored energy. This price-based behaviour is described in detail on the ['Electricity'](electricity-storage) infopage.
 
-While this ensures that batteries will not charge and discharge in such a way as would result in a loss, fixed prices can be inflexible and unrealistic. For example, setting a price suitable for winter months when prices tend to be higher, may result in behavior which is less suitable for the summer months.
+While this ensures that electricity storage technologies will not charge and discharge in such a way as would result in a loss, fixed prices can be inflexible and unrealistic. For example, setting a price suitable for winter months when prices tend to be higher, may result in behavior which is less suitable for the summer months.
 
-Batteries have an optional forecasting option. When enabled, the battery is no longer controlled by the market price of electricity, but will instead forecast the electricity load for the year and decide when to charge and discharge accordingly.
+Electricity storage technologies have an optional forecasting option. When enabled, the technology is no longer controlled by the market price of electricity, but will instead forecast the electricity load for the year and decide when to charge and discharge accordingly.
 
-In this mode, the goal of a battery is to flatten the residual load curve as much as possible. This also _generally_ increases the profitability of the battery.
+In this mode, the goal of a storage technology is to flatten the residual load curve as much as possible. This also _generally_ increases the profitability of the technology.
 
 <div class="bordered-image">
   <img src="/img/docs/battery-forecasting/toggle.png" alt="A toggle switch with two options 'Off' and 'On' that enables forecasting. The switch is turned on." />
@@ -27,9 +27,9 @@ See [Costs → Merit Order → Implementation](merit-order.md/#implementation) f
 
 ## Algorithm
 
-The forecasing algorithm matches an hour of high residual load with an hour of low or negative load from the preceeding 72-hours. It causes the battery to charge when load is low and discharge the same amount when load is high. This has the effect of flattening the residual load curve, reducing peaks in favor of a more constant curve.
+The forecasing algorithm matches an hour of high residual load with an hour of low or negative load from the preceeding 72-hours. It causes the electricity storage technology to charge when load is low and discharge the same amount when load is high. This has the effect of flattening the residual load curve, reducing peaks in favor of a more constant curve.
 
-The algorithm accounts for the input and output capacity, the total volume, and the efficiency of the battery.
+The algorithm accounts for the input and output capacity, the total volume, and the efficiency of the storage technology.
 
 ### Example
 
@@ -43,7 +43,7 @@ Here we have a curve which varies gradually from a minimum value of 1 up to a ma
 
 #### Placing a charge
 
-The battery is told to charge in hour 3 and discharge in hour 8. This has the effect of flattening the residual load curve slightly. As residual load is often highly correlated to the market price for electricity, it's likely that the battery operator will make a profit from this cycle.
+The storage technology is told to charge in hour 3 and discharge in hour 8. This has the effect of flattening the residual load curve slightly. As residual load is often highly correlated to the market price for electricity, it's likely that the technology operator will make a profit from this cycle.
 
 <div style={{ textAlign: "center" }}>
   <img src="/img/docs/battery-forecasting/after.png" alt="A chart showing load falling from 3 to 2, rising to 5, then falling to 2. The curve has been slightly flattened." />
@@ -51,7 +51,7 @@ The battery is told to charge in hour 3 and discharge in hour 8. This has the ef
 
 #### Iterating
 
-The algorithm continues selecting high and low hours until the battery is at full capacity in each hour or, more often, there are no opportunities to flatten the curve further without a high likelihood of incurring losses.
+The algorithm continues selecting high and low hours until the storage technology is at full capacity in each hour or, more often, there are no opportunities to flatten the curve further without a high likelihood of incurring losses.
 
 <div style={{ textAlign: "center" }}>
   <img src="/img/docs/battery-forecasting/finished.png" alt="A chart that shows a constant load of 3, rising to 4, then falling to 2. The curve has been significantly flattened." />
@@ -67,17 +67,17 @@ The algorithm continues selecting high and low hours until the battery is at ful
 
 After selecting an hour of high load, the algorithm looks for an opportunity to charge in the 72-hour period before the high load. This limit serves several purposes:
 
-1. In some kinds of batteries, storing energy for too long is likely to incur losses; energy in the battery slowly decays.
-2. While holding energy in storage for long periods of time may be realistic for some storage systems (pumped hydro), it is not realisitic for smaller-scale battery technologies such as household batteries.
+1. In some kinds of electricity storage technologies, storing energy for too long is likely to incur losses; energy in batteries slowly decays, water stored in reservoirs evaporates.
+2. While holding energy in storage for long periods of time may be realistic for some storage technologies (pumped hydro), it is not realisitic for smaller-scale battery technologies such as household batteries.
 3. Longer cycles increase calculation time and would result in your scenario becoming sluggish when you make changes.
 
-In our experiments, we found that periods longer than 72-hours quickly resulted in diminishing returns. Profits from batteries did not increase significantly, while calculation time increased unnacceptably.
+During experimentation with the algorithm, it was found that periods longer than 72-hours quickly resulted in diminishing returns. Profits from storage technologies did not increase significantly, while calculation time increased unnacceptably.
 
 Note that this does not mean that the battery must _fully_ charge and discharge every 72-hours. Rather, any amount of energy charged in one hour – which may be a fraction of the battery capacity or volume – must be discharged within 3 days.
 
 #### What are the specifications for batteries in the ETM?
 
-To view the specifications for a battery technology, click the (?) icon next to the slider, then "Technical and financial properties". This will show you a screen summarizing the total installed capacity and volume, efficiency, and costs of the technology.
+To view the specifications for an electricity storage technology, click the (?) icon next to the slider, then "Technical and financial properties". This will show you a screen summarizing the total installed capacity and volume, efficiency, and costs of the technology.
 
 <div class="bordered-image">
   <img src="/img/docs/battery-forecasting/properties.png" alt="A screenshot from the ETM showing a question mark button which shows slider information, and a 'Technical and financial properties' button which shows detailed information about the battery" />
