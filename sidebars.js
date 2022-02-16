@@ -118,7 +118,7 @@ module.exports = {
         "main/scenario-tools/regional-overview",
         "main/scenario-tools/heat-module",
         "main/scenario-tools/advanced-settings",
-      ]
+      ],
     },
     {
       type: "link",
@@ -143,13 +143,17 @@ module.exports = {
       type: "category",
       label: "Model features",
       collapsed: false,
+      items: ["contrib/inputs", "contrib/molecules", "contrib/waste-outputs"],
+    },
+    {
+      type: "category",
+      label: "Hourly calculations",
+      collapsed: false,
       items: [
         "contrib/always-on-battery-parks",
         "contrib/fever",
-        "contrib/inputs",
-        "contrib/molecules",
+        "contrib/load-shifting",
         "contrib/user-curves",
-        "contrib/waste-outputs",
       ],
     },
     {
