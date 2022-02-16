@@ -40,14 +40,6 @@ The load curves of each of the nodes will be summed to create a combined curve:
   <img src="/img/docs/contrib/load-shifting/demand-summed.png" alt="Chart showing that the load of node_one in each hour has been added with that of node_two" />
 </figure>
 
-### Constraints
-
-The output of energy from load shifting has three constraints:
-
-* **Output capacity**: The maximum hourly output in MW. This value is also used to set the input capacity.
-* **Demand source load**: The node must specify at least one other merit order consumer node which provides a demand curve. This ensures that the amount of load shifted never exceeds the amount demanded by the sources.
-* **Deficit capacity**: An optional limit on how much deficit can be stored at one time. For example, when set to 100 MWh, this means that up to 100 MWh can be shifted, but the deficit must be reduced by consuming energy before any more load can be shifted.
-
 ### Capacity
 
 From the summed curve it is possible to find the peak load of the demand sources.
@@ -73,6 +65,14 @@ In this example, the load shifting reaches its cap of 10 MWh and cannot shift an
 <figure style={{ textAlign: "center" }}>
   <img src="/img/docs/contrib/load-shifting/deficit-cap.png" alt="Deficit rises to the cap of 10 MWH and then falls" />
 </figure>
+
+### Constraints
+
+The output of energy from load shifting has three constraints:
+
+* **Output capacity**: The maximum hourly output in MW. This value is also used to set the input capacity.
+* **Demand source load**: The node must specify at least one other merit order consumer node which provides a demand curve. This ensures that the amount of load shifted never exceeds the amount demanded by the sources.
+* **Deficit capacity**: An optional limit on how much deficit can be stored at one time. For example, when set to 100 MWh, this means that up to 100 MWh can be shifted, but the deficit must be reduced by consuming energy before any more load can be shifted.
 
 ## Configuring load shifting
 
