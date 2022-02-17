@@ -154,6 +154,12 @@ EACH(
 )
 ```
 
+#### Setting deficit capacity
+
+```ruby
+UPDATE(V(load_shifting_node, merit_order), load_shifting_hours, USER_INPUT())
+```
+
 ## Querying load shifting
 
 Regardless of whether the load shifting node is connected to the rest of the graph, you will be able to query the following attributes from the node:
