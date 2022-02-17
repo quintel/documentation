@@ -17,7 +17,7 @@ _Suitable for large (fluctuations in) volume_
 
 _Suitable for large or sudden (fluctuations in) capacity_
 * Storage in lithium-ion batteries
-* Dispatchable power and heat plants 
+* Dispatchable power and heat plants
 * Demand side response
 
 _Suitable for both volume and capacity_
@@ -67,6 +67,8 @@ See the [Flexibility → Electricity storage](https://pro.energytransitionmodel.
   * Conversion: power-to-hydrogen, power-to-heat (for industry or district heating)
   * Curtailment
   * Export
+
+Flexible demand technologies are governed by a "willingness to pay": a maximum price they are willing to pay to consume electricity. Whenever the spot price of electricity exceeds this threshold, the they will stop consuming electricity. See [our documentation on electricity storage](electricity-storage.md#price-based-behaviour) for more information.
 
 ### Gas
 

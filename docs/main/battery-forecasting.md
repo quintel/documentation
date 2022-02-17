@@ -5,7 +5,7 @@ sidebar_label: Forecasting
 
 ## Introduction
 
-In the Energy Transition Model, electricity storage technologies will charge and discharge whenever it is cost-effective for them to do so. These technologies are governed by a **willingness to pay** – the price they are willing to pay to store electricity – and a **willingness to accept** – the price they are willing to accept for discharging stored energy. This price-based behaviour is described in detail on the ['Electricity'](electricity-storage) infopage.
+In the Energy Transition Model, electricity storage technologies will charge and discharge whenever it is cost-effective for them to do so. These technologies are governed by a **willingness to pay** – the price they are willing to pay to store electricity – and a **willingness to accept** – the price they are willing to accept for discharging stored energy. This price-based behaviour is described in detail in [the electricity storage documentation](electricity-storage.md).
 
 While this ensures that electricity storage technologies will not charge and discharge in such a way as would result in a loss, fixed prices can be inflexible and unrealistic. For example, setting a price suitable for winter months when prices tend to be higher, may result in behavior which is less suitable for the summer months.
 
@@ -22,7 +22,7 @@ The residual load curve is the sum of demand in each hour, minus the sum of supp
 
 Whenever the value for an hour is positive, electricity demand is not fully satisfied by must-run and volatile producers, with dispatchable/flexible sources needed to meet demand. If the value is negative, this indicates a surplus of energy.
 
-See [Costs → Merit Order → Implementation](merit-order.md/#implementation) for more details.
+See [Costs → Merit Order → Implementation](merit-order.md#implementation) for more details.
 :::
 
 ## Algorithm
