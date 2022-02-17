@@ -90,7 +90,7 @@ Merit will set the demand of the load shifting node. The following edge attribut
 
 * `type`: share
 * `reversed`: false
-* `parent_share`: 1.0
+* `child_share`: 1.0
 
 #### After shifting ← Load shifting
 
