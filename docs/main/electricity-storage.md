@@ -29,6 +29,6 @@ See the [merit order documentation](merit-order.md) for more information on the 
 
 ### Forecasting behaviour
 
-When this type of behaviour is selected, charging and discharging by the electricity storage technology no longer depends on the **willingness to pay** and the **willingness to accept**. Instead, it is uses an algorithm to determine optimal moments in the year for charging and discharging.
+When this type of behaviour is selected, charging and discharging by the electricity storage technology no longer depends on the **willingness to pay** and the **willingness to accept**. Instead, it uses an algorithm to determine optimal moments in the year for charging and discharging.
 
 You can read more about this in [the forecasting documentation](battery-forecasting.md).
