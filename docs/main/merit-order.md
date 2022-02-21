@@ -42,13 +42,13 @@ The table shown in Figure 4 lists all electricity producers in the ETM. There ar
 -   Full load hours future: The full load hours of the 'future' year are being calculated by the Merit Order module.
 -   Full load hours present: The full load hours of the 'present' are fixed to the values of the start year of the scenario.
 
-_Note: some technologies are grouped in this table: solar panels, wind turbines and must-run CHPs. Their full load hours are a weighted average, where the installed capacity is used as weight._
+:::info Grouping
+Some technologies are grouped in this table: solar panels, wind turbines and must-run CHPs. Their full load hours are a weighted average, where the installed capacity is used as weight.
+:::
 
 The Merit Order Chart (right side) shows the installed capacity of electricity producers, sorted in ascending order of their class (volatiles and must-run first, then dispatchables) and marginal costs (lower cost first). This chart is dynamic and reacts to changes made to the model. In particular, fuel prices and installed number of units of the producers in the merit order. Increasing the coal price, for example, can interchange the (merit!) order of coal and gas-plants in the chart.
 
-These charts provide input for the profitability table on the dashboard.
-
-_Checkout: the profitability table on the [‘Costs (dashboard)’](cost-dashboard) infopage._
+These charts provide input for the profitability table on the dashboard. See the profitability table on the [Costs (dashboard)](cost-dashboard.md) page for more information.
 
 ## Implementation
 
@@ -86,9 +86,11 @@ For every hour, the Merit Order Module examines the electricity demand and produ
 
 First, all producers that are labelled Volatile or Must-Run are taken into account. As these plants cannot (or should not) be turned off; their electricity output has to be fed into the grid with priority. (Another reason for giving volatile renewable producers priority is that they generate electricity at zero marginal cost.) By subtracting the electricity produced by Volatiles and Must-Run producers from the electricity demand, the residual demand curve is obtained.
 
-This can also be seen in in the previous figure: The violet and green curves are used to satisfy demand first. Most of the time, the total electricity demand is not satisfied yet. The residual demand (= demand - volatiles - MustRun, equivalent to blue area) is labelled with the letter R. in the figure.
+This can also be seen in in the previous figure: The violet and green curves are used to satisfy demand first. Most of the time, the total electricity demand is not satisfied yet. The residual demand (= demand - volatiles - must-run, equivalent to blue area) is labelled with the letter R. in the figure.
 
-_Note: The residual demand curve may fluctuate a lot, depending on your choices for installed volatile and must-run participants. You can see in the graph, that there is one occasion where the production from must-run and volatile participants exceed the demand (the green peak sticking out of the blue area)._
+:::info Residual demand
+The residual demand curve may fluctuate a lot, depending on your choices for installed volatile and must-run participants. You can see in the graph, that there is one occasion where the production from must-run and volatile participants exceed the demand (the green peak sticking out of the blue area).
+:::
 
 ##### Current Load Profiles
 
@@ -103,7 +105,13 @@ The volatiles and must-runs have a-priori defined curves that determine their 'o
 
 Dispatchables do not have a load profile defined yet, because their time-resolved production will be calculated by the MO module.
 
-_Note: The scaling of MO load_profiles can result in loads (MW) larger then 'the available efficiency’. This happens because the area under the profiles needs to be scaled to the total produced electricity, but the shape of the profiles does not always include all information. For example, the profiles for wind may not describe every gush of wind that has been converted into electricity and therefore 'misses' features, i.e., it has a trough where it should have a peak. This is inevitable as the measurement of every location in the Netherlands where a turbine is situated are not available, and the exact relation between the wind speeds (measured) and the production of a turbine is not known. This means that to reproduce the total production, the profile has to be scaled vertically (to make up for the lost peaks) and peaks in the load may become unphysically high. This is not a fundamental problem, as the curve is only indicative of the variability of the technology but worth mentioning as it might confuse you._
+:::info Scaled profiles
+The scaling of merit order load profiles can result in loads (MW) larger then the available efficiency. This happens because the area under the profiles needs to be scaled to the total produced electricity, but the shape of the profiles does not always include all information.
+
+For example, the profiles for wind may not describe every gust of wind that has been converted into electricity and therefore 'misses' features, i.e., it has a trough where it should have a peak. This is inevitable as the measurement of every location in the Netherlands where a turbine is situated are not available, and the exact relation between the wind speeds (measured) and the production of a turbine is not known.
+
+This means that to reproduce the total production, the profile has to be scaled vertically (to make up for the lost peaks) and peaks in the load may become unphysically high. This is not a fundamental problem, as the curve is only indicative of the variability of the technology.
+:::
 
 #### 2. Satisfying Residual Demand, Assigning Dispatchables
 
@@ -197,7 +205,7 @@ Plant profitability =  -------------------------------------------
                           Total installed dispatchable capacity
 ```
 
-_Checkout: the profitability table on the [‘Costs (dashboard)’](cost-dashboard) infopage for more information._
+See the profitability table on the [Costs (dashboard)](cost-dashboard.md) page for more information.
 
 ### Examples
 
