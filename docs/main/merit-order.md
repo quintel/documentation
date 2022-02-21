@@ -139,7 +139,7 @@ Thirdly, the Merit Order Module sets an electricity price for each hour. The pri
 1. The marginal cost for the most expensive dispatchable plant which is producing electricity.
 2. The price paid for electricity by the least expensive [flexible consumer](flexibility.md#categorization-of-flexible-and-inflexible-technologies).
 
-In the event that there is a surplus of electricity, the price will be set to zero. If there is a deficit – there was demand for more electricity than could be produced – a fallback price will be used. You may configure this fallback price in the ETM.
+In the event that there is a surplus of electricity, the price will be set to zero. If there is a deficit – there was demand for more electricity than could be produced – a fallback price will be used. You may configure this fallback price in the ETM under [Costs & efficiencies → Value of Lost Load](https://pro.energytransitionmodel.com/scenario/costs/costs_flexibility/value-of-lost-load).
 
 ### Scope
 
