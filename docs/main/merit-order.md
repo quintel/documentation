@@ -52,8 +52,6 @@ _Checkout: the profitability table on the [‘Costs (dashboard)’](cost-dashboa
 
 ## Implementation
 
-![Figure 6: Cartoon of time-resolved Merit Order computation.](/img/docs/Mo_cartoon.png)
-
 The Merit Order module orders the dispatchable producers according their marginal costs and computes their yearly production of electricity (and, equivalently, their full load hours). Additionally, the module sets a price for electricity for every hour of the year.
 
 To accomplish this, the module matches the production of electricity to the demand for every hour of the year. This time-resolved approach is radically different from what is done in the rest of the ETM (only yearly values are calculated). To accommodate these two different approaches, the MO calculation is performed in a separate module and the results (chiefly new full load hours, and profitability metrics) are returned to the ETM in their 'yearly' total form. In this section the workings of the module are described in more detail.
@@ -80,13 +78,15 @@ These three producers each play a different role in the Merit Order Module.
 
 ### Merit Order Algorithm
 
+![Simplified chart of time-resolved Merit Order computation.](/img/docs/Mo_cartoon.png)
+
 For every hour, the Merit Order Module examines the electricity demand and production independently. The following steps are carried out:
 
 #### 1. Residual Demand Curve
 
 First, all producers that are labelled Volatile or Must-Run are taken into account. As these plants cannot (or should not) be turned off; their electricity output has to be fed into the grid with priority. (Another reason for giving volatile renewable producers priority is that they generate electricity at zero marginal cost.) By subtracting the electricity produced by Volatiles and Must-Run producers from the electricity demand, the residual demand curve is obtained.
 
-This can also be seen in in the previous figure: The violet and green curves are used to satisfy demand first. Most of the time, the total electricity demand is not satisfied yet. The residual demand (= demand - volatiles - MustRun, equivalent to blue area) is labelled with the letter R. in the figure. 
+This can also be seen in in the previous figure: The violet and green curves are used to satisfy demand first. Most of the time, the total electricity demand is not satisfied yet. The residual demand (= demand - volatiles - MustRun, equivalent to blue area) is labelled with the letter R. in the figure.
 
 _Note: The residual demand curve may fluctuate a lot, depending on your choices for installed volatile and must-run participants. You can see in the graph, that there is one occasion where the production from must-run and volatile participants exceed the demand (the green peak sticking out of the blue area)._
 
@@ -107,7 +107,7 @@ _Note: The scaling of MO load_profiles can result in loads (MW) larger then 'the
 
 #### 2. Satisfying Residual Demand, Assigning Dispatchables
 
-Secondly, the module tests how much additional producers are needed to satisfy the residual demand. The module starts with the cheapest plant first (lowest marginal operation costs). In Figure 6., this would be the yellow arrow (1). As the production capacity from producer (1) is limited (by the installed Number of Units, the effective capacity and availability), more producers have to go online. The next producers are chosen according to the merit order of available producers until the residual demand is covered for the respective hour. The very last dispatchable participant that is switched on usually does not operate at full load. The last participant operates only at the capacity required to exactly meet demand.
+Secondly, the module tests how much additional producers are needed to satisfy the residual demand. The module starts with the cheapest plant first (lowest marginal operation costs). In [the simplified merit order chart](#merit-order-algorithm) this would be the yellow arrow (1). As the production capacity from producer (1) is limited (by the installed Number of Units, the effective capacity and availability), more producers have to go online. The next producers are chosen according to the merit order of available producers until the residual demand is covered for the respective hour. The very last dispatchable participant that is switched on usually does not operate at full load. The last participant operates only at the capacity required to exactly meet demand.
 
 After assigning the dispatchables for all hours of the year, the total full load hours are calculated for each participant.
 
@@ -126,7 +126,12 @@ This behaviour is used to model flexible electricity demand technologies such as
 
 #### 3. Electricity Price
 
-Thirdly, the Merit Order Module sets an electricity price for each hour. The plant with the highest operating cost that will come online last sets the price for electricity.
+Thirdly, the Merit Order Module sets an electricity price for each hour. The price in each hour is set to the highest of:
+
+1. The marginal cost for the most expensive dispatchable plant which is producing electricity.
+2. The price paid for electricity by the least expensive [flexible consumer](flexibility.md#categorization-of-flexible-and-inflexible-technologies).
+
+In the event that there is a surplus of electricity, the price will be set to zero. If there is a deficit – there was demand for more electricity than could be produced – a fallback price will be used. You may configure this fallback price in the ETM.
 
 ### Scope
 
