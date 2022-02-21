@@ -533,3 +533,30 @@ article p code {
   border-radius: 0.25rem;
   box-shadow: 0 0 0 3px rgb(0 0 0 / 5%);
 }
+
+/* Title for charts and other images. */
+
+.image-title {
+  color: var(--ifm-toc-link-color);
+  display: block;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.images-row {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.images-row figure + figure {
+  margin-left: 1rem;
+}
+
+figure {
+  margin: 0;
+}
+
+figure + p, .images-row + p {
+  margin-top: var(--ifm-leading);
+}

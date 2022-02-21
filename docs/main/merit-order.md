@@ -25,15 +25,34 @@ The module can be switched on and off using the switch on the Merit Order slide.
 
 There are five dedicated figures associated with the Merit Order module: two tables and three charts. The first two charts provide insight in the result of the merit order calculation by showing the hourly electricity mix and the hourly electricity price:
 
-![Figure 2: Merit Order hourly supply chart](/img/docs/20160809-screenshot-hourly-supply.png)
+<div class="images-row">
+  <figure>
+    <figcaption className="image-title">Figure 1: Electricity production per hour</figcaption>
+    <img src="/img/docs/merit-order/electricity-production.png" />
+  </figure>
 
-![Figure 3: Merit Order hourly price chart](/img/docs/20160809-screenshot-hourly-price.png)
+  <figure>
+    <figcaption className="image-title">Figure 2: Electricity price</figcaption>
+    <img src="/img/docs/merit-order/electricity-price.png" />
+  </figure>
+</div>
 
 The table and chart show information about full load hours and marginal costs.
 
-![Figure 4: Merit Order table (left) and Merit Order graph (right).](/img/docs/Mo_charts.png)
 
-The table shown in Figure 4 lists all electricity producers in the ETM. There are two classes of producers distinguished in the context of the Merit Order, the producers whose full load hours are *independent* of the outcome of the Merit Order calculation. This class includes **volatile** producers of electricity such as solar panels and wind turbines which produce electricity *irrespective* of the demand and **must-run** producers. The second class is made up of **dispatchable** producers and includes nuclear, coal and gas plants. In contrast to the volatiles, the plants have the capability to react to variations in demand. For the producers, the following properties are displayed in the *Merit Order Table*:
+<div class="images-row">
+  <figure>
+    <figcaption className="image-title">Figure 3: Merit order table</figcaption>
+    <img src="/img/docs/merit-order/mo-table.png" />
+  </figure>
+
+  <figure>
+    <figcaption className="image-title">Figure 4: Merit order capacities</figcaption>
+    <img src="/img/docs/merit-order/mo-capacities.png" />
+  </figure>
+</div>
+
+The table shown in Figure 3 lists all electricity producers in the ETM. There are two classes of producers distinguished in the context of the Merit Order, the producers whose full load hours are *independent* of the outcome of the Merit Order calculation. This class includes **volatile** producers of electricity such as solar panels and wind turbines which produce electricity *irrespective* of the demand and **must-run** producers. The second class is made up of **dispatchable** producers and includes nuclear, coal and gas plants. In contrast to the volatiles, the plants have the capability to react to variations in demand. For the producers, the following properties are displayed in the *Merit Order Table*:
 
 -   Position in the Merit Order: The position in the merit order is simply the order based on the marginal cost.
 -   Marginal costs: The costs concerned with producing an extra unit of electricity.
@@ -154,7 +173,7 @@ There are two main areas of output for the Merit Order module : **full load hour
 
 ### Full load hours
 
-The full load hours of dispatchable producers (see Figure 4, left panel) are the main result of the MO module and are defined as:
+The full load hours of dispatchable producers (see Figure 3) are the main result of the MO module and are defined as:
 
 ```
 production (MWh) / (output_capacity_per_unit * number_of_units )
