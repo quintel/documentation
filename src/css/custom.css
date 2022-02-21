@@ -34,6 +34,7 @@
   --ifm-line-height-base: 1.7;
   --ifm-leading: 1rem;
   --ifm-heading-line-height: 1;
+  --ifm-h5-font-size: 1rem;
 
   /* This is exactly between emphasis-800 and 700; one of which is too dark and the other
      is too light. */
