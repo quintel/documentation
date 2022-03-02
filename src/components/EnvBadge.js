@@ -5,9 +5,22 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 
 import styles from "./EnvBadge.module.css";
 
-const EnvBadge = ({ component: Component = "span", children, ...rest }) => {
+function linkProps(props) {
+  if (props.nolink) {
+    return {};
+  }
+
+  return { component: Link, to: "/api/intro#environments" };
+}
+
+const EnvBadge = ({
+  component: Component = "span",
+  className,
+  children,
+  ...rest
+}) => {
   return (
-    <Component className={styles.badge} {...rest}>
+    <Component className={`${styles.badge} ${className}`.trim()} {...rest}>
       {children}
     </Component>
   );
@@ -15,14 +28,14 @@ const EnvBadge = ({ component: Component = "span", children, ...rest }) => {
 
 export const UnreleasedBadge = () => <EnvBadge>Not yet released</EnvBadge>;
 
-export const StagingBadge = () => (
-  <EnvBadge component={Link} to="/api/intro#environments">
+export const StagingBadge = (props) => (
+  <EnvBadge className={styles.staging} {...linkProps(props)} {...props}>
     Staging
   </EnvBadge>
 );
 
-export const ProductionBadge = () => (
-  <EnvBadge component={Link} to="/api/intro#environments">
+export const ProductionBadge = (props) => (
+  <EnvBadge className={styles.production} {...linkProps(props)} {...props}>
     Production
   </EnvBadge>
 );

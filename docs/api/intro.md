@@ -4,6 +4,8 @@ title: Introduction to the API
 sidebar_title: Introduction to the API
 ---
 
+import { StagingBadge, ProductionBadge } from '@site/src/components/EnvBadge';
+
 ## Versioning
 
 The ETM API is versioned as **v3**, but at the time of writing is not semantically versioned. While we seek not to change the public API in a way that would break clients, it's nonetheless constantly in development.
@@ -14,17 +16,17 @@ All paths to the API are prefixed with `/api/v3`.
 
 We operate two versions of the ETM. You should almost always use the production environment unless you have a specific reason to use staging.
 
-<table>
+<table className="no-stripe">
   <thead>
     <tr><th>Environment</th><th>Endpoint</th></tr>
   </thead>
   <tbody>
     <tr>
-      <td>Production</td>
+      <td><ProductionBadge nolink /></td>
       <td><code>engine.energytransitionmodel.com/api/v3</code></td>
     </tr>
     <tr>
-      <td>staging</td>
+      <td><StagingBadge nolink /></td>
       <td><code>beta.engine.energytransitionmodel.com/api/v3</code></td>
     </tr>
   </tbody>

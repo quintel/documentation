@@ -1,27 +1,43 @@
 .badge {
-  background: var(--ifm-menu-color-active);
-  border-radius: 99px;
-  color: #fff;
+  --badge-background: var(--custom-blue-background-color);
+  --badge-color: var(--ifm-color-emphasis-700);
+
+  --badge-hover-background: var(--custom-blue-background-color);
+  --badge-hover-color: var(--ifm-color-emphasis-700);
+
+  background: var(--badge-background);
+  border-radius: 3px;
+  color: var(--badge-color);
   display: inline-block;
-  font-size: 13px;
-  font-weight: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
   margin: -3px 5px 0;
-  padding: 4px 8px;
-  vertical-align: middle;
+  padding: 4px 5px;
   transition: background 0.15s ease;
+  vertical-align: middle;
 }
 
 .badge + .badge {
   margin-left: 0;
 }
 
-a.badge:hover {
-  background: #435a9f;
-  color: white;
-  text-decoration: none;
+.staging {
+  --badge-color: #b45309;
+  --badge-background: #fef3c7;
+  --badge-hover-color: #78350f;
+  --badge-hover-background: #fde68a;
 }
 
+.production {
+  --badge-color: #047857;
+  --badge-background: #d1fae5;
+  --badge-hover-color: #064e3b;
+  --badge-hover-background: #a7f3d0;
+}
 
-h3 .badge {
-  float: right;
+a.badge:hover {
+  background: var(--badge-hover-background);
+  color: var(--badge-hover-color);
+  text-decoration: none;
 }

@@ -560,3 +560,8 @@ figure {
 figure + p, .images-row + p {
   margin-top: var(--ifm-leading);
 }
+
+/* Tables with no stripes */
+table.no-stripe tr:nth-child(2n) {
+  background: none;
+}
