@@ -1,0 +1,27 @@
+.badge {
+  background: var(--ifm-menu-color-active);
+  border-radius: 99px;
+  color: #fff;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: normal;
+  margin: -3px 5px 0;
+  padding: 4px 8px;
+  vertical-align: middle;
+  transition: background 0.15s ease;
+}
+
+.badge + .badge {
+  margin-left: 0;
+}
+
+a.badge:hover {
+  background: #435a9f;
+  color: white;
+  text-decoration: none;
+}
+
+
+h3 .badge {
+  float: right;
+}

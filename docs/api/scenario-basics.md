@@ -14,7 +14,7 @@ All scenarios contain the following attributes, which will be part of any respon
 scenario endpoint:
 
 * `id` - the numeric id of the scenario.
-* `title` - an optional title, this is not used in the GUI.
+* `title` - an optional title. [This is deprecated and will be removed soon](changelog.md#5th-april-2022)
 * `area_code` - the identifier for the area.
 * `start_year` - year the scenario starts.
 * `end_year` - year the scenario ends.
@@ -301,7 +301,8 @@ Some sliders are grouped in a 'share group' to together sum to 100%. An error wi
 you try to set all inputs in such a group without making sure the group still makes exactly 100.0.
 :::
 
-## Add meta information to a Scenario
+## Metadata
+
 Updates the scenario metadata with a new metadata object.
 
 The `metadata` object can contain any custom meta information about the scenario in JSON format up to
@@ -343,6 +344,35 @@ Accept: application/json
   }
 }
 ```
+
+### Best practices
+
+* A top-level `title` attribute can be used to name your scenario, with this title being used in select places in the Energy Transition Model.
+
+  ```json
+  {
+    "scenario": {
+      "metadata": {
+        "title": "My scenario"
+      }
+    }
+  }
+  ```
+
+* If you are a developer integrating your model with the ETM, consider namespacing your attributes to avoid collisions with those set by other third-party services.
+
+  ```json
+  {
+    "scenario": {
+      "metadata": {
+        "org.example.my-app": {
+          "id": 1337,
+          "tags": ["high-renewability", "hydro"]
+        }
+      }
+    }
+  }
+  ```
 
 ## Protected scenarios
 
