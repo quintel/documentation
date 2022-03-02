@@ -13,8 +13,22 @@ function linkProps(props) {
   return { component: Link, to: "/api/intro#environments" };
 }
 
+function dynamicBadge({ prodDate, stagDate }) {
+  const today = new Date(Date.now());
+  today.setHours(12, 0, 0, 0);
+
+  if (prodDate && Date.parse(prodDate) < today.getTime()) {
+    return <ProductionBadge />;
+  } else if (stagDate && Date.parse(stagDate) < today.getTime()) {
+    return <StagingBadge />;
+  } else {
+    return <UnreleasedBadge />;
+  }
+}
+
 const EnvBadge = ({
   component: Component = "span",
+  nolink,
   className,
   children,
   ...rest
@@ -40,12 +54,8 @@ export const ProductionBadge = (props) => (
   </EnvBadge>
 );
 
-export const DynamicBadge = ({ prodDate }) => {
-  if (Date.parse(prodDate) + 86400000 < Date.now()) {
-    return <BrowserOnly>{() => <ProductionBadge />}</BrowserOnly>;
-  } else {
-    return <BrowserOnly>{() => <StagingBadge />}</BrowserOnly>;
-  }
+export const DynamicBadge = (props) => {
+  return <BrowserOnly>{() => dynamicBadge(props)}</BrowserOnly>;
 };
 
 export default EnvBadge;

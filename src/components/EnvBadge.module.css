@@ -41,3 +41,9 @@ a.badge:hover {
   color: var(--badge-hover-color);
   text-decoration: none;
 }
+
+
+p .badge {
+  margin-left: 0;
+  margin-right: 0;
+}
