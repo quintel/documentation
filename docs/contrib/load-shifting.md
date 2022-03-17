@@ -2,17 +2,17 @@
 title: Load shifting in Merit
 ---
 
-Demand side response can be enables in the electricity merit order using load shifting. When in use, a load shifting node will output energy at a pre-set price point, and attempt to recover that energy later in the year when the price falls.
+Demand side response can be enabled in the electricity merit order using load shifting. When in use, a load shifting node will output energy at a pre-set price point, and attempt to recover that energy later in the year when the price falls.
 
 Load shifting is energy neutral throughout the year. Energy produced by shifting will be reclaimed later in the year. Should the simulation get close to the end of the year, the load shifting component will begin placing an inflexible consumption load in order to reclaim energy regardless of the market price.
 
 ## Implementation
 
-Load shifting can be thought of as storage in reverse. Storage consumes energy and holds it in a reserve to be dischared later. Load shifting outputs energy immediately, internally storing a deficit which it will try to reclaim later by consuming.
+Load shifting can be thought of as storage in reverse. Storage consumes energy and holds it in a reserve to be discharged later. Load shifting outputs energy immediately, internally storing a deficit which it will try to reclaim later by consuming.
 
 ### Demand sources
 
-Load shifting is typically used within a sector or sub-sector, in order to shift some of that sector's demand to the future. To ensure that only the demand of this sector is shifted, we must specify the demand sources when configuring load shifting.
+Load shifting is typically used within a sector or sub-sector, in order to shift some of that sector's demand to the future. To ensure that only the demand of this sector is shifted, the demand sources must be specified when configuring load shifting.
 
 For example, if the node will shift the demand from "node_one" and "node_two", the demand source configuration will be:
 
@@ -137,7 +137,7 @@ With this arrangement, the energy which is shifted during the year will be diver
 - marginal_costs = 48.0
 - max_consumption_price = 48.0
 
-- availability = 1.0
+- availability = 0.0
 - number_of_units = 0.0
 
 ~ demand = 0.0
