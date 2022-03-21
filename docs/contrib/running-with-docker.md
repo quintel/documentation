@@ -7,7 +7,7 @@ import { DynamicBadge } from '@site/src/components/EnvBadge';
 The Energy Transition model consists of three parts:
 
 * **ETEngine**: The main calculation system and API.
-* **ETModel**: The front-end, which allows you to create scenarios through a nice user-interface with sliders.
+* **ETModel**: The front-end, which allows you to create scenarios through a user-interface with sliders.
 * **ETSource**: A repository containing our source data. This is needed for ETEngine to function.
 
 ETEngine and ETModel are both configured to run with [Docker](https://www.docker.com/) (via Docker Compose), minimising the amount of effort needed to install dependencies and libraries. This guide will assume that you already have Docker installed and configured.
