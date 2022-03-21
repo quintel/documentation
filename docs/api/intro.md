@@ -18,16 +18,22 @@ We operate two versions of the ETM. You should almost always use the production 
 
 <table className="no-stripe">
   <thead>
-    <tr><th>Environment</th><th>Endpoint</th></tr>
+    <tr>
+      <th>Environment</th>
+      <th>Endpoint</th>
+      <th>Git branch</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
       <td><ProductionBadge nolink /></td>
       <td><code>engine.energytransitionmodel.com/api/v3</code></td>
+      <td><code>production</code></td>
     </tr>
     <tr>
       <td><StagingBadge nolink /></td>
       <td><code>beta.engine.energytransitionmodel.com/api/v3</code></td>
+      <td><code>master</code></td>
     </tr>
   </tbody>
 </table>
