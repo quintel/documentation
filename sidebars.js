@@ -123,8 +123,13 @@ module.exports = {
       type: "category",
       label: "For Contributors",
       collapsed: false,
+      items: ["contrib/intro", "contrib/running-with-docker"],
+    },
+    {
+      type: "category",
+      label: "Model features",
+      collapsed: false,
       items: [
-        "contrib/intro",
         "contrib/always-on-battery-parks",
         "contrib/fever",
         "contrib/inputs",

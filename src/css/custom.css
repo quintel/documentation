@@ -340,6 +340,15 @@ div[class^="codeBlockContainer"] {
   box-shadow: none;
 }
 
+.admonition div[class^="codeBlockContainer"] {
+  border-radius: var(--ifm-global-radius) !important;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.admonition div[class^="codeBlockContainer"] pre {
+  background: rgba(255, 255, 255, 0.75) !important;
+}
+
 div[class^="codeBlockTitle_"] {
   background-color: #fcfdff !important;
 }

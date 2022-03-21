@@ -9,7 +9,7 @@ module.exports = {
   themeConfig: {
     prism: {
       theme: require("prism-react-renderer/themes/github"),
-      additionalLanguages: ["http"],
+      additionalLanguages: ["http", "bash"],
     },
     colorMode: {
       disableSwitch: true,
