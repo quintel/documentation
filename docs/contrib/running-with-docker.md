@@ -52,17 +52,25 @@ Create a file called `.password` in the ETSource directory containing the passwo
 
 #### Build the ETModel image:
 
-```sh
+```bash
 docker-compose build
 ```
 
 #### Install dependencies and seed the database:
 
-```sh
+```bash
 docker-compose run --rm web bash -c 'bin/rails db:drop && bin/setup'
 ```
 
 This command drops any existing ETModel database; be sure only to run this during the initial setup! This step will also provide you with an e-mail address and password for an administrator account.
+
+When the application is updated you may easily install new dependencies by running `bin/setup`:
+
+```bash
+docker-compose run --rm web bin/setup
+```
+
+This command is idempotent and may by run at any time whenever needed.
 
 #### Set the API URL (optional)
 
@@ -97,7 +105,7 @@ When running ETEngine locally, be sure to use the same branch or tag for ETModel
 
 For example, if you want to run the latest version, all three should be set to the `master` branch. To run the current "stable" version of the ETM, set them to the `production` branch. If you wish to run a specific production release they should all use the same tag. For example, to use the March 2022 release:
 
-```sh
+```bash
 cd ../etengine && git checkout 2022.03
 cd ../etsource && git checkout 2022.03
 cd ../etmodel  && git checkout 2022.03
@@ -133,6 +141,14 @@ docker-compose run --rm web bash -c 'bin/rails db:drop && bin/setup'
 ```
 
 The command drops any existing ETEngine database; be sure only to run this during the initial setup! This step will also provide you with an e-mail address and password for an administrator account.
+
+When the application is updated you may easily install new dependencies by running `bin/setup`:
+
+```bash
+docker-compose run --rm web bin/setup
+```
+
+This command is idempotent and may by run at any time whenever needed.
 
 #### Launch the containers
 
