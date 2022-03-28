@@ -2,90 +2,77 @@
 title: Cost methods
 ---
 
-This page describes how costs are calculated for individual heat- or electricity technologies in the ETM. The calculations are designed to be standardised so that they can be used for several types of plants (electricity, heat, hydrogen etc.). These calculations are done for each technology. In the ['Costs'](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) section of the ETM you can change costs related to the production, conversion or storage of energy. 
+This page describes the main cost groups of the ETM and how they are calculated for a scenario. 
 
-This page gives an overview of all the components of the cost calculations.
+The ETM defines six main cost groups which consist of subgroups. These subgroups are the sum of individual technologies and some additional modules. A detailed datadump of all groups and subgroups and modules and can be found in the ['datadump'](https://pro.energytransitionmodel.com/scenario/data/data_export/energy-flows). A detailed overview of the scope per subgroup can be found ['here'](https://docs.energytransitionmodel.com/main/cost-overview-per-sector).
 
-## Total costs
+## Main cost groups
+The yearly costs of a scenario in the ETM is built up from all technologies, carriers, and CO<sub>2</sub> costs in a scenario. **Important:** Group 1-4 consists of the CAPEX and OPEX and exclude fuels and CCUS costs. Group 5 includes all the fuel costs and group 6 all the CCUS and CO<sub>2</sub> costs. 
 
-The total costs define the yearly total costs of a technology in euro's. The total costs are split up in the fixed and variable costs of the converter. It therefore  adds up Fixed costs and Variable costs (see below). The total costs are a combination of cost of capital, depreciation, and fixed operation and maintenance costs.
+1. **Buildings and installations:** Building and installation-related costs (CAPEX + OPEX) of sectors. Subgroups:
+  -  Households  
+  -  Buildings  
+  -  Transport 
+  -  Industry 
+  -  Agriculture 
 
-![](/img/docs/TotalCosts.jpg)
+2. **Energy Production:** Installation-related costs (CAPEX + OPEX) of the energy production sector. Subgroups: 
+  -  Power plants
+  -  CHP plants (including the industrial steam network)
+  -  Heat plants 
+  -  Dedicated hydrogen production 
+  -  Biomass treatment
+  -  Other intallations (synthetic kerosine, regasification of lng, and energy compressors for network gas)
 
-## Fixed costs
+3. **Infrastructure**: CAPEX + OPEX of the energy infrastructure. Subgroups:
+  -  Gas network (natural gas and green gas) 
+  -  Heat network
+  -  Hydrogen network
+  -  Electricity network
+   
+4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). All G2P is associated with means of 'Energy production'. Subgroups:
+  -  Power-to-power (p2p)
+  -  Power-to-gas (p2g) 
+  -  Power-to-heat (p2h)
+  -  Storage (of hydrogen and heat) 
 
-The fixed costs are the costs that have to be paid yearly, independent of the full load hours of the plant. When more plants are installed, the fixed costs will go up, but when only the number of full load hours changes, these costs remain the same.
+5. **Energy carriers and import:** All net primary demand of energy carriers. The primary carriers used for exported carriers are subtracted from the import costs. For example if gasoline (made in the country) is exported the neccessary imported crude oil costs are substracted from the total crude oil import.
+  
+6. **Carbon capture, sequestration and utilisation (CCSU):** CAPEX + OPEX of all CCUS technologies, including CO<sub>2</sub> costs.
 
-![](/img/docs/FixedCosts.jpg)
+## CAPEX and OPEX 
+All costs of groups 1-4 consists of two variables: CAPEX or `capital_expenditures_excluding_ccs` and OPEX or `operating_expenses_excluding_ccs`. Group 6 is similar, but contains all CAPEX and OPEX of the CCUS technologies.
 
-#### Cost of capital
+### **CAPEX**
+Capital expenditures are major investments that are designed to be used for many years. The yearly costs for these investments are based on the total investment over lifetime, WACC and plant lifetime. CCUS and fuel costs are not in the CAPEX and OPEX of group 1-4. 
 
-The cost of capital is the amount of money that is spent yearly to finance the required investment for the plant. It assumes that the capital required either costs money to finance, or could have been used to generate money elsewhere. This is a percentage of the average investment over the lifetime of a plant, which is called the WACC, the [weighted average cost of capital](http://en.wikipedia.org/wiki/Weighted_average_cost_of_capital). During the construction of the plant capital costs must also be paid and this is factored into the costs by taking into account the construction time into the equation. See the [WACC section](cost-wacc.md) for more information.
+![](/img/docs/costs_equation_capex.png)
 
-![](/img/docs/CostOfCapital.jpg)
+Additional definitions:
 
-Where:
+* Investment over lifetime = total initial investment + decommissioning costs
+* WACC = [Weighted average cost of capital](cost-wacc.md)
+* Construction Time = the time it takes to construct a typical plant of this type
+* Technical Lifetime = the average amount of time that a plant operates
 
--   Average investment = (initial investment + initial investment for Carbon Capture and Storage (CCS) + installing costs + Decommissioning Costs ) / 2
--   WACC = [Weighted average cost of capital](cost-wacc.md)
--   Construction Time = the time it takes to construct a typical plant of this type
--   Technical Lifetime = the average amount of time that a plant can continue operating
+### **OPEX**
+Operating expenses include Operation and Maintenance (O&M) costs, without CCS. O&M costs can have both a variable and a fixed part.
+ 
+* Variable O&M costs are costs that depend on the number of full load hours of the plant, for additional cleaning and service costs.
+* The fixed part are the costs that are made yearly, independent of whether the plant is used or not. Fixed O&M Costs are specified per year and found directly from research. This means that Fixed O&M Costs have no calculations associated with them.
 
-#### Depreciation Costs
+![](/img/docs/costs_equation_opex.png)
 
-Next to the cost of capital, a plant will decrease in value every year. Using the [straight line depreciation](http://en.wikipedia.org/wiki/Depreciation#Straight-line_depreciation) method the yearly depreciation is calculated.
+Additional definitions:
 
-![](/img/docs/DepreciationCosts.jpg)
+-   Full load hours = the typical yearly full load hours of a plant of this type, this is calculated in the scenario.
+-   Variable Operation & Maintenance Costs per Full load hour = the normal costs for operating and maintaining the plant for one full load hour, this is researched per technology, see: [ETDataset source analysis](https://github.com/quintel/etdataset/tree/master/nodes_source_analyses)
 
-Where:
 
--   Total investment = the initial investment + initial investment for Carbon Capture and Storage (CCS) + installing costs + Decommissioning Costs
--   Residual Value = the remaining value after a plant is retired (for example: selling raw material, reclaimed land, etc)
--   Technical lifetime = the average amount of time that a plant can continue operating
+### **Fuel costs**
+These costs are specified in the categorie "carriers". This includes all raw fuel costs. So taxes and profit margins are not taken into account.
 
-#### Fixed Operation and Maintenance costs
 
-Operation and Maintenance costs can have both a fixed and a variable part. The fixed part is the costs that are made yearly, independent of whether the plant is used or not. Examples of fixed costs are the costs for personnel that have to do yearly maintenance such as cleaning the plant. Fixed O&M Costs are specified per year and found directly from research. This means that Fixed O&M Costs have no calculations associated with them.
+## Changing costs in a scenario
+All the costs of [technologies](https://github.com/quintel/etdataset/tree/master/nodes_source_analyses) and [datasets (or regions)](https://github.com/quintel/etdataset/tree/master/source_analyses) are researched in advance. Technologies have the same starting assumptions for all regions. Carrier costs can be different per region. When making a scenario, many of these assumptions can be changed in the [costs](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) section of the ETM.
 
-## Variable costs
-
-The variable costs depend on how much the available plants are used. It is a combination of fuel costs, the variable part of operation and maintenance costs, and if applicable, CO<sub>2</sub> emission costs.
- ![](/img/docs/VariableCosts.jpg)
-
-#### Fuel costs
-
-Here, the fuel costs for the plant are calculated, based on the efficiency of the plant. The cost of the energy carrier that is consumed is used, except for electricity and steam/hot water. The production of these energy carriers already have costs assigned, so these would be counted double if they would be calculated here again.
-
-![](/img/docs/FuelCosts.jpg)
-
-Where:
-
--   Typical fuel input = the yearly input of fuel for a typical plant of this type
--   Fuel price = the fuel price of the type(s) used by this plant for the year of calculation
-
-#### CO<sub>2</sub> emission costs
-
-Plants in certain sectors need to have emission rights for the CO<sub>2</sub> they emit. If they do, the amount of CO<sub>2</sub> emitted is calculated based on the carbon content of the energy carrier used, and whether part of the CO<sub>2</sub> is captured or not. The costs for CO<sub>2</sub>-emission is calculated by multiplying the emitted amount of CO<sub>2</sub> with the cost of CO<sub>2</sub>-emission rights in the area and the percentage of CO<sub>2</sub>-rights that has to be paid.
-
-![](/img/docs/CO2Emissions.jpg)
-
-Where:
-
--   Typical fuel input = the yearly input of fuel for a typical plant of this type
--   Fuel CO<sub>2</sub> emissions = the typical amount of CO<sub>2</sub> emitted when burning this fuel
--   CO<sub>2</sub> price = the price of emitting one unit of CO<sub>2</sub>
--   % free CO<sub>2</sub> credits = factor specifying how much of the CO<sub>2</sub> credits are given away for free in the current country (or area)
--   % ETS = factor specifying which part of this plant falls under the European Emissions Trading scheme
--   % CO<sub>2</sub> free = factor specifying how much of these CO<sub>2</sub> emissions do not have costs associated with them (example: non-energetic emissions of CO<sub>2</sub>)
-
-#### Variable Operation and Maintenance costs
-
-Here the variable operation and maintenance costs are calculated. These for example include costs for additional cleaning and service costs that depend of the number of full load hours of the plant.
-
-![](/img/docs/VariableOMCosts.jpg)
-
-Where:
-
--   Full load hours = the typical yearly full load hours of a plant of this type
--   Variable Operation & Maintenance Costs per Full load hour = the normal costs for operating and maintaining the plant for one full load hour
--   Variable Operation & Maintenance Costs for CCS per Full load hour = the additional costs for operating and maintaining the Carbon Capture and Storage (CCS) part of a plant for one full load hour
