@@ -36,7 +36,11 @@ The yearly costs of a scenario in the ETM is built up from all technologies, car
   -  Power-to-heat (p2h)
   -  Storage (of hydrogen and heat) 
 
-5. **Energy carriers and import:** All net primary demand of energy carriers. The primary carriers used for exported carriers are subtracted from the import costs. For example if gasoline (made in the country) is exported the neccessary imported crude oil costs are substracted from the total crude oil import.
+5. **Energy carriers and import:** AAll net primary demand of energy carriers.   
+<br>
+<i>Cost of carrier = (extraction + import - export) * price of carrier</i>  
+<br> 
+For export the ETM charges the costs of the primary carrier that is needed for that export. The export of electricity and transit of oil is cost neutral and independent of the market price. A country does not "earn" money from processing oil. And for electricity the ETM deducts the costs of the primary carriers needed to produce that electricity.  
   
 6. **Carbon capture, sequestration and utilisation (CCSU):** CAPEX + OPEX of all CCUS technologies, including CO<sub>2</sub> costs.
 
