@@ -107,13 +107,27 @@ module.exports = {
       items: ["main/energy-calculations", "main/useful-demand"],
     },
     {
+      type: "category",
+      label: "5. Scenario-tools",
+      collapsed: true,
+      items: [
+        "main/scenario-tools/introduction",
+        "main/scenario-tools/retrieving-data",
+        "main/scenario-tools/creating-and-updating",
+        "main/scenario-tools/creating-templates",
+        "main/scenario-tools/regional-overview",
+        "main/scenario-tools/heat-module",
+        "main/scenario-tools/advanced-settings",
+      ]
+    },
+    {
       type: "link",
-      label: "5. For Contributors",
+      label: "6. For Contributors",
       href: "/contrib/intro",
     },
     {
       type: "link",
-      label: "6. API Reference",
+      label: "7. API Reference",
       href: "/api/intro",
     },
   ],
