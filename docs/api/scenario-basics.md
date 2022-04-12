@@ -374,7 +374,7 @@ Accept: application/json
   }
   ```
 
-## Future compatibility
+## Forward compatibility
 
 The ETM is frequently updated with new features and improvements. This sometimes means we rename sliders or change the unit in which they are set; as a result, your scenario risks becoming obsolete as the model changes.
 
@@ -425,7 +425,7 @@ Setting your scenario to be read-only has two outcomes:
 
 1. The scenario becomes read-only and may no longer be changed by yourself or any other third-party. This prevents someone else from changing your scenario without your knowledge.
 
-2. It ensures that the scenario remains compatible with future versions of the ETM by also setting [`keep_compatible`](#future-compatibility) to true.
+2. It ensures that the scenario remains compatible with future versions of the ETM by also setting [`keep_compatible`](#forward-compatibility) to true.
 
 :::warning Always mark important scenarios as read-only
 It is highly recommended that you mark as read-only those scenarios you wish to keep long-term. The ETM makes no guarantee about the availability or accuracy of old scenarios which are not set to be read-only.

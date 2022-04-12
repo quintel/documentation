@@ -33,7 +33,7 @@ To learn more about our environments, see the [introduction to the API](intro.md
 
 ### 3rd May 2022 <DynamicBadge prodDate="2022-05-03" stagDate="2022-04-05" />
 
-* The scenario `protected` attribute is deprecated and has been split into two separate attributes: [`read_only`](scenario-basics#read-only-scenarios) and [`keep_compatible`](scenario-basics.md#future-compatibility). The `protected` attribute continues to be supported as an alias of `read_only`, and scenarios marked as `protected` will behave as they did before.
+* The scenario `protected` attribute is deprecated and has been split into two separate attributes: [`read_only`](scenario-basics#read-only-scenarios) and [`keep_compatible`](scenario-basics.md#forward-compatibility). The `protected` attribute continues to be supported as an alias of `read_only`, and scenarios marked as `protected` will behave as they did before.
 
 ### 5th April 2022 <DynamicBadge prodDate="2022-04-05" stagDate="2022-03-02" />
 
