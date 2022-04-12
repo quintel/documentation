@@ -42,7 +42,7 @@ We operate two versions of the ETM. You should almost always use the production 
 
 This is the standard version of the ETM. Features area generally complete, well-tested, and ready to be used by the general public. We aim for the production environment to be available 24-hours a day and 365-days a year, except during occasional, short periods while we perform updates.
 
-We intend to store [protected scenarios](scenario-basics.md#protected-scenarios) created on the production server forever.
+We intend to store [read-only scenarios](scenario-basics.md#read-only-scenarios) created on the production server forever.
 
 #### Staging
 

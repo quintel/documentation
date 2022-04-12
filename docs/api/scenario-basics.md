@@ -23,7 +23,8 @@ scenario endpoint:
 * `source` - source through which the scenario was created, can be 'API' or 'ETM'.
 * `created_at` - date of creation.
 * `updates_at` - date of last update.
-* `protected` - default false, see [protected scenarios](#protected-scenarios)
+* `read_only` - default false, see [read-only scenarios](#read-only-scenarios)
+* `keep_compatible` - default false, see [forward compatibility](#forward-compatibility)
 * `esdl_exportable` - determines if the scenario can be exported as an ESDL file.
 
 The following attributes will always be `null` unless the requested scenario was or used a
@@ -82,7 +83,7 @@ Accept: application/json
   "template": null,
   "created_at": "2021-07-16T09:23:00.000Z",
   "updated_at": "2021-07-16T09:23:00.000Z",
-  "protected": false,
+  "read_only": false,
   "esdl_exportable": null
 }
 ```
@@ -170,7 +171,7 @@ Accept: application/json
   "template": null,
   "created_at": "2021-07-16T09:23:00.000Z",
   "updated_at": "2021-07-16T09:23:00.000Z",
-  "protected": false,
+  "read_only": false,
   "esdl_exportable": null
 }
 ```
@@ -423,7 +424,7 @@ Accept: application/json
 
 Setting your scenario to be read-only has two outcomes:
 
-1. The scenario becomes read-only and may no longer be changed by yourself or any other third-party. This prevents someone else from changing your scenario without your knowledge.
+1. The scenario can no longer be changed by yourself or any other third-party. This prevents someone else from changing your scenario without your knowledge.
 
 2. It ensures that the scenario remains compatible with future versions of the ETM by also setting [`keep_compatible`](#forward-compatibility) to true.
 
@@ -431,7 +432,7 @@ Setting your scenario to be read-only has two outcomes:
 It is highly recommended that you mark as read-only those scenarios you wish to keep long-term. The ETM makes no guarantee about the availability or accuracy of old scenarios which are not set to be read-only.
 :::
 
-You may set slider values at the same time as changing the scenario to be protected. Your updates will be applied and the scenario protected against any future changes:
+You may set slider values at the same time as changing the scenario to be read-only. Your updates will be applied, and the scenario protected against any future changes:
 
 ```http2 title="Example request"
 PUT /api/v3/scenarios/12345 HTTP/2
@@ -440,7 +441,7 @@ Accept: application/json
 
 {
   "scenario": {
-    "protected": true,
+    "read_only": true,
     "user_values": {
       "buildings_insulation_level": 35.7
     }
