@@ -27,9 +27,13 @@ While we endeavour not to change the API in a backwards-incompatible way, this i
 
 To learn more about our environments, see the [introduction to the API](intro.md#environments).
 
-### 3rd May 2022 <UnreleasedBadge prodDate="2022-05-03" stagDate="2022-04-05" />
+### 7th June 2022 <DynamicBadge prodDate="2022-07-07" stagDate="2022-05-03" />
 
 * Scenario `title` and `description` attributes are no longer supported and will have no effect if provided. Use scenario metadata if you wish to set a title or description for your scenario. See [5th April 2022](#5th-april-2022-) for more information.
+
+### 3rd May 2022 <DynamicBadge prodDate="2022-05-03" stagDate="2022-04-05" />
+
+* The scenario `protected` attribute is deprecated and has been split into two separate attributes: [`read_only`](scenario-basics#read-only-scenarios) and [`keep_compatible`](scenario-basics.md#future-compatibility). The `protected` attribute continues to be supported as an alias of `read_only`, and scenarios marked as `protected` will behave as they did before.
 
 ### 5th April 2022 <DynamicBadge prodDate="2022-04-05" stagDate="2022-03-02" />
 
