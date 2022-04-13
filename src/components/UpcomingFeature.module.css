@@ -1,0 +1,15 @@
+.wrapper {
+  color: var(--ifm-toc-link-color);
+  font-size: 0.875rem;
+  padding-left: 30px;
+  border-top: 1px solid var(--ifm-toc-border-color);
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  padding: 1rem 10px 1rem 40px;
+}
+
+.wrapper svg {
+  float: left;
+  height: 25px;
+  margin-left: -30px;
+  width: 24px;
+}

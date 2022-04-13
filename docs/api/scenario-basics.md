@@ -4,6 +4,8 @@ title: Scenario basics
 
 import endpointData from '@site/data/api/scenario';
 import ApiEndpoint from '@site/src/components/ApiEndpoint';
+import { ReleaseBadge } from '@site/src/components/EnvBadge';
+import UpcomingFeature from '@site/src/components/UpcomingFeature';
 
 Here you can find the basics on creating a scenario through the API, requesting information on
 touched sliders and setting sliders. For these operations the scenario endpoint is used.
@@ -377,6 +379,8 @@ Accept: application/json
 
 ## Forward compatibility
 
+<UpcomingFeature release="2022.05" />
+
 The ETM is frequently updated with new features and improvements. This sometimes means we rename sliders or change the unit in which they are set; as a result, your scenario risks becoming obsolete as the model changes.
 
 If you need to continue using your scenario long-term, you may set the `keep_compatible` attribute to `true`. This will subject your scenario to automatic updates ensuring that it remains compatible with future versions of the model.
@@ -396,6 +400,8 @@ Accept: application/json
 ```
 
 ## Read-only scenarios
+
+<UpcomingFeature release="2022.05" />
 
 When you have finished fine-tuning your scenario you may mark it as read-only by setting the `read_only` attribute to `true`:
 
