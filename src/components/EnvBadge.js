@@ -1,5 +1,7 @@
 import React from "react";
 
+import releases from "@site/data/releases";
+
 import Link from "@docusaurus/Link";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 
@@ -13,13 +15,13 @@ function linkProps(props) {
   return { component: Link, to: "/api/intro#environments" };
 }
 
-function dynamicBadge({ prodDate, stagDate }) {
+function dynamicBadge({ production, staging }) {
   const today = new Date(Date.now());
   today.setHours(12, 0, 0, 0);
 
-  if (prodDate && Date.parse(prodDate) < today.getTime()) {
+  if (production && Date.parse(production) < today.getTime()) {
     return <ProductionBadge />;
-  } else if (stagDate && Date.parse(stagDate) < today.getTime()) {
+  } else if (staging && Date.parse(staging) < today.getTime()) {
     return <StagingBadge />;
   } else {
     return <UnreleasedBadge />;
@@ -56,6 +58,16 @@ export const ProductionBadge = (props) => (
 
 export const DynamicBadge = (props) => {
   return <BrowserOnly>{() => dynamicBadge(props)}</BrowserOnly>;
+};
+
+export const ReleaseBadge = ({ name }) => {
+  const release = releases[name];
+
+  if (!release) {
+    return null;
+  }
+
+  return <DynamicBadge {...release} />;
 };
 
 export default EnvBadge;

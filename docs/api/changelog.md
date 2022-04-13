@@ -3,7 +3,7 @@ title: API Changelog
 sidebar_label: Changelog
 ---
 
-import { DynamicBadge, ProductionBadge, StagingBadge, UnreleasedBadge } from '@site/src/components/EnvBadge';
+import { ReleaseBadge, ProductionBadge, StagingBadge, UnreleasedBadge } from '@site/src/components/EnvBadge';
 
 While we endeavour not to change the API in a backwards-incompatible way, this is not always possible. This page contains a history of changes to the API.
 
@@ -27,15 +27,15 @@ While we endeavour not to change the API in a backwards-incompatible way, this i
 
 To learn more about our environments, see the [introduction to the API](intro.md#environments).
 
-### 7th June 2022 <DynamicBadge prodDate="2022-07-07" stagDate="2022-05-03" />
+### 7th June 2022 <ReleaseBadge name="2022.06" />
 
 * Scenario `title` and `description` attributes are no longer supported and will have no effect if provided. Use scenario metadata if you wish to set a title or description for your scenario. See [5th April 2022](#5th-april-2022-) for more information.
 
-### 3rd May 2022 <DynamicBadge prodDate="2022-05-03" stagDate="2022-04-05" />
+### 3rd May 2022 <ReleaseBadge name="2022.05" />
 
 * The scenario `protected` attribute is deprecated and has been split into two separate attributes: [`read_only`](scenario-basics#read-only-scenarios) and [`keep_compatible`](scenario-basics.md#forward-compatibility). The `protected` attribute continues to be supported as an alias of `read_only`, and scenarios marked as `protected` will behave as they did before.
 
-### 5th April 2022 <DynamicBadge prodDate="2022-04-05" stagDate="2022-03-02" />
+### 5th April 2022 <ReleaseBadge name="2022.04" />
 
 * Scenarios should no longer be given a `title` or `description` attribute. If you wish to store such data with your scenarios, please use [the scenario metadata](scenario-basics.md#metadata).
 
@@ -78,7 +78,7 @@ To learn more about our environments, see the [introduction to the API](intro.md
   }
   ```
 
-### 1st February 2022 <DynamicBadge prodDate="2022-02-01" />
+### 1st February 2022 <ReleaseBadge name="2022.02" />
 
 * Scenarios marked as `protected` are now read-only. Changes to a protected scenario are not permitted and will be rejected with a 403 Forbidden response. [**Read more →**](scenario-basics.md#protected-scenarios)
 * Inputs may now contain a `disabled_by` attribute which lists other input keys in an array. The input will be disabled if any of the specified inputs have a value provided by the user. [**Read more →**](inputs.md#mutually-exclusive-inputs)
