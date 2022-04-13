@@ -27,8 +27,8 @@ scenario endpoint:
 * `keep_compatible` - default false, see [forward compatibility](#forward-compatibility)
 * `esdl_exportable` - determines if the scenario can be exported as an ESDL file.
 
-The following attributes will always be `null` unless the requested scenario was or used a
-[preset scenario](#preset-scenarios):
+The following attributes will always be `null` unless the scenario was based on a
+[preset](#preset-scenarios):
 
 * `template` - the id of the scenario that was used as a preset.
 * `ordering` - the number in the order of preset scenarios.
