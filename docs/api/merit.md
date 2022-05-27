@@ -6,12 +6,11 @@ title: Merit configuration
 import endpointData from '@site/data/api/merit';
 import ApiEndpoint from '@site/src/components/ApiEndpoint';
 
-When querying future values of your scenario, the full graph is calculated to create your
-response. These calculations include setting up and solving the merit order for your scenarios.
-The ETM uses a separate gem called [`merit`](https://github.com/quintel/merit) that does hourly
-calculations and solves the order. You can read more about the workings [here](/main/merit-order).
+When querying future values of your scenario, the full energy graph is calculated to create your
+response. These calculations include setting up the electricity supply and demand merit order and subsequently clearing the electricity market for every hour in the year. The ETM uses a separate gem called [`merit`](https://github.com/quintel/merit) that performs these hourly
+calculations and clears the market. You can read more about its workings [here](/main/merit-order).
 
-The `merit` gem can be installed and used in any other project. If you wish to initialize your own
+The `merit` gem can be installed and used as a stand-alone feature in any other project. If you wish to initialize your own
 version of the `merit` gem with data from an ETM scenario, you can use the following endpoint to
 extract the configuration the ETM merit order is initialized with.
 
@@ -28,23 +27,23 @@ participants contain the following data:
 
 * `key` - the identifier of the participant.
 * `type` - which merit class the participant should be.
-* `curve` - the key of the curve that the particicpant uses, to be found in the `curves` object. Is null if the participant has no curve. A curve is usually a load profile, except for interconnectors, where the curve is the price curve.
+* `curve` - the key of the curve that the participant uses, to be found in the `curves` object. Is null if the participant has no curve. A curve is usually a load profile, except for interconnectors, where the curve is the price curve.
 
 For dispatchables the following data is included:
-* `marginal_costs` - in Euro
+* `marginal_costs` - in euros / MWh
 * `output_capacity_per_unit` - in MW
 * `number_of_units` - number
 * `availability` - value between 0 and 1
-* `fixed_costs_per_unit` - in Euro
-* `fixed_om_costs_per_unit` - in Euro
+* `fixed_costs_per_unit` - in euros / unit
+* `fixed_om_costs_per_unit` - in euros / unit
 * `full_load_hours` - *only when the participant contains a curve*, value between 0 and 8670
 
 The flexible participants include the following data:
-* `marginal_costs` - in Euro
+* `marginal_costs` - in euros / MWh
 * `input_capacity_per_unit` - in MW
 * `output_capacity_per_unit` - in MW
 * `number_of_units` - number
-* `volume_per_unit` - *only for types of storage*, in MJ
+* `volume_per_unit` - *only for types of storage*, in MWh
 * `input_efficiency` - *only for types of storage*, value between 0 and 1
 * `output_efficiency` - *only for types of storage*, value between 0 and 1
 * `reserve_class` - *only for types of storage*, type of reserve to use
