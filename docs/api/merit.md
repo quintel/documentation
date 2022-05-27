@@ -26,7 +26,7 @@ Each participant is an object containing all details neccesary to initialize the
 participants contain the following data:
 
 * `key` - the identifier of the participant.
-* `type` - which merit class the participant should be.
+* `type` - which merit class the participant should be. You can find the different participant and flex classes [in the gem](https://github.com/quintel/merit/tree/master/lib/merit).
 * `curve` - the key of the curve that the participant uses, to be found in the `curves` object. Is null if the participant has no curve. A curve is usually a load profile, except for interconnectors, where the curve is the price curve.
 
 For dispatchables the following data is included:
@@ -46,7 +46,7 @@ The flexible participants include the following data:
 * `volume_per_unit` - *only for types of storage*, in MWh
 * `input_efficiency` - *only for types of storage*, value between 0 and 1
 * `output_efficiency` - *only for types of storage*, value between 0 and 1
-* `reserve_class` - *only for types of storage*, type of reserve to use
+* `reserve_class` - *only for types of storage*, type of reserve to use, either `reserve`, or [`simple_reserve`](https://github.com/quintel/merit/blob/master/lib/merit/flex/simple_reserve.rb)
 * `decay` - *only for types of storage*, curve
 
 And the users (consumers) contain:
