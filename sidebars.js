@@ -191,6 +191,7 @@ module.exports = {
         "api/heat-network-order",
         "api/inputs",
         "api/nodes",
+        "api/merit",
       ],
     },
   ],
