@@ -101,3 +101,9 @@ Accept: application/json
   ]
 }
 ```
+
+## The `include_curves` parameter
+If you want the large `curves` object to be excluded from the response, you can opt out by
+setting the `include_curves` parameter to `false`. Please note that without the curves you will not
+be able to initialise Merit. However, if you only need information on all the participants, this
+parameter can be used to reduce the response time.
