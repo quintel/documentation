@@ -1,6 +1,14 @@
 export default {
+  2022.08: {
+    production: "2022-08-02",
+    staging: "2022-07-05",
+  },
+  2022.07: {
+    production: "2022-07-05",
+    staging: "2022-06-09",
+  },
   2022.06: {
-    production: "2022-07-07",
+    production: "2022-06-09",
     staging: "2022-05-03",
   },
   2022.05: {

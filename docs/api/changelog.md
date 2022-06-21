@@ -27,7 +27,7 @@ While we endeavour not to change the API in a backwards-incompatible way, this i
 
 To learn more about our environments, see the [introduction to the API](intro.md#environments).
 
-### 7th June 2022 <ReleaseBadge name="2022.06" />
+### 2nd August 2022 <ReleaseBadge name="2022.08" />
 
 * Scenario `title` and `description` attributes are no longer supported and will have no effect if provided. Use scenario metadata if you wish to set a title or description for your scenario. See [5th April 2022](#5th-april-2022-) for more information.
 
