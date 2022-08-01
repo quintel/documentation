@@ -482,8 +482,7 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/main/battery-forecasting"]:after,
-.menu a[href="/contrib/always-on-battery-parks"]:after {
+.menu a[href="/__none__"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -498,16 +497,13 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/main/battery-forecasting"]:after,
-.menu a.menu__link--active[href="/contrib/always-on-battery-parks"]:after {
+.menu a.menu__link--active[href="/__none__"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
 }
 
 /* Add "Updated" tag to some sidebar items. */
-.menu a[href="/api/changelog"]:after,
-.menu a[href="/api/scenario-basics"]:after,
-.menu a[href="/api/inputs"]:after {
+.menu a[href="/__none__"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -522,9 +518,7 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/api/changelog"]:after,
-.menu a.menu__link--active[href="/api/scenario-basics"]:after,
-.menu a.menu__link--active[href="/api/inputs"]:after {
+.menu a.menu__link--active[href="/__none__"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
 }
