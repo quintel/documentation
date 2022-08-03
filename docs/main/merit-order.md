@@ -149,8 +149,8 @@ Some demands in the merit order will be satisfied only if they are willing to pa
 
 There are two situations in which a price-sensitive demand will be given energy:
 
-1. There is an excess of electricity in the hour, resulting from volatile or must-run producers.
-2. The price of electricity from dispatchables is less than the cut-off price the demand is willing to pay.
+1. There is an excess of electricity in the hour, resulting from volatile or must-run producers, and the cut-off price the demand is willing to pay is greater than €0.
+2. The price of electricity from dispatchables is strictly less than the cut-off price the demand is willing to pay.
 
 For example, if a scenario has three dispatchable producers available, with prices of €10, €20, and €30, and the demand is willing to pay at most €25, then the first two dispatchables may be used to satisfy the demand, but not the third.
 
