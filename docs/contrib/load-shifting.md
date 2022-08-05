@@ -109,7 +109,7 @@ With this arrangement, the energy which is shifted during the year will be diver
 
 * `type`: must be set to "flex"
 * `subtype`: must be set to "load_shifting"
-* `level`: may be set to "omit" to ignore the effects on load shifting on the electricity network, or "lv", "mv", or "hv" if you want shifting to affect the network calculation and charts.
+* `level`: may be set to "omit" to ignore the effects of load shifting on the electricity network, or "lv", "mv", or "hv" if you want shifting to affect the network calculation and charts.
 * `demand_source`: must be present with the name of at least one node whose demand is shifted. These nodes must themselves be consumers in the merit order.
 * `load_shifting_hours`: an optional upper can on how much deficit can be stored at once. If omitted, the deficit capacity limit is disabled. See [Deficit capacity](#deficit-capacity).
 
