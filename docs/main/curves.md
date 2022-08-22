@@ -19,9 +19,9 @@ The ETM had three types of curves: demand curves, supply curves and time curves.
 |Sector|Sub-sector|Source|Method|Comment|
 |---|---|---|---|---|
 |**Households**|Space heating|TNO|TNO curves fitted to temperature and irradiance which enables to generate curves for all years. Curves have been smoothed to show the average load of a cluster of 300 houses rather than an individual house. This results in lower and more realistic total demand peaks.|Update with TNO heat loss calculation when data becomes available|
-||Hot water|[Jordan (2001)](https://refman.energytransitionmodel.com/publications/2065)|Distribution function based on average Dutch household|-|
+||Hot water|[Jordan (2001)](https://refman.energytransitionmodel.com/publications/2065)|Distribution function based on average Dutch household. Curves have been smoothed to show the average load of a cluster of 1000 houses rather than an individual house, see [GitHub](https://github.com/quintel/etdataset/tree/master/curves/demand/households/hot_water)|-|
 ||Cooling|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E1A curve|[Argumentation of method](https://github.com/quintel/etdataset-public/tree/master/curves/demand/households/cooling), update with TNO heat loss calculation when data becomes available|
-||Appliances|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E1A curve|-|
+||Appliances, lighting, cooking|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E1A curve|-|
 |**Buildings**|Space heating|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|G2A|Update with TNO heat loss calculation when data becomes available|
 ||Cooling|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E3A curve|[Argumentation of method](https://github.com/quintel/etdataset-public/tree/master/curves/demand/buildings/cooling), update with TNO heat loss calculation when data becomes available
 ||Appliances|[NEDU](https://www.nedu.nl/documenten/verbruiksprofielen/)|E3A curve|-|
