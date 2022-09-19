@@ -58,7 +58,7 @@ If in the node file the `availability` attribute is set to zero, no load shiftin
 
 Load shifting may have an optional limit on how much deficit can be stored. This allows a user to allow only a certain amount of load to be shifted before the deficit must be reduced by consuming.
 
-Since the capacity of the participant is set dynamically based on the demand source peak load, **the deficit capacity is expressed in hours.** For example, setting the capacity to 5 allows five times the output capacity to be shifted before the participant must consume.
+Since the capacity of the participant is set dynamically based on the demand source peak load, **the deficit capacity is expressed in hours.** For example, setting the capacity to 5 allows five times the output capacity to be shifted before the limit is reached. Decreasing the demand will only become available again, once some of the deficit has been compensated.
 
 In this example, the load shifting reaches its cap of 10 MWh and cannot shift any more load until the deficit is reduced:
 
@@ -168,4 +168,6 @@ Regardless of whether the load shifting node is connected to the rest of the gra
 * `electricity_output_curve`: A load curve indicating when the load shifting node outputs energy, shifting it to the future.
 * `electricity_input_curve`: A load curve indicating when the load shifting node consumes energy, reclaiming the deficit from load shifted in earlier hours.
 
+:::caution Load curves
 The load curves on the demand sources will not be changed as a result of load shifting; they will still show the load as if load shifting had not occurred.
+:::
