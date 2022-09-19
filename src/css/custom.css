@@ -451,10 +451,10 @@ li ul, li ol {
 }
 
 .alert.alert--warning {
-  --ifm-alert-background-color: #ffe59e;
-  --custom-alert-font-color: #866719;
+  --ifm-alert-background-color: #fff4d3;
+  --custom-alert-font-color: #5a4b38;
   color: var(--custom-alert-font-color);
-  border-color: #f7c748;
+  border-color: #ebd79d;
 }
 
 .alert.alert--danger {
