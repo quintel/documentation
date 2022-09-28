@@ -125,10 +125,14 @@ Below you can find a table with all sliders and corresponding categories and exp
 | ---- | ----|---- |---- |
 | **Agriculture**|1.A.4.c | Agriculture/Forestry/Fishing | _Includes all energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. Emissions as a result of energy use (lighting, heating, transport, machinery, etc.) in agriculture, forestry and fishing._ |
 
-### Indirect and delayed emissions
+### Indirect emissions
 
 | ETM slider | UNFCCC category | Category name | Description |
 | ---- | ----|---- |---- |
 | **Indirect emissions**| ind_CO2 | Indirect CO<sub>2</sub> | _Indirect CO<sub>2</sub> emissions are a product of the atmospheric oxidation of CH4, CO and NMVOC (Non-Methane Volatile organic compounds) which are mainly released in industrial processes but also in agriculture, households and a wide range of other sectors._ |
 
+### Delayed emissions
 
+| ETM slider | UNFCCC category | Category name | Description |
+| ---- | ----|---- |---- |
+| **Indirect emissions**| N.A. (not part of UNFCCC categories) | Delayed CO<sub>2</sub> | _Delayed CO<sub>2</sub> emissions occur when captured CO<sub>2</sub> for 'Other utilisation' in the Emissions > [CCUS](https://pro.energytransitionmodel.com/scenario/emissions/ccus/utilisation-and-storage-of-co2) section is released at a later moment in time. Whether the emissions are assumed to emitted in the same year or delayed indefinitely depends on the type of 'Other utilisation' and can be adjusted in the Emissions > [Greenhouse gases](https://pro.energytransitionmodel.com/scenario/emissions/other_emissions/delayed-emissions) section._ |
