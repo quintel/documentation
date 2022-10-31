@@ -112,7 +112,7 @@ The following data can be expected after the merit order has run.
 ### Output node
 
 * `demand`: the total amount of electricity delivered to the HV network by the park
-* `electricity_input_curve`: the hourly electricity which flows into the output (and therefore from the producer and battery combined)
+* `electricity_output_curve`: the hourly electricity which flows out from the output (and therefore from the producer and battery combined)
 
 ### Curtailment node
 
