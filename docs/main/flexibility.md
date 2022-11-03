@@ -34,7 +34,7 @@ The different forms of flexibility listed above indicate that there are also typ
 * Inflexible (or *baseload*) demand: this type of energy consumption is considered fixed because it cannot be regulated easily. This for example includes industrial processes that need to run continuously, or consumption that does not respond to hourly electricity prices such as individual households. Most of the final electricity demand of sectors falls into this category.
 * Flexible demand: this is energy consumption that can be increased, reduced, or shifted in time if needed.
 
-In the ETM, a _systems_ perspective is used to classify technologies as flexible or inflexible. This means that when a technology is considered flexible for a specific energy carrier, it is also considered flexible for all energy carriers. This distinction is relevant for conversion technologies, such as power-to-heat. Power-to-heat technologies use electricity to produce heat, depending on whether the hourly electricity price is low enough. From the perspective of the energy carrier electricity, power-to-heat is therefore considered a flexible technology because it follows man-made rules. Because the _systems_ perspective is used, power-to-heat is then also considered a flexible technology for the energy carrier heat - even though the technology follows no man-made rules for the district heating network.
+Note that technologies can be classified as flexible for one energy carrier, but as inflexible for another. This distinction is relevant for conversion technologies, such as power-to-heat. When the electricity price is low, power-to-heat technologies will consume electricity to produce heat. From the perspective of the electricity energy carrier, power-to-heat is therefore considered a flexible technology because it follows market rules of the electricity system. From the perspective of the heat energy carrier however, power-to-heat is considered an inflexible technology because the heat network has to accept the demand as is.
 
 *Note: the classification of technologies as flexible or inflexible, is based on their representation in the ETM. Some technologies that may be flexible in reality, can be modelled in such a way that they are considered inflexible by the ETM. For example, the import of natural gas can be considered flexible in reality, but in the ETM it is represented by a flat curve and therefore seen as inflexible.*
 
@@ -85,10 +85,10 @@ Flexible demand technologies are governed by a "willingness to pay": a maximum p
 
 * Inflexible (baseload):
   * Final gas demand in sectors
+  * Gas used in dispatchable power plants and heat boilers for district heating
   * Export of gas (flat curve; constant export of gas to balance yearly production of gas)
   * Distribution losses
 * Flexible:
-  * Gas used in dispatchable power plants and heat boilers for district heating
   * Gas entering storage (in the ETM, gas is automatically buffered throughout the year)
 
 ### Hydrogen
@@ -100,18 +100,18 @@ See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/sup
 * Inflexible:
   * Must-run / volatile: dedicated offshore wind turbine or solar PV plant for H2, steam methane reforming, biomass gasification
   * Import of hydrogen (flat curve; constant import of hydrogen to balance yearly production of hydrogen)
+  * Hydrogen produced by power-to-gas
 * Flexible:
   * Hydrogen from storage (in the ETM, hydrogen is automatically buffered throughout the year)
-  * Hydrogen produced by power-to-gas
 
 #### Demand
 
 * Inflexible (baseload):
   * Final hydrogen demand in sectors
+  * Hydrogen used in dispatchable power plants and heat boilers for district heating
   * Export of hydrogen (flat curve; constant export of hydrogen to balance yearly production of gas)
   * Distribution losses
 * Flexible:
-  * Hydrogen used in dispatchable power plants and heat boilers for district heating
   * Hydrogen entering storage (in the ETM, gas is automatically buffered throughout the year)
 
 ### Heat for district heating
@@ -122,10 +122,10 @@ See the [Supply → District heating](https://pro.energytransitionmodel.com/scen
 
 * Inflexible:
   * Must-run / volatile: solar thermal, residual heat from industry, geothermal heat
+  * Heat produced by power-to-heat
+  * Heat produced by CHPs
   * Import of heat (flat curve)
 * Flexible:
-  * Heat produced by power-to-heat
-  * Heat produced by CHPs, as CHPs participate as dispatchable power plants in the electricity merit order
   * Dispatchable heat sources: collective heat pump, hydrogen heater, etc.
   * Heat from seasonal storage
 
@@ -133,6 +133,8 @@ See the [Supply → District heating](https://pro.energytransitionmodel.com/scen
 
 * Inflexible (baseload):
   * Final heat demand in sectors
-  * Losses: distribution losses, heat surplus (wasted)
+  * Heat demand for Direct Air Capture
+  * Distribution losses
 * Flexible:
   * Heat entering seasonal storage
+  * Heat surplus (wasted)
