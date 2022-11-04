@@ -14,9 +14,9 @@ The ETM make a distinction between four 'types' of greenhouse gas emissions:
 ## Modelling principles
 To calculate the energetic CO<sub>2</sub> emissions in your scenario (category 1), the ETM assumes the following principles:
 
-* Emissions are assigned to the sector energy is _used_ in, rather than the _location_ of emissions. This means that emissions related to the production of, for example, electricity are attributed to all sectors using electricity (households, industry etc.) rather than to the power sector. A consequence of this approach is that the ETM by default _does_ take into account emissions of imported energy carriers (imported electricity, heat, hydrogen etc.) and _does not_ take into account emissions of exported energy carriers.
+* Emissions are assigned to the sector energy is _used_ in, rather than the _location_ of emissions. This means that emissions related to the production of, for example, electricity are attributed to all sectors using electricity (households, industry etc.) rather than to the power sector. A consequence of this approach is that the ETM by default _does_ take into account emissions of imported energy carriers (imported ammonia, electricity, heat, hydrogen etc.) and _does not_ take into account emissions of exported energy carriers.
 
-_Checkout: the ['Emissions from imported electricity'](co2-emissions-import-export) infopage which provides more information on this subject._
+_Checkout: the ['Emissions from import'](co2-emissions-import-export.md) infopage which provides more information on this subject._
 
 * In a departure from common UNFCCC standards, emissions per sector are calculated based on the [primary energy](primary-energy.md) that is used to supply the final energy demand of that sector. This means that any conversion and transportation losses are included in the sector's emissions. For example, transmission losses of the power grid are distributed to the demand sectors relative to their electricity demand. The primary energy demand is multiplied with the [emission factor](co2-emission-factors.md) per carrier to obtain the CO<sub>2</sub> emissions. More information can be found in the [emission factors](co2-emission-factors.md) article.
 
