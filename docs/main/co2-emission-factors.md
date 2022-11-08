@@ -28,10 +28,11 @@ The emission factors for electricity, hydrogen and (collective) heat depend on t
 * Gas-fired power plants using green gas
 * Hydrogen production with biomass gasification technology
 
-The emission factors of _imported_ electricity, hydrogen and heat can be set in the model. See the [import and export](co2-emissions-import-export.md) article for more information. The following default factors are used in case no country-specific data has been specified:
+The emission factors of _imported_ ammonia, electricity, hydrogen and heat can be set in the model. See the [import and export](co2-emissions-import-export.md) article for more information. The following default factors are used in case no country-specific data has been specified:
 
 | Energy carrier | Emission factor (*kg CO<sub>2</sub> per MJ*)
 |----------------|-----------------
+| Imported ammonia | 0.097 |
 | Imported electricity | 0.146 |
 | Imported heat | 0.078 |
 | Imported hydrogen | 0.04 |
