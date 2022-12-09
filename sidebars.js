@@ -8,11 +8,7 @@ module.exports = {
       type: "category",
       label: "1. User Manual",
       collapsed: false,
-      items: [
-        "main/starting-or-exploring",
-        "main/interface",
-        "main/developing-your",
-      ],
+      items: ["main/starting-or-exploring", "main/interface", "main/developing-your"],
     },
     {
       type: "category",
@@ -32,12 +28,7 @@ module.exports = {
           Demand: ["main/demand", "main/insulation"],
         },
         {
-          Supply: [
-            "main/supply",
-            "main/balancing-demand",
-            "main/hydrogen",
-            "main/biomass",
-          ],
+          Supply: ["main/supply", "main/balancing-demand", "main/hydrogen", "main/biomass"],
         },
         {
           Flexibility: [
@@ -53,11 +44,7 @@ module.exports = {
               ],
             },
             {
-              Heat: [
-                "main/heat-networks",
-                "main/heat-pumps",
-                "main/residual-heat-industry",
-              ],
+              Heat: ["main/heat-networks", "main/heat-pumps", "main/residual-heat-industry"],
             },
             "main/curves",
             "main/weather-conditions",
@@ -181,7 +168,7 @@ module.exports = {
       type: "category",
       label: "API Reference",
       collapsed: false,
-      items: ["api/intro", "api/changelog"],
+      items: ["api/intro", "api/tokens", "api/changelog"],
     },
     {
       type: "category",
