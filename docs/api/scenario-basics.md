@@ -399,11 +399,13 @@ Accept: application/json
 }
 ```
 
-## Read-only scenarios
+## Private scenarios
 
-<UpcomingFeature release="2022.05" />
+<UpcomingFeature release="2023.01" />
 
-When you have finished fine-tuning your scenario you may mark it as read-only by setting the `read_only` attribute to `true`:
+If you are using authentication, your scenarios will be associated with your user account. This prevents others from being able to change or delete your scenario but, by default, other people can still view your scenario.
+
+To make your scenario private, so that only you can view it, set the `private` attribute to `true`:
 
 ```http title="Example request"
 PUT /api/v3/scenarios/12345 HTTP/2
@@ -412,7 +414,7 @@ Accept: application/json
 
 {
   "scenario": {
-    "read_only": true
+    "private": true
   }
 }
 ```
@@ -422,42 +424,10 @@ Accept: application/json
   "scenario": {
     "id": 12345,
     ...
-    "read_only": true,
-    "keep_compatible": true
+    "private": true,
   }
 }
 ```
-
-Setting your scenario to be read-only has two outcomes:
-
-1. The scenario can no longer be changed by yourself or any other third-party. This prevents someone else from changing your scenario without your knowledge.
-
-2. It ensures that the scenario remains compatible with future versions of the ETM by also setting [`keep_compatible`](#forward-compatibility) to true.
-
-:::warning Always mark important scenarios as read-only
-It is highly recommended that you mark as read-only those scenarios you wish to keep long-term. The ETM makes no guarantee about the availability or accuracy of old scenarios which are not set to be read-only.
-:::
-
-You may set slider values at the same time as changing the scenario to be read-only. Your updates will be applied, and the scenario protected against any future changes:
-
-```http2 title="Example request"
-PUT /api/v3/scenarios/12345 HTTP/2
-Host: engine.energytransitionmodel.com
-Accept: application/json
-
-{
-  "scenario": {
-    "read_only": true,
-    "user_values": {
-      "buildings_insulation_level": 35.7
-    }
-  }
-}
-```
-
-### Modifying a read-only scenario
-
-A read-only scenario cannot be updated through the API, with attempts receiving a 403 Forbidden response. If you accidentally mark a scenario as read-only and wish to make futher changes, you may [create a new clone of your scenario](#create-a-scenario-based-on-another-scenario). The clone will not be read-only and will accept your updates.
 
 ## Query a Scenario
 
