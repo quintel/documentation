@@ -35,12 +35,12 @@ Whenever you call the API, include [an `Authorization` header](https://developer
 
 ```sh
 curl https://engine/energytransitionmodel.com \
-  -H "Authorization: Bearer etm_xcNxTaX8KLr5LkGs93sRWnGfhyAUDPWPqKVGe1RL73GJUnfQ
+  -H "Authorization: Bearer etm_xcNxTaX8KLr5LkGs93sRWnGfhyAUDPWPqKVGe1RL73GJUnfQ"
 ```
 
 ```http
 GET /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
-Authorization: Bearer etm_xcNxTaX8KLr5LkGs93sRWnGfhyAUDPWPqKVGe1RL73GJUnfQ"
+Authorization: Bearer etm_xcNxTaX8KLr5LkGs93sRWnGfhyAUDPWPqKVGe1RL73GJUnfQ
 ```
