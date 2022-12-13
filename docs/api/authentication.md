@@ -1,5 +1,5 @@
 ---
-title: Personal access tokens
+title: Authentication
 ---
 
 By default, your use of the API results in scenarios that can be both viewed and changed by anyone. It is highly recommended that you use the API with an access token; this attributes scenarios to your account, allowing you to limit who can view, change, or delete them.

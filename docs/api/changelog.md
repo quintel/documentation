@@ -1,6 +1,6 @@
 ---
-title: API Changelog
-sidebar_label: Changelog
+title: API change log
+sidebar_label: Change log
 ---
 
 import { ReleaseBadge, ProductionBadge, StagingBadge, UnreleasedBadge } from '@site/src/components/EnvBadge';
@@ -26,6 +26,12 @@ While we endeavour not to change the API in a backwards-incompatible way, this i
 </dl>
 
 To learn more about our environments, see the [introduction to the API](intro.md#environments).
+
+### 10th January 2023 <ReleaseBadge name="2021.01" />
+
+* The scenario `protected` attribute has been removed.
+* The scenario `read_only` attribute has been removed. To prevent others from changing your scenario, please sign up for an account and see the page on [authentication and personal access tokens](authentication.md).
+* The scenario `title` and `description` attributes have been removed. Please use the scenario `metadata` attribute instead. See the change log entry from [5th April 2022](#5th-april-2022-) for more information.
 
 ### 3rd May 2022 <ReleaseBadge name="2022.05" />
 
