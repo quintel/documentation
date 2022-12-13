@@ -10,9 +10,9 @@ Authentication with the API is with a bearer token. See: [Using your access toke
 
 When you create a scenario using a token, it will be linked with your user account. This means that by default:
 
-* Anyone will be able to *read* the scenario
-* Only you will be able to *change* the scenario
-* Only you will be able to *delete* the scenario
+* **Anyone** will be able to **read** the scenario
+* **Only you** will be able to **change** the scenario
+* **Only you** will be able to **delete** the scenario
 
 If you prefer your scenario to be private, so that only you can read it, see the documentation on [private scenarios](scenario-basics.md#private-scenarios).
 
