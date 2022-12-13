@@ -168,7 +168,7 @@ module.exports = {
       type: "category",
       label: "API Reference",
       collapsed: false,
-      items: ["api/intro", "api/tokens", "api/changelog"],
+      items: ["api/intro", "api/authentication", "api/changelog"],
     },
     {
       type: "category",
