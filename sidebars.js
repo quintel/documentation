@@ -175,7 +175,7 @@ module.exports = {
       label: "Endpoints",
       collapsed: false,
       items: [
-        "api/scenario-basics",
+        "api/scenarios",
         "api/areas",
         "api/custom-curves",
         "api/flexibility-order",

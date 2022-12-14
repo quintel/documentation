@@ -10,14 +10,14 @@ Scenarios inputs describe the values chosen by a user when customising their sce
 The API allows you to retrieve a detailed listing of all the inputs available for a scenario, their minimum and maximum allowed values, units, and other useful information.
 
 :::info Setting inputs for a scenario
-For a description of how to set input values for a scenario, see [Set sliders in a scenario](/api/scenario-basics#set-sliders-in-a-scenario)
+For a description of how to set input values for a scenario, see [Set sliders in a scenario](/api/scenarios#set-sliders-in-a-scenario)
 :::
 
 ## The Input object
 
 Endpoints which provide information about inputs will return the following information:
 
-* `default` - The initial value of the input in a blank scenario. If the scenario is [based on parent scenario](https://docs.energytransitionmodel.com/api/scenario-basics#create-a-scenario-based-on-another-scenario), this will be the value of the input in the parent.
+* `default` - The initial value of the input in a blank scenario. If the scenario is [based on parent scenario](https://docs.energytransitionmodel.com/api/scenarios#create-a-scenario-based-on-another-scenario), this will be the value of the input in the parent.
 * `disabled` - Indicates if the input is disabled; if so, a value may not be set.
 * `disabled_by` - Appears only when this input would be disabled if another has a value.
 * `max` - The maximum permitted value for the input.

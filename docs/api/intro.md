@@ -42,13 +42,13 @@ We operate two versions of the ETM. You should almost always use the production 
 
 This is the standard version of the ETM. Features area generally complete, well-tested, and ready to be used by the general public. We aim for the production environment to be available 24-hours a day and 365-days a year, except during occasional, short periods while we perform updates.
 
-We intend to store [read-only scenarios](scenario-basics.md#read-only-scenarios) created on the production server forever.
+We intend to store [read-only scenarios](scenarios.md#read-only-scenarios) created on the production server forever.
 
 #### Staging
 
 The staging environment is used to test new features before they are ready for the general public. While this means you can get access to access to cutting-edge features earlier, results from the staging server are subject to change. Scenarios made on the staging environment cannot be transfered to production, and vice-versa. We do not promise to store scenarios made
 
-We have no plans to delete scenarios from the staging server, we reserve the right to do so, including [protected scenarios](scenario-basics.md#protected-scenarios).
+We have no plans to delete scenarios from the staging server, we reserve the right to do so, including [protected scenarios](scenarios.md#protected-scenarios).
 
 The staging environment may occasionally be unavailable.
 

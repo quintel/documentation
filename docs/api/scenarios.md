@@ -1,5 +1,5 @@
 ---
-title: Scenario basics
+title: Scenarios
 ---
 
 import endpointData from '@site/data/api/scenario';
@@ -16,7 +16,6 @@ All scenarios contain the following attributes, which will be part of any respon
 scenario endpoint:
 
 * `id` - the numeric id of the scenario.
-* `title` - an optional title. [This is deprecated and will be removed soon](changelog.md#5th-april-2022)
 * `area_code` - the identifier for the area.
 * `start_year` - year the scenario starts.
 * `end_year` - year the scenario ends.
@@ -27,35 +26,49 @@ scenario endpoint:
 * `updated_at` - date of last update.
 * `keep_compatible` - default false, see [forward compatibility](#forward-compatibility)
 * `esdl_exportable` - determines if the scenario can be exported as an ESDL file.
-
-The following attributes will always be `null` unless the scenario was based on a
-[preset](#preset-scenarios):
-
-* `template` - the id of the scenario that was used as a preset.
-
-When [a truthy value of the `detailed` parameter](#the-detailed-parameter) is sent with the request, the following objects are also part of the response:
-
-* `user_values` - object that contains the silders touched by a user in the scenario:
+* `template` - the id of the scenario that was used as a template, or null if no template was used
+* `metadata` - object that contains custom metadata managed by the user of the scenario
+* `user_values` - object that contains the sliders changed by a user:
   * `slider_one` - the set value for slider_one.
   * `slider_two` - the set value for slider_two.
   * ...
-* `metadata` - object that contains custom metadata managed by the user of the scenario
+* `user` - if the scenario was created by an authenticated user, this will be an object containing:
+  * `id` - the user's unique ID number
+  * `name` - the user's name
 
-### Preset Scenarios
+### Templates
 
 On [the ETM start page](https://pro.energytransitionmodel.com/#preset-scenario) you find a list of
-featured scenarios that were created or commissioned by professional and governmental bodies.
-Any of these scenarios can be used as a preset.
+featured scenarios that were created or commissioned by professional and governmental bodies. Any of
+these scenarios can be used as a preset.
 
 When using a preset, all attributes and user values as described above are copied to a new scenario.
-All attached curves and heat- and flexibility orders are also cloned from the preset to the new scenario.
-The cloning is done only when the scenario using the preset is created. This means that later changes
-to the preset will not be reflected in the new scenario.
+All attached curves and heat- and flexibility orders are also cloned from the preset to the new
+scenario. The cloning is done only when the scenario using the preset is created. This means that
+later changes to the preset will not be reflected in the new scenario.
 
-Next to the given list of available presets by the ETM, you may also use your own scenarios as a preset.
-Also see the [create section](#create-a-scenario-based-on-another-scenario).
+Next to the given list of available presets by the ETM, you may also use your own scenarios as a
+preset. Also see the [create section](#create-a-scenario-based-on-another-scenario).
 
-## Get information about an existing Scenario
+### Authentication
+
+It is highly recommended that you [use authentication](authentication.md) when working with
+scenarios. When you create a scenario as an authenticated user it will be linked with your user
+account. This means that by default:
+
+* **Anyone** will be able to **read** the scenario
+* **Only you** will be able to **change** the scenario
+* **Only you** will be able to **delete** the scenario
+
+If you prefer your scenario to be private, so that only you can read it, see the documentation on
+[private scenarios](scenarios.md#private-scenarios).
+
+#### Using the API without authentication
+
+If you do not use authentication when creating a scenario, it will be both readable **and writable**
+by any other person using the API.
+
+## Get information about a scenario
 
 Fetches all the attributes of the given scenario.
 
@@ -142,7 +155,8 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
-Scenarios lists are paginated, which means they contain only as subset of all the scenarios which belong to you. To get the full list, you must iterate through all pages of scenarios.
+Scenarios lists are paginated, which means they contain only as subset of all the scenarios which
+belong to you. To get the full list, you must iterate through all pages of scenarios.
 
 The response contains three keys:
 
@@ -166,13 +180,13 @@ The response contains three keys:
 * `next` - link to the next page of scenarios, or null if you are on the last page
 * `last` - link to the last page of scenarios
 
-## Create a Scenario
+## Create a scenario
 
-A scenario can be created in three ways: as a blank scenario for an area and end year, as a new scenario
-with certain sliders set, or as a scenario based on another scenario (its preset). All creation
-methods use a POST request on the scenario endpoint, but with different data.
+A scenario can be created in three ways: as a blank scenario for an area and end year, as a new
+scenario with certain sliders set, or as a scenario based on another scenario (its preset). All
+creation methods use a POST request on the scenario endpoint, but with different data.
 
-### Create a blank Scenario
+### Create a blank scenario
 
 Creates a scenario where all sliders are at their default position. The following data can
 be supplied:
@@ -213,10 +227,9 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
-### Create a Scenario with slider settings
+### Create a scenario with slider settings
 
-User values may also be provided on create in the `user_values` object. You can supply the `detailed`
-parameter to see them reflected in the response.
+User values may also be provided on create in the `user_values` object.
 
 <ApiEndpoint data={endpointData.create} />
 
@@ -252,9 +265,9 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
-### Create a Scenario based on another Scenario
+### Create a scenario based on another scenario
 
-Creates a scenario with another scenario as [preset](#preset-scenarios). The only data that needs to
+Creates a scenario with another scenario as [template](#templates). The only data that needs to
 be provided for this action is:
 
 * `scenario_id` - the ID of the scenario that is to be used as a preset
@@ -294,7 +307,7 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
-## Set sliders in a Scenario
+## Set sliders in a scenario
 
 :::info Available inputs
 A list of all available sliders for the scenario, with their min and max values, can be retrieved
@@ -468,7 +481,7 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
-## Query a Scenario
+## Query a scenario
 
 You can query a scenario using `gqueries`. These queries make calculations on the graph and return
 values for the present (start year) and future (end year), as well as the unit used.

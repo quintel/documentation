@@ -29,18 +29,20 @@ To learn more about our environments, see the [introduction to the API](intro.md
 
 ### 10th January 2023 <ReleaseBadge name="2023.01" />
 
-* API endpoints have been added for [listing](scenario-basics.md#listing-your-scenarios) and [deleting](scenario-basics.md#deleting-your-scenarios) your scenarios.
+* [**Authentication has come to the API!**](authentication.md) You can now create personal access tokens for your account. Scenarios will be linked to your account which prevents others from being able to make changes without your permission.
+* API endpoints have been added for [listing](scenarios.md#listing-your-scenarios) and [deleting](scenarios.md#deleting-your-scenarios) your scenarios.
+* Scenarios have a new `private` attribute available to [authenticated](authentication.md) users. This allows you to prevent other API users from viewing your scenario.
 * The scenario `protected` attribute has been removed.
 * The scenario `read_only` attribute has been removed. To prevent others from changing your scenario, please sign up for an account and see the page on [authentication and personal access tokens](authentication.md).
 * The scenario `title` and `description` attributes have been removed. Please use the scenario `metadata` attribute instead. See the change log entry from [5th April 2022](#5th-april-2022-) for more information.
 
 ### 3rd May 2022 <ReleaseBadge name="2022.05" />
 
-* The scenario `protected` attribute is deprecated and has been split into two separate attributes: [`read_only`](scenario-basics#read-only-scenarios) and [`keep_compatible`](scenario-basics.md#forward-compatibility). The `protected` attribute continues to be supported as an alias of `read_only`, and scenarios marked as `protected` will behave as they did before.
+* The scenario `protected` attribute is deprecated and has been split into two separate attributes: [`read_only`](scenarios#read-only-scenarios) and [`keep_compatible`](scenarios.md#forward-compatibility). The `protected` attribute continues to be supported as an alias of `read_only`, and scenarios marked as `protected` will behave as they did before.
 
 ### 5th April 2022 <ReleaseBadge name="2022.04" />
 
-* Scenarios should no longer be given a `title` or `description` attribute. If you wish to store such data with your scenarios, please use [the scenario metadata](scenario-basics.md#metadata).
+* Scenarios should no longer be given a `title` or `description` attribute. If you wish to store such data with your scenarios, please use [the scenario metadata](scenarios.md#metadata).
 
   ```json
   {
@@ -83,6 +85,6 @@ To learn more about our environments, see the [introduction to the API](intro.md
 
 ### 1st February 2022 <ReleaseBadge name="2022.02" />
 
-* Scenarios marked as `protected` are now read-only. Changes to a protected scenario are not permitted and will be rejected with a 403 Forbidden response. [**Read more →**](scenario-basics.md#protected-scenarios)
+* Scenarios marked as `protected` are now read-only. Changes to a protected scenario are not permitted and will be rejected with a 403 Forbidden response. [**Read more →**](scenarios.md#protected-scenarios)
 * Inputs may now contain a `disabled_by` attribute which lists other input keys in an array. The input will be disabled if any of the specified inputs have a value provided by the user. [**Read more →**](inputs.md#mutually-exclusive-inputs)
 * Old node endpoints `/api/v3/converters` and `/api/v3/converters/{node_id}` have been removed. [You can still access this data by first creating a scenario](nodes.md).
