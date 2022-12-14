@@ -5,6 +5,22 @@ const scenarioIdParam = {
 };
 
 export default {
+  index: {
+    endpoint: "/api/v3/scenarios",
+    method: "GET",
+    path_parameters: [
+      {
+        name: "page",
+        type: "number",
+        description: "the page number to fetch",
+      },
+      {
+        name: "limit",
+        type: "number",
+        description: "the number of items per page",
+      },
+    ],
+  },
   show: {
     endpoint: "/api/v3/scenarios/{scenario_id}",
     method: "GET",
@@ -19,4 +35,4 @@ export default {
     method: "PUT",
     path_parameters: [scenarioIdParam],
   },
-}
+};

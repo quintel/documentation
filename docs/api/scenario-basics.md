@@ -24,8 +24,7 @@ scenario endpoint:
 * `scaling` - object that contains details of custom scaling factors.
 * `source` - source through which the scenario was created, can be 'API' or 'ETM'.
 * `created_at` - date of creation.
-* `updates_at` - date of last update.
-* `read_only` - default false, see [read-only scenarios](#read-only-scenarios)
+* `updated_at` - date of last update.
 * `keep_compatible` - default false, see [forward compatibility](#forward-compatibility)
 * `esdl_exportable` - determines if the scenario can be exported as an ESDL file.
 
@@ -33,8 +32,6 @@ The following attributes will always be `null` unless the scenario was based on 
 [preset](#preset-scenarios):
 
 * `template` - the id of the scenario that was used as a preset.
-* `ordering` - the number in the order of preset scenarios.
-* `display_group` - type of the preset scenario.
 
 When [a truthy value of the `detailed` parameter](#the-detailed-parameter) is sent with the request, the following objects are also part of the response:
 
@@ -68,6 +65,7 @@ Fetches all the attributes of the given scenario.
 GET /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
+Authorization: Bearer YOUR_TOKEN
 ```
 
 ```json title="Example response"
@@ -78,43 +76,12 @@ Accept: application/json
   "start_year": 2019,
   "end_year": 2050,
   "url": "https://engine.energytransitionmodel.com/api/v3/scenarios/12345",
-  "ordering": null,
-  "display_group": null,
   "scaling": null,
   "source": null,
   "template": null,
   "created_at": "2021-07-16T09:23:00.000Z",
   "updated_at": "2021-07-16T09:23:00.000Z",
-  "read_only": false,
-  "esdl_exportable": null
-}
-```
-
-### The `detailed` parameter
-
-The information supplied by the GET request will by default not contain slider settings. Adding
-the parameter `detailed` with a truthy value to the request will have the response include an extra
-object called `user_values`. This object contains a key, value pair for each slider that has been touched.
-
-The `metadata` object will also be included in the response when `detailed` is set to `true`. This
-object can contain any data in JSON format up to 64Kb, and can be used to set custom values for the
-scenario. Such as identifiers for other models, descriptions, or tags. The ETM will never touch this
-object as it is purely meant as a place for users to store meta information about their scenario.
-
-```http title="Example request"
-GET /api/v3/scenarios/12345?detailed=true HTTP/2
-Host: engine.energytransitionmodel.com
-Accept: application/json
-```
-
-```json title="Example response"
-{
-  "id": 12345,
-  "title": "API",
-  "area_code": "nl",
-  "start_year": 2019,
-  "end_year": 2050,
-  ...
+  "esdl_exportable": false,
   "user_values": {
     "buildings_insulation_level": 40.3,
     "capacity_of_energy_power_hydro_river": 39.0
@@ -126,6 +93,78 @@ Accept: application/json
   }
 }
 ```
+
+## Listing your scenarios
+
+<UpcomingFeature release="2023.01" />
+
+[When authenticated](authentication.md), you can get a list of all scenarios which belong to you.
+
+<ApiEndpoint data={endpointData.index} />
+
+```http title="Example request"
+GET /api/v3/scenarios HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+```
+
+```json title="Example response"
+{
+  "links": {
+        "first": "https://engine.energytransitionmodel.com/api/v3/scenarios?page=1",
+        "prev": null,
+        "next": "https://engine.energytransitionmodel.com/api/v3/scenarios?page=2",
+        "last": "https://engine.energytransitionmodel.com/api/v3/scenarios?page=4"
+  },
+  "meta": {
+      "limit": 25,
+      "count": 25,
+      "total": 85,
+      "current_page": 1,
+      "total_pages": 4
+  },
+  "data": [
+    {
+      "id": 12345,
+      "area_code":"nl",
+      "start_year": 2019,
+      "end_year": 2050,
+      "url": "https://engine.energytransitionmodel.com/api/v3/scenarios/12345",
+      "scaling": null,
+      "source": null,
+      "created_at": "2021-07-16T09:23:00.000Z",
+      "updated_at": "2021-07-16T09:23:00.000Z",
+      "esdl_exportable": false
+    },
+    // ...
+  ]
+}
+```
+
+Scenarios lists are paginated, which means they contain only as subset of all the scenarios which belong to you. To get the full list, you must iterate through all pages of scenarios.
+
+The response contains three keys:
+
+* `data` - an array of your scenarios
+* `meta` - information about pagination, the number of scenarios in the `data` array, the total
+   number of scenarios belonging to you, etc.
+* `links` - links to the first, previous, next, and last pages in the set
+
+#### `meta`
+
+* `limit` - the requested limit to show many scenarios should be included on each page of results
+* `count` - the number of scenarios on the current page; this may be lower than `limit` when viewing the last page of results
+* `total` - the total number of scenarios which belong to you
+* `total_pages` - the total number of pages of scenarios
+* `current_page` - the number of the current pages
+
+#### `links`
+
+* `first` - link to the first page of scenarios
+* `prev` - link to the previous page of scenarios, or null if you are on the first page
+* `next` - link to the next page of scenarios, or null if you are on the last page
+* `last` - link to the last page of scenarios
 
 ## Create a Scenario
 
@@ -139,7 +178,6 @@ Creates a scenario where all sliders are at their default position. The followin
 be supplied:
 
 * `area_code` - the code of the desired area, default: 'nl'
-* `title` - title of the scenario, default: 'API'
 * `end_year` - end year of the scenario, integer, default: 2050
 * `source` - identifier for the application creating the scenario (highly recommended), default: null
 
@@ -149,6 +187,7 @@ be supplied:
 POST /api/v3/scenarios HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
+Authorization: Bearer YOUR_TOKEN
 
 {
   "scenario": {
@@ -161,20 +200,16 @@ Accept: application/json
 ```json title="Example response"
 {
   "id": 123456,
-  "title": "API",
   "area_code":"UKNI01_northern_ireland",
   "start_year": 2018,
   "end_year": 2040,
   "url": "https://engine.energytransitionmodel.com/api/v3/scenarios/123456",
-  "ordering": null,
-  "display_group": null,
   "scaling": null,
   "source": null,
   "template": null,
   "created_at": "2021-07-16T09:23:00.000Z",
   "updated_at": "2021-07-16T09:23:00.000Z",
-  "read_only": false,
-  "esdl_exportable": null
+  "esdl_exportable": false
 }
 ```
 
@@ -189,6 +224,7 @@ parameter to see them reflected in the response.
 POST /api/v3/scenarios?detailed=true HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
+Authorization: Bearer YOUR_TOKEN
 
 {
   "scenario": {
@@ -205,7 +241,6 @@ Accept: application/json
 ```json title="Example response"
 {
   "id": 123456,
-  "title": "API",
   "area_code":"UKNI01_northern_ireland",
   "start_year": 2018,
   "end_year": 2040,
@@ -233,6 +268,7 @@ of the year and area of the preset.
 POST /api/v3/scenarios?detailed=true HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
+Authorization: Bearer YOUR_TOKEN
 
 {
   "scenario": {
@@ -244,7 +280,6 @@ Accept: application/json
 ```json title="Example response"
 {
   "id": 123456,
-  "title": "API",
   "area_code":"nl",
   "start_year": 2019,
   "end_year": 2050,
@@ -275,6 +310,7 @@ may also be supplied with the data.
 PUT /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
+Authorization: Bearer YOUR_TOKEN
 
 {
   "scenario": {
@@ -323,6 +359,7 @@ Both `metadata` and `user_values` can be supplied with a request simultaneously.
 PUT /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
+Authorization: Bearer YOUR_TOKEN
 
 {
   "scenario": {
@@ -391,6 +428,7 @@ For example, if a slider is renamed, we will rename the slider value in your sce
 PUT /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
+Authorization: Bearer YOUR_TOKEN
 
 {
   "scenario": {
@@ -411,6 +449,7 @@ To make your scenario private, so that only you can view it, set the `private` a
 PUT /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
+Authorization: Bearer YOUR_TOKEN
 
 {
   "scenario": {
@@ -440,6 +479,7 @@ values for the present (start year) and future (end year), as well as the unit u
 PUT /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
+Authorization: Bearer YOUR_TOKEN
 
 {
   "gqueries": [
@@ -472,3 +512,15 @@ Accept: application/json
 :::info Work-in-Progress
 A list of all available gqueries is still being worked on.
 :::
+
+## Deleting your scenarios
+
+<UpcomingFeature release="2023.01" />
+
+[When authenticated](authentication.md), you can delete your scenarios:
+
+```http title="Example request"
+DELETE /api/v3/scenarios/12345 HTTP/2
+Host: engine.energytransitionmodel.com
+Authorization: Bearer YOUR_TOKEN
+```
