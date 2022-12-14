@@ -29,6 +29,7 @@ To learn more about our environments, see the [introduction to the API](intro.md
 
 ### 10th January 2023 <ReleaseBadge name="2023.01" />
 
+* API endpoints have been added for [listing](scenario-basics.md#listing-your-scenarios) and [deleting](scenario-basics.md#deleting-your-scenarios) your scenarios.
 * The scenario `protected` attribute has been removed.
 * The scenario `read_only` attribute has been removed. To prevent others from changing your scenario, please sign up for an account and see the page on [authentication and personal access tokens](authentication.md).
 * The scenario `title` and `description` attributes have been removed. Please use the scenario `metadata` attribute instead. See the change log entry from [5th April 2022](#5th-april-2022-) for more information.
