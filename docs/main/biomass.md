@@ -62,10 +62,10 @@ Caution: the production costs of green gas are not optimized; this is mainly the
 TNO has researched the potential biomass production in the Netherlands for 2030:
 
 |                              | Unit | Wet biomass | Dry biomass | Oil-containing biomass | Biogenic waste |
-|------------------------------|------|-------------|-------------|-------------------------|----------------|
-| Dutch biomass potential 2030 | PJ   | 16\.8       | 47\.4       | 10\.5                   | 21\.6          |
+|------------------------------|------|-------------|-------------|------------------------|----------------|
+| Dutch biomass potential 2030 | PJ   | 109\.9      | 62\.2       | 10\.5                  | 21\.4          |
 
-These total potentials originate from the underlying biomassa streams depicted below (sorry, in Dutch only):
+These total potentials originate from the underlying biomassa streams depicted below (available in Dutch only):
 
 | Sector                                                                      | Biomassastroom                          | Categorie | Potentie PJ \(droge stof basis\) | Verdeelsleutel van nationale naar gemeentelijke potentie                                  |
 |-----------------------------------------------------------------------------|-----------------------------------------|-----------|----------------------------------|---------------------------------------------------------------------------------------|
