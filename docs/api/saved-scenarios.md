@@ -29,9 +29,9 @@ scenario endpoint:
 * `created_at` - the time at which the saved scenario was created.
 * `updated_at` – the time when the saved scenario was most recently updated.
 * `scenario` - read-only information about the underlying scenario.
-* `user` - information about the owner of the SavedScenario.
-  * `id` - the user's unique ID number
-  * `name` - the user's name
+* `owner` - information about the owner of the SavedScenario.
+  * `id` - the owner's unique ID number
+  * `name` - the owner's name
 
 ### Scenarios vs. saved scenarios
 
@@ -75,7 +75,7 @@ Authorization: Bearer YOUR_TOKEN
   "discarded": false,
   "created_at": "2022-07-27T13:45:32.000Z",
   "updated_at": "2022-12-22T19:21:32.000Z",
-  "user": {
+  "owner": {
     "id": 1,
     "name": "John Doe"
   },
@@ -182,7 +182,7 @@ Authorization: Bearer YOUR_TOKEN
   "discarded": false,
   "created_at": "2022-12-23T19:21:32.000Z",
   "updated_at": "2022-12-23T19:21:32.000Z",
-  "user": {
+  "owner": {
     "id": 1,
     "name": "John Doe"
   },
@@ -224,7 +224,7 @@ Authorization: Bearer YOUR_TOKEN
   "discarded": false,
   "created_at": "2022-12-23T19:21:32.000Z",
   "updated_at": "2022-12-23T19:22:38.000Z",
-  "user": {
+  "owner": {
     "id": 1,
     "name": "John Doe"
   },
