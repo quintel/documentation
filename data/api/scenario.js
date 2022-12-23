@@ -1,5 +1,5 @@
 const scenarioIdParam = {
-  name: "scenario_id",
+  name: "id",
   type: "number",
   description: "the ID of the scenario",
 };
@@ -22,7 +22,7 @@ export default {
     ],
   },
   show: {
-    endpoint: "/api/v3/scenarios/{scenario_id}",
+    endpoint: "/api/v3/scenarios/{id}",
     method: "GET",
     path_parameters: [scenarioIdParam],
   },
@@ -31,7 +31,7 @@ export default {
     method: "POST",
   },
   update: {
-    endpoint: "/api/v3/scenarios/{scenario_id}",
+    endpoint: "/api/v3/scenarios/{id}",
     method: "PUT",
     path_parameters: [scenarioIdParam],
   },

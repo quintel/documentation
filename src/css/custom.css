@@ -439,12 +439,14 @@ li ul, li ol {
 
 .alert a {
   color: var(--custom-alert-font-color);
+  font-weight: 500;
   text-decoration-color: var(--custom-alert-font-color);
 }
 
 .alert a:hover {
   color: var(--ifm-font-color-base);
   text-decoration-thickness: revert;
+  text-decoration-color: inherit;
 }
 
 .alert.alert--secondary {
@@ -490,7 +492,8 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/api/authentication"]:after {
+.menu a[href="/api/authentication"]:after,
+.menu a[href="/api/saved-scenarios"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -505,7 +508,8 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/api/authentication"]:after {
+.menu a.menu__link--active[href="/api/authentication"]:after,
+.menu a.menu__link--active[href="/api/saved-scenarios"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
 }
@@ -541,10 +545,11 @@ article p code {
 }
 
 .bordered-image img {
-  border: 1px solid #ccc;
-  padding: 1rem;
   border-radius: 0.25rem;
+  border: 1px solid #ccc;
   box-shadow: 0 0 0 3px rgb(0 0 0 / 5%);
+  box-sizing: content-box;
+  padding: 1rem;
 }
 
 /* Title for charts and other images. */

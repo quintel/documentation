@@ -172,11 +172,10 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Endpoints",
+      label: "Scenario Endpoints",
       collapsed: false,
       items: [
         "api/scenarios",
-        "api/areas",
         "api/custom-curves",
         "api/flexibility-order",
         "api/heat-network-order",
@@ -184,6 +183,12 @@ module.exports = {
         "api/nodes",
         "api/merit",
       ],
+    },
+    {
+      type: "category",
+      label: "Other Endpoints",
+      collapsed: false,
+      items: ["api/areas", "api/saved-scenarios"],
     },
   ],
 };

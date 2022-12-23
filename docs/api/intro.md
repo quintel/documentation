@@ -68,6 +68,32 @@ As a REST API, the Energy Transition Model uses a range of status codes to indic
 | `429 Too Many Requests` | The request was rejected due to exceeding the API rate-limit. At the time of writing, the ETM has no rate-limits; while there are no plans to change this, but your application should be prepared. |
 | `500 Internal Server Error` | An error occurred with the ETM. |
 
+## Pagination
+
+Some endpoints return paginated data – where there are too many items to show at once. Examples include the scenario and saved scenario lists. To get the full list of items you must iterate through all pages.
+
+Paginated responses contain three keys:
+
+* `data` - an array of items, such as scenarios or saved scenarios
+* `meta` - information about pagination, the number of items in the `data` array, the total
+   number of items belonging to you, etc.
+* `links` - links to the first, previous, next, and last pages in the set
+
+#### `meta`
+
+* `limit` - the requested limit for how many items should be included on each page of results
+* `count` - the number of items on the current page; this may be lower than `limit` when viewing the last page of results
+* `total` - the total number of items which belong to you
+* `total_pages` - the total number of pages of items
+* `current_page` - the number of the current pages
+
+#### `links`
+
+* `first` - link to the first page of items
+* `prev` - link to the previous page of items, or null if you are on the first page
+* `next` - link to the next page of items, or null if you are on the last page
+* `last` - link to the last page of items
+
 ## Errors
 
 Many endpoints within the ETM will respond with useful error information if the received request could not be processed. This will be in the form of a `400..499` response code, and a JSON response containing an `errors` key.

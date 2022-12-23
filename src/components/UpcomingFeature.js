@@ -27,16 +27,16 @@ const UpcomingFeature = ({ release: releaseName }) => {
     return <BrowserOnly />;
   }
 
-  const formattedDate = new Date(release.production).toLocaleDateString(
-    "en-UK",
-    { year: "numeric", month: "long", day: "numeric" }
-  );
+  const formattedDate = new Date(release.production).toLocaleDateString("en-UK", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   text = (
     <span>
-      This feature is available in the {<StagingBadge />} environment and will
-      become available in {<ProductionBadge />} on {formattedDate} as of the{" "}
-      {releaseName} release. See the{" "}
+      This feature is available in the {<StagingBadge />} environment and will become available in{" "}
+      {<ProductionBadge />} on {formattedDate} with the {releaseName} release. See the{" "}
       {<Link to="/api/changelog">changelog</Link>} for more information.
     </span>
   );

@@ -111,7 +111,7 @@ Authorization: Bearer YOUR_TOKEN
 
 <UpcomingFeature release="2023.01" />
 
-[When authenticated](authentication.md), you can get a list of all scenarios which belong to you.
+[When authenticated](authentication.md), you can get a list of all scenarios which belong to you. [The list is paginated](intro.md#pagination).
 
 <ApiEndpoint data={endpointData.index} />
 
@@ -154,31 +154,6 @@ Authorization: Bearer YOUR_TOKEN
   ]
 }
 ```
-
-Scenarios lists are paginated, which means they contain only as subset of all the scenarios which
-belong to you. To get the full list, you must iterate through all pages of scenarios.
-
-The response contains three keys:
-
-* `data` - an array of your scenarios
-* `meta` - information about pagination, the number of scenarios in the `data` array, the total
-   number of scenarios belonging to you, etc.
-* `links` - links to the first, previous, next, and last pages in the set
-
-#### `meta`
-
-* `limit` - the requested limit to show many scenarios should be included on each page of results
-* `count` - the number of scenarios on the current page; this may be lower than `limit` when viewing the last page of results
-* `total` - the total number of scenarios which belong to you
-* `total_pages` - the total number of pages of scenarios
-* `current_page` - the number of the current pages
-
-#### `links`
-
-* `first` - link to the first page of scenarios
-* `prev` - link to the previous page of scenarios, or null if you are on the first page
-* `next` - link to the next page of scenarios, or null if you are on the last page
-* `last` - link to the last page of scenarios
 
 ## Create a scenario
 
