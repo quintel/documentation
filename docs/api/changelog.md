@@ -29,12 +29,16 @@ To learn more about our environments, see the [introduction to the API](intro.md
 
 ### 10th January 2023 <ReleaseBadge name="2023.01" />
 
-* [**Authentication has come to the API!**](authentication.md) You can now create personal access tokens for your account. Scenarios will be linked to your account which prevents others from being able to make changes without your permission.
-* API endpoints have been added for [listing](scenarios.md#listing-your-scenarios) and [deleting](scenarios.md#deleting-your-scenarios) your scenarios.
-* Scenarios have a new `private` attribute available to [authenticated](authentication.md) users. This allows you to prevent other API users from viewing your scenario.
-* The scenario `protected` attribute has been removed.
-* The scenario `read_only` attribute has been removed. To prevent others from changing your scenario, please sign up for an account and see the page on [authentication and personal access tokens](authentication.md).
-* The scenario `title` and `description` attributes have been removed. Please use the scenario `metadata` attribute instead. See the change log entry from [5th April 2022](#5th-april-2022-) for more information.
+* [**Authentication has come to the API!**](authentication.md) You can now create personal access tokens for your account. Scenarios will be linked to your account which prevents others from making changes to your data.
+* **Scenarios:**
+  * API endpoints have been added for [listing](scenarios.md#listing-your-scenarios) and [deleting](scenarios.md#deleting-your-scenarios) your scenarios.
+  * Scenarios have a new `private` attribute available to [authenticated](authentication.md) users. This allows you to prevent other API users from viewing your scenario.
+  * The scenario `protected` attribute has been removed.
+  * The scenario `read_only` attribute has been removed. To prevent others from changing your scenario, please sign up for an account and see the page on [authentication and personal access tokens](authentication.md) and [set your scenarios to be private](scenarios.md#private-scenarios).
+  * The scenario `title` and `description` attributes have been removed. Please use the scenario `metadata` attribute instead. See the change log entry from [5th April 2022](#5th-april-2022-) for more information.
+  * An undocumented and unsupported `include_inputs` parameter has been removed from the [scenario endpoint](scenarios.md#get-information-about-a-scenario). The scenario slider settings are still available through the scenarios endpoint using the the `user_values` attribute, or you can fetch the full list of inputs through [the inputs endpoint](inputs.md).
+  * The `detailed` parameter has been removed from the [scenario endpoint](scenarios.md#get-information-about-a-scenario). Scenario data will now include all information about the scenario without the need for this parameter.
+* [**An API for saved scenarios has been added**](saved-scenarios.md). Saved scenarios allow you show scenarios in your list scenarios in the ETM web application, and more easily share your scenarios with others.
 
 ### 3rd May 2022 <ReleaseBadge name="2022.05" />
 
