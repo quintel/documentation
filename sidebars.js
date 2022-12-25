@@ -188,7 +188,7 @@ module.exports = {
       type: "category",
       label: "Other Endpoints",
       collapsed: false,
-      items: ["api/areas", "api/saved-scenarios"],
+      items: ["api/areas", "api/saved-scenarios", "api/transition-paths"],
     },
   ],
 };
