@@ -62,7 +62,6 @@ const TokenRequirements = ({ scopes, type = "required" }) => {
 };
 
 const TokenType = ({ type }) => {
-  console.log(type);
   if (type === "optional") {
     return (
       <>

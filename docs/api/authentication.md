@@ -2,6 +2,8 @@
 title: Authentication
 ---
 
+import endpointData from '@site/data/api/tokens';
+import ApiEndpoint from '@site/src/components/ApiEndpoint';
 import UpcomingFeature from '@site/src/components/UpcomingFeature';
 
 <UpcomingFeature release="2023.01" />
@@ -42,3 +44,63 @@ Authorization: Bearer etm_xcNxTaX8KLr5LkGs93sRWnGfhyAUDPWPqKVGe1RL73GJUnfQ
 ## Using the API without authentication
 
 Without authentication, your use of the API results in scenarios that are considered "unowned" and can be both viewed *and changed* by anyone. [Creating an ETM account](https://engine.energytransitionmodel.com/identity/sign_up) will allow you create scenarios that belong to you, where you can strictly control who can view your data, and prevent others from making changes.
+
+
+## Get information about a token
+
+You can get information about a token by calling the API with the token itself. This is useful for verifying that a token is valid, and for getting the expiry time for the token.
+
+<ApiEndpoint data={endpointData.info} />
+
+```http title="Request"
+GET /oauth/tokens/info HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer etm_xcNxTaX8KLr5LkGs93sRWnGfhyAUDPWPqKVGe1RL73GJUnfQ
+```
+
+```json title="Response"
+{
+  "resource_owner_id": 123,
+  "scope": [
+    "public",
+    "scenarios:read",
+    "scenarios:write",
+    "scenarios:delete"
+  ],
+  "expires_in": 2589760,
+  "application": {
+    "uid": null
+  },
+  "created_at": 1672679356
+}
+```
+
+## Get information about the current user
+
+If you're writing a script which uses the API, you may want to know the unique identifier for the user who owns the token. You can get this information by calling the API with the token.
+
+<ApiEndpoint data={endpointData.userinfo} />
+
+```http title="Request"
+GET /oauth/userinfo HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer etm_xcNxTaX8KLr5LkGs93sRWnGfhyAUDPWPqKVGe1RL73GJUnfQ
+```
+
+```json title="Response"
+{
+  "sub": "123"
+}
+```
+
+With only the `openid` scope, the response includes only the unique identifier (`sub`) for the user. If the token also contains the `profile` and/or the `email` scopes, additional information is included:
+
+```json title="Response with extra scopes"
+{
+  "sub": "123",
+  "email": "john.doe@example.com",
+  "name": "John Doe"
+}
+```
