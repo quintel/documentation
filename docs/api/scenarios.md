@@ -502,7 +502,9 @@ A list of all available gqueries is still being worked on.
 
 <UpcomingFeature release="2023.01" />
 
-[When authenticated](authentication.md), you can delete your scenarios:
+[When authenticated](authentication.md), you can delete your scenarios. You cannot delete scenarios belonging to other users, or scenarios [which have no owner](authentication.md#using-the-api-without-authentication).
+
+<ApiEndpoint data={endpointData.destroy} />
 
 ```http title="Example request"
 DELETE /api/v3/scenarios/12345 HTTP/2

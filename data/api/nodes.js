@@ -16,5 +16,6 @@ export default {
         description: "the node key whose data you want to retrieve",
       },
     ],
+    token: { scopes: ["scenarios:read"], type: "optional" },
   },
 };

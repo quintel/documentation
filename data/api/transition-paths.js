@@ -20,11 +20,13 @@ export default {
         description: "the number of items per page",
       },
     ],
+    token: { scopes: ["scenarios:read"] },
   },
   show: {
     endpoint: "/api/v3/transition_paths/{id}",
     method: "GET",
     path_parameters: [idParam],
+    token: { scopes: ["scenarios:read"] },
   },
   create: {
     endpoint: "/api/v3/transition_paths",
@@ -44,6 +46,7 @@ export default {
         required: true,
       },
     ],
+    token: { scopes: ["scenarios:read", "scenarios:write"] },
   },
   update: {
     endpoint: "/api/v3/transition_paths/{id}",
@@ -76,10 +79,12 @@ export default {
         description: "whether the scenario should be in the owner's trash",
       },
     ],
+    token: { scopes: ["scenarios:read", "scenarios:write"] },
   },
   destroy: {
     endpoint: "/api/v3/transition_paths/{id}",
     method: "DELETE",
     path_parameters: [idParam],
+    token: { scopes: ["scenarios:read", "scenarios:delete"] },
   },
 };

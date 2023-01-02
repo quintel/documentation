@@ -41,4 +41,4 @@ Authorization: Bearer etm_xcNxTaX8KLr5LkGs93sRWnGfhyAUDPWPqKVGe1RL73GJUnfQ
 
 ## Using the API without authentication
 
-Without authentication, your use of the API results in scenarios that can be both viewed *and changed* by anyone. [Creating an ETM account](https://engine.energytransitionmodel.com/identity/sign_up) will allow you create scenarios that belong to you, where you can strictly control who can view your data, and prevent others from making changes.
+Without authentication, your use of the API results in scenarios that are considered "unowned" and can be both viewed *and changed* by anyone. [Creating an ETM account](https://engine.energytransitionmodel.com/identity/sign_up) will allow you create scenarios that belong to you, where you can strictly control who can view your data, and prevent others from making changes.

@@ -20,19 +20,29 @@ export default {
         description: "the number of items per page",
       },
     ],
+    token: { scopes: ["scenarios:read"] },
   },
   show: {
     endpoint: "/api/v3/scenarios/{id}",
     method: "GET",
     path_parameters: [scenarioIdParam],
+    token: { scopes: ["scenarios:read"], type: "optional" },
   },
   create: {
     endpoint: "/api/v3/scenarios",
     method: "POST",
+    token: { scopes: ["scenarios:read"], type: "optional" },
   },
   update: {
     endpoint: "/api/v3/scenarios/{id}",
     method: "PUT",
     path_parameters: [scenarioIdParam],
+    token: { scopes: ["scenarios:read"], type: "optional-owned" },
+  },
+  destroy: {
+    endpoint: "/api/v3/scenarios/{id}",
+    method: "DELETE",
+    path_parameters: [scenarioIdParam],
+    token: { scopes: ["scenarios:read", "scenarios:delete"] },
   },
 };

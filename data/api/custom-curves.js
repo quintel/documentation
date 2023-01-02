@@ -25,21 +25,21 @@ export default {
       {
         name: "include_internal",
         type: "boolean",
-        description:
-          'see <a href="#include_internal-parameter">include_internal parameter</a>',
+        description: 'see <a href="#include_internal-parameter">include_internal parameter</a>',
       },
       {
         name: "include_unattached",
         type: "boolean",
-        description:
-          'see <a href="#include_unattached-parameter">include_unattached parameter</a>',
+        description: 'see <a href="#include_unattached-parameter">include_unattached parameter</a>',
       },
     ],
+    token: { scopes: ["scenarios:read"], type: "optional" },
   },
   show: {
     endpoint: "/api/v3/scenarios/{scenario_id}/custom_curves/{curve_key}",
     method: "GET",
     path_parameters: [scenarioIdParam, curveTypeParam],
+    token: { scopes: ["scenarios:read"], type: "optional" },
   },
   update: {
     endpoint: "/api/v3/scenarios/{scenario_id}/custom_curves/{curve_key}",
@@ -52,10 +52,12 @@ export default {
         description: "data of the curve to be attached to the sceanrio",
       },
     ],
+    token: { scopes: ["scenarios:wite"], type: "optional-owned" },
   },
   destroy: {
     endpoint: "/api/v3/scenarios/{scenario_id}/custom_curves/{curve_key}",
     method: "DELETE",
     path_parameters: [scenarioIdParam, curveTypeParam],
+    token: { scopes: ["scenarios:write"], type: "optional-owned" },
   },
 };

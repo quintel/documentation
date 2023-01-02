@@ -9,6 +9,7 @@ export default {
         description: "the scenario ID",
       },
     ],
+    token: { scopes: ["scenarios:read"], type: "optional" },
   },
   show: {
     endpoint: "/api/v3/scenarios/{scenario_id}/inputs/{input_key}",
@@ -25,5 +26,6 @@ export default {
         description: "the name of the input",
       },
     ],
+    token: { scopes: ["scenarios:read"], type: "optional" },
   },
 };

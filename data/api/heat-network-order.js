@@ -1,26 +1,28 @@
 const scenarioIdParam = {
   name: "scenario_id",
   type: "number",
-  description: "the scenario ID the heat network order belongs to"
+  description: "the scenario ID the heat network order belongs to",
 };
 
 export default {
-  "show": {
-    "endpoint": "/api/v3/scenarios/{scenario_id}/heat_network_order",
-    "method": "GET",
-    "path_parameters": [scenarioIdParam]
+  show: {
+    endpoint: "/api/v3/scenarios/{scenario_id}/heat_network_order",
+    method: "GET",
+    path_parameters: [scenarioIdParam],
+    token: { scopes: ["scenarios:read"], type: "optional" },
   },
 
-  "update": {
-    "endpoint": "/api/v3/scenarios/{scenario_id}/heat_network_order",
-    "method": "PUT",
-    "path_parameters": [scenarioIdParam],
-    "parameters": [
+  update: {
+    endpoint: "/api/v3/scenarios/{scenario_id}/heat_network_order",
+    method: "PUT",
+    path_parameters: [scenarioIdParam],
+    parameters: [
       {
-        "name": "heat_network_order",
-        "type": "object",
-        "description": "the <a href='#the-heatnetworkorder-object'>HeatNetworkOrder object</a>"
-      }
-    ]
-  }
-}
+        name: "heat_network_order",
+        type: "object",
+        description: "the <a href='#the-heatnetworkorder-object'>HeatNetworkOrder object</a>",
+      },
+    ],
+    token: { scopes: ["scenarios:write"], type: "optional-owned" },
+  },
+};

@@ -8,8 +8,7 @@ export default {
   index: {
     endpoint: "/api/v3/scenarios/{scenario_id}/merit",
     method: "GET",
-    path_parameters: [
-      scenarioIdParam
-    ],
+    path_parameters: [scenarioIdParam],
+    token: { scopes: ["scenarios:read"], type: "optional" },
   },
 };

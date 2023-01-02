@@ -591,6 +591,7 @@ ol.steps {
   list-style: none;
   counter-reset: steps;
   padding: 0 0 0 1rem;
+  margin-top: 1.25rem;
 }
 
 ol.steps li {

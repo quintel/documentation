@@ -20,11 +20,13 @@ export default {
         description: "the number of items per page",
       },
     ],
+    token: { scopes: ["scenarios:read"] },
   },
   show: {
     endpoint: "/api/v3/saved_scenarios/{id}",
     method: "GET",
     path_parameters: [scenarioIdParam],
+    token: { scopes: ["scenarios:read"] },
   },
   create: {
     endpoint: "/api/v3/saved_scenarios",
@@ -53,6 +55,7 @@ export default {
         description: "whether the scenario can be viewed only by the owner",
       },
     ],
+    token: { scopes: ["scenarios:read", "scenarios:write"] },
   },
   update: {
     endpoint: "/api/v3/saved_scenarios/{id}",
@@ -85,10 +88,12 @@ export default {
         description: "whether the scenario should be in the owner's trash",
       },
     ],
+    token: { scopes: ["scenarios:read", "scenarios:write"] },
   },
   destroy: {
     endpoint: "/api/v3/saved_scenarios/{id}",
     method: "DELETE",
     path_parameters: [scenarioIdParam],
+    token: { scopes: ["scenarios:read", "scenarios:delete"] },
   },
 };
