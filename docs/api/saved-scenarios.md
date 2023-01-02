@@ -47,7 +47,7 @@ When the scenario is updated through the web interface, copies of the previous v
 
 This list cannot be modified through the API, nor do changed to the underlying scenario through the API cause new versions to be added to this list.
 
-## Getting information about a scenario
+## Getting information about a saved scenario
 
 Fetch information about a saved scenario. This will include a copy of the information about the underlying scenario.
 
@@ -234,6 +234,203 @@ Authorization: Bearer YOUR_TOKEN
   }
 }
 ```
+
+## Update the underlying scenario
+
+As described in [**scenarios vs. saved scenarios**](#scenarios-vs-saved-scenarios), a *saved* scenario is just a way to keep track of a scenario. It allows you to show it in your list of saved scenarios in the ETM web application. You cannot directly change the underlying scenario through the saved scenario.
+
+However, the saved scenario does provide you with the ID of the scenario object, and with that you can perform any action you wish. See [the documentation for the scenario API](scenarios.md) for more information.
+
+There are two approaches to updating the scenario itself:
+
+### Update the scenario directly
+
+<ol class="steps">
+  <li>
+
+**Fetch the saved scenario**
+
+Start by [fetching the details of the saved scenario](#getting-information-about-a-saved-scenario). much of the information in the reply is not relevant when updating the scenario; we care only about the returned `scenario_id`.
+
+```http title="Request"
+GET /api/v3/saved_scenario/123 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+```
+
+```json title="Response"
+{
+  "id": 123,
+  "scenario_id": 456789,
+  "scenario_id_history": [
+    456788
+  ],
+  "title": "My saved scenario",
+  "description": null,
+  // ...
+}
+```
+
+  </li>
+  <li>
+
+**Update the scenario using the scenario ID.**
+
+[Send a request to the API to update the scenario](scenarios.md#set-sliders-in-a-scenario) with whatever new values you want. You can also perform queries, get CSVs, or perform any other scenario action with the scenario ID. The above response returns a scenario ID of `456789` so we'll use that in the example below.
+
+```http title="Request"
+PUT /api/v3/scenarios/456789 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "scenario": {
+    "user_values": {
+      "buildings_insulation_level": 35.7
+    }
+  }
+}
+```
+
+  </li>
+</ol>
+
+Your scenario has now been updated with the new `user_value` settings.
+
+This approach can be used for any action that you would normally perform on a scenario: fetch the saved scenario to get the `scenario_id`, then perform an action on the scenario. For example, to download the electricity price curve CSV, fetch the saved scenario, then perform a GET request on the scenario's CSV endpoint:
+
+```bash
+curl https://engine.energytransitionmodel.com/api/v3/scenarios/456789/curves/electricity_price.csv \
+  -H "Accept: text/csv" \
+  -H "Authorization: Bearer YOUR_TOKEN"
+```
+
+### Clone the scenario and update the saved scenario
+
+An alternative to updating the scenario directly, is to create a clone of the scenario, modify that, then change the saved scenario to point to the new scenario.
+
+This has the advantage of preserving the original scenario, and the saved scenario will track the most recent 20 scenarios used. This allows you to maintain a simple history of the changes you've made to the scenario.
+
+<ol class="steps">
+  <li>
+
+**Fetch the saved scenario**
+
+As before, we start by [fetching the details of the saved scenario](#getting-information-about-a-saved-scenario) in order to get the `scenario_id`.
+
+```http title="Request"
+GET /api/v3/saved_scenario/123 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+```
+
+```json title="Response"
+{
+  "id": 123,
+  "scenario_id": 123456,
+  "scenario_id_history": [],
+  "title": "My saved scenario",
+  "description": null,
+  // ...
+}
+```
+
+The returned `scenario_id` is `123456`.
+
+</li>
+<li>
+
+**Clone the scenario**
+
+[Clone the scenario](scenarios.md#create-a-scenario-based-on-another-scenario) using the scenario ID. This will create a new scenario with the same settings as the original scenario.
+
+```http title="Request"
+
+POST /api/v3/scenarios HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "scenario": {
+    "scenario_id": "123456"
+  }
+}
+```
+
+```json title="Response"
+{
+  "id": 123457,
+  "area_code":"nl",
+  "start_year": 2019,
+  "end_year": 2050,
+  "user_values": {
+    "buildings_insulation_level": 35.7
+  }
+  // ...
+}
+```
+
+The API returns details of the new scenario, including the new scenario ID. In this example, the new scenario ID is `123457`.
+
+</li>
+<li>
+
+**Update the scenario**
+
+We'll now send a request to the API to update the scenario with whatever new values you want.
+
+```http title="Request"
+PUT /api/v3/scenarios/123457 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "scenario": {
+    "user_values": {
+      "buildings_insulation_level": 35.7
+    }
+  }
+}
+```
+
+</li>
+<li>
+
+**Update the saved scenario**
+
+Finally, we'll [update the saved scenario to point to the new scenario](#update-a-saved-scenario). This is done by sending a request to the API to update the saved scenario with the new scenario ID.
+
+```http title="Request"
+PUT /api/v3/saved_scenarios/123 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "scenario_id": 123457
+}
+```
+
+```json title="Response"
+{
+  "id": 123,
+  "scenario_id": 123457,
+  "scenario_id_history": [123456],
+  "title": "My saved scenario",
+  "description": null,
+  // ...
+}
+```
+
+The saved scenario now points at your new scenario, and the the original scenario is preserved in the `scenario_id_history`.
+
+</li>
+</ol>
 
 ## Delete a saved scenario
 
