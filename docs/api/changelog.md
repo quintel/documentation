@@ -39,6 +39,7 @@ To learn more about our environments, see the [introduction to the API](intro.md
   * An undocumented and unsupported `include_inputs` parameter has been removed from the [scenario endpoint](scenarios.md#get-information-about-a-scenario). The scenario slider settings are still available through the scenarios endpoint using the the `user_values` attribute, or you can fetch the full list of inputs through [the inputs endpoint](inputs.md).
   * The `detailed` parameter has been removed from the [scenario endpoint](scenarios.md#get-information-about-a-scenario). Scenario data will now include all information about the scenario without the need for this parameter.
 * [**An API for saved scenarios has been added**](saved-scenarios.md). Saved scenarios allow you show scenarios in your list scenarios in the ETM web application, and more easily share your scenarios with others.
+* [**An API for transition paths has been added**](transition-paths.md). Transition paths allow you to work with scenarios across multiple end years and plot their results in a chart.
 
 ### 3rd May 2022 <ReleaseBadge name="2022.05" />
 
