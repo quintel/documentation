@@ -262,6 +262,7 @@ Authorization: Bearer YOUR_TOKEN
 ```json title="Response"
 {
   "id": 123,
+  // highlight-next-line
   "scenario_id": 456789,
   "scenario_id_history": [],
   "title": "My saved scenario",
@@ -278,6 +279,7 @@ Authorization: Bearer YOUR_TOKEN
 [Send a request to the API to update the scenario](scenarios.md#set-sliders-in-a-scenario) with whatever new values you want. You can also perform queries, get CSVs, or perform any other scenario action with the scenario ID. The above response returns a scenario ID of `456789` so we'll use that in the example below.
 
 ```http title="Request"
+// highlight-next-line
 PUT /api/v3/scenarios/456789 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
@@ -328,6 +330,7 @@ Authorization: Bearer YOUR_TOKEN
 ```json title="Response"
 {
   "id": 123,
+  // highlight-next-line
   "scenario_id": 123456,
   "scenario_id_history": [],
   "title": "My saved scenario",
@@ -346,7 +349,6 @@ The returned `scenario_id` is `123456`.
 [Clone the scenario](scenarios.md#create-a-scenario-based-on-another-scenario) using the scenario ID. This will create a new scenario with the same settings as the original scenario.
 
 ```http title="Request"
-
 POST /api/v3/scenarios HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
@@ -354,6 +356,7 @@ Authorization: Bearer YOUR_TOKEN
 
 {
   "scenario": {
+    // highlight-next-line
     "scenario_id": "123456"
   }
 }
@@ -361,6 +364,7 @@ Authorization: Bearer YOUR_TOKEN
 
 ```json title="Response"
 {
+  // highlight-next-line
   "id": 123457,
   "area_code":"nl",
   "start_year": 2019,
@@ -382,6 +386,7 @@ The API returns details of the new scenario, including the new scenario ID. In t
 We'll now send a request to the API to update the scenario with whatever new values you want.
 
 ```http title="Request"
+// highlight-next-line
 PUT /api/v3/scenarios/123457 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
@@ -390,7 +395,9 @@ Authorization: Bearer YOUR_TOKEN
 {
   "scenario": {
     "user_values": {
-      "buildings_insulation_level": 35.7
+      "buildings_insulation_level": 42.0,
+      "households_number_of_inhabitants": 18.3,
+      "households_solar_pv_solar_radiation_market_penetration": 21.0
     }
   }
 }
@@ -410,6 +417,7 @@ Accept: application/json
 Authorization: Bearer YOUR_TOKEN
 
 {
+  // highlight-next-line
   "scenario_id": 123457
 }
 ```
@@ -417,8 +425,10 @@ Authorization: Bearer YOUR_TOKEN
 ```json title="Response"
 {
   "id": 123,
+  // highlight-start
   "scenario_id": 123457,
   "scenario_id_history": [123456],
+  // highlight-end
   "title": "My saved scenario",
   "description": null,
   // ...
