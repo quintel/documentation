@@ -263,9 +263,7 @@ Authorization: Bearer YOUR_TOKEN
 {
   "id": 123,
   "scenario_id": 456789,
-  "scenario_id_history": [
-    456788
-  ],
+  "scenario_id_history": [],
   "title": "My saved scenario",
   "description": null,
   // ...
