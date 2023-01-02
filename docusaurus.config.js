@@ -54,7 +54,8 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Quintel`,
     },
     algolia: {
-      apiKey: "9fe615263d52073aca054075b329ebd5",
+      appId: "NQGE6UZW7V",
+      apiKey: "5dcd7183ae0e2678ac84df798c9bafc0",
       indexName: "energytransitionmodel",
     },
   },

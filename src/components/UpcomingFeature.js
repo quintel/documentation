@@ -24,7 +24,7 @@ const UpcomingFeature = ({ release: releaseName }) => {
     (release.production && Date.parse(release.production) < today.getTime()) ||
     (!release.staging && Date.parse(release.staging) >= today.getTime())
   ) {
-    return <BrowserOnly />;
+    return <BrowserOnly>{() => {}}</BrowserOnly>;
   }
 
   const formattedDate = new Date(release.production).toLocaleDateString("en-UK", {
