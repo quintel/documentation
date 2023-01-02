@@ -209,7 +209,7 @@ User values may also be provided on create in the `user_values` object.
 <ApiEndpoint data={endpointData.create} />
 
 ```http title="Example request"
-POST /api/v3/scenarios?detailed=true HTTP/2
+POST /api/v3/scenarios HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
@@ -253,7 +253,7 @@ of the year and area of the preset.
 <ApiEndpoint data={endpointData.create} />
 
 ```http title="Example request"
-POST /api/v3/scenarios?detailed=true HTTP/2
+POST /api/v3/scenarios HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
@@ -289,8 +289,7 @@ A list of all available sliders for the scenario, with their min and max values,
 through the inputs endpoint: `GET /api/v3/scenarios/{scenario_id}/inputs`.
 :::
 
-Updates the user values of a scenario with the provided `user_values`. The `detailed` parameter
-may also be supplied with the data.
+Updates the user values of a scenario with the provided `user_values`.
 
 <ApiEndpoint data={endpointData.update} />
 
@@ -305,8 +304,7 @@ Authorization: Bearer YOUR_TOKEN
     "user_values": {
       "buildings_insulation_level": 35.7
     }
-  },
-  "detailed": true
+  }
 }
 ```
 
@@ -355,8 +353,7 @@ Authorization: Bearer YOUR_TOKEN
       "my_tags": ["high_insulation", "hydro_river"],
       "my_identifier": 1010
     }
-  },
-  "detailed": true
+  }
 }
 ```
 
