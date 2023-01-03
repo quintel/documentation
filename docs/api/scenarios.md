@@ -21,13 +21,14 @@ scenario endpoint:
 * `end_year` - year the scenario ends.
 * `url` - the url of the API endpoint for this scenario.
 * `scaling` - object that contains details of custom scaling factors.
-* `source` - source through which the scenario was created, can be 'API' or 'ETM'.
+* `source` - source through which the scenario was created.
 * `created_at` - date of creation.
 * `updated_at` - date of last update.
 * `keep_compatible` - default false, see [forward compatibility](#forward-compatibility)
 * `esdl_exportable` - determines if the scenario can be exported as an ESDL file.
-* `template` - the id of the scenario that was used as a template, or null if no template was used
-* `metadata` - object that contains custom metadata managed by the user of the scenario
+* `template` - the id of the scenario that was used as a template, or null if no template was used.
+* `metadata` - object that contains custom metadata managed by the user of the scenario.
+* `private` - boolean that determines if the scenario is private or not.
 * `user_values` - object that contains the sliders changed by a user:
   * `slider_one` - the set value for slider_one.
   * `slider_two` - the set value for slider_two.
@@ -61,7 +62,9 @@ account. This means that by default:
 * **Only you** will be able to **delete** the scenario
 
 If you prefer your scenario to be private, so that only you can read it, see the documentation on
-[private scenarios](scenarios.md#private-scenarios).
+[private scenarios](scenarios.md#private-scenarios). You may also change the default privacy of your
+scenarios with the "Privacy" setting on
+**[your profile page](https://engine.energytransitionmodel.com/identity/profile)**.
 
 #### Using the API without authentication
 
@@ -426,7 +429,10 @@ Authorization: Bearer YOUR_TOKEN
 
 <UpcomingFeature release="2023.01" />
 
-If you are using authentication, your scenarios will be associated with your user account. This prevents others from being able to change or delete your scenario but, by default, other people can still view your scenario.
+If you are using authentication, your scenarios will be associated with your user account. This
+prevents others from being able to change or delete your scenario but, by default, other people can
+still view your scenario. If you wish to change this default, see the "Privacy" setting on
+**[your profile page](https://engine.energytransitionmodel.com/identity/profile)**.
 
 To make your scenario private, so that only you can view it, set the `private` attribute to `true`:
 
