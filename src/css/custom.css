@@ -349,7 +349,7 @@ div[class^="codeBlockContent"] {
 }
 
 .theme-admonition > div:first-child {
-  text-transform: none;
+  text-transform: none !important;
 }
 
 .theme-admonition div[class^="codeBlockContainer"] {
