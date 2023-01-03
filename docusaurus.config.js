@@ -57,6 +57,7 @@ module.exports = {
       appId: "NQGE6UZW7V",
       apiKey: "5dcd7183ae0e2678ac84df798c9bafc0",
       indexName: "energytransitionmodel",
+      contextualSearch: false,
     },
   },
   presets: [
