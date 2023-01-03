@@ -48,6 +48,7 @@
   --ifm-transition-fast: 125ms;
 
   --custom-blue-background-color: #f1f3fa;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.07);
 
   /* Alerts */
   --ifm-alert-border-left-width: 0.25rem;
