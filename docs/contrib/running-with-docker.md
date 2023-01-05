@@ -64,6 +64,10 @@ docker-compose build
 Create a file called `config/settings.local.yml` containing:
 
 ```yaml
+etmodel_uri: http://localhost:3001
+```
+
+Change the ETModel URI if you will run it at a different location.
 
 #### Install ETEngine dependencies and seed the database
 
