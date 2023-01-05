@@ -12,8 +12,6 @@ The Energy Transition model consists of three parts:
 
 ETEngine and ETModel are both configured to run with [Docker](https://www.docker.com/) (via Docker Compose), minimising the amount of effort needed to install dependencies and libraries. This guide will assume that you already have Docker installed and configured.
 
-Docker is supported from the 2022.04 (<DynamicBadge prodDate="2022-04-05" stagDate="2022-03-02" />) release onwards.
-
 ## Clone the repositories
 
 Clone the repositories using Git. All three should have the same parent directory:
