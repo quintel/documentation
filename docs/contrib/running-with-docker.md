@@ -47,79 +47,6 @@ Create a file called `.password` in the ETSource directory containing the passwo
 │     ├─ datasets
 │     ├─ ...
 ```
-
-## ETModel
-
-#### Build the ETModel image:
-
-```bash
-docker-compose build
-```
-
-#### Install dependencies and seed the database:
-
-```bash
-docker-compose run --rm web bash -c 'bin/rails db:drop && bin/setup'
-```
-
-This command drops any existing ETModel database; be sure only to run this during the initial setup! This step will also provide you with an e-mail address and password for an administrator account.
-
-When the application is updated you may easily install new dependencies by running `bin/setup`:
-
-```bash
-docker-compose run --rm web bin/setup
-```
-
-This command is idempotent and may by run at any time whenever needed.
-
-#### Set the API URL (optional)
-
-By default, ETModel will send requests to the beta (staging) version of ETEngine. This is used for testing purposes and is more frequently updated than the live (production) version.
-
-To provide a custom ETEngine address, create `config/settings.local.yml` specifying the protocol (http or https) and host:
-
-```yaml
-api_url: https://etengine.test
-```
-
-:::info Run ETEngine locally
-To run the entire model – including ETEngine and ETSource – on your own machine, ETModel must be told where to find the ETEngine API. You must first find your machine's local/private IP address. This address must be accessible both by your browser and from within the ETModel Docker container. To get your IP address, run:
-
-```zsh
-ipconfig getifaddr en0   # on macOS
-hostname -I              # on Linux
-ipconfig                 # on Windows
-```
-
-Alternatively, follow these guides for [macOS](https://www.hellotech.com/guide/for/how-to-find-ip-address-on-mac), [Ubuntu](https://help.ubuntu.com/stable/ubuntu-help/net-findip.html.en), or [Windows](https://support.microsoft.com/en-au/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9).
-
-Create a file called `config/settings.local.yml` containing:
-
-```yaml
-api_url: http://YOUR_IP_ADDRESS:3000
-```
-:::
-
-:::warning Use matching branches or tags!
-When running ETEngine locally, be sure to use the same branch or tag for ETModel, ETEngine, and ETSource. You are likely to encounter errors if you fail to do so.
-
-For example, if you want to run the latest version, all three should be set to the `master` branch. To run the current "stable" version of the ETM, set them to the `production` branch. If you wish to run a specific production release they should all use the same tag. For example, to use the March 2022 release:
-
-```bash
-cd ../etengine && git checkout 2022.03
-cd ../etsource && git checkout 2022.03
-cd ../etmodel  && git checkout 2022.03
-```
-:::
-
-#### Launch the containers:
-
-```
-docker-compose up
-```
-
-After starting application will become available at [http://localhost:3001](http://localhost:3001) after a few seconds. This is indicated by the message "Listening on ...".
-
 ## ETEngine
 
 #### Change to the ETEngine directory
@@ -128,13 +55,19 @@ After starting application will become available at [http://localhost:3001](http
 cd etengine
 ```
 
-#### Build the Docker images
+#### Build the ETEngine Docker images
 
 ```bash
 docker-compose build
 ```
 
-#### Install dependencies and seed the database
+#### Configure ETEngine
+
+Create a file called `config/settings.local.yml` containing:
+
+```yaml
+
+#### Install ETEngine dependencies and seed the database
 
 ```bash
 docker-compose run --rm web bash -c 'bin/rails db:drop && bin/setup'
@@ -159,3 +92,72 @@ docker-compose up
 After starting application will become available at [http://localhost:3000](http://localhost:3000) after a few seconds. This is indicated by the message "Listening on ...".
 
 Before the application can start serving scenarios, it must calculate the default dataset (Netherlands). This process will begin the first time a scenario is requested and will take several seconds. Signing in to the administrator account will also begin the calculation. Please be patient! Further requests to ETEngine will happen much faster.
+
+#### Running in production
+
+When running ETEngine in a production environment, there are several additional requirements:
+
+* A `SECRET_KEY_BASE` environment variable must be set. This secret is used to sign cookies and other sensitive data. It should be a random string. Generate a string locally with:
+
+  ```bash
+  bundle exec rails secret
+  ```
+
+* Set a `WEB_CONCURRENCY` environment variable to the number of processes you wish to run. This is typically equal to the number of CPU cores available.
+
+* `MAILER_SMTP_SETTINGS` and `MAILER_HOST` must be set to use e-mail features. See the [Rails documentation](https://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration) for more information.
+
+* The application container must have ETSource mounted as a volume, and the `ETSOURCE_PATH` environment variable must be set to the path of the mounted volume. This is required for the application to be able to read the datasets.
+
+* An `OPENID_ISSUER` environment variable must be set to the URL the application.
+
+* [An RSA keypair must be generated](https://en.wikibooks.org/wiki/Cryptography/Generate_a_keypair_using_OpenSSL) and the private key mounted in the application volume at `/app/tmp/openid.key`. Failure to do this will result in a new key being generated each time the container starts.
+
+## ETModel
+
+#### Build the ETModel image
+
+```bash
+docker-compose build
+```
+#### Connect to ETEngine
+
+By default, ETModel will send requests to the beta (staging) version of ETEngine. However, connecting to the official versions of the ETM requires authentication which is only available to ETM staff members. If you are not a staff member, you [must run ETEngine for yourself](#etengine).
+
+After setting up ETEngine, sign in to [the administrator account](#install-etengine-dependencies-and-seed-the-database). Scroll down to "Your applications" and create a new "ETModel (Local)" application. ETEngine will now provide you with a configuration containing the ETEngine URL, client ID and secret. Copy this configuration into ETModel's `config/settings.local.yml`.
+
+:::warning Use matching branches or tags!
+When running ETEngine locally, be sure to use the same branch or tag for ETModel, ETEngine, and ETSource. You are likely to encounter errors if you fail to do so.
+
+For example, if you want to run the latest version, all three should be set to the `master` branch. To run the current "stable" version of the ETM, set them to the `production` branch. If you wish to run a specific production release they should all use the same tag. For example, to use the March 2022 release:
+
+```bash
+cd ../etengine && git checkout 2022.03
+cd ../etsource && git checkout 2022.03
+cd ../etmodel  && git checkout 2022.03
+```
+:::
+
+#### Install ETModel dependencies and seed the database
+
+```bash
+docker-compose run --rm web bash -c 'bin/rails db:drop && bin/setup'
+```
+
+This command drops any existing ETModel database; be sure only to run this during the initial setup! This step will also provide you with an e-mail address and password for an administrator account.
+
+When the application is updated you may easily install new dependencies by running `bin/setup`:
+
+```bash
+docker-compose run --rm web bin/setup
+```
+
+This command is idempotent and may by run at any time whenever needed.
+
+#### Launch the containers
+
+```
+docker-compose up
+```
+
+After starting application will become available at [http://localhost:3001](http://localhost:3001) after a few seconds. This is indicated by the message "Listening on ...".
