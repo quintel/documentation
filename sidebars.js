@@ -130,7 +130,12 @@ module.exports = {
       type: "category",
       label: "Model features",
       collapsed: false,
-      items: ["contrib/inputs", "contrib/molecules", "contrib/waste-outputs"],
+      items: [
+        "contrib/graph-components",
+        "contrib/inputs",
+        "contrib/molecules",
+        "contrib/waste-outputs",
+      ],
     },
     {
       type: "category",

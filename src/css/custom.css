@@ -580,6 +580,15 @@ article p code {
   margin-left: 1rem;
 }
 
+.images-row figcaption {
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+.images-row img + figcaption {
+  margin-top: 0.5rem;
+}
+
 figure {
   margin: 0;
 }
