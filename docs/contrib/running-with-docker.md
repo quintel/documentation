@@ -31,6 +31,7 @@ This will create a structure like so:
 │  └─ etengine
 ```
 
+:::info Encrypted datasets for Quintel staff
 ETSource also requires a password to decrypt some datasets whose data we are not authorised to redistribute. It is likely this requirement will be removed in the near future.
 
 Create a file called `.password` in the ETSource directory containing the password. The password itself can be found in the "Quintel → Shared" 1Password vault.
@@ -45,6 +46,18 @@ Create a file called `.password` in the ETSource directory containing the passwo
 │     ├─ datasets
 │     ├─ ...
 ```
+
+This password is not available to members of the public, and as such some legacy datasets will be unavailable:
+
+- `de`, use `DE_germany` instead
+- `dk`, use `DK_denmark` instead
+- `eu`, use `EU27_european_union_27_countries` instead
+- `nl` (2015), use `nl2019` instead
+- `nl2016`, use `nl2019` instead
+- `nl2017`, use `nl2019` instead
+- `nl2018`, use `nl2019` instead
+:::
+
 ## ETEngine
 
 #### Change to the ETEngine directory
