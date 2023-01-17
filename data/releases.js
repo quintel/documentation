@@ -1,4 +1,8 @@
 export default {
+  2023.02: {
+    production: "2023-02-07",
+    staging: "2022-01-10",
+  },
   2023.01: {
     production: "2023-01-10",
     staging: "2022-12-06",
