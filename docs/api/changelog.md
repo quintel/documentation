@@ -34,7 +34,7 @@ To learn more about our environments, see the [introduction to the API](intro.md
   * API endpoints have been added for [listing](scenarios.md#listing-your-scenarios) and [deleting](scenarios.md#deleting-your-scenarios) your scenarios.
   * Scenarios have a new `private` attribute available to [authenticated](authentication.md) users. This allows you to prevent other API users from viewing your scenario.
   * The scenario `protected` attribute has been removed.
-  * The scenario `read_only` attribute has been removed. To prevent others from changing your scenario, please sign up for an account and see the page on [authentication and personal access tokens](authentication.md) and [set your scenarios to be private](scenarios.md#private-scenarios).
+  * The scenario `read_only` attribute has been removed. To prevent others from changing your scenario, please sign up for an account and see the page on [authentication and personal access tokens](authentication.md).
   * The scenario `title` and `description` attributes have been removed. Please use the scenario `metadata` attribute instead. See the change log entry from [5th April 2022](#5th-april-2022-) for more information.
   * An undocumented and unsupported `include_inputs` parameter has been removed from the [scenario endpoint](scenarios.md#get-information-about-a-scenario). The scenario slider settings are still available through the scenarios endpoint using the the `user_values` attribute, or you can fetch the full list of inputs through [the inputs endpoint](inputs.md).
   * The `detailed` parameter has been removed from the [scenario endpoint](scenarios.md#get-information-about-a-scenario). Scenario data will now include all information about the scenario without the need for this parameter.
