@@ -100,6 +100,7 @@ module.exports = {
       items: [
         "main/scenario-tools/introduction",
         "main/scenario-tools/retrieving-data",
+        "main/scenario-tools/identifying-yourself",
         "main/scenario-tools/creating-and-updating",
         "main/scenario-tools/creating-templates",
         "main/scenario-tools/regional-overview",
