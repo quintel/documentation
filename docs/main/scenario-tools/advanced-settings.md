@@ -20,7 +20,7 @@ Here is a quick overview of the possible settings and their default values:
 | `input_curves_folder` | Location of where the curve files you wish to use are stored, this can be a full path to anywhere on your computer. | `data/input/curves`|
 | `output_file_folder` | Location of where all output files should be written to by the tools. Again, this can be a full path to any folder on your computer. | `data/output` |
 |`local_engine_url`| The url to ETEngine that should be used when you use the `local` option in the tools. | `http://localhost:3000/api/v3` |
-|`local_model_url`| The url to ETModel that should be used when you use the `local` option in the tools. | `http://localhost:4000` |
+|`local_model_url`| The url to ETModel that should be used when you use the `local` option in the tools. | `http://localhost:3001` |
 | `csv_separator` | The separator your CSV files are using. Some European computers use ';' instead of ','. | , |
 
 ## ETM environments
