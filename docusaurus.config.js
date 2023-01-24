@@ -32,7 +32,7 @@ module.exports = {
               href: "https://energytransitionmodel.com",
             },
             {
-              label: "Quintel Intelligence",
+              label: "Quintel",
               href: "https://quintel.com",
             },
           ],
