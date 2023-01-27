@@ -16,9 +16,9 @@ A ForecastStorageOrder is an object containing only one key – `order` – whic
 
 * `order` - an array of technology group keys as strings
 
-## Get a heat network order
+## Get a forecast storage order
 
-Fetches the heat network order for a chosen scenario.
+Fetches the forecast storage order for a chosen scenario.
 
 <ApiEndpoint data={endpointData.show} />
 
