@@ -500,6 +500,7 @@ article p code {
 
 /* Add "New" tag to some sidebar items. */
 .menu a[href="/api/authentication"]:after,
+.menu a[href="/api/forecast-storage-order"]:after,
 .menu a[href="/api/saved-scenarios"]:after,
 .menu a[href="/api/transition-paths"]:after {
   -webkit-font-smoothing: initial;
@@ -517,6 +518,7 @@ article p code {
 }
 
 .menu a.menu__link--active[href="/api/authentication"]:after,
+.menu a.menu__link--active[href="/api/forecast-storage-order"]:after,
 .menu a.menu__link--active[href="/api/saved-scenarios"]:after,
 .menu a.menu__link--active[href="/api/transition-paths"]:after {
   color: #e8eeff;

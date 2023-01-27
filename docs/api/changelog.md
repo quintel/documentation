@@ -27,6 +27,11 @@ While we endeavour not to change the API in a backwards-incompatible way, this i
 
 To learn more about our environments, see the [introduction to the API](intro.md#environments).
 
+### 7th February 2023 <ReleaseBadge name="2023.02" />
+
+* Support for the [forecast storage order](forecast-storage-order.md) has been added. This allows you to control the order in which batteries are calculated [when forecasting is enabled](../main/battery-forecasting.md).
+* [It is no longer required to provide a top-level `heat_network_order` attribute](heat-network-order.md#optional-top-level-key) when updating a heat network order.
+
 ### 10th January 2023 <ReleaseBadge name="2023.01" />
 
 * [**Authentication has come to the API!**](authentication.md) You can now create personal access tokens for your account. Scenarios will be linked to your account which prevents others from making changes to your data.

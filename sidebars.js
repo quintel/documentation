@@ -184,6 +184,7 @@ module.exports = {
         "api/scenarios",
         "api/custom-curves",
         "api/flexibility-order",
+        "api/forecast-storage-order",
         "api/heat-network-order",
         "api/inputs",
         "api/nodes",
