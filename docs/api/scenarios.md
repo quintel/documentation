@@ -292,7 +292,7 @@ A list of all available sliders for the scenario, with their min and max values,
 through the inputs endpoint: `GET /api/v3/scenarios/{scenario_id}/inputs`.
 :::
 
-Updates the user values of a scenario with the provided `user_values`.
+Updates the user values of a scenario with the provided `user_values`. If you want to reset a slider to its standard value, please supply the "reset" keyword instead of a value.
 
 <ApiEndpoint data={endpointData.update} />
 

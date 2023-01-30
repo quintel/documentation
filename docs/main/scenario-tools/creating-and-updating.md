@@ -38,7 +38,12 @@ The `scenario_settings.csv` file contains the slider settings of your scenarios.
 |---|---|---|
 | households_number_of_residences  | 40000  | 37000  |
 | transport_useful_demand_passenger_kms  | -1.5  | 2.3  |
-| transport_vehicle_using_electricity_efficiency  | 0  | 1.2  |
+| transport_vehicle_using_electricity_efficiency  | reset  | 1.2  |
+
+:::info Resetting a slider to its standard value
+If you want to remove an input from the list of inputs in your scenario, put __reset__ instead of
+a value. This will reset the slider to its standard value.
+:::
 
 ### curves
 In the `input/curves` folder you can add custom demand, supply and price curves to use in your scenarios. These curves can be used to overwrite the default ETM [profiles](https://docs.energytransitionmodel.com/main/curves#modifying-profiles). In the `scenario_list.csv` file you specify for each scenario which CSV curve file to use by adding the file name to the `curve_file` column.
