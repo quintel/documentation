@@ -41,8 +41,8 @@ The `scenario_settings.csv` file contains the slider settings of your scenarios.
 | transport_vehicle_using_electricity_efficiency  | reset  | 1.2  |
 
 :::info Resetting a slider to its standard value
-If you want to reset a slider you set previously to its standard value, put __reset__ instead of
-a value.
+If you want to remove an input from the list of inputs in your scenario, put __reset__ instead of
+a value. This will reset the slider to its standard value.
 :::
 
 ### curves
