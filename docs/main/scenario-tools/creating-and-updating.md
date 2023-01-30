@@ -38,7 +38,7 @@ The `scenario_settings.csv` file contains the slider settings of your scenarios.
 |---|---|---|
 | households_number_of_residences  | 40000  | 37000  |
 | transport_useful_demand_passenger_kms  | -1.5  | 2.3  |
-| transport_vehicle_using_electricity_efficiency  | 0  | 1.2  |
+| transport_vehicle_using_electricity_efficiency  | reset  | 1.2  |
 
 :::info Resetting a slider to its standard value
 If you want to reset a slider you set previously to its standard value, put __reset__ instead of
