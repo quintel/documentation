@@ -17,7 +17,7 @@ For a description of how to set input values for a scenario, see [Set sliders in
 
 Endpoints which provide information about inputs will return the following information:
 
-* `default` - The initial value of the input in a blank scenario. If the scenario is [based on parent scenario](https://docs.energytransitionmodel.com/api/scenarios#create-a-scenario-based-on-another-scenario), this will be the value of the input in the parent.
+* `default` - The initial value of the input in a blank scenario. If the scenario is [based on parent scenario](https://docs.energytransitionmodel.com/api/scenarios#create-a-scenario-based-on-another-scenario), this will be the value of the input in the parent. You can change this by supplying the [`defaults`](#specifying-the-defaults) parameter.
 * `disabled` - Indicates if the input is disabled; if so, a value may not be set.
 * `disabled_by` - Appears only when this input would be disabled if another has a value.
 * `max` - The maximum permitted value for the input.
@@ -71,6 +71,51 @@ Accept: application/json
     "min":0.0,
     "max":100.0,
     "default":0.896427147907238,
+    "unit": "%",
+    "share_group": "transport_car_tech"
+  },
+  "transport_car_using_gasoline_mix_share":{
+    "min":0.0,
+    "max":100.0,
+    "default":70.85334695042516,
+    "unit": "%",
+    "share_group": "transport_car_tech"
+  }
+}
+```
+
+### Specifying the defaults
+
+When requesting the inputs from a scenario that has a parent scenario, the default values of each input show the value of the parent. If you wish to see the default values of the dataset instead, you can supply the `defaults` parameter to the request. This parameter has two possible values:
+
+* `parent` - this is the standard behaviour of using the values of the parent scenario
+* `original` - shows the original default values of the dataset instead
+
+<ApiEndpoint data={endpointData.index} />
+
+```http title="Example request"
+GET /api/v3/scenarios/0/inputs HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+
+{
+  "defaults": "original"
+}
+```
+
+```http title="Example response"
+{
+  "transport_car_using_diesel_mix_share":{
+    "min":0.0,
+    "max":100.0,
+    "default":24.250388708759342,
+    "unit": "%",
+    "share_group": "transport_car_tech"
+  },
+  "transport_car_using_electricity_share":{
+    "min":0.0,
+    "max":100.0,
+    "default":0.452618882211923,
     "unit": "%",
     "share_group": "transport_car_tech"
   },
