@@ -19,7 +19,8 @@ proxy_settings:
 
 Now when you run the tools, the proxies will be automatically used to communicate with the ETM.
 
-:::info Authenticated proxies
+## Authenticated proxies
+
 If you are using authenticated proxies, you can add include the required user name and password in the URLs in the settings file:
 
 ```
@@ -29,4 +30,3 @@ proxy_settings:
 ```
 
 Since your user name and password are _secret_ settings, make sure to only add those settings to `local.settings.yml`. This file will allow you to overwrite any of the settings from the `settings.yml`.
-:::
