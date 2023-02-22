@@ -16,6 +16,7 @@ Here is a quick overview of the possible settings and their default values:
 | Setting | What does it do? | Default value |
 | --- | --- | --- |
 | `personal_etm_token` | Token to identify you to the ETM to access your personal scenarios. [Learn more..](/main/scenario-tools/identifying-yourself)| Blank |
+| `proxy_servers` | URLs to the proxy servers you are using. [Learn more..](/main/scenario-tools/using-proxies)| Blank |
 | `input_file_folder` | Location of the main input files, this can be a full path to anywhere on your computer. | `data/input`|
 | `input_curves_folder` | Location of where the curve files you wish to use are stored, this can be a full path to anywhere on your computer. | `data/input/curves`|
 | `output_file_folder` | Location of where all output files should be written to by the tools. Again, this can be a full path to any folder on your computer. | `data/output` |
