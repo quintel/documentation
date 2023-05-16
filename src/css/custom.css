@@ -499,7 +499,7 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/api/authentication"]:after,
+/* .menu a[href="/api/authentication"]:after,
 .menu a[href="/api/forecast-storage-order"]:after,
 .menu a[href="/api/saved-scenarios"]:after,
 .menu a[href="/api/transition-paths"]:after {
@@ -523,10 +523,11 @@ article p code {
 .menu a.menu__link--active[href="/api/transition-paths"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
-}
+} */
 
 /* Add "Updated" tag to some sidebar items. */
 .menu a[href="/api/changelog"]:after,
+.menu a[href="/api/inputs"]:after,
 .menu a[href="/api/scenarios"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
@@ -543,6 +544,7 @@ article p code {
 }
 
 .menu a.menu__link--active[href="/api/changelog"]:after,
+.menu a.menu__link--active[href="/api/inputs"]:after,
 .menu a.menu__link--active[href="/api/scenarios"]:after {
   color: #e8eeff;
   border-color: #e8eeff;

@@ -26,6 +26,7 @@ scenario endpoint:
 * `updated_at` - date of last update.
 * `keep_compatible` - default false, see [forward compatibility](#forward-compatibility)
 * `esdl_exportable` - determines if the scenario can be exported as an ESDL file.
+* `coupling` - true if a coupling with another model is active.
 * `template` - the id of the scenario that was used as a template, or null if no template was used.
 * `metadata` - object that contains custom metadata managed by the user of the scenario.
 * `private` - boolean that determines if the scenario is private or not.
@@ -98,6 +99,7 @@ Authorization: Bearer YOUR_TOKEN
   "created_at": "2021-07-16T09:23:00.000Z",
   "updated_at": "2021-07-16T09:23:00.000Z",
   "esdl_exportable": false,
+  "coupling": false,
   "user_values": {
     "buildings_insulation_level": 40.3,
     "capacity_of_energy_power_hydro_river": 39.0
@@ -151,7 +153,8 @@ Authorization: Bearer YOUR_TOKEN
       "source": null,
       "created_at": "2021-07-16T09:23:00.000Z",
       "updated_at": "2021-07-16T09:23:00.000Z",
-      "esdl_exportable": false
+      "esdl_exportable": false,
+      "coupling": false,
     },
     // ...
   ]
@@ -516,4 +519,40 @@ A list of all available gqueries is still being worked on.
 DELETE /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
 Authorization: Bearer YOUR_TOKEN
+```
+
+## Scenario couplings
+
+<UpcomingFeature release="2023.06" />
+
+When your scenario is coupled to another energy model, certain inputs of you scenario are overwritten
+by this other model. When inspecting your scenario the `coupling` attribute will indicate whether
+your scenario was coupled.
+
+It is possible to remove the coupling to the other model by setting `coupling` to `false`.
+This means that the inputs set by the other model will be erased. This action is irreversible.
+
+<ApiEndpoint data={endpointData.update} />
+
+```http title="Example request"
+PUT /api/v3/scenarios/12345 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "coupling": false
+}
+```
+
+```json title="Example response"
+{
+  {
+  "scenario": {
+    "id": 12345,
+    ...
+    "coupling": false,
+  }
+}
+}
 ```
