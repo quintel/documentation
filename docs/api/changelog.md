@@ -27,6 +27,11 @@ While we endeavour not to change the API in a backwards-incompatible way, this i
 
 To learn more about our environments, see the [introduction to the API](intro.md#environments).
 
+### 6th June 2023 <ReleaseBadge name="2023.06" />
+
+* Check if your scenario was coupled by and [uncouple](scenarios.md#scenario-couplings) it from an other external energy model.
+* When an input [was disabled by another input](inputs.md#mutually-exclusive-inputs), indicate if this disabling is part of a coupling.
+
 ### 7th February 2023 <ReleaseBadge name="2023.02" />
 
 * Support for the [forecast storage order](forecast-storage-order.md) has been added. This allows you to control the order in which batteries are calculated [when forecasting is enabled](../main/battery-forecasting.md).
