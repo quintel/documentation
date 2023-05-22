@@ -20,14 +20,16 @@ Provides a more detailed explanation of different tools and topics within the ET
 An overview of all data used within the ETM accompanied by their respective sources. 
 
 ### 4. Modelling Principles
-An insight into the exact modelling principles behind the ETM. 
+An insight into the exact modelling principles behind the ETM.
 
-### 5. For Contributors
+### 5. Scenario-tools
+If you are interested in communicating with the ETM without using the web-interface, then you can visit this page to see if you can use any of the Pyton tools in this collection.
+
+### 6. For Contributors
 If you are contributing or would like to contribute to the development of the ETM, this page will grant you a short overview of the different possibilities for contributing. 
 
-### 6. API References
+### 7. API Reference
 Interested in exchanging data with the ETM? Here you can find the API references and documentation. 
 
-
-
-
+### 8. External Models
+The ETM can be combined with various external models. Here you can find a description of how these combinations work.

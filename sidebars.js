@@ -119,6 +119,12 @@ module.exports = {
       label: "7. API Reference",
       href: "/api/intro",
     },
+    {
+      type: "category",
+      label: "8. External Models",
+      collapsed: true,
+      items: ["main/external-coupling"],
+    },
   ],
   contribSidebar: [
     { type: "link", href: "/", label: "← Documentation home" },
