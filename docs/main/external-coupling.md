@@ -7,7 +7,7 @@ Complementary external models can be coupled to the ETM, with the aim to generat
 ## Implementation
 
 ### Coupling external inputs
-One way to couple an external model is to implementing specific outcomes from the model in the ETM. This can be done by using dedicated external coupling inputs, that bypass the sliders presented in the ETM front-end.
+One way to couple an external model is to implement specific outcomes from the model in the ETM. This can be done by using dedicated external coupling inputs, that bypass the sliders presented in the ETM front-end.
 
 For example, a dedicated model might make in-depth calculations for the steel industry, producing final demand for the steel industry as its output. This model then overwrites the final demand for steel and deactivates the sliders presented in [Demand → Steel](https://energytransitionmodel.com/scenario/demand/industry/steel).
 
