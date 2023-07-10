@@ -60,7 +60,7 @@ In addition, costs for heat meters that connect indoor and outdoor distribution 
 _Note: Heat meter costs can be set per region in the ETM. The numbers above are default values._
 
 ### (Secondary) distribution pipelines
-Distribution pipelines deliver heat to residences and buildings throughout a neighbourhood. WTwo types of pipelines are distinguished:
+Distribution pipelines deliver heat to residences and buildings throughout a neighbourhood. Two types of pipelines are distinguished:
 * Main distribution pipelines
 * Connection pipelines: pipelines from street level to front door, connecting a residence
 
