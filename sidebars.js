@@ -196,6 +196,7 @@ module.exports = {
         "api/inputs",
         "api/nodes",
         "api/merit",
+        "api/exports",
       ],
     },
     {
