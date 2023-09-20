@@ -174,6 +174,12 @@ module.exports = {
       collapsed: false,
       items: ["contrib/authoring-docs"],
     },
+    {
+      type: "category",
+      label: "Managing scenarios",
+      collapsed: false,
+      items: ["contrib/cloning-scenarios"],
+    },
   ],
   apiSidebar: [
     { type: "link", href: "/", label: "← Documentation home" },
