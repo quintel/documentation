@@ -2,11 +2,21 @@
 title: Cloning scenarios between environments
 ---
 
-From time to time it can be convenient to copy certain scenarios from one environment to another. For this reason the scenario-cloner bash script exists. This script can clone a script from `production` to `staging` to run further tests on for example, or to your local `development` enviroment for investigation or debugging purposes.
+From time to time it can be convenient to copy certain scenarios from one environment to another. For this reason the scenario-cloner bash script exists. This script can clone one or more scenario(s) from `production` to `staging` to run further tests on for example, or to your local `development` enviroment for investigation or debugging purposes, or any other purpose. Because the script levarages the ETEngine API endpoints anonymously, it is only able to clone public scenarios. 
 
 The [script](https://github.com/quintel/etengine/tree/master/scripts/scenario-cloner.sh) is located in the [scripts directory](https://github.com/quintel/etengine/tree/master/scripts) of our [etengine repository](https://github.com/quintel/etengine).
 
 **Pro-tip**: The script can also be used to conveniently duplicate a scenario within the same environment. Just use the same enviroment as the source and target (e.g.: `prod` -> `prod`).
+
+## Requirements
+
+In order to run the script you need to have the following two tools installed:
+- `curl`: to perform HTTP requests towards the different environments.
+  - On macOS install through `homebrew` by running: `brew install curl`
+  - On Debian/Ubuntu linux install by running: `sudo apt install curl`
+- `jq`: to parse requests that respond with `JSON`-formatted data.
+  - On macOS install through `homebrew` by running: `brew install jq`
+  - On Debian/Ubuntu linux install by running: `sudo apt install jq`
 
 ## Using the script
 
@@ -33,3 +43,7 @@ $ bash scripts/scenario_cloner.sh p b 1,2,3
 $ bash scripts/scenario_cloner.sh prod local 1,2,3
 # All of the above does the same :)
 ```
+
+## Further notes
+
+If it turns out to be much requested, functionality to clone private scenarios can be added later by requesting you to log in as a user with the proper access rights.
