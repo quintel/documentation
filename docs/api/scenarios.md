@@ -24,7 +24,7 @@ scenario endpoint:
 * `source` - source through which the scenario was created.
 * `created_at` - date of creation.
 * `updated_at` - date of last update.
-* `keep_compatible` - default false, see [forward compatibility](#forward-compatibility)
+* `keep_compatible` - default false, see [forward compatibility](#forward-compatibility).
 * `esdl_exportable` - determines if the scenario can be exported as an ESDL file.
 * `coupling` - true if a coupling with another model is active.
 * `template` - the id of the scenario that was used as a template, or null if no template was used.
