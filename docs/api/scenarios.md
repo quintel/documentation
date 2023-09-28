@@ -409,6 +409,10 @@ Authorization: Bearer YOUR_TOKEN
 
 <UpcomingFeature release="2022.05" />
 
+:::warning Warning: your scenario can break
+Not keeping your scenario compatible with newer model versions can lead to breaking changes, or unforseen consequences for your scenarios.
+:::
+
 The ETM is frequently updated with new features and improvements. This sometimes means we rename sliders or change the unit in which they are set; as a result, your scenario risks becoming obsolete as the model changes.
 
 If you need to continue using your scenario long-term, you may set the `keep_compatible` attribute to `true`. This will subject your scenario to automatic updates ensuring that it remains compatible with future versions of the model.
