@@ -10,6 +10,7 @@ Below you can find an overview of the different cost components that are taken i
 |---|---|
 | Space heating & hot water technologies | CAPEX and OPEX
 | Cooling technologies | CAPEX and OPEX
+| Heat delivery system | CAPEX and OPEX
 | Insulation | CAPEX (special module)
 | Solar PV & solar thermal | CAPEX and OPEX
 | Appliances, cooking and lighting | No costs 
@@ -19,6 +20,7 @@ Below you can find an overview of the different cost components that are taken i
 |---|---|
 | Space heating technologies | CAPEX and OPEX
 | Cooling technologies | CAPEX and OPEX
+| Heat delivery system | CAPEX and OPEX
 | Insulation | CAPEX _(special module)_
 | Solar PV & solar thermal | CAPEX and OPEX
 | Appliances, lighting | No costs
@@ -27,6 +29,7 @@ Below you can find an overview of the different cost components that are taken i
 |  ***Subject***   | ***Cost components***  |
 |---|---|
 | All vehicles | No costs
+| Electric cars and hydrogen cars | (Optional) additional investment costs
 
 ### Agriculture
 |  ***Subject***   | ***Cost components***  |
