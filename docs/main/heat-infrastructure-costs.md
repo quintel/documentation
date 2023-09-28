@@ -2,7 +2,7 @@
 title: Heat infrastructure costs
 ---
 
-Below you can find more information on the heat infrastructure cost calculation in the Costs > ['Heat'](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) sub-section of the ETM. Unless stated otherwise the methodology and data behind this calculation is based Update kentallen installaties Vesta MAIS (Update key figures installations Vesta MAIS) [CE Delft 2023](https://refman.energytransitionmodel.com/publications/2166). [Vesta MAIS](https://github.com/RuudvandenWijngaart/VestaDV) is an energy model developed by the Dutch Environmental Assessment Agency (PBL). This section provides a summary of the applied method and numbers. A detailed description can be found on [ETDataset](https://github.com/quintel/etdataset-public/tree/master/source_analyses/general/11_area).
+Below you can find more information on the heat infrastructure cost calculation in the Costs > ['Heat'](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) sub-section of the ETM. Unless stated otherwise the methodology and data behind this calculation is based Warmtenetten in Vesta MAIS (Heat networks in MAIS) [CE Delft 2022](https://refman.energytransitionmodel.com/publications/2165). [Vesta MAIS](https://github.com/RuudvandenWijngaart/VestaDV) is an energy model developed by the Dutch Environmental Assessment Agency (PBL). This section provides a summary of the applied method and numbers. A detailed description can be found on [ETDataset](https://github.com/quintel/etdataset-public/tree/master/source_analyses/general/11_area).
 
 ## Households and buildings costs
 
