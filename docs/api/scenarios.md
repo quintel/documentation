@@ -409,15 +409,15 @@ Authorization: Bearer YOUR_TOKEN
 
 <UpcomingFeature release="2022.05" />
 
-:::warning Warning: your scenario can break
-Not keeping your scenario compatible with newer model versions can lead to breaking changes, or unforseen consequences for your scenarios.
-:::
-
 The ETM is frequently updated with new features and improvements. This sometimes means we rename sliders or change the unit in which they are set; as a result, your scenario risks becoming obsolete as the model changes.
 
 If you need to continue using your scenario long-term, you may set the `keep_compatible` attribute to `true`. This will subject your scenario to automatic updates ensuring that it remains compatible with future versions of the model.
 
 For example, if a slider is renamed, we will rename the slider value in your scenario to reflect this change. If it were to be updated from having a percentage value to an absolute capacity value in MW, we will set the new MW value in your scenario such that the energy flows are as close as possible to those in your original scenario.
+
+:::warning Keep compatible
+Not keeping your scenario compatible with newer model versions can cause the model to break or lead to unforseen outcomes for your scenarios.
+:::
 
 ```http title="Example request"
 PUT /api/v3/scenarios/12345 HTTP/2
