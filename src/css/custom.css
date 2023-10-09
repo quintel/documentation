@@ -48,6 +48,7 @@
   --ifm-transition-fast: 125ms;
 
   --custom-blue-background-color: #f1f3fa;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.07);
 
   /* Alerts */
   --ifm-alert-border-left-width: 0.25rem;
@@ -348,7 +349,7 @@ div[class^="codeBlockContent"] {
 }
 
 .theme-admonition > div:first-child {
-  text-transform: none;
+  text-transform: none !important;
 }
 
 .theme-admonition div[class^="codeBlockContainer"] {
@@ -498,7 +499,8 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/api/authentication"]:after,
+/* .menu a[href="/api/authentication"]:after,
+.menu a[href="/api/forecast-storage-order"]:after,
 .menu a[href="/api/saved-scenarios"]:after,
 .menu a[href="/api/transition-paths"]:after {
   -webkit-font-smoothing: initial;
@@ -516,14 +518,16 @@ article p code {
 }
 
 .menu a.menu__link--active[href="/api/authentication"]:after,
+.menu a.menu__link--active[href="/api/forecast-storage-order"]:after,
 .menu a.menu__link--active[href="/api/saved-scenarios"]:after,
 .menu a.menu__link--active[href="/api/transition-paths"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
-}
+} */
 
 /* Add "Updated" tag to some sidebar items. */
 .menu a[href="/api/changelog"]:after,
+.menu a[href="/api/inputs"]:after,
 .menu a[href="/api/scenarios"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
@@ -540,6 +544,7 @@ article p code {
 }
 
 .menu a.menu__link--active[href="/api/changelog"]:after,
+.menu a.menu__link--active[href="/api/inputs"]:after,
 .menu a.menu__link--active[href="/api/scenarios"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
@@ -577,6 +582,15 @@ article p code {
 
 .images-row figure + figure {
   margin-left: 1rem;
+}
+
+.images-row figcaption {
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+.images-row img + figcaption {
+  margin-top: 0.5rem;
 }
 
 figure {

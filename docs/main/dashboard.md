@@ -40,9 +40,6 @@ _Checkout: the ['Energy Imports'](import-calculations) infopage in the Dashboard
 ### Annual energy costs
 The number shows the total yearly cost of energy supply for your scenario. The chart displays the costs for the present (left) and final scenario year (right) composed of the costs for different types of energy production.
 
-## Annual energy cost per household
-The number shows the total yearly cost of energy supply divided by the total number of households. The chart displays the costs for the present (left) and final scenario year (right) composed of the costs for different types of energy production.
-
 ## Profitability of power plants
 Percentage of plants installed in your scenario that make a profit.
 
