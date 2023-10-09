@@ -100,6 +100,8 @@ module.exports = {
       items: [
         "main/scenario-tools/introduction",
         "main/scenario-tools/retrieving-data",
+        "main/scenario-tools/identifying-yourself",
+        "main/scenario-tools/using-proxies",
         "main/scenario-tools/creating-and-updating",
         "main/scenario-tools/creating-templates",
         "main/scenario-tools/regional-overview",
@@ -117,6 +119,12 @@ module.exports = {
       label: "7. API Reference",
       href: "/api/intro",
     },
+    {
+      type: "category",
+      label: "8. External Models",
+      collapsed: true,
+      items: ["main/external-coupling"],
+    },
   ],
   contribSidebar: [
     { type: "link", href: "/", label: "← Documentation home" },
@@ -130,7 +138,12 @@ module.exports = {
       type: "category",
       label: "Model features",
       collapsed: false,
-      items: ["contrib/inputs", "contrib/molecules", "contrib/waste-outputs"],
+      items: [
+        "contrib/graph-components",
+        "contrib/inputs",
+        "contrib/molecules",
+        "contrib/waste-outputs",
+      ],
     },
     {
       type: "category",
@@ -161,6 +174,12 @@ module.exports = {
       collapsed: false,
       items: ["contrib/authoring-docs"],
     },
+    {
+      type: "category",
+      label: "Managing scenarios",
+      collapsed: false,
+      items: ["contrib/cloning-scenarios"],
+    },
   ],
   apiSidebar: [
     { type: "link", href: "/", label: "← Documentation home" },
@@ -178,10 +197,12 @@ module.exports = {
         "api/scenarios",
         "api/custom-curves",
         "api/flexibility-order",
+        "api/forecast-storage-order",
         "api/heat-network-order",
         "api/inputs",
         "api/nodes",
         "api/merit",
+        "api/exports",
       ],
     },
     {

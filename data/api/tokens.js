@@ -1,6 +1,6 @@
 export default {
   info: {
-    endpoint: "/oauth/tokens/info",
+    endpoint: "/oauth/token/info",
     method: "GET",
   },
   userinfo: {

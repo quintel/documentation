@@ -61,6 +61,17 @@ The algorithm continues selecting high and low hours until the storage technolog
   <img src="/img/docs/battery-forecasting/finished-load-and-volume.png" alt="A chart showing the volume stored in the battery rising from 0 to 4 as it charages, then back to 0 as it discharges. The battery load is shown varying between 0 and 2 as it charges, then between 0 and -2 as it discharges." />
 </div>
 
+### Merit Order
+If the forecasting algorithim is enabled for multiple storage technologies, a merit order is used to determine in which sequence technologies are applied to flatten the residual load. This merit order can be set by the user [Flexibility → Merit order](https://energytransitionmodel.com/scenario/flexibility/flexibility_forecast_storage_order/forecasting-storage-order).
+
+The first technology in the merit order will try to flatten the original residual load curve. The next technology will be applied to the flattened residual load curve that is produced by the first technology. It will try to flatten that curve even further. This continues until each technology for which the forecasting algorithm is enabled has been utilized.
+
+Technologies for which the forecasting algorithm is disabled are shown in the list, but do not participate in the merit order. They are therefore marked grey and locked in place until the forecasting algorithm is enabled. Technologies for which no capacity is installed are marked grey as well.
+
+<div style={{ textAlign: "center" }}>
+  <img src="/img/docs/battery-forecasting/forecast-merit-order.png" alt="Users can move technologies up and down the forecasting merit order. Technologies for which the forecasting algorithm is disabled are marked grey and cannot be moved." width = "450"/>
+</div>
+
 ## FAQ
 
 #### Why is the charge/discharge cycle limited to a 72-hours?

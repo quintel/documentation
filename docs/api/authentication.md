@@ -53,7 +53,7 @@ You can get information about a token by calling the API with the token itself. 
 <ApiEndpoint data={endpointData.info} />
 
 ```http title="Request"
-GET /oauth/tokens/info HTTP/2
+GET /oauth/token/info HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer etm_xcNxTaX8KLr5LkGs93sRWnGfhyAUDPWPqKVGe1RL73GJUnfQ

@@ -48,7 +48,7 @@ From the summed curve it is possible to find the peak load of the demand sources
   <img src="/img/docs/contrib/load-shifting/demand-peak.png" alt="Chart of the summed load, with the peak load of 14 MW highlighted" />
 </figure>
 
-The peak load is multiplied by the `availability` of the load shifting node to set the input and output capacity of the merit order participant. For example, if the peak load is **14 MW** and the availability is set to **0.25 (25%)**, the capacity of the load shifting particiant is set to **3.5 MW** (14 MW ⨉ 0.25).
+The peak load is multiplied by the `availability` of the load shifting node to set the input and output capacity of the merit order participant. For example, if the peak load is **14 MW** and the availability is set to **0.25 (25%)**, the capacity of the load shifting participant is set to **3.5 MW** (14 MW ⨉ 0.25).
 
 :::caution Availability
 If in the node file the `availability` attribute is set to zero, no load shifting will occur! Don't forget to set an `availability` in the input used to enable load shifting.
