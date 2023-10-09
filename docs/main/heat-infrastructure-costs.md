@@ -8,11 +8,11 @@ Assessment Agency (PBL).
 ## Households and buildings costs
 
 The ETM distinguishes between five types of heat infrastructure costs for households and buildings:
-* [Indoor costs](#Indoor-costs)
-* [(Secondary) distribution pipelines](#Secondary-distribution-pipelines)
-* [Exchanger stations](#Exchanger-stations)
-* [Primary pipelines](#Primary-pipelines) connecting heat sources to distribution networks
-* [Storage costs](#Storage-costs)
+* [Indoor costs](#indoor-costs)
+* [(Secondary) distribution pipelines](#secondary-distribution-pipelines)
+* [Exchanger stations](#exchanger-stations)
+* [Primary pipelines](#primary-pipelines) connecting heat sources to distribution networks
+* [Storage costs](#storage-costs)
 
 These costs are annualised by taking into account:
 * [Yearly operation and maintenance costs](#operation-and-maintenance-costs)
@@ -60,7 +60,7 @@ In addition, costs for heat meters that connect indoor and outdoor distribution 
 _Note: Heat meter costs can be set per region in the ETM. The numbers above are default values._
 
 ### (Secondary) distribution pipelines
-Distribution pipelines deliver heat to residences and buildings throughout a neighbourhood. WTwo types of pipelines are distinguished:
+Distribution pipelines deliver heat to residences and buildings throughout a neighbourhood. Two types of pipelines are distinguished:
 * Main distribution pipelines
 * Connection pipelines: pipelines from street level to front door, connecting a residence
 

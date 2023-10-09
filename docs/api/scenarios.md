@@ -21,13 +21,15 @@ scenario endpoint:
 * `end_year` - year the scenario ends.
 * `url` - the url of the API endpoint for this scenario.
 * `scaling` - object that contains details of custom scaling factors.
-* `source` - source through which the scenario was created, can be 'API' or 'ETM'.
+* `source` - source through which the scenario was created.
 * `created_at` - date of creation.
 * `updated_at` - date of last update.
-* `keep_compatible` - default false, see [forward compatibility](#forward-compatibility)
+* `keep_compatible` - default false, see [forward compatibility](#forward-compatibility).
 * `esdl_exportable` - determines if the scenario can be exported as an ESDL file.
-* `template` - the id of the scenario that was used as a template, or null if no template was used
-* `metadata` - object that contains custom metadata managed by the user of the scenario
+* `coupling` - true if a coupling with another model is active.
+* `template` - the id of the scenario that was used as a template, or null if no template was used.
+* `metadata` - object that contains custom metadata managed by the user of the scenario.
+* `private` - boolean that determines if the scenario is private or not.
 * `user_values` - object that contains the sliders changed by a user:
   * `slider_one` - the set value for slider_one.
   * `slider_two` - the set value for slider_two.
@@ -61,7 +63,9 @@ account. This means that by default:
 * **Only you** will be able to **delete** the scenario
 
 If you prefer your scenario to be private, so that only you can read it, see the documentation on
-[private scenarios](scenarios.md#private-scenarios).
+[private scenarios](scenarios.md#private-scenarios). You may also change the default privacy of your
+scenarios with the "Privacy" setting on
+**[your profile page](https://engine.energytransitionmodel.com/identity/profile)**.
 
 #### Using the API without authentication
 
@@ -95,6 +99,7 @@ Authorization: Bearer YOUR_TOKEN
   "created_at": "2021-07-16T09:23:00.000Z",
   "updated_at": "2021-07-16T09:23:00.000Z",
   "esdl_exportable": false,
+  "coupling": false,
   "user_values": {
     "buildings_insulation_level": 40.3,
     "capacity_of_energy_power_hydro_river": 39.0
@@ -148,7 +153,8 @@ Authorization: Bearer YOUR_TOKEN
       "source": null,
       "created_at": "2021-07-16T09:23:00.000Z",
       "updated_at": "2021-07-16T09:23:00.000Z",
-      "esdl_exportable": false
+      "esdl_exportable": false,
+      "coupling": false,
     },
     // ...
   ]
@@ -289,7 +295,7 @@ A list of all available sliders for the scenario, with their min and max values,
 through the inputs endpoint: `GET /api/v3/scenarios/{scenario_id}/inputs`.
 :::
 
-Updates the user values of a scenario with the provided `user_values`.
+Updates the user values of a scenario with the provided `user_values`. If you want to reset a slider to its standard value, please supply the "reset" keyword instead of a value.
 
 <ApiEndpoint data={endpointData.update} />
 
@@ -409,6 +415,10 @@ If you need to continue using your scenario long-term, you may set the `keep_com
 
 For example, if a slider is renamed, we will rename the slider value in your scenario to reflect this change. If it were to be updated from having a percentage value to an absolute capacity value in MW, we will set the new MW value in your scenario such that the energy flows are as close as possible to those in your original scenario.
 
+:::warning Keep compatible
+Not keeping your scenario compatible with newer model versions can cause the model to break or lead to unforseen outcomes for your scenarios.
+:::
+
 ```http title="Example request"
 PUT /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
@@ -426,7 +436,10 @@ Authorization: Bearer YOUR_TOKEN
 
 <UpcomingFeature release="2023.01" />
 
-If you are using authentication, your scenarios will be associated with your user account. This prevents others from being able to change or delete your scenario but, by default, other people can still view your scenario.
+If you are using authentication, your scenarios will be associated with your user account. This
+prevents others from being able to change or delete your scenario but, by default, other people can
+still view your scenario. If you wish to change this default, see the "Privacy" setting on
+**[your profile page](https://engine.energytransitionmodel.com/identity/profile)**.
 
 To make your scenario private, so that only you can view it, set the `private` attribute to `true`:
 
@@ -510,4 +523,40 @@ A list of all available gqueries is still being worked on.
 DELETE /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
 Authorization: Bearer YOUR_TOKEN
+```
+
+## Scenario couplings
+
+<UpcomingFeature release="2023.06" />
+
+When your scenario is coupled to another energy model, certain inputs of you scenario are overwritten
+by this other model. When inspecting your scenario the `coupling` attribute will indicate whether
+your scenario was coupled.
+
+It is possible to remove the coupling to the other model by setting `coupling` to `false`.
+This means that the inputs set by the other model will be erased. This action is irreversible.
+
+<ApiEndpoint data={endpointData.update} />
+
+```http title="Example request"
+PUT /api/v3/scenarios/12345 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "coupling": false
+}
+```
+
+```json title="Example response"
+{
+  {
+  "scenario": {
+    "id": 12345,
+    ...
+    "coupling": false,
+  }
+}
+}
 ```

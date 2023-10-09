@@ -27,6 +27,16 @@ While we endeavour not to change the API in a backwards-incompatible way, this i
 
 To learn more about our environments, see the [introduction to the API](intro.md#environments).
 
+### 6th June 2023 <ReleaseBadge name="2023.06" />
+
+* Check if your scenario was coupled by and [uncouple](scenarios.md#scenario-couplings) it from an other external energy model.
+* When an input [was disabled by another input](inputs.md#mutually-exclusive-inputs), indicate if this disabling is part of a coupling.
+
+### 7th February 2023 <ReleaseBadge name="2023.02" />
+
+* Support for the [forecast storage order](forecast-storage-order.md) has been added. This allows you to control the order in which batteries are calculated [when forecasting is enabled](../main/battery-forecasting.md).
+* [It is no longer required to provide a top-level `heat_network_order` attribute](heat-network-order.md#optional-top-level-key) when updating a heat network order.
+
 ### 10th January 2023 <ReleaseBadge name="2023.01" />
 
 * [**Authentication has come to the API!**](authentication.md) You can now create personal access tokens for your account. Scenarios will be linked to your account which prevents others from making changes to your data.
@@ -34,7 +44,7 @@ To learn more about our environments, see the [introduction to the API](intro.md
   * API endpoints have been added for [listing](scenarios.md#listing-your-scenarios) and [deleting](scenarios.md#deleting-your-scenarios) your scenarios.
   * Scenarios have a new `private` attribute available to [authenticated](authentication.md) users. This allows you to prevent other API users from viewing your scenario.
   * The scenario `protected` attribute has been removed.
-  * The scenario `read_only` attribute has been removed. To prevent others from changing your scenario, please sign up for an account and see the page on [authentication and personal access tokens](authentication.md) and [set your scenarios to be private](scenarios.md#private-scenarios).
+  * The scenario `read_only` attribute has been removed. To prevent others from changing your scenario, please sign up for an account and see the page on [authentication and personal access tokens](authentication.md).
   * The scenario `title` and `description` attributes have been removed. Please use the scenario `metadata` attribute instead. See the change log entry from [5th April 2022](#5th-april-2022-) for more information.
   * An undocumented and unsupported `include_inputs` parameter has been removed from the [scenario endpoint](scenarios.md#get-information-about-a-scenario). The scenario slider settings are still available through the scenarios endpoint using the the `user_values` attribute, or you can fetch the full list of inputs through [the inputs endpoint](inputs.md).
   * The `detailed` parameter has been removed from the [scenario endpoint](scenarios.md#get-information-about-a-scenario). Scenario data will now include all information about the scenario without the need for this parameter.

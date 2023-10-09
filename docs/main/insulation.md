@@ -95,7 +95,7 @@ The above assumptions result in the following insulation costs for an average ut
 | Existing utility building |	€ 605.99 |
 | New utility buidling	 | € 478.55|
 
-##Heat demand profiles
+## Heat demand profiles
 The ETM models heating in households and buildings on an hourly basis in the so-called ["Fever" calculation](/contrib/fever). For this calculation hourly heat demand profiles for houses and buildings are needed.
 
 ### Households
