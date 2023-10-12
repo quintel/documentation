@@ -5,16 +5,16 @@ title: District heating
 In the Supply > ['District heating'](https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources) section in the ETM you can specify the heat sources, transport losses and storage for district heating. If you want to know more about the modelling principles behind the use of district heating within the ETM, you can find more information below. 
 
 ## District heating networks
-The demand, supply and storage of heat for district heating networks in households, buildings and agriculture is calculated on an hourly basis.
+The demand, supply and storage of heat for district heating networks in households, buildings and agriculture is calculated on an hourly basis. The ETM contains heat networks for three temperature levels: LT (40 <sup>o</sup>C), MT (65 <sup>o</sup>C) and HT (90 <sup>o</sup>C). 
 
 ### Demand
-In the households, buildings and agriculture section of the model, you can make assumptions about the share of heat demand that will be supplied by district heating networks in the future. For example, in the scenario below, 40% of residences is assumed to be connected to district heating networks.
+In the households, buildings and agriculture section of the model, you can make assumptions about the share of heat demand that will be supplied by district heating networks in the future. For example, in the scenario below, a total of 40% of residences is assumed to be connected to on of the three district heating networks.
 
-![District heating share in households](/img/docs/20200212_district_heating_demand_share_in_households.png)
+![District heating share in households](/img/docs/district_heating_demand_share_in_households.png)
 
 The resulting district heating demands from households, buildings and agriculture are aggregated and together make up the demand of heat networks. For each sector demand is multiplied with an hourly demand curve to estimate collective heat demand for each hour per year. More information about these curves can be found [here](curves.md).
 
-![Hourly district heating demand](/img/docs/20200213_hourly_district_heating_demand.png)
+![Hourly district heating demand](/img/docs/hourly_district_heating_demand.png)
 
 ### Supply
 You can set the installed capacities of various heating sources in the 'Supply' tab. The ETM distinguishes between two types of heat sources:
@@ -25,7 +25,7 @@ You can set the installed capacities of various heating sources in the 'Supply' 
 'Must-run' sources include all heat sources that supply heat according to a pre-defined production curve, regardless of whether there is heat demand at that moment. For example, solar thermal farms produce heat when the sun is out even if there is no demand for that heat at that moment. The ETM models the following must-run sources:
 * Solar thermal
 * Geothermal. We assume that geothermal heat wells produce a constant flow of heat throughout the year.
-* Residual heat from the industry sector. We assume that heat production follows industrial activity. See [Residual Heat](residual-heat-industry.md) for more information.
+* Residual heat from the industry sector. We assume that this heat has a flat (constant) production profile.
 * Imported heat from outside the region. We assume that this heat has a flat (constant) production profile.
 * All CHPs:
  * For biogas CHPs we assume a constant production.
@@ -39,6 +39,7 @@ Dispatchable heat sources include all heat sources that can be turned on and off
 * Electric heat pumps
 * Biomass and waste heaters
 * Oil, coal and lignite heaters
+* Aquathermal heaters
 * Heat storage. See the [Storage](#Heat-storage) section below.
 * A back-up/emergency heater using network gas
 
