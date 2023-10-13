@@ -43,14 +43,14 @@ Dispatchable heat sources include all heat sources that can be turned on and off
 * Heat storage. See the [Storage](#Heat-storage) section below.
 * A back-up/emergency heater using network gas
 
-For each of these heaters you can set the installed capacity in the 'District Heating' section of the ETM. The only exception to this is the back-up heater. The ETM automatically determines the required amount of back-up capacity to ensure that supply always meet demand in every hour. If back-up is installed, this will show up as 'heat shortage' in the 'Demand and supply' chart (see below). You can decrease this shortage by increasing the installed capacity of other dispatchables.
+For each of these heaters you can set the installed capacity in the 'District Heating' section of the ETM. The only exception to this is the back-up heater. The ETM automatically determines the required amount of gas burner back-up capacity to ensure that supply always meet demand in every hour. This will show up as natural gas in the 'District heating supply and demand per temperature level' chart (see below for an example where for the MT heat network just 'Solar thermal' is set). You can decrease this shortage by increasing the installed capacity of other dispatchables.
 
-![Heat supply and demand](/img/docs/20200214_heat_shortage.png)
+![Heat supply and demand](/img/docs/heat_shortage.png)
 
 #### Merit Order
 When multiple dispatchable sources are installed, a heat 'merit order' determines which dispatchable switches on first. The back-up burner always comes last ('lender of last resort'). By default, the merit order is based on marginal production costs. This can be changed in the Merit Order subsection of District Heating.
 
-![Heat supply and demand](/img/docs/20200214_heat_merit_order.png)
+![Heat supply and demand](/img/docs/heat_merit_order.png)
 
 _Example: Suppose that in hour X heat demand is 100 MW and that must-run sources supply 20 MW. This means that 80 MW will be supplied by dispatchables. Now suppose that you install 30 MW of biomass heaters, 50 MW of heat pumps and 20 MW of gas heaters and that you alter the heat merit order such that biomass comes first, followed by heat pumps and gas heaters. Since biomass is first in line, the heater will turn on in hour X, supplying 30 MW of the 80 MW residual demand. This leaves a residual demand of 50 MW. Thus, the heat pumps switch on as they are second in line, supplying 50 MW. The gas heaters will not switch on in this hour as heat demand has been fully met._
 
@@ -59,7 +59,7 @@ As seen above, must-run heat sources supply heat regardless of heat demand. As s
 
 To avoid large amounts of dumped heat you can decided to use (seasonal) heat storage. This can be done by switching the storage toggle to 'On'.
 
-![Heat storage toggle](/img/docs/20200214_heat_storage_toggle.png)
+![Heat storage toggle](/img/docs/heat_storage_toggle.png)
 
 When switched on, the ETM automatically installs sufficient storage volume to store all heat surpluses of must-run producers. This heat can be used later on in the year, allowing for a more efficient use of must-run capacity and a lower need for dispatchables.
 
@@ -68,14 +68,14 @@ Heat storage is considered a dispatchable heat source. This means that heat will
 
 The output capacity of heat storage is unlimited by default. This means that there is no limit to the amount of heat that can be drawn from storage in one hour (given that enough heat is available in the storage). You can limit this with a slider. A lower output capacity can result in a slower depletion of heat storage. A consequence of this could be that other dispatchable heat sources (such as gas heaters) need to be switched on earlier: if the output capacity of storage is insufficient to meet demand in a given hour, other dispatchables need to be switched to guarantee that enough heat is supplied.
 
-![Heat storage per hour](/img/docs/20200214_heat_storage_per_hour.png)
+![Heat storage per hour](/img/docs/heat_storage_per_hour.png)
 
 ##### The 'heat year'
 At the start of the 'heat year', storage is assumed to be empty and is subsequently filled over time when heat surpluses arise. Since heat demand is typically concentrated in winter, it is undesirable to start with an empty storage on 1 January. Therefore, the hourly calculation starts on 1 April and runs until 31 March. On 31 March, any excess heat that remains in the storage is 'dumped' to ensure that every year the same amount of heat is drawn from storage as is put into it.
 
 If this 'dumping' of excess heat in storage is significant, a 'hick-up' can be seen in the hourly storage chart (see below). This hick-up can be resolved by decreasing the installed capacity of must-run sources, by increasing demand for district heating or by moving heat storage up in the heat merit order.
 
-![Heat storage per hour](/img/docs/20200214_heat_storage_excess.png)
+![Heat storage per hour](/img/docs/heat_storage_excess.png)
 
 ##### Storage losses
 Heat storage is subject to thermal losses. You can set a yearly loss percentage with a slider. This percentage is converted to a loss percentage per hour (``(yearly losses)^(1/8760)``). For every hour per year this hourly percentage is multiplied with the heat in storage at that moment to calculate storage losses in that hour.
@@ -93,6 +93,10 @@ For other regions in the ETM, such as municipalities or neighbourhoods, there is
 
 If district heating in the built environment plays a significant role in your scenario, it is advised to change the distribution losses to the percentages recommended above.
 
+The annual distribution and storage losses are shown in the chart 'District heating supply and demand per temperature level'.
+![Heat losses](/img/docs/heat_losses.png)
+
+
 ### Infrastructure costs
 
 _Checkout: the ['Heat infrastructure costs'](heat-infrastructure-costs.md) infopage for more information._
@@ -100,7 +104,7 @@ _Checkout: the ['Heat infrastructure costs'](heat-infrastructure-costs.md) infop
 ## Industrial heat network
 Heat networks in the industry sector are modelled in a much simpler fashion. Supply and demand are calculated on a yearly basis. You can set the heat demand for each industry sub sector and can select the heat sources in the 'Heat network sources' tab.
 
-![Heat sources in industry](/img/docs/2020025_industry_heat_sources.png)
+![Heat sources in industry](/img/docs/industry_heat_sources.png)
 
 For heaters and geothermal, total production per year equals installed capacity times a fixed number of full load hours. More information can be found when clicking the '?' icon next to a heat source and opening that 'Technical and financial properties' table.
 
