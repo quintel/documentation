@@ -6,13 +6,16 @@ import endpointData from '@site/data/api/heat-network-order';
 import ApiEndpoint from '@site/src/components/ApiEndpoint';
 import { ReleaseBadge } from '@site/src/components/EnvBadge';
 
-Each scenario has a heat network order. This defines the order of preference by which [dispatchable technologies](../main/heat-networks.md#dispatchable) are used to supply heat to the district heat network.
+As of the [2023.12](changelog.md#5th-december-2023-) <ReleaseBadge name="2023.12" /> release there will be three orders available instead of one. Omit the `subtype` attribute when using the old implementation.
+
+Each scenario has three heat network orders. These define the order of preference by which [dispatchable technologies](../main/heat-networks.md#dispatchable) are used to supply heat to each district heat network. There is a different heat network for low, medium and high tempearture heat, each with their own order.
 
 ## The HeatNetworkOrder object
 
-A HeatNetworkOrder is an object containing only one key – `order` – which is an array of string keys identifying each group of heating technologies.
+A HeatNetworkOrder is an object containing two keys – `order` – which is an array of string keys identifying each group of heating technologies and `subtype` to define for which temperature level the order is to be set.
 
 * `order` - an array of technology group keys as strings
+* `subtype` - a string defininig the temperature level of the order, must be one of `lt`, `mt` or `ht`
 
 ## Get a heat network order
 
@@ -21,7 +24,7 @@ Fetches the heat network order for a chosen scenario.
 <ApiEndpoint data={endpointData.show} />
 
 ```http title="Example request"
-GET /api/v3/scenarios/0/heat_network_order HTTP/2
+GET /api/v3/scenarios/0/heat_network_order?subtype=mt HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 ```
@@ -29,14 +32,15 @@ Accept: application/json
 ```json title="Example response"
 {
   "order": [
-    "energy_heat_network_storage",
-    "energy_heat_burner_waste_mix",
-    "energy_heat_heatpump_water_water_electricity",
-    "energy_heat_burner_coal",
-    "energy_heat_burner_network_gas",
-    "energy_heat_burner_wood_pellets",
-    "energy_heat_burner_crude_oil",
-    "energy_heat_burner_hydrogen"
+    "energy_heat_network_storage_mt_steam_hot_water",
+    "energy_heat_boiler_mt_electricity",
+    "energy_heat_burner_mt_coal",
+    "energy_heat_burner_mt_crude_oil",
+    "energy_heat_burner_mt_hydrogen",
+    "energy_heat_burner_mt_network_gas",
+    "energy_heat_burner_mt_waste_mix",
+    "energy_heat_burner_mt_wood_pellets",
+    "energy_heat_heatpump_water_water_mt_electricity"
   ]
 }
 ```
@@ -55,55 +59,17 @@ Host: engine.energytransitionmodel.com
 Accept: application/json
 
 {
-  "heat_network_order": {
-    "order": [
-      "energy_heat_burner_hydrogen",
-      "energy_heat_burner_coal",
-      "energy_heat_burner_network_gas",
-      "energy_heat_network_storage",
-      "energy_heat_burner_waste_mix",
-      "energy_heat_heatpump_water_water_electricity",
-      "energy_heat_burner_wood_pellets",
-      "energy_heat_burner_crude_oil"
-    ]
-  }
-}
-```
-
-```json title="Example response"
-{
+  "subtype": "mt",
   "order": [
-    "energy_heat_burner_hydrogen",
-    "energy_heat_burner_coal",
-    "energy_heat_burner_network_gas",
-    "energy_heat_network_storage",
-    "energy_heat_burner_waste_mix",
-    "energy_heat_heatpump_water_water_electricity",
-    "energy_heat_burner_wood_pellets",
-    "energy_heat_burner_crude_oil"
-  ]
-}
-```
-
-#### Optional top-level key
-
-As of the [2023.02](changelog.md#7th-february-2023-) <ReleaseBadge name="2023.02" /> release, it is no longer necessary to provide the top-level `heat_network_order` key, and you can provide the order directly:
-
-```http title="Example request"
-PUT /api/v3/scenarios/0/heat_network_order HTTP/2
-Host: engine.energytransitionmodel.com
-Accept: application/json
-
-{
-  "order": [
-    "energy_heat_burner_hydrogen",
-    "energy_heat_burner_coal",
-    "energy_heat_burner_network_gas",
-    "energy_heat_network_storage",
-    "energy_heat_burner_waste_mix",
-    "energy_heat_heatpump_water_water_electricity",
-    "energy_heat_burner_wood_pellets",
-    "energy_heat_burner_crude_oil"
+    "energy_heat_heatpump_water_water_mt_electricity",
+    "energy_heat_network_storage_mt_steam_hot_water",
+    "energy_heat_boiler_mt_electricity",
+    "energy_heat_burner_mt_coal",
+    "energy_heat_burner_mt_crude_oil",
+    "energy_heat_burner_mt_hydrogen",
+    "energy_heat_burner_mt_network_gas",
+    "energy_heat_burner_mt_waste_mix",
+    "energy_heat_burner_mt_wood_pellets"
   ]
 }
 ```

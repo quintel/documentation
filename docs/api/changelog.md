@@ -27,6 +27,9 @@ While we endeavour not to change the API in a backwards-incompatible way, this i
 
 To learn more about our environments, see the [introduction to the API](intro.md#environments).
 
+### 5th December 2023 <ReleaseBadge name="2023.12" />
+* The ETM now supports three heat networks instead of one, differentiating in temperature levels. Updating your heat network order via the API [has changed](heat-network-order.md).
+
 ### 6th June 2023 <ReleaseBadge name="2023.06" />
 
 * Check if your scenario was coupled by and [uncouple](scenarios.md#scenario-couplings) it from an other external energy model.
