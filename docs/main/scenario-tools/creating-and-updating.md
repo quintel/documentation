@@ -66,6 +66,23 @@ Each file should look as follows:
 | ... | ...
 
 
+### Heat network orders
+In the file `heat_network_order.csv` it is possible to specify the three [heat network orders](#heat-network-orders) for your scenario. In each cell of the csv, you specify the order by separating the different sources with a space "` `".
+
+You may omit heat sources from the order, however note that they will be added in by the ETM automatically in the default order. For example, if the default order is `a,b,c,d`, and your request provides an order of `c,b`, the resulting heat network order will be `c,b,a,d`.
+
+If you don't specify an order, it will not be sent to the ETM. In the example below, only the MT order will be updated.
+
+*Example file*
+
+| order  | scenario_short_name_1 | ...
+|---|---| --- |
+| heat_network_order_lt | | ...
+| heat_network_order_mt | energy_heat_burner_mt_coal energy_heat_burner_mt_hydrogen energy_heat_network_storage_mt_steam_hot_water | ...
+| heat_network_order_ht| | ...
+
+
+
 ## Running the tool
 
 :::info Automatic data retrieval
