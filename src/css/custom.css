@@ -527,8 +527,7 @@ article p code {
 
 /* Add "Updated" tag to some sidebar items. */
 .menu a[href="/api/changelog"]:after,
-.menu a[href="/api/inputs"]:after,
-.menu a[href="/api/scenarios"]:after {
+.menu a[href="/api/heat-network-order"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;

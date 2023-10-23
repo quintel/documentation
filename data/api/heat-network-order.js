@@ -9,6 +9,13 @@ export default {
     endpoint: "/api/v3/scenarios/{scenario_id}/heat_network_order",
     method: "GET",
     path_parameters: [scenarioIdParam],
+    parameters: [
+      {
+        name: "subtype",
+        type: "string",
+        description: "temperature level, one of `lt`, `mt` or `ht`"
+      }
+    ],
     token: { scopes: ["scenarios:read"], type: "optional" },
   },
 
@@ -18,9 +25,14 @@ export default {
     path_parameters: [scenarioIdParam],
     parameters: [
       {
-        name: "heat_network_order",
-        type: "object",
-        description: "the <a href='#the-heatnetworkorder-object'>HeatNetworkOrder object</a>",
+        name: "subtype",
+        type: "string",
+        description: "temperature level, one of `lt`, `mt` or `ht`",
+      },
+      {
+        name: "order",
+        type: "array",
+        description: "the <a href='#the-heatnetworkorder-object'>HeatNetworkOrder order</a>",
       },
     ],
     token: { scopes: ["scenarios:write"], type: "optional-owned" },
