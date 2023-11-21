@@ -62,7 +62,7 @@ Additional definitions:
 ### **OPEX**
 Operating expenses include Operation and Maintenance (O&M) costs, without CCS. O&M costs can have both a variable and a fixed part.
  
-* Variable O&M costs are costs that depend on the number of full load hours of the plant, for additional cleaning and service costs.
+* Variable O&M costs are costs that depend on the number of full load hours of the plant, for additional cleaning and service costs. Note that this excludes [fuel costs](cost-methods.md#fuel-costs), since these are allocated to an individual category.
 * The fixed part are the costs that are made yearly, independent of whether the plant is used or not. Fixed O&M Costs are specified per year and found directly from research. This means that Fixed O&M Costs have no calculations associated with them.
 
 ![](/img/docs/costs_equation_opex.png)
@@ -74,7 +74,7 @@ Additional definitions:
 
 
 ### **Fuel costs**
-These costs are specified in the categorie "carriers". This includes all raw fuel costs. So taxes and profit margins are not taken into account.
+These costs are specified in the category "carriers". This includes all raw fuel costs. So taxes and profit margins are not taken into account.
 
 
 ## Changing costs in a scenario
