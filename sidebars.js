@@ -8,7 +8,12 @@ module.exports = {
       type: "category",
       label: "1. User Manual",
       collapsed: false,
-      items: ["main/starting-or-exploring", "main/interface", "main/developing-your"],
+      items: [
+        "main/starting-or-exploring",
+        "main/interface",
+        "main/managing-your-saved-scenarios",
+        "main/developing-your"
+      ],
     },
     {
       type: "category",
