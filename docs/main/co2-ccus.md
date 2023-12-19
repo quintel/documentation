@@ -4,7 +4,7 @@ sidebar_label: Capture, utilisation and storage
 ---
 Carbon capture, utilisation and storage (CCUS) is an emissions reduction technology that can be applied across the energy system. This article describes the CCUS features in the ETM.
 
-You can make choices regarding the application of carbon [capture](#capture), what [happens](#utilisation-and-storage) to this captured carbon, how it is [transported](#transport) and the [costs](#costs) associated with it.
+You can make choices regarding the application of carbon [capture](#capture), what [happens](#utilisation-and-storage) to this captured carbon, how it is [transported](#transport) and the [costs](#costs) associated with it. 
 
 _Checkout: the [negative emissions](co2-negative-emissions) infopage for more information on negative emissions as an effect of CCUS._
 
@@ -91,7 +91,11 @@ The ETM keeps track of all 'supply' of carbon (capture) and all 'demand' of carb
 
 ![Supply and demand of carbon](/img/docs/ccus_supply_demand_mekko.png)
 
-You can make choices about the supply and demand independently. The ETM registers a carbon 'surplus/export' in case more carbon is captured than is stored or utilised. Vice versa, a 'deficit/import' occurs when less carbon is captured than used for storage and utilisation.
+You can make choices about the supply and demand independently. The ETM registers a carbon 'surplus/export' in case more carbon is captured than is stored or utilised. Vice versa, a 'deficit/import' occurs when less carbon is captured than used for storage and utilisation. 
+
+## Carbon import
+Carbon import can be an interesting business case for countries that have a proper carbon storage infrastructure. External entities can buy the right to transport emitted carbon to the importing country. 
+
 
 ## Transport
 Carbon can be transported in two different ways in the ETM:

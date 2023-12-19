@@ -10,6 +10,7 @@ On the Demand tab of the ETM you can determine the future demand of:
 * Industry
 * Agriculture
 * Other
+* Export
 
 This page shortly describes the different demand categories. The percentage displayed under the sector describes the amount of primary energy consumed per sector compared to the total amount of primary energy consumed. If sectors are not present within your scenario area their demand is set to 0%. 
 
@@ -46,4 +47,8 @@ The Other sector contains all energy use not represented in the previous sectors
 * the hydrological sector (dams, levies, etc)
 
 In some countries (like the Netherlands), the Other sector in the national energy statistics contains agriculture and the tertiary sector. If these sectors cannot be split from the Other sector it can be a big sector. Generally speaking this is not a preferable situation, because the options for changing demand are limited in the other sector.
+
+## Export 
+The Export section contains all energy export.
+In this section, the export volumes pertaining all energy carriers can be set. Information regarding the import, export and transit flows of energy carriers can be found here as well. Transit flows represent the quantity of energy per carrier that is imported and exported by the country while not being used by said country. This can cause extra pressure on the country's infrastructure for energy carrier transport or storage. Gaining insights in import, export, and transit flows of energy carriers is useful for infrastructure planning. 
 

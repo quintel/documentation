@@ -5,7 +5,7 @@ title: Flexibility
 Natural patterns like seasons (yearly), the variations in weather (weekly), day and night and our rhythm of waking up, going to work, coming home, etc. cause both the need for energy and the availability of energy to fluctuate. Flexibility is about balancing energy supply and demand on all of these timescales. In the ETM you have the ability to choose and adjust how you deal with these fluctuations in the ['Flexibility'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_overview/what-is-flexibility) section. On this page, concepts relevant for understanding flexibility are defined.
 
 ## Flexibility for different types of energy fluctuations
-A first distinction to make when looking into flexibility, is to decide whether it is required for longer or for shorter timescales. For longer timescales, the amount or **volume** of energy supplied or used is more interesting. For shorter timescales, the ability to produce or use a certain amount of energy is more interesting. This is called **capacity**. For a typical energy system fluctuations occur on both timescales, and enough flexibility should be provided for both volume and capacity.
+A first distinction to make when looking into flexibility, is to decide whether it is required for longer or for shorter timescales. For longer timescales, the amount or **volume** of energy supplied or used is more interesting. For shorter timescales, the ability to produce or use a certain amount of energy is more interesting. This is called **capacity**. For a typical energy system fluctuations occur on both timescales, and enough flexibility should be provided for both volume and capacity.4
 
 Some forms of flexibility are more suited to process large (fluctuations in) volumes of energy, others are more suitable for large fluctuations in capacity. Only some are suited to both. Some examples are:
 
@@ -86,10 +86,13 @@ Flexible demand technologies are governed by a "willingness to pay": a maximum p
 * Inflexible (baseload):
   * Final gas demand in sectors
   * Gas used in dispatchable power plants and heat boilers for district heating
-  * Export of gas (flat curve; constant export of gas to balance yearly production of gas)
+  * Export of natural gas (flat curve; constant export of gas to balance yearly production of gas)
+  * Export of green gas (flat curve; constant export of gas to balance yearly production of gas)
   * Distribution losses
 * Flexible:
   * Gas entering storage (in the ETM, gas is automatically buffered throughout the year)
+  * Export of natural gas (backup)
+  * Export of green gas (backup)
 
 ### Hydrogen
 
@@ -111,8 +114,12 @@ See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/sup
   * Hydrogen used in dispatchable power plants and heat boilers for district heating
   * Export of hydrogen (flat curve; constant export of hydrogen to balance yearly production of gas)
   * Distribution losses
+  * Hydrogen (gaseous) export
+  * Hydrogen (liquid) export
+  * Hydrogen (lohc) export
 * Flexible:
   * Hydrogen entering storage (in the ETM, gas is automatically buffered throughout the year)
+  * Hydrogen (liquid) export (backup)
 
 ### Heat for district heating
 
@@ -138,3 +145,19 @@ See the [Supply → District heating](https://pro.energytransitionmodel.com/scen
 * Flexible:
   * Heat entering seasonal storage
   * Heat surplus (wasted)
+
+
+### Ammonia
+See the [Supply → Ammonia](https://pro.energytransitionmodel.com/scenario/supply/hydrogen/ammonia-production) section of the model.
+
+#### Supply
+
+* Inflexible:
+  * Import of ammonia (baseload)
+
+#### Demand
+
+* Inflexible:
+  * export of ammonia (baseload)
+* Flexible:
+  * export of ammonia (backup)
