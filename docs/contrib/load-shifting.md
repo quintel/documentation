@@ -111,7 +111,8 @@ With this arrangement, the energy which is shifted during the year will be diver
 * `subtype`: must be set to "load_shifting"
 * `level`: may be set to "omit" to ignore the effects of load shifting on the electricity network, or "lv", "mv", or "hv" if you want shifting to affect the network calculation and charts.
 * `demand_source`: must be present with the name of at least one node whose demand is shifted. These nodes must themselves be consumers in the merit order.
-* `load_shifting_hours`: an optional upper can on how much deficit can be stored at once. If omitted, the deficit capacity limit is disabled. See [Deficit capacity](#deficit-capacity).
+* `load_shifting_hours`: an optional upper limit on how much deficit can be stored at once. If omitted, the deficit capacity limit is disabled. See [Deficit capacity](#deficit-capacity).
+* `input_capacity_from_share`: an optional percentage which sets the input capacity for load shifting as a percentage of the output capacity. Can have a value between `0.00` and `1.00`.
 
 ### Price attributes
 
@@ -133,6 +134,7 @@ With this arrangement, the energy which is shifted during the year will be diver
 - merit_order.level = omit
 - merit_order.demand_source = [node_a, node_b, node_c]
 - merit_order.load_shifting_hours = 72
+- merit_order.input_capacity_from_share = 0.23
 
 - marginal_costs = 48.0
 - max_consumption_price = 48.0
