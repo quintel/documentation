@@ -48,7 +48,9 @@ From the summed curve it is possible to find the peak load of the demand sources
   <img src="/img/docs/contrib/load-shifting/demand-peak.png" alt="Chart of the summed load, with the peak load of 14 MW highlighted" />
 </figure>
 
-The peak load is multiplied by the `availability` of the load shifting node to set the input and output capacity of the merit order participant. For example, if the peak load is **14 MW** and the availability is set to **0.25 (25%)**, the capacity of the load shifting participant is set to **3.5 MW** (14 MW ⨉ 0.25).
+The peak load is multiplied by the `availability` of the load shifting node to set the output capacity of the merit order participant. The output capacity is then multiplied by the `input_capacity_from_share` to determine the input capacity.
+
+For example, if the peak load is **14 MW** and the availability is set to **0.25 (25%)**, the output capacity of the load shifting participant is set to **3.5 MW** (14 MW ⨉ 0.25). If input_capacity_from_share is set to 0.5, the input capacity is set to **1.75 MW**.
 
 :::caution Availability
 If in the node file the `availability` attribute is set to zero, no load shifting will occur! Don't forget to set an `availability` in the input used to enable load shifting.
@@ -112,7 +114,7 @@ With this arrangement, the energy which is shifted during the year will be diver
 * `level`: may be set to "omit" to ignore the effects of load shifting on the electricity network, or "lv", "mv", or "hv" if you want shifting to affect the network calculation and charts.
 * `demand_source`: must be present with the name of at least one node whose demand is shifted. These nodes must themselves be consumers in the merit order.
 * `load_shifting_hours`: an optional upper limit on how much deficit can be stored at once. If omitted, the deficit capacity limit is disabled. See [Deficit capacity](#deficit-capacity).
-* `input_capacity_from_share`: an optional percentage which sets the input capacity for load shifting as a percentage of the output capacity. Can have a value between `0.00` and `1.00`.
+* `input_capacity_from_share`: an optional percentage which sets the input capacity for load shifting as a percentage of the output capacity. This should be set to 1.0 in the node file, ensuring that the input capacity is equal to the output capacity by default.
 
 ### Price attributes
 
@@ -130,11 +132,11 @@ With this arrangement, the energy which is shifted during the year will be diver
 - groups = [preset_demand]
 
 - merit_order.type = flex
+- merit_order.input_capacity_from_share = 1.0
 - merit_order.subtype = load_shifting
 - merit_order.level = omit
 - merit_order.demand_source = [node_a, node_b, node_c]
 - merit_order.load_shifting_hours = 72
-- merit_order.input_capacity_from_share = 0.23
 
 - marginal_costs = 48.0
 - max_consumption_price = 48.0
