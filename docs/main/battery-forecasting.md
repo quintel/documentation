@@ -9,7 +9,8 @@ In the Energy Transition Model, electricity storage technologies will charge and
 
 While this ensures that electricity storage technologies will not charge and discharge in such a way as would result in a loss, fixed prices can be inflexible and unrealistic. For example, setting a price suitable for winter months when prices tend to be higher, may result in behavior which is less suitable for the summer months.
 
-Electricity storage technologies have an optional forecasting option. When enabled, the technology is no longer controlled by the market price of electricity, but will instead forecast the electricity load for the year and decide when to charge and discharge accordingly.
+Electricity storage technologies have an optional forecasting option. When enabled, the technology is no longer controlled by the market price of electricity, but will instead forecast the electricity load for the year and decide when to charge and discharge accordingly. For household batteries there is a third option for which the battery
+forecasting algorithm is only applied to the household sector.
 
 In this mode, the goal of a storage technology is to flatten the residual load curve as much as possible. This also _generally_ increases the profitability of the technology.
 
