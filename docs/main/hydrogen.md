@@ -20,7 +20,9 @@ Several hydrogen production routes are implemented in the ETM:
 6. Dedicated H<sub>2</sub> production by offshore wind farms
 7. Dedicated H<sub>2</sub> production by solar PV farms
 8. Flexible H<sub>2</sub> production with electrolysis
-9. Import from abroad
+9. LH2 regasification
+10. LOHC reforming
+11. Import from abroad
 
 SMR and biomass gasification are mature technologies that are used all over the world. In contrast, ammonia is a novel technology, that still requires development to become commercially available. In the ETM it is assumed that these technologies have a flat production profile, i.e. they produce a constant amount of hydrogen throughout the year.
 
