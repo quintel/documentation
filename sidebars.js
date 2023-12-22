@@ -204,6 +204,7 @@ module.exports = {
       collapsed: true,
       items: [
         "contrib/authoring-docs",
+        "contrib/authoring-slider-texts",
         "contrib/authoring-gqueries",
         "contrib/authoring-tests"
       ]
