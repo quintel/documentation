@@ -4,18 +4,19 @@ sidebar_label: Capture, utilisation and storage
 ---
 Carbon capture, utilisation and storage (CCUS) is an emissions reduction technology that can be applied across the energy system. This article describes the CCUS features in the ETM.
 
-You can make choices regarding the application of carbon [capture](#capture), what [happens](#utilisation-and-storage) to this captured carbon, how it is [transported](#transport) and the [costs](#costs) associated with it.
+You can make choices regarding the application of carbon [capture](#capture), what [happens](#utilisation-and-storage) to this captured carbon, how it is [transported](#transport) and the [costs](#costs) associated with it. 
 
 _Checkout: the [negative emissions](co2-negative-emissions) infopage for more information on negative emissions as an effect of CCUS._
 
-## Capture
-The ETM models four types of carbon capture:
+## Capture and import
+The ETM models five types of carbon supply:
 * Capture in [industry](#industry)
 * Capture in the [power sector](#power-sector)
 * Capture for [hydrogen production](#hydrogen-production)
 * [Direct Air Capture](#direct-air-capture)
+* Import of CO<sub>2</sub>
 
-For each of these sectors, you can make choices about the extent to which carbon capture technology is applied in the future energy system. The picture below gives an impression of the capture section in the ETM:
+For each of the carbon capture technologies, you can make choices about the extent to which it is applied in the future energy system. In addition, you can also set the amount of baseload CO<sub>2</sub> that will be imported. The picture below gives an impression of the capture and import section in the ETM:
 
 ![Carbon capture section](/img/docs/co2-capture.png)
 
@@ -48,6 +49,9 @@ CO<sub>2</sub> capture at hydrogen production plants works in a similar way as t
 You can set the amount of CO<sub>2</sub> captured by Direct Air Capture (DAC) technology. Direct Air Capture is a process of capturing CO<sub>2</sub> directly from the ambient air using electricity.
 
 The ETM assumes DAC units to run base load, i.e. with a flat hourly profile. The electricity required to run DACs is considered final demand of the energy sector. Since DAC is rather energy intensive, the net CO<sub>2</sub> reduction depends on the emission factor of the electricity used.
+
+### Import of CO<sub>2</sub>
+Carbon import can be an interesting business case for countries that have a proper carbon storage infrastructure. External entities can buy the right to transport emitted carbon to the importing country. You can set the amount of imported CO<sub>2</sub> in Mton.
 
 ## Utilisation and storage
 Captured CO<sub>2</sub> can be used in multiple ways. The ETM currently offers the following applications:
@@ -91,7 +95,7 @@ The ETM keeps track of all 'supply' of carbon (capture) and all 'demand' of carb
 
 ![Supply and demand of carbon](/img/docs/ccus_supply_demand_mekko.png)
 
-You can make choices about the supply and demand independently. The ETM registers a carbon 'surplus/export' in case more carbon is captured than is stored or utilised. Vice versa, a 'deficit/import' occurs when less carbon is captured than used for storage and utilisation.
+You can make choices about the supply and demand independently. The ETM registers a carbon 'surplus/export' in case more carbon is captured than is stored or utilised. Vice versa, a 'deficit/import' occurs when less carbon is captured than used for storage and utilisation. 
 
 ## Transport
 Carbon can be transported in two different ways in the ETM:

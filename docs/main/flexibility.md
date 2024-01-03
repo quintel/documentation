@@ -86,10 +86,13 @@ Flexible demand technologies are governed by a "willingness to pay": a maximum p
 * Inflexible (baseload):
   * Final gas demand in sectors
   * Gas used in dispatchable power plants and heat boilers for district heating
-  * Export of gas (flat curve; constant export of gas to balance yearly production of gas)
+  * Export of natural gas (flat curve; constant export of gas to balance yearly production of gas)
+  * Export of green gas (flat curve; constant export of gas to balance yearly production of gas)
   * Distribution losses
 * Flexible:
   * Gas entering storage (in the ETM, gas is automatically buffered throughout the year)
+  * Export of natural gas (backup)
+  * Export of green gas (backup)
 
 ### Hydrogen
 
@@ -113,6 +116,7 @@ See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/sup
   * Distribution losses
 * Flexible:
   * Hydrogen entering storage (in the ETM, gas is automatically buffered throughout the year)
+  * Export of hydrogen (backup)
 
 ### Heat for district heating
 
