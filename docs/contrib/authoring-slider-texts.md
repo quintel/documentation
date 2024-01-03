@@ -22,33 +22,39 @@ Slider descriptions should explicitly not contain the following:
 
 1. **Purpose (max 20 words)**
 
-  Clearly state the slider's purpose in a brief sentence.
+   Clearly state the slider's purpose in a brief sentence.
+ 
+2. **How to set the slider at an appropriate value?**:
 
-2. **Background (50 - 100 words)**
+   When relevant, include any necessary warnings or additional information users should be aware of regarding the slider's effects or workings.
+   
+3. **Background** (Average 50-100 words):
 
-  Provide information on why this slider / technology is relevant and how it relates to other sliders (if relevant). Include links to documentation if relevant.
-    
-3. **Connections to other sliders (1 sentence and/or bullet list)**
+   When relevant, provide concise background information about the associated technology or technique. Include a definition, usage, and, if relevant, advantages and disadvantages.
+ 
 
-  Clearly explain any connections to other sliders within the model, providing links or references. 
+4. **Connections to other elements** (Average 1 sentence or bullet list):
 
-4. **Connections to charts (1 sentence and/or bullet list)**
+   When relevant, clearly explain any connections to other sliders, charts or other elements within the model. Use links when available. Refer to the documentation if any supplementary documentation is available.
 
-  Refer to relevant charts or tables, if this is not already depicted as the default chart or table of the specific slide. 
-    
-:::info Example of a good slider description
-This slider adjusts the total installed capacity of Autothermal Reformers (ATR). 
+ 
+ ***Example***: 
 
-ATR is a production method for hydrogen. It is similar to steam methane reforming (SMR) but has a lower efficiency. The advantage of ATR is that this technology has a higher CO<sub>2</sub> capture potential due to its simpler production stream which contains a high CO<sub>2</sub> concentration. 
+This slider adjusts the total installed capacity of autothermal reformers (ATR). 
 
-Go to the [Emissions](https://energytransitionmodel.com/scenario/emissions/ccus/capture-of-co2-in-energy-sector) section to set CCS for ATR.
-:::
+Note: ATR emits CO directly into the air, this means carbon capture and storage(CCS) will need to be used in combination with this method for carbon neutrality. 
 
-## YAML file structure
-The slider descriptions are written in YAML files in which they are connected to their slider key. Specific guidelines and instructions regarding the applied structure in the YAML files and regarding referring to other sections or pages are presented here. 
+ATR is a method for syngas/biofuel production, combining partial oxidation and steam methane reforming. It allows flexible hydrogen-to-carbon monoxide ratios for varied biofuel production. For more information, checkout the documentation [Documentation Link]. 
 
-### YML syntax
-The slider text is written under `description`. Note that the preferred syntax to use is `|`, which indicates that a value could cover multiple lines. The slider text is provided on the next line and indented with two spaces from `description`. 
+Go to Emissions > CCUS > Capture of CO2 to install CO capture or the production of pure hydrogen production.
+
+Go to Costs & Efficiencies > Hydrogen > Hydrogen production for changing costs and efficiency.
+
+## References style
+
+### Pages
+
+When referencing pages, reference the proper slide in the link, but use the title of sidebar item in the description and refer to it as a 'section'. Only use a more specific title if necessary. See the examples below.
 
 ```
 description: |
