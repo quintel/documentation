@@ -50,5 +50,4 @@ In some countries (like the Netherlands), the Other sector in the national energ
 
 ## Export 
 The Export section contains all energy export.
-In this section, the export volumes pertaining all energy carriers can be set. Information regarding the import, export and transit flows of energy carriers can be found here as well. Transit flows represent the quantity of energy per carrier that is imported and exported by the country while not being used by said country. This can cause extra pressure on the country's infrastructure for energy carrier transport or storage. Gaining insights in import, export, and transit flows of energy carriers is useful for infrastructure planning. 
-
+In this section, the (inflexible) export volumes pertaining several energy carriers can be set. Information regarding the import, export and transit flows of energy carriers can be found here as well. Transit flows represent the quantity of energy per carrier that is imported and exported by the country while not being used by said country. This can cause extra pressure on the country's infrastructure for energy carrier transport or storage. Gaining insights in import, export, and transit flows of energy carriers is useful for energy system and infrastructure planning. 
