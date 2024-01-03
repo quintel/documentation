@@ -64,7 +64,7 @@ description: |
 
 ```
 description: |
-    Ga naar de sectie <a href="/scenario/demand/industry/steel">Industry</a> om het staalproductieproces aan te passen.
+    Ga naar de sectie <a href="/scenario/demand/industry/steel">Industrie</a> om het staalproductieproces aan te passen.
 ```
 
 ### Charts
@@ -83,4 +83,4 @@ description: |
 
 ### Technical and financial properties
 
-It is recommended not to refer to the technical and financial properties in the slider description. These should be visible by themselves.
+It is recommended not to refer to the technical and financial properties in the slider description. These should be visible enough by themselves.
