@@ -177,7 +177,8 @@ module.exports = {
       type: "category",
       label: "Adding new features",
       collapsed: false,
-      items: ["contrib/authoring-docs"],
+      items: ["contrib/authoring-docs",
+      "contrib/authoring-slider-texts"],
     },
     {
       type: "category",
