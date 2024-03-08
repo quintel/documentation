@@ -22,6 +22,7 @@ The import is determined for the following primary energy carriers:
 -   Gas
     -   Natural gas
     -   LNG
+    -   Propane
 -   Uranium
 -   Electricity
 -   Biomass
