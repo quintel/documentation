@@ -77,6 +77,7 @@ Flexible demand technologies are governed by a "willingness to pay": a maximum p
 * Inflexible:
   * Production green gas and LNG (flat curve)
   * Extraction natural gas (flat curve)
+  * Import of propane (flat curve)
   * Import of natural gas (flat curve; constant import of gas to balance yearly production of gas)
 * Flexible:
   * Gas from storage (in the ETM, gas is automatically buffered throughout the year)
