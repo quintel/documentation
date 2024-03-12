@@ -16,7 +16,7 @@ Several hydrogen production routes are implemented in the ETM:
 2. Steam methane reforming with CCS
 3. Ammonia reforming
 4. Biomass gasification
-5. Biomass gasifiction with CCS
+5. Biomass gasification with CCS
 6. Dedicated H<sub>2</sub> production by offshore wind farms
 7. Dedicated H<sub>2</sub> production by solar PV farms
 8. Flexible H<sub>2</sub> production with electrolysis
