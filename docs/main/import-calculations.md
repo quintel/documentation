@@ -29,12 +29,11 @@ The import is determined for the following primary energy carriers:
     -   Bio-diesel
     -   Bio-ethanol
     -   Bio-oil
-    -   Biofuel (Deprecated)
     -   Greengas
-    -   Waste (All waste including non-biogenic)
-    -   Algue diesel
-    -   Wood pellet
+    -   Biogenic waste
+    -   Wood pellets
     -   Biocoal
+-   Non-biogenic waste
 -   Heat
 
 _Note: Lignite cannot be imported from a neighboring country, as this would not be energy efficient. All lignite is therefore assumed to be locally available. For each country it is defined whether or not lignite is available for production of electricity._
