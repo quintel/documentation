@@ -101,7 +101,7 @@ See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/sup
 #### Supply
 
 * Inflexible:
-  * Must-run / volatile: dedicated offshore wind turbine or solar PV plant for H2, steam methane reforming, biomass gasification
+  * Must-run / volatile: dedicated offshore wind turbine or solar PV plant for H2, steam methane reforming, autothermal reforming, ammonia reforming, biomass gasification
   * Import of hydrogen (flat curve; constant import of hydrogen to balance yearly production of hydrogen)
   * Hydrogen produced by power-to-gas
 * Flexible:
