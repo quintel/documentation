@@ -8,6 +8,7 @@ The ETM supports so-called 'negative' emissions. Negative emissions arise when m
     * Gas-fired power plants using green gas
     * Hydrogen production with biomass gasification technology
     * Direct use of biomass in industry, for both feedstock and combustion
+    * Biomass-fired power plants, both dispatchable and must-run
 
 2. By using Direct Air Capture
 
