@@ -108,6 +108,7 @@ module.exports = {
         "main/scenario-tools/identifying-yourself",
         "main/scenario-tools/using-proxies",
         "main/scenario-tools/creating-and-updating",
+        "main/scenario-tools/slider-comparison",
         "main/scenario-tools/creating-templates",
         "main/scenario-tools/regional-overview",
         "main/scenario-tools/heat-module",
