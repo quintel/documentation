@@ -1,5 +1,5 @@
 ---
-title: Slider comparison analyis
+title: Slider comparison analysis
 ---
 
 ## How does it work?
@@ -22,11 +22,11 @@ In `scenario_list.csv` you can create a row for the scenario you wish to process
  * **heat_demand**. This column will be ignored in the current version of the slider comparison analysis and should be left empty. 
 
 :::warning Keep compatible
-Not keeping your scenario compatible with newer model versions can cause the model to break or lead to unforseen outcomes for your scenarios.
+Not keeping your scenario compatible with newer model versions can cause the model to break or lead to unforeseen outcomes for your scenarios.
 :::
 
 ### slider_comparison_settings.csv
-The `slider_comparison_settings.csv` file contains the slider settings of your scenario and the queries for which you would like to ontain the impact of slider settings. The first column contains a chosen name for the set of sliders you want to analyse. The second column contains the slider names of your set. A set could either contain multiple sliders or just an individual slider. A list of all slider keys can be found [here](https://energytransitionmodel.com/saved_scenarios/16707.csv) (CSV file).
+The `slider_comparison_settings.csv` file contains the slider settings of your scenario and the queries for which you would like to obtain the impact of slider settings. The first column contains a chosen name for the set of sliders you want to analyse. The second column contains the slider names of your set. A set could either contain multiple sliders or just an individual slider. A list of all slider keys can be found [here](https://energytransitionmodel.com/saved_scenarios/16707.csv) (CSV file).
 
 In the example below, the set name
 __set_space_heating_hot_water__ contains the sliders __households_heater_hybrid_hydrogen_heatpump_air_water_electricity_share__ and __households_heater_heatpump_ground_water_electricity_share__. The set name __households_heater_heatpump_air_water_electricity_share__ contains only one slider, which has the same slider name __households_heater_heatpump_air_water_electricity_share__. 
@@ -35,7 +35,7 @@ For each slider a slider start and future value can be set. The slider will inhe
 
 Finally, the last column `output_gquery` contains the name of the query of which you want to obtain the impact of the slider start and future value. A query is a small ‘request’ for information on a specific topic. For example, each item in the ETM’s dashboard is a query (e.g. ‘total annual costs’, ‘total CO<sub>2</sub> reduction’). Similarly, each series of a chart in the ETM is a query (e.g. ‘electricity demand for households space heating’, ‘gas demand for households space heating’). A list of all available queries can be found on [Github](https://github.com/quintel/etsource/tree/production/gqueries).
 
-In the example below, the primary CO<sub>2</sub> emissions of the households sector are obtained with __primary_co2_of_households__. If you would like to obtain more queries, these entries should be added in seperate rows, together with the relevant slider settings. 
+In the example below, the primary CO<sub>2</sub> emissions of the households sector are obtained with __primary_co2_of_households__. If you would like to obtain more queries, these entries should be added in separate rows, together with the relevant slider settings. 
 
 *Example file:*
 
@@ -48,7 +48,7 @@ In the example below, the primary CO<sub>2</sub> emissions of the households sec
 ## slider_comparison_results.csv
 The slider comparison analysis generates the output CSV `[YYYYMMDD]_slider_comparison_settings_[SCENARIO_NAME].csv` with the outcomes of the slider settings on the requested queries. This file will be provided in the output folder. The first and second column of the CSV provide respectively the set and query names as provided in `slider_comparison_settings.csv`. The third column provides the unit of the query outcome. The last two columns provide the query outcomes for respectively the start and future slider values as specified in `slider_comparison_settings.csv`. 
 
-In the example below, the primary CO<sub>2</sub> emissions of households for set __households_heater_heatpump_air_water_electricity_share__ was 0.138 MT with the slider start value and 0.137 MT with the slider future value. In the second row, the combined result are provided of the start and future slider values of the set __set_space_heating_hot_water__ (containing two slider settings as defined in `slider_comparison_settings.csv`). 
+In the example below, the primary CO<sub>2</sub> emissions of households for set __households_heater_heatpump_air_water_electricity_share__ was 0.138 MT with the slider start value and 0.137 MT with the slider future value. In the second row, the combined result are provided for the start and future slider values of the set __set_space_heating_hot_water__ (containing two slider settings as defined in `slider_comparison_settings.csv`). 
 
 *Example file:*
 
