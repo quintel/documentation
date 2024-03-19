@@ -14,6 +14,7 @@ of that programming language.
 With the tool you can:
 - [Download scenario results and query e.g. dashboard items](retrieving-data.md)
 - [Create or update scenario slider settings and custom curves](creating-and-updating.md)
+- [Compare scenario results for varying individual or combined slider settings](slider-comparison.md)
 - [Create a template of a scenario which you can use to create new sceanrios](creating-templates.md)
 - [Create a regional overview combining multiple scenarios](regional-overview.md)
 
@@ -34,19 +35,21 @@ described on the dedicate pages.
 
 Here is a list of the files that can be encountered in the input folder:
  * `scenario_list.csv` - Contains general information about the scenarios, such as the region and target year
- * `scenario_settings.csv`) - Contains the ETM slider values for each of the scenarios specified in `scenario_list.csv`
+ * `scenario_settings.csv` - Contains the ETM slider values for each of the scenarios specified in `scenario_list.csv`
  * `queries.csv` - Contains a list of queries (scenario outcomes) you would like to retrieve for each scenario.
  * `data_downloads.csv` - Contains a list of data exports you would like to retrieve for each scenario.
  * `template_list.csv` -  Contains a list of scenario templates specified by its scenario ID
  * `regional_overview.csv` -  Contains a list of scenarios of different areas that will make up the region to be overviewed
+ * `slider_comparison_settings.csv` - Contains sets of start and future slider values and queries you would like to retrieve per slider set.
 
 In addition, you may add CSV files containing custom supply, demand and price [curves](creating-and-updating#curves) to the `input/curves` folder.
 
 ### Output
-The scripts create/update/query the scenarios in the Energy Transition Model and print the corresponding URLs in the terminal. In addition, the following is added to the `data/output` folder:
+The scripts create/update/query the scenarios in the Energy Transition Model and print the corresponding URLs in the terminal. In addition, depending on the tools of scenario-tools that are used, the following is added to the `data/output` folder:
 
  * A `scenario_outcomes.csv` file containing the query outcomes for all scenarios, including a column containing the values for the present year and the unit of each query
  * Sub folders for each scenario `short_name` containing the data exports
+ * A `slider_comparison_results.csv` containing the query outcomes per slider set as specified in `slider_comparison_settings.csv`
 
 ## Getting started
 

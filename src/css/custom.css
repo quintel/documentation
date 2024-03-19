@@ -499,10 +499,7 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-/* .menu a[href="/api/authentication"]:after,
-.menu a[href="/api/forecast-storage-order"]:after,
-.menu a[href="/api/saved-scenarios"]:after,
-.menu a[href="/api/transition-paths"]:after {
+.menu a[href="/main/scenario-tools/slider-comparison"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -517,13 +514,10 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/api/authentication"]:after,
-.menu a.menu__link--active[href="/api/forecast-storage-order"]:after,
-.menu a.menu__link--active[href="/api/saved-scenarios"]:after,
-.menu a.menu__link--active[href="/api/transition-paths"]:after {
+.menu a.menu__link--active[href="/main/scenario-tools/slider-comparison"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
-} */
+}
 
 /* Add "Updated" tag to some sidebar items. */
 .menu a[href="/api/changelog"]:after,
