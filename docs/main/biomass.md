@@ -29,6 +29,7 @@ Biomass can be used in different places throughout the model:
 - in biomass heaters for (local) heat networks
 - as transport fuel: bio-ethanol, biodiesel, bio-LNG and biokerosene
 - as co-firing in coal plants
+- as feedstock in biomass-fired power plants
 - as biocoal or bio-oil in power plants
 - to produce hydrogen through gasification
 
