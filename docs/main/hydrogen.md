@@ -8,32 +8,6 @@ With the ETM you can explore the role of hydrogen in the future energy system, u
 
 This page contains more information about the options for hydrogen in the ETM. 
 
-## Hydrogen production
-
-Several hydrogen production routes are implemented in the ETM:
-
-1. Steam methane reforming (SMR)
-2. Steam methane reforming with CCS
-3. Ammonia reforming
-4. Biomass gasification
-5. Biomass gasification with CCS
-6. Dedicated H<sub>2</sub> production by offshore wind farms
-7. Dedicated H<sub>2</sub> production by solar PV farms
-8. Flexible H<sub>2</sub> production with electrolysis
-9. LH2 regasification
-10. LOHC reforming
-11. Import from abroad
-
-SMR and biomass gasification are mature technologies that are used all over the world. In contrast, ammonia is a novel technology, that still requires development to become commercially available. In the ETM it is assumed that these technologies have a flat production profile, i.e. they produce a constant amount of hydrogen throughout the year.
-
-Options 6 and 7, dedicated wind and solar farms, are renewable energy plants built solely for hydrogen production. These plants turn renewable electricity directly into hydrogen using electrolysis. To date, such dedicated plants are not (yet) used at a large scale. Their production profile is determined by solar and wind weather curves.
-
-The ETM also allows you to install a flexible electrolyser, which produces hydrogen if the hourly electricity price is low enough. This technology is also known as power-to-gas. See [Power-to-gas](electricity-conversion#power-to-gas) for more information.
-
-Finally you can choose to import hydrogen from abroad. Import is assumed to be constant throughout the year. You can specify the costs of imported hydrogen in the cost section and also adjust the CO<sub>2</sub> emissions of imported hydrogen. Note that if the total year demand of hydrogen in your scenario exceeds supply, hydrogen will be imported automatically to avoid shortages.
-
-![Hourly hydrogen production chart](/img/docs/20181002_hydrogen_production.png)
-
 ## Hydrogen Demand 
 
 In the ETM you can use hydrogen for:
@@ -61,7 +35,6 @@ You can set the installed capacities of various heating sources in the 'Supply' 
 #### Must-run
 
 'Must-run' sources include all hydrogen sources that supply hydrogen according to a pre-defined production curve, regardless of whether there is hydrogen demand at that moment. For example, hydrogen wind farms produce hydrogen when the wind is blowing even if there is no demand for hydrogen at that moment. The ETM models the following must-run sources:
-
 
 * Must-run Steam methane reforming (SMR) 
 * Must-run Steam methane reforming with CCS
@@ -96,7 +69,6 @@ Dispatchable hydrogen sources include all hydrogen sources that can be turned on
 For each of these production routes you can set the installed capacity in the 'Hydrogen production' section. The only exception is the back-up import. The ETM automatically determines the required amount of hydrogen import capacity to ensure that supply always meet demand in every hour.
 
 ![Hourly hydrogen production chart](/img/docs/20240314_hydrogen_production.png)
-
 
 
 ## Hydrogen storage
