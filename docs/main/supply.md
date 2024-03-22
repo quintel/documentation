@@ -27,7 +27,7 @@ District heating can be used as heating technology in households, buildings and 
 _Checkout: the ['Heat Networks'](heat-networks) infopage for more information._ 
 
 ## Hydrogen
-In the hydrogen section you can specify how hydrogen is produced in the future. The ETM offers the following options: electrolysis of wind and solar power from wind/solar farms dedicated to hydrogen production; steam methane reforming (with and without carbon capture); gasification of biomass (with and without carbon capture); import from abroad. Furthermore, it is possible to convert excess electricity into hydrogen using 'power-to-gas' (see the power-to-gas slide). You can do this if your scenario has moments where electricity production exceeds demand. Hydrogen for the fertilizer industry can also be produced on-site since this industry currently has large hydrogen production plants (see fertilizer industry). 
+In the hydrogen section you can specify how hydrogen is produced in the future. The ETM offers a wide array of production routes, both dispatchable or must-run. Excess hydrogen can be stored via the storage technologies. For more information checkout the ['Hydrogen'](hydrogen.md) section.
 
 ## Transport fuels
 In the Transport fuels section you can adjust the type of fuel used by road transport, rail transport, domestic navigation, international aviation and international navigation. By adjusting the fuel mixes you can influence the amount of CO<sub>2</sub> emissions in the future as well as the amount of land necessary for the production of biofuels. 
