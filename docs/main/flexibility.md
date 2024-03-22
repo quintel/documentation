@@ -102,21 +102,23 @@ See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/sup
 
 * Inflexible:
   * Must-run / volatile: dedicated offshore wind turbine or solar PV plant for H2, steam methane reforming, autothermal reforming, ammonia reforming, biomass gasification
-  * Import of hydrogen (flat curve; constant import of hydrogen to balance yearly production of hydrogen)
+  * Import of hydrogen (flat curve; constant import of hydrogen to balance yearly demand for hydrogen)
   * Hydrogen produced by power-to-gas
 * Flexible:
   * Hydrogen from storage (in the ETM, hydrogen is automatically buffered throughout the year)
+  * Steam methane reforming, autothermal reforming & biomass gasification facilities.
+  * Import of hydrogen (flexible curve; flexible import of hydrogen to balance hourly demand for hydrogen)
 
 #### Demand
 
 * Inflexible (baseload):
   * Final hydrogen demand in sectors
   * Hydrogen used in dispatchable power plants and heat boilers for district heating
-  * Export of hydrogen (flat curve; constant export of hydrogen to balance yearly production of gas)
+  * Export of hydrogen (flat curve; constant export of hydrogen to balance yearly production of hydrogen)
   * Distribution losses
 * Flexible:
   * Hydrogen entering storage (in the ETM, gas is automatically buffered throughout the year)
-  * Export of hydrogen (backup)
+  * Export of hydrogen (flexible curve; flexible export of hydrogen to balance hourly production of hydrogen)
 
 ### Heat for district heating
 

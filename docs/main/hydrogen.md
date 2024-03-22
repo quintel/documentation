@@ -39,18 +39,20 @@ Finally you can choose to import hydrogen from abroad. Import is assumed to be c
 In the ETM you can use hydrogen for:
 
 * district heating for households and buildings
+* Heating demand for households and buildings
 * heat production in industry and agriculture
 * fertilizer production (as feedstock)
 * transport (cars, busses, trucks, vans, ships and planes)
 * electricity production (hydrogen gas turbines)
+* Baseload export
 
-Each of these options has its own hourly demand profile. For electricity production the demand profile is determined by the electricity market in your scenario. See [Merit Order](merit-order.md) for more information.
+Each of these options has its own hourly demand profile. For electricity production the demand profile is determined by the electricity market in your scenario. See [Merit Order](merit-order.md) for more information. In excess of Demand, the model uses back-up hydrogen export to ensure an hourly balance.
 
 ![Hourly hydrogen demand chart](/img/docs/20240314_hydrogen_demand.png)
 
-## Hydrogen production
+## Hydrogen Production
 
-You can set the installed capacities of various heating sources in the 'Supply' tab. The ETM distinguishes between two types of heat sources:
+You can set the installed capacities of various heating sources in the 'Supply' tab. The ETM distinguishes between two types of hydrogen sources:
 
 * 'Must-run' sources
 * Dispatchable sources
@@ -81,18 +83,17 @@ Options 10 and 11, dedicated wind and solar farms, are renewable energy plants b
 
 The ETM also allows you to install flexible production routes. SMR, ATR and ammonia reforming are the 3 hydrogen production technologies which can be installed as both must-run and flexible. Next to this, flexible electrolysers can be installed. This technology is also known as power-to-gas. See [Power-to-gas](electricity-conversion#power-to-gas) for more information. The flexible technoligies will produce hydrogen if the hourly electricity price is low enough. 
 
-Finally you can choose to import hydrogen from abroad. Import is assumed to be constant throughout the year. You can specify the costs of imported hydrogen in the cost section and also adjust the CO<sub>2</sub> emissions of imported hydrogen. Note that if the total year demand of hydrogen in your scenario exceeds supply, hydrogen will be imported automatically to avoid shortages.
+Finally you can choose to import hydrogen from abroad. Import is assumed to be constant throughout the year. You can specify the costs of imported hydrogen in the cost section and also adjust the CO<sub>2</sub> emissions of imported hydrogen. 
 
 #### Dispatchable
-Dispatchable hydrogen sources include all hydrogen sources that can be turned on and off at will. Their production profiles are determined dynamically: in a given hour, dispatchable hydrogen sources will only produce hydrogen if the demand in that hour exceeds supply of must-run sources. Dispatchables will switch on to ensure that supply matches demand. The ETM models the following dispatchable heat sources:
+Dispatchable hydrogen sources include all hydrogen sources that can be turned on and off at will. Their production profiles are determined dynamically: in a given hour, dispatchable hydrogen sources will only produce hydrogen if the demand in that hour exceeds supply of must-run sources. Dispatchables will switch on to ensure that supply matches demand. The ETM models the following dispatchable hydrogen sources:
 
 * Flexible Steam methane reforming (SMR)
 * Flexible Autothermal reforming (ATR) 
 * Flexible Ammonia reforming 
 * A back-up/emergency import
 
-For each of these production routes you can set the installed capacity in the
-'Hydrogen production' section. The only exception is the back-up import. The ETM automatically determines the required amount of hydrogen import capacity to ensure that supply always meet demand in every hour.
+For each of these production routes you can set the installed capacity in the 'Hydrogen production' section. The only exception is the back-up import. The ETM automatically determines the required amount of hydrogen import capacity to ensure that supply always meet demand in every hour.
 
 ![Hourly hydrogen production chart](/img/docs/20240314_hydrogen_production.png)
 
@@ -112,13 +113,13 @@ The ETM ensures that hydrogen supply matches demand for every hour per year in y
 
 ![Hourly hydrogen storage chart](/img/docs/20240314_hydrogen_storage.png)
 
-## Merit order
+## Merit orders 
 
 When multiple dispatchable sources and storage of hydrogen are installed, a hydrogen 'merit order' determines which source swithces on first. The back-up hydrogen import comes last ('lender of last resort'). By default, the 2 storage options are set first. 
 
 !['Merit order of dispatchable hydrogen production'](/img/docs/20240314_hydrogen_merit_order_production.png)
 
-Since there are 2 storage options for hydrogen in the ETM, there is a second merit order for dispatchable hydrogen demand. This determines which storage option is filled first.
+Storage facilities of hydrogen represent both flexible supply as demand. For this reason, users can determine the order in which the storage methods must be used for flexible supply.
 
 !['Merit order of dispatchable hydrogen demand'](/img/docs/20240314_hydrogen_merit_order_demand.png)
 
