@@ -8,6 +8,7 @@ The ETM supports so-called 'negative' emissions. Negative emissions arise when m
     * Gas-fired power plants using green gas
     * Hydrogen production with biomass gasification technology
     * Direct use of biomass in industry, for both feedstock and combustion
+    * Biomass-fired power plants
 
 2. By using Direct Air Capture
 
@@ -31,5 +32,3 @@ Direct Air Capture is a promising technology to bring down global CO<sub>2</sub>
 Negative emissions are incorporated in the CO<sub>2</sub> calculation in the following way:
 * Negative emissions arising from the production of electricity or hydrogen are incorporated in the [emission factor](co2-emission-factors.md) of these carriers. Since the ETM allocates CO<sub>2</sub> to the sectors in which energy is _used_, this means that all sectors using electricity or hydrogen 'benefit' from these negative emissions. Using more electricity or hydrogen may result in lower or even net negative sector emissions.
 * CO<sub>2</sub> captured by Direct Air Capture is deducted from the Energy sector.
-
-The chart below shows an example of future net negative emissions in the households and buildings sector. This is achieved by large electrification in those sectors, combined with a power production mix that leads to a negative emission factor for electricity. The red target line shows the net total emissions in this scenario, which is the sum of all positive and negative sector emissions.
