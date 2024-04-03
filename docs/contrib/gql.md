@@ -1,66 +1,37 @@
 ---
-title: Graph Query Language (GQL)
+title: Graph query language (GQL)
 ---
 
+GQL is used to calculate values that are used in the graphs, tables and figures that can be viewed in the model. Users can check values themselves by using the GQL-sandbox in ETEngine. {TO DO: update}
 
+## Writing gqueries
 
-# General information GQL
+Please note that the output that is printed in this documentation is dependent on the scenario the user is using. GQL is case sensitive. Since all GQL-functions are written in caps, this means that all functions **must** be written in caps in order to function. {TO DO: update}
 
-GQL is used to calculate values that are used in the graphs, tables and figures that can be viewed in the model. Users can check values themselves by using the GQL-sandbox in ETEngine. This can be found here --> [Link]
+##  Constants
 
+```ruby
+MWH_TO_GJ = 3.6
+MONTHS_PER_YEAR = 12.0
+HOURS_PER_YEAR = 8760.0
+SECS_PER_HOUR = 3600.0
+SECS_PER_YEAR = SECS_PER_HOUR * HOURS_PER_YEAR
+KG_PER_TONNE = 1000
+LITER_PER_BARREL = 159
+MJ_TO_MHW = 3600
+MJ_PER_KWH = 3.6
+MJ_PER_MWH = 3600
+BILLIONS = 10.0**9
+MJ_TO_PJ = BILLIONS
+MILLIONS = 10.0**6
+THOUSANDS = 1000.0
+```
 
-Please note that the output that is printed in this documentation is dependent on the scenario the user is using. 
+##  Functions
 
-GQL is case sensitive. Since all GQL-functions are written in caps, this means that all functions **must** be written in caps in order to function.
+### Aggregate functions
 
-
-##  Constants:
-
-### MWH_TO_GJ = 3.6
-
-### HOURS_PER_YEAR = 8760.0
-
-### MAN_HOURS_PER_MAN_YEAR = 1800.0
-
-### MAN_YEAR_PER_MJ_INSULATION_PER_YEAR = 0.0000000122916
-
-### SECS_PER_HOUR = 3600.0
-
-### SECS_PER_YEAR = SECS_PER_HOUR * HOURS_PER_YEAR
-
-### KG_PER_TONNE = 1000
-
-### LITER_PER_BARREL = 159
-
-### MJ_TO_MHW = 3600
-
-### MJ_PER_KWH = 3.6
-
-### MJ_PER_MWH = 3600
-
-### BILLIONS = 10.0**9
-
-### MJ_TO_PJ = BILLIONS
-
-### MILLIONS = 10.0**6
-
-### THOUSANDS = 1000.0
-
-### #NIL = nil if !defined?(NIL)
-
-### EURO_SIGN = '&euro;'
-
-### MONTHS_PER_YEAR = 12.0
-
-### INFINITY = Float::INFINITY
-
-
-# List of all functions:
-
-
-## Functions to be categorized
-
-### COUNT(values)
+#### COUNT(values)
 
 Returns how many values. Removes nil values, but does not remove duplicates. 
 
@@ -92,7 +63,7 @@ COUNT(L(foo,bar,foo))
 => 2
 ```
 
-### NEG(values)
+#### NEG(values)
 
 Returns the *first* number as a negative
 
@@ -119,7 +90,7 @@ AVG(1,nil,nil,2)
 => 1.5
 ```
 
-### SUM
+#### SUM
 Returns the sum of all numbers (ignores nil values).
 ```
 SUM(1,2) 
@@ -128,7 +99,7 @@ SUM(1,nil)
 => 1
 ```
 
-### PRODUCT(values)
+#### PRODUCT(values)
 
 Multiplies all numbers (ignores nil values).
 
@@ -141,7 +112,7 @@ PRODUCT(1,nil)
 ```
 
 
-### DIVIDE(values)
+#### DIVIDE(values)
 
 Divides the first value with the second value.
 ```
@@ -152,11 +123,9 @@ DIVIDE(1,2,3,4)
 => 0.5 --> only takes the second.
 ```
 
+### Control functions
 
-
-
-
-### EQUALS(values)
+#### EQUALS(values)
 
 Checks if the **first two** values that are given are equal.
 
@@ -174,7 +143,7 @@ EQUALS(2,3,3)
 => false
 ```
 
-### IF(condition, true_stmt, false_stmt)
+#### IF(condition, true_stmt, false_stmt)
 If the condition is true, the true_stmt is returned, if the condition is false, the false_stmt is retunred. 
 ```
 IF(EQUALS(1,1),3,4) 
@@ -184,9 +153,9 @@ IF(EQUALS(1,2),3,4)
 => 4 --> EQUALS(1,2) returns 'false', so 4 is returned.
 ```
 
+### Core functions
 
-
-### V(args)
+#### V(args)
 
 Shortcut for the LOOKUP and MAP function. Also see LOOKUP() and MAP().
 Used to retrieve information from the energy graph.
@@ -220,15 +189,15 @@ Example pass objects to V()
 V(CARRIER(electricity), cost_per_mj) --> = MAP( LOOKUP(CARRIER(electricity)), cost_per_mj )
 => 23.3
 ```
-### VALUE(args)
+#### VALUE(args)
 
 Alias for V()
 
-### MV(args)
+#### MV(args)
 
 Same functionalities as V, but used for the molecule graph. 
 
-### Q(key)
+#### Q(key)
 
 QUERY() or Q() returns the result of a gquery with given key.
 
@@ -239,12 +208,11 @@ Q(total_costs)
 => 100
 ```
 
-### Query(key)
+#### Query(key)
 
 Alias for Q()
 
-
-### Lookup(keys)
+#### Lookup(keys)
 
 lookup energy graph objects by their corresponding key(s).
 keys - Provided keys should be energy graph node keys or Qernel objects 
@@ -279,17 +247,17 @@ LOOKUP(foo, Lookup(foo))
 => [Node(foo)]
 ```
 
-### L(keys)
+#### L(keys)
 Alias for Lookup
 
-### ML(keys)
+#### ML(keys)
 
 Lookup or L for the moleculegraph, alias for MLOOKUP
 
-### MLOOKUP(keys)
+#### MLOOKUP(keys)
 Lookup or L for the moleculegraph, alias for ML.
 
-### MAP(elements, attr_name)
+#### MAP(elements, attr_name)
 
 Access attributes of one or more objects.
 
@@ -327,40 +295,40 @@ MAP(L(foo), 'demand * (3.0 + free_co2_factor)')
 MAP(L(foo), primary_demand_of(CARRIER(electricity)))
 ```
 
-
-### M(elements,attr_name)
+#### M(elements,attr_name)
 
 ALIAS for MAP
 
-### GET(keys)
+#### GET(keys)
 
 Retrieves the attribute from one single object, similar to MAP.
 
+### Curves functions
 
-
-### ATTACHED_CURVE(name)
+#### ATTACHED_CURVE(name)
 
 Looks up the attachment matching the `name`, and converts the contents into a curve. If no attachment is set, nil is returned.
 
-### CLAMP_CURVE(curve, min, max)
+#### CLAMP_CURVE(curve, min, max)
 
 Restricts the values in a curve to be between the minimum and maximum. Raises an error if min > max.
 
-### COALESCE_CURVE(curve, default = 0.0, length = 8760)
+#### COALESCE_CURVE(curve, default = 0.0, length = 8760)
 
 If the given `curve` is an array of non-zero length, it is returned. If the curve is nil or empty, a new curve of `length` length is created, with each value set to `default`.
 
-### CUMULATIVE_CURVE(curve)
+#### CUMULATIVE_CURVE(curve)
 
 Creates a new curve where each index (n) is the sum of (0..n) in the source curve.
 
 
-### INVERT_CURVE(curve)
+#### INVERT_CURVE(curve)
 
 Inverts a single curve by swapping positive numbers to be negative, and vice-versa.
 
-### SUM_CURVES(*curves)
+#### SUM_CURVES(*curves)
 Adds the values in multiple curves.
+
 
 Example:
 
@@ -372,8 +340,7 @@ SUM_CURVES([[1, 2], [3, 4]])
 => [4, 6]
 ```
 
-
-### PRODUCT_CURVES(left,right)
+#### PRODUCT_CURVES(left,right)
 Multiplies two curves elementwise.
 Note that unlike `SUM_CURVES`, `PRODUCT_CURVES` expects exactly two arguments, each one a curve.
 An error will be raised if either parameter is an array of curves, or if the curves don't have matching lengths.
@@ -384,7 +351,7 @@ PRODUCT_CURVES([1, 2, 3], [4, 5, 6])
 => [4, 10, 18]
 ```
 
-### DIVIDE_CURVES(left, right)
+#### DIVIDE_CURVES(left, right)
 Divides two curves elementwise.
 Note that unlike `SUM_CURVES`, `PRODUCT_CURVES` expects exactly two arguments, each one a curve.
 An error will be raised if either parameter is an array of curves, or if the curves don't have matching lengths.
@@ -393,12 +360,12 @@ DIVIDE_CURVES([1, 2, 3], [4, 5, 6])
 => [0.25, 0.4, 0.5]
 ```
 
-### SMOOTH_CURVE(curve, window_size)
+#### SMOOTH_CURVE(curve, window_size)
 Creates a smoothed curve using a moving average.
 curve       - An array of numbers.
 window_size - The number of points to average over.
 
-
+### Helper functions
 
 ### SORT_BY(*objects, arguments)
 With SORT_BY nodes can be sorted on one of their attributes.
@@ -466,8 +433,9 @@ TXT_TABLE(SORT_BY(G(useful_demand),demand),key,demand)
 Similar functionality to TXT_TABLE
 
 
+### Legacy functions
 
-### FILTER(collection, filter)
+#### FILTER(collection, filter)
 Imposes a filter.
 
 Can be used to impose a filter on node groups based on node attributes, see example.
@@ -482,13 +450,13 @@ FILTER(G(electricity_production),"geothermal_input_conversion > 0.0")
 ]
 ```
 
-### CHILDREN(*nodes)
+#### CHILDREN(*nodes)
 todo
 
-### PARENTS(*nodes)
+#### PARENTS(*nodes)
 todo
 
-### INTERSECTION(*keys)
+#### INTERSECTION(*keys)
 Returns the elements that are present in both the first and second arrays.
 
 ```
@@ -496,56 +464,56 @@ INTERSECTION( V(1,2,3) , V(2,3,4) )
 => [2, 3]
 ```
 
-### EXCLUDE(*keys)
+#### EXCLUDE(*keys)
 Returns an Array of elements of the first array excluding the second array.
 ```
 EXCLUDE( V(1,2,3) , V(2,3,4) )
 => [1]
 ```
-### INVALID_TO_ZERO(*keys)
+#### INVALID_TO_ZERO(*keys)
 Deprecated?
 
-### MAX(*values)
+#### MAX(*values)
 Returns the highest number.
 ```
 MAX(-3,-2,5)
 => 5
 ```
-### MIN(*values)
+#### MIN(*values)
 Returns the lowest number.
 ```
 MIN(-3,-2,5)
 => - 3
 ```
-### ABS(*values)
+#### ABS(*values)
 Returns all given numbers in absolute values.
 ```
 ABS(-3,-2,5)
 => [3,2,5]
 ```
 
-### ROUND(value, precision = 0)
+#### ROUND(value, precision = 0)
 Public: Rounds numeric value to a given precision.
 ```
 ROUND(3.334,2)
 => [3.33]
 ```
 
-### FLOOR(value, precision = 0)
+#### FLOOR(value, precision = 0)
 Returns the largest number less than or equal to numeric value.
 ```
 FLOOR(3.5)
 => 3
 ```
 
-### CEIL(value, precision = 0)
+#### CEIL(value, precision = 0)
 Returns the smallest number greater than or equal to numeric value.
 ```
 CEIL(3.5)
 => 4
 ```
 
-### SQRT(*values)
+#### SQRT(*values)
 Returns the square root of the given values.
 ```
 SQRT(4) 
@@ -556,6 +524,9 @@ SQRT(4,9)
 
 SUM(SQRT(4,9)) 
 => 5
+
+### Other functions
+
 ```
 
 ### LESS(x,y)
