@@ -2,13 +2,19 @@
 title: Graph query language (GQL)
 ---
 
-GQL is used to calculate values that are used in the graphs, tables and figures that can be viewed in the model. Users can check values themselves by using the GQL-sandbox in ETEngine. {TO DO: update}
+GQL is used to calculate values that are used in the graphs, tables and figures that can be viewed in the model. An overview of all gqueries can be found in [this folder](https://github.com/quintel/etsource/tree/master/gqueries).
 
-## Writing gqueries
+## Gqueries
 
-Please note that the output that is printed in this documentation is dependent on the scenario the user is using. GQL is case sensitive. Since all GQL-functions are written in caps, this means that all functions **must** be written in caps in order to function. {TO DO: update}
+Gqueries are in fact stored GQL procedures that have a key. So that if the user wants to know the total co2 emissions of an area, it can request the ETEngine for gquery `total_co2_emissions` and does not have to worry about the underlying intricacies.
 
-##  Constants
+### Writing gqueries
+
+Please note that the output that is printed in this documentation is dependent on the scenario the user is using. GQL is case sensitive. Since all GQL-functions are written in caps, this means that all functions **must** be written in caps in order to function.
+
+##  Functions
+
+### Constants
 
 ```ruby
 MWH_TO_GJ = 3.6
@@ -26,8 +32,6 @@ MJ_TO_PJ = BILLIONS
 MILLIONS = 10.0**6
 THOUSANDS = 1000.0
 ```
-
-##  Functions
 
 ### Aggregate functions
 
@@ -77,7 +81,7 @@ NEG(1,2,3)
 => -1
 ```
 
-AVG(values)
+#### AVG(values)
 Returns the average of all number (ignores nil values).
 ```
 AVG(1,2)    
@@ -367,7 +371,7 @@ window_size - The number of points to average over.
 
 ### Helper functions
 
-### SORT_BY(*objects, arguments)
+#### SORT_BY(*objects, arguments)
 With SORT_BY nodes can be sorted on one of their attributes.
 The nodes will be sorted ascending to the value of the attribute.
 Ranking of the nodes will start from 0.
@@ -384,8 +388,7 @@ SORT_BY(G(useful_demand),demand)
 ]
 ```
 
-
-### TXT_TABLE(objects, *argyments)
+#### TXT_TABLE(objects, *argyments)
 With TXT_TABLE 1 or more attributes from a node group can be queried.
 The nodes in the given node group will be sorted alphabetically.
 
@@ -429,7 +432,7 @@ TXT_TABLE(SORT_BY(G(useful_demand),demand),key,demand)
 +------------------------------------------------------------------------------+--------------------+
 ```
 
-### EXCEL_TABLE(objects, *arguments)
+#### EXCEL_TABLE(objects, *arguments)
 Similar functionality to TXT_TABLE
 
 
