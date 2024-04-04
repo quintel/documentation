@@ -14,26 +14,10 @@ Please note that the output that is printed in this documentation is dependent o
 
 ##  Functions
 
-### Constants
 
-```ruby
-MWH_TO_GJ = 3.6
-MONTHS_PER_YEAR = 12.0
-HOURS_PER_YEAR = 8760.0
-SECS_PER_HOUR = 3600.0
-SECS_PER_YEAR = SECS_PER_HOUR * HOURS_PER_YEAR
-KG_PER_TONNE = 1000
-LITER_PER_BARREL = 159
-MJ_TO_MHW = 3600
-MJ_PER_KWH = 3.6
-MJ_PER_MWH = 3600
-BILLIONS = 10.0**9
-MJ_TO_PJ = BILLIONS
-MILLIONS = 10.0**6
-THOUSANDS = 1000.0
-```
+### Math functions
 
-### Aggregate functions
+The math functions consists of functions that perform mathematical operations or calculations on numerical data. Some example functions are COUNT(), SUM(), DIVIDE() can be found here as well as comparing functions like GREATER() or EQUALS().
 
 #### COUNT(values)
 
@@ -41,7 +25,7 @@ Returns how many values. Removes nil values, but does not remove duplicates.
 
 *Basic example*:
 
-```
+```ruby
 COUNT(1) 
 => 1
 COUNT(1,2)  
@@ -49,21 +33,21 @@ COUNT(1,2)
 ```
 *Node example*:
 
-```
-COUNT(L(foo,bar)) 
+```ruby
+COUNT(V(foo,bar)) 
 => 2
 ```
 
 *multiple LOOKUPS (does not remove duplicates)*
 
-```
-COUNT(L(foo,bar), L(foo)) 
+```ruby
+COUNT(V(foo,bar), V(foo)) 
 => 3
 ```
 
 *Duplicates in one LOOKUP (does remove duplicates)*
-```
-COUNT(L(foo,bar,foo))
+```ruby
+COUNT(V(foo,bar,foo))
 => 2
 ```
 
@@ -73,7 +57,7 @@ Returns the *first* number as a negative
 
 *example*:
 
-```
+```ruby
 NEG(2) 
 => -2
 
@@ -83,7 +67,7 @@ NEG(1,2,3)
 
 #### AVG(values)
 Returns the average of all number (ignores nil values).
-```
+```ruby
 AVG(1,2)    
 => 1.5
 
@@ -96,7 +80,7 @@ AVG(1,nil,nil,2)
 
 #### SUM
 Returns the sum of all numbers (ignores nil values).
-```
+```ruby
 SUM(1,2) 
 => 3
 SUM(1,nil)  
@@ -107,7 +91,7 @@ SUM(1,nil)
 
 Multiplies all numbers (ignores nil values).
 
-```
+```ruby
 PRODUCT(1,2,3)
 =>6 (1*2*3)
 
@@ -119,7 +103,7 @@ PRODUCT(1,nil)
 #### DIVIDE(values)
 
 Divides the first value with the second value.
-```
+```ruby
 DIVIDE(1,2)
 => 0.5
 
@@ -127,401 +111,52 @@ DIVIDE(1,2,3,4)
 => 0.5 --> only takes the second.
 ```
 
-### Control functions
-
-#### EQUALS(values)
-
-Checks if the **first two** values that are given are equal.
-
-```
-EQUALS(2,2)
-=> true
-
-EQUALS(2,3)
-=> false
-
-EQUALS(2,2,3)
-=> true
-
-EQUALS(2,3,3)
-=> false
-```
-
-#### IF(condition, true_stmt, false_stmt)
-If the condition is true, the true_stmt is returned, if the condition is false, the false_stmt is retunred. 
-```
-IF(EQUALS(1,1),3,4) 
-=> 3 --> EQUALS(1,1) returns 'true', so 3 is returned.
-
-IF(EQUALS(1,2),3,4)
-=> 4 --> EQUALS(1,2) returns 'false', so 4 is returned.
-```
-
-### Core functions
-
-#### V(args)
-
-Shortcut for the LOOKUP and MAP function. Also see LOOKUP() and MAP().
-Used to retrieve information from the energy graph.
-
-Example with node
-```
-V(foo) --> LOOKUP(foo)
-=> foo
-```
-
-Example Lookup multiple nodes by their keys
-```
-V(foo,bar) --> LOOKUP(foo,bar)
-=> [<foo>, <bar>]
-```
-
-Example Lookup a node attribute
-```
-V(foo,demand) --> MAP(LOOKUP(foo,demand))
-=> 100 (When demand of node 'foo' is equal to 100)
-```
-
-Example nesting of LOOKUPs
-```
-V(V(foo), V(bar), demand) --> MAP(LOOKUP(foo, LOOKUP(bar)), demand)
-=> 100, 200 
-```
-
-Example pass objects to V()
-```
-V(CARRIER(electricity), cost_per_mj) --> = MAP( LOOKUP(CARRIER(electricity)), cost_per_mj )
-=> 23.3
-```
-#### VALUE(args)
-
-Alias for V()
-
-#### MV(args)
-
-Same functionalities as V, but used for the molecule graph. 
-
-#### Q(key)
-
-QUERY() or Q() returns the result of a gquery with given key.
-
-Example costs
-
-```
-Q(total_costs)
-=> 100
-```
-
-#### Query(key)
-
-Alias for Q()
-
-#### Lookup(keys)
-
-lookup energy graph objects by their corresponding key(s).
-keys - Provided keys should be energy graph node keys or Qernel objects 
-Returns an array of the elements of the query: matching nodes or objects. Duplicates and nil values are removed.
-
-Example 1 or 2 nodes:
-
-```
-LOOKUP(foo)  
-=> [Node(foo)]
-
-LOOKUP(foo, bar) 
-=> [Node(foo), Node(bar)]
-```
-
-Elements that are not node keys are simply returned:
-```
-LOOKUP(foo,3.0)  
-=> [Node(foo),3.0]
-
-LOOKUP(foo, CARRIER(coal)) 
-=> [Node(foo), Carrier(coal)]
-```
-
-nil and duplicate elements are removed:
-
-```
-LOOKUP(foo,nil)  
-=> [Node(foo)]
-
-LOOKUP(foo, Lookup(foo)) 
-=> [Node(foo)]
-```
-
-#### L(keys)
-Alias for Lookup
-
-#### ML(keys)
-
-Lookup or L for the moleculegraph, alias for MLOOKUP
-
-#### MLOOKUP(keys)
-Lookup or L for the moleculegraph, alias for ML.
-
-#### MAP(elements, attr_name)
-
-Access attributes of one or more objects.
-
-=== Single and composed attributes
-
-To query a single attribute simply pass it. You can put it inside '', "" or not.
-
-To join multiple attributes and numbers surround it with "" or ''.
-
-=== GQL functions as arguments
-
-You can pass a GQL function as an argument to a *single* method.
-Attributes dervied from GQL functions cannot be inside "" or ''.
-
-Example with a single attribute:
-```
-MAP(L(foo), demand)
-=> 100
-
-MAP(L(foo), "demand")
-=> 100
-
-MAP(L(foo,bar), demand)
-=> [100, 200]
-```
-
-Example Composed attributes add "" or ''
-
-```
-MAP(L(foo), 'demand * (3.0 + free_co2_factor)')
-=> 100
-```
-
-```
-MAP(L(foo), primary_demand_of(CARRIER(electricity)))
-```
-
-#### M(elements,attr_name)
-
-ALIAS for MAP
-
-#### GET(keys)
-
-Retrieves the attribute from one single object, similar to MAP.
-
-### Curves functions
-
-#### ATTACHED_CURVE(name)
-
-Looks up the attachment matching the `name`, and converts the contents into a curve. If no attachment is set, nil is returned.
-
-#### CLAMP_CURVE(curve, min, max)
-
-Restricts the values in a curve to be between the minimum and maximum. Raises an error if min > max.
-
-#### COALESCE_CURVE(curve, default = 0.0, length = 8760)
-
-If the given `curve` is an array of non-zero length, it is returned. If the curve is nil or empty, a new curve of `length` length is created, with each value set to `default`.
-
-#### CUMULATIVE_CURVE(curve)
-
-Creates a new curve where each index (n) is the sum of (0..n) in the source curve.
-
-
-#### INVERT_CURVE(curve)
-
-Inverts a single curve by swapping positive numbers to be negative, and vice-versa.
-
-#### SUM_CURVES(*curves)
-Adds the values in multiple curves.
-
-
-Example:
-
-```
-SUM_CURVES([1, 2], [3, 4])
-=> [4, 6]
-
-SUM_CURVES([[1, 2], [3, 4]])
-=> [4, 6]
-```
-
-#### PRODUCT_CURVES(left,right)
-Multiplies two curves elementwise.
-Note that unlike `SUM_CURVES`, `PRODUCT_CURVES` expects exactly two arguments, each one a curve.
-An error will be raised if either parameter is an array of curves, or if the curves don't have matching lengths.
-
-Example:
-```
-PRODUCT_CURVES([1, 2, 3], [4, 5, 6])
-=> [4, 10, 18]
-```
-
-#### DIVIDE_CURVES(left, right)
-Divides two curves elementwise.
-Note that unlike `SUM_CURVES`, `PRODUCT_CURVES` expects exactly two arguments, each one a curve.
-An error will be raised if either parameter is an array of curves, or if the curves don't have matching lengths.
-```
-DIVIDE_CURVES([1, 2, 3], [4, 5, 6])
-=> [0.25, 0.4, 0.5]
-```
-
-#### SMOOTH_CURVE(curve, window_size)
-Creates a smoothed curve using a moving average.
-curve       - An array of numbers.
-window_size - The number of points to average over.
-
-### Helper functions
-
-#### SORT_BY(*objects, arguments)
-#### SORT_BY(*objects, arguments)
-With SORT_BY nodes can be sorted on one of their attributes.
-The nodes will be sorted ascending to the value of the attribute.
-Ranking of the nodes will start from 0.
-Note that the value of the attribute will not be printed, see TXT_TABLE for this functionality.
-
-Example with the group 'useful_demand'.
-```
-SORT_BY(G(useful_demand),demand)
-=> 
-[
-  #<Node industry_useful_demand_for_chemical_other_hydrogen_non_energetic> 0,
-  #<Node bunkers_useful_demand_ships> 1,
-  ...,
-]
-```
-
-
-#### TXT_TABLE(objects, *argyments)
-With TXT_TABLE 1 or more attributes from a node group can be queried.
-The nodes in the given node group will be sorted alphabetically.
-
-Within the GQL-sandbox users can choose how the view the table in 4 different modes:
-* Table: Shows the table in standard GQL-sandbox format.
-* Text: Shows the table in text-format.
-* CSV: Shows the table in CSV (comma seperated values) format.
-* TSV: Shows the table in TSV (tab seperated values) format.
-
-Note: With 'key' the name of the node is printed.
-
-Example (output in text format, for readibility only the first 2 and last 2 rows of the table are shown):
-```
-TXT_TABLE(G(useful_demand),key,demand)
-=> 
-+------------------------------------------------------------------------------+--------------------+
-|                                     key                                      |       demand       |
-+------------------------------------------------------------------------------+--------------------+
-| agriculture_useful_demand_electricity                                        | 40964534066.695656 |
-| agriculture_useful_demand_useable_heat                                       | 98697676910.08954  
-|...                                                                           | ...                |
-| transport_useful_demand_trucks                                               | 144749566437.32986 |
-| transport_useful_demand_vans                                                 | 1280922944.4741797 |
-+------------------------------------------------------------------------------+--------------------+
-```
-
-This function can be combined with SORT_BY, so that a quick overview of the nodes with the highest attributes can be found.
-
-Example with SORT_BY (output in text format, for readibility only the first 2 and last 2 rows of the table are shown):
-```
-TXT_TABLE(SORT_BY(G(useful_demand),demand),key,demand)
-=> 
-+------------------------------------------------------------------------------+--------------------+
-|                                     key                                      |       demand       |
-+------------------------------------------------------------------------------+--------------------+
-| industry_useful_demand_for_chemical_other_hydrogen_non_energetic             | 0.0                |
-| bunkers_useful_demand_ships                                                  | 0.0                |
-|...                                                                           | ...                |
-| industry_useful_demand_for_chemical_other_non_energetic                      | 414554538059.73004 |
-| industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic       | 2650973321780.0    |
-+------------------------------------------------------------------------------+--------------------+
-```
-
-#### EXCEL_TABLE(objects, *arguments)
-#### EXCEL_TABLE(objects, *arguments)
-Similar functionality to TXT_TABLE
-
-
-### Legacy functions
-
-#### FILTER(collection, filter)
-Imposes a filter.
-
-Can be used to impose a filter on node groups based on node attributes, see example.
-
-Example:
-
-```
-FILTER(G(electricity_production),"geothermal_input_conversion > 0.0")
-=> 
-[
-  <#Node energy_power_geothermal>,
-]
-```
-
-#### CHILDREN(*nodes)
-todo
-
-#### PARENTS(*nodes)
-todo
-
-#### INTERSECTION(*keys)
-Returns the elements that are present in both the first and second arrays.
-
-```
-INTERSECTION( V(1,2,3) , V(2,3,4) )
-=> [2, 3]
-```
-
-#### EXCLUDE(*keys)
-Returns an Array of elements of the first array excluding the second array.
-```
-EXCLUDE( V(1,2,3) , V(2,3,4) )
-=> [1]
-```
 #### INVALID_TO_ZERO(*keys)
-Deprecated?
+TO-DO
 
 #### MAX(*values)
 Returns the highest number.
-```
+```ruby
 MAX(-3,-2,5)
 => 5
 ```
 #### MIN(*values)
 Returns the lowest number.
-```
+```ruby
 MIN(-3,-2,5)
 => - 3
 ```
 #### ABS(*values)
 Returns all given numbers in absolute values.
-```
+```ruby
 ABS(-3,-2,5)
 => [3,2,5]
 ```
 
 #### ROUND(value, precision = 0)
 Public: Rounds numeric value to a given precision.
-```
+```ruby
 ROUND(3.334,2)
 => [3.33]
 ```
 
 #### FLOOR(value, precision = 0)
 Returns the largest number less than or equal to numeric value.
-```
+```ruby
 FLOOR(3.5)
 => 3
 ```
 
-#### CEIL(value, precision = 0)
+#### CEIV(value, precision = 0)
 Returns the smallest number greater than or equal to numeric value.
-```
-CEIL(3.5)
+```ruby
+CEIV(3.5)
 => 4
 ```
 
 #### SQRT(*values)
 Returns the square root of the given values.
-```
+```ruby
 SQRT(4) 
 => [2]
 
@@ -531,17 +166,15 @@ SQRT(4,9)
 SUM(SQRT(4,9)) 
 => 5
 
-
-
 ```
-### Other functions
+
 
 #### LESS(x,y)
 Returns true when x is smaller than y.
 
 Note: This function only looks at the first two values entered in this function.
 
-```
+```ruby
 LESS(1,2) 
 => true
 
@@ -561,7 +194,7 @@ Returns true when x is smaller or equal than y.
 
 Note: This function only looks at the first two values entered in this function.
 
-```
+```ruby
 LESS_OR_EQUAL(1,2) 
 => true
 
@@ -583,7 +216,7 @@ Returns true when x is greater than y.
 
 Note: This function only looks at the first two values entered in this function.
 
-```
+```ruby
 GREATER(1,2) 
 => false
 
@@ -602,7 +235,7 @@ Returns true when x is smaller or equal than y.
 
 Note: This function only looks at the first two values entered in this function.
 
-```
+```ruby
 GREATER_OR_EQUAL(1,2) 
 => false
 
@@ -624,7 +257,7 @@ Returns true when x is equal to y.
 
 Note: This function only looks at the first two values entered in this function.
 
-```
+```ruby
 EQUALS(1,1) 
 => true
 
@@ -640,7 +273,7 @@ Returns true when x is not equal to y.
 
 Note: This function only looks at the first two values entered in this function.
 
-```
+```ruby
 NOT(1,1) 
 => false
 
@@ -652,7 +285,7 @@ NOT(1,1,5)
 ```
 
 #### OR
-todo
+TO-DO
 
 #### IS_NUMBER(x)
 Returns true when x is a number.
@@ -661,7 +294,7 @@ Note: The value is only recognized when placed in brackets.
 Furthermore it only looks at the first element inside the brackets.
 While not using brackets, the function will expect one element.
 
-```
+```ruby
 IS_NUMBER(1) 
 => Error
 
@@ -687,7 +320,7 @@ Returns the negative value of the given value.
 
 Note: Only the first value is taken into account.
 
-```
+```ruby
 NEG(1) 
 => -1
 
@@ -700,7 +333,7 @@ NEG(-1,-2)
 
 #### UNIT(x,unit)
 Converts a value to another format.
-```
+```ruby
 UNIT(0.15,percentage) 
 => 15.0 (%)
 ```
@@ -709,7 +342,7 @@ UNIT(0.15,percentage)
 Returns the inverse of a given value.
 
 Note: Only the first value is taken into account.
-```
+```ruby
 INVERSE(5)
 => 0.2
 
@@ -720,30 +353,114 @@ INVERSE(5,2)
 
 #### FLATTEN(array)
 Flattens any nested arrays into a single array with depth=1, removing nils
-```
+```ruby
 FLATTEN([[1],[2],[3]])
 =>
 [1,2,3]
 ```
 
+#### EQUALS(values)
 
-#### flatten_compact(array)
-Same functionality as FLATTEN
+Checks if the **first two** values that are given are equal.
 
-#### flatten_uniq(array)
-Same functionality as FLATTEN, removes duplicate values.
+```ruby
+EQUALS(2,2)
+=> true
+
+EQUALS(2,3)
+=> false
+
+EQUALS(2,2,3)
+=> true
+
+EQUALS(2,3,3)
+=> false
 ```
-FLATTEN([[1],[2],[3]])
-=>
-[1,2,3]
 
-FLATTEN([[1],[1],[3]])
-=>
-[1,3]
+#### IF(condition, true_stmt, false_stmt)
+If the condition is true, the true_stmt is returned, if the condition is false, the false_stmt is retunred. 
+```ruby
+IF(EQUALS(1,1),3,4) 
+=> 3 --> EQUALS(1,1) returns 'true', so 3 is returned.
 
+IF(EQUALS(1,2),3,4)
+=> 4 --> EQUALS(1,2) returns 'false', so 4 is returned.
 ```
 
+### Core functions
 
+The Core functions form the core of GQL. With these functions you can extract data from elements of the model. 
+
+#### V(args)
+
+Shortcut for the LOOKUP and MAP function. Also see LOOKUP() and MAP().
+Used to retrieve information from the energy graph.
+
+Example with node
+```ruby
+V(foo) --> LOOKUP(foo)
+=> foo
+```
+
+Example Lookup multiple nodes by their keys
+```ruby
+V(foo,bar) --> LOOKUP(foo,bar)
+=> [<foo>, <bar>]
+```
+
+Example Lookup a node attribute
+```ruby
+V(foo,demand) --> MAP(LOOKUP(foo,demand))
+=> 100 (When demand of node 'foo' is equal to 100)
+```
+
+Example nesting of LOOKUPs
+```ruby
+V(V(foo), V(bar), demand) --> MAP(LOOKUP(foo, LOOKUP(bar)), demand)
+=> 100, 200 
+```
+
+Example pass objects to V()
+```ruby
+V(CARRIER(electricity), cost_per_mj) --> = MAP( LOOKUP(CARRIER(electricity)), cost_per_mj )
+=> 23.3
+```
+
+#### MV(args)
+
+Same functionalities as V, but used for the molecule graph. 
+
+#### Q(key)
+
+QUERY() or Q() returns the result of a gquery with given key.
+
+Example costs
+
+```ruby
+Q(total_costs)
+=> 100
+```
+
+#### FILTER(collection, filter)
+Imposes a filter.
+
+Can be used to impose a filter on node groups based on node attributes, see example.
+
+Example:
+
+```ruby
+FILTER(G(electricity_production),"geothermal_input_conversion > 0.0")
+=> 
+[
+  <#Node energy_power_geothermal>,
+]
+```
+
+#### CHILDREN(*nodes)
+TO-DO
+
+#### PARENTS(*nodes)
+TO-DO
 
 #### QUERY_PRESENT(key)
 Returns the present value of the the gquery, when given a key.
@@ -782,7 +499,7 @@ error
 Returns the present value of the the gquery, when given a key.
 If the argument is a lambda ( -> { ... }), it returns the present value of the query inside the lamba. 
 
-```
+```ruby
 GRAPH(year)
 =>
 2019      2,019
@@ -810,7 +527,7 @@ error
 #### QUERY_DELTA(key)
 
 Returns the delta of the present value and future value of the query. Note: an operation within this query should be noted inside ( -> { ... }). See examples: 
-```
+```ruby
 QUERY_DELTA(graph_year)  
 => 
 2019: 0.0
@@ -826,19 +543,6 @@ QUERY_DELTA(GRAPH(year))
 error
 ```
 
-#### MIXED
-TODO
-
-
-#### GRAPH(keys)
-Returns an attribute of a graph:
-keys - the name of the attribute.
-```
-GRAPH(year)
-=>
-2019      2,019
-2050      2,050
-```
 
 #### ALL
 Returns an Array of all nodes in the energy graph. #Why is this necesary?
@@ -851,7 +555,7 @@ Can also be found via the engine.
 #### GROUP(group)
 
 Returns an Array of all nodes for a given energy group.
-```
+```ruby
 GROUP(apartments)
 =>
 [
@@ -865,7 +569,7 @@ GROUP(apartments)
 ```
 #### MGROUP(group)
 Returns an Array of all nodes for a given molecule group.
-```
+```ruby
 MGROUP(ccu_emitted)
 
 [
@@ -874,16 +578,16 @@ MGROUP(ccu_emitted)
 ```
 
 #### EDGE_GROUP(group)
-Deprecated?
+TO-DO
 
 #### MEDGE_GROUP
-Deprecated?
+TO-DO
 
 #### SECTOR(sector)
 
 Returns an Array of nodes for a given energy sector
 
-```
+```ruby
 ###SECTOR(households)
 =>
 [
@@ -897,7 +601,7 @@ Returns an Array of nodes for a given energy sector
 
 Returns an Array of nodes for a given molecule sector
 
-```
+```ruby
 SECTOR(energy)
 =>
 [
@@ -907,25 +611,11 @@ SECTOR(energy)
 ]
 ```
 
-#### USE(key)
-
-Returns an Array of nodes for given energy use
-
-```
-USE(energetic)
-[
-  #<Node agriculture_burner_crude_oil>,
-  #<Node agriculture_burner_hydrogen>,
-...
-]
-```
-
-
 #### CARRIER(key)
 Returns an Array of carriers for given key(s). Returns carriers belonging to the energy graph.
 #### Could use some more details on why this is useful.
 
-```
+```ruby
 CARRIER(electricity)
 =>
 [
@@ -940,42 +630,15 @@ Returns an Array of carriers for given key(s). Returns carriers belonging to the
 Returns an attribute.
 
 Example:
-```
+```ruby
 AREA(present_number_of_residences) 
 => 7349500.0
 ```
 
-
-#### INSULATION_COST
-TODO; deprecated?
-
-#### WEATHER_PROPERTY
-deprecated?
-
-#### FEVER_DEMAND
-Useful?
-
-#### FEVER_PRODUCTION
-Useful?
-
-#### CURVE_SET_VARIANTS
-
-#### GOAL
-Deprecated?
-
-#### GOAL_IS_SET
-Deprecated?
-#### GOAL_USER_VALUE
-Deprecated?
-
-
-#### ELEMENT_AT
-Deprecated
-
 #### LAST(values)
 Returns the last element of the array.
 
-```
+```ruby
 LAST(V(1,2,3))
 =>
 3
@@ -984,7 +647,7 @@ LAST(V(1,2,3))
 #### FIRST(values)
 Returns the first element of the array.
 Example:
-```
+```ruby
 LAST(V(1,2,3))
 =>
 1
@@ -993,7 +656,7 @@ LAST(V(1,2,3))
 #### EDGE(lft,rgt)
 
 Returns the edge that goes from the first (lft) to the second node (rgt) for the energy graph. 
-```
+```ruby
 EDGE(energy_import_electricity,energy_interconnector_1_imported_electricity
 )
 =>
@@ -1008,14 +671,14 @@ Returns the edge that goes from the  first (lft) to the second node (rgt) for th
 #### EDGES
 
 Retrieves edges based on given node(s) and optional arguments to filter or specify the type of edges.
-```
-EDGES(L(foo))
+```ruby
+EDGES(V(foo))
 =>
 [foo->gas_1, foo->gas_2, loss1->foo, heat1->foo]
 
-EDGES(L(foo), "share?")
-EDGES(L(foo), "flexible?")
-EDGES(L(foo), "flexible? && share >= 1.0")
+EDGES(V(foo), "share?")
+EDGES(V(foo), "flexible?")
+EDGES(V(foo), "flexible? && share >= 1.0")
 =>
 [Edges based on specified constraints]
 
@@ -1023,23 +686,23 @@ EDGES(OUTPUT_SLOTS(foo, heat))
 =>
 [heat->foo]
 
-EDGES(L(foo, bar))
+EDGES(V(foo, bar))
 =>
 [Edges of multiple nodes]
 ```
 
 #### OUTPUT_SLOTS
 Gets the output (to the left) slots of node(s). Can specify a particular type of slot or retrieve all output slots.
-```
+```ruby
 OUTPUT_SLOTS(foo)
 =>
 [(loss)-foo, (heat)-foo]
 
-OUTPUT_SLOTS(L(foo))
+OUTPUT_SLOTS(V(foo))
 =>
 [(loss)-foo, (heat)-foo]
 
-OUTPUT_SLOTS(L(foo, bar))
+OUTPUT_SLOTS(V(foo, bar))
 =>
 [(loss)-foo, (heat)-foo, ...]
 
@@ -1053,7 +716,7 @@ OUTPUT_SLOTS(foo, loss)
 Gets the input (to the right) slots of node(s). Can specify a particular type of slot or retrieve all input slots.
 Examples:
 
-```
+```ruby
 INPUT_SLOTS(foo)
 =>
 [foo-(gas), foo-(oil)]
@@ -1067,14 +730,14 @@ INPUT_SLOTS(foo, gas)
 INPUT_EDGES(value_terms, arguments = nil)
 Retrieves input edges based on given node(s) and optional arguments to filter or specify the type of edges.
 Examples:
-```
-INPUT_EDGES(L(foo))
+```ruby
+INPUT_EDGES(V(foo))
 =>
 [All input edges of node 'foo']
 
-INPUT_EDGES(L(foo), "share?")
-INPUT_EDGES(L(foo), "flexible?")
-INPUT_EDGES(L(foo), "flexible? && share >= 1.0")
+INPUT_EDGES(V(foo), "share?")
+INPUT_EDGES(V(foo), "flexible?")
+INPUT_EDGES(V(foo), "flexible? && share >= 1.0")
 =>
 [Input edges based on specified constraints]
 
@@ -1082,21 +745,21 @@ INPUT_EDGES(INPUT_SLOTS(foo, oil))
 =>
 [foo->oil_1]
 
-INPUT_EDGES(L(foo, bar))
+INPUT_EDGES(V(foo, bar))
 =>
 [Input edges of multiple nodes]
 ```
 
 #### OUTPUT_EDGES
 Retrieves output edges based on given node(s) and optional arguments to filter or specify the type of edges.
-```
-OUTPUT_EDGES(L(foo))
+```ruby
+OUTPUT_EDGES(V(foo))
 =>
 [All output edges of node 'foo']
 
-OUTPUT_EDGES(L(foo), "share?")
-OUTPUT_EDGES(L(foo), "flexible?")
-OUTPUT_EDGES(L(foo), "flexible? && share >= 1.0")
+OUTPUT_EDGES(V(foo), "share?")
+OUTPUT_EDGES(V(foo), "flexible?")
+OUTPUT_EDGES(V(foo), "flexible? && share >= 1.0")
 =>
 [Output edges based on specified constraints]
 
@@ -1104,17 +767,245 @@ OUTPUT_EDGES(OUTPUT_SLOTS(foo, heat))
 =>
 [heat->foo]
 
-OUTPUT_EDGES(L(foo, bar))
+OUTPUT_EDGES(V(foo, bar))
 =>
 [Output edges of multiple nodes]
 ```
 
+### Curves functions
 
+With these functions you can perform operations with curves from the merit or fever modules.
 
-#### EACH
-Runs multiple (update) queries.
+#### CLAMP_CURVE(curve, min, max)
+
+Restricts the values in a curve to be between the minimum and maximum. Raises an error if min > max.
+
 Example:
+```ruby
+CLAMP_CURVE([1,2,3,4],0,2)
+=> [1,2,2,2]
+
+CLAMP_CURVE([1,-2,3,-4],0,2)
+=> [1,0,2,0]
 ```
+
+#### COALESCE_CURVE(curve, default = 0.0, length = 8760)
+
+If the given `curve` is an array of non-zero length, it is returned. If the curve is nil or empty, a new curve of `length` length is created, with each value set to `default`.
+
+Example with 'nil':
+```ruby
+COALESCE_CURVE(nil,3,5)
+=> [3,3,3,3,3]
+
+COALESCE_CURVE(nil)
+=> [0,0,0,...,0]
+Since no values are given for default & length, these are set to 0 & 8760 respectively
+
+```
+
+#### CUMULATIVE_CURVE(curve)
+
+Creates a new curve where each index (n) is the sum of (0..n) in the source curve.
+Example:
+
+```ruby
+CUMULATIVE_CURVE([1, 2,3,4])
+=> [1,3,6,10]
+
+CUMULATIVE_CURVE([1,-2,3,-4])
+=> [1,-1,2,-2]
+```
+
+
+#### INVERT_CURVE(curve)
+
+Inverts a single curve by swapping positive numbers to be negative, and vice-versa.
+Example:
+
+```ruby
+INVERT_CURVE([1, 2,3,4])
+=> [-1,-2,-3,-4]
+
+INVERT_CURVE([1,-2,3,-4])
+=> [-1,2,-3,4]
+```
+
+
+#### SUM_CURVES(*curves)
+Adds the values in multiple curves.
+
+
+Example:
+
+```ruby
+SUM_CURVES([1, 2], [3, 4])
+=> [4, 6]
+
+SUM_CURVES([[1, 2], [3, 4]])
+=> [4, 6]
+```
+
+#### PRODUCT_CURVES(left,right)
+Multiplies two curves elementwise.
+Note that unlike `SUM_CURVES`, `PRODUCT_CURVES` expects exactly two arguments, each one a curve.
+An error will be raised if either parameter is an array of curves, or if the curves don't have matching lengths.
+
+Example:
+```ruby
+PRODUCT_CURVES([1, 2, 3], [4, 5, 6])
+=> [4, 10, 18]
+```
+
+#### DIVIDE_CURVES(left, right)
+Divides two curves elementwise.
+Note that unlike `SUM_CURVES`, `PRODUCT_CURVES` expects exactly two arguments, each one a curve.
+An error will be raised if either parameter is an array of curves, or if the curves don't have matching lengths.
+```ruby
+DIVIDE_CURVES([1, 2, 3], [4, 5, 6])
+=> [0.25, 0.4, 0.5]
+```
+
+#### SMOOTH_CURVE(curve, window_size)
+Creates a smoothed curve using a moving average.
+curve       - An array of numbers.
+window_size - The number of points to average over.
+
+### Helper functions
+
+These functions can support the user in gaining a quick insight in the data. See the examples below for use cases of these functions.
+
+#### SORT_BY(*objects, arguments)
+With SORT_BY nodes can be sorted on one of their attributes.
+The nodes will be sorted ascending to the value of the attribute.
+Ranking of the nodes will start from 0.
+Note that the value of the attribute will not be printed, see TXT_TABLE for this functionality.
+
+Example with the group 'useful_demand'.
+```ruby
+SORT_BY(G(useful_demand),demand)
+=> 
+[
+  #<Node industry_useful_demand_for_chemical_other_hydrogen_non_energetic> 0,
+  #<Node bunkers_useful_demand_ships> 1,
+  ...,
+]
+```
+
+
+#### TXT_TABLE(objects, *argyments)
+With TXT_TABLE 1 or more attributes from a node group can be queried.
+The nodes in the given node group will be sorted alphabetically.
+
+Within the GQL-sandbox users can choose how the view the table in 4 different modes:
+* Table: Shows the table in standard GQL-sandbox format.
+* Text: Shows the table in text-format.
+* CSV: Shows the table in CSV (comma seperated values) format.
+* TSV: Shows the table in TSV (tab seperated values) format.
+
+Note: With 'key' the name of the node is printed.
+
+Example (output in text format, for readibility only the first 2 and last 2 rows of the table are shown):
+```ruby
+TXT_TABLE(G(useful_demand),key,demand)
+=> 
++------------------------------------------------------------------------------+--------------------+
+|                                     key                                      |       demand       |
++------------------------------------------------------------------------------+--------------------+
+| agriculture_useful_demand_electricity                                        | 40964534066.695656 |
+| agriculture_useful_demand_useable_heat                                       | 98697676910.08954  
+|...                                                                           | ...                |
+| transport_useful_demand_trucks                                               | 144749566437.32986 |
+| transport_useful_demand_vans                                                 | 1280922944.4741797 |
++------------------------------------------------------------------------------+--------------------+
+```
+
+This function can be combined with SORT_BY, so that a quick overview of the nodes with the highest attributes can be found.
+
+Example with SORT_BY (output in text format, for readibility only the first 2 and last 2 rows of the table are shown):
+```ruby
+TXT_TABLE(SORT_BY(G(useful_demand),demand),key,demand)
+=> 
++------------------------------------------------------------------------------+--------------------+
+|                                     key                                      |       demand       |
++------------------------------------------------------------------------------+--------------------+
+| industry_useful_demand_for_chemical_other_hydrogen_non_energetic             | 0.0                |
+| bunkers_useful_demand_ships                                                  | 0.0                |
+|...                                                                           | ...                |
+| industry_useful_demand_for_chemical_other_non_energetic                      | 414554538059.73004 |
+| industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic       | 2650973321780.0    |
++------------------------------------------------------------------------------+--------------------+
+```
+#### EACH
+Lets the user run multiple queries.
+Example:
+```ruby
+EACH(
+  SUM(foo, ...),
+  SUM(bar, ...)
+)
+=>
+[Results of SUM queries]
+
+```
+
+### Set functions
+These functions concern operations associated with graph theory.
+
+
+#### INTERSECTION(*keys)
+Returns the elements that are present in both the first and second arrays.
+
+```ruby
+INTERSECTION( V(1,2,3) , V(2,3,4) )
+=> [2, 3]
+```
+
+#### EXCLUDE(*keys)
+Returns an Array of elements of the first array excluding the second array.
+```ruby
+EXCLUDE( V(1,2,3) , V(2,3,4) )
+=> [1]
+```
+
+
+### Fever functions
+
+These functions concern operations associated with the Fever module.
+
+#### FEVER_DEMAND
+TO-DO
+
+#### FEVER_PRODUCTION
+TO-DO
+#### FEVER_PRODUCTION_CURVE_FOR_COUPLE
+TO-DO
+
+#### FEVER_DEMAND_CURVE_FOR_PEOPLE
+TO-DO
+
+#### FEVER_PRODUCTION_CURVE
+TO-DO
+#### FEVER_DEMAND_CURVE
+TO-DO
+
+### Update functions
+These functions concern operations used to update values in the model.
+
+
+#### UPDATE
+Updates attributes or elements based on the specified conditions or inputs, with various strategies (absolute, relative_total, or relative_per_year).
+Can be combined with the UPDATE function.
+
+```ruby
+UPDATE(V(foo), demand, 100)
+=>
+Demand becomes 100
+
+UPDATE(V(foo, bar, baz), demand, 5)
+=>
+Demand of all nodes becomes 5
+
 EACH(
   UPDATE(foo, ...),
   UPDATE(bar, ...)
@@ -1122,25 +1013,12 @@ EACH(
 =>
 [Results of UPDATE queries]
 
-```
-
-#### UPDATE
-Updates attributes or elements based on the specified conditions or inputs, with various strategies (absolute, relative_total, or relative_per_year).
-
-```
-UPDATE(L(foo), demand, 100)
-=>
-Demand becomes 100
-
-UPDATE(L(foo, bar, baz), demand, 5)
-=>
-Demand of all nodes becomes 5
 
 ```
 #### UPDATE_WITH_FACTOR
 Same as UPDATE, but the input value is expected to be a factor that the user supplies.
 Example:
-```
+```ruby
 UPDATE_WITH_FACTOR(V(foo), preset_demand, 1.1)
 =>
 Foo gets a demand of 110.0
@@ -1150,8 +1028,8 @@ Foo gets a demand of 110.0
 #### UPDATE_ABSOLUTE
 Same as UPDATE, but forcefully behaving as the absolute strategy.
 Example:
-```
-UPDATE_ABSOLUTE(L(foo), demand, 500)
+```ruby
+UPDATE_ABSOLUTE(V(foo), demand, 500)
 =>
 Demand of foo becomes 500
 
@@ -1160,7 +1038,7 @@ Demand of foo becomes 500
 #### USER_INPUT
 Retrieves the numeric value of the user input, handling different formats (absolute, percentage, etc.).
 Example:
-```
+```ruby
 USER_INPUT()
 =>
 3.0 (if the user input is "3")
@@ -1169,29 +1047,27 @@ USER_INPUT()
 #### INPUT_VALUE(key)
 Retrieves the value of a specified input.
 Example:
-```
+```ruby
 INPUT_VALUE('agriculture_geothermal_share')
 =>
 0.104
 ```
 
-#### UPDATE_OBJECT()
-Accesses the currently updated object in the context of an UPDATE statement.
-Example:
-```
-UPDATE(L(foo, bar), demand, -> {V(UPDATE_OBJECT(), demand) + USER_INPUT()})
-=>
-[Increments demand of foo and bar based on user input]
+### Constants
 
-```
-
-#### UPDATE_COLLECTION()
-Accesses all objects in the current UPDATE statement.
-Example:
-```
-UPDATE(L(foo, bar, baz), demand, -> {
-  SUM(V(UPDATE_COLLECTION(), demand)) - V(UPDATE_OBJECT(), demand)
-})
-=>
-[Updates demands of foo, bar, baz with the remainder]
+```ruby
+MWH_TO_GJ = 3.6
+MONTHS_PER_YEAR = 12.0
+HOURS_PER_YEAR = 8760.0
+SECS_PER_HOUR = 3600.0
+SECS_PER_YEAR = SECS_PER_HOUR * HOURS_PER_YEAR
+KG_PER_TONNE = 1000
+LITER_PER_BARREL = 159
+MJ_TO_MHW = 3600
+MJ_PER_KWH = 3.6
+MJ_PER_MWH = 3600
+BILLIONS = 10.0**9
+MJ_TO_PJ = BILLIONS
+MILLIONS = 10.0**6
+THOUSANDS = 1000.0
 ```
