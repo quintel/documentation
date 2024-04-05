@@ -25,10 +25,12 @@ The yearly costs of a scenario in the ETM is built up from all technologies, car
   -  Other intallations (synthetic kerosine, regasification of lng, and energy compressors for network gas)
 
 3. **Infrastructure**: CAPEX + OPEX of the energy infrastructure. Subgroups:
-  -  Gas network (natural gas and green gas) 
-  -  Heat network
-  -  Hydrogen network
-  -  Electricity network
+  -  Gas (includes gas network for natural gas and green gas and terminal costs for import of liquid natural gas) 
+  -  Heat (network costs)
+  -  Hydrogen carriers (includes hydrogen network and terminal costs for import of liquid hydrogen and LOHC)
+  -  Electricity (network costs)
+  -  Ammonia (terminal costs for import of ammonia)
+  -  Oil (terminal costs for import of diesel)
    
 4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). All G2P is associated with means of 'Energy production'. Subgroups:
   -  Power-to-power (p2p)
