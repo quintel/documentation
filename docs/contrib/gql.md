@@ -17,7 +17,7 @@ GQL is case sensitive. Since all GQL-functions are written in caps, this means t
 - Base gqueries have a consistent set of base units, for example `MW` for **capacity** and `MJ` for **energy**.
 - Base gqueries have a consistent nomenclature: for example **type**, **subtype**, **sector**, **subsector**, **carrier**.
 - Base gqueries should have a description.
-- Gqueries indent first with 4 spaces, then with 2 spaces.
+- To enhance readability, our preferred indentation style for Gqueries involves initially indenting with 4 spaces, followed by an additional 2 spaces for subsequent levels.
 
 Example for `final_demand_energetic_industry_steel_wood_pellets`:
 ```
@@ -128,11 +128,21 @@ DIVIDE(1,2,3,4)
 => 0.5 --> only takes the second.
 ```
 
-#### INVALID_TO_ZERO(*keys)
+#### INVALID_TO_ZERO(keys)
 
-TO-DO
+When an invalid value is given, a zero is returned.
+```ruby
+INVALID_TO_ZERO(nil)
+=> 0
 
-#### MAX(*values)
+INVALID_TO_ZERO(3)
+=> 3
+
+INVALID_TO_ZERO([3,3,nil,4])
+=> [3,3,0,4]
+```
+
+#### MAX(values)
 
 Returns the highest number.
 
@@ -141,7 +151,7 @@ MAX(-3,-2,5)
 => 5
 ```
 
-#### MIN(*values)
+#### MIN(values)
 
 Returns the lowest number.
 
@@ -150,7 +160,7 @@ MIN(-3,-2,5)
 => - 3
 ```
 
-#### ABS(*values)
+#### ABS(values)
 
 Returns all given numbers in absolute values.
 
@@ -186,7 +196,7 @@ CEIL(3.5)
 => 4
 ```
 
-#### SQRT(*values)
+#### SQRT(values)
 
 Returns the square root of the given values.
 
@@ -303,8 +313,22 @@ NOT(1,1,5)
 => false
 ```
 
-#### OR
-TO-DO
+#### OR(values)
+Takes any number of arguments and checks if any of the arguments are true. 
+If any are true, the functions returns 'true'. If not, false is returned.
+```ruby
+OR(true,false) 
+=> true --> true is one of the arguments.
+
+OR(false,false)
+=> false --> true is not one of the arguments
+
+OR(3,3)
+=> false --> true is not one of the arguments
+```
+
+
+
 
 #### IS_NUMBER(x)
 
@@ -462,13 +486,21 @@ Q(total_costs)
 => 100
 ```
 
-#### CHILDREN(*nodes)
+#### CHILDREN(nodes)
 
-TO-DO
+Outputs the nodes corresponding to the outgoing edges of the given node.
+```ruby
+CHILDREN(V(households_space_heater_coal))
+=> <Node households_final_demand_for_space_heating_coal>
+```
 
-#### PARENTS(*nodes)
+#### PARENTS(nodes)
+```ruby
+PARENTS(V(households_space_heater_coal))
+=> <Node households_space_heater_coal_aggregator>
+```
 
-TO-DO
+Outputs the nodes corresponding to the incoming edges of the given node.
 
 #### QUERY_PRESENT(key)
 
@@ -518,11 +550,11 @@ Q(graph_year)
 
 QUERY_FUTURE(graph_year)  
 =>
-2,019
+2,050
 
 QUERY_FUTURE( -> { GRAPH(year) } )   
 => 
-2,019
+2,050
 
 QUERY_FUTURE(GRAPH(year))   
 => 
@@ -719,7 +751,7 @@ CLAMP_CURVE([1,-2,3,-4],0,2)
 
 #### COALESCE_CURVE(curve, default = 0.0, length = 8760)
 
-If the given `curve` is an array of non-zero length, it is returned. If the curve is nil or empty, a new curve of `length` length is created, with each value set to `default`.
+If the given `curve` is an array of non-zero length, it is returned. If the curve is nil or empty, a new curve with the lentgh of the value that is given to `length` is created, each value in the curve is set to the value that is given to `default`.
 
 ```ruby
 COALESCE_CURVE(nil,3,5)
@@ -757,7 +789,7 @@ INVERT_CURVE([1,-2,3,-4])
 ```
 
 
-#### SUM_CURVES(*curves)
+#### SUM_CURVES(curves)
 
 Adds the values in multiple curves.
 
@@ -787,15 +819,23 @@ DIVIDE_CURVES([1, 2, 3], [4, 5, 6])
 
 #### SMOOTH_CURVE(curve, window_size)
 
-Creates a smoothed curve using a moving average.
-curve       - An array of numbers.
-window_size - The number of points to average over.
+Creates a smoothed curve using a moving average. `curve` is the curve you want to use as input, the `window_size` is the number of points the curve will be averaged over.
+
+```ruby
+SMOOTH_CURVE([3,2,4,3],1)
+=> [3,2,4,3] --> Returns the input curve since each point is averaged on only one point.
+```
+```ruby
+SMOOTH_CURVE([3,2,4,3],2)
+=> [3,2.5,3,3.5] --> Returns a differenct curve since the window_size is bigger.
+```
+
 
 ### Helper functions
 
 These functions can support the user in gaining a quick insight in the data. See the examples below for use cases of these functions.
 
-#### SORT_BY(*objects, arguments)
+#### SORT_BY(objects, arguments)
 
 With SORT_BY nodes can be sorted on one of their attributes. The nodes will be sorted ascending to the value of the attribute. Ranking of the nodes will start from 0. Note that the value of the attribute will not be printed, see TXT_TABLE for this functionality.
 
@@ -958,7 +998,7 @@ CARRIER(electricity)
 
 Returns an Array of carriers for given key(s). Returns carriers belonging to the molecule graph. See CARRIER.
 
-#### INTERSECTION(*keys)
+#### INTERSECTION(keys)
 
 Returns the elements that are present in both the first and second arrays.
 
@@ -967,7 +1007,7 @@ INTERSECTION( V(1,2,3) , V(2,3,4) )
 => [2, 3]
 ```
 
-#### EXCLUDE(*keys)
+#### EXCLUDE(keys)
 
 Returns an Array of elements of the first array excluding the second array.
 
@@ -1042,17 +1082,6 @@ Same as `UPDATE`, but the input value is expected to be a factor that the user s
 UPDATE_WITH_FACTOR(V(foo), preset_demand, 1.1)
 =>
 Foo gets a demand of 110.0
-
-```
-
-#### UPDATE_ABSOLUTE()
-
-Same as `UPDATE`, but forcefully behaving as the absolute strategy.
-
-```ruby
-UPDATE_ABSOLUTE(V(foo), demand, 500)
-=>
-Demand of foo becomes 500
 
 ```
 
