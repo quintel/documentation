@@ -6,7 +6,7 @@ GQL is used to calculate values that are used in the graphs, tables and figures 
 
 ## Gqueries
 
-Gqueries are in fact stored GQL procedures that have a key. So that if the user wants to know the total co2 emissions of an area, it can request the ETEngine for gquery `total_co2_emissions` and does not have to worry about the underlying intricacies.
+Gqueries are in fact stored GQL procedures that have a key. So that if the user wants to know the total co2 emissions of an area, it can request ETEngine for the gquery `total_co2_emissions` and does not have to worry about the underlying intricacies.
 
 ### Writing gqueries
 
@@ -17,7 +17,7 @@ GQL is case sensitive. Since all GQL-functions are written in caps, this means t
 - Base gqueries have a consistent set of base units, for example `kg` for **emissions**, `MW` for **capacity** and `MJ` for **energy**.
 - Base gqueries have a consistent nomenclature: for example **type**, **subtype**, **sector**, **subsector**, **carrier**.
 - Base gqueries should have a description.
-- To enhance readability, our preferred indentation style for Gqueries involves initially indenting with 4 spaces, followed by an additional 2 spaces for subsequent levels.
+- To enhance readability, the preferred indentation style for gqueries is first to indent with 4 spaces, followed by an additional 2 spaces for each subsequent level (see the example below).
 
 Example for `final_demand_energetic_industry_steel_wood_pellets`:
 ```
@@ -735,7 +735,7 @@ OUTPUT_EDGES(V(foo, bar))
 
 ### Curves functions
 
-With these functions you can perform operations with curves from the merit or fever modules.
+With these functions you can perform operations with curves from the merit modules.
 
 #### CLAMP_CURVE(curve, min, max)
 
@@ -917,9 +917,9 @@ Returns an Array of all nodes in the energy graph.
 #### MALL()
 Returns an Array of all nodes in the molecule graph.
 
-#### GROUP(group)
+#### G(group)
 
-Returns an Array of all nodes for a given energy graph group.
+Abbreviation of GROUP. Returns an Array of all nodes for a given energy graph group.
 
 ```ruby
 GROUP(apartments)
@@ -934,9 +934,9 @@ GROUP(apartments)
 ]
 ```
 
-#### MGROUP(group)
+#### MG(group)
 
-Returns an Array of all nodes for a given molecule graph group.
+Abbreviation of MGROUP. Returns an Array of all nodes for a given molecule graph group.
 
 ```ruby
 MGROUP(ccu_emitted)
@@ -946,9 +946,10 @@ MGROUP(ccu_emitted)
 ]
 ```
 
-#### EDGE_GROUP(group)
-Returns an Array of all nodes for a given energy graph edge group.
+#### EG(group)
+Abbreviation of EDGE_GROUP. Returns an Array of all nodes for a given energy graph edge group.
 
+```ruby
 EG(final_demand)
 =>
 [
@@ -959,16 +960,15 @@ EG(final_demand)
 ]
 ```
 
-#### MEDGE_GROUP(group)
-Returns an Array of all nodes for a given energy graph molecul edge group.
-
+#### MEG(group)
+Abbreviation of MEDGE_GROUP. Returns an Array of all nodes for a given energy graph molecule edge group.
 
 #### SECTOR(sector)
 
 Returns an Array of nodes for a given energy sector.
 
 ```ruby
-###SECTOR(households)
+SECTOR(households)
 =>
 [
   #<Node households_apartments_useful_demand_for_space_heating>,
@@ -1042,8 +1042,9 @@ FILTER(G(electricity_production),"geothermal_input_conversion > 0.0")
 These functions concern operations associated with the Fever module.
 
 #### FEVER_DEMAND(groups)
-Outputs the yearly summed demand-curve of the specified fever group.
-The fever groups that can be chosen from are: buildings_space_heating, households_hot_water and space_heating
+
+Outputs the yearly summed demand curve of all consumers in the specified Fever group. The Fever groups that can be chosen from are: `buildings_space_heating`, `households_hot_water` and `space_heating`
+
 
 ```ruby
 FEVER_DEMAND(buildings_space_heating)
@@ -1054,31 +1055,11 @@ FEVER_DEMAND(buildings_space_heating)
   ...,
   6,931.270889166959
 ]
-
-FEVER_DEMAND(households_hot_water)
-=> 
-[
-  0.0,
-  0.0,
-  ...,
-  0.0
-]
-
-FEVER_DEMAND(space_heating)
-=> 
-[
-13,224.03964104562,
-12,848.980134095127,
-...,
-15,208.97143065297
-]
 ```
 
 #### FEVER_PRODUCTION(groups)
 
-
-Outputs the yearly summed demand-curve of the specified fever group.
-The fever groups that can be chosen from are: buildings_space_heating, households_hot_water and space_heating
+Outputs the yearly summed supply curve of all consumers in the specified Fever group. The fever groups that can be chosen from are: `buildings_space_heating`, `households_hot_water` and `space_heating`.
 
 ```ruby
 FEVER_PRODUCTION(buildings_space_heating)
@@ -1089,38 +1070,46 @@ FEVER_PRODUCTION(buildings_space_heating)
   ...,
   6,931.270889166959
 ]
-
-FEVER_PRODUCTION(households_hot_water)
-=> 
-[
-  0.0,
-  0.0,
-  ...,
-  0.0
-]
-
-FEVER_PRODUCTION(space_heating)
-=> 
-[
-13,224.03964104562,
-12,848.980134095127,
-...,
-15,208.97143065297
-]
 ```
 
 #### FEVER_PRODUCTION_CURVE_FOR_COUPLE(producer,consumer)
-A yearly curve describing the production in MWh of a specific producer for a specific consumer within Fever.
 
+A yearly curve specifying the production of a producer node in Fever for a consumption node.
 
+```ruby
+FEVER_PRODUCTION_CURVE_FOR_COUPLE(
+  V(households_space_heater_combined_network_gas),
+  V(households_useful_demand_for_space_heating_terraced_houses_1965_1984)
+)
+=> 
+[
+  941.3148533148487,
+  ...,
+  1,068.1549289644927,
+]
+```
 
 #### FEVER_DEMAND_CURVE_FOR_COUPLE(producer,consumer)
-A yearly curve describing the demand in MWh of a specific consumer for a specific consumer within Fever.
 
+A yearly curve specifying the demand of a consumption node in Fever for supply of a production node. The difference between the `FEVER_PRODUCTION_CURVE_FOR_COUPLE` and the `FEVER_DEMAND_CURVE_FOR_COUPLE` is marked as a deficit.
 
+```ruby
+FEVER_DEMAND_CURVE_FOR_COUPLE(
+  V(households_space_heater_combined_network_gas),
+  V(households_useful_demand_for_space_heating_terraced_houses_1965_1984)
+)
+=> 
+[
+  941.3148533148487,
+  ...,
+  1,068.1549289644927,
+]
+```
 
 #### FEVER_PRODUCTION_CURVE(node)
-A yearly curve describing the production in MWh of/for a specific consumer or producer within Fever.
+
+A yearly curve describing the production for a specific consumer or of a producer within Fever.
+
 ```ruby
 FEVER_PRODUCTION_CURVE(V(households_useful_demand_for_space_heating_semi_detached_houses_1985_2004))
 => 
@@ -1132,7 +1121,9 @@ FEVER_PRODUCTION_CURVE(V(households_useful_demand_for_space_heating_semi_detache
 ```
 
 #### FEVER_DEMAND_CURVE(node)
-A yearly curve describing the demand in MWh of/for a specific consumer or producer within Fever.
+
+A yearly curve describing the demand of a specific consumer or from producer within Fever. The difference between the `FEVER_PRODUCTION_CURVE` of a producer and the `FEVER_DEMAND_CURVE` from producer is marked as a deficit. The difference between the `FEVER_PRODUCTION_CURVE` for a consumer and the `FEVER_DEMAND_CURVE` of a consumer is marked as a deficit.
+
 ```ruby
 FEVER_DEMAND_CURVE(V(households_useful_demand_for_space_heating_semi_detached_houses_1985_2004))
 => 
@@ -1142,8 +1133,6 @@ FEVER_DEMAND_CURVE(V(households_useful_demand_for_space_heating_semi_detached_ho
   462.08107903258804
 ]
 ```
-
-
 
 ### Update functions
 
