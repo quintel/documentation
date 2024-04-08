@@ -14,7 +14,7 @@ GQL is case sensitive. Since all GQL-functions are written in caps, this means t
 
 - Base gqueries are added in the `general` folder on [Github](https://github.com/quintel/etsource/tree/master/gqueries/general).
 - Other gqueries, for example gqueries used in `output_elements`, should refer to base gqueries when possible.
-- Base gqueries have a consistent set of base units, for example `MW` for **capacity** and `MJ` for **energy**.
+- Base gqueries have a consistent set of base units, for example `kg` for **emissions**, `MW` for **capacity** and `MJ` for **energy**.
 - Base gqueries have a consistent nomenclature: for example **type**, **subtype**, **sector**, **subsector**, **carrier**.
 - Base gqueries should have a description.
 - To enhance readability, our preferred indentation style for Gqueries involves initially indenting with 4 spaces, followed by an additional 2 spaces for subsequent levels.
