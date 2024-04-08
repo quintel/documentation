@@ -1203,6 +1203,7 @@ INPUT_VALUE('agriculture_geothermal_share')
 ```
 
 ### Constants
+The constants are key figures that can be retrieved with GQL.
 
 ```ruby
 MWH_TO_GJ = 3.6
