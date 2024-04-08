@@ -919,7 +919,7 @@ Returns an Array of all nodes in the molecule graph.
 
 #### GROUP(group)
 
-Returns an Array of all nodes for a given energy group.
+Returns an Array of all nodes for a given energy graph group.
 
 ```ruby
 GROUP(apartments)
@@ -936,7 +936,7 @@ GROUP(apartments)
 
 #### MGROUP(group)
 
-Returns an Array of all nodes for a given molecule group.
+Returns an Array of all nodes for a given molecule graph group.
 
 ```ruby
 MGROUP(ccu_emitted)
@@ -947,12 +947,21 @@ MGROUP(ccu_emitted)
 ```
 
 #### EDGE_GROUP(group)
+Returns an Array of all nodes for a given energy graph edge group.
 
-TO-DO
+EG(final_demand)
+=>
+[
+  #<Qernel::Edge "agriculture_final_demand_crude_oil-agriculture_burner_crude_oil@crude_oil">,
+  #<Qernel::Edge "agriculture_final_demand_hydrogen-agriculture_burner_hydrogen@hydrogen">,
+  ...,
+  #<Qernel::Edge "transport_final_demand_for_road_lpg-transport_van_using_lpg@lpg">
+]
+```
 
 #### MEDGE_GROUP(group)
+Returns an Array of all nodes for a given energy graph molecul edge group.
 
-TO-DO
 
 #### SECTOR(sector)
 
@@ -1032,21 +1041,109 @@ FILTER(G(electricity_production),"geothermal_input_conversion > 0.0")
 
 These functions concern operations associated with the Fever module.
 
-#### FEVER_DEMAND
-TO-DO
+#### FEVER_DEMAND(groups)
+Outputs the yearly summed demand-curve of the specified fever group.
+The fever groups that can be chosen from are: buildings_space_heating, households_hot_water and space_heating
 
-#### FEVER_PRODUCTION
-TO-DO
-#### FEVER_PRODUCTION_CURVE_FOR_COUPLE
-TO-DO
+```ruby
+FEVER_DEMAND(buildings_space_heating)
+=> 
+[
+  3,863.9766278835864,
+  3,439.1984233894727,
+  ...,
+  6,931.270889166959
+]
 
-#### FEVER_DEMAND_CURVE_FOR_PEOPLE
-TO-DO
+FEVER_DEMAND(households_hot_water)
+=> 
+[
+  0.0,
+  0.0,
+  ...,
+  0.0
+]
 
-#### FEVER_PRODUCTION_CURVE
-TO-DO
-#### FEVER_DEMAND_CURVE
-TO-DO
+FEVER_DEMAND(space_heating)
+=> 
+[
+13,224.03964104562,
+12,848.980134095127,
+...,
+15,208.97143065297
+]
+```
+
+#### FEVER_PRODUCTION(groups)
+
+
+Outputs the yearly summed demand-curve of the specified fever group.
+The fever groups that can be chosen from are: buildings_space_heating, households_hot_water and space_heating
+
+```ruby
+FEVER_PRODUCTION(buildings_space_heating)
+=> 
+[
+  3,863.9766278835864,
+  3,439.1984233894727,
+  ...,
+  6,931.270889166959
+]
+
+FEVER_PRODUCTION(households_hot_water)
+=> 
+[
+  0.0,
+  0.0,
+  ...,
+  0.0
+]
+
+FEVER_PRODUCTION(space_heating)
+=> 
+[
+13,224.03964104562,
+12,848.980134095127,
+...,
+15,208.97143065297
+]
+```
+
+#### FEVER_PRODUCTION_CURVE_FOR_COUPLE(producer,consumer)
+A yearly curve describing the production in MWh of a specific producer for a specific consumer within Fever.
+
+
+
+#### FEVER_DEMAND_CURVE_FOR_COUPLE(producer,consumer)
+A yearly curve describing the demand in MWh of a specific consumer for a specific consumer within Fever.
+
+
+
+#### FEVER_PRODUCTION_CURVE(node)
+A yearly curve describing the production in MWh of/for a specific consumer or producer within Fever.
+```ruby
+FEVER_PRODUCTION_CURVE(V(households_useful_demand_for_space_heating_semi_detached_houses_1985_2004))
+=> 
+[
+  380.84562570105106,
+  ...,
+  462.08107903258804
+]
+```
+
+#### FEVER_DEMAND_CURVE(node)
+A yearly curve describing the demand in MWh of/for a specific consumer or producer within Fever.
+```ruby
+FEVER_DEMAND_CURVE(V(households_useful_demand_for_space_heating_semi_detached_houses_1985_2004))
+=> 
+[
+  380.84562570105106,
+  ...,
+  462.08107903258804
+]
+```
+
+
 
 ### Update functions
 
