@@ -2,9 +2,11 @@
 title: Writing gqueries
 ---
 
-Graph Query Language (GQL) is case sensitive. Since all GQL-functions are written in caps, this means that all functions **must** be written in caps in order to function. When writing gqueries, the following guidelines should be kept in mind:
+Gqueries are in fact stored [GQL](gql.md) (Graph Query Languague) procedures that have a key. If a user for example wants to know the total CO<sub>2</sub> emissions of an area, they can request ETEngine for the gquery `total_co2_emissions` and do not have to worry about the underlying intricacies. An overview of all gqueries can be found in [this folder](https://github.com/quintel/etsource/tree/master/gqueries).
 
-- The GQL functions one can use for writing gqeuries can be found on the [GQL](gql) section of this documentation.
+## Guidelines
+
+- An overview of available GQL functions can be found in the [GQL](gql.md) section.
 - Base gqueries are added in the `general` folder on [Github](https://github.com/quintel/etsource/tree/master/gqueries/general).
 - Other gqueries, for example gqueries used in `output_elements`, should refer to base gqueries when possible.
 - Base gqueries have a consistent set of base units, for example `kg` for **emissions**, `MW` for **capacity** and `MJ` for **energy**.

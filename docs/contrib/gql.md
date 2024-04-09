@@ -2,11 +2,11 @@
 title: Graph query language (GQL)
 ---
 
-GQL is used to calculate values that are used in the graphs, tables and figures that can be viewed in the model. An overview of all gqueries can be found in [this folder](https://github.com/quintel/etsource/tree/master/gqueries).
+GQL is used to calculate values that are used in the graphs, tables and figures that can be viewed in the model. GQL is used in gqueries, see the section about [Writing gqueries](authoring-gqueries.md) for more information.
 
-## Gqueries
-
-Gqueries are in fact stored GQL procedures that have a key. So that if the user wants to know the total co2 emissions of an area, it can request ETEngine for the gquery `total_co2_emissions` and does not have to worry about the underlying intricacies. 
+:::warning Case sensitivity
+Graph Query Language (GQL) is case sensitive. Since all GQL functions are written in caps, this means that all functions **must** be written in caps in order to function.
+:::
 
 ##  Functions
 
