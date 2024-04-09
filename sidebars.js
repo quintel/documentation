@@ -149,6 +149,7 @@ module.exports = {
         "contrib/inputs",
         "contrib/molecules",
         "contrib/waste-outputs",
+        "contrib/gql"
       ],
     },
     {
