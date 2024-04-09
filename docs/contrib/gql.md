@@ -128,20 +128,6 @@ DIVIDE(1,2,3,4)
 => 0.5 --> only takes the second.
 ```
 
-#### INVALID_TO_ZERO(keys)
-
-When an invalid value is given, a zero is returned.
-```ruby
-INVALID_TO_ZERO(nil)
-=> 0
-
-INVALID_TO_ZERO(3)
-=> 3
-
-INVALID_TO_ZERO([3,3,nil,4])
-=> [3,3,0,4]
-```
-
 #### MAX(values)
 
 Returns the highest number.
