@@ -42,7 +42,7 @@ The yearly costs of a scenario in the ETM is built up from all technologies, car
 
   For export the ETM charges the costs of the primary carrier that is needed for that export. The export of electricity and transit of oil is cost neutral and independent of the market price. A country does not "earn" money from processing oil. And for electricity the ETM deducts the costs of the primary carriers needed to produce that electricity.  
   
-6. **Carbon capture, utilisation and sequestration and utilisation (CCUS):** CAPEX + OPEX of all CCUS technologies, including CO<sub>2</sub> costs.
+6. **Carbon capture, utilisation and storage (CCUS):** CAPEX + OPEX of all CCUS technologies, including CO<sub>2</sub> costs.
 
 ## CAPEX and OPEX 
 All costs of groups 1-4 consists of two variables: CAPEX or `capital_expenditures_excluding_ccs` and OPEX or `operating_expenses_excluding_ccs`. Group 6 is similar, but contains all CAPEX and OPEX of the CCUS technologies.
@@ -56,8 +56,8 @@ Additional definitions:
 
 * Investment over lifetime = total initial investment + decommissioning costs
 * WACC = [Weighted average cost of capital](cost-wacc.md)
-* Construction Time = the time it takes to construct a typical plant of this type
-* Technical Lifetime = the average amount of time that a plant operates
+* Construction time = the time it takes to construct a typical plant of this type
+* Technical lifetime = the average amount of time that a plant operates
 
 ### **OPEX**
 Operating expenses include Operation and Maintenance (O&M) costs, without CCS. O&M costs can have both a variable and a fixed part.
