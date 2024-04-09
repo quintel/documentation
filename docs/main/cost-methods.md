@@ -2,9 +2,7 @@
 title: Cost methods
 ---
 
-This page describes the main cost groups of the ETM and how they are calculated for a scenario. 
-
-The ETM defines six main cost groups which consist of subgroups. These subgroups are the sum of individual technologies and some additional modules. A detailed datadump of all groups and subgroups and modules and can be found in the ['datadump'](https://pro.energytransitionmodel.com/scenario/data/data_export/energy-flows). A detailed overview of the scope per subgroup can be found ['here'](https://docs.energytransitionmodel.com/main/cost-overview-per-sector).
+The ETM defines six main cost groups, consisting of various subgroups. These subgroups are the sum of individual technologies and some additional modules. A detailed breakdown of all groups, subgroups and modules and can be found in the [data export](https://energytransitionmodel.com/scenario/data/data_export/specifications-annual-costs). A detailed overview of the scope per subgroup can be found in the [Overview of costs per sector](cost-overview-per-sector.md).
 
 ## Main cost groups
 The yearly costs of a scenario in the ETM is built up from all technologies, carriers, and CO<sub>2</sub> costs in a scenario. **Important:** Group 1-4 consists of the CAPEX and OPEX and exclude fuels and CCUS costs. Group 5 includes all the fuel costs and group 6 all the CCUS and CO<sub>2</sub> costs. 
@@ -25,12 +23,12 @@ The yearly costs of a scenario in the ETM is built up from all technologies, car
   -  Other intallations (synthetic kerosine, regasification of lng, and energy compressors for network gas)
 
 3. **Infrastructure**: CAPEX + OPEX of the energy infrastructure. Subgroups:
-  -  Gas (includes gas network for natural gas and green gas and terminal costs for import of liquid natural gas) 
+  -  Natural gas (includes gas network for natural gas and green gas and import infrastructure costs of LNG) 
   -  Heat (network costs)
-  -  Hydrogen carriers (includes hydrogen network and terminal costs for import of liquid hydrogen and LOHC)
+  -  Hydrogen carriers (includes hydrogen network and import infrastructure costs of liquid hydrogen and LOHC)
   -  Electricity (network costs)
-  -  Ammonia (terminal costs for import of ammonia)
-  -  Oil (terminal costs for import of diesel)
+  -  Ammonia (import infrastructure costs of ammonia)
+  -  Oil (import infrastructure costs of diesel)
    
 4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). All G2P is associated with means of 'Energy production'. Subgroups:
   -  Power-to-power (p2p)
@@ -44,7 +42,7 @@ The yearly costs of a scenario in the ETM is built up from all technologies, car
 
   For export the ETM charges the costs of the primary carrier that is needed for that export. The export of electricity and transit of oil is cost neutral and independent of the market price. A country does not "earn" money from processing oil. And for electricity the ETM deducts the costs of the primary carriers needed to produce that electricity.  
   
-6. **Carbon capture, sequestration and utilisation (CCSU):** CAPEX + OPEX of all CCUS technologies, including CO<sub>2</sub> costs.
+6. **Carbon capture, utilisation and sequestration and utilisation (CCUS):** CAPEX + OPEX of all CCUS technologies, including CO<sub>2</sub> costs.
 
 ## CAPEX and OPEX 
 All costs of groups 1-4 consists of two variables: CAPEX or `capital_expenditures_excluding_ccs` and OPEX or `operating_expenses_excluding_ccs`. Group 6 is similar, but contains all CAPEX and OPEX of the CCUS technologies.
