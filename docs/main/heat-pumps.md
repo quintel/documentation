@@ -69,7 +69,7 @@ _The threshold COP sliders in the ETM can be found in the [Net load](https://ene
 #### Optimal threshold from a consumer perspective
 To help you decide what the cost-optimal COP setting for space heating is from a consumer perspective, a special chart is available in the ETM. It shows how much it costs to make one unit of heat with the _network gas_ HHP for space heating. For the gas part, these costs are independent of the COP (and therefore the outside temperature). The costs for the electrical part are decreasing with increasing COP (and increasing outside temperature). The intersection of the two curves is the cost-optimal COP setting for space heating for the given cost price gas and electricity. This assumed cost price of gas and electricity can be set with sliders. Note that the monetary unit is euro_cents_.
 
-![](/img/docs/20210730_HHP_cost_optimal_COP_chart.png)
+![](/img/docs/20240904_Hybrid_heat_pump_threshold_COP_for_space_heating.png)
 
 ![](/img/docs/20200313_HHP_COP_gas_electricity_costs_sliders.png)
 
