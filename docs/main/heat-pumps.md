@@ -6,13 +6,13 @@ This page explains how heat pumps are integrated within the ETM. You can choose 
 
 ## Temperature dependency of COP
 
-Heat pumps use electricity to efficiently extract heat from air or water. The ETM models three types of heat pumps:
+Heat pumps use electricity to efficiently extract heat from air or water. Refrigerators use heat pumps, for example, but buildings can use them for heating and cooling too. The ETM models three types of heat pumps:
 
 * [Air-source heat pumps](#air-source-heat-pumps) (Air)
 * [Hybrid heat pumps](#hybrid-heat-pumps) (Air)
 * [Ground-source heat pumps](#ground-source-heat-pump) (Water)
 
-The coefficient of performance (COP) is influenced by the temperature of the source from which heat is extracted.
+The efficiency of a heat pump is called the coefficient of performance (COP) and is determined by the temperature of the source from which heat is extracted.
 
 ## Air-source heat pumps
 
@@ -44,41 +44,57 @@ More information about the sources behind specifications of heat pump ground can
 
 ## Hybrid heat pumps
 
-The COP of hybrid heat pumps (HHPs) is different from air-source heat pumps (ASHPs). HHPs are often installed in less insulated houses compared to air-source heat pumps and additionally these houses have different heat delivery systems, so the required output temperature of HHPs is higher than for ASHPs. Instead of 35°C output temperature, which is used for ASHPs, 45°C output temperature for HHPs is assumed. With this output temperature and the cost-optimal threshold COP (about the threshold COP you can find more information below), the HHP electricity share for houses with energy label B is 64%.
+### General working principle
+A hybrid heat pump (HHP) is a combination of an electric heat pump that draws its heat from the outside air and an efficient conventional, fuel-fired boiler. This fuel can be either network gas, hydrogen or oil. The fuel-fired part takes over all of the heating of the building on cold winter days, when heat demand peaks. As a result, a hybrid heat pump has less impact on the electricity grid than an all-electric heat pump does. Smart use of HHps may therefore avoid the need to reinforce local power grids.
 
-![](/img/docs/20200401_hhp_gas_elec_share.png)
+For optimal results with most types of heat pump, installation of under-floor and wall heating instead of radiators is often required, as well as good levels of insulation. The HHP partly bypasses those needs because of its fuel-fired heater as a fall-back option. Hybrid hydrogen heat pumps can intelligently use whichever part (heat pump or fuel-fired heater) is the most efficient or cost-effective given the weather conditions and insulation level. Houses with limited insulation will rely on the fuel-fired part more, better insulated ones will make more use of the heat pump. 
 
-The equation used is:
+### COP of hybrid heat pumps
+The COP of HHPs is different from air-source heat pumps (ASHPs). HHPs are often installed in less well-insulated houses compared to air-source heat pumps. Additionally, these houses have different heat delivery systems, so the required output temperature of HHPs is higher than for ASHPs. Instead of 35°C output temperature, which is used for ASHPs, the ETM assumes a 45°C output temperature for HHPs.
+
+The equation to calculate the COP based on outside temperature is:
 
 `  COP (T) = 2.323 + 0.0578 * T  		(3)`
 
-_Sources: [Documentation hybrid heat pump (gas) - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_hybrid_heatpump_air_water_electricity.converter.xlsx), and here: [Documentation hybrid heat pump (gas) - hot water](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_water_heater_hybrid_heatpump_air_water_electricity.converter.xlsx)_
+_Sources for the different hybrid heat pumps_: 
+* **Network gas hybrid heat pumps**: [Documentation hybrid heat pump (gas) - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_hybrid_heatpump_air_water_electricity.converter.xlsx), and [Documentation hybrid heat pump (gas) - hot water](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_water_heater_hybrid_heatpump_air_water_electricity.converter.xlsx)
+* **Hydrogen hybrid heat pumps**: [Documentation hybrid heat pump (hydrogen) - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity.converter.xlsx), and [Documentation hybrid heat pump (hydrogen) - hot water](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_water_heater_hybrid_hydrogen_heatpump_air_water_electricity.converter.xlsx)
+* **Oil hybrid heat pumps**: [Documentation hybrid heat pump (oil) - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_hybrid_crude_oil_heatpump_air_water_electricity.xlsx), and [Documentation hybrid heat pump (oil) - hot water](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_water_heater_hybrid_crude_oil_heatpump_air_water_electricity.xlsx)
 
-### Threshold-COP
+### Threshold COP
 
-The efficiency of hybrid heat pumps (HHPs) is dependent on the ambient temperature and is depicted by the coefficient of performance (COP). The COP becomes lower as the outside temperature decreases. In the ETM it is possible to set the COP for which the HHP must switch between electricity and gas. You can choose a setting that is most financially attractive for the consumer, but you can also choose a setting that produces less impact on the electricity network
+The COP of HHPs depends on the ambient temperature. The COP becomes lower as the outside temperature decreases. In the ETM it is possible to set the so-called _threshold COP_, i.e. the COP below which the HHP switches from electricity to its other fuel source, i.e. network gas, hydrogen or oil. You can choose a setting that is most financially attractive for the consumer, but you can also choose a setting that reduces the impact on the electricity network. Currently, you can set the threshold COP for space heating for either gas-based HHPs (both network gas and hydrogen) or for the oil HHP. For completeness sake, the threshold COP for water heating can be adjusted as well, but note that HHPs typically use the fuel part to provide hot water. For this reason, the default water heating COP is set at the maximum value of 6.0, so that the heat pump part is never enabled.
 
-![](/img/docs/20200401_threshold_COP_sliders.png)
+![](/img/docs/20240405_hhp_threshold_cop_sliders.png)
 
-_Checkout: the threshold COP sliders in the ETM in the [Flexibility → Net load](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-behavior-of-hybrid-heat-pumps) section._
+_The threshold COP sliders in the ETM can be found in the [Net load](https://energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-behavior-of-hybrid-heat-pumps) section._
 
-To help you decide the cost-optimal COP setting from a consumer perspective, a special chart is added to the ETM. It shows how much it costs to make a unit of heat with the HHP for space heating. For the gas part, these costs are independent of the COP (and therefore the outside temperature). The costs for the electrical part are decreasing with increasing COP (and increasing outside temperature). The intersection of the two curves is the cost-optimal COP setting for space heating for the given cost price gas and electricity. This assumed cost price of gas and electricity can be set with sliders.
 
-![](/img/docs/20210730_HHP_cost_optimal_COP_chart.png)
+#### Optimal threshold from a consumer perspective
+To help you decide what the cost-optimal COP setting for space heating is from a consumer perspective, a special chart is available in the ETM. It shows how much it costs to make one unit of heat with the _network gas_ HHP for space heating. For the gas part, these costs are independent of the COP (and therefore the outside temperature). The costs for the electrical part are decreasing with increasing COP (and increasing outside temperature). The intersection of the two curves is the cost-optimal COP setting for space heating for the given cost price gas and electricity. This assumed cost price of gas and electricity can be set with sliders. Note that the monetary unit is euro_cents_.
+
+![](/img/docs/20240904_Hybrid_heat_pump_threshold_COP_for_space_heating.png)
 
 ![](/img/docs/20200313_HHP_COP_gas_electricity_costs_sliders.png)
 
 The assumptions...
 
-- Gas price 81.4 ct/m3 gas
-- Electricity price 22.5 ct/kWh
-- Gas efficiency space heating = 1.07
+* Gas price 81.4 €ct/m3 gas
+* Electricity price 22.5 €ct/kWh
+* Gas boiler efficiency for space heating = 1.07
 
-... lead to a cut off COP for space heating of **2.6**. This cut-off COP is used in the start situation of your scenario. For the HHP on hydrogen a similar cut-off COP is adopted.
+... lead to a cut off COP for space heating of **2.6**. This cut-off COP is used in the starting situation of your scenario. For the HHP on hydrogen a similar cut-off COP is adopted.
 
-If you are interested in the impact of HHPs on the electricity grid, you can have a look at the chart that is shown when clicking on the 'Annual'-button in the right corner of the chart. This chart shows the hourly gas and electricity demand of HHPs.
+The abovementioned chart is not yet available for oil HHPs, but the corresponding assumptions are:
+* Oil price of 58.9 €ct / L
+* Electricity price 22.5 €ct / kWh
+* Oil boiler efficiency for space heating = 0.95.
 
-![](/img/docs/20200320_hourly_demand_HHP_households.png)
+The resulting threshold COP is 3.5. **Note that because of this high threshold COP, by default the oil heater might provide most if not all of the space heating functionality**. 
+
+HHPs have a varying impact on the electricity grid. The chart below shows the hourly gas and electricity demand of HHPs. Different time intervals throughout the year are available under the dropdown menu.
+
+![](/img/docs/20240405_hourly_demand_HHP_households.png)
 
 ## Ground-source heat pump
 
