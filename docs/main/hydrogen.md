@@ -49,7 +49,7 @@ You can set the installed capacities of various heating sources in the 'Supply' 
 
 SMR and biomass gasification are mature technologies that are used all over the world. In contrast, ammonia reforming and ATR are more novel technologies, that still require development to become commercially available. In the ETM it is assumed that the must-run variant of these technologies have a flat production profile, i.e. they produce a constant amount of hydrogen throughout the year.
 
-Options 10 and 11, dedicated wind and solar farms, are renewable energy plants built solely for hydrogen production. These plants turn renewable electricity directly into hydrogen using electrolysis. To date, such dedicated plants are not (yet) used at a large scale. Their production profile is determined by solar and wind weather curves.
+Dedicated wind turbines and solar PV plants are renewable energy plants built solely for hydrogen production. These plants turn renewable electricity directly into hydrogen using electrolysis. To date, such dedicated plants are not (yet) used at a large scale. Their production profile is determined by solar and wind weather curves.
 
 The ETM also allows you to install flexible production routes. SMR, ATR and ammonia reforming are the 3 hydrogen production technologies which can be installed as both must-run and flexible. Next to this, flexible electrolysers can be installed. This technology is also known as power-to-gas. See [Power-to-gas](electricity-conversion#power-to-gas) for more information. The flexible technoligies will produce hydrogen if the hourly electricity price is low enough. 
 
