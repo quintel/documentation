@@ -2,7 +2,7 @@
 title: Supply
 ---
 
-Within the ['Supply'](https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants) section you can try and cover the total energy demand which is set in the Demand section. The Supply section in the ETM covers the centralized production of both electricity and heat, as well as transport fuel. Decentralized production (e.g. of solar electricity) is covered in the Demand section. The following areas are covered:
+Within the [Supply](https://energytransitionmodel.com/scenario/supply/electricity/coal-plants) section you can try and cover the total energy demand which is set in the Demand section. The Supply section in the ETM covers the centralized production of both electricity and heat, as well as transport fuel. Decentralized production (e.g. of solar electricity) is covered in the Demand section. The following areas are covered:
 
 -   Electricity
 -	Renewable electricity
@@ -27,7 +27,7 @@ District heating can be used as heating technology in households, buildings and 
 _Checkout: the ['Heat Networks'](heat-networks) infopage for more information._ 
 
 ## Hydrogen
-In the hydrogen section you can specify how hydrogen is produced in the future. The ETM offers a wide array of production routes, both dispatchable or must-run. Excess hydrogen can be stored via the storage technologies. For more information checkout the ['Hydrogen'](hydrogen.md) section.
+In the hydrogen section you can specify how hydrogen is produced in the future. The ETM offers a wide array of production routes, both dispatchable or must-run. Excess hydrogen can be stored via the storage technologies. For more information checkout the [Hydrogen](hydrogen.md) section.
 
 ## Transport fuels
 In the Transport fuels section you can adjust the type of fuel used by road transport, rail transport, domestic navigation, international aviation and international navigation. By adjusting the fuel mixes you can influence the amount of CO<sub>2</sub> emissions in the future as well as the amount of land necessary for the production of biofuels. 
