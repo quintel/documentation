@@ -6,41 +6,11 @@ There is a growing interest in using hydrogen as energy carrier, for instance fo
 
 With the ETM you can explore the role of hydrogen in the future energy system, using various options for hydrogen demand, supply, transportation and storage to your energy scenario in the [Hydrogen](https://pro.energytransitionmodel.com/scenario/supply/hydrogen/hydrogen-production) section. 
 
-This page contains more information about the options for modelling hydrogen in the ETM. 
-
-## Hydrogen demand
-
-Hydrogen demand is composed of inflexible and flexible hydrogen demand. 
-
-### Inflexible demand
-In the ETM, the inflexible hydrogen demand categories are the following:
-
-* District heating for households and buildings
-* Heating demand for households and buildings
-* Heat production in industry and agriculture
-* Fertilizer production (as feedstock)
-* Transport (cars, buses, trucks, vans, ships and planes)
-* Electricity production (hydrogen gas turbines)
-* Baseload export
-
-Each of these options has its own hourly demand profile. For electricity production the demand profile is determined by the electricity market in your scenario. See [Merit Order](merit-order.md) for more information. 
-
-### Flexible demand
-In case of overproduction by inflexible hydrogen supply (must-run producers), flexible hydrogen demand can be deployed to balance hydrogen supply and demand. Flexible demand is composed of:
-
-* Salt caverns for hydrogen storage
-* Depleted gas fields for hydrogen storage
-* Back-up export
-
-The storage technologies can function as flexible demand by storing overproduction of hydrogen from inflexible hydrogen producers. See [hydrogen storage](hydrogen.md#hydrogen-storage) for more information on the hydrogen storage technologies. As a last resort, the back-up export functions as flexible demand for the remaining overproduction of inflexible hydrogen supply.
-
-The order in which the flexible demand categories are deployed can be altered in the merit order of dispatchable hydrogen demand. See [merit orders](hydrogen.md#merit-orders) for more information. 
-
-![Hourly hydrogen demand chart](/img/docs/20240314_hydrogen_demand.png)
+This page contains more information about the options for modelling hydrogen in the ETM. Please note that when referring to hydrogen, unless stated otherwise, it is implied that gaseous hydrogen is meant.
 
 ## Hydrogen production
 
-Similar to hydrogen demand, the hydrogen sources are composed of inflexible sources (must-run sources) and flexible sources (dispatchable sources). 
+Hydrogen sources are composed of inflexible producers (must-run producers) and flexible producers (dispatchable producers). 
 
 ### Must-run
 
@@ -52,7 +22,7 @@ Must-run sources include all hydrogen sources that supply hydrogen according to 
 * Biomass gasification with or without CCS
 * Dedicated H<sub>2</sub> production by offshore wind turbines
 * Dedicated H<sub>2</sub> production by solar PV plants
-* Flexible H<sub>2</sub> production with electrolysis
+* Flexible H<sub>2</sub> production with electrolysis (installed capacity can be set in the [flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-hydrogen) section of the ETM)
 * LH2 regasification
 * LOHC reforming
 * Baseload import
@@ -85,6 +55,36 @@ The order in which the dispatchable sources of hydrogen are deployed can be alte
 
 ![Hourly hydrogen production chart](/img/docs/20240314_hydrogen_production.png)
 
+## Hydrogen demand
+
+Similar to hydrogen production, hydrogen demand is composed of inflexible and flexible demand. 
+
+### Inflexible demand
+In the ETM, the inflexible hydrogen demand categories are the following:
+
+* District heating for households and buildings
+* Heating demand for households and buildings
+* Heat production in industry and agriculture
+* Fertilizer production (as feedstock)
+* Transport (cars, buses, trucks, vans, ships and planes)
+* Electricity production (hydrogen gas turbines)
+* Baseload export
+
+Each of these options has its own hourly demand profile. For electricity production the demand profile is determined by the electricity market in your scenario. See [Merit Order](merit-order.md) for more information. 
+
+### Flexible demand
+In case of overproduction by inflexible hydrogen supply (must-run producers), flexible hydrogen demand can be deployed to balance hydrogen supply and demand. Flexible demand is composed of:
+
+* Salt caverns for hydrogen storage
+* Depleted gas fields for hydrogen storage
+* Back-up export
+
+The storage technologies can function as flexible demand by storing overproduction of hydrogen from inflexible hydrogen producers. See [hydrogen storage](hydrogen.md#hydrogen-storage) for more information on the hydrogen storage technologies. As a last resort, the back-up export functions as flexible demand for the remaining overproduction of inflexible hydrogen supply.
+
+The order in which the flexible demand categories are deployed can be altered in the merit order of dispatchable hydrogen demand. See [merit orders](hydrogen.md#merit-orders) for more information. 
+
+![Hourly hydrogen demand chart](/img/docs/20240314_hydrogen_demand.png)
+
 ## Hydrogen storage
 
 The ETM calculates inflexible hydrogen demand and inflexible supply on an hourly-basis which makes it possible to identify moments of excess hydrogen production and shortages. To make sure that hydrogen supply matches demand throughout the year, flexible demand and flexible supply can be deployed. Hydrogen storage technologies have the ability to be deployed as both flexible demand and supply. 
@@ -97,6 +97,10 @@ In the ETM, two hydrogen storage technologies are available:
 Generally, salt caverns are better suited to deliver short-term flexibility while depleted gas fields can handle long-term flexibility better. The volume and relative capacity can be adjusted in the [hydrogen storage](https://energytransitionmodel.com/scenario/supply/hydrogen/hydrogen-storage) section. The costs for storage can be adjusted in the [costs section](https://energytransitionmodel.com/scenario/costs/costs_hydrogen/hydrogen-storage).
 
 ![Hourly hydrogen storage chart](/img/docs/20240314_hydrogen_storage.png)
+
+:::info Linepack
+The hydrogen network offers some flexibility in the form of linepack. The ETM does not take linepack into account. Linepack offers a limited volume to mitigate very short-term (hourly) fluctuations of hydrogen demand and supply. The actual volume depends on the extent to which the network is fully utilised. The volume is equivalent to roughly 1/3 salt cavern for 1.500 km of hydrogen transport pipelines.
+:::
 
 ## Merit orders 
 
