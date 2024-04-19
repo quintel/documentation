@@ -94,13 +94,13 @@ In the ETM, two hydrogen storage technologies are available:
 * Salt caverns
 * Depleted gas fields
 
+:::info Linepack
+In reality, hydrogen networks offer some flexibility in the form of linepack. The ETM does not take linepack into account. Linepack offers a limited volume to mitigate very short-term (hourly) fluctuations of hydrogen demand and supply. The actual volume depends on the extent to which the network is fully utilised. The volume is equivalent to roughly 1/3 salt cavern for 1.500 km of hydrogen transport pipelines.
+:::
+
 Generally, salt caverns are better suited to deliver short-term flexibility while depleted gas fields can handle long-term flexibility better. The volume and relative capacity can be adjusted in the [hydrogen storage](https://energytransitionmodel.com/scenario/supply/hydrogen/hydrogen-storage) section. The costs for storage can be adjusted in the [costs section](https://energytransitionmodel.com/scenario/costs/costs_hydrogen/hydrogen-storage).
 
 ![Hourly hydrogen storage chart](/img/docs/20240314_hydrogen_storage.png)
-
-:::info Linepack
-The hydrogen network offers some flexibility in the form of linepack. The ETM does not take linepack into account. Linepack offers a limited volume to mitigate very short-term (hourly) fluctuations of hydrogen demand and supply. The actual volume depends on the extent to which the network is fully utilised. The volume is equivalent to roughly 1/3 salt cavern for 1.500 km of hydrogen transport pipelines.
-:::
 
 ## Merit orders 
 
