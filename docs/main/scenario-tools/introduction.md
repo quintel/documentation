@@ -22,8 +22,7 @@ With the tool you can:
 The scenario-tools read input data, such as slider settings or requested downloads, from several CSVs
 that you must supply. This section gives a quick overview of what to expect.
 
-By default, and when you first look at the tool after downloading it, the `input` and `output` folders are located in the `data` folder. The tool will read and write to the files in these folders when you run it. If you want the input data to be read from another location on your computer,
-or the output data to be written to another folder, you can change this in the [settings](advanced-settings.md#configuring-the-tool). Please note that the tool will still expect the input file names to stay the same.
+By default, and when you first look at the tool after downloading it, the `input` and `output` folders are located in the `data` folder. The tool will read and write to the files in these folders when you run it. It is possible to change the default folder where input data is read or where output data is saved in the [settings](advanced-settings.md#configuring-the-tool). Please note that the tool will still expect the input file names to stay the same. Also, the default settings for reading and exporting CSVs can be changed here. 
 
 ### Input
 :::info Dummy data in the input files

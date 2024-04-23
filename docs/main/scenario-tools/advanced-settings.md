@@ -23,6 +23,7 @@ Here is a quick overview of the possible settings and their default values:
 |`local_engine_url`| The url to ETEngine that should be used when you use the `local` option in the tools. | `http://localhost:3000/api/v3` |
 |`local_model_url`| The url to ETModel that should be used when you use the `local` option in the tools. | `http://localhost:3001` |
 | `csv_separator` | The separator your CSV files are using. Some European computers use ';' instead of ','. | , |
+| `decimal_separator` | The decimal separator your CSV files are using. Some national conventions use ',' instead of '.'. | . |
 
 ## ETM environments
 The ETM knows a live and a beta environment. The scenario-tools naturally connect to the first one. In the

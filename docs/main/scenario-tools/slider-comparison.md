@@ -8,6 +8,10 @@ The slider comparison analysis allows you to analyse the impact of individual or
 ## Setting up the CSV input files
 To do a slider comparison analysis you can edit two CSV files in the input folder. The [`scenario_list`](#scenario_listcsv) file contains general information about your scenario, such as the region and target year. Secondly, the [`slider_comparison_settings`](#slider_comparison_settingscsv) file contains the ETM slider values and queries for your scenario as specified in `scenario_list.csv`. 
 
+:::info CSV settings
+Please note that the scenario-tools use a default CSV separator and decimal separator for reading and exporting CSV files as provided in [settings](advanced-settings.md#configuring-the-tool). If you want to change the default separator in accordance with your local CSV settings, please follow the instructions on the settings page. 
+:::
+
 ### scenario_list.csv
 In `scenario_list.csv` you can create a row for the scenario you wish to process. The CSV contains the columns specified below. In order to do a slider comparison analysis, the columns that at least should be filled in are **short_name**, **area_code** and **end_year**. Some columns should be left empty as specified below since these are not considered in the slider comparison analysis (however, these columns could be used for other tools of the scenario-tools collection). 
  * **short_name**. Here you can specify an identifier for each scenario.
