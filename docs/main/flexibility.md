@@ -87,8 +87,8 @@ Flexible demand technologies are governed by a "willingness to pay": a maximum p
 * Inflexible (baseload):
   * Final gas demand in sectors
   * Gas used in dispatchable power plants and heat boilers for district heating
-  * Baseload export of green gas (flat curve; constant export of gas to model transitflows)
-  * Baseload export of natural gas (flat curve; constant export of gas to model transitflows)
+  * Baseload export of green gas (flat curve; constant export of gas to model transit flows)
+  * Baseload export of natural gas (flat curve; constant export of gas to model transit flows)
   * Backup export of natural gas (flat curve; constant export of gas to balance yearly production of gas)
   * Distribution losses
 * Flexible:
@@ -101,22 +101,24 @@ See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/sup
 #### Supply
 
 * Inflexible:
-  * Must-run / volatile: dedicated offshore wind turbine or solar PV plant for H2, steam methane reforming, biomass gasification
-  * Import of hydrogen (flat curve; constant import of hydrogen to balance yearly production of hydrogen)
+  * Must-run / volatile: dedicated offshore wind turbine or solar PV plant for H2, steam methane reforming, autothermal reforming, ammonia reforming and biomass gasification
+  * Baseload import of hydrogen (flat curve; constant import of hydrogen)
   * Hydrogen produced by power-to-gas
 * Flexible:
-  * Hydrogen from storage (in the ETM, hydrogen is automatically buffered throughout the year)
+  * Storage production: salt caverns or depleted gas fields
+  * Steam methane reforming, autothermal reforming and ammonia reforming
+  * Backup import of hydrogen (flexible curve; flexible import of hydrogen to balance hourly demand for hydrogen)
 
 #### Demand
 
 * Inflexible (baseload):
   * Final hydrogen demand in sectors
   * Hydrogen used in dispatchable power plants and heat boilers for district heating
-  * Export of hydrogen (flat curve; constant export of hydrogen to balance yearly production of gas)
+  * Baseload export of hydrogen (flat curve; constant export of hydrogen to model transit flows)
   * Distribution losses
 * Flexible:
-  * Hydrogen entering storage (in the ETM, gas is automatically buffered throughout the year)
-  * Export of hydrogen (backup)
+  * Storage injection: salt caverns or depleted gas fields
+  * Backup import of hydrogen (flexible curve; flexible export of hydrogen to balance hourly supply of hydrogen)
 
 ### Heat for district heating
 
