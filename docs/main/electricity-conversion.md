@@ -47,8 +47,16 @@ In agriculture and industry, only electric boilers are available as a power-to-h
 
 You can determine the capacity of both the power-to-heat boilers and the heaters in the corresponding sectors under [Demand → Agriculture](https://pro.energytransitionmodel.com/scenario/demand/agriculture/heat) or [Demand → Industry](https://pro.energytransitionmodel.com/scenario/demand/industry/energy-demand-in-the-industry). The willingness to pay can be set under Flexibility → Electricity conversion → [Conversion to heat for agriculture](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-agriculture) or [Conversion to heat for industry](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-industry).
 
+### Power for synthetic kerosene production
+In the ETM, electricity can also be used for the production of synthetic kerosene. This kerosene is produced by combining electricity, hydrogen and CO2<sub>2</sub>. 
+See [Utilisation and storage of CO<sub>2</sub>](co2-ccus.md) for more information.
+
+The capacity of the dispatchable synthetic kerosene production can be set under [Utilisation and storage of CO <sub>2</sub>](https://energytransitionmodel.com/scenario/emissions/ccus/utilisation-and-storage-of-co2). The willingness to pay can be set under [Conversion to kerosene for industry](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_conversion/)
+
 ### Electricity storage
 Consumption by electricity storage technologies, also known as power-to-power, is another form of flexible electricity demand. An example of this is charging by batteries. For electricity storage two types of behaviour are available: one that is based on willingness to pay and willingness to accept prices and another that uses a forecasting algorithm. The [electricity storage documentation](electricity-storage.md) contains more information about both types of behaviour.
 
 ### Export
 Electricity can be exported to neighbouring countries through the interconnectors between these countries. The capacity of these interconnectors is limited and can be adjusted in the [Flexibility → Import/Export](https://pro.energytransitionmodel.com/scenario/flexibility/electricity_import_export/interconnector-1) sub-section. The behaviour of export is then very similar to flexible electricity conversion technologies. The main difference is that the willingness to pay of export is given by the price of the interconnector, which represents the electricity price in the neighbouring country. In the Import/Export sub-section you can change this price or upload an hourly price curve to model the hourly electricity price in the neighbouring country.
+
+

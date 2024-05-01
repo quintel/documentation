@@ -81,7 +81,9 @@ Synthetic methanol is made of CO<sub>2</sub>, hydrogen and electricity. The ETM 
 _Note: The production of synthetic methanol does not (automatically) affect the production of methanol and other chemical products in the conventional chemical industry sector. You can make choices about this themselves in [the Demand → Industry → Chemicals section](https://pro.energytransitionmodel.com/scenario/demand/industry/chemicals)._
 
 ### Synthetic kerosene
-Similar to synthetic methanol, captured CO<sub>2</sub> can be used to produce kerosene, which can subsequently serve as transport fuel in the aviation sector. The ETM takes the CO<sub>2</sub>, hydrogen and electricity requirements for producing kerosene into account, as well as the investment and O&M costs associated with its production.
+Similar to synthetic methanol, captured CO<sub>2</sub> can be used to produce kerosene, which can subsequently serve as transport fuel in the aviation sector. The ETM takes the CO<sub>2</sub>, hydrogen and electricity requirements for producing kerosene into account, as well as the investment and O&M costs associated with its production. 
+
+There are two production routes for synthetic kerosene in the ETM, Must-run and dispatchable. The dispatchable production is flexible following the electricity price, therefore the capacity is set in the electric input capacity in MWe. The must-run production is set as a yearly energy flow in PJ.
 
 Please note: The production of synthetic kerosene does not (automatically) affect the production of fossil kerosene in the conventional refineries sector. Users can make choices about this themselves in [the Demand → Industry → Refineries section](https://pro.energytransitionmodel.com/scenario/demand/industry/refineries).
 
