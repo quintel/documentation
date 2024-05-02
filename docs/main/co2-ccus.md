@@ -12,22 +12,20 @@ _Checkout: the [negative emissions](co2-negative-emissions) infopage for more in
 The ETM models five types of carbon supply:
 * Capture in [industry](#industry)
 * Capture in the [power sector](#power-sector)
-* Capture for [hydrogen production](#hydrogen-production)
+* Capture in [hydrogen production](#hydrogen-production)
 * [Direct Air Capture](#direct-air-capture)
 * Import of CO<sub>2</sub>
 
-For each of the carbon capture technologies, you can make choices about the extent to which it is applied in the future energy system. In addition, you can also set the amount of baseload CO<sub>2</sub> that will be imported. The picture below gives an impression of the capture and import section in the ETM:
+For each of the carbon capture technologies, you can make choices about the extent to which it is applied in the future energy system. In addition, you can also set the amount of baseload CO<sub>2</sub> that will be imported.
 
-![Carbon capture section](/img/docs/co2-capture.png)
-
-Note that the above sliders only impact the amount of CO<sub>2</sub> _captured_. Separate choices have to be made about what happens with this CO<sub>2</sub>. This can be done in the [utilisation and storage](#utilisation-and-storage) section. Without such assumption, any surplus of captured CO<sub>2</sub> will be exported (any deficit will be imported). 
+Note that separate choices have to be made about what happens with this CO<sub>2</sub> supply. This can be done in the [utilisation and storage](#utilisation-and-storage) section. Without making any assumption on demand, any surplus of captured CO<sub>2</sub> will be exported (any deficit will be imported). See the [Supply and demand of carbon](#supply-and-demand-of-carbon) page for more information.
 
 ### Industry
 For various industry sectors, you can make assumptions about the captured amounts of CO<sub>2</sub> emissions. The sliders in the model set the share of the total capture potential in a sector that is utilised. For example, if a sector emits 3 Mt of capturable emissions, a slider value of 50% means that in your scenario 1.5 Mt CO<sub>2</sub> is captured in that sector.
 
 The capture potential of an industrial sector depends on various aspects. First of all, it depends on the size and efficiency of the sector in the chosen area.
 
-Secondly, it depends on the energy carriers or production technologies used in the sector. For example, a steel sector using conventional blast furnaces has a much lower capture potential than a steel sector using cyclone furnaces. Your choices in [the Demand → Industry section](https://pro.energytransitionmodel.com/scenario/demand/industry/energy-demand-in-the-industry) of the model directly impact the capture potential.
+Secondly, it depends on the energy carriers or production technologies used in the sector. For example, a steel sector using conventional blast furnaces has a much lower capture potential than a steel sector using cyclone furnaces. Your choices in the [Industry](https://pro.energytransitionmodel.com/scenario/demand/industry/energy-demand-in-the-industry) section of the model directly impact the capture potential.
 
 Thirdly, capture potentials can vary per the region chosen in the ETM. More information about the assumed potentials and sources used can be found on [ETDataset](https://github.com/quintel/etdataset-public/tree/master/source_analyses/nl/2015/12_molecules).
 
@@ -78,19 +76,19 @@ Methanol is one of the most widely used base chemicals in the chemical industry 
 
 Synthetic methanol is made of CO<sub>2</sub>, hydrogen and electricity. The ETM takes all three into account, as well as the investment and O&M costs associated with its production.
 
-_Note: The production of synthetic methanol does not (automatically) affect the production of methanol and other chemical products in the conventional chemical industry sector. You can make choices about this themselves in [the Demand → Industry → Chemicals section](https://pro.energytransitionmodel.com/scenario/demand/industry/chemicals)._
+_Note: The production of synthetic methanol does not (automatically) affect the production of methanol and other chemical products in the conventional chemical industry sector. You can make choices about this themselves in the [Chemicals](https://energytransitionmodel.com/scenario/demand/industry/chemicals) section._
 
 ### Synthetic kerosene
 Similar to synthetic methanol, captured CO<sub>2</sub> can be used to produce kerosene, which can subsequently serve as transport fuel in the aviation sector. The ETM takes the CO<sub>2</sub>, hydrogen and electricity requirements for producing kerosene into account, as well as the investment and O&M costs associated with its production. 
 
-There are two production routes for synthetic kerosene in the ETM, Must-run and dispatchable. The dispatchable production is flexible following the electricity price, therefore the capacity is set in the electric input capacity in MWe. The must-run production is set as a yearly energy flow in PJ.
+There are two production routes for synthetic kerosene in the ETM, must-run and dispatchable. The dispatchable production is flexible following the electricity price, therefore the capacity is set in the electric input capacity in MWe. See the [Electricity conversion](electricity-conversion) page for more information. The must-run production is set as the yearly supply of kerosene in PJ.
 
-Please note: The production of synthetic kerosene does not (automatically) affect the production of fossil kerosene in the conventional refineries sector. Users can make choices about this themselves in [the Demand → Industry → Refineries section](https://pro.energytransitionmodel.com/scenario/demand/industry/refineries).
+Please note: The production of synthetic kerosene does not (automatically) affect the production of fossil kerosene in the conventional refineries sector. Users can make choices about this themselves in the [Refineries](https://energytransitionmodel.com/scenario/demand/industry/refineries) section.
 
 ### Other utilisation
 Finally, you can set the amount of CO<sub>2</sub> used for 'other utilisation' purposes. This includes all applications that are currently not modelled explicitly in the ETM. Examples include utilisation of CO<sub>2</sub> as a propellant gas for beer and soda production or for the cultivation of crops in greenhouses. CO<sub>2</sub> emitted by the fertilizers industry sector can also be captured and used to produce urea, which is used as an animal feed additive and fertilizer.
 
-In many cases, utilising CO<sub>2</sub> does not reduce emission, but only delays it. Therefore, the amount of CO<sub>2</sub> set with this slider is included in the total emissions of your scenario by default. It is however also possible to delay part of these emissions indefinitely, in which case they are excluded from the total emissions. You can set this share in the Emissions > [Greenhouse gases](https://pro.energytransitionmodel.com/scenario/emissions/other_emissions/delayed-emissions) section.
+In many cases, utilising CO<sub>2</sub> does not reduce emission, but only delays it. Therefore, the amount of CO<sub>2</sub> set with this slider is included in the total emissions of your scenario by default. It is however also possible to delay part of these emissions indefinitely, in which case they are excluded from the total emissions. You can set this share in the [Greenhouse gases](https://energytransitionmodel.com/scenario/emissions/other_emissions/delayed-emissions) section.
 
 ## Supply and demand of carbon
 The ETM keeps track of all 'supply' of carbon (capture) and all 'demand' of carbon (utilisation and storage). This is summarised in the chart below:
@@ -109,13 +107,13 @@ For each type of infrastructure, you can set the share of total captured CO<sub>
 Since the ETM has limited spatial information, fixed distances and volumes per infrastructure unit are assumed. More information can be found on [ETDataset](https://github.com/quintel/etdataset-public/tree/master/nodes_source_analyses/molecules/molecules).
 
 ## Costs
-In [the Cost → CCUS costs](https://pro.energytransitionmodel.com/scenario/costs/CO<sub>2</sub>/prices) section of the ETM, you can make assumptions about changes in CCUS related costs in the future. By default, all CCUS related costs taken into account by the model are based on present-day cost data. This means that the ETM does not automatically assume changes in future costs for CCUS technologies, such as cost development curves. You can also set the cost price for captured biogenics CO<sub>2</sub> here. This way, biomass-fired power plants can sell captured biogenic CO<sub>2</sub> which in turn will lower their marginal costs.
+In the [Costs & efficiencies](https://energytransitionmodel.com/scenario/costs/CO<sub>2</sub>/prices) section of the ETM, you can make assumptions about changes in CCUS related costs in the future. By default, all CCUS related costs taken into account by the model are based on present-day cost data. This means that the ETM does not automatically assume changes in future costs for CCUS technologies, such as cost development curves. You can also set the cost price for captured biogenics CO<sub>2</sub> here. This way, biomass-fired power plants can sell captured biogenic CO<sub>2</sub> which in turn will lower their marginal costs.
 
 ## CCUS graph
-You can find more (advanced) information about the CCUS related CO<sub>2</sub> flows in their scenario by opening the 'CCUS graph' in [the Results → Visuals → CCUS graph](https://pro.energytransitionmodel.com/scenario/data/data_visuals/ccus-graph) section. This is a visual representation of the calculation engine of the ETM. It shows all the carbon sources and destinations taken into account by the model, as well as any 'transformations' in between (such as capture potentials).
+You can find more (advanced) information about the CCUS related CO<sub>2</sub> flows in their scenario by opening the 'CCUS graph' in the [Visuals](https://energytransitionmodel.com/scenario/data/data_visuals/ccus-graph) section. This is a visual representation of the calculation engine of the ETM. It shows all the carbon sources and destinations taken into account by the model, as well as any 'transformations' in between (such as capture potentials).
 
 ![CCUS graph](/img/docs/ccus-graph.png)
 
-The CCUS graph is linked with the [energy graph](energy-calculations) and information is exchanged between the two graphs. In many cases, the 'origin' of a carbon source lies within the energy graph. For example, the amount of CO<sub>2</sub> produced by a coal power plant (node: `energy_power_combined_cycle_ccs_coal_CO<sub>2</sub>` in the CCUS graph) depends on the installed capacity and full load hours of that plant calculated by the energy graph (corresponding node: ` energy_power_combined_cycle_ccs_coal` in the energy graph). Vice versa, information calculated in the CCUS graph can be relevant for the energy graph. Capturing CO<sub>2</sub> in the CCUS graph, for example, leads to additional electricity and heat demand in the energy graph.
+The CCUS graph is linked with the [energy graph](energy-calculations) and information is exchanged between the two graphs. In many cases, the 'origin' of a carbon source lies within the energy graph. For example, the amount of CO<sub>2</sub> produced by a coal power plant (node: `energy_power_combined_cycle_ccs_coal_co2` in the CCUS graph) depends on the installed capacity and full load hours of that plant calculated by the energy graph (corresponding node: ` energy_power_combined_cycle_ccs_coal` in the energy graph). Vice versa, information calculated in the CCUS graph can be relevant for the energy graph. Capturing CO<sub>2</sub> in the CCUS graph, for example, leads to additional electricity and heat demand in the energy graph.
 
 By double clicking on any of the 'nodes' in the CCUS graph, a separate pages opens up with more detailed information, such as its 'counter-part' in the energy graph. See the [Molecules](../contrib/molecules.md) page in the Contributors section of the documentation for more details.
