@@ -70,6 +70,7 @@ In the ETM, the inflexible hydrogen demand categories are the following:
 * Fertilizer production (as feedstock)
 * Transport (cars, buses, trucks, vans, ships and planes)
 * Electricity production (hydrogen gas turbines)
+* Synthetic kerosene production
 * Baseload export
 
 Each of these options has its own hourly demand profile. For electricity production the demand profile is determined by the electricity market in your scenario. See [Merit Order](merit-order.md) for more information. 
