@@ -24,7 +24,7 @@ In the renewable electricity section you can adjust the amount of (centralized) 
 ## District heating
 District heating can be used as heating technology in households, buildings and agriculture. There are roughly two types of heat sources: dispatchable and must-run heat sources. Dispatchable heat sources can be switched on/ off depending on the heat demand at that time, while must-run heat sources supply the heat network regardless of heat demand. For the second type in particular (seasonal) storage of heat is an interesting option. 
 
-_Checkout: the ['Heat Networks'](heat-networks) infopage for more information._ 
+_See the ['District heating'](https://docs.energytransitionmodel.com/main/heat-networks/) section for more information. _
 
 ## Hydrogen
 In the hydrogen section you can specify how hydrogen is produced in the future. The ETM offers a wide array of production routes, both dispatchable or must-run. Excess hydrogen can be stored via the storage technologies. For more information checkout the [Hydrogen](hydrogen.md) section.
