@@ -30,12 +30,20 @@ If the person does not have a user account for the ETM yet, they will have to cr
 
 The following roles are determined to manage the rights a user has on a given scenario:
 
+| Role | View | Copy | Change | Manage access |
+| ---- | ---- | ---- | ---- | --- |
+| Viewer | ✓  | ✓  |  |  |  
+| Collaborator | ✓ | ✓ | ✓  |  
+| Owner | ✓ | ✓ | ✓ | ✓ | 
+
 - Viewer: Is able to view a saved scenario, but not able to make changes to it. The viewer is allowed to make a copy of the saved scenario however.
 - Collaborator: Is able to view and make changes to the saved scenario, and make copies of it.
 - Owner: Is able to makes changes to and copies of the scenario, and able to manage access to it.
 
+In addition to these three roles: A person that is not invited to the scenario can also view and copy the scenario if said scenario is set to public.
+
 ### 2. My Transition Paths tab
-The Transition Paths tab display a list of all your transition paths. Transition paths are charts where one of your saved scenarios is compared with up to four other scenarios. Major scenario characteristics are displayed in this chart, making it easy to compare how the scenarios differ, for example over time.
+The Transition Paths tab display a list of all your transition paths. Transition paths are charts where one of your saved scenarios is compared with up to four other scenarios. Major git scenario characteristics are displayed in this chart, making it easy to compare how the scenarios differ, for example over time.
 
 ### 3. Trash
 The Trash tab displays scenarios or transition paths that were previously dismissed and are no longer active.
