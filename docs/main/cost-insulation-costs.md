@@ -1,7 +1,7 @@
 ---
 title: Insulation costs
 ---
-There are no separate sliders available in the ETM to set the level of insulation for housing or building stock. Instead, users can lower the typical heat demand of a house or building category (see the ['Heat in the built environment']**LINK** section). The corresponding reduction in typical heat demand compared to the starting year is interpreted as an increase in the level of insulation.
+There are no separate sliders available in the ETM to set the level of insulation for housing or building stock. Instead, users can lower the typical heat demand of a house or building category (see the [Heat in the built environment](heat-built-environment) section). The corresponding reduction in typical heat demand compared to the starting year is interpreted as an increase in the level of insulation.
 
 In line with the greenfield approach for costs, the ETM only assumes costs for investments required in the future. Insulation costs are therefore added when the typical heat demand is reduced compared to the current situation; if not, then the insulation costs are zero. _Increases_ in typical heat demand, although technically possible, do not lead to a change in costs and are not considered realistic. 
 

@@ -1,7 +1,7 @@
 ---
-title: Demand - Heat in the built environment
+title: Heat in the built environment
 ---
-Insulation can be used to bring down the amount of heating we need for our houses while staying comfortable. The ETM allows you to alter the heat demand for various types of residences and buildings (Commercial and Public Services buildings, shortly CaPS) separately in the Demand > ['Household']**LINK** or ['Buildings']**LINK** sections. This page discusses the modeling methods used for the implementation of heat demand in the ETM and the data that underlies the modeling.
+Insulation can be used to bring down the amount of heating we need for our houses while staying comfortable. The ETM allows you to alter the heat demand for various types of residences and buildings (Commercial and Public Services buildings, shortly CaPS) separately in the Demand > ['Household'](https://energytransitionmodel.com/scenario/demand/households/overview) or ['Buildings'](https://energytransitionmodel.com/scenario/demand/buildings/overview) sections. This page discusses the modeling methods used for the implementation of heat demand in the ETM and the data that underlies the modeling.
 
 ## Building stock
 ### Households
@@ -41,9 +41,9 @@ The sources used for the existing building stock data can be found in the [ETM d
 ### Space heating
 It is important to distinguish between the starting year data and the simulated future year situation.
 
-For the *starting year*, the heat demand for space heating follows from the region’s dataset. The sources for these data can be found in the ETM dataset manager (link toevoegen).
+For the **starting year**, the heat demand for space heating follows from the region’s dataset. The sources for these data can be found in the ETM dataset manager (link toevoegen).
 
-For the *simulated future year*, the ETM uses the typical heat demand sliders to recalculate the heat demand for space heating. The typical heat demand in the ETM reflects the average insulation level of a house or building category and is expressed in kWh/m2. The source for the typical heat demands in the starting year can also be found in the ETM dataset manager.
+For the **simulated future year**, the ETM uses the typical heat demand sliders to recalculate the heat demand for space heating. The typical heat demand in the ETM reflects the average insulation level of a house or building category and is expressed in kWh/m2. The source for the typical heat demands in the starting year can also be found in the ETM dataset manager.
 
 ![](/img/docs/20240506_typical_heat_demand_sliders.png)
 
@@ -54,11 +54,11 @@ _Example: In the image above, the typical heat demand for apartments built betwe
 2. For new housing/building stock, the actual slider value is used to calculate the future heat demand for space heating, based on an average surface area per newly built unit.
 _Example: In the image above, the typical heat demand for space heating for new apartments is set at 65 kWh/m2. The starting value of number of new residences is set to 0 by definition. If the number of new residences is set at 100,000, the heat demand for space heating increases by 100,000 apartments x 65 kWh/m2 x 84 m2/apartment._
 
-Please note that crucially, the *typical heat demand slider values _cannot_ be used to calculate the useful heat demand for existing building stock*. There are two reasons for this:
+Please note that crucially, the **typical heat demand slider values _cannot_ be used to calculate the useful heat demand for existing building stock**. There are two reasons for this:
 1. The starting year values for the typical heat demand values are typically not derived from the actual heat demand for space heating data. In fact, they are often derived from different sourced entirely.
-2.	As mentioned above, the future year values of the typical heat demand sliders are only used as a scaling factor. Unlike for new residences/buildings, the actual slider value is not used to calculate heat demand in the future year.
+2. As mentioned above, the future year values of the typical heat demand sliders are only used as a scaling factor. Unlike for new residences/buildings, the actual slider value is not used to calculate heat demand in the future year.
 
-Additionally, the typical heat demand sliders are used to calculate insulation costs. See the ['Costs']**LINK** section for details on this topic.
+Additionally, the typical heat demand sliders are used to calculate insulation costs. See the ['Costs'](cost-insulation-costs) section for details on this topic.
 
 ### Hot water
 The demand for hot water is only defined for households. Residences of all housing types and build years are assumed to have the same hot water demand, since it is assumed to depend mostly on human behavior. The behavioral impact on hot water demand can be altered using the corresponding slider under the ['Development of demand'](https://energytransitionmodel.com/scenario/demand/households/development-of-demand) section.
