@@ -166,7 +166,6 @@ module.exports = {
       collapsed: false,
       items: [
         "contrib/always-on-battery-parks",
-        "contrib/fever",
         "contrib/load-shifting",
         "contrib/user-curves",
       ],
