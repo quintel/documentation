@@ -213,6 +213,7 @@ module.exports = {
         "api/nodes",
         "api/merit",
         "api/exports",
+        "api/gqueries",
       ],
     },
     {
