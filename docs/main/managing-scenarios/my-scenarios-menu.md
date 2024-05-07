@@ -2,9 +2,9 @@
 title: My scenarios menu
 ---
 
-If you have created a user account and are logged in you can save the scenarios you've created with a name and description. These scenarios can then be managed through the My Scenarios menu which can be accessed through the link at the top right of the page. Once clicked, you will see a menu with three different tabs: My Scenarios, My Transition Paths and Trash.
+If you have created a user account and are logged in you can save the scenarios you've created with a name and description. These scenarios can then be managed through the My Scenarios menu which can be accessed through the link at the top right of the page. Once clicked, you will see a menu with three different tabs: **My Scenarios**, **My Transition Paths** and **Trash**.
 
-### 1. My Scenarios tab
+### 1. My Scenarios
 The My Scenarios tab displays a list of your saved scenarios, including the region the scenario is describing and the moment when the scenario was last edited. When hovering over a saved scenario three buttons will appear giving you the respective options to: 
 
 - Open the scenario to be further investigated and adjusted
@@ -13,7 +13,7 @@ The My Scenarios tab displays a list of your saved scenarios, including the regi
 
 Clicking the title of one of your saved scenarios takes you to the [scenario management](scenario-management) page. 
 
-### 2. My Transition Paths tab
+### 2. My Transition Paths
 The Transition Paths tab display a list of all your transition paths. Transition paths are charts where one of your saved scenarios is compared with up to four other scenarios. Major git scenario characteristics are displayed in this chart, making it easy to compare how the scenarios differ, for example over time.
 
 ### 3. Trash
