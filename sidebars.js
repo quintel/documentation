@@ -11,7 +11,14 @@ module.exports = {
       items: [
         "main/starting-or-exploring",
         "main/interface",
-        "main/managing-your-saved-scenarios",
+        {
+          "Managing your saved scenarios": [
+            "main/managing-scenarios/my-scenarios-menu",
+            "main/managing-scenarios/scenario-management",
+            "main/managing-scenarios/scenario-access-management",
+            "main/managing-scenarios/scenario-version-history"            
+          ]
+        },        
         "main/developing-your"
       ],
     },
