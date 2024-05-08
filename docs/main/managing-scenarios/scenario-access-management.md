@@ -15,7 +15,7 @@ Pending or not, a user can always be removed from a scenario by clicking the 're
 
 The following table depicts the different roles a user can have and their corresponding access levels for viewing, copying, changing and managing a private scenario:
 
-| Role (Private scenario) | View | Copy | Change | Manage access |
+| Role (private scenario) | View | Copy | Change | Manage access |
 | ---- | ---- | ---- | ---- | --- |
 | Viewer | ✓  | ✓  |  |  |  
 | Collaborator | ✓ | ✓ | ✓  |  
@@ -26,9 +26,9 @@ The following table depicts the different roles a user can have and their corres
 - **Owner**: Is able to view, copy, makes changes and manage access to a scenario.
 
 When the owner sets the scenario to 'public', the scenario can be viewed by anyone who has a link to the scenario. 
-Therefore, the following access levels are in effect for public scenario's:
+The access levels are in case of public scenarios are similar to those of private scenarios, however the viewer in this case can either be invited or uninvited:
 
-| Role (Public scenario) | View | Copy | Change | Manage access |
+| Role (public scenario) | View | Copy | Change | Manage access |
 | ---- | ---- | ---- | ---- | --- |
 | (Uninvited) Viewer | ✓  | ✓  |  |  |  
 | Collaborator | ✓ | ✓ | ✓  |  
