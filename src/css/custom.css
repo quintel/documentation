@@ -499,7 +499,9 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/main/scenario-tools/slider-comparison"]:after {
+.menu a[href="/main/scenario-tools/slider-comparison"]:after,
+.menu a[href="/main/managing-scenarios/scenario-access-management"]:after,
+.menu a[href="/main/managing-scenarios/scenario-version-history"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -514,7 +516,9 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/main/scenario-tools/slider-comparison"]:after {
+.menu a.menu__link--active[href="/main/scenario-tools/slider-comparison"]:after,
+.menu a.menu__link--active[href="/main/managing-scenarios/scenario-access-management"]:after,
+.menu a.menu__link--active[href="/main/managing-scenarios/scenario-version-history"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
 }
