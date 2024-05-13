@@ -73,4 +73,7 @@ Solar thermal panels in buildings are used to meet space heating demand, but onl
 
 ![](/img/docs/20240506_number_of_residences_per_space_heating_technology.png)
 
+### Matching heat demand with supply
+---Aanvullen na uitleg Mathijs---
+
 ![](/img/docs/20240506_deficits_in_space_heating_per_residence_type_and_construction_period.png)
