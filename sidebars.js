@@ -221,6 +221,7 @@ module.exports = {
         "api/merit",
         "api/exports",
         "api/gqueries",
+        "api/version-tag",
       ],
     },
     {

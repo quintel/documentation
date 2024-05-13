@@ -501,7 +501,8 @@ article p code {
 /* Add "New" tag to some sidebar items. */
 .menu a[href="/main/scenario-tools/slider-comparison"]:after,
 .menu a[href="/main/managing-scenarios/scenario-access-management"]:after,
-.menu a[href="/main/managing-scenarios/scenario-version-history"]:after {
+.menu a[href="/main/managing-scenarios/scenario-version-history"]:after,
+.menu a[href="/api/version-tag"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -524,8 +525,7 @@ article p code {
 }
 
 /* Add "Updated" tag to some sidebar items. */
-.menu a[href="/api/changelog"]:after,
-.menu a[href="/api/heat-network-order"]:after {
+.menu a[href="/api/changelog"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
