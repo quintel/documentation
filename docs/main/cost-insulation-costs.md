@@ -20,15 +20,15 @@ The insulation costs for houses are based on the Ecofys report ['De systeemkoste
 To arrive at insulation costs, the three levels of insulation have been mapped to typical heat demand levels. This mapping is based on the relation between the Dutch energy performance indicators and the annual primary fossil energy consumption BENG 2 (see [Lente-akkoord.nl](https://www.lente-akkoord.nl/nieuws/planning-regeling-energielabels)).
 
 #### Insulation level mapping to typical heat demand
-|    | **Insulation level low in kwh/m<sup>2</sup>**  | **Insulation level medium in kwh/m<sup>2</sup>** | **Insulation level high in kwh/m<sup>2</sup>** |
+|    | **Insulation level low in kWh/m<sup>2</sup>**  | **Insulation level medium in kWh/m<sup>2</sup>** | **Insulation level high in kWh/m<sup>2</sup>** |
 |---|---|---|---|
 | Typical useful demand | 118 | 220 | 403 |
 
-Typical useful demand per insulation level and typical costs to transfer to a higher insulation level is combined to define two insulation cost categories for every housing type: high and low. These levels determine insulation costs in €/(kWh/m<sup>2</sup>).
+Typical useful demand per insulation level and typical costs to transfer to a higher insulation level are combined to define two insulation cost categories for every housing type: high and low. These levels determine insulation costs in €/(kWh/m<sup>2</sup>).
 
-The total insulation costs per house is determined by multiplying the heat demand reduction per insulation category with the amount of insulation in that category.
+The total insulation costs _per residence_ are calculated by multiplying the heat demand reduction per insulation category with the amount of insulation in that category.
 
-The total insulation costs for a housing category are calculated by multiplying the insulation costs per residence by the total number of residences in that category.
+The total insulation costs _for a housing category_ are calculated by multiplying the insulation costs per residence by the total number of residences in that category.
 
 
 #### Insulation costs mapping example for terraced houses
