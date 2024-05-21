@@ -4,7 +4,7 @@ title: Insulation costs
 
 There are no dedicated sliders in the ETM to set the level of insulation for the housing or the building stock. Instead, users can lower the typical heat demand of a house or building category (see the [Heat in the built environment](heat-built-environment) section). The corresponding reduction in typical heat demand compared to the starting year is interpreted as an increase in the level of insulation.
 
-In line with the greenfield approach for costs, the ETM only assumes costs for investments required in the future. Insulation costs are therefore added when the typical heat demand is reduced compared to the current situation; if not, then the insulation costs are zero. Increases in typical heat demand do not lead to a change in costs.
+In line with the greenfield approach for costs, the ETM only assumes costs for investments required in the future. Insulation costs are therefore added when the typical heat demand is reduced compared to the current situation; if not, then the insulation costs are zero. Increases in typical heat demand do not lead to a change in costs. 
 
 ## Households
 The insulation costs for houses are based on the Ecofys report ['De systeemkosten van warmte voor woningen (2015)'](https://refman.energytransitionmodel.com/publications/2063). This report distinguishes three levels of insulation – low, medium, and high – and specifies the investment costs for transitioning from one level to another. The table below shows the insulation costs for existing housing stock of different categories. The ETM uses the 2020 costs for the four different housing types.
@@ -43,10 +43,10 @@ _Example_: 1000 terraced houses with a typical heat demand of 350 kWh/m<sup>2</s
 For new housing stock, insulation costs are only incurred when the typical heat demand is further reduced compared to the default value. In that case, the insulation costs are calculated using the higher costs category. For new terraced houses, for example, that would be €157 per kWh / further typical heat demand reduction.
 
 ## Buildings
-The insulation costs for buildings follow the same procedure as described above for households. The costs figure for buildings are based on the tussenwoning figures from the Ecofys report, i.e.:
+The insulation costs for buildings follow the same procedure as described above for households. The costs figure for buildings are based on the _tussenwoning_ figures from the Ecofys report, i.e.:
 
 |   | **Insulation costs from low to medium in €/(kWh/m<sup>2</sup>)**  | **Insulation from medium to high in €/(kWh/m<sup>2</sup>)** |
 |---|---|---|
 | Existing building stock | 39 | 157 |
 
-For new building stock insulation costs of €157/(kWh/m<sup>2</sup>) is used for additional insulation.
+For new building stock insulation costs of €157/(kWh/m<sup>2</sup>) are used for additional insulation.

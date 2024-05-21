@@ -69,11 +69,54 @@ Solar thermal panels in households are only used to meet hot water demand. They 
 Solar thermal panels in buildings are used to meet space heating demand, but only up to 13% of demand. The remaining demand is then met using the specified mix of technologies for space heating.
 
 ### Technologies for space heating and hot water
----Aanvullen na uitleg Mathijs---
+A wide range of technologies is available to meet the space heating and hot water demand. Each slider sets the share of the total housing or building stock that is supplied by a particular technology.
+* For **households**, a single technology is assumed to provide both space heating and hot water in a residence. 
+* For **buildings**, a technology only provides space heating, since the ETM does not specify hot water demand for buildings.
+
+It is not possible to directly specify the technology mix for each housing or building category. Instead, technologies are assigned to housing/building categories through a so-called **merit order**. A prioritized mix of technologies is assigned to housing/building stock first by build year, and for housing stock subsequently by housing type: first apartments, then terraced houses, semi-detached and finally detached houses. This order roughly follows the useful heat demand in increasing order, i.e. new apartments have a lower useful heat demand than detached houses from before 1945. The _consumer order_ is therefore fixed as follows:
+
+| Housing stock |   Building stock   | 
+|------------------------|----------|
+| New apartments             | New buildings        |
+| New terraced houses       | Existing buildings |
+| New semi-detached houses         |  |
+| New detached houses       |   |
+| Apartments from 2005 - present |  |
+| Terraced houses from 2005 - present |  |
+| ... |  |
+
+The prioritized mix of technologies is called the _producer order_. Although it is fixed for buildings, the producer order for space heating in households can be adjusted by the user under the [Households merit order](https://energytransitionmodel.com/scenario/demand/households_heating_order/merit-order) section.
+
+The merit order then works by assigning the first technology in the producer order to the first consumer in the consumer order (i.e. new apartments for households), then to the next consumer, and so on. This process continues until the specified share of residences for the first technology has been reached. The ETM then continues this process with the second technology in the producer order, until ultimately all housing/building stock is assigned a technology based on the specified technology shares. 
+
+A chart is available that visualizes the resulting number of residences per space heating technology.
 
 ![](/img/docs/20240506_number_of_residences_per_space_heating_technology.png)
 
+Note that a housing category can be matched with more than one heating technology. In the chart above, the housing construction period 1985-2004 is split between air heat pumps and ground heat pumps, whereas newer residences have only been assigned air heat pumps. The reason for this is that the specified share of residences with an air heat pump was reached sometime during the 1985-2004 category, upon which the ETM switched to the next technology in the merit order, that is, ground heat pumps.
+
 ### Matching heat demand with supply
----Aanvullen na uitleg Mathijs---
+The ETM matches demand for space heating and hot water with supply on an hourly basis. 
+
+**Hourly demand** is determined by the combination of annual heat demand and a housing/building category specific heat demand curve. The annual heat demand for water heating is considered separately from that of space heating. The heat demand curve is then applied to convert the annual demand to hourly demand profiles. This results in the following hourly demand profiles:
+* **Buildings**: one heat demand profile for buildings;
+* **Households water heating**: one water heating demand profile for households;
+* **Households space heating**: for each housing type (apartments / terraced / semi-detached / detached), the ETM contains a demand profile for high, medium and low levels of insulation. These are matched with build year categories as follows:
+    * _high insulation_: 'new' and '2005-present' residences;
+    * _medium insulation_: '1965-1984' and '1985-2004' residences 
+    * _low insulation_: '1945-1964' and 'before 1945' residences. 
+
+The ETM thus contains 14 heat demand profiles in all. See [the ETDataset repository](https://github.com/quintel/etdataset-public/tree/master/curves/demand/) for details on these profiles.
+
+**Hourly supply** is based on the heat capacities of all available heating technologies. The heat capacity of each technology, measured in kW, represents the maximum amount of heat a technology can provide at a given moment. These heat capacities are only user-adjustable for space heating in households, under the [Households merit order](https://energytransitionmodel.com/scenario/demand/households_heating_order/capacities) section.
+
+To **match demand with supply**, the ETM compares the heat demand profile of each housing/building category with the heat capacities of the assigned technologies:
+* If supply exceeds demand for an hourly interval, the given technology / technologies have sufficient capacity to provide the required heat.
+* *If not, then the ETM allows for a slight shift in demand through buffering and time shifting. In practice, this means that the ETM can delay demand by four hours.  
+* If demand then still exceeds supply, a heat deficit is registered.
+
+For households, there is a table available that lists the total annual heat deficits per housing category. 
 
 ![](/img/docs/20240506_deficits_in_space_heating_per_residence_type_and_construction_period.png)
+
+The table does not specify which technology causes the heat deficits. However, the combination of the table and the number of residences per technology chart gives you an indication of the source of the problem. In the images above, for example, the large deficits in the ‘2005 – present’ build year category indicate that the air heat pump might have insufficient heat capacity.
