@@ -112,7 +112,7 @@ The ETM thus contains 14 heat demand profiles in all. See [the ETDataset reposit
 
 To **match demand with supply**, the ETM compares the heat demand profile of each housing/building category with the heat capacities of the assigned technologies:
 * If supply exceeds demand for an hourly interval, the given technology / technologies have sufficient capacity to provide the required heat.
-* *If not, then the ETM allows for a slight shift in demand through buffering and time shifting. In practice, this means that the ETM can delay demand by four hours.  
+* If not, the ETM allows for a slight shift in demand through buffering and time shifting. In practice, this means that the ETM can delay demand by four hours.  
 * If demand then still exceeds supply, a heat deficit is registered.
 
 For households, there is a table available that lists the total annual heat deficits per housing category. 
