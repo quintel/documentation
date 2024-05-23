@@ -37,7 +37,7 @@ module.exports = {
           ],
         },
         {
-          Demand: ["main/demand", "main/insulation"],
+          Demand: ["main/demand", "main/heat-built-environment"],
         },
         {
           Supply: ["main/supply", "main/balancing-demand", "main/hydrogen", "main/biomass"],
@@ -85,6 +85,7 @@ module.exports = {
             "main/cost-methods",
             "main/cost-wacc",
             "main/heat-infrastructure-costs",
+            "main/cost-insulation-costs",
             "main/costs-imported-electricity",
           ],
         },
@@ -165,7 +166,6 @@ module.exports = {
       collapsed: false,
       items: [
         "contrib/always-on-battery-parks",
-        "contrib/fever",
         "contrib/load-shifting",
         "contrib/user-curves",
       ],
