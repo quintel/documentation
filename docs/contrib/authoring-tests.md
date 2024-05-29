@@ -24,7 +24,8 @@ In summary, our vision for the test suite is to create a professional, mature, a
 
 The testing-tools that are mainly used in model development are:
 
-- **Mechanical Turk**
+## **Mechanical Turk**
+
 Mechanical turk tests are run on a daily basis. These tests check whether expected model outcomesare produced. These tests can be set up in two ways:
 
 1. Using a blank scenario in which the script makes modifications.
@@ -43,12 +44,12 @@ Proposed Improvements for Mechanical Turk Tests:
 7. Update the documentation of the Mechanical turk tests: Write a concise description of each tests. This is an improvement of the **Accessibility**.
 
 
-- **GQL-sandbox**
+## **GQL-sandbox**
 The GQL-sandbox is the place to test the GQL-queries.
 A good understanding and maintenance of GQL is needed in developing our modeling tool and testset.
 
-- **Semaphore spec**
+## **Semaphore spec**
 The semaphore specs are run each time a commit is pushed to their respective repository. These test (among other things) check the files within the code base whether they follow the expected outline.
 
-- **Atlas rake debug**
+## **Atlas rake debug**
 The Atlas rake debug command is used to verify whether changes to the graph are executed correctly.
