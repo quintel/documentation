@@ -26,22 +26,96 @@ The ETM testing suite consists of a number of tools. Each has a different goals 
 
 ### Mechanical Turk
 
-The Mechanical Turk testing tool can be found on [Github](https://github.com/quintel/mechanical_turk). Mechanical Turk tests are run on a daily basis. These tests check whether expected model outcomes are produced. These tests can be set up in two ways:
+The Mechanical Turk testing tool can be found on [Github](https://github.com/quintel/mechanical_turk). Mechanical Turk tests are run on a daily basis. These tests check whether expected model outcomes are produced. 
 
-1. Using a blank scenario in which the script makes modifications.
-2. Using a set of predetermined scenario's, typically those with a high number of inputs.
-  The core calculations and outcomes of the model can be tested using the mechanical turk.
+Fundamentally, the Mechanical Turk (MT) consists of specs written in Rspec (a testing framework for Ruby, the can be found documentation [here](https://rspec.info/)) that contain inputs used to verify expected scenario outcomes based on queries. All specs are automatically run daily, but you can also run them manually via rspec.
 
-Proposed Improvements for Mechanical Turk Tests:
 
-1. Add Tests for Balancing Graphs: Ensure core aspects like supply and demand balancing are covered, and therefore enhancing to the **Completeness** of the test suite.
-2. Update Queries Automatically: Write scripts to update test queries when graph queries are updated.
-• For example, create a script for ‘mekko_of_hydrogen_network.yml’ to split and test demand and supply queries, ensuring they balance to zero in various scenarios. This improves to the **Maintainability**, **Reliability** & **Completeness**.
-3. Expand Scenario Collection: Test the model under diverse and updated inputs, including different regions with unique characteristics. This enhances to the **Efficiency** and **Completeness**, since the tests cover multiple scenario's at once.
-4. Remove Unnecessary Tests: Eliminate tests that cover only small fractions of the model, enhancing maintainability and efficiency. This improves the **Relevance**, **Maintainability**, and **Reliability**.
-5. Update Outdated but Useful Tests: Ensure all tests are reliable and current. This enhances the **Relevance**, **Maintainability**, and **Reliability**.
-6. Add Tests for Hourly and Yearly Calculations: Verify that calculations are consistent and accurate. This enhances  the **Completeness**
-7. Update the documentation of the Mechanical turk tests: Write a concise description of each tests. This is an improvement of the **Accessibility**.
+These tests can be set up in 2 ways:
+
+1.	Using a blank scenario in which the script makes modifications: In this approach, you define the region and inputs to build new scenarios within a spec. For example, you might set up a scenario to test the impact of a new policy on energy consumption by specifying relevant parameters and regions. Here is an example of how to build a new scenario:
+```
+require 'spec_helper'
+
+describe "Transport" do
+  before do
+    @scenario = Turk::Scenario.new(area_code: "nl", end_year: 2050, inputs: {settings_enable_merit_order: 0})
+  end 
+
+  context "E-bikes" do
+    describe "Increasing the share of E-bike usage" do
+      it "should increase the primary energy demand" do
+        @scenario.transport_bicycle_using_electricity_share = 100
+        expect(@scenario.primary_demand).to increase
+      end
+    end
+  end
+end
+```
+The spec above checks whether increasing the slider for electricic bicycles  (found [here](https://energytransitionmodel.com/scenario/demand/transport_passenger_transport/bicycle-technology)) increases the primary energy demand in the scenario.
+
+2. Using a set of predetermined scenario's, typically those with a high number of inputs. The following example uses the ii3050v2 scenario's, these can be found under the featured scenario's for 2050 on [https://energytransitionmodel.com/](https://energytransitionmodel.com/), and checks whether the hydrogen demand and supply are balanced for the graph
+```
+describe 'Hydrogen' do
+  Turk::PresetCollection.from_keys(:ii3050v2).each do |scenario|
+    context "with scenario #{scenario.original_scenario_id}" do
+      it 'Annual demand and supply of hydrogen should match' do
+        expect(
+          scenario.turk_hydrogen_mekko_supply
+        ).to softly_equal(
+          scenario.turk_hydrogen_mekko_demand
+        )
+      end
+    end
+  end
+end
+```
+
+Some use-cases for the mechanical turk tests are:
+- To calculate if supply and demand are balanced for each carrier.
+The ETM is a model that balances energy flows, demand and supply should in principle match.
+- Verify the direction of change in outcomes when adjusting a slider.
+These tests check whether slider changes would give the results we expect. 
+It can be used to check whether model improvements give the expected results. An example is the first example above.
+- To verify whether charts that should be balanced are in fact balanced
+An example for this is the second code example above.
+- To verifiy whether data in the charts is in line with the calculated graph data.
+The charts should portray the data calculated in the graph. 
+- To check if hourly and yearly calculations match.
+The hourly calculations and yearly calculations are done by seperate modules. It is therefore important to check whether these are mathc.
+
+The following functions are used in these tests:
+
+```
+increase
+```  
+Expects an increase for the given value. Returns "True" when the value increases, "False" when it decreases.
+```
+decrease
+```  
+Expects an decrease for the given value. Returns "True" when the value decreases, "False" when it increases.
+```
+not_increase
+```  
+Does not expect an increase for the given value. Returns "True" when the value decreases or stays the same, "False" when it increases.
+```
+not_change
+```  
+Does not expect a change for the given value. Returns "True" when the value the same, "False" when it increases or decreases
+```
+change
+```  
+Expect a change for the given value. Returns "True" when the value changes, "False" when it does not.
+```
+softly_equal
+```  
+Expect the two given values to equal each other with an error marging of 1.0E-12.
+```
+sum_to_softly_equal
+```  
+Expect the sum of the given values to equal the 'sum-value' with an error marging of 1.0E-12.
+
+
 
 ### GQL-sandbox
 The GQL-sandbox is the place to test the GQL-queries.
