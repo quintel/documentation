@@ -49,6 +49,7 @@ module.exports = {
               Electricity: [
                 "main/electricity-conversion",
                 "main/electricity-storage",
+                "main/hybrid-offshore-wind",
                 "main/dynamic-demand-curve",
                 "main/battery-forecasting",
                 "main/loss-of-load-expectation",
