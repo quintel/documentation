@@ -188,7 +188,8 @@ module.exports = {
       collapsed: false,
       items: [
         "contrib/authoring-docs",
-        "contrib/authoring-gqueries"
+        "contrib/authoring-gqueries",
+        "contrib/authoring-tests"
       ]
     },
   ],
