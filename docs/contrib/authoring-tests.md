@@ -26,15 +26,12 @@ The ETM testing suite consists of a number of tools. Each has a different goals 
 
 ### Mechanical Turk
 
-The Mechanical Turk testing tool can be found on [Github](https://github.com/quintel/mechanical_turk). Mechanical Turk tests are run on a daily basis. These tests check whether expected model outcomes are produced. 
+The Mechanical Turk testing tool can be found on [Github](https://github.com/quintel/mechanical_turk). Fundamentally, the Mechanical Turk (MT) consists of specs written in Rspec (a testing framework for Ruby, the can be found documentation [here](https://rspec.info/)) that contain inputs used to verify expected scenario outcomes based on queries. All specs are automatically run daily, but also be run manually using rspec.
 
-Fundamentally, the Mechanical Turk (MT) consists of specs written in Rspec (a testing framework for Ruby, the can be found documentation [here](https://rspec.info/)) that contain inputs used to verify expected scenario outcomes based on queries. All specs are automatically run daily, but you can also run them manually via rspec.
+#### Custom scenario tests
+Using a blank scenario in which the script makes modifications: in this approach, you define the region and inputs to build new scenarios within a spec. For example, you might set up a scenario to test the impact of a new policy on energy consumption by specifying relevant parameters and regions. Here is an example of how to build a new scenario:
 
-
-These tests can be set up in 2 ways:
-
-1.	Using a blank scenario in which the script makes modifications: In this approach, you define the region and inputs to build new scenarios within a spec. For example, you might set up a scenario to test the impact of a new policy on energy consumption by specifying relevant parameters and regions. Here is an example of how to build a new scenario:
-```
+```ruby
 require 'spec_helper'
 
 describe "Transport" do
@@ -52,10 +49,13 @@ describe "Transport" do
   end
 end
 ```
-The spec above checks whether increasing the slider for electricic bicycles  (found [here](https://energytransitionmodel.com/scenario/demand/transport_passenger_transport/bicycle-technology)) increases the primary energy demand in the scenario.
 
-2. Using a set of predetermined scenario's, typically those with a high number of inputs. The following example uses the ii3050v2 scenario's, these can be found under the featured scenario's for 2050 on [https://energytransitionmodel.com/](https://energytransitionmodel.com/), and checks whether the hydrogen demand and supply are balanced for the graph
-```
+The spec above checks whether increasing the slider for electric bicycles (found [here](https://energytransitionmodel.com/scenario/demand/transport_passenger_transport/bicycle-technology)) increases the primary energy demand in the scenario.
+
+#### Scenario collection tests
+Using a set of predetermined scenarios, typically those with a high number of inputs. The following example uses the ii3050v2 scenarios, these can be found under the featured scenarios for 2050 on [https://energytransitionmodel.com/](https://energytransitionmodel.com/), and checks whether the hydrogen demand and supply are balanced in the chart "Supply and demand of the central hydrogen network".
+
+```ruby
 describe 'Hydrogen' do
   Turk::PresetCollection.from_keys(:ii3050v2).each do |scenario|
     context "with scenario #{scenario.original_scenario_id}" do
@@ -71,18 +71,18 @@ describe 'Hydrogen' do
 end
 ```
 
-Some use-cases for the mechanical turk tests are:
-- To calculate if supply and demand are balanced for each carrier.
-The ETM is a model that balances energy flows, demand and supply should in principle match.
-- Verify the direction of change in outcomes when adjusting a slider.
-These tests check whether slider changes would give the results we expect. 
-It can be used to check whether model improvements give the expected results. An example is the first example above.
+#### Testing use cases
+
+Some use cases for the Mechanical Turk tests are:
+
+- Verify the direction of change in outcomes when adjusting a slider. These tests check whether slider changes would give the results we expect.  It can be used to check whether model improvements give the expected results. An example is the first example above.
 - To verify whether charts that should be balanced are in fact balanced
 An example for this is the second code example above.
-- To verifiy whether data in the charts is in line with the calculated graph data.
-The charts should portray the data calculated in the graph. 
-- To check if hourly and yearly calculations match.
-The hourly calculations and yearly calculations are done by seperate modules. It is therefore important to check whether these are mathc.
+- To verify whether data in the charts is in line with the calculated graph data.
+The charts should accurately and completely reflect the data calculated in the graph. 
+- To check if hourly and yearly calculations match. The hourly calculations and yearly calculations are done by seperate modules. It is therefore important to check whether these are match.
+
+#### Testing functions
 
 The following functions are used in these tests:
 
@@ -101,7 +101,7 @@ Does not expect an increase for the given value. Returns "True" when the value d
 ```
 not_change
 ```  
-Does not expect a change for the given value. Returns "True" when the value the same, "False" when it increases or decreases
+Does not expect a change for the given value. Returns "True" when the value the same, "False" when it increases or decreases.
 ```
 change
 ```  
@@ -109,20 +109,8 @@ Expect a change for the given value. Returns "True" when the value changes, "Fal
 ```
 softly_equal
 ```  
-Expect the two given values to equal each other with an error marging of 1.0E-12.
+Expect the two given values to equal each other with an error margin of 1.0E-12.
 ```
 sum_to_softly_equal
 ```  
-Expect the sum of the given values to equal the 'sum-value' with an error marging of 1.0E-12.
-
-
-
-### GQL-sandbox
-The GQL-sandbox is the place to test the GQL-queries.
-A good understanding and maintenance of GQL is needed in developing our modeling tool and testset.
-
-### Semaphore spec
-The semaphore specs are run each time a commit is pushed to their respective repository. These test (among other things) check the files within the code base whether they follow the expected outline.
-
-### Atlas rake debug
-The Atlas rake debug command is used to verify whether changes to the graph are executed correctly.
+Expect the sum of the given values to equal the 'sum-value' with an error margin of 1.0E-12.
