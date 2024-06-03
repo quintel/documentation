@@ -2,7 +2,7 @@
 title: Network impact calculation
 ---
 
-The network impact calculation determines the investment required in the electricity grid depending on your choices. For example, in a scenario with a large share of electric heaters the capacity of the current electricity grid is not sufficient to transport all demand. You can change infrastructure costs in the Costs > Infrastructure costs >['Electricity infrastructure costs'](https://pro.energytransitionmodel.com/scenario/costs/infrastructure/electricity-infrastructure-costs) section in the ETM.
+The network impact calculation determines the investment required in the electricity grid depending on your choices. For example, in a scenario with a large share of electric heaters the capacity of the current electricity grid is not sufficient to transport all demand. You can change infrastructure costs in the [Electricity infrastructure costs](https://pro.energytransitionmodel.com/scenario/costs/infrastructure/electricity-infrastructure-costs) section in the ETM.
 
 The results of the network impact calculation are displayed in the chart ‘Required additional infrastructure investments’. This chart shows the total additional investment required in the electricity grid for the current scenario. In addition, the annualized investment costs including operation and maintenance costs and interest for the required network expansion are included in the costs dashboard item. 
 
@@ -89,3 +89,6 @@ The costs calculation uses two main inputs for CAPEX:
 These two inputs multiplied give the total investment costs. Together with the lifetime and the weighted average costs of capital, the yearly costs of capital are calculated. When the operation and maintenance costs are added the total yearly costs of the electricity new are calculated per net level.
 
 ![](/img/docs/overview_network_cost_calculation.jpg)
+
+:::info Interconnection and offshore net
+The above described network impact calculation is currently only applied to the LV, LV/MV, MV, MV/HV and HV net levels. In the chart 'Required additional infrastructure investments' (at the [page top](network)), the Interconnection net and Offshore net are added as categories as well. For these categories the required additional infrastructure investement is based on the installed capacity of the relevant components for these categories (e.g. capacity of offshore wind, solar and cables for the offshore net and capacity of interconnectors for the interconnection net), rather than based on peak loads. 
