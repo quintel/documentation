@@ -25,13 +25,14 @@ Must-run and volatile sources include all hydrogen sources that supply hydrogen 
 * Dedicated H<sub>2</sub> production by offshore wind turbines
 * Dedicated H<sub>2</sub> production by solar PV plants
 * Price-sensitive H<sub>2</sub> production with electrolysis (capacity can be installed in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-hydrogen) section)
+* Hybrid offshore H<sub>2</sub> production with electrolysis (capacity can be installed in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_net_load/hybrid-offshore-wind-relative-capacities) section)
 * LH2 regasification
 * LOHC reforming
 * Baseload import
 
 SMR and biomass gasification are mature technologies that are used all over the world. In contrast, ammonia reforming and ATR are more novel technologies that still require development to become commercially available. In the ETM it is assumed that the must-run variants of these technologies have a flat production profile i.e., they produce a constant amount of hydrogen throughout the year.
 
-Dedicated wind turbines and solar PV plants are renewable energy plants built solely for hydrogen production. These plants turn renewable electricity directly into hydrogen using electrolysis. To date, such dedicated plants are not (yet) used at a large scale. Their production profile is determined by solar and wind weather curves.
+Dedicated wind turbines and solar PV plants are renewable energy plants built solely for hydrogen production. These plants turn renewable electricity directly into hydrogen using electrolysis. In addition, in the ETM hydrogen can be produced by a hybrid offshore wind installation. Electricity for hydrogen production is either provided by offshore wind turbines or through an electricity cable from the HV network to the offshore electrolyser. See [Hybrid offshore wind](hybrid-offshore-wind) for more information on the components and behaviour of this hybrid offshore hub. To date, dedicated or hybrid plants are not (yet) used at a large scale. Their production profile is determined by solar and wind weather curves. 
 
 Additionally, price-sensitive hydrogen production with electrolysers can be installed. This technology is also known as power-to-gas. See [Power-to-gas](electricity-conversion#power-to-gas) for more information.
 
