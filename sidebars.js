@@ -167,6 +167,7 @@ module.exports = {
       collapsed: false,
       items: [
         "contrib/always-on-battery-parks",
+        "contrib/hybrid-offshore-hub",
         "contrib/load-shifting",
         "contrib/user-curves",
       ],
