@@ -502,6 +502,7 @@ article p code {
 .menu a[href="/main/scenario-tools/slider-comparison"]:after,
 .menu a[href="/main/managing-scenarios/scenario-access-management"]:after,
 .menu a[href="/main/managing-scenarios/scenario-version-history"]:after,
+.menu a[href="/main/hybrid-offshore-wind"]:after,
 .menu a[href="/api/version-tag"]:after,
 .menu a[href="/api/users"]:after {
   -webkit-font-smoothing: initial;
@@ -520,6 +521,7 @@ article p code {
 
 .menu a.menu__link--active[href="/main/scenario-tools/slider-comparison"]:after,
 .menu a.menu__link--active[href="/main/managing-scenarios/scenario-access-management"]:after,
+.menu a.menu__link--active[href="/main/hybrid-offshore-wind"]:after,
 .menu a.menu__link--active[href="/main/managing-scenarios/scenario-version-history"]:after,
 .menu a[href="/api/transition-paths"]:after {
   color: #e8eeff;
