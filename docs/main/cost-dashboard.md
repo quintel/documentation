@@ -29,7 +29,7 @@ This page explains the six main groups that comprise the total annual costs disp
 
 4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). All G2P is associated with means of 'Energy production'. Subgroups:
   -  Power-to-power (p2p)
-  -  Power-to-gas (p2g)
+  -  Power-to-gas (p2g), onshore and offshore
   -  Power-to-heat (p2h)
   -  Storage (of hydrogen and heat)
 

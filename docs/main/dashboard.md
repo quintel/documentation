@@ -11,7 +11,7 @@ The dashboard of the Energy Transition Model is an overview at the bottom of the
 ### Primary energy use
 The percentage under ‘energy use’ on the dashboard shows difference in total primary energy consumption between the present and the future (based on your scenario). This includes all types of energy and non-energy consumption (e.g. natural gas consumption for fertilizer) within the ETM. Primary energy consumption as a result from exports is not included. This means losses incurred in the conversion sector before exporting energy are excluded.
 
-_Checkout: the 'Detaile information > Dashboard > [Primary demand](primary-energy)' infopage for more information._
+_Checkout: the [Primary demand](primary-energy) infopage for more information._
 
 ## CO<sub>2</sub> emissions
 This category contains 3 dashboard items that only include CO<sub>2</sub> emissions and 1 dashboard item that includes all greenhouse gas emissions.
