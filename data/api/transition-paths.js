@@ -42,7 +42,14 @@ export default {
         name: "scenario_ids",
         type: "[]number",
         description:
-          "the IDs of the underlying scenarios (required); at least one scenario is required, maximum of ten",
+          "the IDs of the underlying scenarios (required); at least one is required between scenarios and saved_scenario",
+        required: true,
+      },
+      {
+        name: "saved_scenario_ids",
+        type: "[]number",
+        description:
+          "the IDs of the underlying saved scenarios; at least one is required between scenarios and saved_scenarios",
         required: true,
       },
     ],

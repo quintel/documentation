@@ -10,6 +10,8 @@ import UpcomingFeature from '@site/src/components/UpcomingFeature';
 
 The ETM's [Transition Paths](https://energytransitionmodel.com/multi_year_charts) feature can be used by providing scenario IDs directly to the URL. However, in order for them to appear in your list, you can use the API to create persisted transition paths.
 
+Instead of a transition path, the viewer can also show a comparison of a selection of [saved scenarios](saved-scenarios.md). With this endpoint you may also create such a persisted collection.
+
 The ETM provides an API for creating, updating, and removing transition paths from your account.
 
 ## The TransitionPath object
@@ -19,6 +21,7 @@ scenario endpoint:
 
 * `id` - the numeric id of the transition path.
 * `scenario_ids` - the list of [scenarios](scenarios.md) in the transition path.
+* `saved_scenario_ids` - the list of [saved scenarios](saved-scenarios.md) in the collection.
 * `area_code` - the geographic area which the transition path represents.
 * `end_year` - the year the original scenario.
 * `title` - the title of the transition path, shown in the list.
@@ -126,6 +129,7 @@ Authorization: Bearer YOUR_TOKEN
 {
   "id": 123,
   "scenario_ids": [12, 34],
+  "saved_scenario_ids": [],
   "title": "My transition path",
   "area_code": "nl2019",
   "end_year": 2050,
@@ -160,6 +164,7 @@ Authorization: Bearer YOUR_TOKEN
 {
   "id": 123,
   "scenario_ids": [456, 789],
+  "saved_scenario_ids": [],
   "title": "A new title",
   "area_code": "nl2019",
   "end_year": 2050,
