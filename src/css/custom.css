@@ -502,7 +502,8 @@ article p code {
 .menu a[href="/main/scenario-tools/slider-comparison"]:after,
 .menu a[href="/main/managing-scenarios/scenario-access-management"]:after,
 .menu a[href="/main/managing-scenarios/scenario-version-history"]:after,
-.menu a[href="/api/version-tag"]:after {
+.menu a[href="/api/version-tag"]:after,
+.menu a[href="/api/users"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;

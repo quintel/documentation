@@ -16,9 +16,9 @@ module.exports = {
             "main/managing-scenarios/my-scenarios-menu",
             "main/managing-scenarios/scenario-management",
             "main/managing-scenarios/scenario-access-management",
-            "main/managing-scenarios/scenario-version-history"            
+            "main/managing-scenarios/scenario-version-history"
           ]
-        },        
+        },
         "main/developing-your"
       ],
     },
@@ -217,6 +217,7 @@ module.exports = {
         "api/exports",
         "api/gqueries",
         "api/version-tag",
+        "api/users",
       ],
     },
     {
