@@ -17,7 +17,7 @@ The electricity output of the hybrid offshore wind turbines can be set in the [W
   </figure>
 </div>
 
-The behaviour between the different components are explained below. For detailed information on the technical configuration and method of hourly calculations between the components of hybrid offshore wind in the ETM, see the ADDPAGE page. 
+The behaviour between the different components are explained below. For detailed information on the technical configuration and method of hourly calculations between the components of hybrid offshore wind in the ETM, see the [Hybrid offshore hub](/contrib/hybrid-offshore-hub) page. 
 
 ## Behaviour of components
 
@@ -48,5 +48,3 @@ To get an overview of the results in annual energy flows between the components 
         src="/img/docs/20240612_hybrid_offhsore_wind_sankey.png" alt="Hybrid offshore wind sankey" />
   </figure>
 </div>
-
-
