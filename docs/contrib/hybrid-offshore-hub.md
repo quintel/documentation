@@ -135,3 +135,58 @@ The following data can be expected after the merit order has run.
 #### Curtailment node
 * `demand`: the total annual amount of curtailed energy from the producer
 * `electricity_input_curve`: the hourly curtailed electricity input (originating from the producer node)
+
+## Updating values with GQL
+The ETM currently provides user inputs that update the `number_of_units` of the producer node and the electrolyser (converter) node. For the power cable nodes, the `electricity_output_capacity` can be set. 
+
+#### Change the capacity of the producer
+In the ETM, the total installed capacity of the producer node can be set. This input will update the `number_of_units` of the producer based on the typical input capacity of one producer unit:
+
+```ruby
+UPDATE(
+  V(producer_key),
+  number_of_units,
+  USER_INPUT() / V(electrolyser_key, typical_input_capacity)
+)
+```
+
+#### Change the capacity of the electrolyser
+In the ETM, the relative installed capacity of the electrolyser can be set compared to the installed capacity of the producer node. With this setting the total installed capacity of the electrolyser can be calculated and subsequently the total `number_of_units` of the electrolyser is updated:
+
+```ruby
+UPDATE(
+  V(electrolyser_key),
+  number_of_units,
+  DIVIDE(
+    PRODUCT(
+      USER_INPUT(),
+      V(producer_key, "number_of_units * typical_input_capacity")
+    ),
+    V(electrolyser_key, typical_input_capacity)
+  )
+)
+```
+
+#### Change the capacity of the power cable
+Similar to the electrolyser node, the electricity input capacity of the cable nodes can be set through a relative capacity compared to the installed capacity of the producer node. By correcting for the `electricity_output_conversion`, the `electricity_output_capacity` is calculated and updated. Note that the total installed output capacity of the cable nodes is set directly via the `electricity_output_capacity` attribute (so the `number_of_units` is not applied or updated here). Both nodes need to be updated with the same value since in reality this is the same cable with bi-directional functionality.
+
+```ruby
+EACH(
+  UPDATE(
+    V(from_offshore_key),
+    electricity_output_capacity,
+    PRODUCT(
+      USER_INPUT() * V(producer_key, "number_of_units * typical_input_capacity"),
+      V(from_offshore_key, electricity_output_conversion)
+    )
+  ),
+  UPDATE(
+    V(to_offshore_key),
+    electricity_output_capacity,
+    PRODUCT(
+      USER_INPUT() * V(producer_key, "number_of_units * typical_input_capacity"),
+      V(to_offshore_key, electricity_output_conversion)
+    )
+  )
+)
+```
