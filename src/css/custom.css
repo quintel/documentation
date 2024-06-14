@@ -529,6 +529,7 @@ article p code {
 }
 
 /* Add "Updated" tag to some sidebar items. */
+.menu a[href="/main/scenario-tools/creating-templates"]:after,
 .menu a[href="/api/changelog"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
@@ -544,6 +545,7 @@ article p code {
   text-transform: uppercase;
 }
 
+.menu a.menu__link--active[href="/main/scenario-tools/creating-templates"]:after,
 .menu a.menu__link--active[href="/api/changelog"]:after,
 .menu a.menu__link--active[href="/api/inputs"]:after,
 .menu a.menu__link--active[href="/api/scenarios"]:after {
