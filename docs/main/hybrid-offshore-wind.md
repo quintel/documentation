@@ -13,7 +13,7 @@ The electricity output of the hybrid offshore wind turbines can be set in the [W
 <div className="images-row">
   <figure>
     <img 
-        src="/img/docs/20240612_hybrid_offshore_wind_capacity.png" alt="Hybrid offshore wind capacity" width= '700' />
+        src="/img/docs/20240618_hybrid_offshore_wind_installed capacities.png" alt="Hybrid offshore wind capacity" width= '700' />
   </figure>
 </div>
 
@@ -45,6 +45,6 @@ To get an overview of the results in annual energy flows between the components 
 <div className="images-row">
   <figure>
     <img 
-        src="/img/docs/20240612_hybrid_offhsore_wind_sankey.png" alt="Hybrid offshore wind sankey" />
+        src="/img/docs/20240618_hybrid_offshore_wind_energy_flows.png" alt="Hybrid offshore wind sankey" width='700'/>
   </figure>
 </div>
