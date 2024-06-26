@@ -33,6 +33,10 @@ As described above, the electrolyser will always receive produced electricity fr
 
 The electrolyser will produce hydrogen when the electricity price is lower than the WTP of the electrolyser. Electricity for hydrogen production will first be received from the hybrid offshore wind turbine when there is remaining production. If there is still unexploited electrolyser capacity, electricity will be obtained from the onshore HV network for hydrogen production.
 
+:::info Availability
+Note that the ETM takes an annual availability of the hybrid offshore wind turbine and electrolyser into account. This is less than 100%. The hourly calculations are also corrected with this availability. Specifically, this means that the hourly peak loads are always lower than the installed capacity of the wind turbine and electrolyser, and subsequently of the offshore cable supplying electricity to the offshore electrolyser. 
+:::
+
 ### Electricity cable
 The offshore electricity cable allows for transport of electricity from the hybrid offshore wind turbine to the HV network, as well as transport from the HV network to the offshore electrolyser. For modelling purposes, this cable is modelled in the ETM as two units (offshore to onshore, onshore to offshore) with the same specifications. In reality, this would actually be one cable that allows bi-directional transport of electricity. The ETM assumes that no transport losses occur from electricity transport through the offshore cable. 
 
