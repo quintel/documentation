@@ -20,7 +20,7 @@ _Checkout: the ['Curves'](curves) infopage for more information._
 
 ### Electric vehicles
 
-The ETM uses five different profiles to determine the demand of EV’s based on research performed by Movares (Movares, 2013) and Elaad. These five profiles are:
+The ETM uses four different profiles to determine the demand of EV’s based on research performed by Elaad (2023). A fifth profile functions as a dummy profile that the user can overwrite with their own data.
 
 - Public charging
 - Charging at home
