@@ -45,4 +45,16 @@ export default {
     path_parameters: [scenarioIdParam],
     token: { scopes: ["scenarios:read", "scenarios:delete"] },
   },
+  uncouple: {
+    endpoint: "/api/v3/scenarios/{id}/uncouple",
+    method: "POST",
+    path_parameters: [scenarioIdParam],
+    token: { scopes: ["scenarios:delete"] },
+  },
+  couple: {
+    endpoint: "/api/v3/scenarios/{id}/couple",
+    method: "POST",
+    path_parameters: [scenarioIdParam],
+    token: { scopes: ["scenarios:delete"] },
+  },
 };
