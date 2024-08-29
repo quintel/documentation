@@ -26,7 +26,8 @@ scenario endpoint:
 * `updated_at` - date of last update.
 * `keep_compatible` - default false, see [forward compatibility](#forward-compatibility).
 * `esdl_exportable` - determines if the scenario can be exported as an ESDL file.
-* `coupling` - true if a coupling with another model is active.
+* `active_couplings` - list of couplings that have been activated
+* `inactive_couplings` - list of couplings that have been deactivated
 * `template` - the id of the scenario that was used as a template, or null if no template was used.
 * `metadata` - object that contains custom metadata managed by the user of the scenario.
 * `private` - boolean that determines if the scenario is private or not.
@@ -99,7 +100,8 @@ Authorization: Bearer YOUR_TOKEN
   "created_at": "2021-07-16T09:23:00.000Z",
   "updated_at": "2021-07-16T09:23:00.000Z",
   "esdl_exportable": false,
-  "coupling": false,
+  "active_couplings": [],
+  "inactive_couplings": [],
   "user_values": {
     "buildings_insulation_level": 40.3,
     "capacity_of_energy_power_hydro_river": 39.0
@@ -154,7 +156,8 @@ Authorization: Bearer YOUR_TOKEN
       "created_at": "2021-07-16T09:23:00.000Z",
       "updated_at": "2021-07-16T09:23:00.000Z",
       "esdl_exportable": false,
-      "coupling": false,
+      "active_couplings": [],
+      "inactive_couplings": [],
     },
     // ...
   ]
@@ -527,25 +530,28 @@ Authorization: Bearer YOUR_TOKEN
 
 ## Scenario couplings
 
-<UpcomingFeature release="2023.06" />
+<UpcomingFeature release="2024.09" />
 
-When your scenario is coupled to another energy model, certain inputs of you scenario are overwritten
-by this other model. When inspecting your scenario the `coupling` attribute will indicate whether
-your scenario was coupled.
+When your scenario is [coupled to another energy model](/main/external-coupling), certain inputs of you scenario are overwritten
+by this other model. When inspecting a scenario the `active_couplings` and `inactive_couplings` attributes will indicate whether your scenario was coupled, and which couplings are currently active.
 
-It is possible to remove the coupling to the other model by setting `coupling` to `false`.
-This means that the inputs set by the other model will be erased. This action is irreversible.
+To couple a new model, simply set [a coupling input](/main/external-coupling#coupling-external-inputs) and the coupling will be activated automatically.
 
-<ApiEndpoint data={endpointData.update} />
+### Uncoupling
+
+A coupling can be deactivated by sending the following request
+to the uncoupling endpoint.
+
+<ApiEndpoint data={endpointData.uncouple} />
 
 ```http title="Example request"
-PUT /api/v3/scenarios/12345 HTTP/2
+POST /api/v3/scenarios/12345 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
 
 {
-  "coupling": false
+  "groups": ["external_coupling_group_1"]
 }
 ```
 
@@ -555,7 +561,68 @@ Authorization: Bearer YOUR_TOKEN
   "scenario": {
     "id": 12345,
     ...
-    "coupling": false,
+    "active_couplings": [],
+    "inactive_couplings": ["external_coupling_group_1"],
+  }
+}
+}
+```
+
+### Recoupling
+
+The couple endpoint can be used to recouple the deactivated coupling.
+
+<ApiEndpoint data={endpointData.couple} />
+
+```http title="Example request"
+POST /api/v3/scenarios/12345 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "groups": ["external_coupling_group_1"]
+}
+```
+
+```json title="Example response"
+{
+  {
+  "scenario": {
+    "id": 12345,
+    ...
+    "active_couplings": ["external_coupling_group_1"],
+    "inactive_couplings": [],
+  }
+}
+}
+```
+### Permanent uncoupling
+
+It is possible to remove the coupling to any other model permanently by setting `force` to `true`.
+This means that the inputs set by the other model will be erased. This action is irreversible.
+
+<ApiEndpoint data={endpointData.uncouple} />
+
+```http title="Example request"
+POST /api/v3/scenarios/12345 HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "force": true
+}
+```
+
+```json title="Example response"
+{
+  {
+  "scenario": {
+    "id": 12345,
+    ...
+    "active_couplings": [],
+    "inactive_couplings": [],
   }
 }
 }
