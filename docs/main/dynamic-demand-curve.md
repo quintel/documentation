@@ -30,9 +30,8 @@ A fifth profile functions as a dummy profile that the user can overwrite with th
 - Custom profile
 
 The profiles for Public charging, Charging at home & Charging at work are created based on output from the [profile generator](https://platform.elaad.io/analyse/low-voltage-charging-profiles/) by Elaad. 1000 profiles in each categorie have been generated and aggregated to the profiles we use in the ETM. 
-The raw unprocessed data can be found at 
 
-The profile for Fast charging is based on research performed by Movares (Movares, 2013) and Elaad. 
+The profile for Fast charging and the custom profile are based on research performed by Movares (Movares, 2013) and Elaad. The custom profile is based on the charging everywhere profile from that study.
 
 You can use these profiles to adjust the charging behaviour of electric cars. In all profiles weekend days are considered differently from weekdays. You can find these profiles in the Flexibility section under ‘Net load’> ‘Demand response – electric vehicles’. 
 
