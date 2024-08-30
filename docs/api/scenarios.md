@@ -532,8 +532,7 @@ Authorization: Bearer YOUR_TOKEN
 
 <UpcomingFeature release="2024.09" />
 
-When your scenario is [coupled to another energy model](/main/external-coupling), certain inputs of you scenario are overwritten
-by this other model. When inspecting a scenario the `active_couplings` and `inactive_couplings` attributes will indicate whether your scenario was coupled, and which couplings are currently active.
+When your scenario is [coupled to another energy model](/main/external-coupling), certain inputs of your scenario are overwritten by this other model. When inspecting a scenario the `active_couplings` and `inactive_couplings` attributes will indicate whether your scenario was coupled, and which couplings are currently active.
 
 To couple a new model, simply set [a coupling input](/main/external-coupling#coupling-external-inputs) and the coupling will be activated automatically.
 
