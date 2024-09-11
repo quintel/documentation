@@ -32,7 +32,11 @@ While an external model is coupled, the sliders that are deactivated can no long
 
 By uncoupling you reset the scenario back to any previous slider settings that were set by the scenario creator before the external coupling was made.
 
-:::info Uncoupling to previous slider settings
-At the moment it is not possible to recouple an uncoupled scenario from the ETM front-end, so returning to the coupled scenario requires you to save a coupled version as backup.
+While uncoupling a scenario, the user can choose to uncouple the permanently by checking the box 'Uncouple permanently'. 
+If this box is unmarked, the coupling becomes an 'inactive coupled model', meaning that the slider settings set by the external model can be retrieved.
+If this box is marked, the coupling becomes an 'uncoupled model', meaning that the slider settings set by the external model can no longer be retrieved.
 
-:::
+<div class="bordered-image">
+  <img src="/img/docs/external-coupling/coupling_check_box.png" alt="A screenshot from the ETM showing the coupling settings with external models" />
+</div>
+
