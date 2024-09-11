@@ -528,17 +528,17 @@ Host: engine.energytransitionmodel.com
 Authorization: Bearer YOUR_TOKEN
 ```
 
-## Scenario couplings
+## Scenario coupling
 
 <UpcomingFeature release="2024.09" />
 
 When your scenario is [coupled to another energy model](/main/external-coupling), certain inputs of your scenario are overwritten by this other model. When inspecting a scenario the `active_couplings` and `inactive_couplings` attributes will indicate whether your scenario was coupled, and which couplings are currently active.
 
-To couple a new model, simply set [a coupling input](/main/external-coupling#coupling-external-inputs) and the coupling will be activated automatically.
+To couple a new model, simply set [a coupling input](/main/external-coupling#coupling-external-inputs) and the coupled external model will become active automatically.
 
-### Uncoupling
+### Deactivating coupled models
 
-A coupling can be deactivated by sending the following request
+A coupled external model can be deactivated by sending the following request
 to the uncoupling endpoint.
 
 <ApiEndpoint data={endpointData.uncouple} />
@@ -567,9 +567,9 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
-### Recoupling
+### Activating coupled models
 
-The couple endpoint can be used to recouple the deactivated coupling.
+The couple endpoint can be used to (re)activate the coupled external model.
 
 <ApiEndpoint data={endpointData.couple} />
 
@@ -596,10 +596,10 @@ Authorization: Bearer YOUR_TOKEN
 }
 }
 ```
-### Permanent uncoupling
+### Uncoupling coupled models
 
-It is possible to remove the coupling to any other model permanently by setting `force` to `true`.
-This means that the inputs set by the other model will be erased. This action is irreversible.
+It is possible to permanently uncoupled the external model by setting `force` to `true`.
+This means that the inputs set by the external model will be erased. This action is irreversible.
 
 <ApiEndpoint data={endpointData.uncouple} />
 
