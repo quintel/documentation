@@ -21,18 +21,24 @@ When an external coupling input is set through the API, its coupling groups will
   <img src="/img/docs/external-coupling/coupled_paper_industry.png" alt="A screenshot from the ETM showing the coupled ETM paper industry" />
 </div>
 
-By clicking on the "coupled" icon, that indicated that a slider is set by an external coupling inputs, users can view the coupling groups.
+By clicking on the "coupled" icon, that indicates that a slider is set by an external coupling inputs, users can view the coupling groups.
 
 <div class="bordered-image">
   <img src="/img/docs/external-coupling/coupling_groups_paper_industry.png" alt="A screenshot from the ETM showing the standard ETM paper industry modelling before coupling" />
 </div>
 
-## Uncoupling the scenario
-While an external model is coupled, the sliders that are deactivated can no longer be used. Therefore, if you want to explore the scenario, you can choose to uncouple the external scenario. This re-enables interaction with the front-end.
+## Managing coupled models
 
-By uncoupling you reset the scenario back to any previous slider settings that were set by the scenario creator before the external coupling was made.
+### Active coupled models
+When external coupling inputs are set for a specific model, the coupled model is activated by default. This means that the standard ETM inputs that are disabled by those coupling inputs are inactive.
 
-:::info Uncoupling to previous slider settings
-At the moment it is not possible to recouple an uncoupled scenario from the ETM front-end, so returning to the coupled scenario requires you to save a coupled version as backup.
+### Inactive coupled models
+In the "Coupled Model Settings", the active coupled external model can be managed. Using the toggle for each coupled external model, the coupling can be deactivated. This means that the external coupling inputs will become inactive and the standard ETM inputs will be reactivated. This action is reversible: the inactive coupled external model can be reactived.
 
-:::
+### Uncoupled models
+In the "Coupled Model Settings", the coupled external models can also be permanently uncoupled by checking the box "Uncouple permanently". This action is irreversible: all external coupling inputs are permanently removed from the scenario.
+
+<div class="bordered-image">
+  <img src="/img/docs/external-coupling/coupling_check_box.png" alt="A screenshot from the ETM showing the settings for coupled external models" />
+</div>
+
