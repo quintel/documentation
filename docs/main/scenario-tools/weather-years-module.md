@@ -21,7 +21,7 @@ should be present in the subfolder:
 * **temperature**: the outside temperature in degrees C for all 8760 hours of the year.
 * **irradiation**: the irradiation in J/cm2 for all 8760 hours of the year.
 * **thermostat**: a csv with three columns (*low, medium, high*), with thermostat settings for 24 hours.
-* **G2A_parameters**: A csv with three columns (*reference, slope, constant*) and values for all 8760 hours of the year.
+* **G2A_parameters**: A csv containing paramaters to dertermine the demand profile (G2A profile) for the buildings/services sector. The csv contains three columns (*reference, slope, constant*) and values for all 8760 hours of the year.
 * **wind_speed**: A csv with wind speed values in m/s for all 8760 hours of the year.
 
 Please note the tool is only capable of generating the following 14 weather curves based on this input data:
