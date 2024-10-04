@@ -120,7 +120,7 @@ module.exports = {
         "main/scenario-tools/slider-comparison",
         "main/scenario-tools/creating-templates",
         "main/scenario-tools/regional-overview",
-        "main/scenario-tools/heat-module",
+        "main/scenario-tools/weather-years-module",
         "main/scenario-tools/advanced-settings",
       ],
     },

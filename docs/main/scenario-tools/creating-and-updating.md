@@ -26,7 +26,7 @@ In the `scenario_list.csv` file you can create a row for each scenario you wish 
  * **id**. Should be left empty if you want to create a new scenario. The ID will be filled in automatically when the scenario is created. If you want to update an existing scenario, you can specify its ID here.
  * **keep_compatible**. True or False. Is False by default if left empty. Determines whether the scenario should be updated automatically if we make changes to the model; keeping your scenario compatible with future versions of the ETM, see [forward compatibility](/api/scenarios#forward-compatibility).
  * **curve_file**. The name of a CSV file containing custom hourly profiles. For example interconnector price curves, solar production curves or industry heat demand curves. The CSV file should be placed in the `input/curves` folder.
- * **heat_demand**. *Optional - expert feature.* The name of the folder inside `input/curves` that contains either 15 heat demand profiles, or the three input files neccesary to generate new profiles. See the [heat module section](heat-module) for more information.
+ * **heat_demand**. *Optional - expert feature.* The name of the folder inside `input/curves` that contains either heat demand profiles, or the input files neccesary to generate new profiles. See [weather years module](weather-years-module) (previously named: heat module) for more information on this functionality.
 
 :::warning Keep compatible
 Not keeping your scenario compatible with newer model versions can cause the model to break or lead to unforseen outcomes for your scenarios.

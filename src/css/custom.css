@@ -499,10 +499,8 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/main/scenario-tools/slider-comparison"]:after,
 .menu a[href="/main/managing-scenarios/scenario-access-management"]:after,
 .menu a[href="/main/managing-scenarios/scenario-version-history"]:after,
-.menu a[href="/main/hybrid-offshore-wind"]:after,
 .menu a[href="/api/version-tag"]:after,
 .menu a[href="/api/users"]:after {
   -webkit-font-smoothing: initial;
@@ -519,9 +517,7 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/main/scenario-tools/slider-comparison"]:after,
 .menu a.menu__link--active[href="/main/managing-scenarios/scenario-access-management"]:after,
-.menu a.menu__link--active[href="/main/hybrid-offshore-wind"]:after,
 .menu a.menu__link--active[href="/main/managing-scenarios/scenario-version-history"]:after,
 .menu a[href="/api/transition-paths"]:after {
   color: #e8eeff;
@@ -529,7 +525,7 @@ article p code {
 }
 
 /* Add "Updated" tag to some sidebar items. */
-.menu a[href="/main/scenario-tools/creating-templates"]:after,
+.menu a[href="/main/scenario-tools/weather-years-module"]:after,
 .menu a[href="/api/changelog"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
@@ -545,7 +541,7 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/main/scenario-tools/creating-templates"]:after,
+.menu a.menu__link--active[href="/main/scenario-tools/weather-years-module"]:after,
 .menu a.menu__link--active[href="/api/changelog"]:after,
 .menu a.menu__link--active[href="/api/inputs"]:after,
 .menu a.menu__link--active[href="/api/scenarios"]:after {
