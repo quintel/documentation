@@ -111,7 +111,7 @@ The table below provides some additional information on selected categories.
 |**Demand: Industry electricity**|Includes electricity demand, except electricity used for heating (boilers, heat pumps etc.)|
 |**Demand: Electric cars**|You can upload 5 different profiles for electric cars. The ETM uses a mix of these profiles depending on your choices in the [Demand response - electric vehicles](https://pro.energytransitionmodel.com/scenario/flexibility/flexibilitynetload/demand-response-electric-vehicles) section.|
 |**Import/Export: Gases**| The ETM uses 'demand' type profiles for both import and export (see above). This means that the units used in your custom profile do not matter. The ETM will extract the _shape_ of your profile and apply that to the annual import/export volume.|
-|**Import/Export: Interconnectors**|See [imported electricity](costs-imported-electricity.md#uploaded-price-curves)|
+|**Import/Export: Interconnectors**|See [imported electricity](costs-imported-electricity.md#uploaded-price-curves) for more information about the costs of interconnectors. In addition, via external coupling in the model, the user can set the interconnectors to a must-run producer or consumer, for more information about how must-run producers and consumers are handled in the electricity module see [Merit order algorithm](merit-order.md#merit-order-algorithm). **WARNING:** While setting interconnectors to a must-run actor, the interconnector no longer participates on the electricity market. This is to ensure the must-run nature.|
 
 
 ### Results
