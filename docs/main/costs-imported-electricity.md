@@ -26,3 +26,9 @@ etc
 Before uploading, please ensure the file has a ".csv" file extension then visit the Flexibility > Import/Export > ['Interconnector 1'](https://pro.energytransitionmodel.com/scenario/flexibility/electricity_import_export/interconnector-1) page and click "Upload a custom curve". The price in each hour will be rounded to the nearest whole cent.
 
 _Source:[European Commission, 2016: Quarterly Report on European Electricity Markets](https://ec.europa.eu/energy/sites/ener/files/documents/quarterly_report_on_european_electricity_markets_q4_2015-q1_2016.pdf); ([cached](https://refman.energytransitionmodel.com/publications/2079))_
+
+:::caution Must-run interconnectors
+Please note that it is possible to set an interconnector to a must-run producer/consumer via external coupling.
+To ensure that the interconnector will ential the must-run behavior, the price of the interconnector is in this case set to 0.0 €/MWh. 
+For more information about how must-run producers and consumers are handled in the electricity module see [Merit order algorithm](merit-order.md#merit-order-algorithm)
+:::
