@@ -182,7 +182,10 @@ module.exports = {
       type: "category",
       label: "Dataset manager",
       collapsed: false,
-      items: ["contrib/dataset-manager/data-migrations"],
+      items: [
+        "contrib/dataset-manager/data-migrations",
+        "contrib/dataset-manager/household-heat-initialization"
+      ],
     },
     {
       type: "category",
