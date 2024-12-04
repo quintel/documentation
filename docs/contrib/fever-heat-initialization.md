@@ -1,9 +1,9 @@
 ---
-title: Household Heat Technology Split Initialization
+title: Built environment heat initialization
 ---
 
 ## Introduction
-This section explains how the ETM initializes the technology split for heat demand in households. 
+This section explains how the ETM initialises the technology split for heat demand in households. 
 
 The 'current' technology split for heat demand in households, found in the "Space heating & hot water" section under Households, is not directly sourced from data but is instead calculated by the Fever module under a set of assumptions. 
 More information about the fever module can be found in the [fever](/contrib/fever) section.
