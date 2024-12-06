@@ -167,7 +167,7 @@ module.exports = {
     {
       type: "category",
       label: "Hourly calculations",
-      collapsed: false,
+      collapsed: true,
       items: [
         "contrib/always-on-battery-parks",
         "contrib/hybrid-offshore-hub",
@@ -178,19 +178,29 @@ module.exports = {
     {
       type: "category",
       label: "Charts",
-      collapsed: false,
+      collapsed: true,
       items: ["contrib/charts/category-bar"],
     },
     {
       type: "category",
+      label: "Dataset initialization",
+      collapsed: true,
+      items: [
+        "contrib/fever-heat-initialization"
+      ],
+    },
+    {
+      type: "category",
       label: "Dataset manager",
-      collapsed: false,
-      items: ["contrib/dataset-manager/data-migrations"],
+      collapsed: true,
+      items: [
+        "contrib/dataset-manager/data-migrations"
+      ],
     },
     {
       type: "category",
       label: "Adding new features",
-      collapsed: false,
+      collapsed: true,
       items: [
         "contrib/authoring-docs",
         "contrib/authoring-gqueries",
