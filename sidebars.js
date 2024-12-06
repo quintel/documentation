@@ -99,7 +99,10 @@ module.exports = {
       type: "category",
       label: "3. Data Sources",
       collapsed: true,
-      items: ["main/data-sources-local"],
+      items: [
+        "main/data-sources-datasets",
+        "main/data-sources-local"
+      ],
     },
     {
       type: "category",
