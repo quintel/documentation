@@ -10,10 +10,8 @@ The building stock sets the preconditions for heat in the built environment. It 
 The ETM distinguishes four housing types:
 * Apartments
 * Detached houses
-* Semi-detached houses
+* Semi-detached houses (not available for all country datasets in the ETM)
 * Terraced houses
-
-Note: the semi-detached housing type is optional and currently mainly available for the Netherlands and regions within the Netherlands. 
 
 Within each of these types the housing stock is additionally split into construction periods:
 * Before 1945
@@ -30,7 +28,7 @@ The sources used for the existing housing stock data can be found in the [ETM da
 The building stock within the buildings sector is used to provide a wide range of services, from hospitals to offices or swimming pools, making it difficult to capture the sector in a limited number of categories. Therefore, no different building types are distinguished.
 
 There is limited reliable data available about construction periods for buildings. Therefore, the building stock is split into only two categories:
-* Existing buildings
+* Existing buildingss
 * New buildings (built between the starting year and end year, part of the scenario)
 
 The sources used for the existing building stock data can be found in the [ETM dataset manager](https://data.energytransitionmodel.com/).
