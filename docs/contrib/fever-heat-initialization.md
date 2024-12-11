@@ -3,18 +3,35 @@ title: Built environment heat initialization
 ---
 
 ## Introduction
-This section explains how the ETM initialises the technology split for space heating and hot water demand in households. 
+This section explains how the ETM initializes the technology split for space heating and hot water demand in households in the base and future year. 
 
-The depicted default technology split for space heating and hot water demand in households, found in the [Space heating & hot water](https://energytransitionmodel.com/scenario/demand/households/space-heating-and-hot-water) section under Households, is not directly sourced from data but is instead calculated by the Fever module under a set of assumptions. 
+The depicted default (start year) technology split for space heating and hot water demand in the frontend, found in the [Space heating & hot water](https://energytransitionmodel.com/scenario/demand/households/space-heating-and-hot-water) section under Households, is not directly sourced from a data point but is instead calculated by the Fever module under a set of assumptions and various data points. 
 More information about the Fever module can be found in the [Fever](/contrib/fever) section.
 
-The technology split represents the percentage of residences utilizing specific technologies to meet their space heating and hot water demand. Fever determines this split through a three-step process:
+The technology split for space heating and hot water represents the percentage of residences utilizing specific technologies to meet their space heating and hot water demand. In the base year, this split is determined for space heating and hot water separately through the following steps:
+1. Loading households demand data
+2. Allocating heating technologies to residences
+
+These steps are further explained below.
+
+:::info Technology splits for space heating depicted by default in the frontend
+In a blanc scenario, the default values in the base yearfor the technology splits for space heating are depicted. The technology splits for hot water are thus not depicted here. See for example the `start_value_gql` of the slider for the gas-fired condensing combi boiler:
+
+``` 
+start_value_gql = present:V(households_space_heater_combined_network_gas,"fever.share_in_group") * 100.0
+```
+Note that whereas the start value of the slider depicts the technology split value for **space heating only**, the functionality of the slider applies to both space heating and hot water. Thus, from the moment the user sets this slider, for instance to 20%, this means the gas-fired condensing combi boiler is used in 20% of the residences for **both space heating and hot water** in the future year.
+:::
 
 ---
 
 ## Step 1: Loading Household Demand Data
-In the first step, Fever loads data from the dataset into the model. This data is available for review in the [Dataset manager](https://data.energytransitionmodel.com/) and includes data on final demands, application splits and technology splits in the households sector for the base year. Subsequentyly, the model  assigns final demand to the appropriate heating technologies.
-The assigned final demand per heating technology is not presented explicitly in the Dataset manager, but is derived from the household's final demand per carrier, the application splits for the relevant carriers, and the technology split for the relevant applications.
+In the first step, Fever loads data from the dataset into the model. This data is available for review in the [Dataset manager](https://data.energytransitionmodel.com/) and includes the following data for households in the base year:
+- Final demand per carrier
+- Application splits (splits per carrier to applications)
+- Technology splits (splits per carrier to technology)
+
+Based on these data points, the model determines the final demand per carrier per heating technology for space heating and hot water separately. 
 
 ---
 
