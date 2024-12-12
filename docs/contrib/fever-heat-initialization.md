@@ -6,7 +6,6 @@ title: Built environment heat initialization
 This section explains how the ETM initializes the technology split for space heating and hot water demand in households in the base and future year. 
 
 The depicted default (start year) technology split for space heating and hot water demand in the frontend, found in the [Space heating & hot water](https://energytransitionmodel.com/scenario/demand/households/space-heating-and-hot-water) section under Households, is not directly sourced from a data point but is instead calculated by the Fever module under a set of assumptions and various data points. 
-More information about the Fever module can be found in the [Fever](/contrib/fever) section.
 
 The technology split for space heating and hot water represents the percentage of residences utilizing specific technologies to meet their space heating and hot water demand. In the base year, this split is determined for space heating and hot water separately through the following steps:
 1. Loading households demand data
@@ -40,76 +39,57 @@ Using the final heat demand data, Fever assigns technologies to different reside
 
 For example, in the Netherlands, newer residences often use heating technologies such as heat pumps due to their limited heat output capacity, which makes them better suited to well-insulated buildings. The allocation of heating technologies to residence types and construction period is based on this assumption.
 
-The standard merit order for residence heating technologies is as follows:
+The standard merit order for heat in households can be found in the [Households merit order section](https://energytransitionmodel.com/scenario/demand/households_heating_order/merit-order).
 
-1. LT district heating
-2. Aquathermal heat pump with TS (surface water)
-3. Air heat pump
-4. Ground heat pump
-5. Ground heat pump with PVT
-6. MT district heating
-7. Hybrid air heat pump (gas)
-8. Hybrid air heat pump (hydrogen)
-9. Hybrid air heat pump (oil)
-10. HT district heating
-11. Electric boiler
-12. Condensing combi boiler (gas)
-13. Condensing combi boiler (hydrogen)
-14. Wood pellet boiler
-15. Gas-fired heater
-16. Coal-fired heater
-17. Oil-fired heater
+### Example:
+For this example we will use a simple fictive dataset, with 5 technologies and a total final demand of 5 PJ.
 
-### Example: Cyprus
-For Cyprus, the technology split is initialized using the following merit order and demand values:
+There are 5 technologies in the merit-order, for simplicity we simply rank them as Technology 1 to 5.
+For the sake of simplicity, each of the technologies has an equal final demand in this example, namely 1 PJ. This leads to the following merit order:
 
-1. **Air heat pump:** 0.681 PJ (10.7%)
-2. **Electric boiler:** 0.678 PJ (10.7%)
-3. **Biomass boiler:** 0.761 PJ (12.0%)
-4. **Oil-fired heater:** 4.24 PJ (66.7%)
+1. **Technology 1:** 1 PJ (20%)
+2. **Technology 2:**:1 PJ (20%)
+2. **Technology 3:** 1 PJ (20%)
+3. **Technology 4:** 1 PJ (20%)
+4. **Technology 5:** 1 PJ (20%)
 
 The residences are subdivided by construction periods with their corresponding demands:
+The amount of residences differ for each constuction period, while the final demand for each of the construction periods is 1 PJ.
 
-- **2005 - present:** 85,889 residences, demand = 1.116 PJ
-- **1985 - 2004:** 81,921 residences, demand = 1.051 PJ
-- **1965 - 1984:** 118,525 residences, demand = 1.534 PJ
-- **1945 - 1964:** 112,330 residences, demand = 1.472 PJ
-- **Before 1945:** 30,884 residences, demand = 0.409 PJ
+- **2005 - present:** 125,000 residences,(25%),  demand = 1 PJ 
+- **1985 - 2004:** 112,500 residences (22.5%), demand = 1 PJ
+- **1965 - 1984:** 100,000 residences (20%), demand = 1 PJ
+- **1945 - 1964:** 87,500 residences (17.5%), demand = 1 PJ
+- **Before 1945:** 75,000 residences (15%), demand = 1 PJ
 
-### Example of Heating Technology Allocation in Cyprus
+### Heating Technology Allocation 
 
 Using the provided demand data and merit order, the model assigns heating technologies to residences based on their construction period and heat demand:
 
-1. **Air Heat Pumps:**  
-   These are assigned first to th residences with lowest heat demand and built between **2005 - present**. A total of **61,250 residences** can be heated using air heat pumps, leaving **24,630 residences** from this construction period unheated.
+1. **Technology 1:** 
+   Technology 1 is assigned first, since this is the first technology it is assigned to the newest residences wich are built between **2005 - present**. The demand of the first technology equals the demand of the households in this period, since they are both 1 PJ, this technology serves 125,000 residences.
 
-2. **Electric Boilers:**  
-   The remaining residences in the **2005 - present** construction period will be heated with the available heating technology in Cyprus that is next in the merit order. In this case, electric boilers are allocated to these remaining residences. The remaining demand from electric boilers is allocated to **29,411 residences** from the **1985 - 2004** construction period. This leaves **52,510 residences** in this construbtion period unheated.
+2. **Technology 2:**  
+   Since all the residences with building period **2005 - present** are served, this technology is first assigned to the residences in the construction period **1984 - 2005**. The demand of the second technology equals the demand of the households in this period, since they are both 1 PJ, this technology serves 112,500 residences.
 
-3. **Biomass Heaters:**  
-   Next, biomass heaters are assigned to the unheated residences in the **1985 - 2004** construction period. This covers **42,164 residences**, leaving **10,346 residences** from this construction period without heating.
+3. **Technology 3:**  
+   The demand of the Technology 3 matches the demand of the residences in the construction period between **1965 - 1984**, this technology therfore serves 100,000 residences. 
 
-4. **Oil-Fired Heaters:**  
-   Finally, oil-fired heaters are allocated to all remaining residences. This includes:
-   - **10,346 residences** in the **1985 - 2004** period
-   - **118,525 residences** in the **1965 - 1984** period
-   - **112,330 residences** in the **1945 - 1964** period
-   - **30,884 residences** built **before 1945**
+4. **Technology 4:**  
+   The demand of the Technology 4 matches the demand of the residences in the construction period between **1945 - 1964**, this technology therfore serves 87,500 residences. 
+5. **Technology 4:**  
+   The demand of the Technology 5 matches the demand of the residences in the construction period before **1945**, this technology therfore serves 75,000 residences. 
+
 
 ### Summary of Technology Allocation
-- **Air Heat Pumps:** 61,250 residences (14.3%)
-- **Electric Boilers:** 54,041 residences (12.6%)
-- **Biomass Boilers:** 42,641 residences (9.8%)
-- **Oil-Fired Heaters:** 272,103 residences (63.3%)
+- **Technology 1:** 125,000 residences (25,0%)
+- **Technology 2**: 112,500 residences (22.5%)
+- **Technology 3:** 100,000 residences (20%)
+- **Technology 4:** 87,500 residences (17.5%)
+- **Technology 5:** 75,000 residences (15%)
 
-This allocation process results in, for example, more heat pumps being allocated than space heaters, despite similar heat demand across technologies in the base year. 
 
----
-
-## Step 3: Hourly Calculations
-
-After the alloation of heating technologies to residences, hourly calculations in heat demand and supply begin for the future year, which is first done based on the default scenario settings. Based on hourly heat demand profiles (taking into account peak demands per residence type and construction period) and heat supply profiles (taking into account available capacity per technology), moments of deficits are determined. 
-
-When changes are made to the scenario, final heat demand and heat supply per heating technology are calculated again, together with the hourly calculations to determine the potential deficits. 
+This distribution is then set as the default slider settings in the frontend. 
 
 ---
+
