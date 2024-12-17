@@ -100,7 +100,7 @@ module.exports = {
       label: "3. Data Sources",
       collapsed: true,
       items: [
-        "main/data-sources-datasets",
+        "main/data-sources-regions",
         "main/data-sources-local"
       ],
     },
