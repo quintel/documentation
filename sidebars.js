@@ -164,7 +164,7 @@ module.exports = {
     {
       type: "category",
       label: "Hourly calculations",
-      collapsed: true,
+      collapsed: false,
       items: [
         "contrib/always-on-battery-parks",
         "contrib/hybrid-offshore-hub",
@@ -181,7 +181,7 @@ module.exports = {
     {
       type: "category",
       label: "Dataset initialization",
-      collapsed: true,
+      collapsed: false,
       items: [
         "contrib/fever-heat-initialization"
       ],
