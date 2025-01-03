@@ -85,7 +85,7 @@ The first heating technology supplies the first useful demand node. If the deman
 
 ### Determining the technology split
 
-For each useful demand node, the `number_of_units` is read from the dataset using the `AREA` query. For each heating technology, the share of its supply of useable heat in the input of each useful demand node is multiplied with the corresponding `number_of_units`. This leads to a total `number_of_units` for each heating technologies. The sum of heating technology units equals the sum of useful demand units.
+For each useful demand node, the `number_of_units` is read from the dataset using the `AREA` query. For each heating technology, the share of its supply of useable heat in the input of each useful demand node is multiplied with the corresponding `number_of_units`. This leads to a total `number_of_units` for each heating technology. The sum of heating technology units equals the sum of useful demand units.
 
 <div style={{ textAlign: "center" }}>
   <img

@@ -28,7 +28,7 @@ The sources used for the existing housing stock data can be found in the [ETM da
 The building stock within the buildings sector is used to provide a wide range of services, from hospitals to offices or swimming pools, making it difficult to capture the sector in a limited number of categories. Therefore, no different building types are distinguished.
 
 There is limited reliable data available about construction periods for buildings. Therefore, the building stock is split into only two categories:
-* Existing builings
+* Existing buildings
 * New buildings (built between the starting year and end year, part of the scenario)
 
 The sources used for the existing building stock data can be found in the [ETM dataset manager](https://data.energytransitionmodel.com/).
@@ -94,9 +94,9 @@ A chart is available that visualizes the resulting number of residences per spac
 Note that a housing category can be matched with more than one heating technology. In the chart above, the housing construction period 1985-2004 is split between air heat pumps and ground heat pumps, whereas newer residences have only been assigned air heat pumps. The reason for this is that the specified share of residences with an air heat pump was reached sometime during the 1985-2004 category, upon which the ETM switched to the next technology in the merit order, that is, ground heat pumps.
 
 ### Matching heat demand with supply
-The ETM matches demand for space heating and hot water with supply on an hourly basis. It does this for both the **starting year**, and the **simulated data year**. 
+The ETM matches demand for space heating and hot water with supply on an hourly basis. It does this for both the **starting year** and the **simulated end year**. 
 How this proces works for the **starting year** can be found in the section [Built environment heat initialization](../contrib/fever-heat-initialization.md).
-Underneath we describe the process for the **simulated data year**
+Below the process for the **simulated end year** is described.
 
 **Hourly demand** is determined by the combination of annual heat demand and a housing/building category specific heat demand curve. The annual heat demand for water heating is considered separately from that of space heating. The heat demand curve is then applied to convert the annual demand to hourly demand profiles. This results in the following hourly demand profiles:
 * **Buildings**: one heat demand profile for buildings;
