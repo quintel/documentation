@@ -178,19 +178,29 @@ module.exports = {
     {
       type: "category",
       label: "Charts",
-      collapsed: false,
+      collapsed: true,
       items: ["contrib/charts/category-bar"],
     },
     {
       type: "category",
-      label: "Dataset manager",
+      label: "Dataset initialization",
       collapsed: false,
-      items: ["contrib/dataset-manager/data-migrations"],
+      items: [
+        "contrib/fever-heat-initialization"
+      ],
+    },
+    {
+      type: "category",
+      label: "Dataset manager",
+      collapsed: true,
+      items: [
+        "contrib/dataset-manager/data-migrations"
+      ],
     },
     {
       type: "category",
       label: "Adding new features",
-      collapsed: false,
+      collapsed: true,
       items: [
         "contrib/authoring-docs",
         "contrib/authoring-gqueries",

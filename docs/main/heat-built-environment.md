@@ -10,10 +10,8 @@ The building stock sets the preconditions for heat in the built environment. It 
 The ETM distinguishes four housing types:
 * Apartments
 * Detached houses
-* Semi-detached houses
+* Semi-detached houses (not available for all country datasets in the ETM)
 * Terraced houses
-
-Note: the semi-detached housing type is optional and currently mainly available for the Netherlands and regions within the Netherlands. 
 
 Within each of these types the housing stock is additionally split into construction periods:
 * Before 1945
@@ -41,7 +39,7 @@ In a scenario the way heat demand is met is detemined by a combination of insula
 ### Space heating demand and insulation
 Insulation can be used to reduce the amount of heating needed for houses and buildings. The ETM allows you to alter the heat demand for various types of residences and buildings (Commercial and Public Services buildings, or CaPS) separately in the Demand > ['Household'](https://energytransitionmodel.com/scenario/demand/households/overview) or ['Buildings'](https://energytransitionmodel.com/scenario/demand/buildings/overview) sections. 
 
-For the **starting year**, the heat demand for space heating follows from the region’s dataset. The sources for these data can be found in the [ETM dataset manager](https://data.energytransitionmodel.com/).
+For the **starting year**, the heat demand for space heating follows from the region’s dataset. The sources for these data can be found in the [ETM dataset manager](https://data.energytransitionmodel.com/). This data is translated to the slider settings for space heating and hot water.
 
 For the **simulated future year**, the ETM uses the typical heat demand sliders to recalculate the heat demand for space heating. The typical heat demand in the ETM reflects the average insulation level of a house or building category and is expressed in kWh/m<sup>2</sup>. The source for the typical heat demands in the starting year can also be found in the [ETM dataset manager](https://data.energytransitionmodel.com/).
 
@@ -61,7 +59,7 @@ Please note that, the **typical heat demand slider values _cannot_ be used to ca
 Additionally, the typical heat demand sliders are used to calculate insulation costs. See the ['Costs'](cost-insulation-costs) section for details on this topic.
 
 ### Hot water
-The demand for hot water is only defined for households. Residences of all housing types and build years are assumed to have the same hot water demand, since it is assumed to depend mostly on human behavior. The behavioral impact on hot water demand can be altered using the corresponding slider under the ['Development of demand'](https://energytransitionmodel.com/scenario/demand/households/development-of-demand) section.
+The demand for hot water is only defined for households. Residences of all housing types and build years are assumed to have the same hot water demand, since it is assumed to depend mostly on human behavior. The behavioral impact on hot water demand can be altered using the corresponding slider under the ['Development of demand'](https://energytransitionmodel.com/scenario/demand/households/development-of-demand) section. 
 
 ### Solar thermal panels
 Solar thermal panels in households are only used to meet hot water demand. They can be used to meet up to 100% of demand using the corresponding slider. The remaining demand is then met using the specified mix of technologies for space heating and hot water.
@@ -96,7 +94,9 @@ A chart is available that visualizes the resulting number of residences per spac
 Note that a housing category can be matched with more than one heating technology. In the chart above, the housing construction period 1985-2004 is split between air heat pumps and ground heat pumps, whereas newer residences have only been assigned air heat pumps. The reason for this is that the specified share of residences with an air heat pump was reached sometime during the 1985-2004 category, upon which the ETM switched to the next technology in the merit order, that is, ground heat pumps.
 
 ### Matching heat demand with supply
-The ETM matches demand for space heating and hot water with supply on an hourly basis. 
+The ETM matches demand for space heating and hot water with supply on an hourly basis. It does this for both the **starting year** and the **simulated end year**. 
+How this proces works for the **starting year** can be found in the section [Built environment heat initialization](../contrib/fever-heat-initialization.md).
+Below the process for the **simulated end year** is described.
 
 **Hourly demand** is determined by the combination of annual heat demand and a housing/building category specific heat demand curve. The annual heat demand for water heating is considered separately from that of space heating. The heat demand curve is then applied to convert the annual demand to hourly demand profiles. This results in the following hourly demand profiles:
 * **Buildings**: one heat demand profile for buildings;
