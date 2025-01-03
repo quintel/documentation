@@ -183,6 +183,12 @@ module.exports = {
     },
     {
       type: "category",
+      label: "Profiles",
+      collapsed: false,
+      items: ["contrib/profiles/heat-insulation-profiles"],
+    },
+    {
+      type: "category",
       label: "Dataset manager",
       collapsed: false,
       items: ["contrib/dataset-manager/data-migrations"],
