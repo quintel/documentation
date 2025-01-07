@@ -11,6 +11,10 @@ This section describes how heating supply and demand in the built environment is
   />
 </div>
 
+:::warning Front-end technology split for households
+When opening a new scenario, the technology split shown in the front-end is only that of **space heating** technologies. The technology split for **hot water** technologies is not shown and may actually be different in the start year. If the slider settings are changed, both the technology split for space heating and hot water are set equally for the future year.
+:::
+
 ## Overview
 
 Supply and demand is initialized for three types of heating in the built environment:
@@ -102,7 +106,3 @@ Using the share of the `number_of_units` each heating technology in the total, t
     style={{width: '800px'}}
   />
 </div>
-
-:::warning Front-end technology split for households
-In the front-end, only the technology split of **space heating** technologies is shown for households. The technology split for **hot water** technologies is ignored. These splits may diverge in the start year. By changing the sliders, the split is set equally for both space heating and hot water.
-:::
