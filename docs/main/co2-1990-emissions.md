@@ -9,12 +9,16 @@ _Checkout: The 1990 emissions of other green house gases is currently not includ
 ## Country-level data
 For all countries in the ETM, the 1990 emissions number is based on data from the [European Environmental Agency](https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-16). The following categories are included:
 
-| Emissions Category | Code |
+| Emissions Category | Code | Type |
 |----------------|-----------------|
-| Fuel Combustion by sector | 1.AA |
-| Ammonia Production | 2.B.1 |
-| Metal Industry | 2.C |
-| Waste Incineration | 5.C.1 |
+| Fuel Combustion by sector | 1.AA | Energetic |
+| Ammonia Production in Fertilizer sector | 2.B.1 | Non-Energetic |
+| Metal Industry | 2.C | Energetic |
+| Waste Incineration | 5.C.1 | Energetic |
+
+For non-energetic emissins, the ETM only takes the non-energetic emissions during the production of ammonia in the fertilizer sector into account. 
+This is because these emissions can be calculated using valid generic assumptions. 
+In other sectors, non-energetic emissions can vary site-specific, therefore the ETM does not take these into account.
 
 Other emissions, such as other feedstock and fugitive emissions are not included in the 1990 number as these emissions are out of scope of the ETM.
 

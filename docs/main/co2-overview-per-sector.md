@@ -6,7 +6,10 @@ sidebar_label: Emissions per sector chart
 This article explains the following chart:
 ![](/img/docs/co2-emissions-chart.png)
 
-This chart does not include other greenhouse gas emissions apart from CO<sub>2</sub>. Also, non-energetic CO<sub>2</sub> emissions are not included, with the exception of the Fertilizer industry and hydrogen feedstock use.
+This chart does not include other greenhouse gas emissions apart from CO<sub>2</sub>. 
+The non-energetic CO<sub>2</sub> emissions that are included are:
+- The usage of network gas for the production of fertilizers.
+- The CO<sub>2</sub> that is emitted for the production of non-energetic hydrogen and ammonia (which in turn can be used in the fertilizer sector).
 
 In the ETM emissions from different sectors are taken into account to calculate the total emissions in your scenario. Every sector has a different scope when it comes to which emissions are taken into account and which are not. This page explains how this scope is defined in the ETM per sector which you can use to gain a better understanding of the total emissions displayed on the dashboard.
 
@@ -25,4 +28,5 @@ The following is included per category:
 | Other | Includes all energetic CO<sub>2</sub> related to final energy demand in the other demand sector.
 | Industry | Includes all energetic CO<sub>2</sub> related to final energy demand in the industry sector, including emissions related to the production of electricity, hydrogen and steam. Feedstock emissions are excluded. Captured emissions (using [carbon capture technologies](co2-ccus.md)) in the industry sector are subtracted.
 | Energy | Emissions related to the production of power, hydrogen, heat and steam are *__not__* included here, as these are assigned to the sectors in which these carriers are used. This category does include emissions related to: <ul><li>own energy use of the power sector</li><li>unused heat for heat networks</li><li>coal gas consumption of cokes ovens</li><li>the production of synthetic kerosene and methanol</li><li>energy use of Direct Air Capture. The CO<sub>2</sub> captured from the ambient air is subtracted from this category</li><li>energy use of CO<sub>2</sub> storage</li></ul>
-| Non-energetic / delayed emissions | Includes emissions related to: <ul><li>feedstock use in the fertilizer industry</li><li>(the production of) non-energetic final demand of hydrogen in industry</li><li>CO<sub>2</sub> utilised in the 'other' category of the [carbon utilisation section](https://pro.energytransitionmodel.com/scenario/supply/ccus/utilisation-and-storage-of-co2)</li></ul>
+| Non-energetic emissions | Includes emissions related to: <ul><li>feedstock use in the fertilizer industry</li><li>(the production of) non-energetic final demand of hydrogen and ammonia.</li></ul>
+| Delayed emissions | Includes emissions related to:<ul><li>CO<sub>2</sub>. utilised in the 'other' category of the [carbon utilisation section](https://pro.energytransitionmodel.com/scenario/emissions/ccus/utilisation-and-storage-of-co2)</li></ul>
