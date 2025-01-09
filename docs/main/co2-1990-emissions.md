@@ -10,17 +10,13 @@ _Checkout: The 1990 emissions of other green house gases is currently not includ
 For all countries in the ETM, the 1990 emissions number is based on data from the [European Environmental Agency](https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-16). The following categories are included:
 
 | Emissions Category | Code | Type |
-|----------------|-----------------|
+|----------------|----|-------------|
 | Fuel Combustion by sector | 1.AA | Energetic |
 | Ammonia Production in Fertilizer sector | 2.B.1 | Non-Energetic |
 | Metal Industry | 2.C | Energetic |
 | Waste Incineration | 5.C.1 | Energetic |
 
-For non-energetic emissions, the ETM only takes the non-energetic emissions during the production of ammonia in the fertilizer sector into account. 
-These emissions can be calculated using valid generic assumptions. 
-In other subsectors of the industry, non-energetic emissions can vary site-specific, therefore the ETM does not take these into account.
-
-Other emissions, such as other feedstock and fugitive emissions are not included in the 1990 number as these emissions are out of scope of the ETM.
+For non-energetic emissions, the ETM only takes the non-energetic emissions during the production of ammonia in the fertilizer sector into account in the 1990 emissions. This is because the non-energetic emissions in the fertilizer sector can be calculated in the ETM (for the start and future year) using valid generic assumptions, which allows for a credible comparison of the 1990 emissions and the start and future year in this category. Non-energetic emission in other sectors can be more site-specific and therefore more complex and inaccurate to model. Therefore, the ETM does not take non-energetic emissions of other sectors into account. 
 
 ## Regional-level data
 For regional datasets, no uniform, international source exists detailing historic emissions on a fine-grained geographical level. As such, 1990 emissions are researched for each region individually.
