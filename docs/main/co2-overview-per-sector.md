@@ -9,7 +9,7 @@ This article explains the following chart:
 This chart does not include other greenhouse gas emissions apart from CO<sub>2</sub>. 
 The non-energetic CO<sub>2</sub> emissions that are included are:
 - The usage of network gas for the production of fertilizers.
-- The CO<sub>2</sub> that is emitted for the production of non-energetic hydrogen and ammonia (which in turn can be used in the fertilizer sector).
+- The CO<sub>2</sub> that is emitted for the production of non-energetic hydrogen and ammonia.
 
 In the ETM emissions from different sectors are taken into account to calculate the total emissions in your scenario. Every sector has a different scope when it comes to which emissions are taken into account and which are not. This page explains how this scope is defined in the ETM per sector which you can use to gain a better understanding of the total emissions displayed on the dashboard.
 

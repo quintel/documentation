@@ -16,9 +16,9 @@ For all countries in the ETM, the 1990 emissions number is based on data from th
 | Metal Industry | 2.C | Energetic |
 | Waste Incineration | 5.C.1 | Energetic |
 
-For non-energetic emissins, the ETM only takes the non-energetic emissions during the production of ammonia in the fertilizer sector into account. 
-This is because these emissions can be calculated using valid generic assumptions. 
-In other sectors, non-energetic emissions can vary site-specific, therefore the ETM does not take these into account.
+For non-energetic emissions, the ETM only takes the non-energetic emissions during the production of ammonia in the fertilizer sector into account. 
+These emissions can be calculated using valid generic assumptions. 
+In other subsectors of the industry, non-energetic emissions can vary site-specific, therefore the ETM does not take these into account.
 
 Other emissions, such as other feedstock and fugitive emissions are not included in the 1990 number as these emissions are out of scope of the ETM.
 
