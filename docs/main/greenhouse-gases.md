@@ -24,7 +24,7 @@ In the Emissions > [Greenhouse gases](https://pro.energytransitionmodel.com/scen
 
 Every slider corresponds with a (set of) categories defined by the UNFCCC, which are also used by the European Environment Agency (EEA). Categories that were not included within the calculation of emissions are ‘category 4. Land Use, Land-Use Change and Forestry (‘LULUCF’)’ and ‘category 6. Other Sector’. All CO<sub>2</sub>-emissions from ‘Catgory 1. Energy’ as well as the production of fertilizer (ammonia) described in ‘category 2.B.1’ are derived by the ETM based on energy demand and supply. Therefore these categories are not included as sliders in the Emissions section of the model but rather a result of the choices you make in the Demand and Supply sections.
 
-_Checkout: The [main principles](co2-main-principles) and [emission factors](co2-emission-factors) pages provide more information on how energetic CO<sub>2</sub>-emissions are calculated in the ETM_
+_Checkout: The [main principles](co2-main-principles.md) and [emission factors](co2-emission-factors.md) pages provide more information on how energetic CO<sub>2</sub>-emissions are calculated in the ETM_
 
 Below you can find a table with all sliders and corresponding categories and explanation.
 ### Built Environment
