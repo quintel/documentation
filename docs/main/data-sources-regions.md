@@ -4,7 +4,7 @@ title: Available regions
 
 This page describes what types of regions are offered in the ETM and whether they are available in the front-end  dropdown, or only in the backend (through the [API](api/intro.md)).
 
-1. **Offical geographical regions are offered in the front-end**  
+1. **Official geographical regions are offered in the front-end**  
 Regions that are part of official geographical classifications can be offered both in the front-end and in the backend. For example, a country, a municipality, but also NUTS-regions or RES-regions can be offered in the front-end. See the [CBS gebiedsindelingen](https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/geografische-data/cbs-gebiedsindelingen) for official classifications in the Netherlands. Regions are not offered in the front-end beyond the municipality level.
 
 2. **Different regions are only offered in the front-end if they are MECE or can be incorporated in existing tooling**  
