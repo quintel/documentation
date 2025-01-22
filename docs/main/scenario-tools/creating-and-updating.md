@@ -33,7 +33,7 @@ Not keeping your scenario compatible with newer model versions can cause the mod
 :::
 
 ### scenario_settings.csv
-The `scenario_settings.csv` file contains the slider settings of your scenarios. The first column contains the keys of all sliders (‘inputs’) that will be set. If a slider is missing from this list, it will inherit the default value. The default value is the value the slider is on when starting a new scenario. The other columns contain the scenario `short_names` (specified in `scenario_list.csv`) and the corresponding slider values. A list of all slider keys can be found [here](https://energytransitionmodel.com/saved_scenarios/16707.csv) (CSV file).
+The `scenario_settings.csv` file contains the slider settings of your scenarios. The first column contains the keys of all sliders (‘inputs’) that will be set. If a slider is missing from this list, it will inherit the default value. The default value is the value the slider is on when starting a new scenario. The other columns contain the scenario `short_names` (specified in `scenario_list.csv`) and the corresponding slider values. A list of all slider keys can be found on [Github](https://github.com/quintel/etsource/tree/master/inputs).
 
 *Example file:*
 
