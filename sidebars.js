@@ -10,7 +10,6 @@ module.exports = {
       collapsed: false,
       items: [
         "main/starting-or-exploring",
-        "main/interface",
         {
           "Managing your saved scenarios": [
             "main/managing-scenarios/my-scenarios-menu",
@@ -19,6 +18,8 @@ module.exports = {
             "main/managing-scenarios/scenario-version-history"
           ]
         },
+        "main/model-versions",
+        "main/interface",
         "main/developing-your"
       ],
     },
