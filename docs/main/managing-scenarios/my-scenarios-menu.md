@@ -15,8 +15,7 @@ The Scenarios tab displays a list of your saved scenarios, including the region 
 
 
 ### 2. Collections
-The Collections tab displays a list of all your scenario collections. Collections consist of a group of scenario's. Within the collections tool, one can compare the scenario outcomes within one collection via the charts in the tool.
-LINK TO GENERAL COLLECTIONS DOCS HERE?
+The Collections tab displays a list of all your scenario collections. Collections consist of a group of scenario's. Within the collections tool, one can compare the scenario outcomes within one collection via the charts in the tool. 
 
 ### 3. Trash
 The Trash tab displays scenarios or collections that have been deleted. You can recover or permamently delete these scenario's here. A scenario can be recovered until 60 days after deletion. After this period, the scenario will be permanently deleted.
