@@ -2,22 +2,24 @@
 title: My scenarios menu
 ---
 
-If you have created a user account and are logged in you can save the scenarios you've created with a name and description. These scenarios can then be managed through the My Scenarios menu which can be accessed through the link at the top right of the page. Once clicked, you will see a menu with three different tabs: **My Scenarios**, **My Transition Paths** and **Trash**.
+If you have created a user account and are logged in you can save the scenarios you've created with a name and description. These scenarios can then be managed through the My Scenarios menu which can be accessed through the link at the top right of the page. Once clicked, you will be directed to the my.energytransitionmodel.com page. On this page you have 3 tabs. 
 
-### 1. My Scenarios
-The My Scenarios tab displays a list of your saved scenarios, including the region the scenario is describing and the moment when the scenario was last edited. When hovering over a saved scenario three buttons will appear giving you the respective options to: 
 
-- Open the scenario to be further investigated and adjusted
-- Open the scenario in a transition path chart
-- Move the scenario to the trash bin
+### 1. Scenarios
+The Scenarios tab displays a list of your saved scenarios, including the region the scenario is describing, the moment when the scenario was last edited, and the model version your scenario was created with. When clicking on a saved scenario three tabs will appear on the right:
 
-Clicking the title of one of your saved scenarios takes you to the [scenario management](scenario-management) page. 
+- [Info](scenario-management) 
+- [History](scenario-version-history)
+- [Manage access](scenario-management)
 
-### 2. My Transition Paths
-The Transition Paths tab display a list of all your transition paths. Transition paths are charts where one of your saved scenarios is compared with up to four other scenarios. Major git scenario characteristics are displayed in this chart, making it easy to compare how the scenarios differ, for example over time.
+
+
+### 2. Collections
+The Collections tab displays a list of all your scenario collections. Collections consist of a group of scenario's. Within the collections tool, one can compare the scenario outcomes within one collection via the charts in the tool.
+LINK TO GENERAL COLLECTIONS DOCS HERE?
 
 ### 3. Trash
-The Trash tab displays scenarios or transition paths that were previously dismissed and are no longer active.
+The Trash tab displays scenarios or collections that have been deleted. You can recover or permamently delete these scenario's here. A scenario can be recovered until 60 days after deletion. After this period, the scenario will be permanently deleted.
 
 
 
