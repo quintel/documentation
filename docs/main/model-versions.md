@@ -7,7 +7,7 @@ sidebar_label: Versions of the model
 The ETM has multiple model versions. On this page you can find documentation explaining how to navigate through these different versions. 
 
 ### 1. Different versions of the ETM
-There are three types of model versions. 
+In the ETM we make a distinction between the live version, the beta version, and stable versions.
 The standard version of the model is the 'live' version.
 Next to this we have the 'beta' version of the model. This version is used to test updates of the model. 
 New features are first deployed to the beta version of the model.
@@ -32,9 +32,9 @@ Please note that bug fixes are by default not applied to stable versions.
 The risk of allowing any buf fixes is that it can quickly become a slippery slope for allowing all sorts of chnanges. 
 Meanwhile, for some bug fixes, a case for application in the stable servers can be made. 
 Therefore, we state that by default bug fixes are not applied to stable versions, but bug fix requests can be made and will be judged on a case-by-case basis.
-- Relevant condition: the bug fix doesn’t change the value of any model inputs or outputs, as this would contradict the nature of a stable version
-- Relevant condition: the bug fix must be applied to the relevant version and all newer versions, as this avoids the risk of having a patchwork of bug fixes across diﬀerent versions
-- Regardless of these conditions, Quintel retains the right to approve or deny bug fix requests.
+These have the following conditions, regardgless of these conditions Quintel (The developer of the ETM) the right to approve or deny bug fix requests.
+- The bug fix doesn’t change the value of any model inputs or outputs, as this would contradict the nature of a stable version.
+- The bug fix must be applied to the relevant version and all newer versions, as this avoids the risk of having a patchwork of bug fixes across diﬀerent versions
 
 
 ### 2. Where to find the versions
@@ -53,14 +53,14 @@ An overview of the current model versions can be found below:
 
 | Version  |  Release date
 |:---|:---
-| Live | n/a | 
-| Beta| n/a | 
+| Live | non-applicable | 
+| Beta| non-applicable | 
 
 
 
 ### 4. Moving scenario's between versions
 
-Users are responsible for moving scenarios from live to stable:
+Users are responsible for moving scenarios from the **live** version to a **stable** version:
 
 - A user has created a scenario on live
 - A stable version is created by Quintel
@@ -75,7 +75,7 @@ Users are responsible for moving scenarios from live to stable:
 </div>
 
 
-Users are responsible for moving scenarios from stable to live:
+Users are responsible for moving scenarios from a **stable** version to **live**:
 See the following example:
 - A user has created a scenario on stable
 - The user wants to continue with the scenario on live, to use the latest model features, but stable and live have diverged
@@ -92,5 +92,6 @@ changed model on live – manual transfer
 At the moment, the scenario's are not backward compatible. 
 This means that newer versions of the model are not able to load scenarios from older versions. 
 Users are responsible for the migration of scenario's to different model versions.
+Only scenarios that are on the live version are automatically migrated during updates on the live version of the model.
 
 
