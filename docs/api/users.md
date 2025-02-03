@@ -80,7 +80,7 @@ Authorization: Bearer YOUR_TOKEN
   "scenario_users": [
     {
       "user_email": "john@our_company.com",
-      "roler": "scenario_collaborator"
+      "role": "scenario_collaborator"
     },
   ]
 
@@ -115,7 +115,7 @@ Authorization: Bearer YOUR_TOKEN
   "scenario_users": [
     {
       "user_email": "john@our_company.com",
-      "roler": "scenario_viewer"
+      "role": "scenario_viewer"
     },
   ]
 
