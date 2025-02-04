@@ -1,7 +1,7 @@
 ---
 id: model-versions
-title: Versions of the model
-sidebar_label: Versions of the model
+title: Model versions
+sidebar_label: Model versions
 ---
 
 The ETM has multiple model versions. On this page you can find documentation explaining how to navigate through these different versions. 
@@ -58,7 +58,7 @@ An overview of the current model versions can be found below:
 
 
 
-### 4. Moving scenario's between versions
+### 4. Moving scenarios between versions
 
 Users are responsible for moving scenarios from the **live** version to a **stable** version:
 
@@ -89,9 +89,9 @@ changed model on live – manual transfer
   <img src="/img/docs/scenario_transfer_stable_to_live.png" alt="" width="410" height="205" />
 </div>
 
-At the moment, the scenario's are not backward compatible. 
+At the moment, the scenarios are not backward compatible. 
 This means that newer versions of the model are not able to load scenarios from older versions. 
-Users are responsible for the migration of scenario's to different model versions.
+Users are responsible for the migration of scenarios to different model versions.
 Only scenarios that are on the live version are automatically migrated during updates on the live version of the model.
 
 

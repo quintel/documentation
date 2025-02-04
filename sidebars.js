@@ -9,18 +9,18 @@ module.exports = {
       label: "1. User Manual",
       collapsed: false,
       items: [
-        "main/starting-or-exploring",
+        "main/user_manual/starting-scenario",
+        "main/user_manual/interface",
+        "main/user_manual/developing-scenario",
         {
-          "Managing your saved scenarios": [
-            "main/managing-scenarios/my-scenarios-menu",
-            "main/managing-scenarios/scenario-management",
-            "main/managing-scenarios/scenario-access-management",
-            "main/managing-scenarios/scenario-version-history"
+          "Managing your scenarios": [
+            "main/user_manual/managing-scenarios/my-scenarios-menu",
+            "main/user_manual/managing-scenarios/scenario-info",
+            "main/user_manual/managing-scenarios/scenario-history",
+            "main/user_manual/managing-scenarios/scenario-manage-access"
           ]
         },
-        "main/model-versions",
-        "main/interface",
-        "main/developing-your"
+        "main/user_manual/model-versions"
       ],
     },
     {

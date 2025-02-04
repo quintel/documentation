@@ -2,7 +2,7 @@
 title: "Interface"
 ---
 
-This page explains the main features displayed in the [interface](https://pro.energytransitionmodel.com/scenario/overview/introduction/how-does-the-energy-transition-model-work) of the ETM. 
+This page explains the main features displayed in the [interface](https://energytransitionmodel.com/scenario/overview/introduction/how-does-the-energy-transition-model-work) of the ETM. 
 You will land in the ETM interface after starting or opening a scenario. Here you will find the following topics:
 
 ![The ETM interface](/img/docs/interface.png)
