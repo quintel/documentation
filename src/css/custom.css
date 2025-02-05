@@ -499,8 +499,7 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/main/managing-scenarios/scenario-access-management"]:after,
-.menu a[href="/main/managing-scenarios/scenario-version-history"]:after,
+.menu a[href="/main/user_manual/model-versions"]:after,
 .menu a[href="/api/version-tag"]:after,
 .menu a[href="/api/users"]:after {
   -webkit-font-smoothing: initial;

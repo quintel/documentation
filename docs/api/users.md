@@ -18,7 +18,7 @@ The user object consist of the following two fields:
 * `email` - If the user is not yet registred to the energy transition model.
 * `role` - The role the user has within the scenario.
 
-There are three different types of roles, a detailed description can be found [here](/main/managing-scenarios/scenario-access-management).
+There are three different types of roles, a detailed description can be found [here](/main/user_manual/managing-scenarios/scenario-manage-access).
 
 * `scenario_owner` - An owner of the scenario, can add other users and has all rights (read/write/destroy).
 * `scenario_collaborator` - A collaborator to the scenario, has rights to read and update the scenario.

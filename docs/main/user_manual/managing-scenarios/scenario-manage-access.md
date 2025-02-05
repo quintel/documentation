@@ -25,7 +25,7 @@ The following table depicts the different roles a user can have and their corres
 - **Collaborator**: is able to view, copy and make changes to the saved scenario.
 - **Owner**: is able to view, copy, makes changes and manage access to a scenario.
 
-When the owner sets the scenario to "Public"'", the scenario can be viewed by anyone who has a link to the scenario. 
+When the owner sets the scenario to "Public", the scenario can be viewed by anyone who has a link to the scenario. 
 The access levels are in case of public scenarios are similar to those of private scenarios, however the viewer in this case can either be invited or uninvited:
 
 | Role (public scenario) | View | Copy | Change | Manage access |
