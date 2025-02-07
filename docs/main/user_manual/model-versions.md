@@ -4,94 +4,67 @@ title: Model versions
 sidebar_label: Model versions
 ---
 
-The ETM has multiple model versions. On this page you can find documentation explaining how to navigate through these different versions. 
+When navigating to the Energy Transition Model, by default, you are directed to the **latest** version of the model. The latest version is generally updated on a monthly basis, making sure that the model has the latest features and bug fixes.
 
-### 1. Different versions of the ETM
-In the ETM we make a distinction between the live version, the beta version, and stable versions.
-The standard version of the model is the 'live' version.
-Next to this we have the 'beta' version of the model. This version is used to test updates of the model. 
-New features are first deployed to the beta version of the model.
-Each month the changes to beta are deployed to the live version of the model. 
-Every 6 months a stable version is released.
-The stable version will consist of the state of the live version at the time of creation. 
-After it's creation, no changes to the model will be made. This ensures stability of model results.
-See the table below for the differences in updates throughout the versions:
+There are however also **stable** versions of the model. These versions are created by freezing the latest version at a given time. Stable versions are created much less frequently than the latest version of the model.
 
-| Functionaility   |  beta   | live | stable 
-|:---|:---|:---|:---
-| New features  | X | X | - |
-| Bug fixes | X | X | * |
-| Security improvements | X | X | X |
-| Visual improvements | X | X | - |
-| Dataset changes  | X | X | - |
-| Dataset additions | X | X | - |
-| Updated to charts and downloads | X | X | - |
-| Scenario migrations | X | X | - |
+## Current versions available
 
-Please note that bug fixes are by default not applied to stable versions.
-The risk of allowing any buf fixes is that it can quickly become a slippery slope for allowing all sorts of chnanges. 
-Meanwhile, for some bug fixes, a case for application in the stable servers can be made. 
-Therefore, we state that by default bug fixes are not applied to stable versions, but bug fix requests can be made and will be judged on a case-by-case basis.
-These have the following conditions, regardgless of these conditions Quintel (The developer of the ETM) the right to approve or deny bug fix requests.
-- The bug fix doesn’t change the value of any model inputs or outputs, as this would contradict the nature of a stable version.
-- The bug fix must be applied to the relevant version and all newer versions, as this avoids the risk of having a patchwork of bug fixes across diﬀerent versions
+Besides the **latest** version, there may be multiple **stable** versions available. Stable versions are labelled first with the year in which the version was released and then with a version number `#YEAR-NN`.
 
+| Version | Release date | Updated | Link |
+|:---|:---|:---|:---|
+| #latest | - | Monthly | [energytransitionmodel.com](https://energytransitionmodel.com/) |
+| #2025-01 | February 2025| - | [2025-01.energytransitionmodel.com](https://2025-01.energytransitionmodel.com/) |
 
-### 2. Where to find the versions
-Users can find the version they are working in next to the model logo in the model-interface.
-While clicking on the dropdown, the available versons appear. 
+## What functionalities do they offer?
 
-<div class="bordered-image">
-  <img src="/img/docs/location_stable_versions.png" alt="" width="830" height="410" />
-</div>
+The **latest** version is under continuous development. If you want the latest bug fixes, model features and charts, it is recommended to make scenarios on that version.
 
+:::info Scenario migrations in the latest version
+To make sure that scenarios keep working when the latest version of the model is updated, or to minimize changes in outputs, **scenario migrations** can be applied. This means that it is not guaranteed that inputs and outputs for scenarios on the latest version stay the same.
+:::
 
+The goal of **stable** versions is to have stable model input and outputs. If you want to use scenarios to report specific settings or outcomes of the model, it is recommended to make those scenarios on a stable version.
 
-### 3. Overview of current model versions
+| Functionality | latest | stable |
+|:---|:---:|:---:|
+| Scenario management: updating, creating, deleting etc. | ✓ | ✓ |
+| Scenario migrations | ✓ |   |
+| Security improvements | ✓ | ✓ |
+| Bug fixes | ✓ | * |
+| New model features  | ✓ |   |
+| Front-end changes: visual improvements, new charts etc. | ✓ |   |
+| Dataset changes: new, updated, deleted datasets etc.  | ✓ |   |
 
-An overview of the current model versions can be found below:
+:::info Bug fixes in stable versions
+By default, bug fixes are not applied to stable versions of the model, as this may change inputs and outputs. Under very strict conditions, an exception can be made. Any stable version bug fix will be announced ahead of time. See [Communication about versions](#communication-about-versions).
+:::
 
-| Version  |  Release date
-|:---|:---
-| Live | non-applicable | 
-| Beta| non-applicable | 
+## When are new versions created?
+
+How often
+When, tag!
+
+## How long are versions maintained
 
 
-
-### 4. Moving scenarios between versions
-
-Users are responsible for moving scenarios from the **live** version to a **stable** version:
-
-- A user has created a scenario on live
-- A stable version is created by Quintel
-- The user is responsible for moving the scenario from live to stable
-- By the default, the scenario stays on live
-- They can use any tooling (Excel, PyETM, scenario tools, API)
-- At that moment, the stable and live version are the same, so 1-on-1 transfer is possible without loss of information or changes to the scenario
-- This results in two scenarios, see the figure below:
-
-<div class="bordered-image">
-  <img src="/img/docs/scenario_transfer_live_to_stable.png" alt="" width="410" height="205" />
-</div>
+## Communication about versions
 
 
-Users are responsible for moving scenarios from a **stable** version to **live**:
-See the following example:
-- A user has created a scenario on stable
-- The user wants to continue with the scenario on live, to use the latest model features, but stable and live have diverged
-- The user is responsible for moving the scenario from stable to live
-- They can use any tooling (Excel, PyETM, scenario tools, API)
-- The user has to investigate and make the changes themselves to fit the
-changed model on live – manual transfer
-- This results in two scenarios, see the figure below:
+## Working with model versions
 
-<div class="bordered-image">
-  <img src="/img/docs/scenario_transfer_stable_to_live.png" alt="" width="410" height="205" />
-</div>
+### Selecting a version in the model
 
-At the moment, the scenarios are not backward compatible. 
-This means that newer versions of the model are not able to load scenarios from older versions. 
-Users are responsible for the migration of scenarios to different model versions.
-Only scenarios that are on the live version are automatically migrated during updates on the live version of the model.
+### Selecting a version in the scenario tools
+
+### Selecting a version via the API
 
 
+## Scenario management with versions
+
+### Scenario version labels
+
+### What happens to my scenario when a version is released?
+
+### How to move scenarios between versions?
