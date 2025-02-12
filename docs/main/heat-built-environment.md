@@ -44,10 +44,10 @@ For the **simulated future year**, the ETM uses the typical heat demand sliders 
 ![](/img/docs/20240506_typical_heat_demand_sliders.png)
 
 The ETM uses these sliders in two different ways:
-1. For *existing housing/building stock*, the slider value is used to scale the heat demand for space heating from the start year. In other words, adjusting the slider value results in a relative change of heat demand for space heating compared to its starting value. 
+1. For **existing** housing/building stock, the slider value is used to scale the heat demand for space heating from the start year. In other words, adjusting the slider value results in a relative change of heat demand for space heating compared to its starting value.  
 _Example: In the image above, the typical heat demand for apartments built between 1985-2004 has a starting value of 155 kWh/m<sup>2</sup>. Reducing the typical heat demand to 124 kWh/m<sup>2</sup> (a reduction of 20%) means that the heat demand for space heating is decreased by 20% in the simulated future year._
 
-2. For new housing/building stock, the actual slider value is used to calculate the future heat demand for space heating, based on an average surface area per newly built unit.
+2. For **new** housing/building stock, the actual slider value is used to calculate the future heat demand for space heating, based on an average surface area per newly built unit.  
 _Example: In the image above, the typical heat demand for space heating for new apartments is set at 65 kWh/m<sup>2</sup>. The starting value of the number of new residences is set to 0 by definition. If the number of new residences is set at 100,000, the heat demand for space heating increases by 100,000 apartments x 65 kWh/m<sup>2</sup> x 84 m<sup>2</sup>/apartment._
 
 Please note that, the **typical heat demand slider values _cannot_ be used to calculate the useful heat demand for existing building stock**. There are two reasons for this:
