@@ -56,6 +56,12 @@ export const ProductionBadge = (props) => (
   </EnvBadge>
 );
 
+export const StableBadge = (props) => (
+  <EnvBadge className={styles.stable} {...linkProps(props)} {...props}>
+    Stable
+  </EnvBadge>
+);
+
 export const DynamicBadge = (props) => {
   return <BrowserOnly>{() => dynamicBadge(props)}</BrowserOnly>;
 };

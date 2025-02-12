@@ -28,5 +28,6 @@ your behalf.
 
 :::info Different tokens for beta and live
 Your token to communicate to the beta version of the ETM is different from the one to communicate
-to the live version. Make sure you have the correct one in your local settings file.
+to the live version. Make sure you have the correct one in your local settings file. If you are connecting
+to a stable version, you can use a live token.
 :::

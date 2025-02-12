@@ -26,15 +26,19 @@ Here is a quick overview of the possible settings and their default values:
 | `decimal_separator` | The decimal separator your CSV files are using. Some national conventions use ',' instead of '.'. | . |
 
 ## ETM environments
-The ETM knows a live and a beta environment. The scenario-tools naturally connect to the first one. In the
-beta environment experimental features are available for testing, before being included in the
-live version. This makes the beta version more unstable. You can also run the ETM locally, check the
-[contributors section](/contrib/intro) for more info.
+The ETM has live, stable and beta environments. The scenario-tools connects to the live environment by
+default, however if you wish to connect to a stable version or beta (to test more experimental features),
+you may update the endpoint through the tool to use these environments.
+ You can also run the ETM locally, check the [contributors section](/contrib/intro) for more info.
 
 When running any of the scripts in the scenario-tools, you can add the arguments `beta` or `local`
 to create or query scenarios on the ETM [beta server](https://beta-pro.energytransitionmodel.com/)
 or your local machine. The latter assumes your local engine runs at `localhost:3000` and local
-model at `localhost:4000`, but you can change this in your `local.settings.yml` at any time. I.e.:
+model at `localhost:4000`, but you can change this in your `local.settings.yml`. If you would like to update
+your endpoint to reference and interact with a stable version, you can also do this in your `local.settings.yml`.
+
+Some example commands:
+
 ```
 pipenv run scenario_from_csv beta
 ```

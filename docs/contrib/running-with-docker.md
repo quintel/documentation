@@ -4,22 +4,24 @@ title: Running the ETM with Docker
 
 import { DynamicBadge } from '@site/src/components/EnvBadge';
 
-The Energy Transition model consists of three parts:
+The Energy Transition model consists of four parts:
 
+* **MyETM**: The 'central hub' which allows you to view saved scenarios and collections irrespective of their versions.
 * **ETEngine**: The main calculation system and API.
 * **ETModel**: The front-end, which allows you to create scenarios through a user-interface with sliders.
 * **ETSource**: A repository containing our source data. This is needed for ETEngine to function.
 
-ETEngine and ETModel are both configured to run with [Docker](https://www.docker.com/) (via Docker Compose), minimising the amount of effort needed to install dependencies and libraries. This guide will assume that you already have Docker installed and configured.
+ETEngine, ETModel and MyETM are configured to run with [Docker](https://www.docker.com/) (via Docker Compose), minimising the amount of effort needed to install dependencies and libraries. This guide will assume that you already have Docker installed and configured.
 
 ## Clone the repositories
 
-Clone the repositories using Git. All three should have the same parent directory:
+Clone the repositories using Git. All four should have the same parent directory:
 
 ```bash
 git clone https://github.com/quintel/etengine.git
 git clone https://github.com/quintel/etmodel.git
 git clone https://github.com/quintel/etsource.git
+git clone https://github.com/quintel/myetm.git
 ```
 
 This will create a structure like so:
@@ -27,6 +29,7 @@ This will create a structure like so:
 ```
 ├─ parent_dir
 │  ├─ etmodel
+│  ├─ myetm
 │  ├─ etsource
 │  └─ etengine
 ```
@@ -58,6 +61,53 @@ This password is not available to members of the public, and as such some legacy
 - `nl2018`, use `nl2019` instead
 :::
 
+## MyETM
+
+#### Change to the MyETM directory
+
+```bash
+cd myetm
+```
+
+#### Build the MyETM Docker images
+
+```bash
+docker-compose build
+```
+
+#### Install MyETM dependencies and seed the database
+
+```bash
+docker-compose run --rm web bash -c 'chmod +x bin/setup && bin/rails db:drop && bin/setup'
+```
+
+The command drops any existing database; be sure only to run this during the initial setup!
+
+When the application is updated you may easily install new dependencies by running `bin/setup`:
+
+```bash
+docker-compose run --rm web bin/setup
+```
+
+This command is idempotent and may by run at any time whenever needed.
+
+#### Launch the containers
+
+```bash
+docker-compose up
+```
+
+After starting application will become available at [http://localhost:3002](http://localhost:3002) after a few seconds. This is indicated by the message "Listening on ...".
+
+#### Connect to ETEngine and ETModel
+
+After setting up MyETM, you will need to configure your connections to ETEngine and ETModel. To do so,
+you must log in to an administrator's account, navigate to "Your applications" in the admin panel
+and create new ETEngine and ETModel (Local) applications. MyETM will generate a configuration
+with client IDs, secrets and a few urls. For ETEngine and ETModel, copy these configurations into
+`config/settings.local.yml`.
+
+
 ## ETEngine
 
 #### Change to the ETEngine directory
@@ -71,16 +121,6 @@ cd etengine
 ```bash
 docker-compose build
 ```
-
-#### Configure ETEngine
-
-Create a file called `config/settings.local.yml` containing:
-
-```yaml
-etmodel_uri: http://localhost:3001
-```
-
-Change the ETModel URI if you will run it at a different location.
 
 #### Install ETEngine dependencies and seed the database
 
@@ -144,13 +184,17 @@ After setting up ETEngine, sign in to [the administrator account](#install-eteng
 :::warning Use matching branches or tags!
 When running ETEngine locally, be sure to use the same branch or tag for ETModel, ETEngine, and ETSource. You are likely to encounter errors if you fail to do so.
 
-For example, if you want to run the latest version, all three should be set to the `master` branch. To run the current "stable" version of the ETM, set them to the `production` branch. If you wish to run a specific production release they should all use the same tag. For example, to use the March 2022 release:
+For example, if you want to run the latest version, all three should be set to the `master` branch. To run the current "latest" version of the ETM, set them to the `production` branch. If you wish to run a specific production release they should all use the same tag. For example, to use the March 2022 release:
 
 ```bash
 cd ../etengine && git checkout 2022.03
 cd ../etsource && git checkout 2022.03
 cd ../etmodel  && git checkout 2022.03
+cd ../myetm    && git checkout 2022.03
 ```
+
+This holds for the [stable-versions](docs/main/user_manual/model-versions.md) as well.
+
 :::
 
 #### Install ETModel dependencies and seed the database

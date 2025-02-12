@@ -28,6 +28,7 @@ scenario endpoint:
 * `discarded` - whether the saved scenario appears in the trash (`true`) or the list of saved scenarios (`false`).
 * `created_at` - the time at which the saved scenario was created.
 * `updated_at` – the time when the saved scenario was most recently updated.
+* `version` - the version associated with the saved scenario. See [model versions](docs/main/user_manual/model-versions.md) for more information.
 * `scenario` - read-only information about the underlying scenario.
 * `owner` - information about the owner of the SavedScenario.
   * `id` - the owner's unique ID number
