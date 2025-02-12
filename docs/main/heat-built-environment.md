@@ -6,42 +6,40 @@ This page discusses the methods and data used for modelling space heating and ho
 ## Building stock
 The building stock sets the preconditions for heat in the built environment. It determines the amount of heat needed and is also relevant for which heating technologies can be used to meet the heat demand.
 
-### Households
+### Households (residential)
 The ETM distinguishes four housing types:
 * Apartments
 * Detached houses
 * Semi-detached houses (not available for all country datasets in the ETM)
 * Terraced houses
 
-Within each of these types the housing stock is additionally split into construction periods:
+Each housing type is then split into construction periods:
 * Before 1945
 * 1945 – 1964
 * 1965 – 1984
 * 1984 – 2005
-* 2005 to present (up to the starting year of the scenario)
-* New residences (built between the starting year and end year, part of the scenario)
+* 2005 to present (where present is the start year of the simulated region)
+* New residences (built between the start year and end year)
 
-The sources used for the existing housing stock data can be found in the [ETM dataset manager](https://data.energytransitionmodel.com/).
+The sources used for the existing housing stock data can be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
 
-
-### Buildings
+### Buildings (non-residential)
 The building stock within the buildings sector is used to provide a wide range of services, from hospitals to offices or swimming pools, making it difficult to capture the sector in a limited number of categories. Therefore, no different building types are distinguished.
 
 There is limited reliable data available about construction periods for buildings. Therefore, the building stock is split into only two categories:
 * Existing buildings
-* New buildings (built between the starting year and end year, part of the scenario)
+* New buildings (built between the start year and end year)
 
-The sources used for the existing building stock data can be found in the [ETM dataset manager](https://data.energytransitionmodel.com/).
+The sources used for the existing building stock data can be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
 
 ## Heat demand
-In a scenario the way heat demand is met is detemined by a combination of insulation and technology. 
 
 ### Space heating demand and insulation
-Insulation can be used to reduce the amount of heating needed for houses and buildings. The ETM allows you to alter the heat demand for various types of residences and buildings (Commercial and Public Services buildings, or CaPS) separately in the Demand > ['Household'](https://energytransitionmodel.com/scenario/demand/households/overview) or ['Buildings'](https://energytransitionmodel.com/scenario/demand/buildings/overview) sections. 
+Insulation can be used to reduce the amount of heating needed for houses and buildings. The ETM allows you to alter the heat demand for various types of residences and non-residential buildings separately in the [Household](https://energytransitionmodel.com/scenario/demand/households/overview) or [Buildings](https://energytransitionmodel.com/scenario/demand/buildings/overview) sections. 
 
 For the **starting year**, the heat demand for space heating follows from the region’s dataset. The sources for these data can be found in the [ETM dataset manager](https://data.energytransitionmodel.com/). This data is translated to the slider settings for space heating and hot water.
 
-For the **simulated future year**, the ETM uses the typical heat demand sliders to recalculate the heat demand for space heating. The typical heat demand in the ETM reflects the average insulation level of a house or building category and is expressed in kWh/m<sup>2</sup>. The source for the typical heat demands in the starting year can also be found in the [ETM dataset manager](https://data.energytransitionmodel.com/).
+For the **simulated future year**, the ETM uses the typical heat demand sliders to recalculate the heat demand for space heating. The typical heat demand in the ETM reflects the average insulation level of a house or building category and is expressed in kWh/m<sup>2</sup>. The source for the typical heat demands in the starting year can also be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
 
 ![](/img/docs/20240506_typical_heat_demand_sliders.png)
 
@@ -56,10 +54,10 @@ Please note that, the **typical heat demand slider values _cannot_ be used to ca
 1. The starting year values for the typical heat demand values are typically not derived from the actual heat demand for space heating data. In fact, they are often derived from different sources entirely.
 2. As mentioned above, the future year values of the typical heat demand sliders are only used as a scaling factor. Unlike for new residences/buildings, the actual slider value is not used to calculate heat demand in the future year.
 
-Additionally, the typical heat demand sliders are used to calculate insulation costs. See the ['Costs'](cost-insulation-costs) section for details on this topic.
+Additionally, the typical heat demand sliders are used to calculate insulation costs. See the [Costs](cost-insulation-costs) section for details on this topic.
 
 ### Hot water
-The demand for hot water is only defined for households. Residences of all housing types and build years are assumed to have the same hot water demand, since it is assumed to depend mostly on human behavior. The behavioral impact on hot water demand can be altered using the corresponding slider under the ['Development of demand'](https://energytransitionmodel.com/scenario/demand/households/development-of-demand) section. 
+The demand for hot water is only defined for households. Residences of all housing types and build years are assumed to have the same hot water demand, since it is assumed to depend mostly on human behavior. The behavioral impact on hot water demand can be altered using the corresponding slider under the [Development of demand](https://energytransitionmodel.com/scenario/demand/households/development-of-demand) section. 
 
 ### Solar thermal panels
 Solar thermal panels in households are only used to meet hot water demand. They can be used to meet up to 100% of demand using the corresponding slider. The remaining demand is then met using the specified mix of technologies for space heating and hot water.
