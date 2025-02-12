@@ -37,9 +37,9 @@ The sources used for the existing building stock data can be found in the [ETM D
 ### Space heating demand and insulation
 Insulation can be used to reduce the amount of heating needed for houses and buildings. The ETM allows you to alter the heat demand for various types of residences and non-residential buildings separately in the [Household](https://energytransitionmodel.com/scenario/demand/households/overview) or [Buildings](https://energytransitionmodel.com/scenario/demand/buildings/overview) sections. 
 
-For the **starting year**, the heat demand for space heating follows from the region’s dataset. The sources for these data can be found in the [ETM dataset manager](https://data.energytransitionmodel.com/). This data is translated to the slider settings for space heating and hot water.
+For the **start year**, the heat demand for space heating follows from the region’s dataset. The sources for these data can be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/). This data is translated to the slider settings for space heating and hot water.
 
-For the **simulated future year**, the ETM uses the typical heat demand sliders to recalculate the heat demand for space heating. The typical heat demand in the ETM reflects the average insulation level of a house or building category and is expressed in kWh/m<sup>2</sup>. The source for the typical heat demands in the starting year can also be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
+For the **future year**, the ETM uses the typical heat demand sliders to recalculate the heat demand for space heating. The typical heat demand in the ETM reflects the average insulation level of a house or building category and is expressed in kWh/m<sup>2</sup>. The source for the typical heat demands in the starting year can also be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
 
 ![](/img/docs/20240506_typical_heat_demand_sliders.png)
 
