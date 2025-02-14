@@ -1,12 +1,12 @@
 const idParam = {
   name: "id",
   type: "number",
-  description: "the ID of the transition path",
+  description: "the ID of the collection path",
 };
 
 export default {
   index: {
-    endpoint: "/api/v3/transition_paths",
+    endpoint: "/api/v3/collections",
     method: "GET",
     path_parameters: [
       {
@@ -23,19 +23,19 @@ export default {
     token: { scopes: ["scenarios:read"] },
   },
   show: {
-    endpoint: "/api/v3/transition_paths/{id}",
+    endpoint: "/api/v3/collections/{id}",
     method: "GET",
     path_parameters: [idParam],
     token: { scopes: ["scenarios:read"] },
   },
   create: {
-    endpoint: "/api/v3/transition_paths",
+    endpoint: "/api/v3/collections",
     method: "POST",
     parameters: [
       {
         name: "title",
         type: "string",
-        description: "what to call the transition path (required)",
+        description: "what to call the collection (required)",
         required: true,
       },
       {
@@ -56,7 +56,7 @@ export default {
     token: { scopes: ["scenarios:read", "scenarios:write"] },
   },
   update: {
-    endpoint: "/api/v3/transition_paths/{id}",
+    endpoint: "/api/v3/collections/{id}",
     method: "PUT",
     path_parameters: [idParam],
     parameters: [
@@ -89,7 +89,7 @@ export default {
     token: { scopes: ["scenarios:read", "scenarios:write"] },
   },
   destroy: {
-    endpoint: "/api/v3/transition_paths/{id}",
+    endpoint: "/api/v3/collections/{id}",
     method: "DELETE",
     path_parameters: [idParam],
     token: { scopes: ["scenarios:read", "scenarios:delete"] },

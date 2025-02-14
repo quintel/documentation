@@ -518,7 +518,7 @@ article p code {
 
 .menu a.menu__link--active[href="/main/managing-scenarios/scenario-access-management"]:after,
 .menu a.menu__link--active[href="/main/managing-scenarios/scenario-version-history"]:after,
-.menu a[href="/api/transition-paths"]:after {
+.menu a[href="/api/collections"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
 }
