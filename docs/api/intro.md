@@ -49,15 +49,28 @@ This is the standard version of the ETM. Features are generally complete, well-t
 
 We intend to store [owned scenarios](scenarios.md#authentication) created on the production server forever.
 
-#### Stable
+#### **Stable Versions**
 
-These environments are not continuously developed. If you want certainty that your results will stay consistent, it may be a good idea to use one of the stable versions. Conversely, the stable versions do not take advantage of the latest improvements made to the ETM. See also [Model versions](../main/user_manual/model-versions#expiration-date).
+Stable environments are not continuously developed. If you need consistent and reproducible results, using a stable version is recommended. However, these versions do not include the latest improvements made to the ETM. For more details, see [Model Versions](../main/user_manual/model-versions#expiration-date).
 
-:::info Stable version tags
-The endpoints of the stable versions depends on their URL. The endpoints will follow the pattern `{version_tag}.engine.energytransitionmodel.com/api/v3`, where `{version_tag}` is defined as `YYYY_##`. For example, for [#2025-01](docs/main/user_manual/model-versions.md#CurrentVersions) the endpoint would be `2025-01.engine.energytransitionmodel.com/api/v3`. The git branch will also correspond to the version_tag.
+:::info **Stable Version Tags**
+Stable version endpoints follow a specific URL pattern:
+
+```plaintext
+{version_tag}.engine.energytransitionmodel.com/api/v3
+```
+Where `{version_tag}` is in the format **`YYYY_##`**.
+
+For example, for **[#2025-01](docs/main/user_manual/model-versions.md#CurrentVersions)**, the endpoint would be:
+
+```plaintext
+2025-01.engine.energytransitionmodel.com/api/v3
+```
+The corresponding **Git branch** also matches the `{version_tag}`.
 :::
 
 The stable versions have an [expiration date](../main/user_manual/model-versions#expiration-date). After this expiration date, the version is retired and all scenarios will be deleted.
+
 
 #### Staging
 
