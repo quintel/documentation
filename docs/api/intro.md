@@ -14,7 +14,7 @@ All paths to the API are prefixed with `/api/v3`.
 
 ## Environments
 
-We operate two main versions of the ETM: staging and production (latest). In addition, 'stable-versions' are periodically released. You can learn more about the [stable versions](docs/main/user_manual/model-versions.md). You should almost always use the production environment unless you have a specific reason to use a stable version or the staging environment.
+We operate two main versions of the ETM: staging and production (latest). 'Stable-versions' are periodically released. You can learn more about the [stable versions here](docs/main/user_manual/model-versions.md). You should default to using the production environment unless you have a specific reason to use a stable version or the staging environment.
 
 <table className="no-stripe">
   <thead>
