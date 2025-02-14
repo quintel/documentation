@@ -14,7 +14,7 @@ All paths to the API are prefixed with `/api/v3`.
 
 ## Environments
 
-We operate two main versions of the ETM: staging and production (latest). 'Stable-versions' are periodically released. You can learn more about the [stable versions here](docs/main/user_manual/model-versions.md). You should default to using the production environment unless you have a specific reason to use a stable version or the staging environment.
+We operate three main versions of the ETM: production, stable, and staging. You should default to using the production environment unless you have a specific reason to use a stable version or the staging environment.
 
 <table className="no-stripe">
   <thead>
@@ -31,19 +31,17 @@ We operate two main versions of the ETM: staging and production (latest). 'Stabl
       <td><code>production</code></td>
     </tr>
     <tr>
-      <td><StagingBadge nolink /></td>
-      <td><code>beta.engine.energytransitionmodel.com/api/v3</code></td>
-      <td><code>master</code></td>
-    </tr>
-    <tr>
       <td><StableBadge nolink /></td>
       <td><code>version_tag.engine.energytransitionmodel.com/api/v3</code></td>
       <td><code>version branch</code></td>
     </tr>
+    <tr>
+      <td><StagingBadge nolink /></td>
+      <td><code>beta.engine.energytransitionmodel.com/api/v3</code></td>
+      <td><code>master</code></td>
+    </tr>
   </tbody>
 </table>
-
-The endpoints of the stable versions depends on their url. The endpoints will follow the pattern: **"version_tag + engine.energytransitionmodel.com/api/v3"**. So for the first stable version [#2025-01](docs/main/user_manual/model-versions.md#CurrentVersions) the endpoint would be **2025-01.engine.energytransitionmodel.com/api/v3**. The git branch will also correspond to the version_tag.
 
 #### Production
 
@@ -53,7 +51,13 @@ We intend to store [owned scenarios](scenarios.md#authentication) created on the
 
 #### Stable
 
-These environments are not continuously developed. If you want certainty that your results will stay consistent, it may be a good idea to use one of the stable versions. Conversely, the stable versions do not take advantage of the latest improvements made to the ETM. We aim to maintain a stable version, once created, for five years.
+These environments are not continuously developed. If you want certainty that your results will stay consistent, it may be a good idea to use one of the stable versions. Conversely, the stable versions do not take advantage of the latest improvements made to the ETM. See also [Model versions](../main/user_manual/model-versions#expiration-date).
+
+:::info Stable version tags
+The endpoints of the stable versions depends on their URL. The endpoints will follow the pattern `{version_tag}.engine.energytransitionmodel.com/api/v3`, where `{version_tag}` is defined as `YYYY_##`. For example, for [#2025-01](docs/main/user_manual/model-versions.md#CurrentVersions) the endpoint would be `2025-01.engine.energytransitionmodel.com/api/v3`. The git branch will also correspond to the version_tag.
+:::
+
+The stable versions have an [expiration date](../main/user_manual/model-versions#expiration-date). After this expiration date, the version is retired and all scenarios will be deleted.
 
 #### Staging
 
