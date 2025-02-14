@@ -43,7 +43,7 @@ We operate two main versions of the ETM: staging and production (latest). 'Stabl
   </tbody>
 </table>
 
-The endpoints of the stable versions depends on their url. The endpoints will follow the pattern: **"version_tag + engine.energytransitionmodel.com/api/v3"**. So for example for the first stable version [#2025-01](docs/main/user_manual/model-versions.md#CurrentVersions) the endpoint would be **2025-01.engine.energytransitionmodel.com/api/v3**. The git branch will also correspond to the version_tag.
+The endpoints of the stable versions depends on their url. The endpoints will follow the pattern: **"version_tag + engine.energytransitionmodel.com/api/v3"**. So for the first stable version [#2025-01](docs/main/user_manual/model-versions.md#CurrentVersions) the endpoint would be **2025-01.engine.energytransitionmodel.com/api/v3**. The git branch will also correspond to the version_tag.
 
 #### Production
 
