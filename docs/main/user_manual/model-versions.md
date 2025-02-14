@@ -8,6 +8,10 @@ When navigating to the Energy Transition Model, by default, you are directed to 
 
 Additionally, there are **stable** versions of the model. These versions are created by freezing the latest version at a given time. Stable versions are created much less frequently than the latest version of the model is updated.
 
+:::info Model versions and scenario versions
+The **[Scenario versions](managing-scenarios/scenario-history.md)** in the scenario history are different from the **Model versions**. Each scenario is made in a specific version of the model, but each scenario can have different versions in its history.
+:::
+
 ## Current versions
 
 There is always only one **latest** version, but there may be multiple **stable** versions of the model. Stable versions are labelled first with the year in which the version was released, and then with a version number: `#YEAR-NN`.
