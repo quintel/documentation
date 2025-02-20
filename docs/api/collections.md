@@ -1,42 +1,42 @@
 ---
-title: Transition paths
+title: Collections
 ---
 
-import endpointData from '@site/data/api/transition-paths';
+import endpointData from '@site/data/api/collections';
 import ApiEndpoint from '@site/src/components/ApiEndpoint';
 import UpcomingFeature from '@site/src/components/UpcomingFeature';
 
 <UpcomingFeature release="2023.01" />
 
-The ETM's [Transition Paths](https://energytransitionmodel.com/multi_year_charts) feature can be used by providing scenario IDs directly to the URL. However, in order for them to appear in your list, you can use the API to create persisted transition paths.
+The ETM's [Collections](https://energytransitionmodel.com/multi_year_charts) feature can be used by providing scenario IDs directly to the URL. However, in order for them to appear in your list, you can use the API to create persisted collections.
 
-Instead of a transition path, the viewer can also show a comparison of a selection of [saved scenarios](saved-scenarios.md). With this endpoint you may also create such a persisted collection.
+Instead of a collection, the viewer can also show a comparison of a selection of [saved scenarios](saved-scenarios.md). With this endpoint you may also create such a persisted collection.
 
-The ETM provides an API for creating, updating, and removing transition paths from your account.
+The ETM provides an API for creating, updating, and removing collections from your account.
 
-## The TransitionPath object
+## The Collection object
 
 All scenarios contain the following attributes, which will be part of any response from the
 scenario endpoint:
 
-* `id` - the numeric id of the transition path.
-* `scenario_ids` - the list of [scenarios](scenarios.md) in the transition path.
+* `id` - the numeric id of the collection.
+* `scenario_ids` - the list of [scenarios](scenarios.md) in the collection.
 * `saved_scenario_ids` - the list of [saved scenarios](saved-scenarios.md) in the collection.
-* `area_code` - the geographic area which the transition path represents.
+* `area_code` - the geographic area which the collection represents.
 * `end_year` - the year the original scenario.
-* `title` - the title of the transition path, shown in the list.
-* `owner` - information about the owner of the TransitionPath.
+* `title` - the title of the collection, shown in the list.
+* `owner` - information about the owner of the Collection.
   * `id` - the owner's unique ID number
   * `name` - the owner's name
 
-## Getting information about a transition path
+## Getting information about a collection
 
-Fetch information about a transition path.
+Fetch information about a collection.
 
 <ApiEndpoint data={endpointData.show} />
 
 ```http title="Example request"
-GET /api/v3/transition_paths/123 HTTP/2
+GET /api/v3/collections/123 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR_TOKEN
 {
   "id": 123,
   "scenario_ids": [12, 34, 56],
-  "title": "My transition path",
+  "title": "My collection",
   "area_code": "nl2019",
   "end_year": 2050,
   "created_at": "2022-07-27T13:45:32.000Z",
@@ -58,14 +58,14 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
-## Listing your transitions paths
+## Listing your collections
 
-You can get a list of all transition paths which belong to you. [The list is paginated](intro.md#pagination).
+You can get a list of all collections which belong to you. [The list is paginated](intro.md#pagination).
 
 <ApiEndpoint data={endpointData.index} />
 
 ```http title="Example request"
-GET /api/v3/transition_paths HTTP/2
+GET /api/v3/collections HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
@@ -74,10 +74,10 @@ Authorization: Bearer YOUR_TOKEN
 ```json title="Example response"
 {
   "links": {
-        "first": "https://engine.energytransitionmodel.com/api/v3/transition_paths?page=1",
+        "first": "https://engine.energytransitionmodel.com/api/v3/collections?page=1",
         "prev": null,
-        "next": "https://engine.energytransitionmodel.com/api/v3/transition_paths?page=2",
-        "last": "https://engine.energytransitionmodel.com/api/v3/transition_paths?page=3"
+        "next": "https://engine.energytransitionmodel.com/api/v3/collections?page=2",
+        "last": "https://engine.energytransitionmodel.com/api/v3/collections?page=3"
   },
   "meta": {
       "limit": 25,
@@ -90,7 +90,7 @@ Authorization: Bearer YOUR_TOKEN
     {
       "id": 123,
       "scenario_ids": [12, 34, 56],
-      "title": "My transition path",
+      "title": "My collection",
       "area_code": "nl2019",
       "end_year": 2050,
       "created_at": "2022-07-27T13:45:32.000Z",
@@ -105,23 +105,23 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
-## Create a transition path
+## Create a collection
 
-Creating a transition path will cause it to appear in your list of in the web application.
+Creating a collection will cause it to appear in your list of in the web application.
 
 <ApiEndpoint data={endpointData.create} />
 
-Before you can create a **transition path**, you must [create the underlying **scenarios**](scenarios.md#create-a-scenario). The response will include the ID number of your new scenario. You may then create a transition oath as a second step, passing the scenario IDs:
+Before you can create a **collection**, you must [create the underlying **scenarios**](scenarios.md#create-a-scenario). The response will include the ID number of your new scenario. You may then create a collection as a second step, passing the scenario IDs:
 
 ```http title="Example request"
-POST /api/v3/transition_paths HTTP/2
+POST /api/v3/collections HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
 
 {
   "scenario_ids": [12, 34],
-  "title": "My transition path"
+  "title": "My collection"
 }
 ```
 
@@ -130,7 +130,7 @@ Authorization: Bearer YOUR_TOKEN
   "id": 123,
   "scenario_ids": [12, 34],
   "saved_scenario_ids": [],
-  "title": "My transition path",
+  "title": "My collection",
   "area_code": "nl2019",
   "end_year": 2050,
   "created_at": "2022-07-27T13:45:32.000Z",
@@ -142,14 +142,14 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
-## Update a transition path
+## Update a collection
 
-Update a transition path by assigning new underlying scenarios and title.
+Update a collection by assigning new underlying scenarios and title.
 
 <ApiEndpoint data={endpointData.update} />
 
 ```http title="Example request"
-PUT /api/v3/transition_paths/123 HTTP/2
+PUT /api/v3/collections/123 HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
@@ -177,18 +177,18 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
-## Delete a transition path
+## Delete a collection
 
-Transition paths may also be permanently deleted.
+collections may also be permanently deleted.
 
 :::warning Deleting scenarios
-Deleting a transition path removes it from your list of paths in the web application. It does not delete the underlying scenario. You may delete scenarios owned by your account as a separate action; see [Deleting your scenarios](scenarios.md#deleting-your-scenarios).
+Deleting a collection removes it from your list of paths in the web application. It does not delete the underlying scenario. You may delete scenarios owned by your account as a separate action; see [Deleting your scenarios](scenarios.md#deleting-your-scenarios).
 :::
 
 <ApiEndpoint data={endpointData.destroy} />
 
 ```http title="Example request"
-DELETE /api/v3/transition_paths/123 HTTP/2
+DELETE /api/v3/collections/123 HTTP/2
 Host: engine.energytransitionmodel.com
 Authorization: Bearer YOUR_TOKEN
 ```

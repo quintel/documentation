@@ -36,6 +36,13 @@
   --badge-hover-background: #a7f3d0;
 }
 
+.stable {
+  --badge-color: #1e40af;
+  --badge-background: #dbeafe;
+  --badge-hover-color: #1e3a8a;
+  --badge-hover-background: #bfdbfe;
+}
+
 a.badge:hover {
   background: var(--badge-hover-background);
   color: var(--badge-hover-color);

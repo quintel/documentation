@@ -4,7 +4,7 @@ title: Introduction to the API
 sidebar_title: Introduction to the API
 ---
 
-import { StagingBadge, ProductionBadge } from '@site/src/components/EnvBadge';
+import { StagingBadge, StableBadge, ProductionBadge } from '@site/src/components/EnvBadge';
 
 ## Versioning
 
@@ -14,7 +14,7 @@ All paths to the API are prefixed with `/api/v3`.
 
 ## Environments
 
-We operate two versions of the ETM. You should almost always use the production environment unless you have a specific reason to use staging.
+We operate three main versions of the ETM: production, stable, and staging. You should default to using the production environment unless you have a specific reason to use a stable version or the staging environment.
 
 <table className="no-stripe">
   <thead>
@@ -31,6 +31,11 @@ We operate two versions of the ETM. You should almost always use the production 
       <td><code>production</code></td>
     </tr>
     <tr>
+      <td><StableBadge nolink /></td>
+      <td><code>version_tag.engine.energytransitionmodel.com/api/v3</code></td>
+      <td><code>version branch</code></td>
+    </tr>
+    <tr>
       <td><StagingBadge nolink /></td>
       <td><code>beta.engine.energytransitionmodel.com/api/v3</code></td>
       <td><code>master</code></td>
@@ -40,9 +45,32 @@ We operate two versions of the ETM. You should almost always use the production 
 
 #### Production
 
-This is the standard version of the ETM. Features area generally complete, well-tested, and ready to be used by the general public. We aim for the production environment to be available 24-hours a day and 365-days a year, except during occasional, short periods while we perform updates.
+This is the standard version of the ETM. Features are generally complete, well-tested, and ready to be used by the general public. We aim for the production environment to be available 24-hours a day and 365-days a year, except during occasional, short periods while we perform updates.
 
 We intend to store [owned scenarios](scenarios.md#authentication) created on the production server forever.
+
+#### **Stable Versions**
+
+Stable environments are not continuously developed. If you need consistent and reproducible results, using a stable version is recommended. However, these versions do not include the latest improvements made to the ETM. For more details, see [Model Versions](../main/user_manual/model-versions#expiration-date).
+
+:::info **Stable Version Tags**
+Stable version endpoints follow a specific URL pattern:
+
+```plaintext
+{version_tag}.engine.energytransitionmodel.com/api/v3
+```
+Where `{version_tag}` is in the format **`YYYY_##`**.
+
+For example, for **[#2025-01](docs/main/user_manual/model-versions.md#CurrentVersions)**, the endpoint would be:
+
+```plaintext
+2025-01.engine.energytransitionmodel.com/api/v3
+```
+The corresponding **Git branch** also matches the `{version_tag}`.
+:::
+
+The stable versions have an [expiration date](../main/user_manual/model-versions#expiration-date). After this expiration date, the version is retired and all scenarios will be deleted.
+
 
 #### Staging
 

@@ -2,7 +2,7 @@
 title: "Interface"
 ---
 
-This page explains the main features displayed in the [interface](https://pro.energytransitionmodel.com/scenario/overview/introduction/how-does-the-energy-transition-model-work) of the ETM. 
+This page explains the main features displayed in the [interface](https://energytransitionmodel.com/scenario/overview/introduction/how-does-the-energy-transition-model-work) of the ETM. 
 You will land in the ETM interface after starting or opening a scenario. Here you will find the following topics:
 
 ![The ETM interface](/img/docs/interface.png)
@@ -43,5 +43,5 @@ In the results tab you can find different overviews portraying the outcomes base
 ### 8. Dashboard 
 The dashboard shows direct feedback on the most important outcomes of your scenario. The change button to the right makes it possible to show a different numerical output on the dashboard. The numbers shown in the dashboard and ETM as a whole always reflect the difference between the start- and end year you have chosen for your scenario except for the item that show the difference in CO<sub>2</sub> emissions from 1990. 
 
-_Checkout: the [Dashboard](dashboard) section in this documentation for more information._ 
+_Checkout: the [Dashboard](../dashboard) section in this documentation for more information._ 
  

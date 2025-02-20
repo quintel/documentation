@@ -7,7 +7,8 @@ sidebar_label: Scenario Version Tags
 import endpointData from '@site/data/api/version-tag';
 import ApiEndpoint from '@site/src/components/ApiEndpoint';
 
-Every owned scenario can be tagged as a version. This can be useful in cases with many iterations of scenario creation. When a scenario is tagged, the user that last updated the scenario is registered and kept up-to-date. Moreover, you can add a short description of the version.
+Every owned scenario can be tagged as a version. This can be useful in cases with many iterations of scenario creation. When a scenario is tagged, the user that last updated the scenario is registered and kept up-to-date. Moreover, you can add a short description of the version. Please note:
+**these versions are not the same as the 'stable versions' outlined [here.](docs/main/user_manual/model-versions.md)
 
 ## The version tag object
 
