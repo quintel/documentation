@@ -78,8 +78,8 @@ When a stable version is created, there will be no changes to your saved scenari
 
 ### Move scenarios between versions
 
-If you want to a move a scenario between versions, for example from `latest` to `2025-01`, you have to do this manually. The inputs from the existing scenario can be extracted, for example using the API or the scenario tools. A new scenario can then be created in the desired version the model. The inputs can then be set in the new scenario.
+If you want to a move a scenario between versions, for example from `latest` to `2025-01`, you have to do this manually. The inputs from the existing scenario can be extracted, for example using the API or the scenario-tools. A new scenario can then be created in the desired version of the model. The inputs can then be set in the new scenario.
 
 :::warning Handling differences in inputs between versions
-Moving inputs between versions may not always be directly possible. The more time has passed between the versions, the more likely it is that some inputs will have been added, changed or deleted. Using the Changelog discussed in [Communication](#communication), you can determine how inputs should be corrected for the scenario in the different version to still work.
+Moving inputs between versions may not always be directly possible. The more time has passed between the versions, the more likely it is that some inputs will have been added, changed or deleted. Using the Changelog discussed in [Communication](#communication), you can determine how inputs should be corrected for the scenario in the different versions to still work.
 :::
