@@ -27,6 +27,10 @@ While we endeavour not to change the API in a backwards-incompatible way, this i
 
 To learn more about our environments, see the [introduction to the API](intro.md#environments).
 
+### 24th Feb 2025 <ReleaseBadge name="2025.02" />
+* Stable versions introduced. It is now possible to access stable environments for stable results. More on accessing these stable API endpoints [can be found here.](intro.md#environments)
+* The introduction of stable versions also means that [saved scenarios](saved-scenarios.md) and [collections](collections.md) have version tags associated with them now. These are included in the API responses.
+
 ### 3rd September 2024 <ReleaseBadge name="2024.09" />
 * Uncoupling scenarios [has changed](scenarios#scenario-couplings). It's now possible to recouple your scenario after deactivating a coupling.
 
