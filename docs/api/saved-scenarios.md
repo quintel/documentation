@@ -30,9 +30,10 @@ scenario endpoint:
 * `updated_at` – the time when the saved scenario was most recently updated.
 * `version` - the version associated with the saved scenario. See [model versions](docs/main/user_manual/model-versions.md) for more information.
 * `scenario` - read-only information about the underlying scenario.
-* `owner` - information about the owner of the SavedScenario.
-  * `id` - the owner's unique ID number
-  * `name` - the owner's name
+* `users` - array about the users associated with the SavedScenario.
+  * `id` - the user's unique ID number.
+  * `email` - the user's email address.
+  * `role` - the user's [role](/main/user_manual/managing-scenarios/scenario-manage-access) with respect to the SavedScenario.
 
 ### Scenarios vs. saved scenarios
 
@@ -69,17 +70,19 @@ Authorization: Bearer YOUR_TOKEN
     456788
   ],
   "title": "My saved scenario",
-  "description": null,
   "area_code": "nl2019",
   "end_year": 2050,
   "private": false,
-  "discarded": false,
+  "discarded_at": false,
   "created_at": "2022-07-27T13:45:32.000Z",
   "updated_at": "2022-12-22T19:21:32.000Z",
-  "owner": {
-    "id": 1,
-    "name": "John Doe"
-  },
+  "version": "latest",
+  "saved_scenario_users": [
+    {
+  "user_id": 123,
+  "role": "scenario_owner"
+    }
+  ],
   "scenario": {
     "id": 456789,
     "created_at": "2022-07-27T15:59:33.000Z",
@@ -95,8 +98,16 @@ Authorization: Bearer YOUR_TOKEN
     "source": "ETM",
     "balanced_values": {},
     "metadata": {},
+    "active_couplings": [],
     "start_year": 2019,
-    "owner": null,
+    "inactive_couplings": [],
+    "users": [
+      {
+        "id": 123,
+        "email": null,
+        "role": "scenario_owner"
+      }
+    ],
     "scaling": null,
     "template": 123456,
     "url": "https://engine.energytransitionmodel.com/api/v3/scenarios/456789"
@@ -183,10 +194,13 @@ Authorization: Bearer YOUR_TOKEN
   "discarded": false,
   "created_at": "2022-12-23T19:21:32.000Z",
   "updated_at": "2022-12-23T19:21:32.000Z",
-  "owner": {
-    "id": 1,
-    "name": "John Doe"
-  },
+    "users": [
+      {
+        "id": 123,
+        "email": null,
+        "role": "scenario_owner"
+      }
+    ],
   "scenario": {
     "id": 12345,
     // ...
@@ -225,10 +239,13 @@ Authorization: Bearer YOUR_TOKEN
   "discarded": false,
   "created_at": "2022-12-23T19:21:32.000Z",
   "updated_at": "2022-12-23T19:22:38.000Z",
-  "owner": {
-    "id": 1,
-    "name": "John Doe"
-  },
+    "users": [
+      {
+        "id": 123,
+        "email": null,
+        "role": "scenario_owner"
+      }
+    ],
   "scenario": {
     "id": 67890,
     // ...
