@@ -35,9 +35,10 @@ scenario endpoint:
   * `slider_one` - the set value for slider_one.
   * `slider_two` - the set value for slider_two.
   * ...
-* `owner` - if the scenario was created by an authenticated user, this will be an object containing:
-  * `id` - the user's unique ID number
-  * `name` - the user's name
+* `users` - array about the users associated with the scenario (if there are any).
+  * `id` - the user's unique ID number.
+  * `email` - the user's email address.
+  * `role` - the user's [role](/main/user_manual/managing-scenarios/scenario-manage-access) with respect to the scenario.
 
 ### Templates
 
@@ -102,6 +103,13 @@ Authorization: Bearer YOUR_TOKEN
   "esdl_exportable": false,
   "active_couplings": [],
   "inactive_couplings": [],
+  "users": [
+      {
+        "id": 123,
+        "email": null,
+        "role": "scenario_owner"
+      }
+    ],
   "user_values": {
     "buildings_insulation_level": 40.3,
     "capacity_of_energy_power_hydro_river": 39.0
