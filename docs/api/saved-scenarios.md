@@ -100,12 +100,6 @@ Authorization: Bearer YOUR_TOKEN
     "active_couplings": [],
     "start_year": 2019,
     "inactive_couplings": [],
-    "users": [
-      {
-        "id": 123,
-        "role": "scenario_owner"
-      }
-    ],
     "scaling": null,
     "template": 123456,
     "url": "https://engine.energytransitionmodel.com/api/v3/scenarios/456789"
@@ -192,7 +186,7 @@ Authorization: Bearer YOUR_TOKEN
   "discarded": false,
   "created_at": "2022-12-23T19:21:32.000Z",
   "updated_at": "2022-12-23T19:21:32.000Z",
-    "users": [
+  "saved_scenario_users": [
       {
         "id": 123,
         "role": "scenario_owner"
@@ -236,7 +230,7 @@ Authorization: Bearer YOUR_TOKEN
   "discarded": false,
   "created_at": "2022-12-23T19:21:32.000Z",
   "updated_at": "2022-12-23T19:22:38.000Z",
-    "users": [
+  "saved_scenario_users": [
       {
         "id": 123,
         "role": "scenario_owner"
