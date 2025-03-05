@@ -30,9 +30,8 @@ scenario endpoint:
 * `updated_at` – the time when the saved scenario was most recently updated.
 * `version` - the version associated with the saved scenario. See [model versions](docs/main/user_manual/model-versions.md) for more information.
 * `scenario` - read-only information about the underlying scenario.
-* `users` - array about the users associated with the SavedScenario.
+* `saved_scenario_users` - array about the users associated with the SavedScenario.
   * `id` - the user's unique ID number.
-  * `email` - the user's email address.
   * `role` - the user's [role](/main/user_manual/managing-scenarios/scenario-manage-access) with respect to the SavedScenario.
 
 ### Scenarios vs. saved scenarios
@@ -104,7 +103,6 @@ Authorization: Bearer YOUR_TOKEN
     "users": [
       {
         "id": 123,
-        "email": null,
         "role": "scenario_owner"
       }
     ],
@@ -197,7 +195,6 @@ Authorization: Bearer YOUR_TOKEN
     "users": [
       {
         "id": 123,
-        "email": null,
         "role": "scenario_owner"
       }
     ],
@@ -242,7 +239,6 @@ Authorization: Bearer YOUR_TOKEN
     "users": [
       {
         "id": 123,
-        "email": null,
         "role": "scenario_owner"
       }
     ],
