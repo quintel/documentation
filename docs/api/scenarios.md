@@ -35,9 +35,6 @@ scenario endpoint:
   * `slider_one` - the set value for slider_one.
   * `slider_two` - the set value for slider_two.
   * ...
-* `owner` - if the scenario was created by an authenticated user, this will be an object containing:
-  * `id` - the user's unique ID number
-  * `name` - the user's name
 
 ### Templates
 
