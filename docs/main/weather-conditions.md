@@ -2,7 +2,7 @@
 title: Weather conditions
 ---
 
-For all datasets the average temperature and full load hours of wind turbines and solar PV can be adjusted in the Flexibility > ['Weather conditions'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions) section. For the Netherlands it is possible to select one of three weather years with extreme weather conditions to explore the effect of these conditions. On this page these features are explained.
+For all datasets the average temperature and full load hours of wind turbines and solar PV can be adjusted in the Flexibility > ['Weather conditions'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/weather-conditions) section. For the Netherlands it is possible to select one of three weather years with extreme weather conditions to explore the effect of these conditions. On this page these features are explained.
 
 ## Temperature
 
