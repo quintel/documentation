@@ -9,11 +9,14 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "3.0.0",
-    "@docusaurus/preset-classic": "3.0.0",
+    "@docusaurus/core": "3.9.2",
+    "@docusaurus/preset-classic": "3.9.2",
     "classnames": "^2.5.1",
+    "marked": "^15.0.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-chrono": "^2.7.2",
+    "react-vertical-timeline-component": "^3.5.3"
   },
   "browserslist": {
     "production": [
