@@ -1,0 +1,65 @@
+[
+  {
+    "date": "Nov 13",
+    "title": "Next Release",
+    "file": "upcoming.md",
+    "version": "upcoming",
+    "tag": null
+  },
+  {
+    "date": "Oct 2",
+    "title": "October 2025",
+    "file": "2025-10.md",
+    "version": "latest",
+    "tag": "2025.10"
+  },
+  {
+    "date": "Sep 4",
+    "title": "September 2025",
+    "file": "2025-09.md",
+    "tag": "2025.09"
+  },
+  {
+    "date": "Aug 7",
+    "title": "August 2025",
+    "file": "2025-08.md",
+    "tag": "2025.08"
+  },
+  {
+    "date": "Jul 3",
+    "title": "July 2025",
+    "file": "2025-07.md",
+    "tag": "2025.07"
+  },
+  {
+    "date": "Jun 3",
+    "title": "June 2025",
+    "file": "2025-06.md",
+    "tag": "2025.06"
+  },
+  {
+    "date": "May 1",
+    "title": "May 2025",
+    "file": "2025-05.md",
+    "tag": "2025.05"
+  },
+  {
+    "date": "Apr 3",
+    "version": "2025.S1",
+    "title": "Stable 2025",
+    "file": "2025-s1.md",
+    "tag": "stable.2025.01"
+  },
+  {
+    "date": "Mar 6",
+    "title": "March 2025",
+    "file": "2025-03.md",
+    "tag": "2025.03"
+  },
+  {
+    "date": "Feb 24",
+    "title": "February 2025",
+    "file": "2025-02.md",
+    "tag": "2025.02"
+  }
+]
