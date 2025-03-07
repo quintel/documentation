@@ -15,21 +15,21 @@ With the tool you can:
 - [Download scenario results and query e.g. dashboard items](retrieving-data.md)
 - [Create or update scenario slider settings and custom curves](creating-and-updating.md)
 - [Compare scenario results for varying individual or combined slider settings](slider-comparison.md)
-- [Create a template of a scenario which you can use to create new sceanrios](creating-templates.md)
+- [Create a template of a scenario which you can use to create new scenarios](creating-templates.md)
 - [Create a regional overview combining multiple scenarios](regional-overview.md)
 
 ## Input and output
 The scenario-tools read input data, such as slider settings or requested downloads, from several CSVs
 that you must supply. This section gives a quick overview of what to expect.
 
-By default, and when you first look at the tool after downloading it, the `input` and `output` folders are located in the `data` folder. The tool will read and write to the files in these folders when you run it. It is possible to change the default folder where input data is read or where output data is saved in the [settings](advanced-settings.md#configuring-the-tool). Please note that the tool will still expect the input file names to stay the same. Also, the default settings for reading and exporting CSVs can be changed here. 
+By default, and when you first look at the tool after downloading it, the `input` and `output` folders are located in the `data` folder. The tool will read and write to the files in these folders when you run it. It is possible to change the default folder where input data is read or where output data is saved in the [settings](advanced-settings.md#configuring-the-tool). Please note that the tool will still expect the input file names to stay the same. Also, the default settings for reading and exporting CSVs can be changed here.
 
 ### Input
 :::info Dummy data in the input files
 All input files contain dummy data, to give you an actual example of how the data should be presented. Make sure to clear the dummy data from the files when you start using the tool.
 :::
 
-Each functionality of the tool requires its own input CSVs. The neccesary files for each function will be
+Each functionality of the tool requires its own input CSVs. The necessary files for each function will be
 described on the dedicate pages.
 
 Here is a list of the files that can be encountered in the input folder:
@@ -58,7 +58,7 @@ expect you to be in this folder.
 #### Using pipenv
 It is recommended (but not required) that you use [`pipenv`](https://pipenv.pypa.io/en/latest/) for running these tools. When using `pipenv`
 it will create a virtual environment for you. A virtual environment helps with keeping the libaries you install here separate of your global libraries (in
-other words your `scenario-tools` will be in a stable and isolated environment and are thus less likely to break when updating things elswhere on your computer)
+other words your `scenario-tools` will be in a stable and isolated environment and are thus less likely to break when updating things elsewhere on your computer)
 and this one comes with some nice shortcuts for running the tools.
 
 You can instal `pipenv` with `pip` or `pip3` if you don't have it installed yet.

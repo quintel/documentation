@@ -15,7 +15,7 @@ underlying scenarios. There are three different roles
 The user object consist of the following two fields:
 
 * `name` - The username of the user, when the user is registered to the energy transition model. OR
-* `email` - If the user is not yet registred to the energy transition model.
+* `email` - If the user is not yet registered to the energy transition model.
 * `role` - The role the user has within the scenario.
 
 There are three different types of roles, a detailed description can be found [here](/main/user_manual/managing-scenarios/scenario-manage-access).
@@ -65,7 +65,7 @@ Authorization: Bearer YOUR_TOKEN
 ## Add a user to a scenario
 
 It is possible to add multiple users to the scenario at once.
-When one of the creations fails, the reponse returns an
+When one of the creations fails, the response returns an
 Sending a POST request for a version tag:
 
 <ApiEndpoint data={endpointData.create} />

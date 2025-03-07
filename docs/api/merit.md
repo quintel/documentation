@@ -22,7 +22,7 @@ objects:
 * `curves` - an object containing all the curves used by the participants. Each curve is a key value pair, with the value being a list of 8760 data points.
 * `participants` - a list of all participants in the merit order for this scenario.
 
-Each participant is an object containing all details neccesary to initialize the merit order with. All
+Each participant is an object containing all details necessary to initialize the merit order with. All
 participants contain the following data:
 
 * `key` - the identifier of the participant.

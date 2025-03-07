@@ -64,6 +64,6 @@ Running the migration will raise an error if:
 
   Check the CSV file to ensure you've added all the data. Adding the missing columns to the data CSV or removing the unknown fields from the commits YAML should cause the migration should run successfully.
 
-* **The data CSV file contains columns taht aren't specified in the commits YAML file**.
+* **The data CSV file contains columns that aren't specified in the commits YAML file**.
 
   If the CSV contains fields which you haven't used, an error is raised. In this case, the columns aren't needed for the migration to run but could be an indication that you've forgotten to include them in the commits YAML.

@@ -2,7 +2,7 @@
 title: Overview of costs per sector
 ---
 
-Below you can find an overview of the different cost components that are taken into account by the ETM per sector. You can use this to gain a better understanding of the cost calculations in the ETM and cost results in your scenario. For more information about CAPEX and OPEX, see [Cost methods](cost-methods.md). 
+Below you can find an overview of the different cost components that are taken into account by the ETM per sector. You can use this to gain a better understanding of the cost calculations in the ETM and cost results in your scenario. For more information about CAPEX and OPEX, see [Cost methods](cost-methods.md).
 
 ## Buildings and installations (ex fuel and CCUS)
 ### Households
@@ -13,7 +13,7 @@ Below you can find an overview of the different cost components that are taken i
 | Heat delivery system | CAPEX and OPEX
 | Insulation | CAPEX (special module)
 | Solar PV & solar thermal | CAPEX and OPEX
-| Appliances, cooking and lighting | No costs 
+| Appliances, cooking and lighting | No costs
 
 ### Buildings
 |  ***Subject***   | ***Cost components***  |
@@ -44,7 +44,7 @@ Below you can find an overview of the different cost components that are taken i
 | Appliances | No costs
 | Feedstock | No costs
 
-## Storage and conversion (ex fuel and CCUS) 
+## Storage and conversion (ex fuel and CCUS)
 |  ***Subject***   | ***Cost components***  |
 |---|---|
 | Power-to-power (p2p) | CAPEX and OPEX of houshold batteries, EV batteries, grid batteries, OPAC and pumped storage
@@ -64,8 +64,8 @@ Below you can find an overview of the different cost components that are taken i
 |  ***Subject***   | ***Cost components***  |
 |---|---|
 | Electricity | For each installed power plant, the ETM takes into account investment, CAPEX an OPEX. For imports, a price (curve) can be set in the model. The electricity price per hour follows from the [Merit Order](merit-order.md) calculation
-| Heat | For each heater, the ETM takes into account CAPEX an OPEX. 
-| Hydrogen | For each installed hydrogen plant, the ETM takes into account CAPEX an OPEX. 
+| Heat | For each heater, the ETM takes into account CAPEX an OPEX.
+| Hydrogen | For each installed hydrogen plant, the ETM takes into account CAPEX an OPEX.
 
 ## Carbon capture, utilisation and storage (CCUS)
 |  ***Subject***   | ***Cost components***  |
@@ -81,4 +81,4 @@ Below you can find an overview of the different cost components that are taken i
 ## Energy carriers and import:
 |  ***Subject***   | ***Cost components***  |
 |---|---|
-| All carriers |  All net primary demand of energy carriers. The carrier costs for export are is subtracted from the import costs. For example if gasoline (made in the country) is exported the neccessary imported crude oil costs are substracted from the total crude oil import.
+| All carriers |  All net primary demand of energy carriers. The carrier costs for export are is subtracted from the import costs. For example if gasoline (made in the country) is exported the necessary imported crude oil costs are subtracted from the total crude oil import.

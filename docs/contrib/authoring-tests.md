@@ -37,7 +37,7 @@ require 'spec_helper'
 describe "Transport" do
   before do
     @scenario = Turk::Scenario.new(area_code: "nl", end_year: 2050, inputs: {settings_enable_merit_order: 0})
-  end 
+  end
 
   context "E-bikes" do
     describe "Increasing the share of E-bike usage" do
@@ -79,8 +79,8 @@ Some use cases for the Mechanical Turk tests are:
 - To verify whether charts that should be balanced are in fact balanced
 An example for this is the second code example above.
 - To verify whether data in the charts is in line with the calculated graph data.
-The charts should accurately and completely reflect the data calculated in the graph. 
-- To check if hourly and yearly calculations match. The hourly calculations and yearly calculations are done by seperate modules. It is therefore important to check whether these are match.
+The charts should accurately and completely reflect the data calculated in the graph.
+- To check if hourly and yearly calculations match. The hourly calculations and yearly calculations are done by separate modules. It is therefore important to check whether these are match.
 
 #### Testing functions
 
@@ -88,29 +88,29 @@ The following functions are used in these tests:
 
 ```
 increase
-```  
+```
 Expects an increase for the given value. Returns "True" when the value increases, "False" when it decreases.
 ```
 decrease
-```  
+```
 Expects an decrease for the given value. Returns "True" when the value decreases, "False" when it increases.
 ```
 not_increase
-```  
+```
 Does not expect an increase for the given value. Returns "True" when the value decreases or stays the same, "False" when it increases.
 ```
 not_change
-```  
+```
 Does not expect a change for the given value. Returns "True" when the value the same, "False" when it increases or decreases.
 ```
 change
-```  
+```
 Expect a change for the given value. Returns "True" when the value changes, "False" when it does not.
 ```
 softly_equal
-```  
+```
 Expect the two given values to equal each other with an error margin of 1.0E-12.
 ```
 sum_to_softly_equal
-```  
+```
 Expect the sum of the given values to equal the 'sum-value' with an error margin of 1.0E-12.

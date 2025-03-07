@@ -23,7 +23,7 @@ Endpoints which provide information about inputs will return the following infor
 
 ## Collecting gqueries.
 
-Fetches a list of all the gqueries available that have the specificed labels. If no labels are specified, all gqueries will be returned. Note: the gqueries do not return any values for a specific scenario.
+Fetches a list of all the gqueries available that have the specified labels. If no labels are specified, all gqueries will be returned. Note: the gqueries do not return any values for a specific scenario.
 
 <ApiEndpoint data={endpointData.gqueries} />
 

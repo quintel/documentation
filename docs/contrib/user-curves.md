@@ -80,7 +80,7 @@ The `sets` attribute defines one or more inputs which will be set to the reduced
 
 ## Internal curves
 
-Some advanced users wish to be able to customise curves that should not be available to the general public through ETModel. Examples include insulation curves, where uploading several curves is required in order for the scenario to function as expected, and for which there is little – or no – public documetation.
+Some advanced users wish to be able to customise curves that should not be available to the general public through ETModel. Examples include insulation curves, where uploading several curves is required in order for the scenario to function as expected, and for which there is little – or no – public documentation.
 
 A curve can be set as "internal" with the attribute:
 

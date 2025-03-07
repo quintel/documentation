@@ -8,14 +8,14 @@ import { ReleaseBadge } from '@site/src/components/EnvBadge';
 
 As of the [2023.12](changelog.md#5th-december-2023-) <ReleaseBadge name="2023.12" /> release there will be three orders available instead of one. Omit the `subtype` attribute when using the old implementation.
 
-Each scenario has three heat network orders. These define the order of preference by which [dispatchable technologies](../main/heat-networks.md#dispatchable) are used to supply heat to each district heat network. There is a different heat network for low, medium and high tempearture heat, each with their own order.
+Each scenario has three heat network orders. These define the order of preference by which [dispatchable technologies](../main/heat-networks.md#dispatchable) are used to supply heat to each district heat network. There is a different heat network for low, medium and high temperature heat, each with their own order.
 
 ## The HeatNetworkOrder object
 
 A HeatNetworkOrder is an object containing two keys – `order` – which is an array of string keys identifying each group of heating technologies and `subtype` to define for which temperature level the order is to be set.
 
 * `order` - an array of technology group keys as strings
-* `subtype` - a string defininig the temperature level of the order, must be one of `lt`, `mt` or `ht`
+* `subtype` - a string defining the temperature level of the order, must be one of `lt`, `mt` or `ht`
 
 ## Get a heat network order
 
