@@ -4,25 +4,25 @@ title: Hybrid offshore hub
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-Please note: General documentation concerning hybrid offshore wind can be found in the [Hybrid offshore wind](../main/hybrid-offshore-wind) documentation. This documention is focused on the configuration and hourly calculations of hyrbid offshore wind in the ETM.
+Please note: General documentation concerning hybrid offshore wind can be found in the [Hybrid offshore wind](../main/hybrid-offshore-wind) documentation. This documentation is focused on the configuration and hourly calculations of hybrid offshore wind in the ETM.
 
-Hybrid offshore hubs represent an offshore renewable electricity production facility combined with an electrolyser for hydrogen production. It is connected to the mainland power grid via a subnautical power cable. The electrolyser is connected to the mainland hydrogen network via a subnautical pipeline. 
+Hybrid offshore hubs represent an offshore renewable electricity production facility combined with an electrolyser for hydrogen production. It is connected to the mainland power grid via a subnautical power cable. The electrolyser is connected to the mainland hydrogen network via a subnautical pipeline.
 
 ## Configuration of hybrid offshore hub
 
 ### Nodes
 A hybrid offshore hub in the ETM requires 6 nodes:
 
-1. **Producer**: This represents renewable electricity production (e.g. wind farm or solar farm) which produce electricity according to a production profile. At the moment, the ETM only incorporates a hybrid offshore hub based with renewable electricity production from offshore wind farms. 
-2. **Electrolyser**: Depending on the WTP of the electrolyser and the capacity of the electrolyser,power cable and producer, hydrogen production will take place. 
-3. **Curtailment**: Energy is diverted here when the electrolyser cannot use all generated energy due to its capacity constraints, and when onshore electricity demand is too low. 
+1. **Producer**: This represents renewable electricity production (e.g. wind farm or solar farm) which produce electricity according to a production profile. At the moment, the ETM only incorporates a hybrid offshore hub based with renewable electricity production from offshore wind farms.
+2. **Electrolyser**: Depending on the WTP of the electrolyser and the capacity of the electrolyser,power cable and producer, hydrogen production will take place.
+3. **Curtailment**: Energy is diverted here when the electrolyser cannot use all generated energy due to its capacity constraints, and when onshore electricity demand is too low.
 4. **Cable offshore-onshore**: The producer transports electricity to the cable node so it can be transported to the onshore power grid.
-5. **Cable onshore-offshore**: This cable transports electricity from the onshore power grid to the offshore electrolyser. This cable will be deployed when the WTP of the electrolyser is higher than the national electricity price and when there is still undeployed electrolyser capacity available. In reality, this cable is the same cable as the cable offshore-onshore (and therefore has the same specs), but is added as a seperate node for modelling purposes. 
-6. **Hydrogen offshore pipeline**: Hydrogen that is produced by the electrolyser will be transported to the onshore hydrogen network by this node. 
+5. **Cable onshore-offshore**: This cable transports electricity from the onshore power grid to the offshore electrolyser. This cable will be deployed when the WTP of the electrolyser is higher than the national electricity price and when there is still undeployed electrolyser capacity available. In reality, this cable is the same cable as the cable offshore-onshore (and therefore has the same specs), but is added as a separate node for modelling purposes.
+6. **Hydrogen offshore pipeline**: Hydrogen that is produced by the electrolyser will be transported to the onshore hydrogen network by this node.
 
 ### Edges
 The edge-types of the edges between the nodes can be found in the picture below.
-As can be seen in the legend, a 'dashed' edge has the 'reversed' attribute set to true. 
+As can be seen in the legend, a 'dashed' edge has the 'reversed' attribute set to true.
 
 <div style={{ textAlign: "center" }}>
   <img
@@ -34,10 +34,10 @@ As can be seen in the legend, a 'dashed' edge has the 'reversed' attribute set t
 
 For more information about edge-types please visit the [Graph components](graph-components) documentation. Some of the configured edge-types are further explained here:
 
-* __Producer > Electrolyser: constant.__ Through the constant edge a specific amount of energy is set through this edge. The model uses this characteristic to sum all electricity that has flown from the producer to the electrolyser in each hour of the year. 
+* __Producer > Electrolyser: constant.__ Through the constant edge a specific amount of energy is set through this edge. The model uses this characteristic to sum all electricity that has flown from the producer to the electrolyser in each hour of the year.
 * __Producer > Curtailment: reversed share.__ With the reversed share the model sets the annual demand of the curtailment node equal to the sum of curtailed energy for each hour of the year, at the same time when the amount through the edge from Producer to Electrolyser is set.
-* __Producer > Cable from offshore network: inversed_flexible.__ The remaining produced energy from the Producer is subsequently allocated to the cable with the inversed_flexible edge. 
-* __Cable > Electrolyser: flexible.__ When the electrolyser node does not yet meet its yearly demand it is given by the merit module, cable node will deliver this deficit through the flexible edge. 
+* __Producer > Cable from offshore network: inversed_flexible.__ The remaining produced energy from the Producer is subsequently allocated to the cable with the inversed_flexible edge.
+* __Cable > Electrolyser: flexible.__ When the electrolyser node does not yet meet its yearly demand it is given by the merit module, cable node will deliver this deficit through the flexible edge.
 
 ## Node attributes
 ### Producer node
@@ -137,7 +137,7 @@ The following data can be expected after the merit order has run.
 * `electricity_input_curve`: the hourly curtailed electricity input (originating from the producer node)
 
 ## Updating values with GQL
-The ETM currently provides user inputs that update the `number_of_units` of the producer node and the electrolyser (converter) node. For the power cable nodes, the `electricity_output_capacity` can be set. 
+The ETM currently provides user inputs that update the `number_of_units` of the producer node and the electrolyser (converter) node. For the power cable nodes, the `electricity_output_capacity` can be set.
 
 #### Change the capacity of the producer
 In the ETM, the total installed capacity of the producer node can be set. This input will update the `number_of_units` of the producer based on the typical input capacity of one producer unit:

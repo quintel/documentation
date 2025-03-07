@@ -15,10 +15,10 @@ This page shortly explains what falls under the different categories in every gr
 | Category | Description |
 | ---- | ----|
 |**Indirect & Delayed emissions**|_**Indirect emissions** are CO<sub>2</sub> emissions caused by the atmospheric oxidation of methane (CH<sub>4</sub>), carbon monoxide (CO) and Non-Methane Volatile Organic Compounds (NMVOC). These substances are often released during non-energetic processes such as the storage of manure, chemical processes or use of solvents. Due to the large number of causes, indirect emissions can originate in any sector (agriculture, industry, the built environment or other sectors). These emissions can be adjusted in the [Greenhouse gas section](https://pro.energytransitionmodel.com/scenario/emissions/other_emissions/indirect-emissions). **Delayed emissions** are captured CO<sub>2</sub> emissions that has been emitted at a later point in time. These emissions can be adjusted in the [CCUS section](https://pro.energytransitionmodel.com/scenario/emissions/ccus/utilisation-and-storage-of-co2)._|
-|**Built environment**|_All emissions from the built environment shown in the seperate built environment graph._|
-|**Transport & Mobility**|_All emissions from transport & mobility shown in the seperate transport & mobility graph._|
-|**Industry & Energy**|_All emissions from industry & energy production shown in the seperate industry & energy graph._|
-|**Agriculture**|_All emissions from agriculture shown in the seperate agriculture graph._|
+|**Built environment**|_All emissions from the built environment shown in the separate built environment graph._|
+|**Transport & Mobility**|_All emissions from transport & mobility shown in the separate transport & mobility graph._|
+|**Industry & Energy**|_All emissions from industry & energy production shown in the separate industry & energy graph._|
+|**Agriculture**|_All emissions from agriculture shown in the separate agriculture graph._|
 
 ## Built environment
 

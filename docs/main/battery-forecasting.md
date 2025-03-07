@@ -28,7 +28,7 @@ See [Costs → Merit Order → Implementation](merit-order.md#implementation) fo
 
 ## Algorithm
 
-The forecasing algorithm matches an hour of high residual load with an hour of low or negative load from the preceeding 72-hours. It causes the electricity storage technology to charge when load is low and discharge the same amount when load is high. This has the effect of flattening the residual load curve, reducing peaks in favor of a more constant curve.
+The forecasting algorithm matches an hour of high residual load with an hour of low or negative load from the preceding 72-hours. It causes the electricity storage technology to charge when load is low and discharge the same amount when load is high. This has the effect of flattening the residual load curve, reducing peaks in favor of a more constant curve.
 
 The algorithm accounts for the input and output capacity, the total volume, and the efficiency of the storage technology.
 
@@ -59,11 +59,11 @@ The algorithm continues selecting high and low hours until the storage technolog
 </div>
 
 <div style={{ textAlign: "center" }}>
-  <img src="/img/docs/battery-forecasting/finished-load-and-volume.png" alt="A chart showing the volume stored in the battery rising from 0 to 4 as it charages, then back to 0 as it discharges. The battery load is shown varying between 0 and 2 as it charges, then between 0 and -2 as it discharges." />
+  <img src="/img/docs/battery-forecasting/finished-load-and-volume.png" alt="A chart showing the volume stored in the battery rising from 0 to 4 as it charges, then back to 0 as it discharges. The battery load is shown varying between 0 and 2 as it charges, then between 0 and -2 as it discharges." />
 </div>
 
 ### Merit Order
-If the forecasting algorithim is enabled for multiple storage technologies, a merit order is used to determine in which sequence technologies are applied to flatten the residual load. This merit order can be set by the user [Flexibility → Merit order](https://energytransitionmodel.com/scenario/flexibility/flexibility_forecast_storage_order/forecasting-storage-order).
+If the forecasting algorithm is enabled for multiple storage technologies, a merit order is used to determine in which sequence technologies are applied to flatten the residual load. This merit order can be set by the user [Flexibility → Merit order](https://energytransitionmodel.com/scenario/flexibility/flexibility_forecast_storage_order/forecasting-storage-order).
 
 The first technology in the merit order will try to flatten the original residual load curve. The next technology will be applied to the flattened residual load curve that is produced by the first technology. It will try to flatten that curve even further. This continues until each technology for which the forecasting algorithm is enabled has been utilized.
 
@@ -80,10 +80,10 @@ Technologies for which the forecasting algorithm is disabled are shown in the li
 After selecting an hour of high load, the algorithm looks for an opportunity to charge in the 72-hour period before the high load. This limit serves several purposes:
 
 1. In some kinds of electricity storage technologies, storing energy for too long is likely to incur losses; energy in batteries slowly decays, water stored in reservoirs evaporates.
-2. While holding energy in storage for long periods of time may be realistic for some storage technologies (pumped hydro), it is not realisitic for smaller-scale battery technologies such as household batteries.
+2. While holding energy in storage for long periods of time may be realistic for some storage technologies (pumped hydro), it is not realistic for smaller-scale battery technologies such as household batteries.
 3. Longer cycles increase calculation time and would result in your scenario becoming sluggish when you make changes.
 
-During experimentation with the algorithm, it was found that periods longer than 72-hours quickly resulted in diminishing returns. Profits from storage technologies did not increase significantly, while calculation time increased unnacceptably.
+During experimentation with the algorithm, it was found that periods longer than 72-hours quickly resulted in diminishing returns. Profits from storage technologies did not increase significantly, while calculation time increased unacceptably.
 
 Note that this does not mean that the battery must _fully_ charge and discharge every 72-hours. Rather, any amount of energy charged in one hour – which may be a fraction of the battery capacity or volume – must be discharged within 3 days.
 

@@ -20,7 +20,7 @@ When a collection of inputs must sum to 100%, use a share group. This is a commo
 - share_group = transport_car_tech
 ```
 
-All inputs with the same `share_group` value will be placed in a group, with their values expected to sum to 100. ETModel will enable this by reducing or increasing a second slider whenever the user changes a value. API users can opt in to "autobalancing" behavior, whereby the other inputs in the group which don't have an explicity value set, have their values changed to ensure the group sums to 100.
+All inputs with the same `share_group` value will be placed in a group, with their values expected to sum to 100. ETModel will enable this by reducing or increasing a second slider whenever the user changes a value. API users can opt in to "autobalancing" behavior, whereby the other inputs in the group which don't have an explicitly value set, have their values changed to ensure the group sums to 100.
 
 ### Mutually-exclusive inputs
 

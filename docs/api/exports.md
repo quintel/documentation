@@ -20,12 +20,12 @@ Endpoints that can be used to retrieve annual data are based on the following da
 * `molecule_flow` - Returns a CSV file containing the flow of molecules through the molecule graph.
 * `sankey` – Creates a CSV by reading the `sankey` configuration file from ETSource.
 * `storage_parameters` - Creates a CSV by reading the `storage` configuration file from ETSource.
-* `costs_parameters` - Returns a CSV file containing the cost paramaters of nodes belonging to costs groups.
+* `costs_parameters` - Returns a CSV file containing the cost parameters of nodes belonging to costs groups.
 
 
 ## Get annual data
 
-Sending a GET request for a `csv` file with one of the keys specified above to a scenario will serialize the speicfied `csv` for you. For example for `application_demands`:
+Sending a GET request for a `csv` file with one of the keys specified above to a scenario will serialize the specified `csv` for you. For example for `application_demands`:
 
 <ApiEndpoint data={endpointData.exports} />
 
@@ -58,7 +58,7 @@ Endpoints that can be used to retrieve hourly data are based on the following da
 
 ## Get hourly data
 
-Sending a GET request for a `csv` file with one of the keys specified above to a scenario will serialize the speicfied `csv` for you. For example for `hydrogen`:
+Sending a GET request for a `csv` file with one of the keys specified above to a scenario will serialize the specified `csv` for you. For example for `hydrogen`:
 
 <ApiEndpoint data={endpointData.curves} />
 

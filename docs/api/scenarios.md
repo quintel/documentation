@@ -416,7 +416,7 @@ If you need to continue using your scenario long-term, you may set the `keep_com
 For example, if a slider is renamed, we will rename the slider value in your scenario to reflect this change. If it were to be updated from having a percentage value to an absolute capacity value in MW, we will set the new MW value in your scenario such that the energy flows are as close as possible to those in your original scenario.
 
 :::warning Keep compatible
-Not keeping your scenario compatible with newer model versions can cause the model to break or lead to unforseen outcomes for your scenarios.
+Not keeping your scenario compatible with newer model versions can cause the model to break or lead to unforeseen outcomes for your scenarios.
 :::
 
 ```http title="Example request"

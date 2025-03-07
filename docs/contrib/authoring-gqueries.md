@@ -2,7 +2,7 @@
 title: Writing gqueries
 ---
 
-Gqueries are in fact stored [GQL](gql.md) (Graph Query Languague) procedures that have a key. If a user for example wants to know the total CO<sub>2</sub> emissions of an area, they can request ETEngine for the gquery `total_co2_emissions` and do not have to worry about the underlying intricacies. An overview of all gqueries can be found in [this folder](https://github.com/quintel/etsource/tree/master/gqueries).
+Gqueries are in fact stored [GQL](gql.md) (Graph Query Language) procedures that have a key. If a user for example wants to know the total CO<sub>2</sub> emissions of an area, they can request ETEngine for the gquery `total_co2_emissions` and do not have to worry about the underlying intricacies. An overview of all gqueries can be found in [this folder](https://github.com/quintel/etsource/tree/master/gqueries).
 
 ## Guidelines
 

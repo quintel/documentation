@@ -16,7 +16,7 @@ Apart from CO<sub>2</sub> there are many other greenhouse gases (GHG) that are i
 -	nitrous oxide (N<sub>2</sub>O);
 -	hydrofluorocarbons (HFCs);
 -	perfluorocarbons (PFCs);
--	suphur hexafluoride (SF<sub>6</sub>); and
+-	sulphur hexafluoride (SF<sub>6</sub>); and
 -	nitrogen trifluoride (NF<sub>3</sub>)
 
 ## Emission categories per slider
@@ -96,7 +96,7 @@ Below you can find a table with all sliders and corresponding categories and exp
 
 | ETM slider | UNFCCC category | Category name | Description |
 | ---- | ----|---- |---- |
-| **Manure**| 3.B | Manure Management | _Includes all non-energetic CO<sub>2</sub> emissions in this category. All manure management from cattle, sheep, swine or other lifestock._ |
+| **Manure**| 3.B | Manure Management | _Includes all non-energetic CO<sub>2</sub> emissions in this category. All manure management from cattle, sheep, swine or other livestock._ |
 | | 3.H | Urea Application | _Includes all non-energetic CO<sub>2</sub> emissions in this category. The application of urea as fertilizer or feed supplement._ |
 | | 3.I | Other Carbon-containing Fertilizers | _Includes all non-energetic CO<sub>2</sub> emissions in this category. The application of other carbon-containing fertilizers._ |
 | **Soil cultivation**| 3.C | Rice Cultivation | _Includes all non-energetic CO<sub>2</sub> emissions in this category. The cultivation and production of rice._ |
@@ -108,14 +108,14 @@ Below you can find a table with all sliders and corresponding categories and exp
 
 | ETM slider | UNFCCC category | Category name | Description |
 | ---- | ----|---- |---- |
-| **Manure**| 3.B | Manure Management | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. All manure management from cattle, sheep, swine or other lifestock._ |
+| **Manure**| 3.B | Manure Management | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. All manure management from cattle, sheep, swine or other livestock._ |
 | | 3.H | Urea Application | _The application of urea as fertilizer or feed supplement._ |
 | | 3.I | Other Carbon-containing Fertilizers | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. The application of other carbon-containing fertilizers._ |
 | **Soil cultivation**| 3.C | Rice Cultivation | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. The cultivation and production of rice._ |
 | | 3.D | Agricultural Soils | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. Direct and indirect N<sub>2</sub>O emissions from managed soils._ |
 | | 3.E | Prescribed Burning of Savannas | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. Rotational burning of trees and shrubs to maintain more open habitat conditions._ |
 | | 3.G | Liming | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. The application of lime to reduce acidity and improve fertility of soil._ |
-| **Fermentation**| 3.A | Enteric Fermentation | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. The emissions from food digestive processes in lifestock._ |
+| **Fermentation**| 3.A | Enteric Fermentation | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. The emissions from food digestive processes in livestock._ |
 | **Other activities**| 3.F | Field Burning of Agricultural Residues | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. The burning of leftover crop to rapidly clear land and allow tillage practices to proceed._ |
 | |3.J | Other agriculture emissions | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. All other agricultural emissions not included in 3.A - 3.H._ |
 

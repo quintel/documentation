@@ -74,7 +74,7 @@ The stable versions have an [expiration date](../main/user_manual/model-versions
 
 #### Staging
 
-The staging environment is used to test new features before they are ready for the general public. While this means you can get access to access to cutting-edge features earlier, results from the staging server are subject to change. Scenarios made on the staging environment cannot be transfered to production, and vice-versa. Your settings and user account from the production server do not carry over to the staging server; you need to create a separate account.
+The staging environment is used to test new features before they are ready for the general public. While this means you can get access to access to cutting-edge features earlier, results from the staging server are subject to change. Scenarios made on the staging environment cannot be transferred to production, and vice-versa. Your settings and user account from the production server do not carry over to the staging server; you need to create a separate account.
 
 We have no plans to delete scenarios from the staging server, but we reserve the right to do so including owned scenarios.
 

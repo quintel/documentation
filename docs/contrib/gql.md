@@ -16,17 +16,17 @@ The math functions consists of functions that perform mathematical operations or
 
 #### COUNT(values)
 
-Returns how many values. Removes nil values, but does not remove duplicates. 
+Returns how many values. Removes nil values, but does not remove duplicates.
 
 ```ruby
-COUNT(V(foo,bar)) 
+COUNT(V(foo,bar))
 => 2
 ```
 
 *Multiple LOOKUPS (does not remove duplicates)*
 
 ```ruby
-COUNT(V(foo,bar), V(foo)) 
+COUNT(V(foo,bar), V(foo))
 => 3
 ```
 
@@ -41,10 +41,10 @@ COUNT(V(foo,bar,foo))
 Returns the *first* number as a negative.
 
 ```ruby
-NEG(2) 
+NEG(2)
 => -2
 
-NEG(1,2,3)  
+NEG(1,2,3)
 => -1
 ```
 
@@ -52,13 +52,13 @@ NEG(1,2,3)
 Returns the average of all number (ignores nil values).
 
 ```ruby
-AVG(1,2)    
+AVG(1,2)
 => 1.5
 
-AVG(1,2,3)  
+AVG(1,2,3)
 => 2
 
-AVG(1,nil,nil,2)  
+AVG(1,nil,nil,2)
 => 1.5
 ```
 
@@ -66,9 +66,9 @@ AVG(1,nil,nil,2)
 Returns the sum of all numbers (ignores nil values).
 
 ```ruby
-SUM(1,2) 
+SUM(1,2)
 => 3
-SUM(1,nil)  
+SUM(1,nil)
 => 1
 ```
 
@@ -155,10 +155,10 @@ CEIL(3.5)
 Returns the square root of the given values.
 
 ```ruby
-SQRT(4) 
+SQRT(4)
 => [2]
 
-SQRT(4,9) 
+SQRT(4,9)
 => [2,3]
 ```
 
@@ -167,10 +167,10 @@ SQRT(4,9)
 Returns true when x is smaller than y. Note: This function only looks at the first two values entered in this function.
 
 ```ruby
-LESS(1,2) 
+LESS(1,2)
 => true
 
-LESS(2,1) 
+LESS(2,1)
 => false
 
 LESS(1,2,1)
@@ -185,13 +185,13 @@ LESS(1,2,5)
 Returns true when x is smaller or equal than y. Note: This function only looks at the first two values entered in this function.
 
 ```ruby
-LESS_OR_EQUAL(1,2) 
+LESS_OR_EQUAL(1,2)
 => true
 
-LESS_OR_EQUAL(1,1) 
+LESS_OR_EQUAL(1,1)
 => true
 
-LESS_OR_EQUAL(2,1) 
+LESS_OR_EQUAL(2,1)
 => false
 
 LESS_OR_EQUAL(1,2,1)
@@ -206,10 +206,10 @@ LESS_OR_EQUAL(1,2,5)
 Returns true when x is greater than y. Note: This function only looks at the first two values entered in this function.
 
 ```ruby
-GREATER(1,2) 
+GREATER(1,2)
 => false
 
-GREATER(2,1) 
+GREATER(2,1)
 => true
 
 GREATER(2,1,1)
@@ -223,13 +223,13 @@ GREATER(2,1,5)
 Returns true when x is smaller or equal than y. Note: This function only looks at the first two values entered in this function.
 
 ```ruby
-GREATER_OR_EQUAL(1,2) 
+GREATER_OR_EQUAL(1,2)
 => false
 
-GREATER_OR_EQUAL(1,1) 
+GREATER_OR_EQUAL(1,1)
 => true
 
-GREATER_OR_EQUAL(2,1) 
+GREATER_OR_EQUAL(2,1)
 => true
 
 GREATER_OR_EQUAL(2,1,1)
@@ -243,10 +243,10 @@ GREATER_OR_EQUAL(2,1,5)
 Returns true when x is equal to y. Note: This function only looks at the first two values entered in this function.
 
 ```ruby
-EQUALS(1,1) 
+EQUALS(1,1)
 => true
 
-EQUALS(1,2) 
+EQUALS(1,2)
 => false
 
 EQUALS(1,1,5)
@@ -257,10 +257,10 @@ EQUALS(1,1,5)
 Returns true when x is not equal to y. Note: This function only looks at the first two values entered in this function.
 
 ```ruby
-NOT(1,1) 
+NOT(1,1)
 => false
 
-NOT(1,2) 
+NOT(1,2)
 => true
 
 NOT(1,1,5)
@@ -268,10 +268,10 @@ NOT(1,1,5)
 ```
 
 #### OR(values)
-Takes any number of arguments and checks if any of the arguments are true. 
+Takes any number of arguments and checks if any of the arguments are true.
 If any are true, the functions returns 'true'. If not, false is returned.
 ```ruby
-OR(true,false) 
+OR(true,false)
 => true --> true is one of the arguments.
 
 OR(false,false)
@@ -291,16 +291,16 @@ Furthermore it only looks at the first element inside the brackets.
 While not using brackets, the function will expect one element.
 
 ```ruby
-IS_NUMBER(1) 
+IS_NUMBER(1)
 => Error
 
-IS_NUMBER([3]) 
+IS_NUMBER([3])
 => true
 
-IS_NUMBER('three') 
+IS_NUMBER('three')
 => false
 
-IS_NUMBER([3,'three']) 
+IS_NUMBER([3,'three'])
 => true
 
 IS_NUMBER([3],'three')
@@ -314,7 +314,7 @@ Returns true when the given value is nil. False when the value is not nil.
 Returns the negative value of the given value. Note: Only the first value is taken into account.
 
 ```ruby
-NEG(1) 
+NEG(1)
 => -1
 
 NEG(1,2)
@@ -329,7 +329,7 @@ NEG(-1,-2)
 Converts a value to another format.
 
 ```ruby
-UNIT(0.15,percentage) 
+UNIT(0.15,percentage)
 => 15.0 (%)
 ```
 
@@ -377,7 +377,7 @@ EQUALS(2,3,3)
 If the condition is true, the true_stmt is returned, if the condition is false, the false_stmt is returned.
 
 ```ruby
-IF(EQUALS(1,1),3,4) 
+IF(EQUALS(1,1),3,4)
 => 3 --> EQUALS(1,1) returns 'true', so 3 is returned.
 
 IF(EQUALS(1,2),3,4)
@@ -417,7 +417,7 @@ Example nesting of LOOKUPs.
 
 ```ruby
 V(V(foo), V(bar), demand) --> MAP(LOOKUP(foo, LOOKUP(bar)), demand)
-=> 100, 200 
+=> 100, 200
 ```
 
 Example pass objects to V().
@@ -429,7 +429,7 @@ V(CARRIER(electricity), cost_per_mj) --> = MAP( LOOKUP(CARRIER(electricity)), co
 
 #### MV(args)
 
-Same functionalities as V, but used for the molecule graph. 
+Same functionalities as V, but used for the molecule graph.
 
 #### Q(key)
 
@@ -458,7 +458,7 @@ Outputs the nodes corresponding to the incoming edges of the given node.
 
 #### QUERY_PRESENT(key)
 
-Returns the present value of the the gquery, when given a key. If the argument is a lambda ( -> { ... }), it returns the present value of the query inside the lamba.
+Returns the present value of the the gquery, when given a key. If the argument is a lambda ( -> { ... }), it returns the present value of the query inside the lambda.
 
 ```ruby
 GRAPH(year)
@@ -472,23 +472,23 @@ Q(graph_year)
 2050      2,050
 
 
-QUERY_PRESENT(graph_year)  
+QUERY_PRESENT(graph_year)
 =>
 2,019
 
-QUERY_PRESENT( -> { GRAPH(year) } )   
-=> 
+QUERY_PRESENT( -> { GRAPH(year) } )
+=>
 2,019
 
-QUERY_PRESENT(GRAPH(year))   
-=> 
+QUERY_PRESENT(GRAPH(year))
+=>
 error
 
 ```
 
 #### QUERY_FUTURE(key)
 
-Returns the present value of the the gquery, when given a key. If the argument is a lambda ( -> { ... }), it returns the present value of the query inside the lamba. 
+Returns the present value of the the gquery, when given a key. If the argument is a lambda ( -> { ... }), it returns the present value of the query inside the lambda.
 
 ```ruby
 GRAPH(year)
@@ -502,16 +502,16 @@ Q(graph_year)
 2050      2,050
 
 
-QUERY_FUTURE(graph_year)  
+QUERY_FUTURE(graph_year)
 =>
 2,050
 
-QUERY_FUTURE( -> { GRAPH(year) } )   
-=> 
+QUERY_FUTURE( -> { GRAPH(year) } )
+=>
 2,050
 
-QUERY_FUTURE(GRAPH(year))   
-=> 
+QUERY_FUTURE(GRAPH(year))
+=>
 error
 ```
 
@@ -520,13 +520,13 @@ error
 Returns the delta of the present value and future value of the query. Note: an operation within this query should be noted inside ( -> { ... }).
 
 ```ruby
-QUERY_DELTA(graph_year)  
-=> 
+QUERY_DELTA(graph_year)
+=>
 2019: 0.0
 2050 : 31
 
-QUERY_DELTA( -> { GRAPH(year) } )   
-=> 
+QUERY_DELTA( -> { GRAPH(year) } )
+=>
 2019: 0.0
 2050 : 31
 
@@ -540,7 +540,7 @@ error
 Returns an attribute.
 
 ```ruby
-AREA(present_number_of_residences) 
+AREA(present_number_of_residences)
 => 7349500.0
 ```
 
@@ -705,7 +705,7 @@ CLAMP_CURVE([1,-2,3,-4],0,2)
 
 #### COALESCE_CURVE(curve, default = 0.0, length = 8760)
 
-If the given `curve` is an array of non-zero length, it is returned. If the curve is nil or empty, a new curve with the lentgh of the value that is given to `length` is created, each value in the curve is set to the value that is given to `default`.
+If the given `curve` is an array of non-zero length, it is returned. If the curve is nil or empty, a new curve with the length of the value that is given to `length` is created, each value in the curve is set to the value that is given to `default`.
 
 ```ruby
 COALESCE_CURVE(nil,3,5)
@@ -781,7 +781,7 @@ SMOOTH_CURVE([3,2,4,3],1)
 ```
 ```ruby
 SMOOTH_CURVE([3,2,4,3],2)
-=> [3,2.5,3,3.5] --> Returns a differenct curve since the window_size is bigger.
+=> [3,2.5,3,3.5] --> Returns a different curve since the window_size is bigger.
 ```
 
 
@@ -795,7 +795,7 @@ With SORT_BY nodes can be sorted on one of their attributes. The nodes will be s
 
 ```ruby
 SORT_BY(G(useful_demand),demand)
-=> 
+=>
 [
   #<Node industry_useful_demand_for_chemical_other_hydrogen_non_energetic> 0,
   #<Node bunkers_useful_demand_ships> 1,
@@ -804,27 +804,27 @@ SORT_BY(G(useful_demand),demand)
 ```
 
 
-#### TXT_TABLE(objects, *argyments)
+#### TXT_TABLE(objects, *arguments)
 
 With TXT_TABLE 1 or more attributes from a node group can be queried. The nodes in the given node group will be sorted alphabetically.
 
 Within the GQL-sandbox users can choose how the view the table in 4 different modes:
 * Table: Shows the table in standard GQL-sandbox format.
 * Text: Shows the table in text-format.
-* CSV: Shows the table in CSV (comma seperated values) format.
-* TSV: Shows the table in TSV (tab seperated values) format.
+* CSV: Shows the table in CSV (comma separated values) format.
+* TSV: Shows the table in TSV (tab separated values) format.
 
 Note: With 'key' the name of the node is printed.
 
-Example (output in text format, for readibility only the first 2 and last 2 rows of the table are shown):
+Example (output in text format, for readability only the first 2 and last 2 rows of the table are shown):
 ```ruby
 TXT_TABLE(G(useful_demand),key,demand)
-=> 
+=>
 +------------------------------------------------------------------------------+--------------------+
 |                                     key                                      |       demand       |
 +------------------------------------------------------------------------------+--------------------+
 | agriculture_useful_demand_electricity                                        | 40964534066.695656 |
-| agriculture_useful_demand_useable_heat                                       | 98697676910.08954  
+| agriculture_useful_demand_useable_heat                                       | 98697676910.08954
 |...                                                                           | ...                |
 | transport_useful_demand_trucks                                               | 144749566437.32986 |
 | transport_useful_demand_vans                                                 | 1280922944.4741797 |
@@ -833,10 +833,10 @@ TXT_TABLE(G(useful_demand),key,demand)
 
 This function can be combined with SORT_BY, so that a quick overview of the nodes with the highest attributes can be found.
 
-Example with SORT_BY (output in text format, for readibility only the first 2 and last 2 rows of the table are shown):
+Example with SORT_BY (output in text format, for readability only the first 2 and last 2 rows of the table are shown):
 ```ruby
 TXT_TABLE(SORT_BY(G(useful_demand),demand),key,demand)
-=> 
+=>
 +------------------------------------------------------------------------------+--------------------+
 |                                     key                                      |       demand       |
 +------------------------------------------------------------------------------+--------------------+
@@ -985,7 +985,7 @@ Imposes a filter. Can be used to impose a filter on node groups based on node at
 
 ```ruby
 FILTER(G(electricity_production),"geothermal_input_conversion > 0.0")
-=> 
+=>
 [
   <#Node energy_power_geothermal>,
 ]
@@ -1002,7 +1002,7 @@ Outputs the yearly summed demand curve of all consumers in the specified Fever g
 
 ```ruby
 FEVER_DEMAND(buildings_space_heating)
-=> 
+=>
 [
   3,863.9766278835864,
   3,439.1984233894727,
@@ -1017,7 +1017,7 @@ Outputs the yearly summed supply curve of all consumers in the specified Fever g
 
 ```ruby
 FEVER_PRODUCTION(buildings_space_heating)
-=> 
+=>
 [
   3,863.9766278835864,
   3,439.1984233894727,
@@ -1035,7 +1035,7 @@ FEVER_PRODUCTION_CURVE_FOR_COUPLE(
   V(households_space_heater_combined_network_gas),
   V(households_useful_demand_for_space_heating_terraced_houses_1965_1984)
 )
-=> 
+=>
 [
   941.3148533148487,
   ...,
@@ -1052,7 +1052,7 @@ FEVER_DEMAND_CURVE_FOR_COUPLE(
   V(households_space_heater_combined_network_gas),
   V(households_useful_demand_for_space_heating_terraced_houses_1965_1984)
 )
-=> 
+=>
 [
   941.3148533148487,
   ...,
@@ -1066,7 +1066,7 @@ A yearly curve describing the production for a specific consumer or of a produce
 
 ```ruby
 FEVER_PRODUCTION_CURVE(V(households_useful_demand_for_space_heating_semi_detached_houses_1985_2004))
-=> 
+=>
 [
   380.84562570105106,
   ...,
@@ -1080,7 +1080,7 @@ A yearly curve describing the demand of a specific consumer or from producer wit
 
 ```ruby
 FEVER_DEMAND_CURVE(V(households_useful_demand_for_space_heating_semi_detached_houses_1985_2004))
-=> 
+=>
 [
   380.84562570105106,
   ...,
