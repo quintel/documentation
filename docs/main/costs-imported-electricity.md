@@ -23,6 +23,10 @@ Your file should be formatted as a CSV file with 8,760 numeric values – repres
 etc
 ```
 
-Before uploading, please ensure the file has a ".csv" file extension then visit the Flexibility > Import/Export > ['Interconnector 1'](https://pro.energytransitionmodel.com/scenario/flexibility/electricity_import_export/interconnector-1) page and click "Upload a custom curve". The price in each hour will be rounded to the nearest whole cent.
+Before uploading, please ensure the file has a ".csv" file extension then visit the page [Interconnector 1](https://pro.energytransitionmodel.com/scenario/flexibility/electricity_import_export/interconnector-1), and click "Upload a custom curve". The price in each hour will be rounded to the nearest whole cent.
 
-_Source:[European Commission, 2016: Quarterly Report on European Electricity Markets](https://ec.europa.eu/energy/sites/ener/files/documents/quarterly_report_on_european_electricity_markets_q4_2015-q1_2016.pdf); ([cached](https://refman.energytransitionmodel.com/publications/2079))_
+_Source: [European Commission, 2016: Quarterly Report on European Electricity Markets](https://ec.europa.eu/energy/sites/ener/files/documents/quarterly_report_on_european_electricity_markets_q4_2015-q1_2016.pdf); ([cached](https://refman.energytransitionmodel.com/publications/2079))_
+
+:::caution Must-run interconnectors
+Please note that it is possible to override the flexible behaviour of interconnectors by coupling to an external model. The interconnector is then treated as a must-run producer and baseload consumer and the interconnector price is set to 0.0 €/MWh. For more information see [Coupling external models](main/external-coupling).
+:::
