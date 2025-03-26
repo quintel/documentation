@@ -2,9 +2,7 @@
 title: Curves
 ---
 
-The ETM uses hourly curves to model (electricity, hydrogen and gas) demand and supply.
-
-The hourly demand/supply is determined using the annual demand/supply and a set curve. It is also possible to use your own curves in the ETM by inserting them in Flexibility > [Modify profiles](https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves). This page gives an overview of the type of curves and explains how to modify these curves by inserting your own.
+The ETM uses hourly curves to model (electricity, hydrogen and gas) demand and supply. The hourly demand and supply is determined using the annual demand and supply and a given curve. It is also possible to use your own curves in the ETM by inserting them in [Modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves). This page gives an overview of the type of curves and explains how to modify these curves by inserting your own.
 
 ![Hourly hydrogen demand chart](/img/docs/20181002_hydrogen_demand.png)
 
@@ -48,7 +46,7 @@ The ETM had three types of curves: demand curves, supply curves and time curves.
 ### Time curves
 Time curves define how the national production of energy carriers changes over the years (up to 2040)
 
-They are documented in on ETDataset in the source analyses of the specific datasets. [Example for The Netherlands - 2015](https://github.com/quintel/etdataset/blob/master/source_analyses/nl/2015/3_primary_production/3_primary_produciton_source_analysis.md)
+They are documented in on ETDataset in the source analyses of the specific datasets. [Example for the Netherlands - 2015](https://github.com/quintel/etdataset/blob/master/source_analyses/nl/2015/3_primary_production/3_primary_produciton_source_analysis.md)
 
 For the Netherlands the time curves are based on:
 
@@ -61,7 +59,7 @@ For all other countries the time curves are based on the Primes reference scenar
 _Checkout: the [ETDataset - curves](https://github.com/quintel/etdataset-public/tree/master/curves) as it contains all raw data, scripts and further explanations._
 
 ## Modifying Profiles
-The ETM calculates the hourly production and demand of gas, electricity, heat and hydrogen. These curves can be modified by uploading your own curves in the ['Modify profiles'](https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section.
+The ETM calculates the hourly production and demand of gas, electricity, heat and hydrogen. These curves can be modified by uploading your own curves in the [Modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section.
 
 ### Types of profiles
 You can upload three types of profiles:
@@ -109,12 +107,12 @@ The table below provides some additional information on selected categories.
 |**Demand: Buildings**|Includes all gas, hydrogen, district heating and electricity use for heating.|
 |**Demand: Industry heat**|Includes all gas, hydrogen and electricity use for heating|
 |**Demand: Industry electricity**|Includes electricity demand, except electricity used for heating (boilers, heat pumps etc.)|
-|**Demand: Electric cars**|You can upload 5 different profiles for electric cars. The ETM uses a mix of these profiles depending on your choices in the [Demand response - electric vehicles](https://pro.energytransitionmodel.com/scenario/flexibility/flexibilitynetload/demand-response-electric-vehicles) section.|
+|**Demand: Electric cars**|You can upload 5 different profiles for electric cars. The ETM uses a mix of these profiles depending on your choices in the [Demand response - electric vehicles](https://energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-electric-vehicles) section.|
 |**Import/Export: Gases**| The ETM uses 'demand' type profiles for both import and export (see above). This means that the units used in your custom profile do not matter. The ETM will extract the _shape_ of your profile and apply that to the annual import/export volume.|
 |**Import/Export: Interconnectors**|See [imported electricity](costs-imported-electricity.md#uploaded-price-curves)|
 
 
 ### Results
-The chart on the right shows the profiles of all categories that can be modified. If you upload a custom profile, this is reflected in the chart. Note that if a technology is not present in your scenario, the chart series will be empty. By default, the chart shows the daily peak capacity of the profile for the whole year. Select a month or week in the dropdown menu to see the hourly values. You can download the hourly demand and supply curves in your scenario in the [Results → Data](https://pro.energytransitionmodel.com/scenario/data/data_export/energy-flows) export section.
+The chart on the right shows the profiles of all categories that can be modified. If you upload a custom profile, this is reflected in the chart. Note that if a technology is not present in your scenario, the chart series will be empty. By default, the chart shows the daily peak capacity of the profile for the whole year. Select a month or week in the dropdown menu to see the hourly values. You can download the hourly demand and supply curves in your scenario in the [Data export](https://energytransitionmodel.com/scenario/data/data_export/overview) section.
 
 ![Modify profiles chart](/img/docs/modify_profiles.png)
