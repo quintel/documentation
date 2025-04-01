@@ -28,7 +28,7 @@ Slider descriptions should explicitly not contain the following:
    
 2. **Background (50 - 100 words):** 
 
-   Provide information on why this is slider / technology is relevant and how it relates to other sliders (if necessary). Include links to documentation if relevant.
+   Provide information on why this slider / technology is relevant and how it relates to other sliders (if necessary). Include links to documentation if relevant.
     
    *Example*: ATR is a method for the production of hydrogen and variation of a steam methane reforming. With ATR it is easier to apply carbon capture and storage compared to SMR but this does result in a lower efficiency. 
 
@@ -40,10 +40,10 @@ Slider descriptions should explicitly not contain the following:
    *Example*: 
    Please note that ….
 
-   * Go to [Capture of CO2] to install CO capture or the production of pure hydrogen production.
-   * Go to [Costs & Efficiencies] for changing costs and efficiency. 
+   * Go to [Capture of CO2](https://energytransitionmodel.com/scenario/emissions/ccus/capture-of-co2-in-energy-sector) to install CO<sub>2</sub> capture or the production of pure hydrogen production.
+   * Go to [Costs & Efficiencies](https://energytransitionmodel.com/scenario/costs/costs_hydrogen/hydrogen-production) for changing costs and efficiency. 
    
-   Check out the [Documentation] for more information.
+   Check out the [documentation](../main/hydrogen.md) for more information.
 
 ## References style
 
