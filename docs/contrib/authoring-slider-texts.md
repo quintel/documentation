@@ -23,32 +23,27 @@ Slider descriptions should explicitly not contain the following:
 1. **Purpose (max 20 words)**
 
    Clearly state the slider's purpose in a brief sentence.
- 
-2. **How to set the slider at an appropriate value?**:
 
-   When relevant, include any necessary warnings or additional information users should be aware of regarding the slider's effects or workings.
+   *Example*: This slider adjusts the total installed capacity of Autothermal Reformers (ATR).
    
-3. **Background** (Average 50-100 words):
+2. **Background (50 - 100 words):** 
 
-   When relevant, provide concise background information about the associated technology or technique. Include a definition, usage, and, if relevant, advantages and disadvantages.
- 
-
-4. **Connections to other elements** (Average 1 sentence or bullet list):
-
-   When relevant, clearly explain any connections to other sliders, charts or other elements within the model. Use links when available. Refer to the documentation if any supplementary documentation is available.
+   Provide information on why this is slider / technology is relevant and how it relates to other sliders (if necessary). Include links to documentation if relevant.
+    
+   *Example*: ATR is a method for the production of hydrogen and variation of a steam methane reforming. With ATR it is easier to apply carbon capture and storage compared to SMR but this does result in a lower efficiency. 
 
  
- ***Example***: 
+3. **Connections to other sliders (1 sentence and/or bullet list):**
 
-This slider adjusts the total installed capacity of autothermal reformers (ATR). 
+   Clearly explain any connections to other sliders within the model, providing links or references. 
+    
+   *Example*: 
+   Please note that ….
 
-Note: ATR emits CO directly into the air, this means carbon capture and storage(CCS) will need to be used in combination with this method for carbon neutrality. 
-
-ATR is a method for syngas/biofuel production, combining partial oxidation and steam methane reforming. It allows flexible hydrogen-to-carbon monoxide ratios for varied biofuel production. For more information, checkout the documentation [Documentation Link]. 
-
-Go to Emissions > CCUS > Capture of CO2 to install CO capture or the production of pure hydrogen production.
-
-Go to Costs & Efficiencies > Hydrogen > Hydrogen production for changing costs and efficiency.
+   * Go to [Capture of CO2] to install CO capture or the production of pure hydrogen production.
+   * Go to [Costs & Efficiencies] for changing costs and efficiency. 
+   
+   Check out the [Documentation] for more information.
 
 ## References style
 
