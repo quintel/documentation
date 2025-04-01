@@ -2,36 +2,34 @@
 title: Writing slider descriptions
 ---
 
-**Goal slider information:** inform and direct to extra information.
+Sliders are the visual representation of [Inputs](inputs.md) in the ETM. Modellers can add a description to sliders. This description becomes visible when users select the information button presented as a question mark next to each slider. For clarity, it is important that all slider descriptions follow the same structure.
 
-A good slider text has the following aspects:
-1. Informs the use about the sliders functionality
-2. Shortly explains which exact type of technique was modelled (use full name to explain abbreviation if necessary, especialy if we use it in a slidername)
-3. Which other sliders effect the properties of this technology (links to sliders)
-4. Where the use might find more detailed information (links to documentation or ref-manager, nothing else).
+## Getting started
+A good slider description contains the following aspects:
+1. Informs users about the slider functionality
+2. Shortly explains what type of technique is modelled with the slider (use full name to explain abbreviation if necessary, especialy if we use the abbreviation in a slidername)
+3. Indicates which other sliders affect the properties of this technology (including links to sliders)
+4. Indicates where users might find more detailed information (links to documentation or ref-manager)
 
-*Out of scope*: 
-1. Explain how to set the slider -> use documentation for longer explanations (if relevant / if unclear)
-2. Region specific information (only relevant for NL / municipalitiets etc.)
-3. Links to non-ETM websites
-4. Scenario-specific information
+Slider descriptions should explicitly not contain the follwoing: 
+* Long explanation on how to set the slider, this should be covered in the documentation
+* Technical and financial properties
+* Region specific information
+* Links to non-ETM websites
+* Scenario-specific information
 
 ## Form
-* *Language*: English / Dutch (ABN) with a preference for British English.
 
-* *User Type*: Adult energy 'experts' or those aspiring to attain expertise in the subject matter. Focus on users already familiar with the topic. Avoid long explanations of the technique or trends, rather focus on what is meant by this technique (short definition) and how this technique is modelled (if relevant).
+* **Language**: English / Dutch with a preference for British English.
+* **User Type**: Adult energy 'experts' or those aspiring to attain expertise in the subject matter. Focus on users already familiar with the topic. Avoid long explanations of the technique or trends, rather focus on what is meant by this technique (short definition) and how this technique is modelled (if relevant).
+* **Tone**: Formal yet constructive and activating. Use active and concise sentences. Prioritize readability, avoiding unnecessary technical jargon, and aim to nudge users toward understanding and utilising the ETM effectively.
+* **Style**: Visual emphasis, utilise elements like arrows for brevity. Consistency in style to enable users to quickly scan and locate specific information.
 
-* *Tone*: Formal yet constructive and activating. Use active and concise sentences. Prioritize readability, avoiding unnecessary technical jargon, and aim to nudge users toward understanding and utilizing the ETM effectively.
-
-* *Style*: Visual emphasis, utilize elements like arrows for brevity. Consistency in style to enable users to quickly scan and locate specific information.
-
-No go's:
-* Saying “we” (ETM is an “it:”)
+To be avoided:
+* Saying “we” (ETM is an “it”)
 * Questions (“What do you think will happen…?”)
 * Avoid adressing the user with “you” 
-* Avoid abbreviations
-    * Etc.
-    * ... etc.
+* Avoid abbreviations ("etc.")
 
 ## Recommended slider text structure
  
@@ -43,7 +41,7 @@ No go's:
    
 2. **Background (50 - 100 words):** 
 
-   Provide information on why this is slider / technology is relevant and how it relates to other sliders (if necessary). Include links to documentation if relevant.
+   Provide information on why this slider / technology is relevant and how it relates to other sliders (if necessary). Include links to documentation if relevant.
     
    *Example*: ATR is a method for the production of hydrogen and variation of a steam methane reforming. With ATR it is easier to apply carbon capture and storage compared to SMR but this does result in a lower efficiency. 
 
@@ -55,10 +53,10 @@ No go's:
    *Example*: 
    Please note that ….
 
-   * Go to [Capture of CO2] to install CO capture or the production of pure hydrogen production.
-   * Go to [Costs & Efficiencies] for changing costs and efficiency. 
+   * Go to [Capture of CO2](https://energytransitionmodel.com/scenario/emissions/ccus/capture-of-co2-in-energy-sector) to install CO<sub>2</sub> capture or the production of pure hydrogen production.
+   * Go to [Costs & Efficiencies](https://energytransitionmodel.com/scenario/costs/costs_hydrogen/hydrogen-production) for changing costs and efficiency. 
    
-   Check out the [Documentation] for more information.
+   Check out the [documentation](../main/hydrogen.md) for more information.
 
 ## References style
 
@@ -89,7 +87,3 @@ description: |
 description: |
     Zie <a href="#" class="open_chart" data-chart-key="hourly_flexibility_electricity" data-chart-location="side">deze</a> grafiek voor meer informatie.
 ```
-
-### Technical and financial properties
-
-It is recommended not to refer to the technical and financial properties in the slider description. These should be visible enough by themselves.
