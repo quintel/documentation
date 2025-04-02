@@ -2,7 +2,7 @@
 title: Writing slider descriptions
 ---
 
-Sliders are the visual representation of [Inputs](inputs.md) in the ETM. Modellers can add a description to sliders. This description becomes visible when users select the information button presented as a question mark next to each slider. For clarity, it is important that all slider descriptions follow the same structure and writing style. The [guidelines for writing texts](./authoring-text-guidelines.md) should be followed when writing slider descriptions.
+Sliders are the visual representation of [Inputs](inputs.md) in the ETM. Modellers can add a description to sliders. This description becomes visible when users select the information button presented as a question mark next to each slider. For clarity, it is important that all slider descriptions follow the same structure and writing style. The [guidelines for writing texts](./authoring-texts.md) should be followed when writing slider descriptions.
 
 ## Guidelines
 ## Guidelines
