@@ -203,6 +203,7 @@ module.exports = {
       label: "Adding new features",
       collapsed: true,
       items: [
+        "contrib/authoring-text-guidelines",
         "contrib/authoring-docs",
         "contrib/authoring-slider-texts",
         "contrib/authoring-gqueries",
