@@ -185,7 +185,7 @@ module.exports = {
     {
       type: "category",
       label: "Dataset initialization",
-      collapsed: false,
+      collapsed: true,
       items: [
         "contrib/fever-heat-initialization"
       ],
