@@ -2,7 +2,7 @@
 title: Writing documentation
 ---
 
-When adding new features to the ETM, documenation should be written so that users understand how to use the new feature, and fellow modellers and developers understand how it works as well. Note that the [guidelines for writing texts](./authoring-texts.md) should be followed when writing documentation.
+When adding new features to the ETM, documentation should be written so that users understand how to use the new feature, and fellow modellers and developers understand how it works as well. Note that the [guidelines for writing texts](./authoring-texts.md) should be followed when writing documentation.
 
 ## Getting started
 
