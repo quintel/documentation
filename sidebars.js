@@ -185,7 +185,7 @@ module.exports = {
     {
       type: "category",
       label: "Dataset initialization",
-      collapsed: false,
+      collapsed: true,
       items: [
         "contrib/fever-heat-initialization"
       ],
@@ -203,7 +203,9 @@ module.exports = {
       label: "Adding new features",
       collapsed: true,
       items: [
+        "contrib/authoring-texts",
         "contrib/authoring-docs",
+        "contrib/authoring-slider-texts",
         "contrib/authoring-gqueries",
         "contrib/authoring-tests"
       ]

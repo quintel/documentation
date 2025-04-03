@@ -2,7 +2,7 @@
 title: Writing documentation
 ---
 
-Once your new ETM feature is ready, it's important to write documentation so that visitors understand how to use it, and fellow modelers and developers can see how it works.
+When adding new features to the ETM, documentation should be written so that users understand how to use the new feature, and fellow modellers and developers understand how it works as well. Note that the [guidelines for writing texts](./authoring-texts.md) should be followed when writing documentation.
 
 ## Getting started
 
