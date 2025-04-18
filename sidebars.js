@@ -162,7 +162,8 @@ module.exports = {
         "contrib/inputs",
         "contrib/molecules",
         "contrib/waste-outputs",
-        "contrib/gql"
+        "contrib/gql",
+        "contrib/recursive-methods"
       ],
     },
     {
