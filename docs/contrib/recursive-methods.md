@@ -8,8 +8,8 @@ Recursive methods traverse a graph from a node/edge backwards through its parent
 ### With and without losses
 Nodes in the graph can have efficiencies attritubed to them, to model conversion or transport losses. Recursive methods can either account for these losses or ignore them, depending on the context.
 
-- **With losses:** efficiency losses are included at each node, adjusting the propagated value according to these inefficiencies. This is suitable for methods like primary demand, where more primary demand is needed to supply a given final demand node, due to efficiency losses encountered during recursion.
-- **Without losses:** efficiency losses are ignored at each node, allowing direct propagation of the value through the graph. This is suitable for methods like weighted costs, where the costs per MJ is retrieved through recursion.
+- **With losses:** efficiency losses are included at each node, adjusting the propagated value according to these inefficiencies.
+- **Without losses:** efficiency losses are ignored at each node, allowing direct propagation of the value through the graph.
 
 ### General stop conditions
 Recursive methods need to know when to stop recursing. There are specific stop conditions depending on the recursive module, but in general the conditions fall into these categories:
@@ -79,11 +79,12 @@ Gas Distribution Network (Weighted Carrier Cost per MJ = (10 EUR * 0.5 + 0 EUR *
 - **Stop conditions:** ...
 - **Type:** with losses.
 
-```
-Torrefied Biomass Pellets (Sustainability Share = 0.64 = 0.60 * 1 + 0.2 * 0.40)
-│
-└── Input Mix:
-    ├── Wood (60%, sustainable share = 1.0)
-    └── Network Gas (40%, sustainable share = 0.2)
+<div style={{ textAlign: "center" }}>
+  <img
+    src="/img/docs/contrib/recursive-methods-sustainable.png"
+  />
+</div>
 
+```
+V(energy_torrefaction_wood, sustainability_share) = 0.90
 ```
