@@ -1,19 +1,17 @@
 ---
-title: Recursive Methods
+title: Recursive methods
 ---
 
-## What are Recursive Methods?
-Recursive methods traverse a calculated graph from one node backward through its parents to determine aggregated properties like primary demand, emissions, or costs. Sometimes it is necessary to traverse recursively when each node's calculation depends on the result of the same calculation performed on its parent nodes.
+## What are recursive methods?
+Recursive methods traverse a graph from a node/edge backwards through its parents to allocate 'upstream' properties like primary demand, emissions, or costs, to the node/edge.
 
-to determine inherited attributes determined by other inherited attributes.
+### With and without losses
+Nodes in the graph can have efficiencies attritubed to them, to model conversion or transport losses. Recursive methods can either account for these losses or ignore them, depending on the context.
 
-### With and Without Losses
-Nodes in energy systems often have inefficiencies, leading to energy losses during conversion or transmission. Recursive calculations can either account for these losses or ignore them, depending on the context.
+- **With losses:** efficiency losses are included at each node, adjusting the propagated value according to these inefficiencies. This is suitable for methods like primary demand, where more primary demand is needed to supply a given final demand node, due to efficiency losses encountered during recursion.
+- **Without losses:** efficiency losses are ignored at each node, allowing direct propagation of the value through the graph. This is suitable for methods like weighted costs, where the costs per MJ is retrieved through recursion.
 
-- **With losses:** The calculation includes efficiency or loss factors at each node/edge, adjusting the propagated value according to these inefficiencies.
-- **Without losses:** Efficiency losses are ignored, allowing direct propagation of the value through the graph. This is suitable for attributes like emission factors or shares, which should not be affected by conversion losses.
-
-### General Stop Conditions
+### General stop conditions
 Recursive methods need to know when to stop recursing. There are specific stop conditions depending on the recursive module, but in general the conditions fall into these categories:
 - Reaching a node marked as a primary source (e.g., primary energy node).
 - Encountering a node without parents (dead-end).
@@ -22,7 +20,9 @@ Recursive methods need to know when to stop recursing. There are specific stop c
 ## Modules
 
 ### PrimaryDemand and BioDemand
-- **Goal:** Calculate the primary energy demand required to fulfill a node’s consumption, either from all sources (PrimaryDemand) or specifically from bio-based resources (BioDemand).
+- **Goal:** calculate the primary energy demand required to fulfill a node’s consumption, either from all sources (PrimaryDemand) or specifically from bio-based resources (BioDemand).
+- **Stop conditions:** in general, the methods will stop respectively at the node group `primary_energy_demand` and the node group `bio_resources_demand`.
+- **Type:** with losses.
 
 ```
 Industry Electricity Demand (100 MJ total)
@@ -39,7 +39,9 @@ Total Primary Demand:
 ```
 
 ### PrimaryCO2 and BioEmissions
-- **Goal:** Compute total primary CO₂ emissions originating from fossil and bio-based sources, explicitly including potential capture of bio-based CO₂.
+- **Goal:** compute total primary CO₂ emissions originating from fossil and bio-based sources, explicitly including potential capture of bio-based CO₂.
+- **Stop conditions:** ...
+- **Type:** with losses.
 
 ```
 Industry CO₂ Emissions (total emissions calculated recursively)
@@ -59,7 +61,10 @@ Total Emissions:
 ```
 
 ### WeightedCarrier
-- **Goal:** Calculate the weighted average cost and emissions or potential biogenic CO₂ capture  per MJ based on the proportions of different input carriers to a node.
+- **Goal:** calculate the weighted average cost and emissions or potential biogenic CO₂ capture  per MJ based on the proportions of different input carriers to a node.
+- **Stop conditions:** ...
+- **Type:** without losses.
+
 ```
 Gas Distribution Network (Weighted Carrier Cost per MJ = (10 EUR * 0.5 + 0 EUR * 0.5) = 5 EUR/MJ)
 │
@@ -70,7 +75,10 @@ Gas Distribution Network (Weighted Carrier Cost per MJ = (10 EUR * 0.5 + 0 EUR *
 ```
 
 ### Sustainable
-- **Goal:** Recursively calculate the sustainability share of energy input to a node by aggregating upstream sustainability.
+- **Goal:** recursively calculate the sustainability share of energy input to a node by aggregating upstream sustainability.
+- **Stop conditions:** ...
+- **Type:** with losses.
+
 ```
 Torrefied Biomass Pellets (Sustainability Share = 0.64 = 0.60 * 1 + 0.2 * 0.40)
 │
