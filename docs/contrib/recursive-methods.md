@@ -21,7 +21,7 @@ Recursive methods need to know when to stop recursing. There are specific stop c
 
 ### PrimaryDemand and BioDemand
 - **Goal:** calculate the primary energy demand required to fulfill a node’s consumption, either from all sources (PrimaryDemand) or specifically from bio-based resources (BioDemand).
-- **Stop conditions:** stops at a dead end, or when reaching a node in the primary_energy_demand (for primary) or bio_resources_demand (for bio) group, depending on the method.
+- **Stop conditions:** stops at a dead end, or when reaching a node in the `primary_energy_demand` (for primary) or `bio_resources_demand` (for bio) group, depending on the method.
 - **Type:** with losses.
 
 <div style={{ textAlign: "center" }}>
@@ -41,8 +41,8 @@ V(agriculture_final_demand_network_gas, demand_of_bio_resources_including_abroad
 
 
 ### PrimaryCO2 and BioEmissions
-- **Goal:** compute total primary CO₂ emissions originating from fossil and bio-based sources, explicitly including potential capture of bio-based CO₂.
-- **Stop conditions:** stops at a dead end, or when a node belongs to the primary_energy_demand group (for fossil) or bio_resources_demand group (for bio), or when a node has relevant CO₂ emission or capture values defined.
+- **Goal:** compute total primary CO₂ emissions originating from fossil or bio-based sources, taking into account capture of fossil or bio-based emissions.
+- **Stop conditions:** stops at a dead end, or when a node belongs to the `primary_energy_demand` group (for fossil) or `bio_resources_demand` group (for bio).
 - **Type:** with losses.
 
 <div style={{ textAlign: "center" }}>
@@ -62,7 +62,7 @@ V(agriculture_final_demand_electricity, primary_co2_emission_of_bio_carriers) = 
 
 ### WeightedCarrier
 - **Goal:** calculate the weighted average cost and emissions or potential biogenic CO₂ capture per MJ based on the proportions of different input carriers to a node.
-- **Stop conditions:** stops at a dead end, or a node/edge where cost_per_mj, co2_conversion_per_mj, or potential_co2_conversion_per_mj is defined (depending on the method called).
+- **Stop conditions:** stops at a dead end, or a node/edge where `cost_per_mj`, `co2_conversion_per_mj`, or `potential_co2_conversion_per_mj` is defined (depending on the method called).
 - **Type:** without losses.
 
 <div style={{ textAlign: "center" }}>
@@ -82,7 +82,7 @@ V(energy_power_combined_cycle_network_gas, weighted_carrier_potential_co2_per_mj
 
 ### Sustainable
 - **Goal:** recursively calculate the sustainability share of energy input to a node by aggregating upstream sustainability.
-- **Stop conditions:** stops at nodes with a manually set sustainability_share attribute, or carriers marked as sustainable or dead ends / primary_energy_demand nodes.
+- **Stop conditions:** stops at nodes with a manually set `sustainability_share` attribute, or carriers marked as sustainable or dead ends / primary_energy_demand nodes.
 - **Type:** with losses.
 
 <div style={{ textAlign: "center" }}>
