@@ -24,32 +24,19 @@ Recursive methods need to know when to stop recursing. There are specific stop c
 - **Stop conditions:** stops at a dead end, or when reaching a node in the primary_energy_demand (for primary) or bio_resources_demand (for bio) group, depending on the method.
 - **Type:** with losses.
 
-```
-Industry Electricity Demand (100 MJ total)
-│
-└── Electricity Generation Mix
-    ├── Biomass Plant (60%, efficiency = 50%) → Requires 120 MJ Biomass (60 MJ / 0.5 efficiency)
-    │   └── Biomass Supply Node
-    └── Solar Plant (40%, efficiency = 100%) → Requires 40 MJ Solar Energy
-        └── Solar Supply Node
+<div style={{ textAlign: "center" }}>
+  <img
+    src="/img/docs/contrib/recursive-methods/recursive-methods-demand.png"
+  />
+</div>
 
-Total Primary Demand:
-- Biomass: 120 MJ (with efficiency losses)
-- Solar: 40 MJ (no losses)
+#### Example:
 ```
+V(agriculture_final_demand_network_gas, primary_demand) = 100.0 [MJ]
 
-#### Example queries:
-##### Total domestic primary demand (all carriers)
-```
-V(households_space_heater_network_gas, primary_demand) = 8 billion
-```
-##### Primary demand of a specific carrier (e.g. “gas”)
-```
-V(households_space_heater_network_gas, primary_demand_of(:natural_gas)) = 7.9 billion
-```
-##### Bio resource demand including abroad (all bio)
-```
-V(agriculture_chp_wood_pellets, demand_of_bio_resources_including_abroad) = 450 thousand
+V(agriculture_final_demand_network_gas, primary_demand_of(:natural_gas)) = 50.0 [MJ]
+
+V(agriculture_final_demand_network_gas, demand_of_bio_resources_including_abroad) = 50.0 [MJ]
 ```
 
 
@@ -58,66 +45,39 @@ V(agriculture_chp_wood_pellets, demand_of_bio_resources_including_abroad) = 450 
 - **Stop conditions:** stops at a dead end, or when a node belongs to the primary_energy_demand group (for fossil) or bio_resources_demand group (for bio), or when a node has relevant CO₂ emission or capture values defined.
 - **Type:** with losses.
 
-```
-Industry CO₂ Emissions (total emissions calculated recursively)
-│
-└── Energy Source Mix
-    ├── Fossil Fuel (70%, emissions factor = 50 kg CO₂/MJ) → 70 MJ * 50 kg CO₂/MJ = 3500 kg CO₂
-    │   └── Fossil Fuel Supply (direct emissions)
-    └── Bio-based Fuel (30%, emissions factor = 30 kg CO₂/MJ, 60% captured upstream)
-        │
-        └── Bio Fuel Supply → (30 MJ * 30 kg CO₂/MJ) = 900 kg CO₂ emitted
-                              (60% captured = 540 kg captured)
-                              Net bio emissions = 360 kg CO₂
+<div style={{ textAlign: "center" }}>
+  <img
+    src="/img/docs/contrib/recursive-methods/recursive-methods-emissions.png"
+  />
+</div>
 
-Total Emissions:
-- Fossil: 3500 kg CO₂ (no capture)
-- Bio: 360 kg CO₂ (after upstream capture)
+#### Example:
 ```
+V(agriculture_final_demand_electricity, primary_co2_emission) = 5.0 [kg CO₂]
 
-#### Example queries:
-##### Net fossil emissions minus captured bio emissions
-```
-V(agriculture_burner_crude_oil, primary_co2_emission) = 22 million
-```
-##### Total fossil CO₂ emissions (no subtraction of capture)
-```
-V(agriculture_burner_crude_oil, primary_co2_emission_of_fossil) = 22 million
-```
-##### Total bio CO₂ emissions (including upstream capture)
-```
-V(agriculture_burner_crude_oil, primary_co2_emission_of_bio_carriers) = 24 million
-```
-##### Bio CO₂ captured upstream (can be used to offset net total)
-```
-V(industry_final_demand_for_chemical_other_electricity, inherited_captured_bio_emissions) = 164 million (in 2050, 0 now)
+V(agriculture_final_demand_electricity, primary_co2_emission_of_fossil) = 5.0 [kg CO₂]
+
+V(agriculture_final_demand_electricity, primary_co2_emission_of_bio_carriers) = 7.5 [kg CO₂]
 ```
 
 ### WeightedCarrier
-- **Goal:** calculate the weighted average cost and emissions or potential biogenic CO₂ capture  per MJ based on the proportions of different input carriers to a node.
+- **Goal:** calculate the weighted average cost and emissions or potential biogenic CO₂ capture per MJ based on the proportions of different input carriers to a node.
 - **Stop conditions:** stops at a dead end, or a node/edge where cost_per_mj, co2_conversion_per_mj, or potential_co2_conversion_per_mj is defined (depending on the method called).
 - **Type:** without losses.
 
-```
-Gas Distribution Network (Weighted Carrier Cost per MJ = (10 EUR * 0.5 + 0 EUR * 0.5) = 5 EUR/MJ)
-│
-└── Input Mix:
-    ├── Natural Gas (50%, cost = 10 EUR/MJ)
-    └── Green Gas (50%, cost = 0 EUR/MJ)
-```
+<div style={{ textAlign: "center" }}>
+  <img
+    src="/img/docs/contrib/recursive-methods/recursive-methods-weighted-carrier.png"
+  />
+</div>
 
-#### Example queries:
-##### Weighted average cost of energy input mix (EUR/MJ)
+#### Example:
 ```
-V(households_space_heater_network_gas, weighted_carrier_cost_per_mj) = 0.004
-```
-##### Weighted average CO₂ emissions of input mix (kg CO₂/MJ)
-```
-V(households_space_heater_network_gas, weighted_carrier_co2_per_mj) = 0.056
-```
-##### Weighted average potential CO₂ capture of input mix (kg/MJ)
-```
-V(households_space_heater_network_gas, weighted_carrier_potential_co2_per_mj) = 0.0002
+V(energy_power_combined_cycle_network_gas, weighted_carrier_cost_per_mj) = 0.0075 [EUR/MJ]
+
+V(energy_power_combined_cycle_network_gas, weighted_carrier_co2_per_mj) = 0.025 [kg CO₂/MJ]
+
+V(energy_power_combined_cycle_network_gas, weighted_carrier_potential_co2_per_mj) = 0.030 [kg CO₂/MJ]
 ```
 
 ### Sustainable
@@ -127,12 +87,11 @@ V(households_space_heater_network_gas, weighted_carrier_potential_co2_per_mj) = 
 
 <div style={{ textAlign: "center" }}>
   <img
-    src="/img/docs/contrib/recursive-methods-sustainable.png"
+    src="/img/docs/contrib/recursive-methods/recursive-methods-sustainable.png"
   />
 </div>
 
-#### Example queries:
-##### Sustainability share (ratio from 0–1)
+#### Example:
 ```
-V(energy_torrefaction_wood, sustainability_share) = 0.95
+V(energy_torrefaction_wood, sustainability_share) = 0.95 [-]
 ```
