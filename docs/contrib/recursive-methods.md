@@ -6,7 +6,7 @@ title: Recursive methods
 Recursive methods traverse a graph from a node/edge backwards through its parents to allocate 'upstream' properties like primary demand, emissions, or costs, to the node/edge.
 
 ### With and without losses
-Nodes in the graph can have efficiencies attritubed to them, to model conversion or transport losses. Recursive methods can either account for these losses or ignore them, depending on the context.
+Nodes in the graph can have efficiencies attributed to them, to model conversion or transport losses. Recursive methods can either account for these losses or ignore them, depending on the context.
 
 - **With losses:** efficiency losses are included at each node, adjusting the propagated value according to these inefficiencies.
 - **Without losses:** efficiency losses are ignored at each node, allowing direct propagation of the value through the graph.
