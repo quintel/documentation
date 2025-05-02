@@ -93,5 +93,5 @@ V(energy_power_combined_cycle_network_gas, weighted_carrier_potential_co2_per_mj
 
 #### Example:
 ```
-V(energy_torrefaction_wood, sustainability_share) = 0.95 [-]
+V(energy_torrefaction_wood, sustainability_share) = 0.90 [-]
 ```
