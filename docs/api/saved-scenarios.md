@@ -87,8 +87,8 @@ Authorization: Bearer YOUR_TOKEN
     "created_at": "2022-07-27T15:59:33.000Z",
     "updated_at": "2022-12-20T17:47:41.000Z",
     "user_values": {
-      "households_behavior_close_windows_turn_off_heating": 41.7,
-      "households_behavior_low_temperature_washing": 34.3,
+      "households_number_of_inhabitants": 19.5,
+      "households_useful_demand_for_cooling": 2.5
     },
     "end_year": 2050,
     "keep_compatible": true,
