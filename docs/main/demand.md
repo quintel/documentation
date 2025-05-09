@@ -19,7 +19,7 @@ _Note: Some values in the demand section display ‘useful demand’ compared to
 _Checkout: the [‘Useful Demand’](useful-demand) infopage for more information._
 
 ## Households
-In the Households section the demand for energy in households is specified. The demand growth of energy and the technology mix that uses this energy can be specified. The focus is on technologies used for heating, insulation, cooking, cooling, lighting and appliances. Additionally, you can adjust the behaviour of inhabitants and specify the decentralized technologies used for heating (such as a heat pump) or electricity (such as roof top solar PV).
+In the Households section the demand for energy in households is specified. The demand growth of energy and the technology mix that uses this energy can be specified. The focus is on technologies used for heating, insulation, cooking, cooling, lighting and appliances. Additionally, you can specify the number and typical heat demand of residences per type and construction period.
 
 ## Buildings
 The Buildings section contains all non-residential buildings in the services sector. This includes office buildings, schools and hospitals. Similar to the Households section, the focus lies on heating, cooling, ventilation, insulation, lighting and roof top solar PV. 
