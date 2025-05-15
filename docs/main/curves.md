@@ -59,23 +59,27 @@ For all other countries the time curves are based on the Primes reference scenar
 _Checkout: the [ETDataset - curves](https://github.com/quintel/etdataset-public/tree/master/curves) as it contains all raw data, scripts and further explanations._
 
 ## Modifying Profiles
-The ETM calculates the hourly production and demand of gas, electricity, heat and hydrogen. These curves can be modified by uploading your own curves in the [Modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section.
+The ETM calculates the supply and demand of gas, electricity, heat and hydrogen on an hourly basis, for which it uses default curves. These curves can be modified by uploading custom curves in the [Modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section. Note that uploaded curves are scenario inputs; based on these profiles, the model calculates the resulting (hourly) flows.
 
 ### Types of profiles
-You can upload three types of profiles:
+The following profile types can be uploaded:
 
- 1. Demand profiles. These profiles specify the fraction of annual demand used in each hour of the year (8760 hours) for a specific category. The values in your uploaded curve do not matter: the ETM will convert your file to a new curve which respects the shape of your original. Example of profiles are: electric buses, industry heating.
+ 1. **Regular profiles**. These profiles are typically used for demand profiles and represent the fraction of annual demand used in each hour of the year (8760 hours) for a specific category. The unit used in the uploaded curve file does not matter: the model uses the shape of the profile (the relative distribution of demand over time). For example, if the profile sums up to 500 and the first hour has a value of 5, 1% of the annual demand for this category is assigned to the first hour. Examples of regular profiles are: electric buses, industry heating. 
 
- 2. Production profiles ('capacity profiles'). These profiles specify for each hour per year the fraction of installed capacity used in that hour for a specific production technology. The sum of all hours should equal the total annual full load hours of that technology. Example of profiles are: solar PV, wind offshore.
+ 2. **Capacity profiles**. These profiles are typically used for supply profiles and represent the fraction of installed capacity used for each hour of the year for a specific production technology. For example, a value of 0.5 means that 50% of peak capacity is utilised in that hour. The sum of all hours should equal the total annual full load hours of that technology. Examples of profiles are: solar PV, wind offshore. Note that a capacity profile is also used for the must-run interconnectors import and export profiles. 
 
- 3. Price curves. These profiles specify a price for each hour per year. The unit is €/MWh. Example of a profile is: imported electricity.
+ 3. **Price curves**. These profiles are used for the interconnector prices and represent the price for each hour of the year. The unit is €/MWh and the value for each hour will be rounded to the nearest whole cent. Example profile: interconnector 1 electricity price.
+
+ 4. **Availability curves**. These profiles are used for interconnector import and export availability and represent the availability of the interconnector for each hour of the year. Values should be specified between 0 and 1 for each hour, where for example 0.5 means that 50% of the capacity is available, 0 that no capacity is available or 1 that all capacity is available. Example profile: interconnector 1 import availability.
+
+ 5. **Temperature curve**. Used to set the air temperature profile and represents the outdoor air temperature for each hour of the year. The unit is degrees Celsius. 
 
 ### Uploading a custom profile
-In the curve upload section, you can choose a curve profile you want to overwrite using the curve upload form. Simply choose a profile by clicking on the drop-down menu and selecting the specific profile you want to overwrite. To upload your own curve profile you have to click on the 'Upload a custom curve' button below the drop-down menu. This will allow you to choose a file from your computer.
+In the curve upload section, simply choose a profile by clicking on the drop-down menu and select the specific profile to be overwritten. Click on 'Upload a custom curve' to provide a CSV file. 
 
 ![Upload form](/img/docs/curve-upload-form.png)
 
-Your file should be a CSV file with 8,760 rows (one for each hour per year) each with a numeric value specifying the demand, supply or price over time.
+The CSV file should contain 8,760 rows (one for each hour per year) each with a numeric value. See additional value requirements per profile type described above. 
 
 ```
 23.64
@@ -86,18 +90,17 @@ Your file should be a CSV file with 8,760 rows (one for each hour per year) each
 etc
 ```
 
-For **price curves**, the unit of the values is €/MWh. The price in each hour will be rounded to the nearest whole cent.
+It is also possible to download the uploaded profiles in the same section. These curves are then obtained in the same format as they were uploaded. 
 
-For **supply** curves ('capacity profiles'), the sum of the profile should equal the total annual number of full load hours of the specific technology. This means that for each hour the profile should contain a value between 0 and 1 specifying the fraction of peak capacity used in that hour. E.g. a value of 0.5 means that 50% of peak capacity is utilised in that hour.
+### Results
+Based on uploaded supply and demand profiles and on annual flows, the model calculates resulting hourly profiles representing the hourly energy flows. The chart on the right in the ETM section shows for all modifiable supply and demand categories the resulting hourly profiles. This means, for example, that if a _capacity profile_ for wind offshore is uploaded, the profile depicted in the chart is **not** the _capacity profile_ that represents the fraction of installed capacity deployed per hour. Instead, it shows the resulting deployed capacity in MW for each hour of the year. These resulting hourly supply and demand profiles can be downloaded in the [Data export](https://energytransitionmodel.com/scenario/data/data_export/overview) section.
 
-For **demand** curves (which also includes gas import/export curves) the unit used does not matter. The ETM will only use the _shape_ of your profile. For example, if your profile sums up to 500 and the first hour has a value of 5, 1% of the annual demand in the ETM is assigned to the first hour.
+![Modify profiles chart](/img/docs/modify_profiles.png)
 
-Click on the question mark in the curve upload form for specific file instructions about the selected curve.
-
+Note that if a technology is not present in the scenario, the chart series will remain empty. By default, the chart shows the daily peak capacity of the profile for the whole year. Select a month or week in the dropdown menu to see the hourly values. 
 
 ### Interaction with Weather Years
-The ETM allows users to select different [weather years](weather-conditions.md). This affects all supply and demand profiles that are weather-dependent, such as heat demand and production of wind and solar power. When uploading a custom profile using the CSV upload form, **_the ETM always prioritizes the uploaded curve over any standard curves used within the ETM_**. This means that even if you choose a different weather year any uploaded profiles will remain intact while other profiles will change according to that weather year.
-
+The ETM allows users to select different [weather years](weather-conditions.md). This affects all supply and demand profiles that are weather-dependent, such as heat demand and production of wind and solar power. When uploading a custom profile using the CSV upload form, **_the ETM always prioritises the uploaded curve over any standard curves used within the ETM_**. This means that even if a different weather year is chosen, any uploaded profiles will remain unchanged while other profiles will change according to that weather year.
 
 ### Comments on selected profiles
 The table below provides some additional information on selected categories.
@@ -110,9 +113,3 @@ The table below provides some additional information on selected categories.
 |**Demand: Electric cars**|You can upload 5 different profiles for electric cars. The ETM uses a mix of these profiles depending on your choices in the [Demand response - electric vehicles](https://energytransitionmodel.com/scenario/flexibility/flexibility_net_load/demand-response-electric-vehicles) section.|
 |**Import/Export: Gases**| The ETM uses 'demand' type profiles for both import and export (see above). This means that the units used in your custom profile do not matter. The ETM will extract the _shape_ of your profile and apply that to the annual import/export volume.|
 |**Import/Export: Interconnectors**|See [imported electricity](costs-imported-electricity.md#uploaded-price-curves)|
-
-
-### Results
-The chart on the right shows the profiles of all categories that can be modified. If you upload a custom profile, this is reflected in the chart. Note that if a technology is not present in your scenario, the chart series will be empty. By default, the chart shows the daily peak capacity of the profile for the whole year. Select a month or week in the dropdown menu to see the hourly values. You can download the hourly demand and supply curves in your scenario in the [Data export](https://energytransitionmodel.com/scenario/data/data_export/overview) section.
-
-![Modify profiles chart](/img/docs/modify_profiles.png)
