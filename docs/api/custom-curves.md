@@ -9,7 +9,7 @@ import ApiEndpoint from '@site/src/components/ApiEndpoint';
 
 Curves are used extensively within the ETM to control the behavior of various technologies. Most these curves vary depending on the region selected for a scenario, while others are generated dynamically based on choices made by the end-user.
 
-In some cases it's possible for a user to upload a custom curve, which will be used instead of the defaults. For example, uploading a curve to change the price of imported electricity changes when it is profitable to import electricity rather than generating it domestically.
+In some cases it's possible for a user to upload a custom curve, which will be used instead of the defaults. For example, uploading a curve to change the price of imported electricity changes when it is profitable to import electricity rather than generating it domestically. Read more about modifiable curves and the different types of curves [here](/main/curves/#modifying-profiles). 
 
 ## The Curve object
 
@@ -42,11 +42,12 @@ The API allows you to customise a number of curves used by the model's hourly ca
 
 ### Curve types
 
-The curve type is part of the API response which describes the way the uploaded curve will be processed prior to use in a scenario.
+The curve type is part of the API response which describes the way the uploaded curve will be processed prior to use in a scenario. Read more about the different curve types in the documentation about [modifiable curves](/main/curves/#modifying-profiles). A brief description is provided here:
 
-* `generic` – Uploaded curves of this type will be validated to ensure that the curve contains 8,760 numeric values, but no other processing is performed and these curves are stored as provided.
 * `price` – Donates that the curve is a price curve. The provided file should contain 8,760 numeric values representing euros and cents, without any currency formatting. You may also provide an exported price curve from the Energy Transition Model (a comma-separated file with a "price" column). Each hourly value is rounded to the nearest cent.
 * `profile` – The curve is a load profile and should contain 8,760 numeric values. The values themselves are not important as the curve will be normalized by the model to represent the shape of demand.
+* `capacity_profile` - The curve represents the fraction of peak capacity deployed for each hour and should contain 8,760 numeric values. 
+* `availability` - Represents the availability for which a value between 0 and 1 should be provided for each hour. The file should contain 8,760 numeric values. 
 * `temperature` – These curves describe 8,760 hourly temperature values in °C. No formatting should be present in uploaded files.
 
 ## Get all custom curves
