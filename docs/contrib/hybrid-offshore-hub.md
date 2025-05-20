@@ -14,7 +14,7 @@ Hybrid offshore hubs represent an offshore renewable electricity production faci
 A hybrid offshore hub in the ETM requires 6 nodes:
 
 1. **Producer**: This represents renewable electricity production (e.g. wind farm or solar farm) which produce electricity according to a production profile. At the moment, the ETM only incorporates a hybrid offshore hub based with renewable electricity production from offshore wind farms.
-2. **Electrolyser**: Depending on the WTP of the electrolyser and the capacity of the electrolyser,power cable and producer, hydrogen production will take place.
+2. **Electrolyser**: Depending on the WTP of the electrolyser and the capacity of the electrolyser, power cable and producer, hydrogen production will take place.
 3. **Curtailment**: Energy is diverted here when the electrolyser cannot use all generated energy due to its capacity constraints, and when onshore electricity demand is too low.
 4. **Cable offshore-onshore**: The producer transports electricity to the cable node so it can be transported to the onshore power grid.
 5. **Cable onshore-offshore**: This cable transports electricity from the onshore power grid to the offshore electrolyser. This cable will be deployed when the WTP of the electrolyser is higher than the national electricity price and when there is still undeployed electrolyser capacity available. In reality, this cable is the same cable as the cable offshore-onshore (and therefore has the same specs), but is added as a separate node for modelling purposes.
