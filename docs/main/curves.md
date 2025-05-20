@@ -90,7 +90,7 @@ The CSV file should contain 8,760 rows (one for each hour per year) each with a 
 etc
 ```
 
-It is also possible to download the uploaded profiles in the same section. These curves are then obtained in the same format as they were uploaded. 
+It is also possible to download the uploaded profiles in the same section. For all profile types except regular profiles, downloaded profiles are obtained in the same format as they were uploaded. When downloading a profile of type 'regular profile', a normalised profile is obtained where the shape of the orginially uploaded profile is maintained. 
 
 ### Results
 Based on uploaded supply and demand profiles and on annual flows, the model calculates resulting hourly profiles representing the hourly energy flows. The chart on the right in the ETM section shows for all modifiable supply and demand categories the resulting hourly profiles. This means, for example, that if a _capacity profile_ for wind offshore is uploaded, the profile depicted in the chart is **not** the _capacity profile_ that represents the fraction of installed capacity deployed per hour. Instead, it shows the resulting deployed capacity in MW for each hour of the year. These resulting hourly supply and demand profiles can be downloaded in the [Data export](https://energytransitionmodel.com/scenario/data/data_export/overview) section.
