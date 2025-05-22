@@ -37,7 +37,7 @@ The `queries.csv` file contains a list of queries that will be collected for eac
 |---|
 | dashboard_co2_emissions_versus_start_year |
 | dashboard_total_costs |
-| dashboard_blackout_hours |
+| dashboard_power_shortage_hours |
 
 
 ### data_downloads.csv
