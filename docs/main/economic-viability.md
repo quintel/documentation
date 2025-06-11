@@ -3,9 +3,9 @@ title: Economic viability of power plants
 ---
 
 This section explains the economic viability of power plants, as presented in the following tables:
-- [Economic viability of electricity production technologies]
-- [Economic viability of electricity storage technologies]
-- [Economic viability of electricity demand technologies]
+- **Economic viability of electricity production technologies**
+- **Economic viability of electricity storage technologies**
+- **Economic viability of flexible electricity demand technologies**
 
 As described in the [Cost methods](cost-methods.md), the ETM separates fuel costs from OPEX and CAPEX for each cost group. To accurately assess the economic viability of power production facilities, fuel costs must be included in the calculations.
 
@@ -34,11 +34,15 @@ In these tables, different cost methods are used compared to the rest of the mod
 Some technology categories have more complex cost and revenue structures:
 
 1. **CHPs**  
-   Combined Heat and Power (CHP) plants produce both heat and electricity. Since the ETM does not assign a value to produced heat, a correction is applied to the marginal costs of CHPs to ensure correct placement in the electricity market merit order. For more information, see [Waste outputs](contrib/waste-outputs.md). At the moment, the revenue of these CHPs is not corrected with this assumption. 
+   CHps are a special case since they produce both electricity and heat. Since there is no value attributed for heat production, only the revenue that is by electricity production is taken into account for CHPs.
 
 2. **Flexible synthetic kerosene production**  
    Synthetic kerosene production uses both electricity and hydrogen as input carriers. Therefore, fuel cost calculations are based on the input of both carriers.
 
 3. **Battery parks & offshore hybrid wind parks**  
-   Battery parks consist of multiple components. As a result, economic viability is not currently calculated for these technologies.
+   These plants consist of multiple components. As a result, it is difficult to determine the economic viability of one of the components in the plant. 
+   For this reason, these have been left out of the tables.
+
+4. **Battery electric vehicles**  
+   The costs associated with Battery Electric Vehicles (BEVs) are not solely related to their role in the energy system, as their primary function is transportation. For this reason, the CAPEX and economic viability columns are excluded from the table. However, the table does include the other relevant columns: the average cost of electricity used for charging (OPEX) and the average profit from electricity discharged back to the grid (Revenue). These can be used to assess the business case of BEV's in the scenario.
 
