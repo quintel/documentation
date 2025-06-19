@@ -6,7 +6,8 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy"
+    "deploy": "docusaurus deploy",
+    "spellcheck": "cspell \"docs/**/*.md\""
   },
   "dependencies": {
     "@docusaurus/core": "^2.2.0",
@@ -26,5 +27,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@cspell/dict-en-gb": "^5.0.6",
+    "cspell": "^9.1.1"
   }
 }

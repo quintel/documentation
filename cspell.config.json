@@ -1,0 +1,7 @@
+{
+  "version": "0.2",
+  "language": "en-GB",
+  "import": ["@cspell/dict-en-gb/cspell-ext.json"],
+  "words": ["pyetm", "ETM", "P2P", "pipenv", "Netbeheer", "OPEX", "CAPEX", "CCGT", "interconnector", "ENTSOG", "Gasunie", "regasification", "WACC", "Quintel", "KNMI", "dispatchable", "dispatchables", "Dunkelflaute", "energytransitionmodel"],
+  "ignorePaths": ["node_modules/**", "build/**", "dist/**", "docs/main/factsheet.md", "docs/main/data-sources-local.md", "docs/main/biomass.md"]
+}

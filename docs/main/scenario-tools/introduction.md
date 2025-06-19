@@ -57,7 +57,7 @@ expect you to be in this folder.
 
 #### Using pipenv
 It is recommended (but not required) that you use [`pipenv`](https://pipenv.pypa.io/en/latest/) for running these tools. When using `pipenv`
-it will create a virtual environment for you. A virtual environment helps with keeping the libaries you install here separate of your global libraries (in
+it will create a virtual environment for you. A virtual environment helps with keeping the libraries you install here separate of your global libraries (in
 other words your `scenario-tools` will be in a stable and isolated environment and are thus less likely to break when updating things elsewhere on your computer)
 and this one comes with some nice shortcuts for running the tools.
 

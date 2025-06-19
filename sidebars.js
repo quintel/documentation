@@ -111,9 +111,19 @@ module.exports = {
       collapsed: true,
       items: ["main/energy-calculations", "main/useful-demand"],
     },
+      {
+      type: "category",
+      label: "5. pyetm",
+      collapsed: true,
+      items: [
+        "main/pyetm/introduction",
+        "main/pyetm/reporting",
+        "main/pyetm/creating-and-updating"
+      ],
+    },
     {
       type: "category",
-      label: "5. Scenario-tools",
+      label: "5. Scenario-tools #TODO retireme",
       collapsed: true,
       items: [
         "main/scenario-tools/introduction",
