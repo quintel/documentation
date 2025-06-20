@@ -89,6 +89,7 @@ module.exports = {
             "main/heat-infrastructure-costs",
             "main/cost-insulation-costs",
             "main/costs-imported-electricity",
+            "main/economic-viability",
           ],
         },
         {
