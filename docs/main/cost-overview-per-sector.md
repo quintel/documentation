@@ -29,7 +29,6 @@ Below you can find an overview of the different cost components that are taken i
 |  ***Subject***   | ***Cost components***  |
 |---|---|
 | All vehicles | No costs
-| Electric cars and hydrogen cars | (Optional) additional investment costs
 
 ### Agriculture
 |  ***Subject***   | ***Cost components***  |
