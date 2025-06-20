@@ -20,13 +20,18 @@ _Checkout: the ['Curves'](curves) infopage for more information._
 
 ### Electric vehicles
 
-The ETM uses five different profiles to determine the demand of EV’s based on research performed by Movares (Movares, 2013) and Elaad. These five profiles are:
+The ETM uses four different profiles to determine the demand of EV’s. The standard profile distribution in the ETM is based on the [Outlook Laadprofielen Personenauto's](https://refman.energytransitionmodel.com/publications/2200) by Elaad (2023). 
+A fifth profile functions as a dummy profile that the user can overwrite with their own data.
 
-- Charging at home
-- Charging everywhere
-- Fast charging
-- Charging smart (Elaad)
-- Charging regular (Elaad)
+- Public charging (Elaad profile generator)
+- Charging at home (Elaad profile generator)
+- Fast charging (Movares & Elaad)
+- Charging at work (Elaad profile generator)
+- Custom profile
+
+The profiles for Public charging, Charging at home & Charging at work are created based on output from the [profile generator](https://platform.elaad.io/analyse/low-voltage-charging-profiles/) by Elaad. 1000 profiles in each categorie have been generated and aggregated to the profiles we use in the ETM. 
+
+The profile for Fast charging and the custom profile are based on research performed by Movares (Movares, 2013) and Elaad. The custom profile is based on the charging everywhere profile from that study.
 
 You can use these profiles to adjust the charging behaviour of electric cars. In all profiles weekend days are considered differently from weekdays. You can find these profiles in the Flexibility section under ‘Net load’> ‘Demand response – electric vehicles’. 
 
