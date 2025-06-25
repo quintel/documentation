@@ -34,7 +34,7 @@ In these tables, different cost methods are used compared to the rest of the mod
 Some technology categories have more complex cost and revenue structures:
 
 1. **CHPs**  
-   CHps are a special case since they produce both electricity and heat. Since there is no value attributed for heat production, only the revenue that is by electricity production is taken into account for CHPs.
+   CHPs are a special case because they produce both electricity and heat. However, only the revenue from electricity production is considered, as no value is assigned to the heat they generate.
 
 2. **Flexible synthetic kerosene production**  
    Synthetic kerosene production uses both electricity and hydrogen as input carriers. Therefore, fuel cost calculations are based on the input of both carriers.
@@ -44,5 +44,5 @@ Some technology categories have more complex cost and revenue structures:
    For this reason, these have been left out of the tables.
 
 4. **Battery electric vehicles**  
-   The costs associated with Battery Electric Vehicles (BEVs) are not solely related to their role in the energy system, as their primary function is transportation. For this reason, the CAPEX and economic viability columns are excluded from the table. However, the table does include the other relevant columns: the average cost of electricity used for charging (OPEX) and the average profit from electricity discharged back to the grid (Revenue). These can be used to assess the business case of BEV's in the scenario.
+   The costs associated with Battery Electric Vehicles (BEVs) are not solely related to their role in the energy system, as their primary function is transportation. For this reason, the BEV CAPEX and economic viability columns are excluded from the Economic Viability table. However, the table does include the other relevant columns: the average cost of electricity used for charging (OPEX) and the average profit from electricity discharged back to the grid (Revenue). These can be used to assess the business case of BEV's in a scenario.
 
