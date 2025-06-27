@@ -12,10 +12,10 @@ As described in the [Cost methods](cost-methods.md), the ETM separates fuel cost
 In these tables, different cost methods are used compared to the rest of the model. Each table contains four columns, each showing calculations related to costs and revenue. All values are expressed in euros per MWh of the output carrier. The calculations for each column are as follows:
 
 1. **CAPEX (€/MWh)**  
-   The CAPEX is based on the plant's capital expenditure as shown in the [Cost methods](cost-methods.md). Since the unit is euros per MWh of the output carrier, the CAPEX for a power producer is divided by the electricity output. For a power-to-heat producer, it is divided by the heat output in MWh.
+   The CAPEX is based on the plant's capital expenditure as shown in the [Cost methods](cost-methods.md). The unit is in euros per MWh of the relevant output carrier. For a power producer this means that the CAPEX is divided by the electricity output, for a power-to-heat producer for example, it is divided by the heat output in MWh.
 
 2. **OPEX (€/MWh)**  
-   The OPEX in these tables differs from the regular OPEX calculated in the ETM. Fuel input costs are included. For conventional power plants, fuel and emission costs are added to the OPEX. For technologies using electricity as an input (such as batteries and flexible electricity demand technologies), OPEX is based on the hourly electricity market calculations in the ETM. The OPEX formula is illustrated below:
+   The OPEX in these tables differs from the regular OPEX calculated in the ETM. Fuel and emissions costs are included. For technologies using electricity as an input (such as batteries and flexible electricity demand technologies), OPEX is based on the hourly electricity market calculations in the ETM. The OPEX formula is illustrated below:
 
    ![](/img/docs/costs_equation_opex.png)
 
