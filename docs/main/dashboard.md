@@ -41,13 +41,8 @@ _Checkout: the ['Energy Imports'](import-calculations) infopage in the Dashboard
 The number shows the total yearly cost of energy supply for your scenario. The chart displays the costs for the present (left) and final scenario year (right) composed of the costs for different types of energy production.
 
 ## Profitability of power plants
-Percentage of plants installed in your scenario that make a profit.
-
-_Note: The value is in current year's euros. It includes the costs of the primary energy carriers and the costs of all the plants that produce electricity and/or heat. Go to the 'Detailed information > Costs > [Overview of costs per sector](cost-overview-per-sector.md)' infopage for more information on the cost calculation._
-
-_Checkout: the ['Costs (dashboard)''](cost-dashboard) infopage for more information._
-
-_Checkout: the infopages under ['Costs'](cost-main-principles) for more information on how costs are defined and calculated within the ETM._
+The percentage on the dashboard shows which percentage of the installed dispatchable power production capacity is economically viable. This table shows (of all plants, not only the dispatchable plants) what plants are profitable or unprofitable in your scenario. For more information about the table, please visit ['Economic viability of assets'](economic-viability)
+.
 
 ## Biomass
 
