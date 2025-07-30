@@ -49,11 +49,11 @@ a value. This will reset the slider to its standard value.
 :::
 
 ### curves
-In the `input/curves` folder you can add custom demand, supply and price curves to use in your scenarios. These curves can be used to overwrite the default ETM [profiles](https://docs.energytransitionmodel.com/main/curves#modifying-profiles). In the `scenario_list.csv` file you specify for each scenario which CSV curve file to use by adding the file name to the `curve_file` column.
+In the `input/curves` folder you can add custom demand, supply, price, availability and temperature curves to use in your scenarios. These curves can be used to overwrite the default ETM [profiles](https://docs.energytransitionmodel.com/main/curves#modifying-profiles). In the `scenario_list.csv` file you specify for each scenario which CSV curve file to use by adding the file name to the `curve_file` column.
 
 Each file should look as follows:
  * The first row of each column should contain the key of the category you want to upload a custom curve for. A full ist of available keys can be found on [Github](https://github.com/quintel/etsource/blob/production/config/user_curves.yml). Example: *interconnector_1_price*
- * Row 2-8761 should contain the hourly values (one for each hour per year)
+ * Row 2-8761 should contain the hourly values (one for each hour per year). Read de documentation about [modifiable profiles](https://docs.energytransitionmodel.com/main/curves#modifying-profiles) for more details on the value requirements per profile type.  
  * You can add multiple columns to customize multiple profiles
  * You can add multiple CSV files in case you want to use different profiles for different scenarios
 
