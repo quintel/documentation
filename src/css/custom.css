@@ -499,9 +499,10 @@ article p code {
 }
 
 /* Add "New" tag to some sidebar items. */
-.menu a[href="/main/user_manual/model-versions"]:after,
-.menu a[href="/api/version-tag"]:after,
-.menu a[href="/api/users"]:after {
+/* Commented out for now as there are no recent updates to highlight. */
+
+/* .menu a[href="/main/user_manual/model-versions"]:after,
+.menu a[href="/api/version-tag"]:after{
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -516,16 +517,17 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/main/managing-scenarios/scenario-access-management"]:after,
-.menu a.menu__link--active[href="/main/managing-scenarios/scenario-version-history"]:after,
-.menu a[href="/api/collections"]:after {
+.menu a.menu__link--active[href="/main/user_manual/model-versions"]:after,
+.menu a.menu__link--active[href="/api/version-tag"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
-}
+} */
 
 /* Add "Updated" tag to some sidebar items. */
-.menu a[href="/main/scenario-tools/weather-years-module"]:after,
-.menu a[href="/api/changelog"]:after {
+/* Commented out for now as there are no recent updates to highlight. */
+
+/* .menu a[href="/main/scenario-tools/weather-years-module"]:after, */
+/* .menu a[href="/api/changelog"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -541,12 +543,10 @@ article p code {
 }
 
 .menu a.menu__link--active[href="/main/scenario-tools/weather-years-module"]:after,
-.menu a.menu__link--active[href="/api/changelog"]:after,
-.menu a.menu__link--active[href="/api/inputs"]:after,
-.menu a.menu__link--active[href="/api/scenarios"]:after {
+.menu a.menu__link--active[href="/api/changelog"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
-}
+} */
 
 /* Images with an border, useful for small screenshots. */
 
