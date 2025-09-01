@@ -60,7 +60,7 @@ module.exports = {
             {
               Heat: ["main/heat-networks", "main/heat-pumps", "main/residual-heat-industry"],
             },
-            "main/curves",
+            "main/profiles",
             "main/weather-conditions",
             "main/outdoor-temperature",
           ],

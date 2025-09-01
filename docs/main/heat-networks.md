@@ -12,7 +12,7 @@ In the households, buildings and agriculture section of the model, you can make 
 
 ![District heating share in households](/img/docs/district_heating_demand_share_in_households.png)
 
-The resulting district heating demands from households, buildings and agriculture are aggregated and together make up the demand of heat networks. For each sector demand is multiplied with an hourly demand curve to estimate collective heat demand for each hour per year. More information about these curves can be found [here](curves.md).
+The resulting district heating demands from households, buildings and agriculture are aggregated and together make up the demand of heat networks. For each sector demand is multiplied with an hourly demand curve to estimate collective heat demand for each hour per year. More information about these curves can be found [here](profiles.md).
 
 ![Hourly district heating demand](/img/docs/hourly_district_heating_demand.png)
 
