@@ -9,7 +9,9 @@ import ApiEndpoint from '@site/src/components/ApiEndpoint';
 
 Curves are used extensively within the ETM to control the behavior of various technologies. Most these curves vary depending on the region selected for a scenario, while others are generated dynamically based on choices made by the end-user.
 
-In some cases it's possible for a user to upload a custom curve, which will be used instead of the defaults. For example, uploading a curve to change the price of imported electricity changes when it is profitable to import electricity rather than generating it domestically. Read more about modifiable curves and the different types of curves [here](/main/curves/#modifying-profiles). 
+In some cases it's possible for a user to upload a custom curve, which will be used instead of the defaults. For example, uploading a curve to change the price of imported electricity changes when it is profitable to import electricity rather than generating it domestically.
+
+In the model front-end, curves are known as profiles. Read more about modifiable profiles and the different types of profiles [here](/main/profiles/#custom-profiles). 
 
 ## The Curve object
 

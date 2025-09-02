@@ -4,7 +4,7 @@ title: Dynamic electricity demand curve
 
 The behaviour of heat pumps and electric vehicles is modelled explicitly and on an hourly scale. The chart 'Electricity demand per hour' gives an overview of the demand and in the Flexibility > [Modify profiles](https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section of the ETM you can view the specific demand of heat pumps and electric vehicles. This page explains which profiles were used to model the behaviour of these technologies.
 
-_Checkout: the ['Curves'](curves) infopage for more information._
+_Checkout: the ['Curves'](/main/curves) infopage for more information._
 
 ![](/img/docs/dynamic_electricity_demand.png)
 

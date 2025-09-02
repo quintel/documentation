@@ -24,54 +24,21 @@ The following profile types can be uploaded:
 
 5. **Temperature curve**. Used to set the air temperature profile and represents the outdoor air temperature for each hour of the year. The unit is degrees Celsius.
 
-## Working with custom profiles
 
-### Uploading custom profiles
+### Weather-dependent profiles
+The ETM supports different [weather years](https://energytransitionmodel.com/scenario/flexibility/flexibility_weather/weather-years) that change weather-dependent profiles, such as heating demand and renewable electricity production from solar PV and wind, to the profile of a specific historic year.
 
-To upload a custom profile:
-
-1. Navigate to the [Modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section
-2. Select the specific profile from the dropdown menu
-3. Click 'Upload a custom curve' and provide a CSV file
-4. Ensure the CSV fiel contains exactly 8,760 rows (one per hour) with numeric values
-
-![Upload form](/img/docs/curve-upload-form.png)
-
-The CSV file should follow this simple format:
-
-```
-23.64
-32.71
-32.65
-32.71
-30.89
-etc
-```
-
-See [Types of profiles](#types-of-profiles) for the value requirements per profile type.
-
-### Understanding results
-
-The ETM processes uploaded profiles and calculates resulting hourly energy flows. Note that the chart 'Modifiable profiles' shows these calculated results, it does not show the raw uploaded profiles. For example: if a *capacity profile* for offshore wind is uploaded, the chart displays the resulting deployed capacity in MW for each hour, and not the fraction of installed capacity that was uploaded.
-
-![Modify profiles chart](/img/docs/modify_profiles.png)
-
-### Downloading profiles
-
-Custom profiles uploaded to a scenario can be downloaded as well in the same section. Note that *regular profiles* are always downloaded as a normalised profile remaining the original shape of the profile. All other profile types are downloaded in the same format as uploaded.
-
-Hourly supply and demand profiles resulting from scenario calculations can be downloaded from the [Data export](https://energytransitionmodel.com/scenario/data/data_export/overview) section.
-
-## Weather years and custom profiles
-:::info Disclaimer
-Weather year functionality is currently only available for Dutch datasets.
+:::warning Priority of custom profiles
+Uploaded [custom profiles](#working-with-custom-profiles) always take priority over a standard weather year profiles. If a specific weather year is selected, this will only affect weather-related profiles for which no custom profile is uploaded. 
 :::
 
-The ETM supports different [weather years](https://energytransitionmodel.com/scenario/flexibility/flexibility_weather/weather-years) that affect weather-dependent profiles such as heating demand and renewable electricity production from solar PV and wind. **Note:** uploaded custom profiles always take priority over a standard weather year profiles. If a specific weather year is selected, this will only affect weather-related profiles for which no custom profile is uploaded. 
+:::info Disclaimer
+The weather year functionality is currently only available for Dutch regions.
+:::
 
 
 ## Overview of profiles
-Below, the profiles in the ETM are specified in cateogries demand, supply and other profiles. More information about the country-specifc profiles can be found on the profiles (curves) section in [etdataset-public](https://github.com/quintel/etdataset-public/tree/master/curves), the dataset repository of the ETM.
+Below, the profiles in the ETM are specified in cateogries demand, supply and other profiles. More information about the country-specifc profiles can be found on the profiles (curves) section in [ETDataset](https://github.com/quintel/etdataset-public/tree/master/curves), the dataset repository of the ETM.
 
 ### Demand profiles
 
@@ -94,10 +61,9 @@ Below, the profiles in the ETM are specified in cateogries demand, supply and ot
 | **Agriculture** | Electricity | Regular | No | |
 | | Heat | Regular | Yes | |
 
-
 ### Supply profiles
 
-| Sector | Sub-sector | Profile type | Weather-dependent | additional Information |
+| Sector | Sub-sector | Profile type | Weather-dependent | Additional information |
 |--------|------------|--------------|-------------------|------------------------|
 | **Renewable** | Solar PV | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
 | | Solar thermal | Capacity | Yes | Based on measured climate data and adjusted for solar thermal behavior characteristics |
@@ -115,3 +81,42 @@ Below, the profiles in the ETM are specified in cateogries demand, supply and ot
 | | Interconnector price | Price | No | Individual profiles per interconnector |
 | | Hydrogen import/export | Regular profile | No | |
 | | Gas import/export | Regular profile | No | |
+
+
+## Custom profiles
+
+### Uploading custom profiles
+
+To upload a custom profile:
+
+1. Navigate to the [Modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section
+2. Select the specific profile from the dropdown menu
+3. Click 'Upload a custom curve' and provide a CSV file
+4. Ensure the CSV fiel contains exactly 8760 rows (one per hour) with numeric values
+
+![Upload form](/img/docs/curve-upload-form.png)
+
+The CSV file should follow this simple format:
+
+```
+23.64
+32.71
+32.65
+32.71
+30.89
+...
+```
+
+See [Types of profiles](#types-of-profiles) for the value requirements per profile type.
+
+### Understanding results
+
+The ETM processes uploaded profiles and calculates resulting hourly energy flows. Note that the chart 'Modifiable profiles' shows these calculated results, it does not show the raw uploaded profiles. For example: if a *capacity profile* for offshore wind is uploaded, the chart displays the resulting deployed capacity in MW for each hour, and not the fraction of installed capacity that was uploaded.
+
+![Modify profiles chart](/img/docs/modifiable_profiles.png)
+
+### Downloading profiles
+
+Custom profiles uploaded to a scenario can be downloaded as well in the same section. Note that *regular profiles* are always downloaded as a normalised profile remaining the original shape of the profile. All other profile types are downloaded in the same format as uploaded.
+
+Hourly supply and demand profiles resulting from scenario calculations can be downloaded from the [Data export](https://energytransitionmodel.com/scenario/data/data_export/overview) section.
