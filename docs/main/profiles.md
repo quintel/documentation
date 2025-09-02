@@ -44,7 +44,7 @@ Below, the profiles in the ETM are specified in cateogries demand, supply and ot
 
 | Sector | Sub-sector | Profile type | Weather-dependent | Additional information |
 |--------|------------|--------------|-------------------|------------------------|
-| **Households** | Space heating | Regular | Yes | Split up in individual profiles per residence category and construction year |
+| **Households** | Space heating | Regular | Yes | Split up in individual profiles per residence category and construction year, view [Matching heat demand and supply](/main/heat-built-environment/#matching-heat-demand-with-supply) for more information. |
 | | Hot water | Regular | No | |
 | | Cooling | Regular | No | |
 | | Appliances, lighting, cooking | Regular | No | |
