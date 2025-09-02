@@ -2,7 +2,7 @@
 title: Weather conditions
 ---
 
-For all datasets the average temperature and full load hours of wind turbines and solar PV can be adjusted in the Flexibility > ['Weather conditions'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/temperature-and-full-load-hours) section. For the Netherlands it is possible to select one of three weather years with extreme weather conditions to explore the effect of these conditions. On this page these features are explained.
+For all datasets the average temperature and full load hours of wind turbines and solar PV can be adjusted in the [Weather conditions](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/temperature-and-full-load-hours) section. For the Netherlands it is possible to select one of three weather years with extreme weather conditions to explore the effect of these conditions. On this page these features are explained.
 
 ## Temperature
 
@@ -15,10 +15,6 @@ _Source: The impact of a temperature change on energy demand is based on a 'degr
 The default full load hours (FLH) in the ETM are based on currently installed technologies. Because of technological developments it is likely that future wind turbines and solar PV may produce more electricity per installed capacity than today. FLH's can also vary regionally.
 
 Changing the FLH's results in a change in annual produced electricity and shape of the production curves. For wind turbines the peaks will become broader and flatter with increasing full load hours as the turbine spends more time running at higher capacity. For solar the default curve is interpolated with a curve for Spain, a country with high (1361) FLH for solar PV. Take a look at the "Electricity production per hour" chart to see the effect of your changes on the production profiles.
-
-_Checkout: The production profiles can be downloaded as CSV files in the Data export section of the ETM: Results → Data export → Merit order price → Load curves._
-
-![](/img/docs/download_load_curves.png)
 
 ## Weather conditions
 

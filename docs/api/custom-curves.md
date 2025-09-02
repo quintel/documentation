@@ -44,7 +44,7 @@ The API allows you to customise a number of curves used by the model's hourly ca
 
 ### Curve types
 
-The curve type is part of the API response which describes the way the uploaded curve will be processed prior to use in a scenario. Read more about the different curve types in the documentation about [modifiable curves](/main/curves/#modifying-profiles). A brief description is provided here:
+The curve type is part of the API response which describes the way the uploaded curve will be processed prior to use in a scenario. Read more about the different curve types in the documentation about [modifiable curves](/main/profiles#types-of-profiles). A brief description is provided here:
 
 * `price` – Donates that the curve is a price curve. The provided file should contain 8,760 numeric values representing euros and cents, without any currency formatting. You may also provide an exported price curve from the Energy Transition Model (a comma-separated file with a "price" column). Each hourly value is rounded to the nearest cent.
 * `profile` – The curve is a load profile and should contain 8,760 numeric values. The values themselves are not important as the curve will be normalized by the model to represent the shape of demand.
