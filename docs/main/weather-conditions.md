@@ -24,12 +24,13 @@ Changing the FLH's results in a change in annual produced electricity and shape 
 The weather year functionality is currently only available for Dutch regions.
 :::
 
-There are four weather year options within the ETM: Default, Dunkelflaute during extreme cold winter periods, Lack of sustainable energy (incl. "Dunkelflaute") and extreme cold days, and Excessive and scarce sustainable energy. The default setting considers actual renewable production curves while the other three weather years consider three different years within the Netherlands in which more extreme weather patterns existed. These different weather patterns have large consequences for renewable energy production curves. Using the weather years you can explore and test your scenario using different extreme but occurring weather patterns. 
+There are four weather year options within the ETM:
+- Default
+- "Dunkelflaute" during extreme cold winter periods
+- Lack of sustainable energy (incl. "Dunkelflaute") and extreme cold days
+- Excessive and scarce sustainable energy
 
-
-:::info Checkout: 
-The temperature, heat demand and production curves for all weather years can be downloaded from [ETSource](https://github.com/quintel/etsource/tree/master/datasets/nl/curves/weather). The file `weather_properties.csv` provides FLH for every technology and average temperature with respect to the base year.
-:::
+The default setting considers actual renewable production curves while the other three weather years consider three different years within the Netherlands in which more extreme weather patterns existed. These different weather patterns have large consequences for renewable energy production curves. Using the weather years you can explore and test your scenario using different extreme but occurring weather patterns. 
 
 ### Wind
 

@@ -38,13 +38,13 @@ The weather year functionality is currently only available for Dutch regions.
 
 
 ## Overview of profiles
-Below, the profiles in the ETM are specified in cateogries demand, supply and other profiles. More information about the country-specifc profiles can be found on the profiles (curves) section in [ETDataset](https://github.com/quintel/etdataset-public/tree/master/curves), the dataset repository of the ETM.
+Below, the profiles in the ETM are specified in cateogries demand, supply and other profiles. More information about the country-specific profiles can be found on the profiles (curves) section in [ETDataset](https://github.com/quintel/etdataset-public/tree/master/curves).
 
 ### Demand profiles
 
 | Sector | Sub-sector | Profile type | Weather-dependent | Additional information |
 |--------|------------|--------------|-------------------|------------------------|
-| **Households** | Space heating | Regular | Yes | Split up in individual profiles per residence category and construction year, view [Matching heat demand and supply](/main/heat-built-environment/#matching-heat-demand-with-supply) for more information. |
+| **Households** | Space heating | Regular | Yes | Split up in individual profiles per residence type and construction period (see [Matching heat demand and supply](/main/heat-built-environment/#matching-heat-demand-with-supply)) |
 | | Hot water | Regular | No | |
 | | Cooling | Regular | No | |
 | | Appliances, lighting, cooking | Regular | No | |
