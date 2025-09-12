@@ -28,25 +28,16 @@ module.exports = {
           title: "About Us",
           items: [
             {
+              label: "Quintel",
+              href: "https://quintel.com",
+            },
+            {
               label: "Energy Transition Model",
               href: "https://energytransitionmodel.com",
             },
             {
-              label: "Quintel",
-              href: "https://quintel.com",
-            },
-          ],
-        },
-        {
-          title: "Social",
-          items: [
-            {
               label: "GitHub",
               href: "https://github.com/quintel",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/ETM_Quintel",
             },
           ],
         },
