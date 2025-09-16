@@ -104,7 +104,7 @@ Below the process for the **simulated end year** is described.
     * _medium insulation_: '1965-1984' and '1985-2004' residences 
     * _low insulation_: '1945-1964' and 'before 1945' residences. 
 
-The ETM thus contains 14 heat demand profiles in all. See [the ETDataset repository](https://github.com/quintel/etdataset-public/tree/master/curves/demand/) for details on these profiles.
+The ETM thus contains 12 heat demand profiles in all. See [the ETDataset repository](https://github.com/quintel/etdataset-public/tree/master/curves/demand/) for details on these profiles.
 
 **Hourly supply** is based on the heat capacities of all available heating technologies. The heat capacity of each technology, measured in kW, represents the maximum amount of heat a technology can provide at a given moment. These heat capacities are only user-adjustable for space heating in households, under the [Households merit order](https://energytransitionmodel.com/scenario/demand/households_heating_order/capacities) section.
 

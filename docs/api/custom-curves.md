@@ -9,7 +9,9 @@ import ApiEndpoint from '@site/src/components/ApiEndpoint';
 
 Curves are used extensively within the ETM to control the behavior of various technologies. Most these curves vary depending on the region selected for a scenario, while others are generated dynamically based on choices made by the end-user.
 
-In some cases it's possible for a user to upload a custom curve, which will be used instead of the defaults. For example, uploading a curve to change the price of imported electricity changes when it is profitable to import electricity rather than generating it domestically. Read more about modifiable curves and the different types of curves [here](/main/curves/#modifying-profiles). 
+In some cases it's possible for a user to upload a custom curve, which will be used instead of the defaults. For example, uploading a curve to change the price of imported electricity changes when it is profitable to import electricity rather than generating it domestically.
+
+In the model front-end, curves are known as profiles. Read more about modifiable profiles and the different types of profiles [here](/main/profiles/#custom-profiles). 
 
 ## The Curve object
 
@@ -42,7 +44,7 @@ The API allows you to customise a number of curves used by the model's hourly ca
 
 ### Curve types
 
-The curve type is part of the API response which describes the way the uploaded curve will be processed prior to use in a scenario. Read more about the different curve types in the documentation about [modifiable curves](/main/curves/#modifying-profiles). A brief description is provided here:
+The curve type is part of the API response which describes the way the uploaded curve will be processed prior to use in a scenario. Read more about the different curve types in the documentation about [modifiable curves](/main/profiles#types-of-profiles). A brief description is provided here:
 
 * `price` – Donates that the curve is a price curve. The provided file should contain 8,760 numeric values representing euros and cents, without any currency formatting. You may also provide an exported price curve from the Energy Transition Model (a comma-separated file with a "price" column). Each hourly value is rounded to the nearest cent.
 * `profile` – The curve is a load profile and should contain 8,760 numeric values. The values themselves are not important as the curve will be normalized by the model to represent the shape of demand.

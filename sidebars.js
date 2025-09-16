@@ -51,7 +51,6 @@ module.exports = {
                 "main/electricity-conversion",
                 "main/electricity-storage",
                 "main/hybrid-offshore-wind",
-                "main/dynamic-demand-curve",
                 "main/battery-forecasting",
                 "main/loss-of-load-expectation",
                 "main/network",
@@ -60,7 +59,7 @@ module.exports = {
             {
               Heat: ["main/heat-networks", "main/heat-pumps", "main/residual-heat-industry"],
             },
-            "main/curves",
+            "main/profiles",
             "main/weather-conditions",
             "main/outdoor-temperature",
           ],
