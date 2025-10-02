@@ -6,6 +6,8 @@ This repository contains the source for the [ETM Docs website](https://docs.ener
 
 ## Adding documentation
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9e5b10b2-ba1d-4843-a609-c3e43031f58f/deploy-status)](https://app.netlify.com/projects/etm-docs/deploys)
+
 Please see [the published documentation](https://docs.energytransitionmodel.com/contrib/authoring-docs) for details on how to add, change, and remove documents ([in-repo link](https://github.com/quintel/documentation/blob/docusaurus/docs/contrib/authoring-docs.md)).
 
 ## Installation
