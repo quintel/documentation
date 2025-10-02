@@ -117,13 +117,13 @@ module.exports = {
       collapsed: true,
       items: [
         "main/pyetm/introduction",
-        "main/pyetm/reporting",
-        "main/pyetm/creating-and-updating"
+        "main/pyetm/notebooks",
+        "main/pyetm/contributor-docs"
       ],
     },
     {
       type: "category",
-      label: "5. Scenario-tools #TODO retireme",
+      label: "5. Scenario-tools",
       collapsed: true,
       items: [
         "main/scenario-tools/introduction",
