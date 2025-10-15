@@ -60,8 +60,28 @@ back to Excel format.
 3. Run through the notebook cells to see the complete workflow
 4. Specify where to export your 'outputs'.
 
-Note: The exports and curves contribute to longer processing times. If you are only interested in updating inputs
+**Note:** The exports and curves contribute to longer processing times. If you are only interested in updating inputs
 then exclude them from your outputs.
+
+### About the Excel
+Specify scenario inputs with one scenario on each row.
+In the MAIN sheet:
+- short_name: The short name you can use to specify slider settings for the scenario. The short name
+will also show up in pyetm as the identifier for your scenario.
+- scenario_id: If you are loading an existing scenario from the ETM, specify the id here.
+- template: This field is not yet implemented.
+- title: The title of your scenario. This will be set in the metadata of the scenario.
+- description: The description of your scenario. This will be set in the metadata of the scenario.
+- area_code: If you are creating a scenario, this field is required. Determines the base area for your
+scenario.
+- end_year: If you are creating a scenario, this field is required. Determines the end year for your
+scenario.
+- private: Defaults to false. Set to true if you don't want others to access your scenario.
+- custom_curves: Specify the name of the tab where you have put the custom curves for upload. Can be left blank.
+- sortables: Specify the name of the tab where you have put the sortables for upload. Can be left blank.
+
+In the EXPORT_CONFIG sheet:
+Set each of the options to TRUE or FALSE depending on if you want them to be included in the export to excel.
 
 ---
 

@@ -123,7 +123,7 @@ module.exports = {
     },
     {
       type: "category",
-      label: "5. Scenario-tools",
+      label: "6. Scenario-tools",
       collapsed: true,
       items: [
         "main/scenario-tools/introduction",
@@ -140,17 +140,17 @@ module.exports = {
     },
     {
       type: "link",
-      label: "6. For Contributors",
+      label: "7. For Contributors",
       href: "/contrib/intro",
     },
     {
       type: "link",
-      label: "7. API Reference",
+      label: "8. API Reference",
       href: "/api/intro",
     },
     {
       type: "category",
-      label: "8. External Models",
+      label: "9. External Models",
       collapsed: true,
       items: ["main/external-coupling"],
     },
