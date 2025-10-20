@@ -50,6 +50,14 @@ Open the "commits.yml" file to find instructions on adding commits and specifyin
 
 The migration file which ends with ".rb" generally does not need to be edited. However, this will be necessary if you wish to add new datasets. In that case, open the migration file and see the documentation for the `create_missing_datasets: true` option. If you use this option be sure that your CSV file contains all the attributes needed to create a fully functional dataset.
 
+### Parent datasets
+
+Datasets may inherit from other datasets. When inheriting, if a dataset does not specify an attribute
+explicitly, it will take that attribute from its 'parent'. The parent dataset can be assigned via a data
+migration by assigning the `parent` field. The `parent` field must be assigned with the parent's geo_id + name,
+concatenated with an underscore. For example, `PV26_utrecht`.
+
+
 ## Running the migration
 
 ```sh
