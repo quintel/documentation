@@ -15,20 +15,19 @@ This page provides an overview of the modelled liquid fuel production processes,
 | Proces | Feedstock input | Fuel output | Additional remarks|
 |--------|------------|--------------|-------------------|
 | **Oil refineries** | Crude oil | Diesel, gasoline, LPG, kerosene, heavy fuel oil (HFO), naphtha, other oil products, refinery gas | Output fractions based on refinery archetype if no refinery in start year |
-| **Fischer-Tropsch** | Hydrogen, electricity, CO<sub>2</sub> | Kerosene (main), naphtha | No diesel output (causes circularity); kerosene/naphtha fractions increased proportionally |
-| | Non-biogenic waste | Kerosene (main), diesel, naphtha | CO<sub>2</sub> emissions captured by default |
-| | Biogenic waste | Biokerosene (main), biodiesel, bionaphtha | CO<sub>2</sub> emissions captured by default; captured emissions are counted as negative emissions |
-| | Dry biomass | Biokerosene (main), biodiesel, bionaphtha | CO<sub>2</sub> emissions captured by default; captured emissions are counted as negative emissions |
+| **Fischer-Tropsch** | Hydrogen, electricity, CO<sub>2</sub> | Kerosene (main product), naphtha |Exception: no diesel output (causes incalculable circularity in the model). Kerosene/naphta output increased proportionally.|
+| | Non-biogenic waste | Kerosene (main product), diesel, naphtha | CO<sub>2</sub> emissions captured by default |
+| | Biogenic waste | Biokerosene (main product), biodiesel, bionaphtha | CO<sub>2</sub> emissions captured by default|
+| | Dry biomass | Biokerosene (main product), biodiesel, bionaphtha | CO<sub>2</sub> emissions captured by default|
 | **Methanol synthesis** | Hydrogen, electricity, CO<sub>2</sub> | Methanol | - |
 |  | Non-biogenic waste | Methanol | CO<sub>2</sub> emissions captured by default |
-| | Biogenic waste | Biomethanol | CO<sub>2</sub> emissions captured by default; captured emissions are counted as negative emissions |
-| | Dry biomass | Biomethanol | CO<sub>2</sub> emissions captured by default; captured emissions are couned as negative emissions |
-| **Pyrolysis oil fractionation** | Pyrolysis oil (non-biogenic), hydrogen | Diesel, gasoline | Local pyrolysis oil production from non-biogenic waste can be substituted by import |
-| **Pyrolysis bio-oil fractionation** | Pyrolysis bio-oil (biogenic), hydrogen | Biodiesel, bioethanol* | *Actual output is biogasoline but modeled as bioethanol; local production can be substituted by import |
-| **Hydrotreatment to HVO (biokerosene)** | Oily biomass, hydrogen, network gas | Biokerosene (main), bionaphtha | Other smaller output fractions not modeled |
-| **Hydrotreatment to HVO (biodiesel)** | Oily biomass, hydrogen | Biodiesel (main), bionaphtha | ther smaller output fractions not modeled|
-| **Bio-ethanol fermentation** | Wet biomass, network gas | Bio-ethanol | Distillers' dried grains (DDG) output not modeled, considered as loss |
-| **Bio-ethanol-to-jet** | Bio-ethanol, hydrogen | Biokerosene (main), biodiesel | Biogasoline also produced but not modeled; biokerosene & biodiesel fractions increased proportionally |
-| **Methanol-to-jet** | Methanol, hydrogen | Kerosene (main), gasoline | Light gases mixture by-product not modeled; kerosene & gasoline fractions increased proportionally |
-| **Biomethanol-to-jet** | Biomethanol, hydrogen | Biokerosene (main), bio-ethanol* | *Actual output is biogasoline but modeled as bioethanol; light gases by-product not modeled; kerosene & gasoline fractions increased proportionally |
-
+| | Biogenic waste | Biomethanol | CO<sub>2</sub> emissions captured by default|
+| | Dry biomass | Biomethanol | CO<sub>2</sub> emissions captured by default|
+| **Pyrolysis oil fractionation** | Pyrolysis oil (non-biogenic), hydrogen | Diesel, gasoline | - |
+| **Pyrolysis bio-oil fractionation** | Pyrolysis bio-oil (biogenic), hydrogen | Biodiesel, bioethanol* | *Actual output is biogasoline but modeled as bioethanol|
+| **Hydrotreatment to HVO (biokerosene)** | Oily biomass, hydrogen, network gas | Biokerosene (main product), bionaphtha | Other smaller output fractions not modeled; biokerosene/bionaphtha output increased proportionally instead |
+| **Hydrotreatment to HVO (biodiesel)** | Oily biomass, hydrogen | Biodiesel (main product), bionaphtha | ther smaller output fractions not modeled; biokerosene/bionaphtha output increased proportionally instead |
+| **Bio-ethanol fermentation** | Wet biomass, network gas | Bio-ethanol | output of DDG not modeled, but considered as loss |
+| **Bio-ethanol-to-jet** | Bio-ethanol, hydrogen | Biokerosene (main product), biodiesel | Biogasoline also produced but not modeled; biokerosene & biodiesel fractions increased proportionally |
+| **Methanol-to-jet** | Methanol, hydrogen | Kerosene (main product), gasoline | Light gases mixture by-product not modeled; kerosene & gasoline fractions increased proportionally |
+| **Biomethanol-to-jet** | Biomethanol, hydrogen | Biokerosene (main product), bio-ethanol* | *Actual output is biogasoline but modeled as bioethanol; light gases by-product not modeled; kerosene & gasoline fractions increased proportionally |
