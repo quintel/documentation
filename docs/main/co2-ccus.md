@@ -36,7 +36,7 @@ Currently, it is assumed that all additional energy for carbon capture is electr
 :::info Gasification processes in liquid fuels production
 All gasification-based processes for liquid fuel production (Fischer-Tropsch and methanol synthesis using non-biogenic waste, biogenic waste, or dry biomass) include CCS by default. Currently, there is no option in the ETM to operate these gasification processes without carbon capture and storage.
 
-See the ['Liquid fuels and feedstock'](liquid-fuels.md) section for more information on these processes.
+See the [Liquid fuels and feedstock](liquid-fuels.md) section for more information on these processes.
 :::
 
 ### Power sector
@@ -61,9 +61,8 @@ Carbon import can be an interesting business case for countries that have a prop
 Captured CO<sub>2</sub> can be used in multiple ways. The ETM currently offers the following applications:
 
 * [Offshore storage](#storage)
-* Feedstock for [synthetic methanol](#synthetic-methanol)
-* Feedstock for [synthetic kerosene](#synthetic-kerosene)
-* ['Other'](#other-utilisation) utilisation
+* [Other](#other-utilisation) utilisation
+* [Synthetic liquid fuels](#synthetic-liquid-fuels)
 
 ### Storage
 CO<sub>2</sub> captured in the previous section can be stored long term ('sequestered'), typically in an underground geological formation. The ETM models offshore sequestration in empty oil or gas fields. You can set the amount of CO<sub>2</sub> that is stored annually.
@@ -75,19 +74,20 @@ The maximum storage per year varies per region in the ETM and is based on public
 Please note: For some regions, no data could be found on storage potentials. An overview of the research used can be found on
 [ETDataset](https://github.com/quintel/etdataset-public/blob/master/source_analyses/eu/2015/11_area/11_ccs_offshore_storage_potential_per_year.xls).
 
-### Synthetic liquid fuels
-Captured CO<sub>2</sub> can be re-used to produce synthetic liquid fuels and feedstocks through Fischer-Tropsch synthesis and methanol synthesis. These processes use CO<sub>2</sub>, hydrogen, and electricity as inputs to create products such as kerosene, methanol, diesel, and naphtha. The ETM accounts for all input requirements as well as the investment and O&M costs associated with production.
-
-For fischer-tropsch must-run and dispatchable production routes are available. Dispatchable production is electricity price-driven and capacity is set in electric input capacity (MWe). See the [Electricity conversion](electricity-conversion) page for more information. Must-run production is set as yearly output in PJ.
-
-_See the ['Liquid fuels and feedstock'](liquid-fuels.md) section for detailed information on all liquid fuel production processes._
-
-_Note: Synthetic fuel production does not automatically affect conventional production in the refineries or chemicals sectors. Users can adjust conventional production in the respective [Refineries](https://energytransitionmodel.com/scenario/demand/industry/refineries) and [Chemicals](https://energytransitionmodel.com/scenario/demand/industry/chemicals) sections._
 
 ### Other utilisation
 Finally, you can set the amount of CO<sub>2</sub> used for 'other utilisation' purposes. This includes all applications that are currently not modelled explicitly in the ETM. Examples include utilisation of CO<sub>2</sub> as a propellant gas for beer and soda production or for the cultivation of crops in greenhouses. CO<sub>2</sub> emitted by the fertilizers industry sector can also be captured and used to produce urea, which is used as an animal feed additive and fertilizer.
 
 In many cases, utilising CO<sub>2</sub> does not reduce emission, but only delays it. Therefore, the amount of CO<sub>2</sub> set with this slider is included in the total emissions of your scenario by default. It is however also possible to delay part of these emissions indefinitely, in which case they are excluded from the total emissions. You can set this share in the [Greenhouse gases](https://energytransitionmodel.com/scenario/emissions/other_emissions/delayed-emissions) section.
+
+### Synthetic liquid fuels
+_Note: Users can adjust the production of synthetic fuels in the [liquid fuels and feedstock](https://energytransitionmodel.com/scenario/supply/fuel_production/overview) section in the ETM.
+See the [Liquid fuels and feedstock](liquid-fuels.md) section in the documentation for detailed information on all liquid fuel production processes._
+
+Captured CO<sub>2</sub> can be re-used to produce synthetic liquid fuels and feedstocks through Fischer-Tropsch synthesis and methanol synthesis. These processes use CO<sub>2</sub>, hydrogen, and electricity as inputs to create products such as kerosene, methanol, diesel, and naphtha. The ETM accounts for all input requirements as well as the investment and O&M costs associated with production.
+
+For fischer-tropsch must-run and dispatchable production routes are available. Dispatchable production is electricity price-driven and capacity is set in electric input capacity (MWe). See the [Electricity conversion](electricity-conversion) page for more information. Must-run production is set as yearly output in PJ.
+
 
 ## Supply and demand of carbon
 The ETM keeps track of all 'supply' of carbon (capture) and all 'demand' of carbon (utilisation and storage). This is summarised in the chart below:
