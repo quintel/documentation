@@ -4,7 +4,7 @@ sidebar_label: Capture, utilisation and storage
 ---
 Carbon capture, utilisation and storage (CCUS) is an emissions reduction technology that can be applied across the energy system. This article describes the CCUS features in the ETM.
 
-You can make choices regarding the application of carbon [capture](#capture), what [happens](#utilisation-and-storage) to this captured carbon, how it is [transported](#transport) and the [costs](#costs) associated with it. 
+You can make choices regarding the application of carbon [capture](#capture), what [happens](#utilisation-and-storage) to this captured carbon, how it is [transported](#transport) and the [costs](#costs) associated with it.
 
 _Checkout: the [negative emissions](co2-negative-emissions) infopage for more information on negative emissions as an effect of CCUS._
 
@@ -31,12 +31,18 @@ Thirdly, capture potentials can vary per the region chosen in the ETM. More info
 
 The ETM takes into account the energy requirements of carbon capture technology. To extract CO<sub>2</sub> from industrial process and combustion emissions, electricity and heat are needed. The amount of energy used varies per subsector and at what stage CO<sub>2</sub> is captured.
 
-Currently, it is assumed that all additional energy for carbon capture is electric, also for heat production.  
+Currently, it is assumed that all additional energy for carbon capture is electric, also for heat production.
+
+:::info Gasification processes in liquid fuels production
+All gasification-based processes for liquid fuel production (Fischer-Tropsch and methanol synthesis using non-biogenic waste, biogenic waste, or dry biomass) include CCS by default. Currently, there is no option in the ETM to operate these gasification processes without carbon capture and storage.
+
+See the ['Liquid fuels and feedstock'](liquid-fuels.md) section for more information on these processes.
+:::
 
 ### Power sector
 Per plant type, you can set the share of installed capacity equipped with carbon capture technology. For example, if installed capacity for pulverised coal power plants is 500 MW, a slider setting of 50% means that 250 MW has a carbon capture unit.
 
-Installing carbon capture units leads to higher investment costs, as well as higher operation and maintenance costs (O&M). In addition, the efficiency of the plant goes down to cover the additional energy required to capture the CO<sub>2</sub>. The higher O&M and lower efficiency means that the marginal costs of the plant goes up. This may affect the plant's position in the [merit order](merit-order.md) of the power market and hence its number of full load hours. For biomass-fired power plants specifically, it is possible to sell captured biogenic CO<sub>2</sub> which in turn can lower the plant's marginal costs. 
+Installing carbon capture units leads to higher investment costs, as well as higher operation and maintenance costs (O&M). In addition, the efficiency of the plant goes down to cover the additional energy required to capture the CO<sub>2</sub>. The higher O&M and lower efficiency means that the marginal costs of the plant goes up. This may affect the plant's position in the [merit order](merit-order.md) of the power market and hence its number of full load hours. For biomass-fired power plants specifically, it is possible to sell captured biogenic CO<sub>2</sub> which in turn can lower the plant's marginal costs.
 
 The energy requirements are modelled as a lower output efficiency of the plant. This means that more coal or gas input is required to produce the same amount of electricity as a regular plant without capture unit.
 
@@ -69,21 +75,14 @@ The maximum storage per year varies per region in the ETM and is based on public
 Please note: For some regions, no data could be found on storage potentials. An overview of the research used can be found on
 [ETDataset](https://github.com/quintel/etdataset-public/blob/master/source_analyses/eu/2015/11_area/11_ccs_offshore_storage_potential_per_year.xls).
 
-### Synthetic methanol
-Rather than storing captured CO<sub>2</sub> (semi) permanently, it can also be re-used for various purposes. One application modelled in the ETM is the production of synthetic methanol. The user can set the amount of methanol produced in the future.
+### Synthetic liquid fuels
+Captured CO<sub>2</sub> can be re-used to produce synthetic liquid fuels and feedstocks through Fischer-Tropsch synthesis and methanol synthesis. These processes use CO<sub>2</sub>, hydrogen, and electricity as inputs to create products such as kerosene, methanol, diesel, and naphtha. The ETM accounts for all input requirements as well as the investment and O&M costs associated with production.
 
-Methanol is one of the most widely used base chemicals in the chemical industry sector. For example, it is used for the production of plastics and polyester. In addition, methanol can be used as a fuel.
+For fischer-tropsch must-run and dispatchable production routes are available. Dispatchable production is electricity price-driven and capacity is set in electric input capacity (MWe). See the [Electricity conversion](electricity-conversion) page for more information. Must-run production is set as yearly output in PJ.
 
-Synthetic methanol is made of CO<sub>2</sub>, hydrogen and electricity. The ETM takes all three into account, as well as the investment and O&M costs associated with its production.
+_See the ['Liquid fuels and feedstock'](liquid-fuels.md) section for detailed information on all liquid fuel production processes._
 
-_Note: The production of synthetic methanol does not (automatically) affect the production of methanol and other chemical products in the conventional chemical industry sector. You can make choices about this themselves in the [Chemicals](https://energytransitionmodel.com/scenario/demand/industry/chemicals) section._
-
-### Synthetic kerosene
-Similar to synthetic methanol, captured CO<sub>2</sub> can be used to produce kerosene, which can subsequently serve as transport fuel in the aviation sector. The ETM takes the CO<sub>2</sub>, hydrogen and electricity requirements for producing kerosene into account, as well as the investment and O&M costs associated with its production. 
-
-There are two production routes for synthetic kerosene in the ETM, must-run and dispatchable. The dispatchable production is flexible following the electricity price, therefore the capacity is set in the electric input capacity in MWe. See the [Electricity conversion](electricity-conversion) page for more information. The must-run production is set as the yearly supply of kerosene in PJ.
-
-Please note: The production of synthetic kerosene does not (automatically) affect the production of fossil kerosene in the conventional refineries sector. Users can make choices about this themselves in the [Refineries](https://energytransitionmodel.com/scenario/demand/industry/refineries) section.
+_Note: Synthetic fuel production does not automatically affect conventional production in the refineries or chemicals sectors. Users can adjust conventional production in the respective [Refineries](https://energytransitionmodel.com/scenario/demand/industry/refineries) and [Chemicals](https://energytransitionmodel.com/scenario/demand/industry/chemicals) sections._
 
 ### Other utilisation
 Finally, you can set the amount of CO<sub>2</sub> used for 'other utilisation' purposes. This includes all applications that are currently not modelled explicitly in the ETM. Examples include utilisation of CO<sub>2</sub> as a propellant gas for beer and soda production or for the cultivation of crops in greenhouses. CO<sub>2</sub> emitted by the fertilizers industry sector can also be captured and used to produce urea, which is used as an animal feed additive and fertilizer.
@@ -95,7 +94,7 @@ The ETM keeps track of all 'supply' of carbon (capture) and all 'demand' of carb
 
 ![Supply and demand of carbon](/img/docs/ccus_supply_demand_mekko.png)
 
-You can make choices about the supply and demand independently. The ETM registers a carbon 'surplus/export' in case more carbon is captured than is stored or utilised. Vice versa, a 'deficit/import' occurs when less carbon is captured than used for storage and utilisation. 
+You can make choices about the supply and demand independently. The ETM registers a carbon 'surplus/export' in case more carbon is captured than is stored or utilised. Vice versa, a 'deficit/import' occurs when less carbon is captured than used for storage and utilisation.
 
 ## Transport
 Carbon can be transported in two different ways in the ETM:
