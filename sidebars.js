@@ -41,7 +41,7 @@ module.exports = {
           Demand: ["main/demand", "main/heat-built-environment"],
         },
         {
-          Supply: ["main/supply", "main/balancing-demand", "main/hydrogen", "main/biomass"],
+          Supply: ["main/supply", "main/balancing-demand", "main/hydrogen","main/liquid-fuels", "main/biomass"],
         },
         {
           Flexibility: [
