@@ -29,7 +29,7 @@ _See the ['District heating'](https://docs.energytransitionmodel.com/main/heat-n
 In the hydrogen section you can specify how hydrogen is produced in the future. The ETM offers a wide array of production routes, both dispatchable or must-run. Excess hydrogen can be stored via the storage technologies. For more information checkout the [Hydrogen](hydrogen.md) section.
 
 ## Liquid fuels
-The liquid fuels section allows you to model the production of transportation fuels and chemical feedstocks through various conversion processes. These include conventional oil refineries as well as advanced processes such as Fischer-Tropsch synthesis, methanol synthesis, pyrolysis oil fractionation, hydrotreatment to HVO, and various fuel-to-jet conversion technologies. Each process converts different feedstocks—ranging from crude oil and biomass to hydrogen and CO₂—into products like diesel, kerosene, methanol, and naphtha. The model accounts for both biogenic and synthetic fuel production pathways, including CO₂ capture where applicable.
+The liquid fuels section allows you to model the production of transportation fuels and chemical feedstocks through various conversion processes. These include conventional oil refineries as well as advanced processes such as Fischer-Tropsch synthesis, methanol synthesis, pyrolysis oil fractionation, hydrotreatment to HVO, and various fuel-to-jet conversion technologies. Each process converts different feedstocks—ranging from crude oil and biomass to hydrogen and CO₂—into products like diesel, kerosene, methanol, and naphtha.
 
 _See the ['Liquid fuels and feedstock'](liquid-fuels.md) section for more information._
 
