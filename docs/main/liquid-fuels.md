@@ -4,13 +4,14 @@ title: Liquid fuels and feedstock
 
 ### Introduction
 
-The ETM can model various processes for producing liquid fuels and feedstocks, ranging from conventional oil refining to advanced synthetic fuel production. These processes convert different types of feedstock (including crude oil, biomass, waste streams, hydrogen, and CO₂) into transportation fuels and chemical feedstocks such as diesel, kerosene, methanol, and naphtha.
+The ETM can model various processes for producing liquid fuels and feedstock, ranging from conventional oil refining to advanced synthetic fuel production. These processes convert different types of feedstock (including crude oil, biomass, waste streams, hydrogen and CO₂) into transportation fuels and chemical feedstocks such as diesel, kerosene, methanol and naphtha. The processes for liquid fuels and feedstock production can be set in the [liquid fuels and feedstock](https://energytransitionmodel.com/scenario/supply/fuel_production/overview) section of the ETM. 
 
-The model includes both established technologies like oil refineries and bio-ethanol fermentation, as well as emerging technologies such as Fischer-Tropsch synthesis, hydrotreatment of vegetable oils (HVO), and various fuel-to-jet conversion processes. Each process has specific input requirements and output product distributions that affect the overall energy system.
+The various processes have specific feedstock input and output products. For some processes, different feedstock routes can be set (such as for Fischer-Tropsch), which affects the output products from the process.
 
-This page provides an overview of the modelled liquid fuel production processes, their feedstock inputs, fuel outputs, and important modeling considerations.
+This page provides an overview of the modelled liquid fuel production processes, the possible feedstock input routes, fuel outputs and remarks on important modeling considerations.
 
 ### Overview of processes
+In the table below, the various production processes for liquid fuel and feedstock production are summarised. Note that remarks are provided about how the processes are modelled. The slider texts in the [liquid fuels and feedstock](https://energytransitionmodel.com/scenario/supply/fuel_production/overview) section give more information about modelling considerations and technical and financial specifications of each process. 
 
 | Proces | Feedstock input | Fuel output | Additional remarks|
 |--------|------------|--------------|-------------------|
