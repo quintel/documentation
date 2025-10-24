@@ -28,10 +28,8 @@ _See the ['District heating'](https://docs.energytransitionmodel.com/main/heat-n
 ## Hydrogen
 In the hydrogen section you can specify how hydrogen is produced in the future. The ETM offers a wide array of production routes, both dispatchable or must-run. Excess hydrogen can be stored via the storage technologies. For more information checkout the [Hydrogen](hydrogen.md) section.
 
-## Liquid fuels
-The liquid fuels section allows you to model the production of transportation fuels and chemical feedstocks through various conversion processes. These include conventional oil refineries as well as advanced processes such as Fischer-Tropsch synthesis, methanol synthesis, pyrolysis oil fractionation, hydrotreatment to HVO, and various fuel-to-jet conversion technologies. Each process converts different feedstocks—ranging from crude oil and biomass to hydrogen and CO₂—into products like diesel, kerosene, methanol, and naphtha.
-
-_See the ['Liquid fuels and feedstock'](liquid-fuels.md) section for more information._
+## Liquid fuels and feedstock
+In this section, the production of liquid fuels and feedstock from various processes can be set. Produced products can be used as transport fuel or as feedstock in the chemical sector. Processes include conventional oil refineries as well as advanced processes such as Fischer-Tropsch, methanol synthesis, pyrolysis and pyrolysis oil fractionation and methanol-to-jet. Go to the [Liquid fuels and feedstock](liquid-fuels.md) section for more information.
 
 ## Biomass
 In the biomass section you can choose how much biomass should be used as green gass in the gas network or production, or as bio-coal or -oil in energy plants. Furthermore, you can specify the total amount of biomass available in your scenario region by adjusting the sliders in the ‘potential of biomass’ section. Since biomass emissions are officially not considered in the EU you have the possibility to change this in the ‘CO<sub>2</sub> emissions of biomass’ section.
