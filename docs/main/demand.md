@@ -25,7 +25,7 @@ In the Households section the demand for energy in households is specified. The 
 The Buildings section contains all non-residential buildings in the services sector. This includes office buildings, schools and hospitals. Similar to the Households section, the focus lies on heating, cooling, ventilation, insulation, lighting and roof top solar PV.
 
 ## Transport
-The Transport section contains four sub-sections: Passenger transport, Freight transport, International transport, and Transport fuels. In the main Transport section you can adjust the efficiency improvements of different transport technologies. In the specific sub-sections you can adjust the type of technology and the fuels that are used. Emissions from international transport is not accounted for in your scenario but you can adjust this in the international transport sub-section.
+The Transport section contains four sub-sections: Passenger transport, Freight transport, International transport and Transport fuels. In the specific sub-sections, the type of technology and the transport fuels that are used can be changed. Emissions from international transport are by default not accounted for; this assumption can be changed in the international transport sub-section.
 
 ## Industry
 The Industry section contains the economic sector 'industry' as well as the energy sector (mining and refining). The industry sector is divided into twelve sub-sectors which are involved with. 

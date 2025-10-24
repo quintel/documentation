@@ -9,9 +9,9 @@ You can make choices regarding the application of carbon [capture](#capture), wh
 _Checkout: the [negative emissions](co2-negative-emissions) infopage for more information on negative emissions as an effect of CCUS._
 
 ## Capture and import
-The ETM models five types of carbon supply:
+The ETM models five types of sources for supply of CO<sub>2</sub>:
 * Capture in [industry](#industry)
-* Capture in the [power sector](#power-sector)
+* Capture in the [energy sector](#energy-sector)
 * Capture in [hydrogen production](#hydrogen-production)
 * [Direct Air Capture](#direct-air-capture)
 * Import of CO<sub>2</sub>
@@ -31,20 +31,18 @@ Thirdly, capture potentials can vary per the region chosen in the ETM. More info
 
 The ETM takes into account the energy requirements of carbon capture technology. To extract CO<sub>2</sub> from industrial process and combustion emissions, electricity and heat are needed. The amount of energy used varies per subsector and at what stage CO<sub>2</sub> is captured.
 
-Currently, it is assumed that all additional energy for carbon capture is electric, also for heat production.
-
-:::info Gasification processes in liquid fuels production
-All gasification-based processes for liquid fuel production (Fischer-Tropsch and methanol synthesis using non-biogenic waste, biogenic waste, or dry biomass) include CCS by default. Currently, there is no option in the ETM to operate these gasification processes without carbon capture and storage.
-
-See the [Liquid fuels and feedstock](liquid-fuels.md) section for more information on these processes.
-:::
-
-### Power sector
+### Energy sector
 Per plant type, you can set the share of installed capacity equipped with carbon capture technology. For example, if installed capacity for pulverised coal power plants is 500 MW, a slider setting of 50% means that 250 MW has a carbon capture unit.
 
 Installing carbon capture units leads to higher investment costs, as well as higher operation and maintenance costs (O&M). In addition, the efficiency of the plant goes down to cover the additional energy required to capture the CO<sub>2</sub>. The higher O&M and lower efficiency means that the marginal costs of the plant goes up. This may affect the plant's position in the [merit order](merit-order.md) of the power market and hence its number of full load hours. For biomass-fired power plants specifically, it is possible to sell captured biogenic CO<sub>2</sub> which in turn can lower the plant's marginal costs.
 
 The energy requirements are modelled as a lower output efficiency of the plant. This means that more coal or gas input is required to produce the same amount of electricity as a regular plant without capture unit.
+
+:::info CCS for liquid fuel production technologies
+For the liquid fuel production technologies Fischer-Tropsch and methanol synthesis, it is assumed by default that CCS is applied in the gasification process of the feedstock. Specifically, this is the case for Fischer-Tropsch and methanol synthesis via non-biogenic waste, biogenic waste and dry biomass. Production of these technologies can be set in the [Liquid fuels and feedstock](https://energytransitionmodel.com/scenario/supply/fuel_production/overview) section. In contrast to other CCS technologies, there are no sliders available in the CCUS section to set the share of installed capacity equipped with CCS since these processes are not modelled without CCS.
+
+See the [Liquid fuels and feedstock](liquid-fuels.md) documentation page for more information on these processes.
+:::
 
 ### Hydrogen production
 CO<sub>2</sub> capture at hydrogen production plants works in a similar way as the power sector. The main difference is that for hydrogen, plants are assumed to have fixed full load hours. In other words, there is no 'merit order' that determines which plants produces when. As such, the additional (marginal) costs caused by the capture unit do lead to higher total costs, but do not affect the number of full load hours of the plant.
@@ -61,7 +59,7 @@ Carbon import can be an interesting business case for countries that have a prop
 Captured CO<sub>2</sub> can be used in multiple ways. The ETM currently offers the following applications:
 
 * [Offshore storage](#storage)
-* [Other](#other-utilisation) utilisation
+* [Other utilisation](#other-utilisation) 
 * [Synthetic liquid fuels](#synthetic-liquid-fuels)
 
 ### Storage
@@ -81,13 +79,9 @@ Finally, you can set the amount of CO<sub>2</sub> used for 'other utilisation' p
 In many cases, utilising CO<sub>2</sub> does not reduce emission, but only delays it. Therefore, the amount of CO<sub>2</sub> set with this slider is included in the total emissions of your scenario by default. It is however also possible to delay part of these emissions indefinitely, in which case they are excluded from the total emissions. You can set this share in the [Greenhouse gases](https://energytransitionmodel.com/scenario/emissions/other_emissions/delayed-emissions) section.
 
 ### Synthetic liquid fuels
-_Note: Users can adjust the production of synthetic fuels in the [liquid fuels and feedstock](https://energytransitionmodel.com/scenario/supply/fuel_production/overview) section in the ETM.
-See the [Liquid fuels and feedstock](liquid-fuels.md) section in the documentation for detailed information on all liquid fuel production processes._
+_Note: production of synthetic fuels can be set in the [liquid fuels and feedstock](https://energytransitionmodel.com/scenario/supply/fuel_production/overview) section in the ETM. See the [Liquid fuels and feedstock](liquid-fuels.md) section in the documentation for detailed information on all liquid fuel production processes._
 
-Captured CO<sub>2</sub> can be re-used to produce synthetic liquid fuels and feedstocks through Fischer-Tropsch synthesis and methanol synthesis. These processes use CO<sub>2</sub>, hydrogen, and electricity as inputs to create products such as kerosene, methanol, diesel, and naphtha. The ETM accounts for all input requirements as well as the investment and O&M costs associated with production.
-
-For fischer-tropsch must-run and dispatchable production routes are available. Dispatchable production is electricity price-driven and capacity is set in electric input capacity (MWe). See the [Electricity conversion](electricity-conversion) page for more information. Must-run production is set as yearly output in PJ.
-
+Captured CO<sub>2</sub> can be re-used to produce synthetic liquid fuels and feedstocks through Fischer-Tropsch and methanol synthesis. These processes use CO<sub>2</sub>, hydrogen and electricity as inputs to produce fuels and feedstock such as kerosene, methanol, diesel and naphtha. For Fischer-tropsch, baseoload and flexible production routes are available. Dispatchable production is electricity price-driven. See the [Electricity conversion](electricity-conversion) page for more information.
 
 ## Supply and demand of carbon
 The ETM keeps track of all 'supply' of carbon (capture) and all 'demand' of carbon (utilisation and storage). This is summarised in the chart below:
