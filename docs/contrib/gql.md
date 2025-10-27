@@ -784,6 +784,24 @@ SMOOTH_CURVE([3,2,4,3],2)
 => [3,2.5,3,3.5] --> Returns a different curve since the window_size is bigger.
 ```
 
+#### DATASET_CURVE(key)
+
+Loads a curve from the dataset by key. Returns an array of 8760 numeric values representing the curve.
+
+**Usage:**
+```ruby
+DATASET_CURVE('weather/air_temperature')
+# => [12.5, 12.3, 12.1, ...]
+
+DATASET_CURVE('total_demand')
+# => [1250.0, 1300.0, ...]
+```
+
+**The key can be:**
+- A curve set path, e.g. `'weather/air_temperature'`, `'solar/pv'`
+- A simple profile name, e.g. `'total_demand'`, `'buildings_heating'`
+- A user-attached curve (if configured)
+
 
 ### Helper functions
 
