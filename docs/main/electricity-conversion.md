@@ -28,7 +28,7 @@ See [Merit order](merit-order.md) for more information on the clearing of the de
 
 Electricity can be used to produce hydrogen through the electrolysis of water. The sustainability of hydrogen from power-to-gas therefore depends on the carbon intensity of the electricity used to produce. In the ETM, the hydrogen produced by power-to-gas will be supplied to the central hydrogen network.
 
-You can determine the installed capacity of onshore power-to-gas plants and their willingness to pay in the [Conversion to hydrogen](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-hydrogen) section. Additionally, it is possible to set installed capacity for an offshore electrolyser as part of a hybrid offshore wind hub. Capacity can be installed in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_net_load/hybrid-offshore-wind-components) section. See [Hybrid offshore wind](hybrid-offshore-wind) for more information. 
+You can determine the installed capacity of onshore power-to-gas plants and their willingness to pay in the [Conversion to hydrogen](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-hydrogen) section. Additionally, it is possible to set installed capacity for an offshore electrolyser as part of a hybrid offshore wind hub. Capacity can be installed in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_net_load/hybrid-offshore-wind-components) section. See [Hybrid offshore wind](hybrid-offshore-wind) for more information.
 
 :::info Hydrogen
 See [Hydrogen](hydrogen.md) for more information about the central hydrogen network; what other types of supply are available, where to set hydrogen demand and how the central hydrogen network is balanced.
@@ -47,6 +47,12 @@ In agriculture and industry, only electric boilers are available as a power-to-h
 
 You can determine the capacity of both the power-to-heat boilers and the heaters in the corresponding sectors under [Agriculture](https://energytransitionmodel.com/scenario/demand/agriculture/heat) or [Industry](https://energytransitionmodel.com/scenario/demand/industry/energy-demand-in-the-industry). The willingness to pay can be set under [Conversion to heat for agriculture](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-agriculture) or [Conversion to heat for industry](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-industry).
 
+In addition, the availability of power-to-heat technologies is determined by your thermostat setting and the outside air temperature. You can set a temperature setpoint that determines when the MT and HT power-to-heat technologies become available. When the outside air temperature rises above this setpoint, the power-to-heat technologies are unavailable.
+
+:::info Availability of power-to-heat
+To model availability more precisely, you can override the availability of each technology type — such as boilers, heat pumps, HT, and MT — by uploading hourly profiles in the [modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section. Each profile only overrides that technology’s availability. Setting all four availability curves does not disable the temperature setpoint slider in the interface, but it will render it ineffective.
+:::
+
 ### Power for synthetic kerosene production
 In the ETM, electricity can also be used for the production of synthetic kerosene. This kerosene is produced by combining electricity, hydrogen and CO2<sub>2</sub>. See the [Utilisation and storage of CO<sub>2</sub>](co2-ccus.md)page for more information.
 
@@ -57,5 +63,3 @@ Consumption by electricity storage technologies, also known as power-to-power, i
 
 ### Export
 Electricity can be exported to neighbouring countries through the interconnectors between these countries. The capacity of these interconnectors is limited and can be adjusted in the [Import/Export](https://energytransitionmodel.com/scenario/flexibility/electricity_import_export/interconnector-1) sub-section. The behaviour of export is then very similar to flexible electricity conversion technologies. The main difference is that the willingness to pay of export is given by the price of the interconnector, which represents the electricity price in the neighbouring country. In the Import/Export sub-section you can change this price or upload an hourly price curve to model the hourly electricity price in the neighbouring country.
-
-
