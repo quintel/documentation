@@ -11,7 +11,7 @@ The various processes have specific feedstock input and fuel output. For some pr
 This page provides an overview of the modelled liquid fuel production processes, the possible feedstock input routes, fuel outputs and remarks on important modeling considerations.
 
 ### Overview of processes
-In the table below, the various production processes for liquid fuel and feedstock production are summarised. Note that additional remarks are provided about how the processes are modelled. The slider texts in the [liquid fuels and feedstock](https://energytransitionmodel.com/scenario/supply/fuel_production/overview) section give more information about modelling considerations and technical and financial specifications of each process. 
+In the table below, the various production processes for liquid fuel and feedstock production are summarised. Note that additional remarks are provided about how the processes are modelled. The slider texts in the [Liquid fuels and feedstock](https://energytransitionmodel.com/scenario/supply/fuel_production/overview) section give more information about modelling considerations and technical and financial specifications of each process. 
 
 | Process | Feedstock input | Fuel output | Additional remarks|
 |--------|------------|--------------|-------------------|
