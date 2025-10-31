@@ -35,23 +35,22 @@ See [Hydrogen](hydrogen.md) for more information about the central hydrogen netw
 :::
 
 ### Power-to-heat
-In the ETM, electricity can be used to produce heat for either the district heating network or the industrial heat network. There are two power-to-heat technologies that can supply heat to the district heating network. Electric boilers directly use electricity to heat up water, while heat pumps use ambient heat as an additional input.
+In the ETM, electricity can be used to produce heat for the district heating network, the industrial steam network or in agriculture.
 
-You can determine the installed capacity of these power-to-heat technologies and their willingness to pay in the [Conversion to heat for district heating](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-district-heating) section.
-
-:::info Heat pumps
-See [Heat pumps](heat-pumps.md) for more details on how heat pumps work. For more information about the district heating and industrial heating networks, go to the [District heating](heat-networks.md) infopage.
-:::
-
-In agriculture and industry, only electric boilers are available as a power-to-heat technology. It is important to note that in the ETM, these boilers are fitted to existing natural gas or hydrogen heaters. These boilers are available for the agriculture sector and for the following industry sub sectors: refineries, chemical, food and paper.
-
-You can determine the capacity of both the power-to-heat boilers and the heaters in the corresponding sectors under [Agriculture](https://energytransitionmodel.com/scenario/demand/agriculture/heat) or [Industry](https://energytransitionmodel.com/scenario/demand/industry/energy-demand-in-the-industry). The willingness to pay can be set under [Conversion to heat for agriculture](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-agriculture) or [Conversion to heat for industry](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-industry).
-
-In addition, the availability of power-to-heat technologies is determined by your temperature setpoint and the outside air temperature. You can set a temperature setpoint that determines when the MT and HT power-to-heat technologies become available. When the outside air temperature rises above this setpoint, the power-to-heat technologies are unavailable.
+#### District heating network
+The installed capacity of the power-to-heat technologies for district heating can be set in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-district-heating) section. This is also where the willingness to pay can be set. For these technologies, the behaviour is not only price-dependent but also temperature-dependent, based on the temperatue cut-off:
+* In hours where the outside air temperature is above the temperature cut-off, the availability is set at 0%.
+* In hours where the outside air temperature is below the temperature cut-off, the availability is set at 100%.
 
 :::info Availability of power-to-heat
 To model availability more precisely, you can override the availability of each technology type — such as boilers, heat pumps, HT, and MT — by uploading hourly profiles in the [modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section. Each profile only overrides that technology’s availability. Setting all four availability curves does not disable the temperature setpoint slider in the interface, but it will render it ineffective.
 :::
+
+#### Industrial steam network
+For the industrial steam network, only electric boilers are available as a power-to-heat technology. These boilers are fitted to existing natural gas or hydrogen heaters. They are available for the industry sub sectors refineries, chemical, food and paper. The capacity of both the power-to-heat boilers and the heaters can be set in the sub sectors in the [Industry](https://energytransitionmodel.com/scenario/demand/industry/energy-demand-in-the-industry) section. The willingness to pay can be set in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-industry) section.
+
+#### Agriculture
+For agriculture, power-to-heat works the same as for the industrial steam network. These boilers are fitted to existing natural gas or hydrogen heaters. The capacity of both the power-to-heat boilers and the heaters can be set in the sub sectors in the [Agriculture](https://energytransitionmodel.com/scenario/demand/agriculture/heat) section. The willingness to pay can be set in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-heat-for-agriculture) section.
 
 ### Power for synthetic kerosene production
 In the ETM, electricity can also be used for the production of synthetic kerosene. This kerosene is produced by combining electricity, hydrogen and CO2<sub>2</sub>. See the [Utilisation and storage of CO<sub>2</sub>](co2-ccus.md)page for more information.
