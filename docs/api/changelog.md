@@ -5,6 +5,8 @@ sidebar_label: Change log
 
 import { ReleaseBadge, ProductionBadge, StagingBadge, UnreleasedBadge } from '@site/src/components/EnvBadge';
 
+> **Looking for deploy timing?** See our [Deploy Schedule](./intro.md#deploy-schedule) for details on when changes are released to each environment.
+
 While we endeavour not to change the API in a backwards-incompatible way, this is not always possible. This page contains a history of changes to the API.
 
 <dl>

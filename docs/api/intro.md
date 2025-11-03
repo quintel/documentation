@@ -80,6 +80,17 @@ We have no plans to delete scenarios from the staging server, but we reserve the
 
 The staging environment may occasionally be unavailable.
 
+### Deploy Schedule
+
+Our deploy schedule is matched to our way of working, which is in two-week sprints. Every two sprints
+(four weeks) on a Thursday, we deploy the changes on our **Staging** environment to **Production**.
+
+For more information about environments, see the [introduction to the API](./intro.md#environments). For a history of changes to the API, see the [change log](./changelog.md).
+
+#### 2025 Schedule:
+- 13th November
+- 11th December
+
 ## Response status codes
 
 As a REST API, the Energy Transition Model uses a range of status codes to indicate the success or failure of the request.
