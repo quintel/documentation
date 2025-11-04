@@ -1,5 +1,5 @@
 ---
-title: Saved scenario history
+title: Scenario history
 ---
 
 The ETM tracks history for saved scenarios. When a saved scenario is opened, changes are made, and those changes are saved, it is added as a new scenario version to the scenario history. This history can be viewed in [My Scenarios](my-scenarios-menu). The history includes for each scenario version: the date, the user that saved the changes (relevant when there are multiple users working on a scenario), and, optionally, an added description for the saved changes.
