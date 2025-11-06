@@ -8,7 +8,7 @@ module.exports = {
   projectName: "documentation", // Usually your repo name.
   themeConfig: {
     prism: {
-      theme: require("prism-react-renderer/themes/github"),
+      theme: require("prism-react-renderer").themes.github,
       additionalLanguages: ["http", "bash", "python", "ruby"],
     },
     colorMode: {

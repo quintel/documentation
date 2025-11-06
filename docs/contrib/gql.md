@@ -458,7 +458,7 @@ Outputs the nodes corresponding to the incoming edges of the given node.
 
 #### QUERY_PRESENT(key)
 
-Returns the present value of the the gquery, when given a key. If the argument is a lambda ( -> { ... }), it returns the present value of the query inside the lambda.
+Returns the present value of the the gquery, when given a key. If the argument is a lambda ( -> \{ ... \}), it returns the present value of the query inside the lambda.
 
 ```ruby
 GRAPH(year)
@@ -488,7 +488,7 @@ error
 
 #### QUERY_FUTURE(key)
 
-Returns the present value of the the gquery, when given a key. If the argument is a lambda ( -> { ... }), it returns the present value of the query inside the lambda.
+Returns the present value of the the gquery, when given a key. If the argument is a lambda ( -> \{ ... \}), it returns the present value of the query inside the lambda.
 
 ```ruby
 GRAPH(year)
@@ -517,7 +517,7 @@ error
 
 #### QUERY_DELTA(key)
 
-Returns the delta of the present value and future value of the query. Note: an operation within this query should be noted inside ( -> { ... }).
+Returns the delta of the present value and future value of the query. Note: an operation within this query should be noted inside ( -> \{ ... \}).
 
 ```ruby
 QUERY_DELTA(graph_year)
