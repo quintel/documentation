@@ -4,9 +4,13 @@ title: Model versions
 sidebar_label: Model versions
 ---
 
-When navigating to the Energy Transition Model, by default, you are directed to the **latest** version of the model. The latest version is generally updated on a monthly basis, ensuring that the model includes the latest features and bug fixes.
+When navigating to the Energy Transition Model, by default, you are directed to the **latest** version of the model. Every four weeks on a Thursday, we deploy the changes on our **Staging** environment to **Production** to ensure the model includes the latest features and bug fixes.
 
-Additionally, there are **stable** versions of the model. These versions are created by freezing the latest version at a given time. Stable versions are created much less frequently than the latest version of the model is updated.
+#### Deploy Schedule 2025:
+- 13th November
+- 11th December
+
+There are also **stable** versions of the model. These versions are created by freezing the latest version at a given time. Stable versions are created much less frequently than the latest version of the model is updated.
 
 :::info Model versions and scenario versions
 The **[Scenario versions](managing-scenarios/scenario-history.md)** in the scenario history are different from the **Model versions**. Each scenario is made in a specific version of the model, but each scenario can have different versions in its history.

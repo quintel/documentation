@@ -1,5 +1,5 @@
 ---
-title: Saved scenario info
+title: Scenario info
 ---
 
 This page lets you change settings for a saved scenario.
