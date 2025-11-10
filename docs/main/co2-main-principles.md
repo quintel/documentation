@@ -41,6 +41,13 @@ One exception to the primary emission method is for final demand of non-biogenic
 * Refineries are highly complex industrial processes that are modelled in a simplified way in the ETM. More detail is required to trace back the exact energetic and feedstock inputs used to produce each refinery product, in order to determine accurate emissions with the primary emission method.
 * Using the primary emission method for refineries can result in widely varying emission factors for liquid fuels between countries with and without refineries. This reduces comparability between countries.
 
+If additional feedstock is required in the production process for these liquid fuels, the related CO<sub>2</sub> emissions are accounted for using the primary emissions method and allocated to the energy sector.
+
+:::info Calculation example
+The transport sector has a final diesel demand of `100 [MJ]`. Diesel is produced via pyrolysis and pyrolysis-oil fractionation, which proportionally requires `50 [PJ]` of hydrogen for diesel production. This hydrogen is in turn produced via SMR, requiring `60 [PJ]` of natural gas. 
+The direct CO<sub>2</sub> emissions for diesel demand are allocated to the transport sector and equal `100 [MJ] * emission factor of diesel [kgCO2/MJ]`. The primary CO<sub>2</sub> emissions associated with hydrogen consumption in the production process are allocated to the energy sector and equal `60 [PJ] * emission factor of natural gas [kgCO2/MJ]`. 
+:::
+
 The emission factors for liquid fuels are region-specific and can be consulted in the [Dataset Manager](https://data.energytransitionmodel.com/). The liquid fuels for which direct emissions are calculated as an exception are the following:
 * Diesel
 * Gasoline
