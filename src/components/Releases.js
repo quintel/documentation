@@ -36,6 +36,8 @@ async function loadMarkdown(file) {
 export default function Releases() {
   const [updates, setUpdates] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
+  const [navHeight, setNavHeight] = useState(0);
+  const contentsNavRef = useRef(null);
   const detailsRefs = useRef([]);
   const hasInitialized = useRef(false);
 
@@ -105,14 +107,24 @@ export default function Releases() {
   function handleContentsClick(index) {
     openDetails(index);
 
-    setTimeout(() => {
+    if (typeof window === 'undefined') return;
+
+    const scrollToDetail = () => {
       const detailElement = detailsRefs.current[index];
       if (detailElement) {
-        const yOffset = -145;
-        const y = detailElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+        detailElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest',
+        });
       }
-    }, 50);
+    };
+
+    if (typeof window.requestAnimationFrame === 'function') {
+      window.requestAnimationFrame(scrollToDetail);
+    } else {
+      setTimeout(scrollToDetail, 0);
+    }
   }
 
   // Load updates data on mount
@@ -152,6 +164,25 @@ export default function Releases() {
     }
   }, [updates, openDetails]);
 
+  useEffect(() => {
+    if (!updates.length) {
+      setNavHeight(0);
+      return;
+    }
+
+    function updateNavHeight() {
+      if (contentsNavRef.current) {
+        setNavHeight(contentsNavRef.current.getBoundingClientRect().height);
+      }
+    }
+
+    updateNavHeight();
+    window.addEventListener('resize', updateNavHeight);
+    return () => {
+      window.removeEventListener('resize', updateNavHeight);
+    };
+  }, [updates.length]);
+
   const items = updates.map(({ date }) => ({
     title: date,
   }));
@@ -164,10 +195,13 @@ export default function Releases() {
     );
 
   return (
-    <div className={styles.pageContainer}>
+    <div
+      className={styles.pageContainer}
+      style={{ '--releases-contents-nav-height': `${navHeight}px` }}
+    >
       {/* Contents Navigation */}
       {updates.length > 0 && (
-        <nav className={styles.contentsNav}>
+        <nav ref={contentsNavRef} className={styles.contentsNav}>
           <ul className={styles.contentsList}>
             {navigableUpdates.map((update) => (
               <li key={update.originalIndex} className={styles.contentsItem}>

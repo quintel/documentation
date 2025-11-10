@@ -121,6 +121,7 @@
 
 .timelineCard details {
   width: 100%;
+  scroll-margin-top: calc(var(--ifm-navbar-height, 60px) + var(--releases-contents-nav-height, 0px) + 1rem);
 }
 
 .timelineCard summary {
