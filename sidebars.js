@@ -70,7 +70,6 @@ module.exports = {
             "main/co2-emission-factors",
             "main/greenhouse-gases",
             "main/co2-1990-emissions",
-            "main/co2-emissions-import-export",
             "main/co2-biomass",
             "main/co2-ccus",
             "main/co2-negative-emissions",
