@@ -2,7 +2,7 @@
 title: Emission factors
 ---
 
-(Carbon) emission factors describe the amount of CO<sub>2</sub> emissions emitted as a result of energy use. This section provides general information about emission factors in the ETM. 
+(Carbon) emission factors describe the amount of CO<sub>2</sub> emissions emitted as a result of energy use. This section provides general information about emission factors in the ETM.
 
 ## General
 The emission factors for energy carriers may vary per region. For example, the (organic) composition of coal or waste depends on where these carriers are sourced and hence so does their CO<sub>2</sub> content. Region-specific emission factors can be consulted via the [Dataset Manager](https://data.energytransitionmodel.com/).
@@ -13,9 +13,7 @@ The emission factors for electricity, hydrogen and (collective) heat depend on t
 * Hydrogen production with biomass gasification technology
 
 ## Imported carriers
-The ETM calculates CO<sub>2</sub> emissions via the primary emission method. As a consequence, emissions from imported energy carriers are taken into account. Read more about the main principles of emission calculations [here](co2-main-principles#modelling-principles).
-
-As a result, the ETM uses emissions factors for imported carriers that do not have direct emissions when used (meaning they do not have a carbon content). The ETM assigns an emission factor to the import of the following carriers:
+The ETM calculates CO<sub>2</sub> emissions via the primary emission method. Read more about the main principles of emission calculations [here](co2-main-principles#modelling-principles). As a result, the ETM assigns emissions factors for imported carriers that do not have direct emissions when used:
 * Imported electricity
 * Imported hydrogen
 * Imported heat
@@ -23,4 +21,4 @@ As a result, the ETM uses emissions factors for imported carriers that do not ha
 * Imported liquid hydrogen
 * Imported liquid organic hydrogen carrier (LOHC)
 
-Go to the [Dataset Manager](https://data.energytransitionmodel.com/) to consult the region-specific emission factors for these imported carriers. The emission factors of imported hydrogen carriers, ammonia and heat can be changed in the [Emission factors](https://energytransitionmodel.com/scenario/emissions/emission_factors/co2-emissions-of-imported-heat) section of the ETM. 
+Go to the [Dataset Manager](https://data.energytransitionmodel.com/) to consult the region-specific emission factors for these imported carriers. The emission factors of imported hydrogen carriers, ammonia and heat can be changed in the [Emission factors](https://energytransitionmodel.com/scenario/emissions/emission_factors/co2-emissions-of-imported-heat) section of the ETM. For electricity, the emission factor can be adjusted in the [Import/Export](https://energytransitionmodel.com/scenario/flexibility/electricity_import_export/electricity-interconnectors) section of the ETM.
