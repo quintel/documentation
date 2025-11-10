@@ -13,9 +13,11 @@
   position: sticky;
   top: var(--ifm-navbar-height, 60px);
   z-index: 10;
-  padding: 1rem clamp(1rem, 4vw, 2.5rem);
+  margin-top: 2rem;
+  padding-bottom: 1rem;
   background: var(--ifm-background-surface-color);
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-menu-color);
 }
 
 .contentsList {
@@ -28,10 +30,6 @@
 }
 
 .contentsItem {
-  margin: 0;
-}
-
-.contentsItem + .contentsItem {
   margin-top: 0 !important;
 }
 
@@ -86,6 +84,21 @@
   width: 100%;
   margin-inline: auto;
 }
+.timelineWrapper :global(.timeline-vertical-circle>.active) {
+  background: var(--docsearch-background-color) !important;
+}
+
+.timelineWrapper :global(.timeline-item-title.rc-title){
+  color: var(--docsearch-muted-color);
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+.timelineWrapper :global(.timeline-item-title.rc-title.active){
+  color: white;
+  padding: 0.1rem 0.5rem;
+  background: var(--ifm-menu-color-active) !important;
+}
 
 .timelineWrapper :global([class*='TitleWrapper']),
 .timelineWrapper :global(.rc-title) {
@@ -94,12 +107,6 @@
   border-bottom: 2px solid transparent;
   box-shadow: none !important;
   transition: border-color 0.4s ease-in-out, color 0.4s ease-in-out;
-}
-
-.timelineWrapper :global([class*='TitleWrapper'].active),
-.timelineWrapper :global(.rc-title.active) {
-  background: #5a77d024 !important;
-  color: var(--ifm-menu-color-active) !important;
 }
 
 .timelineWrapper :global(.card-content-wrapper),
