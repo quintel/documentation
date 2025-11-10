@@ -203,6 +203,7 @@ export default function Releases() {
       {updates.length > 0 && (
         <nav ref={contentsNavRef} className={styles.contentsNav}>
           <ul className={styles.contentsList}>
+            <li> Jump to release </li>
             {navigableUpdates.map((update) => (
               <li key={update.originalIndex} className={styles.contentsItem}>
                 <button
@@ -236,6 +237,7 @@ export default function Releases() {
           <Chrono
             items={items}
             mode="VERTICAL"
+            theme={{ primary: 'var(--ifm-menu-color-active)' }}
             disableToolbar
             activeItemIndex={activeIndex ?? undefined}
           >
