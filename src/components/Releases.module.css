@@ -3,21 +3,15 @@
 .pageContainer {
   max-width: 100%;
   margin: 0 auto;
+  padding: 2rem 0;
 }
 
-.contentWrapper {
+/* Main Content Column */
+
+.mainColumn {
+  --ifm-col-width: 100%;
   display: flex;
-  width: var(--ifm-container-width-xl, 1440px);
-  margin: 20 auto;
-  gap: 3rem;
-  padding: 2rem;
-}
-
-/* Main Releases Article */
-
-.releasesArticle {
-  flex: 1;
-  min-width: 0;
+  flex-direction: column;
 }
 
 /* Release Section */
@@ -192,14 +186,13 @@
 /* Table of Contents Sidebar */
 
 .tocSidebar {
-  flex: 0 0 220px;
   position: sticky;
   top: calc(var(--ifm-navbar-height, 60px) + 2rem);
   height: fit-content;
   max-height: calc(100vh - var(--ifm-navbar-height, 60px) - 4rem);
   overflow-y: auto;
   padding: 1rem 0;
-  order: 2;
+  width: 100%;
 }
 
 .tocContainer {
@@ -269,25 +262,26 @@
 /* Responsive Design */
 
 @media (max-width: 996px) {
-  .contentWrapper {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
+  .pageContainer {
+    padding: 1rem 0;
+  }
+
+  .tocColumn {
+    order: -1;
+  }
+
+  .mainColumn {
+    order: 2;
   }
 
   .tocSidebar {
     position: static;
-    flex: 0 0 auto;
     max-height: none;
-    order: 1;
     padding: 1rem;
     background: var(--ifm-background-surface-color);
     border: 1px solid var(--ifm-color-emphasis-200);
     border-radius: 8px;
-  }
-
-  .releasesArticle {
-    order: 2;
+    margin-bottom: 1.5rem;
   }
 
   .tocList {
@@ -330,19 +324,20 @@
   }
 }
 
-@media (min-width: 997px) and (max-width: 1200px) {
-  .tocSidebar {
-    flex-basis: 200px;
+@media (min-width: 997px) {
+  .mainColumn {
+    --ifm-col-width: 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
   }
 }
-
-@media (min-width: 1440px) {
-  .contentWrapper {
-    gap: 4rem;
-    padding: 2rem 3rem;
+  .intro {
+    margin-bottom: 2rem;
   }
 
+
+@media (min-width: 1440px) {
   .tocSidebar {
-    flex-basis: 240px;
+    max-width: 260px;
   }
 }
