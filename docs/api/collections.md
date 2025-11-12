@@ -65,7 +65,7 @@ Authorization: Bearer YOUR_TOKEN
   "interpolation": true,
   "interpolation_params": {
     "area_code": "nl2023",
-    "end_years": [2030, 2040, 2050] 
+    "end_years": [2030, 2040, 2050]
   },
   "owner": {
     "id": 1,

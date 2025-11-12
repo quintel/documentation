@@ -75,7 +75,7 @@ export default {
       {
         name: "discarded",
         type: "boolean",
-        description: 
+        description:
           "whether the collection should be in the owner's trash",
       },
     ],
