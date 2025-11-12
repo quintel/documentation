@@ -667,23 +667,3 @@ ol.steps li > *:first-child {
 ol.steps li > *:first-child strong {
   font-size: 18px;
 }
-
-/* Timeline hack */
-
-/* month */
-li.vertical-item-row .right:first-child {
-  order: 3;
-}
-/* card */
-li.vertical-item-row .right:nth-child(2) {
-  order: 1;
-  margin-right: 1rem;
-}
-/* bar */
-li.vertical-item-row .right:last-child {
-  order: 2;
-  &::before, &::after {
-    width: 1px;
-  }
-}
-
