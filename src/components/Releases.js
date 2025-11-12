@@ -1,7 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Chrono } from 'react-chrono';
-import { StyleSheetManager } from 'styled-components';
-import isPropValid from '@emotion/is-prop-valid';
 import { marked } from 'marked';
 import styles from './Releases.module.css';
 import { ProductionBadge, StableBadge, UnreleasedBadge } from './EnvBadge';
@@ -36,7 +33,6 @@ async function loadMarkdown(file) {
 export default function Releases() {
   const [updates, setUpdates] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
-  const [navHeight, setNavHeight] = useState(0);
   const contentsNavRef = useRef(null);
   const detailsRefs = useRef([]);
   const hasInitialized = useRef(false);
@@ -150,7 +146,7 @@ export default function Releases() {
     fetchUpdates();
   }, []);
 
-  // Initialize by opening the 'latest' timeline object
+  // Initialize by opening the 'latest' release
   useEffect(() => {
     if (updates.length && !hasInitialized.current) {
       const latestIndex = updates.findIndex(update => update.version === 'latest');
@@ -164,29 +160,6 @@ export default function Releases() {
     }
   }, [updates, openDetails]);
 
-  useEffect(() => {
-    if (!updates.length) {
-      setNavHeight(0);
-      return;
-    }
-
-    function updateNavHeight() {
-      if (contentsNavRef.current) {
-        setNavHeight(contentsNavRef.current.getBoundingClientRect().height);
-      }
-    }
-
-    updateNavHeight();
-    window.addEventListener('resize', updateNavHeight);
-    return () => {
-      window.removeEventListener('resize', updateNavHeight);
-    };
-  }, [updates.length]);
-
-  const items = updates.map(({ date }) => ({
-    title: date,
-  }));
-
   const navigableUpdates = updates
     .map((update, index) => ({ ...update, originalIndex: index }))
     .filter(update =>
@@ -195,90 +168,93 @@ export default function Releases() {
     );
 
   return (
-    <div
-      className={styles.pageContainer}
-      style={{ '--releases-contents-nav-height': `${navHeight}px` }}
-    >
-      {/* Contents Navigation */}
-      {updates.length > 0 && (
-        <nav ref={contentsNavRef} className={styles.contentsNav}>
-          <ul className={styles.contentsList}>
-            <li> Jump to release </li>
-            {navigableUpdates.map((update) => (
-              <li key={update.originalIndex} className={styles.contentsItem}>
-                <button
-                  className={styles.contentsLink}
-                  type="button"
-                  onClick={() => handleContentsClick(update.originalIndex)}
-                >
-                  {update.version === 'latest' ? (
-                    <span
-                      className={`${badgeStyles.badge} ${badgeStyles.production} ${styles.contentsBadge}`}
-                    >
-                      latest
-                    </span>
-                  ) : (
-                    <span
-                      className={`${badgeStyles.badge} ${badgeStyles.stable} ${styles.contentsBadge}`}
-                    >
-                      {update.version}
-                    </span>
-                  )}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+    <div className={styles.pageContainer}>
+      <div className={styles.contentWrapper}>
+        {/* Releases List */}
+        <article className={styles.releasesArticle}>
+          {updates.map((update, index) => (
+            <details
+              key={update.file}
+              className={styles.releaseSection}
+              ref={(element) => {
+                detailsRefs.current[index] = element;
+              }}
+            >
+              <summary
+                className={styles.releaseSummary}
+                onClick={(event) => handleSummaryClick(event, index)}
+              >
+                <div className={styles.summaryHeader}>
+                  <h2 className={styles.releaseDate}>{update.date}</h2>
+                  <div className={styles.releaseInfo}>
+                    <span className={styles.releaseTitle}>{update.title}</span>
+                    {renderEnvironmentBadge(update)}
+                  </div>
+                </div>
+                {update.tag && (
+                  <span
+                    className={styles.tagLink}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(`https://github.com/quintel/etmodel/releases/tag/${update.tag}`, '_blank', 'noopener,noreferrer');
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        window.open(`https://github.com/quintel/etmodel/releases/tag/${update.tag}`, '_blank', 'noopener,noreferrer');
+                      }
+                    }}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <span className={styles.tag}>{update.tag}</span>
+                  </span>
+                )}
+              </summary>
+              <div
+                className={styles.releaseContent}
+                dangerouslySetInnerHTML={{ __html: update.content }}
+              />
+            </details>
+          ))}
+        </article>
 
-      {/* Timeline */}
-      <div className={styles.timelineWrapper}>
-        <StyleSheetManager shouldForwardProp={isPropValid}>
-          <Chrono
-            items={items}
-            mode="VERTICAL"
-            theme={{ primary: 'var(--ifm-menu-color-active)' }}
-            disableToolbar
-            activeItemIndex={activeIndex ?? undefined}
-          >
-            {updates.map((update, index) => (
-              <div key={update.file} className={styles.timelineCard}>
-                <details
-                  ref={(element) => {
-                    detailsRefs.current[index] = element;
-                  }}
-                >
-                  <summary onClick={(event) => handleSummaryClick(event, index)}>
-                    <div className={styles.summaryInfo}>
-                      <span className={styles.summaryTitle}>{update.title}</span>
-                      <span className={styles.envBadge}>
-                        {renderEnvironmentBadge(update)}
-                      </span>
-                    </div>
-                    <div className={styles.summaryMeta}>
-                      <span className={styles.date}>{update.date}</span>
-                      {update.tag && (
-                        <a
-                          href={`https://github.com/quintel/etmodel/releases/tag/${update.tag}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.tagLink}
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <span className={styles.tag}>{update.tag}</span>
-                        </a>
+        {/* Table of Contents Sidebar */}
+        {updates.length > 0 && (
+          <aside ref={contentsNavRef} className={styles.tocSidebar}>
+            <div className={styles.tocContainer}>
+              <h3 className={styles.tocTitle}>On this page</h3>
+              <ul className={styles.tocList}>
+                {navigableUpdates.map((update) => (
+                  <li key={update.originalIndex} className={styles.tocItem}>
+                    <button
+                      className={`${styles.tocLink} ${activeIndex === update.originalIndex ? styles.tocLinkActive : ''}`}
+                      type="button"
+                      onClick={() => handleContentsClick(update.originalIndex)}
+                    >
+                      {update.version === 'latest' ? (
+                        <>
+                          <span className={styles.tocLinkText}>Latest</span>
+                          <span className={`${badgeStyles.badge} ${badgeStyles.production} ${styles.tocBadge}`}>
+                            {update.version}
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <span className={styles.tocLinkText}>Stable</span>
+                          <span className={`${badgeStyles.badge} ${badgeStyles.stable} ${styles.tocBadge}`}>
+                            {update.version}
+                          </span>
+                        </>
                       )}
-                    </div>
-                  </summary>
-                  <div
-                    className={styles.cardContent}
-                    dangerouslySetInnerHTML={{ __html: update.content }}
-                  />
-                </details>
-              </div>
-            ))}
-          </Chrono>
-        </StyleSheetManager>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+        )}
       </div>
     </div>
   );
