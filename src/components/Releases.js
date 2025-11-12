@@ -30,7 +30,7 @@ async function loadMarkdown(file) {
 }
 
 
-export default function Releases() {
+export default function Releases({ children }) {
   const [updates, setUpdates] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
   const contentsNavRef = useRef(null);
@@ -169,9 +169,12 @@ export default function Releases() {
 
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.contentWrapper}>
+      <div className="row">
         {/* Releases List */}
-        <article className={styles.releasesArticle}>
+        <div className={`col ${styles.mainColumn}`}>
+          {children && (
+            <div className={styles.intro}>{children}</div>
+          )}
           {updates.map((update, index) => (
             <details
               key={update.file}
@@ -218,42 +221,44 @@ export default function Releases() {
               />
             </details>
           ))}
-        </article>
+        </div>
 
         {/* Table of Contents Sidebar */}
         {updates.length > 0 && (
-          <aside ref={contentsNavRef} className={styles.tocSidebar}>
-            <div className={styles.tocContainer}>
-              <h3 className={styles.tocTitle}>On this page</h3>
-              <ul className={styles.tocList}>
-                {navigableUpdates.map((update) => (
-                  <li key={update.originalIndex} className={styles.tocItem}>
-                    <button
-                      className={`${styles.tocLink} ${activeIndex === update.originalIndex ? styles.tocLinkActive : ''}`}
-                      type="button"
-                      onClick={() => handleContentsClick(update.originalIndex)}
-                    >
-                      {update.version === 'latest' ? (
-                        <>
-                          <span className={styles.tocLinkText}>Latest</span>
-                          <span className={`${badgeStyles.badge} ${badgeStyles.production} ${styles.tocBadge}`}>
-                            {update.version}
-                          </span>
-                        </>
-                      ) : (
-                        <>
-                          <span className={styles.tocLinkText}>Stable</span>
-                          <span className={`${badgeStyles.badge} ${badgeStyles.stable} ${styles.tocBadge}`}>
-                            {update.version}
-                          </span>
-                        </>
-                      )}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
+          <div className={`col col--3 ${styles.tocColumn}`}>
+            <aside ref={contentsNavRef} className={styles.tocSidebar}>
+              <div className={styles.tocContainer}>
+                <h3 className={styles.tocTitle}>On this page</h3>
+                <ul className={styles.tocList}>
+                  {navigableUpdates.map((update) => (
+                    <li key={update.originalIndex} className={styles.tocItem}>
+                      <button
+                        className={`${styles.tocLink} ${activeIndex === update.originalIndex ? styles.tocLinkActive : ''}`}
+                        type="button"
+                        onClick={() => handleContentsClick(update.originalIndex)}
+                      >
+                        {update.version === 'latest' ? (
+                          <>
+                            <span className={styles.tocLinkText}>Latest</span>
+                            <span className={`${badgeStyles.badge} ${badgeStyles.production} ${styles.tocBadge}`}>
+                              {update.version}
+                            </span>
+                          </>
+                        ) : (
+                          <>
+                            <span className={styles.tocLinkText}>Stable</span>
+                            <span className={`${badgeStyles.badge} ${badgeStyles.stable} ${styles.tocBadge}`}>
+                              {update.version}
+                            </span>
+                          </>
+                        )}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </aside>
+          </div>
         )}
       </div>
     </div>
