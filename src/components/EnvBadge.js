@@ -42,23 +42,39 @@ const EnvBadge = ({
   );
 };
 
-export const UnreleasedBadge = () => <EnvBadge>Not yet released</EnvBadge>;
-
-export const StagingBadge = (props) => (
-  <EnvBadge className={styles.staging} {...linkProps(props)} {...props}>
-    Staging
+export const UnreleasedBadge = ({ label, children, className = '', ...rest }) => (
+  <EnvBadge className={className} {...rest}>
+    {children ?? label ?? 'Not yet released'}
   </EnvBadge>
 );
 
-export const ProductionBadge = (props) => (
-  <EnvBadge className={styles.production} {...linkProps(props)} {...props}>
-    Production
+export const StagingBadge = ({ label, children, className = '', ...rest }) => (
+  <EnvBadge
+    className={`${styles.staging} ${className}`.trim()}
+    {...linkProps(rest)}
+    {...rest}
+  >
+    {children ?? label ?? 'Staging'}
   </EnvBadge>
 );
 
-export const StableBadge = (props) => (
-  <EnvBadge className={styles.stable} {...linkProps(props)} {...props}>
-    Stable
+export const ProductionBadge = ({ label, children, className = '', ...rest }) => (
+  <EnvBadge
+    className={`${styles.production} ${className}`.trim()}
+    {...linkProps(rest)}
+    {...rest}
+  >
+    {children ?? label ?? 'Production'}
+  </EnvBadge>
+);
+
+export const StableBadge = ({ label, children, className = '', ...rest }) => (
+  <EnvBadge
+    className={`${styles.stable} ${className}`.trim()}
+    {...linkProps(rest)}
+    {...rest}
+  >
+    {children ?? label ?? 'Stable'}
   </EnvBadge>
 );
 
