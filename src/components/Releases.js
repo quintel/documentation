@@ -3,23 +3,12 @@ import { marked } from 'marked';
 import styles from './Releases.module.css';
 import { ProductionBadge, StableBadge, UnreleasedBadge } from './EnvBadge';
 import badgeStyles from './EnvBadge.module.css';
+import { mainReleases, apiChangelog } from '@site/data/releases';
 
 // Data Loading
-
-async function loadUpdatesJson() {
+async function loadMarkdown(file, dataSource = 'releases') {
   try {
-    const response = await fetch('/releases/updates.json');
-    if (!response.ok) throw new Error('Failed to load updates.json');
-    return await response.json();
-  } catch (error) {
-    console.error('Error loading updates.json:', error);
-    return [];
-  }
-}
-
-async function loadMarkdown(file) {
-  try {
-    const response = await fetch(`/releases/${file}`);
+    const response = await fetch(`/${dataSource}/${file}`);
     if (!response.ok) throw new Error(`Failed to load ${file}`);
     const markdownText = await response.text();
     return marked(markdownText);
@@ -29,8 +18,7 @@ async function loadMarkdown(file) {
   }
 }
 
-
-export default function Releases({ children }) {
+export default function Releases({ children, dataSource = 'releases' }) {
   const [updates, setUpdates] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
   const contentsNavRef = useRef(null);
@@ -128,10 +116,11 @@ export default function Releases({ children }) {
   useEffect(() => {
     async function fetchUpdates() {
       try {
-        const updatesData = await loadUpdatesJson();
+        const updatesData = dataSource === 'api-changelog' ? apiChangelog : mainReleases;
+
         const updatesWithContent = await Promise.all(
           updatesData.map(async (update) => {
-            const content = await loadMarkdown(update.file);
+            const content = await loadMarkdown(update.file, dataSource);
             return { ...update, content };
           })
         );
@@ -144,7 +133,7 @@ export default function Releases({ children }) {
     }
 
     fetchUpdates();
-  }, []);
+  }, [dataSource]);
 
   // Initialize by opening the 'latest' release
   useEffect(() => {
@@ -162,10 +151,15 @@ export default function Releases({ children }) {
 
   const navigableUpdates = updates
     .map((update, index) => ({ ...update, originalIndex: index }))
-    .filter(update =>
-      update.version === 'latest' ||
-      (update.version && update.version !== 'upcoming' && update.version !== 'latest')
-    );
+    .filter(update => {
+      // For API changelog, show all entries
+      if (dataSource === 'api-changelog') {
+        return true;
+      }
+      // For main releases, only show latest and stable versions
+      return update.version === 'latest' ||
+             (update.version && update.version !== 'upcoming' && update.version !== 'latest');
+    });
 
   return (
     <div className={styles.pageContainer}>
@@ -237,7 +231,18 @@ export default function Releases({ children }) {
                         type="button"
                         onClick={() => handleContentsClick(update.originalIndex)}
                       >
-                        {update.version === 'latest' ? (
+                        {!update.version ? (
+                          // API changelog entries: show tag as badge
+                          <>
+                            <span className={styles.tocLinkText}>{update.date}</span>
+                            {update.tag && (
+                              <span className={`${badgeStyles.badge} ${styles.tocBadge}`}>
+                                {update.tag}
+                              </span>
+                            )}
+                          </>
+                        ) : update.version === 'latest' ? (
+                          // Main releases: show "Latest" with badge
                           <>
                             <span className={styles.tocLinkText}>Latest</span>
                             <span className={`${badgeStyles.badge} ${badgeStyles.production} ${styles.tocBadge}`}>
@@ -245,6 +250,7 @@ export default function Releases({ children }) {
                             </span>
                           </>
                         ) : (
+                          // Main releases: show "Stable" with badge
                           <>
                             <span className={styles.tocLinkText}>Stable</span>
                             <span className={`${badgeStyles.badge} ${badgeStyles.stable} ${styles.tocBadge}`}>
