@@ -65,8 +65,8 @@ Below, the profiles in the ETM are specified in categories demand, supply and ot
 
 | Sector | Sub-sector | Profile type | Weather-dependent | Additional information |
 |--------|------------|--------------|-------------------|------------------------|
-| **Renewable** | Solar on rooftop (households) | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
-| | Solar on rooftop (buildings) | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
+| **Renewable** | Solar rooftop (households) | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
+| | Solar rooftop (buildings) | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
 | | Solar on land | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
 | | Solar offshore | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
 | | Solar thermal | Capacity | Yes | Based on measured climate data and adjusted for solar thermal behavior characteristics |
