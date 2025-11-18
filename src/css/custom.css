@@ -667,3 +667,11 @@ ol.steps li > *:first-child {
 ol.steps li > *:first-child strong {
   font-size: 18px;
 }
+
+
+.emphasis-block {
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin: 2rem auto;
+  background: var(--custom-blue-background-color);
+}

@@ -4,6 +4,7 @@ import styles from './Releases.module.css';
 import { ProductionBadge, StableBadge, UnreleasedBadge } from './EnvBadge';
 import badgeStyles from './EnvBadge.module.css';
 import { mainReleases, apiChangelog } from '@site/data/releases';
+import { FaGithub } from "react-icons/fa6";
 
 // Data Loading
 async function loadMarkdown(file, dataSource = 'releases') {
@@ -181,15 +182,10 @@ export default function Releases({ children, dataSource = 'releases' }) {
                 className={styles.releaseSummary}
                 onClick={(event) => handleSummaryClick(event, index)}
               >
-                <div className={styles.summaryHeader}>
-                  <h2 className={styles.releaseDate}>{update.date}</h2>
-                  <div className={styles.releaseInfo}>
-                    <span className={styles.releaseTitle}>{update.title}</span>
-                    {renderEnvironmentBadge(update)}
-                  </div>
-                </div>
+                <h2 className={styles.releaseDate}>{update.date}</h2>
+                {renderEnvironmentBadge(update)}
                 {update.tag && (
-                  <span
+                  <div
                     className={styles.tagLink}
                     onClick={(e) => {
                       e.stopPropagation();
@@ -205,8 +201,9 @@ export default function Releases({ children, dataSource = 'releases' }) {
                     role="button"
                     tabIndex={0}
                   >
+                    <FaGithub />
                     <span className={styles.tag}>{update.tag}</span>
-                  </span>
+                  </div>
                 )}
               </summary>
               <div
@@ -222,7 +219,7 @@ export default function Releases({ children, dataSource = 'releases' }) {
           <div className={`col col--3 ${styles.tocColumn}`}>
             <aside ref={contentsNavRef} className={styles.tocSidebar}>
               <div className={styles.tocContainer}>
-                <h3 className={styles.tocTitle}>On this page</h3>
+                <h3 className={styles.tocTitle}>Jump to release</h3>
                 <ul className={styles.tocList}>
                   {navigableUpdates.map((update) => (
                     <li key={update.originalIndex} className={styles.tocItem}>
@@ -244,7 +241,6 @@ export default function Releases({ children, dataSource = 'releases' }) {
                         ) : update.version === 'latest' ? (
                           // Main releases: show "Latest" with badge
                           <>
-                            <span className={styles.tocLinkText}>Latest</span>
                             <span className={`${badgeStyles.badge} ${badgeStyles.production} ${styles.tocBadge}`}>
                               {update.version}
                             </span>
@@ -252,10 +248,10 @@ export default function Releases({ children, dataSource = 'releases' }) {
                         ) : (
                           // Main releases: show "Stable" with badge
                           <>
-                            <span className={styles.tocLinkText}>Stable</span>
                             <span className={`${badgeStyles.badge} ${badgeStyles.stable} ${styles.tocBadge}`}>
                               {update.version}
                             </span>
+                            <span className={styles.tocLinkText}>Stable</span>
                           </>
                         )}
                       </button>
