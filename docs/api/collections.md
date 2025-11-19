@@ -20,18 +20,22 @@ All collections contain the following attributes, which will be part of any resp
 collection endpoint:
 
 * `id` - the numeric id of the collection.
+* `title` - the title of the collection, shown in the list.
+* `version` - the version associated with the collection. See [model versions](docs/main/user_manual/model-versions.md) for more information.
 * `scenario_ids` - the list of [scenarios](scenarios.md) in the collection.
-* `saved_scenario_ids` - the list of [saved scenarios](saved-scenarios.md) in the collection.<!-- Right now everything comes in the shape of scenario_ids! -->
+* `saved_scenario_ids` - the list of [saved scenarios](saved-scenarios.md) in the collection.
+* `collections_app_url` - url to access the collection in the collections app.
 * `created_at` - date of creation.
 * `updated_at` - date of last update.
 * `discarded_at` - date it was discarded.
 * `discarded` - specifies weather the collection has been discarded.
 * `interpolation` - specifies whether the collection is a transition path.
-* `title` - the title of the collection, shown in the list.
-* `version_id` - the version associated with the collection. See [model versions](docs/main/user_manual/model-versions.md) for more information.<!-- This probably should be "version":"tag" instead -->
-* `owner` - information about the owner of the Collection.
-  * `id` - the owner's unique ID number
-  * `name` - the owner's name
+* `interpolation_params` - information if the collection is a transition path:
+  * `area_code` - the identifier for the area.
+  * `end_years` - years of the transition path steps.
+* `owner` - information about the owner of the collection:
+  * `id` - the owner's unique ID number.
+  * `name` - the owner's name.
 
 ## Getting information about a collection
 
@@ -49,14 +53,20 @@ Authorization: Bearer YOUR_TOKEN
 ```json title="Example response"
 {
   "id": 123,
-  "scenario_ids": [12, 34, 56],
   "title": "My collection",
-  "version_id": 1,
+  "version": "latest",
+  "scenario_ids": [12, 34],
+  "saved_scenario_ids": [5],
+  "collections_app_url": "https://collections.energytransitionmodel.com/12,34,56?locale=en\u0026title=My%20collection",
   "created_at": "2022-07-27T13:45:32.000Z",
   "updated_at": "2022-12-22T19:21:32.000Z",
   "discarded_at": null,
   "discarded": false,
-  "interpolation": false,
+  "interpolation": true,
+  "interpolation_params": {
+    "area_code": "nl2023",
+    "end_years": [2030, 2040, 2050] 
+  },
   "owner": {
     "id": 1,
     "name": "John Doe"
@@ -81,10 +91,11 @@ Authorization: Bearer YOUR_TOKEN
 {
   "collections": [
     {
-      "id": 123,
-      "scenario_ids": [12, 34, 56],
+      "id": 12,
       "title": "My collection",
-      "version_id": 1,
+      "version": "latest",
+      "scenario_ids": [],
+      "saved_scenario_ids": [1, 2, 3],
       "created_at": "2022-07-27T13:45:32.000Z",
       "updated_at": "2022-12-22T19:21:32.000Z",
       "discarded_at": null,
@@ -115,19 +126,20 @@ Accept: application/json
 Authorization: Bearer YOUR_TOKEN
 
 {
+  "title": "My collection",
   "scenario_ids": [12, 34],
-  "saved_scenario_ids": [3],
-  "title": "My collection"
+  "saved_scenario_ids": [5, 6]
 }
 ```
 
 ```json title="Example response"
 {
   "id": 123,
-  "scenario_ids": [12, 34],
-  "saved_scenario_ids": [3],
   "title": "My collection",
-  "version_id": 1,
+  "version": "latest",
+  "scenario_ids": [12, 34],
+  "saved_scenario_ids": [5, 6],
+  "collections_app_url": "https://collections.energytransitionmodel.com/12,34,56?locale=en\u0026title=My%20collection",
   "created_at": "2022-07-27T13:45:32.000Z",
   "updated_at": "2022-12-22T19:21:32.000Z",
   "discarded_at": null,
@@ -154,18 +166,18 @@ Authorization: Bearer YOUR_TOKEN
 
 {
   "title": "A new title",
-  "scenario_ids": [456, 789]
-  "saved_scenario_ids": [22],
+  "scenario_ids": [45, 67],
+  "saved_scenario_ids": [89]
 }
 ```
 
 ```json title="Example response"
 {
   "id": 123,
-  "scenario_ids": [456, 789],
-  "saved_scenario_ids": [22],
   "title": "A new title",
-  "version_id": 1,
+  "version": "latest",
+  "scenario_ids": [45, 67],
+  "saved_scenario_ids": [89],
   "created_at": "2022-12-23T19:21:32.000Z",
   "updated_at": "2022-12-23T19:22:38.000Z",
   "discarded_at": null,
