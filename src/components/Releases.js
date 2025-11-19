@@ -184,7 +184,7 @@ export default function Releases({ children, dataSource = 'releases' }) {
               >
                 <h2 className={styles.releaseDate}>{update.date}</h2>
                 {renderEnvironmentBadge(update)}
-                {update.tag && (
+                {update.tag ? (
                   <div
                     className={styles.tagLink}
                     onClick={(e) => {
@@ -203,6 +203,15 @@ export default function Releases({ children, dataSource = 'releases' }) {
                   >
                     <FaGithub />
                     <span className={styles.tag}>{update.tag}</span>
+                  </div>
+                ) : (
+                  <div
+                    className={styles.tagLink}
+                    aria-hidden="true"
+                    style={{ visibility: 'hidden' }}
+                  >
+                    <FaGithub />
+                    <span className={styles.tag}>placeholder</span>
                   </div>
                 )}
               </summary>
@@ -251,7 +260,7 @@ export default function Releases({ children, dataSource = 'releases' }) {
                             <span className={`${badgeStyles.badge} ${badgeStyles.stable} ${styles.tocBadge}`}>
                               {update.version}
                             </span>
-                            <span className={styles.tocLinkText}>Stable</span>
+                            <span className={styles.tocLinkText}></span>
                           </>
                         )}
                       </button>
