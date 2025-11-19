@@ -222,7 +222,7 @@ module.exports = {
         "contrib/authoring-slider-texts",
         "contrib/authoring-gqueries",
         "contrib/authoring-tests",
-        "contrib/authoring-whats-new"
+        "contrib/authoring-releases"
       ]
     },
   ],
