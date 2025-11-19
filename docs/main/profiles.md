@@ -4,7 +4,7 @@ title: Profiles
 
 ## Introduction
 
-The ETM uses hourly profiles to model demand and supply of electricity, hydrogen and gas. The hourly demand and supply is determined using the annual demand and supply and a given hourly profile. Datasets in the ETM have default profiles, which are obtained from verified sources including climate databases, energy system operators and research institutions. It is possible to overwrite the default profiles by uploading custom profiles in the ETM in [Modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves). 
+The ETM uses hourly profiles to model demand and supply of electricity, hydrogen and gas. The hourly demand and supply is determined using the annual demand and supply and a given hourly profile. Datasets in the ETM have default profiles, which are obtained from verified sources including climate databases, energy system operators and research institutions. It is possible to overwrite the default profiles by uploading custom profiles in the ETM in [Modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves).
 
 This page gives an overview of the type of profiles and explains how to modify these profiles.
 
@@ -18,7 +18,7 @@ The following profile types can be uploaded:
 
 2. **Capacity profiles**. These profiles are typically used for supply profiles (such as solar PV and wind) and represent the fraction of installed capacity used for each hour of the year for a specific production technology. For example, a value of 0.5 means that 50% of peak capacity is utilised in that hour. The sum of all hours should equal the total annual full load hours of that technology. Note that a capacity profile is also used for the must-run interconnectors import and export profiles.
 
-3. **Price profiles**. These profiles are used for the interconnector prices and represent the price for each hour of the year. The unit is €/MWh and the value for each hour will be rounded to the nearest whole cent. 
+3. **Price profiles**. These profiles are used for the interconnector prices and represent the price for each hour of the year. The unit is €/MWh and the value for each hour will be rounded to the nearest whole cent.
 
 4. **Availability profiles**. These profiles are used for interconnector import and export availability and represent the availability of the interconnector for each hour of the year. Values should be specified between 0 and 1 for each hour, where for example 0.5 means that 50% of the capacity is available, 0 that no capacity is available or 1 that all capacity is available.
 
@@ -29,7 +29,7 @@ The following profile types can be uploaded:
 The ETM supports different [weather years](https://energytransitionmodel.com/scenario/flexibility/flexibility_weather/weather-years) that change weather-dependent profiles, such as heating demand and renewable electricity production from solar PV and wind, to the profile of a specific historic year.
 
 :::warning Priority of custom profiles
-Uploaded [custom profiles](#working-with-custom-profiles) always take priority over a standard weather year profiles. If a specific weather year is selected, this will only affect weather-related profiles for which no custom profile is uploaded. 
+Uploaded [custom profiles](#working-with-custom-profiles) always take priority over a standard weather year profiles. If a specific weather year is selected, this will only affect weather-related profiles for which no custom profile is uploaded.
 :::
 
 :::info Disclaimer
@@ -38,7 +38,7 @@ The weather year functionality is currently only available for Dutch regions.
 
 
 ## Overview of profiles
-Below, the profiles in the ETM are specified in cateogries demand, supply and other profiles. More information about the country-specific profiles can be found on the profiles (curves) section in [ETDataset](https://github.com/quintel/etdataset-public/tree/master/curves).
+Below, the profiles in the ETM are specified in categories demand, supply and other profiles. More information about the country-specific profiles can be found on the profiles (curves) section in [ETDataset](https://github.com/quintel/etdataset-public/tree/master/curves).
 
 ### Demand profiles
 
@@ -65,7 +65,10 @@ Below, the profiles in the ETM are specified in cateogries demand, supply and ot
 
 | Sector | Sub-sector | Profile type | Weather-dependent | Additional information |
 |--------|------------|--------------|-------------------|------------------------|
-| **Renewable** | Solar PV | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
+| **Renewable** | Solar rooftop (households) | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
+| | Solar rooftop (buildings) | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
+| | Solar on land | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
+| | Solar offshore | Capacity | Yes | Based on measured climate data and/or country-specific solar PV production data |
 | | Solar thermal | Capacity | Yes | Based on measured climate data and adjusted for solar thermal behavior characteristics |
 | | Wind | Capacity | Yes | Based on measured climate data and/or country-specific wind production data |
 | | Other: geothermal heat, geothermal electricity, hydropower, biogas CHP, waste incinerator | Capacity | No | Flat profile (constant output) |
