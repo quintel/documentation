@@ -5,6 +5,10 @@ module.exports = {
       id: "main/intro",
     },
     {
+      type: "doc",
+      id: "main/releases",
+    },
+    {
       type: "category",
       label: "1. User Manual",
       collapsed: false,
@@ -217,7 +221,8 @@ module.exports = {
         "contrib/authoring-docs",
         "contrib/authoring-slider-texts",
         "contrib/authoring-gqueries",
-        "contrib/authoring-tests"
+        "contrib/authoring-tests",
+        "contrib/authoring-releases"
       ]
     },
   ],
