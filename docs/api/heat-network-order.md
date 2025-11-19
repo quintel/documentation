@@ -4,9 +4,6 @@ title: Heat network order
 
 import endpointData from '@site/data/api/heat-network-order';
 import ApiEndpoint from '@site/src/components/ApiEndpoint';
-import { ReleaseBadge } from '@site/src/components/EnvBadge';
-
-As of the [2023.12](changelog.md#5th-december-2023-) <ReleaseBadge name="2023.12" /> release there will be three orders available instead of one. Omit the `subtype` attribute when using the old implementation.
 
 Each scenario has three heat network orders. These define the order of preference by which [dispatchable technologies](../main/heat-networks.md#dispatchable) are used to supply heat to each district heat network. There is a different heat network for low, medium and high temperature heat, each with their own order.
 
