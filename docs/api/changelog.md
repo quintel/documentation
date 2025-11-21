@@ -27,6 +27,11 @@ While we endeavour not to change the API in a backwards-incompatible way, this i
 
 To learn more about our environments, see the [introduction to the API](intro.md#environments).
 
+### 11th Dec 2025 <ReleaseBadge name="2025.12" />
+* Ability to create and update collections mantaining the given the saved_scenario_ids given order which is relevant when opening the collection with the collections app. [Learn more here.](collections.md)
+* Included a new paramater collections_app_url to the returned collection object which contains the url to visualize that collection within the collections app.
+* Overall improvement of the shape parameters returned with the collection object.
+
 ### 24th Feb 2025 <ReleaseBadge name="2025.02" />
 * Stable versions introduced. It is now possible to access stable environments for stable results. More on accessing these stable API endpoints [can be found here.](intro.md#environments)
 * The introduction of stable versions also means that [saved scenarios](saved-scenarios.md) and [collections](collections.md) have version tags associated with them now. These are included in the API responses.
