@@ -22,11 +22,11 @@ An overview of all data used within the ETM accompanied by their respective sour
 ### 4. Modelling Principles
 An insight into the exact modelling principles behind the ETM.
 
-### 5. pyetm
-pyetm is a package written in Python that allows ETM users to interact with the ETM via the API. The package is designed to be a modular tool that advanced users can incorporate into their workflows.
+### 5. PyETM
+PyETM is a package written in Python that allows ETM users to interact with the ETM via the API. The package is designed to be a modular tool that advanced users can incorporate into their workflows.
 
 ### 6. Scenario-tools
-If you are interested in communicating with the ETM without using the web-interface, then you can visit this page to see if you can use any of the Pyton tools in this collection.
+If you are interested in communicating with the ETM without using the web-interface, then you can visit this page to see if you can use any of the Python tools in this collection.
 
 ### 7. For Contributors
 If you are contributing or would like to contribute to the development of the ETM, this page will grant you a short overview of the different possibilities for contributing.
