@@ -2,7 +2,7 @@
 title: Heat pumps
 ---
 
-This page explains how heat pumps are integrated within the ETM. You can choose to use heat pumps in households or buildings the ['Demand'](https://pro.energytransitionmodel.com/scenario/demand/households/space-heating-and-hot-water) section of the ETM. 
+This page explains how heat pumps are integrated within the ETM. You can choose to use heat pumps in households or buildings the ['Demand'](https://pro.energytransitionmodel.com/scenario/demand/households/space-heating-and-hot-water) section of the ETM.
 
 ## Temperature dependency of COP
 
@@ -47,7 +47,7 @@ More information about the sources behind specifications of heat pump ground can
 ### General working principle
 A hybrid heat pump (HHP) is a combination of an electric heat pump that draws its heat from the outside air and an efficient conventional, fuel-fired boiler. This fuel can be either network gas, hydrogen or oil. The fuel-fired part takes over all of the heating of the building on cold winter days, when heat demand peaks. As a result, a hybrid heat pump has less impact on the electricity grid than an all-electric heat pump does. Smart use of HHps may therefore avoid the need to reinforce local power grids.
 
-For optimal results with most types of heat pump, installation of under-floor and wall heating instead of radiators is often required, as well as good levels of insulation. The HHP partly bypasses those needs because of its fuel-fired heater as a fall-back option. Hybrid hydrogen heat pumps can intelligently use whichever part (heat pump or fuel-fired heater) is the most efficient or cost-effective given the weather conditions and insulation level. Houses with limited insulation will rely on the fuel-fired part more, better insulated ones will make more use of the heat pump. 
+For optimal results with most types of heat pump, installation of under-floor and wall heating instead of radiators is often required, as well as good levels of insulation. The HHP partly bypasses those needs because of its fuel-fired heater as a fall-back option. Hybrid hydrogen heat pumps can intelligently use whichever part (heat pump or fuel-fired heater) is the most efficient or cost-effective given the weather conditions and insulation level. Houses with limited insulation will rely on the fuel-fired part more, better insulated ones will make more use of the heat pump.
 
 ### COP of hybrid heat pumps
 The COP of HHPs is different from air-source heat pumps (ASHPs). HHPs are often installed in less well-insulated houses compared to air-source heat pumps. Additionally, these houses have different heat delivery systems, so the required output temperature of HHPs is higher than for ASHPs. Instead of 35°C output temperature, which is used for ASHPs, the ETM assumes a 45°C output temperature for HHPs.
@@ -56,7 +56,7 @@ The equation to calculate the COP based on outside temperature is:
 
 `  COP (T) = 2.323 + 0.0578 * T  		(3)`
 
-_Sources for the different hybrid heat pumps_: 
+_Sources for the different hybrid heat pumps_:
 * **Network gas hybrid heat pumps**: [Documentation hybrid heat pump (gas) - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_hybrid_heatpump_air_water_electricity.converter.xlsx), and [Documentation hybrid heat pump (gas) - hot water](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_water_heater_hybrid_heatpump_air_water_electricity.converter.xlsx)
 * **Hydrogen hybrid heat pumps**: [Documentation hybrid heat pump (hydrogen) - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity.converter.xlsx), and [Documentation hybrid heat pump (hydrogen) - hot water](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_water_heater_hybrid_hydrogen_heatpump_air_water_electricity.converter.xlsx)
 * **Oil hybrid heat pumps**: [Documentation hybrid heat pump (oil) - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_hybrid_crude_oil_heatpump_air_water_electricity.xlsx), and [Documentation hybrid heat pump (oil) - hot water](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_water_heater_hybrid_crude_oil_heatpump_air_water_electricity.xlsx)
@@ -90,7 +90,7 @@ The abovementioned chart is not yet available for oil HHPs, but the correspondin
 * Electricity price 22.5 €ct / kWh
 * Oil boiler efficiency for space heating = 0.95.
 
-The resulting threshold COP is 3.5. **Note that because of this high threshold COP, by default the oil heater might provide most if not all of the space heating functionality**. 
+The resulting threshold COP is 3.5. **Note that because of this high threshold COP, by default the oil heater might provide most if not all of the space heating functionality**.
 
 HHPs have a varying impact on the electricity grid. The chart below shows the hourly gas and electricity demand of HHPs. Different time intervals throughout the year are available under the dropdown menu.
 
@@ -101,4 +101,3 @@ HHPs have a varying impact on the electricity grid. The chart below shows the ho
 The COP of heat pump ground is independent of the ambient temperature. The temperature of the reservoir in the ground from which the heat pump extracts heat is considered constant.
 
 _Checkout: the specifications of ground heat pumps in [Documentation heat pump ground - space heating](https://github.com/quintel/etdataset-public/blob/master/nodes_source_analyses/energy/households/households_space_heater_heatpump_ground_water_electricity.converter.xlsx)_
-

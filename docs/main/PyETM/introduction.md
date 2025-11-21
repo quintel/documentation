@@ -1,27 +1,27 @@
 ---
 title: Introduction
 ---
-## What is pyetm?
-pyetm is a package written in Python that allows ETM users to interact with the ETM via the API. The
+## What is PyETM?
+PyETM is a package written in Python that allows ETM users to interact with the ETM via the API. The
 package is designed to be a modular tool that advanced users can incorporate into their workflows.
 
-You can clone the pyetm from [our Github](https://github.com/quintel/pyetm). The package is also
+You can clone the PyETM from [our Github](https://github.com/quintel/PyETM). The package is also
 available via pip like any other python package - install it and use it in your project!
 ```
 pip install pyetm
 ```
 
 To run the tools a Python installation is required, however many of the actions require very little
-programming experience, and we've given examples of the workflows in the examples folder. #TODO link examples section
+programming experience, and we've given examples of the workflows in the examples folder.
 
 
-With pyetm you can:
+With PyETM you can:
 - [Use premade Jupyter notebooks to interface with scenarios directly or via Excel](notebooks.md)
 - [Develop your own python tooling for working with scenarios](contributor-docs.md)
 
 
 ## Getting started
-Make sure you have [Python 3](https://www.python.org/downloads/) installed. Then, install all required libraries by opening a terminal/command-prompt window in the `pyetm` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools-folder"`). All following examples of running the tool expect you to be in this folder.
+Make sure you have [Python 3](https://www.python.org/downloads/) installed. Then, install all required libraries by opening a terminal/command-prompt window in the `PyETM` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools-folder"`). All following examples of running the tool expect you to be in this folder.
 
 
 ### Poetry
@@ -53,7 +53,7 @@ poetry --version
 
 #### Install Dependencies
 
-Navigate to the `pyetm` folder and install all dependencies:
+Navigate to the `PyETM` folder and install all dependencies:
 ```bash
 poetry install
 ```

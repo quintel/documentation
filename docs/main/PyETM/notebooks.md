@@ -67,7 +67,7 @@ then exclude them from your outputs.
 Specify scenario inputs with one scenario on each row.
 In the MAIN sheet:
 - short_name: The short name you can use to specify slider settings for the scenario. The short name
-will also show up in pyetm as the identifier for your scenario.
+will also show up in PyETM as the identifier for your scenario.
 - scenario_id: If you are loading an existing scenario from the ETM, specify the id here.
 - template: This field is not yet implemented.
 - title: The title of your scenario. This will be set in the metadata of the scenario.
