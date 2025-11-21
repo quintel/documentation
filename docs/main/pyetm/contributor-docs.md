@@ -1,6 +1,6 @@
 # How to develop with PyETM
 
-This guide shows how to embed **pyetm** into your own tooling.
+This guide shows how to embed **PyETM** into your own tooling.
 
 ---
 ## 1. Installation & Environment

@@ -112,12 +112,12 @@ module.exports = {
     },
       {
       type: "category",
-      label: "5. pyetm",
+      label: "5. PyETM",
       collapsed: true,
       items: [
-        "main/pyetm/introduction",
-        "main/pyetm/notebooks",
-        "main/pyetm/contributor-docs"
+        "main/PyETM/introduction",
+        "main/PyETM/notebooks",
+        "main/PyETM/contributor-docs"
       ],
     },
     {
