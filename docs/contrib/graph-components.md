@@ -127,6 +127,29 @@ While most edges in the graph are calculated from left to right (the "child" nod
 
 When a share is assigned to this edge, it will refer to the share of the _producer_ node, rather than the consumer node.
 
+### Special edge attributes
+
+Edges can have certain extra attributes that will influence calculation, mostly
+necessary for [Recursive methods](recursive-methods).
+
+#### Circular
+Adding the attribute `circular` to an edge will help `Turbine` order the nodes correctly for calculation. Edges with circular set to true will be nettified
+for recursive methods to combat circularity.
+
+```
+- circular = true
+```
+
+#### Treat as loss
+Some edges are seen as loss edges, but are required to have a certain carrier
+in order for hourly balancing to work. An example is unused heat in heat networks.
+The edges going to unused heat nodes will have heat carriers, but [should be
+treated like loss](recursive-methods#with-and-without-losses) for primary demand calculation in recursive factor.
+
+```
+- treat_as_loss = true
+```
+
 ## Slots
 
 So far, when describing shares we have only discussed examples that use one carrier. However, a node can have multiple edges with different carriers. For example, a node might have an edge for electricity, and another edge for gas.
