@@ -129,22 +129,26 @@ When a share is assigned to this edge, it will refer to the share of the _produc
 
 ### Special edge attributes
 
-Edges can have certain extra attributes that will influence calculation, mostly
+Edges can have certain extra attributes that will influence calculations, mostly
 necessary for [Recursive methods](recursive-methods).
 
 #### Circular
 Adding the attribute `circular` to an edge will help `Turbine` order the nodes correctly for calculation. Edges with circular set to true will be nettified
-for recursive methods to combat circularity.
+for recursive methods to combat circularity.  
 
 ```
 - circular = true
 ```
 
+Circular edges are for example used for some edges from [generic transformation nodes](https://github.com/quintel/etsource/blob/master/graphs/energy/nodes/energy/energy_chemical_refineries_transformation_external_coupling_node.ad) for external model coupling. As a downside of the nettified flows in recursive methods, this could for example result in inaccurately calculated primary demand and primary CO<sub>2</sub> emissions.
+
 #### Treat as loss
-Some edges are seen as loss edges, but are required to have a certain carrier
-in order for hourly balancing to work. An example is unused heat in heat networks.
-The edges going to unused heat nodes will have heat carriers, but [should be
-treated like loss](recursive-methods#with-and-without-losses) for primary demand calculation in recursive factor.
+Some edges should be seen as loss edges, but are required to have a certain carrier other than loss
+in order for hourly balancing to work. An example is unused heat in heat networks. 
+The [edge](https://github.com/quintel/etsource/blob/master/graphs/energy/edges/energy/energy_production_aggregator_ht_steam_hot_water-energy_heat_unused_ht_steam_hot_water%40steam_hot_water.ad) 
+going to the unused heat node should have steam hot water as carrier, but [should be
+treated like loss](recursive-methods#with-and-without-losses) for primary demand and CO<sub>2</sub> calculations in the recursive methods.
+This can be achieved with the `treat_as_loss` attribute.
 
 ```
 - treat_as_loss = true
