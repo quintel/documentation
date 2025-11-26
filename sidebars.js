@@ -5,6 +5,10 @@ module.exports = {
       id: "main/intro",
     },
     {
+      type: "doc",
+      id: "main/releases",
+    },
+    {
       type: "category",
       label: "1. User Manual",
       collapsed: false,
