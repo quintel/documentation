@@ -140,7 +140,7 @@ for recursive methods to combat circularity.
 - circular = true
 ```
 
-Circular edges are for example used for some edges from [generic transformation nodes](https://github.com/quintel/etsource/blob/master/graphs/energy/nodes/energy/energy_chemical_refineries_transformation_external_coupling_node.ad) for external model coupling. As a downside of the nettified flows in recursive methods, this could for example result in inaccurately calculated primary demand and primary CO<sub>2</sub> emissions.
+Circular edges are for example used for some edges from [generic transformation nodes](https://github.com/quintel/etsource/blob/master/graphs/energy/nodes/energy/energy_chemical_refineries_transformation_external_coupling_node.ad) for external model coupling. As a downside of the ignored circular edges, this could for example result in inaccurately calculated primary demand and primary CO<sub>2</sub> emissions.
 
 #### Treat as loss
 Some edges should be seen as loss edges, but are required to have a certain carrier other than loss
