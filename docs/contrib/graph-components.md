@@ -133,8 +133,8 @@ Edges can have certain extra attributes that will influence calculations, mostly
 necessary for [Recursive methods](recursive-methods).
 
 #### Circular
-Adding the attribute `circular` to an edge will help `Turbine` order the nodes correctly for calculation. Edges with circular set to true will be nettified
-for recursive methods to combat circularity.  
+Adding the attribute `circular` to an edge will help `Turbine` order the nodes correctly for calculation. Edges with circular set to true will be ignored
+for recursive methods to combat circularity.
 
 ```
 - circular = true
@@ -144,8 +144,8 @@ Circular edges are for example used for some edges from [generic transformation 
 
 #### Treat as loss
 Some edges should be seen as loss edges, but are required to have a certain carrier other than loss
-in order for hourly balancing to work. An example is unused heat in heat networks. 
-The [edge](https://github.com/quintel/etsource/blob/master/graphs/energy/edges/energy/energy_production_aggregator_ht_steam_hot_water-energy_heat_unused_ht_steam_hot_water%40steam_hot_water.ad) 
+in order for hourly balancing to work. An example is unused heat in heat networks.
+The [edge](https://github.com/quintel/etsource/blob/master/graphs/energy/edges/energy/energy_production_aggregator_ht_steam_hot_water-energy_heat_unused_ht_steam_hot_water%40steam_hot_water.ad)
 going to the unused heat node should have steam hot water as carrier, but [should be
 treated like loss](recursive-methods#with-and-without-losses) for primary demand and CO<sub>2</sub> calculations in the recursive methods.
 This can be achieved with the `treat_as_loss` attribute.
