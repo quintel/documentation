@@ -30,15 +30,15 @@ export default {
         name: "scenario_ids",
         type: "[]number",
         description:
-          "the IDs of the underlying scenarios",
+          "the IDs of the underlying scenarios.<br><strong>Note</strong>: Either one <code>scenario_ids</code> or <code>saved_scenario_ids</code> must be provided.",
         required: false,
       },
       {
         name: "saved_scenario_ids",
         type: "[]number",
         description:
-          "the IDs of the underlying saved scenarios; at least one saved scenario is always required",
-        required: true,
+          "the IDs of the underlying saved scenarios.<br><strong>Note</strong>: Either one <code>saved_scenario_ids</code> or <code>scenario_ids</code> must be provided.",
+        required: false,
       },
       // {
       //   name: "interpolation", // While this is now possible I'm not sure is recomended as it does not generate a transition path
@@ -58,7 +58,7 @@ export default {
       {
         name: "title",
         type: "string",
-        description: "what to call the saved scenario",
+        description: "what to call the collection",
       },
       {
         name: "scenario_ids",
