@@ -44,13 +44,13 @@ export default {
         name: "interpolation", // While this is now possible I'm not sure is recomended as it does not generate a transition path
         type: "boolean",
         description:
-          `<strong>true</strong> for a transition path; in which case the following is required:<br>
+          `<strong>true</strong> for a transition path; in which case the following are required:<br>
           <ul>
             <li>Exactly one <code>saved_scenario_ids</code></li>
             <li>At least one <code>scenario_ids</code></li>
           </ul>
           <br>
-          <strong>false</strong> for an ordinary collection; in which case the follwing is required:<br>
+          <strong>false</strong> for an ordinary collection; in which case the following is required:<br>
           <ul>
             <li>At least one <code>scenario_ids</code> or <code>saved_scenario_ids</code></li>
           </ul>`,
