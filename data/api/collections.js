@@ -30,23 +30,32 @@ export default {
         name: "scenario_ids",
         type: "[]number",
         description:
-          "the IDs of the underlying scenarios.<br><strong>Note</strong>: Either one <code>scenario_ids</code> or <code>saved_scenario_ids</code> must be provided.",
+          "the IDs of the underlying scenarios (Requirement based on <code>interpolation</code>)",
         required: false,
       },
       {
         name: "saved_scenario_ids",
         type: "[]number",
         description:
-          "the IDs of the underlying saved scenarios.<br><strong>Note</strong>: Either one <code>saved_scenario_ids</code> or <code>scenario_ids</code> must be provided.",
+          "the IDs of the underlying saved scenarios (Requirement based on <code>interpolation</code>)",
         required: false,
       },
-      // {
-      //   name: "interpolation", // While this is now possible I'm not sure is recomended as it does not generate a transition path
-      //   type: "boolean",
-      //   description:
-      //     "true for a transition path (true by default); ",
-      //   required: false,
-      // },
+      {
+        name: "interpolation", // While this is now possible I'm not sure is recomended as it does not generate a transition path
+        type: "boolean",
+        description:
+          `<strong>true</strong> for a transition path; in which case the following is required:<br>
+          <ul>
+            <li>Exactly one <code>saved_scenario_ids</code></li>
+            <li>At least one <code>scenario_ids</code></li>
+          </ul>
+          <br>
+          <strong>false</strong> for an ordinary collection; in which case the follwing is required:<br>
+          <ul>
+            <li>At least one <code>scenario_ids</code> or <code>saved_scenario_ids</code></li>
+          </ul>`,
+        required: false,
+      },
     ],
     token: { scopes: ["scenarios:read", "scenarios:write"] },
   },
