@@ -19,6 +19,8 @@ module.exports = {
       logo: {
         alt: "Logo",
         src: "img/logo.svg",
+        href: "https://energytransitionmodel.com/",
+        target: "_blank",
       },
     },
     footer: {
