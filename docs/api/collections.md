@@ -16,18 +16,26 @@ The ETM provides an API for creating, updating, and removing collections from yo
 
 ## The Collection object
 
-All scenarios contain the following attributes, which will be part of any response from the
-scenario endpoint:
+All collections contain the following attributes, which will be part of any response from the
+collection endpoint:
 
 * `id` - the numeric id of the collection.
+* `title` - the title of the collection, shown in the list.
+* `version` - the version associated with the collection. See [model versions](docs/main/user_manual/model-versions.md) for more information.
 * `scenario_ids` - the list of [scenarios](scenarios.md) in the collection.
 * `saved_scenario_ids` - the list of [saved scenarios](saved-scenarios.md) in the collection.
-* `area_code` - the geographic area which the collection represents.
-* `end_year` - the year the original scenario.
-* `title` - the title of the collection, shown in the list.
-* `owner` - information about the owner of the Collection.
-  * `id` - the owner's unique ID number
-  * `name` - the owner's name
+* `collections_app_url` - url to access the collection in the collections app.
+* `created_at` - date of creation.
+* `updated_at` - date of last update.
+* `discarded_at` - date it was discarded.
+* `discarded` - specifies weather the collection has been discarded.
+* `interpolation` - specifies whether the collection is a transition path.
+* `interpolation_params` - information if the collection is a transition path:
+  * `area_code` - the identifier for the area.
+  * `end_years` - years of the transition path steps.
+* `owner` - information about the owner of the collection:
+  * `id` - the owner's unique ID number.
+  * `name` - the owner's name.
 
 ## Getting information about a collection
 
@@ -45,12 +53,20 @@ Authorization: Bearer YOUR_TOKEN
 ```json title="Example response"
 {
   "id": 123,
-  "scenario_ids": [12, 34, 56],
   "title": "My collection",
-  "area_code": "nl2019",
-  "end_year": 2050,
+  "version": "latest",
+  "scenario_ids": [12, 34],
+  "saved_scenario_ids": [5],
+  "collections_app_url": "https://collections.energytransitionmodel.com/12,34,56?locale=en\u0026title=My%20collection",
   "created_at": "2022-07-27T13:45:32.000Z",
   "updated_at": "2022-12-22T19:21:32.000Z",
+  "discarded_at": null,
+  "discarded": false,
+  "interpolation": true,
+  "interpolation_params": {
+    "area_code": "nl2023",
+    "end_years": [2030, 2040, 2050]
+  },
   "owner": {
     "id": 1,
     "name": "John Doe"
@@ -73,28 +89,18 @@ Authorization: Bearer YOUR_TOKEN
 
 ```json title="Example response"
 {
-  "links": {
-        "first": "https://engine.energytransitionmodel.com/api/v3/collections?page=1",
-        "prev": null,
-        "next": "https://engine.energytransitionmodel.com/api/v3/collections?page=2",
-        "last": "https://engine.energytransitionmodel.com/api/v3/collections?page=3"
-  },
-  "meta": {
-      "limit": 25,
-      "count": 25,
-      "total": 65,
-      "current_page": 1,
-      "total_pages": 3
-  },
-  "data": [
+  "collections": [
     {
-      "id": 123,
-      "scenario_ids": [12, 34, 56],
+      "id": 12,
       "title": "My collection",
-      "area_code": "nl2019",
-      "end_year": 2050,
+      "version": "latest",
+      "scenario_ids": [],
+      "saved_scenario_ids": [1, 2, 3],
       "created_at": "2022-07-27T13:45:32.000Z",
       "updated_at": "2022-12-22T19:21:32.000Z",
+      "discarded_at": null,
+      "discarded": false,
+      "interpolation": false,
       "owner": {
         "id": 1,
         "name": "John Doe"
@@ -107,11 +113,11 @@ Authorization: Bearer YOUR_TOKEN
 
 ## Create a collection
 
-Creating a collection will cause it to appear in your list of in the web application.
+Creating a collection will cause it to appear in your list and in the web application.
 
 <ApiEndpoint data={endpointData.create} />
 
-Before you can create a **collection**, you must [create the underlying **scenarios**](scenarios.md#create-a-scenario). The response will include the ID number of your new scenario. You may then create a collection as a second step, passing the scenario IDs:
+Before you can create a **collection**, you must [create the underlying **scenarios**](scenarios.md#create-a-scenario) or [**saved scenarios**](saved-scenarios#create-a-saved-scenario). The response will include the ID number of your new scenario. You may then create a collection as a second step, passing the scenario IDs:
 
 ```http title="Example request"
 POST /api/v3/collections HTTP/2
@@ -120,21 +126,25 @@ Accept: application/json
 Authorization: Bearer YOUR_TOKEN
 
 {
+  "title": "My collection",
   "scenario_ids": [12, 34],
-  "title": "My collection"
+  "saved_scenario_ids": [5, 6]
 }
 ```
 
 ```json title="Example response"
 {
   "id": 123,
-  "scenario_ids": [12, 34],
-  "saved_scenario_ids": [],
   "title": "My collection",
-  "area_code": "nl2019",
-  "end_year": 2050,
+  "version": "latest",
+  "scenario_ids": [12, 34],
+  "saved_scenario_ids": [5, 6],
+  "collections_app_url": "https://collections.energytransitionmodel.com/12,34,56?locale=en\u0026title=My%20collection",
   "created_at": "2022-07-27T13:45:32.000Z",
   "updated_at": "2022-12-22T19:21:32.000Z",
+  "discarded_at": null,
+  "discarded": false,
+  "interpolation": false,
   "owner": {
     "id": 1,
     "name": "John Doe"
@@ -156,20 +166,23 @@ Authorization: Bearer YOUR_TOKEN
 
 {
   "title": "A new title",
-  "scenario_ids": [456, 789]
+  "scenario_ids": [45, 67],
+  "saved_scenario_ids": [89]
 }
 ```
 
 ```json title="Example response"
 {
   "id": 123,
-  "scenario_ids": [456, 789],
-  "saved_scenario_ids": [],
   "title": "A new title",
-  "area_code": "nl2019",
-  "end_year": 2050,
+  "version": "latest",
+  "scenario_ids": [45, 67],
+  "saved_scenario_ids": [89],
   "created_at": "2022-12-23T19:21:32.000Z",
   "updated_at": "2022-12-23T19:22:38.000Z",
+  "discarded_at": null,
+  "discarded": false,
+  "interpolation": false,
   "owner": {
     "id": 1,
     "name": "John Doe"
@@ -182,7 +195,7 @@ Authorization: Bearer YOUR_TOKEN
 collections may also be permanently deleted.
 
 :::warning Deleting scenarios
-Deleting a collection removes it from your list of paths in the web application. It does not delete the underlying scenario. You may delete scenarios owned by your account as a separate action; see [Deleting your scenarios](scenarios.md#deleting-your-scenarios).
+Deleting a collection removes it from your list of paths in the web application. It does not delete the underlying scenarios. You may delete scenarios or saved scenarios owned by your account as a separate action; see [Deleting your scenarios](scenarios.md#deleting-your-scenarios) or [Delete a saved scenario](saved-scenarios#delete-a-saved-scenario).
 :::
 
 <ApiEndpoint data={endpointData.destroy} />

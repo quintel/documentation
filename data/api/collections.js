@@ -8,18 +8,6 @@ export default {
   index: {
     endpoint: "/api/v3/collections",
     method: "GET",
-    path_parameters: [
-      {
-        name: "page",
-        type: "number",
-        description: "the page number to fetch",
-      },
-      {
-        name: "limit",
-        type: "number",
-        description: "the number of items per page",
-      },
-    ],
     token: { scopes: ["scenarios:read"] },
   },
   show: {
@@ -35,22 +23,38 @@ export default {
       {
         name: "title",
         type: "string",
-        description: "what to call the collection (required)",
+        description: "what to call the collection",
         required: true,
       },
       {
         name: "scenario_ids",
         type: "[]number",
         description:
-          "the IDs of the underlying scenarios (required); at least one is required between scenarios and saved_scenario",
-        required: true,
+          "the IDs of the underlying scenarios (Requirement based on <code>interpolation</code>)",
+        required: false,
       },
       {
         name: "saved_scenario_ids",
         type: "[]number",
         description:
-          "the IDs of the underlying saved scenarios; at least one is required between scenarios and saved_scenarios",
-        required: true,
+          "the IDs of the underlying saved scenarios (Requirement based on <code>interpolation</code>)",
+        required: false,
+      },
+      {
+        name: "interpolation", // While this is now possible I'm not sure is recomended as it does not generate a transition path
+        type: "boolean",
+        description:
+          `<strong>true</strong> for a transition path; in which case the following are required:<br>
+          <ul>
+            <li>Exactly one <code>saved_scenario_ids</code></li>
+            <li>At least one <code>scenario_ids</code></li>
+          </ul>
+          <br>
+          <strong>false</strong> for an ordinary collection; in which case the following is required:<br>
+          <ul>
+            <li>At least one <code>scenario_ids</code> or <code>saved_scenario_ids</code></li>
+          </ul>`,
+        required: false,
       },
     ],
     token: { scopes: ["scenarios:read", "scenarios:write"] },
@@ -61,29 +65,27 @@ export default {
     path_parameters: [idParam],
     parameters: [
       {
-        name: "scenario_id",
-        type: "integer",
-        description: "the ID of the underlying scenario (required)",
-      },
-      {
         name: "title",
         type: "string",
-        description: "what to call the saved scenario (required)",
+        description: "what to call the collection",
       },
       {
-        name: "description",
-        type: "string",
-        description: "an optional description for the saved scenario",
+        name: "scenario_ids",
+        type: "[]number",
+        description:
+          "the IDs of the underlying scenarios",
       },
       {
-        name: "private",
-        type: "boolean",
-        description: "whether the scenario can be viewed only by the owner",
+        name: "saved_scenario_ids",
+        type: "[]number",
+        description:
+          "the IDs of the underlying saved scenarios",
       },
       {
         name: "discarded",
         type: "boolean",
-        description: "whether the scenario should be in the owner's trash",
+        description:
+          "whether the collection should be in the owner's trash",
       },
     ],
     token: { scopes: ["scenarios:read", "scenarios:write"] },
@@ -92,6 +94,6 @@ export default {
     endpoint: "/api/v3/collections/{id}",
     method: "DELETE",
     path_parameters: [idParam],
-    token: { scopes: ["scenarios:read", "scenarios:delete"] },
+    token: { scopes: ["scenarios:read", "scenarios:write", "scenarios:delete"] },
   },
 };
