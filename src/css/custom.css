@@ -122,14 +122,36 @@ header h1 {
   margin: 0 auto;
 }
 
-/* Style the navbar title as a clickable link */
-.navbar__title {
-  font-size: 1.2rem;
-  transition: color var(--ifm-transition-fast) ease;
+/* Adds a colored "Docs" after the ETM title. */
+.navbar__title:after {
+  background: var(--custom-blue-background-color);
+  border-radius: 4px;
+  color: var(--ifm-color-primary);
+  content: "Docs";
+  display: inline-block;
+  line-height: 1;
+  font-size: 12px;
+  margin-left: 0.375rem;
+  margin-top: -2px;
+  padding: 0.25rem;
+  text-transform: uppercase;
+  vertical-align: middle;
 }
 
-.navbar__brand:hover .navbar__title {
-  color: var(--ifm-color-primary);
+/* To ETM button in navbar */
+.navbar__link--etm-button {
+  background-color: var(--ifm-color-primary);
+  border-radius: 4px;
+  color: white !important;
+  font-weight: 500;
+  padding: 0.375rem 0.75rem;
+  transition: background-color var(--ifm-transition-fast) ease;
+}
+
+.navbar__link--etm-button:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: white !important;
+  text-decoration: none;
 }
 
 .col + .col {

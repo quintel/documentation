@@ -19,9 +19,15 @@ module.exports = {
       logo: {
         alt: "Logo",
         src: "img/logo.svg",
-        href: "https://energytransitionmodel.com/",
-        target: "_blank",
       },
+      items: [
+        {
+          href: "https://energytransitionmodel.com/",
+          label: "To the ETM",
+          position: "right",
+          className: "navbar__link--etm-button",
+        },
+      ],
     },
     footer: {
       style: "dark",
