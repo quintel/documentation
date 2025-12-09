@@ -1,6 +1,9 @@
 // Release badge data - used by EnvBadge.js and UpcomingFeature.js
 // Maps version tags to production/staging dates for dynamic badge rendering
 const releases = {
+  "2025.12": {
+    production: "2025-12-11",
+  },
   "2025.10": {
     production: "2025-10-02",
   },
@@ -73,17 +76,23 @@ const releases = {
 // Main releases timeline data
 export const mainReleases = [
   {
-    date: "Dec 11, 2025",
+    date: "Jan 8, 2025",
     title: "Next Release",
     file: "upcoming.md",
     version: "upcoming",
     tag: null,
   },
   {
+    date: "Dec 11, 2025",
+    title: "December 2025",
+    file: "2025-12.md",
+    version: "latest",
+    tag: "2025.12",
+  },
+  {
     date: "Nov 13, 2025",
     title: "November 2025",
     file: "2025-11.md",
-    version: "latest",
     tag: "2025.11",
   },
   {
