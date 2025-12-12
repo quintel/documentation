@@ -1,4 +1,4 @@
 ## Upcoming changes
 
-* Bio-LNG will be added to international navigation, allowing users to set the share of bio-LNG in the fuel mix of LNG-fueled international vessels
-* Various improvements are planned to enhance the user experience trhough better modelling and chart visualisation
+* The use of bio-LNG in international navigation (maritime bunkers) will be added to the model.
+* Various improvements are planned to enhance the user experience through better modelling and chart visualisations
