@@ -2,7 +2,7 @@
 // Maps version tags to production/staging dates for dynamic badge rendering
 const releases = {
   "2025.12": {
-    production: "2025-12-11",
+    production: "2025-12-12",
   },
   "2025.10": {
     production: "2025-10-02",
@@ -83,7 +83,7 @@ export const mainReleases = [
     tag: null,
   },
   {
-    date: "Dec 11, 2025",
+    date: "Dec 12, 2025",
     title: "December 2025",
     file: "2025-12.md",
     version: "latest",
