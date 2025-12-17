@@ -155,6 +155,12 @@ export const mainReleases = [
 // API changelog timeline data
 export const apiChangelog = [
   {
+    date: "Jan 8, 2025",
+    title: "Scenario interpolation",
+    file: "2026-01.md",
+    tag: "2026.01",
+  },
+  {
     date: "Dec 11, 2025",
     title: "Managing collections",
     file: "2025-12.md",
