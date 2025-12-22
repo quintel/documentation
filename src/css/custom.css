@@ -138,6 +138,26 @@ header h1 {
   vertical-align: middle;
 }
 
+/* To ETM button in navbar */
+.navbar__link--etm-button {
+  background-color: var(--ifm-color-primary);
+  border-radius: 4px;
+  color: white !important;
+  font-weight: 500;
+  padding: 0.375rem 0.75rem;
+  transition: background-color var(--ifm-transition-fast) ease;
+}
+
+.navbar__link--etm-button:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: white !important;
+  text-decoration: none;
+}
+
+.navbar__link--etm-button svg {
+  display: none !important;
+}
+
 .col + .col {
   padding-left: 0;
 }

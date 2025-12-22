@@ -20,6 +20,14 @@ module.exports = {
         alt: "Logo",
         src: "img/logo.svg",
       },
+      items: [
+        {
+          href: "https://energytransitionmodel.com/",
+          label: "To the ETM →",
+          position: "right",
+          className: "navbar__link--etm-button",
+        },
+      ],
     },
     footer: {
       style: "dark",
