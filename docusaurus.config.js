@@ -23,7 +23,7 @@ module.exports = {
       items: [
         {
           href: "https://energytransitionmodel.com/",
-          label: "To the ETM",
+          label: "To the ETM →",
           position: "right",
           className: "navbar__link--etm-button",
         },

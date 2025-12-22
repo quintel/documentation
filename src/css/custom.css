@@ -154,6 +154,10 @@ header h1 {
   text-decoration: none;
 }
 
+.navbar__link--etm-button svg {
+  display: none !important;
+}
+
 .col + .col {
   padding-left: 0;
 }
