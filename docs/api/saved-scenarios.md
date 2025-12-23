@@ -243,6 +243,266 @@ Authorization: Bearer YOUR_TOKEN
 }
 ```
 
+## Managing saved scenario users
+
+Saved scenarios support collaborative access through user management. You can invite other users to view or edit your saved scenarios by granting them specific roles.
+
+### Batch requests
+
+All user management operations can be performed in batches: adding, updating, or removing multiple users in one request. The response will contain a JSON array of successfully processed users. When one or more users fail, the response will be `422` and contain the following:
+
+* `success` - The users that were successfully processed.
+* `errors` - The users that were not successful, with error details.
+
+This partial success behavior ensures that valid operations are persisted even when some fail, allowing you to see exactly which users succeeded and which failed.
+
+### User roles
+
+There are three roles available for saved scenario users:
+
+* **scenario_owner** (`role_id: 0`) - Full control over the scenario, including the ability to manage users, edit settings, and delete the saved scenario
+* **scenario_collaborator** (`role_id: 1`) - Can view and edit the scenario, but cannot manage users or delete the saved scenario
+* **scenario_viewer** (`role_id: 3`) - Read-only access to view the scenario
+
+:::info Owner requirements
+Every saved scenario must have at least one owner. The API will prevent you from removing the last owner.
+:::
+
+See also the [saved scenario access](docs/main/user_manual/managing-scenarios/scenario-manage-access.md) page for more information.
+
+### Listing users on a saved scenario
+
+Retrieve all users associated with a saved scenario:
+
+```http title="Example request"
+GET /api/v3/saved_scenarios/123/users HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+```
+
+```json title="Example response"
+[
+  {
+    "id": 1,
+    "user_id": 456,
+    "user_email": null,
+    "role": "scenario_owner",
+    "role_id": 0,
+    "saved_scenario_id": 123
+  },
+  {
+    "id": 2,
+    "user_id": null,
+    "user_email": "collaborator@example.com",
+    "role": "scenario_collaborator",
+    "role_id": 1,
+    "saved_scenario_id": 123
+  }
+]
+```
+
+### Adding users to a saved scenario
+
+Add one or more users to a saved scenario. Users can be identified by email address, and will receive an invitation to access the scenario.
+
+:::tip Bulk operations
+All user management endpoints support bulk operations. You can add, update, or remove multiple users in a single request by providing an array of user objects.
+:::
+
+```http title="Example request"
+POST /api/v3/saved_scenarios/123/users HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "saved_scenario_users": [
+    {
+      "user_email": "viewer@example.com",
+      "role": "scenario_viewer"
+    },
+    {
+      "user_email": "collaborator@example.com",
+      "role": "scenario_collaborator"
+    }
+  ]
+}
+```
+
+```json title="Example response"
+[
+  {
+    "id": 3,
+    "user_id": null,
+    "user_email": "viewer@example.com",
+    "role": "scenario_viewer",
+    "role_id": 3,
+    "saved_scenario_id": 123
+  },
+  {
+    "id": 4,
+    "user_id": null,
+    "user_email": "collaborator@example.com",
+    "role": "scenario_collaborator",
+    "role_id": 1,
+    "saved_scenario_id": 123
+  }
+]
+```
+
+:::info Automatic coupling
+If a user with the provided email address already has an ETM account, they will be automatically coupled when added (the `user_id` will be populated). Otherwise, they will receive an invitation email.
+:::
+
+### Updating user roles
+
+Change the role of one or more users. Users can be identified by `user_id`, `user_email`, or the SavedScenarioUser `id`.
+
+```http title="Example request"
+PUT /api/v3/saved_scenarios/123/users HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "saved_scenario_users": [
+    {
+      "user_email": "viewer@example.com",
+      "role": "scenario_collaborator"
+    }
+  ]
+}
+```
+
+```json title="Example response"
+[
+  {
+    "id": 3,
+    "user_id": null,
+    "user_email": "viewer@example.com",
+    "role": "scenario_collaborator",
+    "role_id": 1,
+    "saved_scenario_id": 123
+  }
+]
+```
+
+### Removing users from a saved scenario
+
+Remove one or more users from a saved scenario. Users can be identified by `user_id`, `user_email`, or the SavedScenarioUser `id`.
+
+```http title="Example request"
+DELETE /api/v3/saved_scenarios/123/users HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "saved_scenario_users": [
+    {
+      "user_email": "viewer@example.com"
+    }
+  ]
+}
+```
+
+The API will return a `204 No Content` response on success.
+
+:::warning Last owner protection
+You cannot remove the last owner from a saved scenario. The API will return a `422 Unprocessable Entity` error if you attempt to do so.
+:::
+
+### User management and scenario history
+
+When you add, update, or remove users from a saved scenario, those changes are automatically applied to:
+
+1. The current scenario (referenced by `scenario_id`)
+2. All historical scenarios (referenced in `scenario_id_history`)
+
+This ensures that users have consistent access across all versions of the saved scenario. For example, if a saved scenario has 10 historical versions, adding a new collaborator will grant them access to all 11 scenarios (current + 10 historical) in a single operation.
+
+### Error handling
+
+User management operations support partial success:
+
+* Each user in a bulk request is processed independently
+* Successfully processed users are saved to the database
+* Failed users are reported in the error response
+* The API returns a `422 Unprocessable Entity` status when any user fails
+* The response includes both successful users and errors
+
+```json title="Partial success response example"
+{
+  "success": [
+    {
+      "id": 3,
+      "user_id": null,
+      "user_email": "viewer@example.com",
+      "role": "scenario_viewer",
+      "role_id": 3,
+      "saved_scenario_id": 123
+    },
+    {
+      "id": 4,
+      "user_id": 789,
+      "user_email": null,
+      "role": "scenario_collaborator",
+      "role_id": 1,
+      "saved_scenario_id": 123
+    }
+  ],
+  "errors": {
+    "invalid@example.com": ["role_id"],
+    "duplicate@example.com": ["duplicate"]
+  }
+}
+```
+
+:::info Partial success persistence
+When a bulk operation returns partial success, the successful changes **are persisted** to the database. Only the failed operations need to be retried.
+:::
+
+Common errors include:
+
+* `duplicate` - User is already associated with the saved scenario
+* `role_id` - Invalid role specified
+* `not_found` - User not found when updating or removing
+* `base` - Cannot remove the last owner
+
+### Managing users on regular scenarios
+
+Regular scenarios (not saved scenarios) also support user management through similar endpoints. The API structure is identical, but uses the scenario ID instead of saved scenario ID:
+
+* `GET /api/v3/scenarios/:id/users` - List users
+* `POST /api/v3/scenarios/:id/users` - Add users
+* `PUT /api/v3/scenarios/:id/users` - Update user roles
+* `DELETE /api/v3/scenarios/:id/users` - Remove users
+
+The request and response formats are the same, with `scenario_users` instead of `saved_scenario_users`:
+
+```http title="Example: Adding users to a regular scenario"
+POST /api/v3/scenarios/456789/users HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "scenario_users": [
+    {
+      "user_email": "collaborator@example.com",
+      "role": "scenario_collaborator"
+    }
+  ]
+}
+```
+
+:::tip When to use scenario vs saved scenario user management
+- Use **saved scenario** user endpoints when managing access through MyETM (your saved scenario list)
+- Use **scenario** user endpoints when working directly with scenarios that aren't in your saved scenario list
+- Saved scenario user management automatically propagates to all historical scenarios
+:::
+
 ## Update the underlying scenario
 
 As described in [**scenarios vs. saved scenarios**](#scenarios-vs-saved-scenarios), a *saved* scenario is just a way to keep track of a scenario. It allows you to show it in your list of saved scenarios in the ETM web application. You cannot directly change the underlying scenario through the saved scenario.
