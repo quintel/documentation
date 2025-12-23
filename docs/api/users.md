@@ -26,10 +26,14 @@ There are three different types of roles, a detailed description can be found [h
 
 ## Batch requests
 
-All user actions can be done in batches: adding or changing multiple users in one request. The response will contain a json of successfully processed users. When one of the users fails, the response will be `422` and contain the following:
+All user actions can be done in batches: adding or changing multiple users in one request. Each user is processed independently. The response will contain a JSON array of successfully processed users. When one or more users fail, the response will be `422` and contain the following:
 
-* `success` - The users that were successful.
-* `errors` - The users that were not successful.
+* `success` - The users that were successfully processed.
+* `errors` - The users that were not successful, with error details.
+
+:::info Partial success persistence
+When a bulk operation returns partial success, the successful changes **are persisted** to the database. Only the failed operations need to be retried.
+:::
 
 ## Get the users for a scenario
 
@@ -65,8 +69,7 @@ Authorization: Bearer YOUR_TOKEN
 ## Add a user to a scenario
 
 It is possible to add multiple users to the scenario at once.
-When one of the creations fails, the response returns an
-Sending a POST request for a version tag:
+When one of the creations fails, the response returns a `422` with success and errors.
 
 <ApiEndpoint data={endpointData.create} />
 

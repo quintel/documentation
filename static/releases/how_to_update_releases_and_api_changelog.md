@@ -7,7 +7,7 @@ Release data is now centrally managed in `/data/releases.js`. This file contains
 - **Main releases**: Timeline data for `/main/releases` page
 - **API changelog**: Timeline data for `/api/changelog` page
 
-## Updating Main Product Releases
+## Updating Main Releases
 
 ### 1. Add the release notes markdown file
 
