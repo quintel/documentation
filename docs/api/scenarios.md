@@ -164,7 +164,7 @@ Authorization: Bearer YOUR_TOKEN
 ## Create a scenario
 
 A scenario can be created in four ways: as a blank scenario for an area and end year, as a new
-scenario with certain sliders set, as a scenario based on another scenario (its preset), or as an interpolated scenario. The first three methods use a POST request on the scenario endpoint, but with different data.
+scenario with certain sliders set, as a scenario based on another scenario (its preset), or as an [interpolated scenario](interpolation.md). The first three methods use a POST request on the scenario endpoint, but with different data.
 
 ### Create a blank scenario
 
@@ -279,39 +279,6 @@ Authorization: Bearer YOUR_TOKEN
   "url": "https://engine.energytransitionmodel.com/api/v3/scenarios/123456",
   ...
   "template": 11111,
-  ...
-  "user_values": {
-    "buildings_insulation_level": 40.3,
-    "capacity_of_energy_power_hydro_river": 39.0
-  }
-}
-```
-
-### Create an interpolated scenario for a transition path
-
-Creates a scenario meant for use in a transition path, which is a specific type of [collection](/api/collections). The key feature of this method is that the scenario’s inputs are calculated by linearly interpolating the endpoint scenario’s input values against its own starting inputs or another scenario’s inputs.
-
-<ApiEndpoint data={endpointData.interpolate} />
-
-```http title="Example request"
-POST /api/v3/scenarios/22222/interpolate HTTP/2
-Host: engine.energytransitionmodel.com
-Accept: application/json
-Authorization: Bearer YOUR_TOKEN
-
-{
-  "start_scenario_id": "11111",
-  "end_year": "2040"
-}
-```
-
-```json title="Example response"
-{
-  "id": 123456,
-  "area_code":"nl",
-  "start_year": 2019,
-  "end_year": 2040,
-  "url": "https://engine.energytransitionmodel.com/api/v3/scenarios/123456",
   ...
   "user_values": {
     "buildings_insulation_level": 40.3,
