@@ -24,16 +24,14 @@ The set potentials are shown in the "Biomass demand and potential" chart along w
 ![Biomass demand and potential](/img/docs/biomass_demand_and_potential.png)
 
 ## Using biomass in the ETM
-Biomass can be used in different places throughout the model:
-- as green gas in the gas network
-- in biomass heaters for (local) heat networks
-- as transport fuel: bio-ethanol, biodiesel, bio-LNG and biokerosene
-- as co-firing in coal plants
-- as feedstock in biomass-fired power plants
-- as biocoal or bio-oil in power plants
+Biomass can be used in different places throughout the model, such as:
+- green gas in the gas network
+- in biomass power plants, CHPs and heaters for electricity production and heat production for (local) heat networks
+- as transport fuel, for example bio-ethanol, biodiesel, bio-LNG and biokerosene
+- as feedstock in chemical industry, for example bionaphtha and biomethanol
 - to produce hydrogen through gasification
 
-To get a quick overview of all future biomass streams and conversions, there is a sankey-chart visualizing these:
+To get a quick overview of all future biomass flows and conversions, a Sankey diagram is available visualising these:
 
 ![Biomass sankey](/img/docs/biomass_sankey.png)
 
