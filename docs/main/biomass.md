@@ -31,7 +31,7 @@ Biomass can be used in different places throughout the model, such as:
 - as feedstock in chemical industry, for example bionaphtha and biomethanol
 - to produce hydrogen through gasification
 
-To get a quick overview of all future biomass flows and conversions, a Sankey diagram is available visualising these:
+To get a quick overview of all future biomass flows and conversions, a flow diagram is available visualising these:
 
 ![Biomass sankey](/img/docs/biomass_sankey.png)
 
