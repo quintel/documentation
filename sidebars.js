@@ -251,6 +251,7 @@ module.exports = {
         "api/gqueries",
         "api/version-tag",
         "api/users",
+        "api/interpolation",
       ],
     },
     {

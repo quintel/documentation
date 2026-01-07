@@ -163,9 +163,8 @@ Authorization: Bearer YOUR_TOKEN
 
 ## Create a scenario
 
-A scenario can be created in three ways: as a blank scenario for an area and end year, as a new
-scenario with certain sliders set, or as a scenario based on another scenario (its preset). All
-creation methods use a POST request on the scenario endpoint, but with different data.
+A scenario can be created in four ways: as a blank scenario for an area and end year, as a new
+scenario with certain sliders set, as a scenario based on another scenario (its preset), or as an [interpolated scenario](interpolation.md). The first three methods use a POST request on the scenario endpoint, but with different data.
 
 ### Create a blank scenario
 
