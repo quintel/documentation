@@ -7,8 +7,7 @@ sidebar_label: Scenario Users
 import endpointData from '@site/data/api/users';
 import ApiEndpoint from '@site/src/components/ApiEndpoint';
 
-Users can be given access to either individual scenarios, or to saved scenarios and all their
-underlying scenarios. There are three different roles
+Users can be given access to either individual scenarios, or to saved scenarios and all their underlying scenarios. This endpoint manages users on regular scenarios. For managing users on saved scenarios, see [Managing saved scenario users](/api/saved-scenarios#managing-saved-scenario-users). To understand the difference between scenarios and saved scenarios, see [Scenarios vs Saved Scenarios](/api/saved-scenarios#scenarios-vs-saved-scenarios).
 
 ## The user object
 
@@ -100,7 +99,7 @@ Authorization: Bearer YOUR_TOKEN
 ],
 ```
 
-## Update a users role
+## Update a user's role
 
 To change their role the user has to be identified by either: their `user_id`, their coupling id `id`, or their email `user_email`.
 Sending a PUT request for coupled users.
@@ -140,10 +139,10 @@ Authorization: Bearer YOUR_TOKEN
 To remove a user, the user has to be identified by either: their `user_id`, their coupling id `id`, or their email `user_email`.
 Sending a DESTROY request for coupled users.
 
-<ApiEndpoint data={endpointData.update} />
+<ApiEndpoint data={endpointData.destroy} />
 
 ```http title="Example request"
-PUT /api/v3/scenarios/0/users HTTP/2
+DELETE /api/v3/scenarios/0/users HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
@@ -166,4 +165,23 @@ Authorization: Bearer YOUR_TOKEN
     "role": "scenario_viewer"
   },
 ],
+```
+
+## Remove all users from a scenario
+
+Remove all users except owners from a scenario in a single request.
+
+<ApiEndpoint data={endpointData.destroyAll} />
+
+```http title="Example request"
+DELETE /api/v3/scenarios/0/users/destroy_all HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+```
+
+```json title="Example response"
+{
+  "message": "All users except owners have been removed"
+}
 ```

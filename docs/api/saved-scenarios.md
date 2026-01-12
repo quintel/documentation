@@ -247,6 +247,10 @@ Authorization: Bearer YOUR_TOKEN
 
 Saved scenarios support collaborative access through user management. You can invite other users to view or edit your saved scenarios by granting them specific roles.
 
+:::info Historical scenario propagation
+User changes propagate asynchronously to all historical versions of the saved scenario.
+:::
+
 ### Batch requests
 
 All user management operations can be performed in batches: adding, updating, or removing multiple users in one request. The response will contain a JSON array of successfully processed users. When one or more users fail, the response will be `422` and contain the following:
@@ -260,9 +264,9 @@ This partial success behavior ensures that valid operations are persisted even w
 
 There are three roles available for saved scenario users:
 
-* **scenario_owner** (`role_id: 0`) - Full control over the scenario, including the ability to manage users, edit settings, and delete the saved scenario
-* **scenario_collaborator** (`role_id: 1`) - Can view and edit the scenario, but cannot manage users or delete the saved scenario
-* **scenario_viewer** (`role_id: 3`) - Read-only access to view the scenario
+* **scenario_owner** - Full control over the scenario, including the ability to manage users, edit settings, and delete the saved scenario
+* **scenario_collaborator** - Can view and edit the scenario, but cannot manage users or delete the saved scenario
+* **scenario_viewer** - Read-only access to view the scenario
 
 :::info Owner requirements
 Every saved scenario must have at least one owner. The API will prevent you from removing the last owner.
@@ -413,15 +417,6 @@ The API will return a `204 No Content` response on success.
 You cannot remove the last owner from a saved scenario. The API will return a `422 Unprocessable Entity` error if you attempt to do so.
 :::
 
-### User management and scenario history
-
-When you add, update, or remove users from a saved scenario, those changes are automatically applied to:
-
-1. The current scenario (referenced by `scenario_id`)
-2. All historical scenarios (referenced in `scenario_id_history`)
-
-This ensures that users have consistent access across all versions of the saved scenario. For example, if a saved scenario has 10 historical versions, adding a new collaborator will grant them access to all 11 scenarios (current + 10 historical) in a single operation.
-
 ### Error handling
 
 User management operations support partial success:
@@ -468,40 +463,9 @@ Common errors include:
 * `duplicate` - User is already associated with the saved scenario
 * `role_id` - Invalid role specified
 * `not_found` - User not found when updating or removing
-* `base` - Cannot remove the last owner
+* `ownership` - Cannot remove or change the last owner
 
-### Managing users on regular scenarios
-
-Regular scenarios (not saved scenarios) also support user management through similar endpoints. The API structure is identical, but uses the scenario ID instead of saved scenario ID:
-
-* `GET /api/v3/scenarios/:id/users` - List users
-* `POST /api/v3/scenarios/:id/users` - Add users
-* `PUT /api/v3/scenarios/:id/users` - Update user roles
-* `DELETE /api/v3/scenarios/:id/users` - Remove users
-
-The request and response formats are the same, with `scenario_users` instead of `saved_scenario_users`:
-
-```http title="Example: Adding users to a regular scenario"
-POST /api/v3/scenarios/456789/users HTTP/2
-Host: engine.energytransitionmodel.com
-Accept: application/json
-Authorization: Bearer YOUR_TOKEN
-
-{
-  "scenario_users": [
-    {
-      "user_email": "collaborator@example.com",
-      "role": "scenario_collaborator"
-    }
-  ]
-}
-```
-
-:::tip When to use scenario vs saved scenario user management
-- Use **saved scenario** user endpoints when managing access through MyETM (your saved scenario list)
-- Use **scenario** user endpoints when working directly with scenarios that aren't in your saved scenario list
-- Saved scenario user management automatically propagates to all historical scenarios
-:::
+For managing users on regular scenarios (not saved scenarios), see [Scenario Users](/api/users).
 
 ## Update the underlying scenario
 
