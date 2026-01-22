@@ -272,7 +272,7 @@ There are three roles available for saved scenario users:
 Every saved scenario must have at least one owner. The API will prevent you from removing the last owner.
 :::
 
-See also the [saved scenario access](docs/main/user_manual/managing-scenarios/scenario-manage-access.md) page for more information.
+See also the [saved scenario access](/main/user_manual/managing-scenarios/scenario-manage-access) page for more information.
 
 ### Listing users on a saved scenario
 

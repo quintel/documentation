@@ -137,7 +137,7 @@ Authorization: Bearer YOUR_TOKEN
 ## Remove a user from a scenario
 
 To remove a user, the user has to be identified by either: their `user_id`, their coupling id `id`, or their email `user_email`.
-Sending a DESTROY request for coupled users.
+Sending a DELETE request for coupled users.
 
 <ApiEndpoint data={endpointData.destroy} />
 
