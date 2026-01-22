@@ -7,8 +7,7 @@ sidebar_label: Scenario Users
 import endpointData from '@site/data/api/users';
 import ApiEndpoint from '@site/src/components/ApiEndpoint';
 
-Users can be given access to either individual scenarios, or to saved scenarios and all their
-underlying scenarios. There are three different roles
+Users can be given access to either individual scenarios, or to saved scenarios and all their underlying scenarios. This endpoint manages users on regular scenarios. For managing users on saved scenarios, see [Managing saved scenario users](/api/saved-scenarios#managing-saved-scenario-users). To understand the difference between scenarios and saved scenarios, see [Scenarios vs Saved Scenarios](/api/saved-scenarios#scenarios-vs-saved-scenarios).
 
 ## The user object
 
@@ -26,10 +25,14 @@ There are three different types of roles, a detailed description can be found [h
 
 ## Batch requests
 
-All user actions can be done in batches: adding or changing multiple users in one request. The response will contain a json of successfully processed users. When one of the users fails, the response will be `422` and contain the following:
+All user actions can be done in batches: adding or changing multiple users in one request. Each user is processed independently. The response will contain a JSON array of successfully processed users. When one or more users fail, the response will be `422` and contain the following:
 
-* `success` - The users that were successful.
-* `errors` - The users that were not successful.
+* `success` - The users that were successfully processed.
+* `errors` - The users that were not successful, with error details.
+
+:::info Partial success persistence
+When a bulk operation returns partial success, the successful changes **are persisted** to the database. Only the failed operations need to be retried.
+:::
 
 ## Get the users for a scenario
 
@@ -65,8 +68,7 @@ Authorization: Bearer YOUR_TOKEN
 ## Add a user to a scenario
 
 It is possible to add multiple users to the scenario at once.
-When one of the creations fails, the response returns an
-Sending a POST request for a version tag:
+When one of the creations fails, the response returns a `422` with success and errors.
 
 <ApiEndpoint data={endpointData.create} />
 
@@ -97,7 +99,7 @@ Authorization: Bearer YOUR_TOKEN
 ],
 ```
 
-## Update a users role
+## Update a user's role
 
 To change their role the user has to be identified by either: their `user_id`, their coupling id `id`, or their email `user_email`.
 Sending a PUT request for coupled users.
@@ -135,12 +137,12 @@ Authorization: Bearer YOUR_TOKEN
 ## Remove a user from a scenario
 
 To remove a user, the user has to be identified by either: their `user_id`, their coupling id `id`, or their email `user_email`.
-Sending a DESTROY request for coupled users.
+Sending a DELETE request for coupled users.
 
-<ApiEndpoint data={endpointData.update} />
+<ApiEndpoint data={endpointData.destroy} />
 
 ```http title="Example request"
-PUT /api/v3/scenarios/0/users HTTP/2
+DELETE /api/v3/scenarios/0/users HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
@@ -163,4 +165,23 @@ Authorization: Bearer YOUR_TOKEN
     "role": "scenario_viewer"
   },
 ],
+```
+
+## Remove all users from a scenario
+
+Remove all users except owners from a scenario in a single request.
+
+<ApiEndpoint data={endpointData.destroyAll} />
+
+```http title="Example request"
+DELETE /api/v3/scenarios/0/users/destroy_all HTTP/2
+Host: engine.energytransitionmodel.com
+Accept: application/json
+Authorization: Bearer YOUR_TOKEN
+```
+
+```json title="Example response"
+{
+  "message": "All users except owners have been removed"
+}
 ```
