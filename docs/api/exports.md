@@ -14,7 +14,6 @@ as well as hourly data.
 
 Endpoints that can be used to retrieve annual data are based on the following data keys:
 
-* `application_demands` - Returns a CSV file containing the primary and final demands of nodes belonging to the application_group group.
 * `production_parameters` - Returns a CSV file containing the capacities and costs of some electricity and heat producers.
 * `energy_flow` - Returns a CSV file containing the energetic inputs and outputs of every node in the graph.
 * `molecule_flow` - Returns a CSV file containing the flow of molecules through the molecule graph.
@@ -25,19 +24,19 @@ Endpoints that can be used to retrieve annual data are based on the following da
 
 ## Get annual data
 
-Sending a GET request for a `csv` file with one of the keys specified above to a scenario will serialize the specified `csv` for you. For example for `application_demands`:
+Sending a GET request for a `csv` file with one of the keys specified above to a scenario will serialize the specified `csv` for you. For example for `sankey`:
 
 <ApiEndpoint data={endpointData.exports} />
 
 ```http title="Example request"
-GET /api/v3/scenarios/0/application_demands.csv HTTP/2
+GET /api/v3/scenarios/0/sankey.csv HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: text/csv
 ```
 
 ```csv title="Example response"
-demand_1,demand_2,...
-0,0,...
+Group,Carrier,...
+Primary demand,Electricity,...
 ...
 ```
 
@@ -49,9 +48,10 @@ Endpoints that can be used to retrieve hourly data are based on the following da
 * `electricity_price` - Downloads the hourly price of electricity according to the merit order.
 * `heat_network` - Downloads the load on each participant in the heat merit order as a CSV.
 * `agriculture_heat` - Downloads the load on each participant in the agriculture heat merit order as a CSV.
-* `household_heat_curves` – Downloads the supply and demand of heat in households, including deficits and surpluses due to buffering and time-shifting.
-* `buildings_heat_curves` - Downloads the supply and demand of heat in buildings, including deficits and surpluses due to buffering and time-shifting.
+* `household_heat` – Downloads the supply and demand of heat in households, including deficits and surpluses due to buffering and time-shifting.
+* `buildings_heat` - Downloads the supply and demand of heat in buildings, including deficits and surpluses due to buffering and time-shifting.
 * `hydrogen` - Downloads the total demand and supply for hydrogen, with additional columns for the storage demand and supply.
+* `hydrgen_integral_costs` - Downloads the levelised costs, production costs per MWh and hourly production curve per hydrogen production technology.
 * `network_gas` - Downloads the total demand and supply for network gas, with additional columns for the storage demand and supply.
 * `residual_load` - Downloads the residual loads of various carriers.
 
