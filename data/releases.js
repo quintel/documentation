@@ -167,7 +167,7 @@ export const apiChangelog = [
     date: "Feb 5, 2026",
     title: "Scenario interpolation and Saved scenario users endpoint",
     file: "2026-01.md",
-    tag: "2026.01",
+    tag: "2026-01",
   },
   {
     date: "Dec 11, 2025",
