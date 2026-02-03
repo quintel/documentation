@@ -521,7 +521,7 @@ article p code {
 /* Add "New" tag to some sidebar items. */
 /* Commented out for now as there are no recent updates to highlight. */
 
-.menu a[href="/main/liquid-fuels"]:after,
+/* .menu a[href="/main/liquid-fuels"]:after,
 .menu a[href="/main/releases"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
@@ -541,7 +541,7 @@ article p code {
 .menu a.menu__link--active[href="/main/releases"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
-}
+} */
 
 /* Add "Updated" tag to some sidebar items. */
 /* Commented out for now as there are no recent updates to highlight. */
