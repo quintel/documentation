@@ -1,4 +1,3 @@
 ## Upcoming changes
 
-* The use of bio-LNG in international navigation (maritime bunkers) will be added to the model.
-* Various improvements are planned to enhance the user experience through better modelling and chart visualisations
+* Various improvements will be done in the <a href="https://energytransitionmodel.com/scenario/demand/buildings/overview" target="_blank">Buildings</a> sector sliders related to lighting and appliances

@@ -1,0 +1,6 @@
+﻿Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanation
+2026-01,International navigation,New,-,bunkers_ship_using_bio_lng_share,-,%,Share of LNG vessels using bio-LNG
+2026-01,International navigation,New,-,bunkers_ship_using_lng_share,-,%,Share of LNG vessels using fossil LNG
+2026-01,Full load hours,Removed,flh_of_energy_hydrogen_wind_turbine_offshore,-,hours,-,Full load hours of offshore wind with electrolyser is now set with full load hours input of 'regular' offshore wind
+2026-01,Full load hours,Changed,flh_of_energy_power_wind_turbine_offshore,-,hours,-,Full load hours of offshore wind with electrolysers is now set with this input
+2026-01,Full load hours,Changed,flh_of_energy_power_wind_turbine_offshore_user_curve,-,hours,-,Custom profile for offshore wind now also applies to offshore wind with electrolyser. Note: this input will automatically be set when a custom profile is uploaded
