@@ -51,7 +51,7 @@ Endpoints that can be used to retrieve hourly data are based on the following da
 * `household_heat` – Downloads the supply and demand of heat in households, including deficits and surpluses due to buffering and time-shifting.
 * `buildings_heat` - Downloads the supply and demand of heat in buildings, including deficits and surpluses due to buffering and time-shifting.
 * `hydrogen` - Downloads the total demand and supply for hydrogen, with additional columns for the storage demand and supply.
-* `hydrgen_integral_costs` - Downloads the levelised costs, production costs per MWh and hourly production curve per hydrogen production technology.
+* `hydrogen_integral_costs` - Downloads the levelised costs, production costs per MWh and hourly production curve per hydrogen production technology.
 * `network_gas` - Downloads the total demand and supply for network gas, with additional columns for the storage demand and supply.
 * `residual_load` - Downloads the residual loads of various carriers.
 
