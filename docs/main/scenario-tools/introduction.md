@@ -1,6 +1,13 @@
 ---
 title: Introduction
 ---
+
+:::warning Scenario-tools To Be Retired
+The scenario-tools package will be retired in the future. We recommend using [**PyETM**](../PyETM/introduction.md) instead, which is the modern, actively maintained Python package for interacting with the ETM API.
+
+If you have questions or concerns about this change, please contact us at **info@energytransitionmodel.com**.
+:::
+
 ## What are the scenario-tools?
 The scenario-tools are a small collection of tools written in Python that allow ETM users to
 communicate to the ETM without accessing the web-interface. Input and output data is all
