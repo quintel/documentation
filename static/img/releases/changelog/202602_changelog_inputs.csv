@@ -5,7 +5,7 @@
 2026-02,Buildings appliances,New,-,buildings_appliances_electricity_share,-,%,Updated modelling of the building appliances section
 2026-02,Buildings appliances,New,-,buildings_appliances_network_gas_share,-,%,Updated modelling of the building appliances section
 2026-02,Buildings appliances,New,-,buildings_appliances_wood_pellets_share,-,%,Updated modelling of the building appliances section
-2026-02,Buildings appliances,Removed,buildings_useful_demand_for_appliances,buildings_useful_demand_appliances,%,-,Updated modelling of the building appliances section
+2026-02,Buildings appliances,Renamed,buildings_useful_demand_for_appliances,buildings_useful_demand_appliances,%,-,Updated modelling of the building appliances section
 2026-02,Buildings lighting,New,-,buildings_useful_demand_lighting,-,%,Updated modelling of the building lighting section
 2026-02,Buildings lighting,Removed,buildings_lighting_savings_from_daylight_control_light,-,%,-,Updated modelling of the building lighting section
 2026-02,Buildings lighting,Removed,buildings_lighting_savings_from_motion_detection_light,-,%,-,Updated modelling of the building lighting section
