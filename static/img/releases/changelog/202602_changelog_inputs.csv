@@ -5,18 +5,13 @@
 2026-02,Buildings appliances,New,-,buildings_appliances_electricity_share,-,%,Updated modelling of the building appliances section
 2026-02,Buildings appliances,New,-,buildings_appliances_network_gas_share,-,%,Updated modelling of the building appliances section
 2026-02,Buildings appliances,New,-,buildings_appliances_wood_pellets_share,-,%,Updated modelling of the building appliances section
-2026-02,Buildings appliances,New,-,buildings_useful_demand_appliances,-,%,Updated modelling of the building appliances section
-2026-02,Buildings appliances,Renamed,buildings_useful_demand_cooling,buildings_useful_demand_cooling,%/year,%/year,Updated modelling of the building appliances section
-2026-02,Buildings appliances,Renamed,buildings_useful_demand_electricity,buildings_useful_demand_electricity,%/year,%/year,Updated modelling of the building appliances section
-2026-02,Buildings appliances,Changed,buildings_lighting_efficient_fluorescent_electricity_share,buildings_lighting_efficient_fluorescent_electricity_share,%,%,Updated modelling of the building appliances section
-2026-02,Buildings appliances,Changed,buildings_lighting_led_electricity_share,buildings_lighting_led_electricity_share,%,%,Updated modelling of the building appliances section
-2026-02,Buildings appliances,Changed,buildings_lighting_standard_fluorescent_electricity_share,buildings_lighting_standard_fluorescent_electricity_share,%,%,Updated modelling of the building appliances section
-2026-02,Buildings appliances,Removed,buildings_lighting_savings_from_daylight_control_light,-,%,-,Updated modelling of the building appliances section
-2026-02,Buildings appliances,Removed,buildings_lighting_savings_from_motion_detection_light,-,%,-,Updated modelling of the building appliances section
-2026-02,Buildings appliances,Removed,buildings_useful_demand_for_appliances,-,%,-,Updated modelling of the building appliances section
-2026-02,Transport efficiency ,Changed,transport_planes_efficiency,transport_planes_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
-2026-02,Transport efficiency ,Changed,transport_ships_efficiency,transport_ships_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
-2026-02,Transport efficiency ,Changed,transport_trains_efficiency,transport_trains_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
-2026-02,Transport efficiency ,Changed,transport_vehicle_combustion_engine_efficiency,transport_vehicle_combustion_engine_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
-2026-02,Transport efficiency ,Changed,transport_vehicle_using_electricity_efficiency,transport_vehicle_using_electricity_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
-2026-02,Transport efficiency ,Changed,transport_vehicle_using_hydrogen_efficiency,transport_vehicle_using_hydrogen_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Buildings appliances,Removed,buildings_useful_demand_for_appliances,buildings_useful_demand_appliances,%,-,Updated modelling of the building appliances section
+2026-02,Buildings lighting,New,-,buildings_useful_demand_lighting,-,%,Updated modelling of the building lighting section
+2026-02,Buildings lighting,Removed,buildings_lighting_savings_from_daylight_control_light,-,%,-,Updated modelling of the building lighting section
+2026-02,Buildings lighting,Removed,buildings_lighting_savings_from_motion_detection_light,-,%,-,Updated modelling of the building lighting section
+2026-02,Transport efficiency,Changed,transport_planes_efficiency,transport_planes_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Transport efficiency,Changed,transport_ships_efficiency,transport_ships_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Transport efficiency,Changed,transport_trains_efficiency,transport_trains_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Transport efficiency,Changed,transport_vehicle_combustion_engine_efficiency,transport_vehicle_combustion_engine_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Transport efficiency,Changed,transport_vehicle_using_electricity_efficiency,transport_vehicle_using_electricity_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Transport efficiency,Changed,transport_vehicle_using_hydrogen_efficiency,transport_vehicle_using_hydrogen_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies

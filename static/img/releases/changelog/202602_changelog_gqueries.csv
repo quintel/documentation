@@ -1,4 +1,4 @@
 ﻿Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanation
-2026-02,Liquid Fuels and feedstock flows,New,-,crude_oil_to_export,-,PJ,Bug fix In chart for export of crude oil
-2026-02,Liquid Fuels and feedstock flows,Changed,oil_products_to_export,oil_products_to_export,PJ,PJ,Bug fix In chart for export of crude oil
-2026-02,Liquid Fuels and feedstock flows,New,-,crude_oil_to_export_in_liquid_fuels_sankey,-,PJ,Bug fix In chart for export of crude oil
+2026-02,Liquid Fuels and feedstock flows,New,-,crude_oil_to_export,-,PJ,Bug fix in chart for export of crude oil
+2026-02,Liquid Fuels and feedstock flows,Changed,oil_products_to_export,oil_products_to_export,PJ,PJ,Bug fix in chart for export of crude oil
+2026-02,Liquid Fuels and feedstock flows,New,-,crude_oil_to_export_in_liquid_fuels_sankey,-,PJ,Bug fix in chart for export of crude oil
