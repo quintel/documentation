@@ -15,7 +15,8 @@ as well as hourly data.
 Endpoints that can be used to retrieve annual data are based on the following data keys:
 
 * `production_parameters` - Returns a CSV file containing the capacities and costs of some electricity and heat producers.
-* `energy_flow` - Returns a CSV file containing the energetic inputs and outputs of every node in the graph.
+* `energy_flow` - Returns a CSV file containing the energetic inputs and outputs of every node in the graph of the future scenario year.
+* `energy_flow_present` - Returns a CSV file containing the energetic inputs and outputs of every node in the graph of the present dataset year.
 * `molecule_flow` - Returns a CSV file containing the flow of molecules through the molecule graph.
 * `sankey` – Creates a CSV by reading the `sankey` configuration file from ETSource.
 * `storage_parameters` - Creates a CSV by reading the `storage` configuration file from ETSource.
