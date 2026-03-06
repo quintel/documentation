@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-:::warning Scenario-tools To Be Retired
+:::warning Retirement notice
 The scenario-tools package will be retired in the future. We recommend using [**PyETM**](../PyETM/introduction.md) instead, which is the modern, actively maintained Python package for interacting with the ETM API.
 
 If you have questions or concerns about this change, please contact us at **info@energytransitionmodel.com**.
