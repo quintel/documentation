@@ -126,7 +126,7 @@ module.exports = {
     },
     {
       type: "category",
-      label: "6. Scenario-tools (To Be Retired)",
+      label: "6. Scenario-tools",
       collapsed: true,
       items: [
         "main/scenario-tools/introduction",
