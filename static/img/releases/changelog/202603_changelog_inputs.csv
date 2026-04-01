@@ -1,0 +1,23 @@
+Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanation
+2026-03,Scenario report,Removed,energy_mix_capacity_per_unit_wind_turbine_inland,-,MW,-,Removed input with retired energy mix visual
+2026-02,Buildings appliances,New,-,buildings_appliances_coal_share,-,%,Updated modelling of the building appliances section
+2026-02,Buildings appliances,New,-,buildings_appliances_crude_oil_share,-,%,Updated modelling of the building appliances section
+2026-02,Buildings appliances,New,-,buildings_appliances_efficiency,-,%,Updated modelling of the building appliances section
+2026-02,Buildings appliances,New,-,buildings_appliances_electricity_share,-,%,Updated modelling of the building appliances section
+2026-02,Buildings appliances,New,-,buildings_appliances_network_gas_share,-,%,Updated modelling of the building appliances section
+2026-02,Buildings appliances,New,-,buildings_appliances_wood_pellets_share,-,%,Updated modelling of the building appliances section
+2026-02,Buildings appliances,Renamed,buildings_useful_demand_for_appliances,buildings_useful_demand_appliances,%,-,Updated modelling of the building appliances section
+2026-02,Buildings lighting,New,-,buildings_useful_demand_lighting,-,%,Updated modelling of the building lighting section
+2026-02,Buildings lighting,Removed,buildings_lighting_savings_from_daylight_control_light,-,%,-,Updated modelling of the building lighting section
+2026-02,Buildings lighting,Removed,buildings_lighting_savings_from_motion_detection_light,-,%,-,Updated modelling of the building lighting section
+2026-02,Transport efficiency,Changed,transport_planes_efficiency,transport_planes_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Transport efficiency,Changed,transport_ships_efficiency,transport_ships_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Transport efficiency,Changed,transport_trains_efficiency,transport_trains_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Transport efficiency,Changed,transport_vehicle_combustion_engine_efficiency,transport_vehicle_combustion_engine_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Transport efficiency,Changed,transport_vehicle_using_electricity_efficiency,transport_vehicle_using_electricity_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-02,Transport efficiency,Changed,transport_vehicle_using_hydrogen_efficiency,transport_vehicle_using_hydrogen_efficiency,%/year,%/year,Updated transport efficiency sliders to include all relevant technologies
+2026-01,International navigation,New,-,bunkers_ship_using_bio_lng_share,-,%,Share of LNG vessels using bio-LNG
+2026-01,International navigation,New,-,bunkers_ship_using_lng_share,-,%,Share of LNG vessels using fossil LNG
+2026-01,Full load hours,Removed,flh_of_energy_hydrogen_wind_turbine_offshore,-,hours,-,Full load hours of offshore wind with electrolyser is now set with full load hours input of 'regular' offshore wind
+2026-01,Full load hours,Changed,flh_of_energy_power_wind_turbine_offshore,-,hours,-,Full load hours of offshore wind with electrolysers is now set with this input
+2026-01,Full load hours,Changed,flh_of_energy_power_wind_turbine_offshore_user_curve,-,hours,-,Custom profile for offshore wind now also applies to offshore wind with electrolyser. Note: this input will automatically be set when a custom profile is uploaded

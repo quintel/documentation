@@ -1,2 +1,2 @@
-We continuously improve and extend the model.
-No significant updates are confirmed for the next version, but stay tuned for future releases.
+The model is continuously being improved and extended. 
+No specific updates are confirmed for the next release, but stay tuned for future releases.
