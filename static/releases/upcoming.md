@@ -1,2 +1,1 @@
-We continuously improve and extend the model.
-No significant updates are confirmed for the next version, but stay tuned for future releases.
+A new emissions accounting method based on **direct emissions** will be introduced. New charts, dashboard items and detailed data exports that rely on the direct emissions method will become available. Note that the model's current emissions method, based on <a href="https://docs.energytransitionmodel.com/main/co2-main-principles#modelling-principles" target="_blank">primary demand</a>, will remain the default emissions method of the model for the time being.
