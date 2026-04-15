@@ -73,11 +73,11 @@ V(agriculture_final_demand_electricity, primary_co2_emission_of_bio_carriers) = 
 
 #### Example:
 ```
-V(energy_power_combined_cycle_network_gas, weighted_carrier_cost_per_mj) = 0.0075 [EUR/MJ]
+V(energy_power_combined_cycle_network_gas_dispatchable, weighted_carrier_cost_per_mj) = 0.0075 [EUR/MJ]
 
-V(energy_power_combined_cycle_network_gas, weighted_carrier_co2_per_mj) = 0.025 [kg CO₂/MJ]
+V(energy_power_combined_cycle_network_gas_dispatchable, weighted_carrier_co2_per_mj) = 0.025 [kg CO₂/MJ]
 
-V(energy_power_combined_cycle_network_gas, weighted_carrier_potential_co2_per_mj) = 0.030 [kg CO₂/MJ]
+V(energy_power_combined_cycle_network_gas_dispatchable, weighted_carrier_potential_co2_per_mj) = 0.030 [kg CO₂/MJ]
 ```
 
 ### Sustainable

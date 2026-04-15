@@ -87,7 +87,7 @@ Energy nodes using `from_molecules` should have an initial demand set by ETSourc
 Every molecule node that receives a demand from an energy node must define a `source` attribute. This should match the key of an energy node where a demand is already known.
 
 ```
-- from_energy.source = energy_power_combined_cycle_network_gas
+- from_energy.source = energy_power_combined_cycle_network_gas_dispatchable
 ```
 
 ### The `direction` attribute
@@ -130,7 +130,7 @@ When used in combination with a `direction`, `conversion` allows each input or o
 For every 1MJ of energy (node demand) on the gas power plant, 0.5kg of molecules will be set on the molecule graph:
 
 ```
-- from_energy.source = energy_power_combined_cycle_network_gas
+- from_energy.source = energy_power_combined_cycle_network_gas_dispatchable
 - from_energy.conversion = 0.5
 ```
 
