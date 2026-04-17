@@ -5,7 +5,7 @@ sidebar_label: "Emissions from biomass"
 
 According to international standards, CO<sub>2</sub> emissions are not attributed to biomass as biomass is assumed to absorb as much CO<sub>2</sub> as is emitted during combustion (over the complete life cycle). However, climate change is not induced by annual CO<sub>2</sub> emissions, but by the total amount of CO<sub>2</sub> present in the air. Virtually any form of combustion contributes to the amount of CO<sub>2</sub> in the air. The life cycle of biomass varies from a couple of months to over a century. If we continue to emit a similar amount of CO<sub>2</sub>, we are estimated to reach 2 degrees within 20 years. This means that the CO<sub>2</sub> emitted by combustion of biomass is not always absorbed within a timescale that is relevant to delay climate change. 
 
-Which exact part of CO<sub>2</sub> emissions from biomass is relevant to the environment is uncertain and speculative. The ETM makes it possible to explore the potential CO<sub>2</sub> emissions of biomass combustion in the [CO<sub>2</sub> emissions from biomass](https://energytransitionmodel.com/scenario/emission/emission_factors/co2-emissions-of-biomass) section.
+Which exact part of CO<sub>2</sub> emissions from biomass is relevant to the environment is uncertain and speculative. The ETM makes it possible to explore the potential CO<sub>2</sub> emissions of biomass combustion in the [CO<sub>2</sub> emissions from biomass](https://energytransitionmodel.com/scenario/emissions/emission_factors/co2-emissions-of-biomass) section.
 
 This page provides background information on the carbon debt, land-use change due to biomass and biomass policies.
 
