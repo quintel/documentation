@@ -16,21 +16,23 @@ Gqueries are in fact stored [GQL](gql.md) (Graph Query Language) procedures that
 
 Example for `final_demand_energetic_industry_steel_wood_pellets`:
 ```
-# Energetic final demand of the 'coal' carrier group in industry steel sector.
+# Energetic final demand of the 'coal' carrier group in households appliances
 
 - query =
-    SUM(
-      V(
-        FILTER(
+    DIVIDE(
+      SUM(
+        V(
           FILTER(
-            INTERSECTION(EG(final_demand),EG(appliances_households)
+            FILTER(
+              INTERSECTION(EG(final_demand),EG(appliances_households)),
+              "coal? || coal_gas? || cokes? || lignite?"
             ),
-            "coal? || coal_gas? || cokes? || lignite?"
+            "energetic?"
           ),
-          "energetic?"
-        ),
-        value
-      )
+          value
+        )
+      ),
+      BILLIONS
     )
 - unit = PJ
 ```
