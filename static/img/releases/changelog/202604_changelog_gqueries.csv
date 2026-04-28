@@ -1,0 +1,344 @@
+Deploy,Subject,Status,Previous gquery,New gquery,Previous unit,New unit,Explanation
+2026-04,Hydrogen,Renamed,buildings_individual_heater_hydrogen_for_mekko,buildings_final_demand_hydrogen_for_mekko,PJ,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,heat_plants_hydrogen_for_mekko,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,energy_heat_from_hydrogen_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,industry_heat_from_hydrogen_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,energy_hydrogen_autothermal_reformer_ccs_must_run_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,energy_hydrogen_biomass_gasification_ccs_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,energy_hydrogen_electrolysis_wind_hybrid_for_mekko,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Renamed,energy_production_liquid_fuels_from_hydrogen_for_mekko,energy_liquid_fuels_production_hydrogen_for_mekko,PJ,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Renamed,households_individual_heater_hydrogen_for_mekko,households_final_demand_hydrogen_for_mekko,PJ,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_transformation_hydrogen_demand_for_mekko,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_transformation_hydrogen_supply_for_mekko,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_demand_transformation_chemical_fertilizers_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_demand_transformation_chemical_other_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_demand_transformation_chemical_refineries_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_supply_transformation_chemical_fertilizers_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_supply_transformation_chemical_other_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_supply_transformation_chemical_refineries_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_final_demand_non_energetic_hydrogen_for_mekko,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,industry_final_demand_for_chemical_fertilizers_hydrogen_non_energetic_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,industry_final_demand_for_chemical_other_hydrogen_non_energetic_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Renamed,industry_final_demand_hydrogen_for_mekko,industry_final_demand_energetic_hydrogen_for_mekko,PJ,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,ammonia_reformer_dispatchable_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,ammonia_reformer_must_run_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,autothermal_reformer_dispatchable_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,autothermal_reformer_must_run_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_transformation_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,steam_methane_reformer_dispatchable_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,steam_methane_reformer_must_run_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,final_demand_of_hydrogen_in_industry_non_energetic,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,energy_heat_production_hydrogen_demand,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,energy_power_plants_hydrogen_demand,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_heat_production_hydrogen_demand,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_transformation_hydrogen_demand,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,losses_energetic_hydrogen,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,storage_unused_hydrogen,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,export_of_hydrogen_backup,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,export_of_hydrogen_baseload,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,import_of_hydrogen_backup,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,import_of_hydrogen_baseload,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Gas power plants,Removed,total_cost_of_energy_power_combined_cycle_ccs_network_gas,total_cost_of_energy_power_combined_cycle_ccs_network_gas_dispatchable,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,total_cost_of_energy_power_combined_cycle_network_gas,total_cost_of_energy_power_combined_cycle_network_gas_dispatchable,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,total_cost_of_energy_power_turbine_network_gas,total_cost_of_energy_power_turbine_network_gas_dispatchable,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,myc_installed_production_capacity_in_gas_ccgt,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,myc_installed_production_capacity_in_gas_turbine,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,myc_installed_production_capacity_in_gas_ccgt_dispatchable,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,myc_installed_production_capacity_in_gas_ccgt_must_run,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,myc_installed_production_capacity_in_gas_turbine_dispatchable,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,myc_installed_production_capacity_in_gas_turbine_must_run,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,costs_of_gas_ccgt_in_overview_costs_of_electricity_production,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,costs_of_gas_turbine_in_overview_costs_of_electricity_production,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,costs_of_gas_ccgt_dispatchable_in_overview_costs_of_electricity_production,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,costs_of_gas_ccgt_must_run_in_overview_costs_of_electricity_production,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,costs_of_gas_turbine_dispatchable_in_overview_costs_of_electricity_production,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,costs_of_gas_turbine_must_run_in_overview_costs_of_electricity_production,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,investment_for_gas_ccgt_in_overview_costs_of_electricity_production,-,mln_euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,investment_for_gas_turbine_in_overview_costs_of_electricity_production,-,mln_euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,investment_for_gas_ccgt_dispatchable_in_overview_costs_of_electricity_production,-,mln_euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,investment_for_gas_ccgt_must_run_in_overview_costs_of_electricity_production,-,mln_euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,investment_for_gas_turbine_dispatchable_in_overview_costs_of_electricity_production,-,mln_euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,investment_for_gas_turbine_must_run_in_overview_costs_of_electricity_production,-,mln_euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,energy_power_combined_cycle_ccs_network_gas,energy_power_combined_cycle_ccs_network_gas_dispatchable,curve,curve,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_combined_cycle_network_gas,-,curve,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_dispatchable,-,curve,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_must_run,-,curve,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_turbine_network_gas,-,curve,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_dispatchable,-,curve,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_must_run,-,curve,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,energy_power_combined_cycle_ccs_network_gas_delta_in_investment_cost_table,energy_power_combined_cycle_ccs_network_gas_dispatchable_delta_in_investment_cost_table,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,energy_power_combined_cycle_ccs_network_gas_future_in_investment_cost_table,energy_power_combined_cycle_ccs_network_gas_dispatchable_future_in_investment_cost_table,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,energy_power_combined_cycle_ccs_network_gas_present_in_investment_cost_table,energy_power_combined_cycle_ccs_network_gas_dispatchable_present_in_investment_cost_table,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_combined_cycle_network_gas_delta_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_combined_cycle_network_gas_future_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_combined_cycle_network_gas_present_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_dispatchable_delta_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_dispatchable_future_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_dispatchable_present_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_must_run_delta_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_must_run_future_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_must_run_present_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_turbine_network_gas_delta_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_turbine_network_gas_future_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_turbine_network_gas_present_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_dispatchable_delta_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_dispatchable_future_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_dispatchable_present_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_must_run_delta_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_must_run_future_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_must_run_present_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_merit_order,-,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_merit_order,-,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_merit_order,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_merit_order,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_merit_order,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_merit_order,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_availability_in_merit_order_table,-,Percentage,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_capacity_in_merit_order_table,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_full_load_hours_in_merit_order_table,-,hours,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_load_factor_in_merit_order_table,-,factor,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_operating_costs_in_merit_order_table,-,EUR,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_position_in_merit_order_table,-,number,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_availability_in_merit_order_table,-,Percentage,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_capacity_in_merit_order_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_full_load_hours_in_merit_order_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_load_factor_in_merit_order_table,-,factor,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_operating_costs_in_merit_order_table,-,EUR,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_position_in_merit_order_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_availability_in_merit_order_table,-,Percentage,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_capacity_in_merit_order_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_full_load_hours_in_merit_order_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_load_factor_in_merit_order_table,-,factor,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_operating_costs_in_merit_order_table,-,EUR,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_position_in_merit_order_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_availability_in_merit_order_table,-,Percentage,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_capacity_in_merit_order_table,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_full_load_hours_in_merit_order_table,-,hours,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_load_factor_in_merit_order_table,-,factor,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_operating_costs_in_merit_order_table,-,EUR,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_position_in_merit_order_table,-,number,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_availability_in_merit_order_table,-,Percentage,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_capacity_in_merit_order_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_full_load_hours_in_merit_order_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_load_factor_in_merit_order_table,-,factor,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_operating_costs_in_merit_order_table,-,EUR,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_position_in_merit_order_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_availability_in_merit_order_table,-,Percentage,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_capacity_in_merit_order_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_full_load_hours_in_merit_order_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_load_factor_in_merit_order_table,-,factor,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_operating_costs_in_merit_order_table,-,EUR,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_position_in_merit_order_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_capacity_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_capacity_in_power_plant_economic_performance_table,MW,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_capex_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_capex_in_power_plant_economic_performance_table,EUR/MWh,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_full_load_hours_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_full_load_hours_in_power_plant_economic_performance_table,hours,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_opex_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_opex_in_power_plant_economic_performance_table,EUR/MWh,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_position_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_position_in_power_plant_economic_performance_table,number,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_profit_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_profit_in_power_plant_economic_performance_table,EUR/MWh,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_revenue_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_revenue_in_power_plant_economic_performance_table,EUR/MWh,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_capacity_in_power_plant_economic_performance_table,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_capex_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_full_load_hours_in_power_plant_economic_performance_table,-,hours,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_opex_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_position_in_power_plant_economic_performance_table,-,number,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_profit_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_capacity_in_power_plant_economic_performance_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_capex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_full_load_hours_in_power_plant_economic_performance_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_opex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_position_in_power_plant_economic_performance_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_profit_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_capacity_in_power_plant_economic_performance_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_capex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_full_load_hours_in_power_plant_economic_performance_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_opex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_position_in_power_plant_economic_performance_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_profit_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_capacity_in_power_plant_economic_performance_table,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_capex_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_full_load_hours_in_power_plant_economic_performance_table,-,hours,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_opex_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_position_in_power_plant_economic_performance_table,-,number,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_profit_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_capacity_in_power_plant_economic_performance_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_capex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_full_load_hours_in_power_plant_economic_performance_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_opex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_position_in_power_plant_economic_performance_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_profit_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_capacity_in_power_plant_economic_performance_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_capex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_full_load_hours_in_power_plant_economic_performance_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_opex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_position_in_power_plant_economic_performance_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_profit_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_built_environment_ex_heating,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_collective_heating,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_ict_data,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_individual_heating,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_production_of_hydrogen,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_transport,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_fossil_in_electricity,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_fossil_in_households_buildings_agriculture,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_fossil_in_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_fossil_in_mobility,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_fossil_in_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_biogas_greengas_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_biogas_greengas_electricity_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_biogas_greengas_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_biogas_greengas_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_biogas_greengas_transport,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_fossil_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_fossil_electricity_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_fossil_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_fossil_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_fossil_transport,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_distribution_losses,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_exported,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_in_collective_heat,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_in_electricity,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_in_individual_heat,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_in_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_in_transport,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_electricity,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_in_collective_heat_production,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_other_built_environment,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_solar_and_wind_in_electricity_production,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_roof_solar_buildings,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_roof_solar_households,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_ambient_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_rest,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_rest_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_rest_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_solar_thermal_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_hydrogen_imported,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_hydrogen_locally_produced,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_bio_fuels,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_collective_heat,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_electricity,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_gas_households_buildings,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_gas_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_nodes,-,-,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_oil_and_coal_products,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_renewable_heat,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_households_buildings_in_total_demand,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_total_demand,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_total_demand_absolute_change,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_total_demand_relative_change,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_total_supply,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_biofuels,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_dry_biomass,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_import_except_imbalance,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_solar,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_wind,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_fossil_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_gas_from_biogas,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_gas_from_fossil,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_gas_from_synthetic_gas,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_fossil_heating,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_ambient,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_rest_and_geothermal,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_solar_thermal,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_in_individual_heat_production,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_transport,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_installed_capacity_of_collective_heat_sources,-,MW,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_geothermal_in_collective_heat_sources,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_heatpump_in_collective_heat_sources,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_other_in_collective_heat_sources,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_solar_thermal_in_collective_heat_sources,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_waste_heat_in_collective_heat_sources,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_ambient_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_electricity_heatpump_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_geothermal_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_of_collective_heat_per_residence,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_electricity_except_heatpump,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_greengas_in_total_gas,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_hydrogen_in_total_gas,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_natural_gas_in_total_gas,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_of_gas_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_biomass_in_individual_heat,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_heatpump_in_individual_heat,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_other_in_individual_heat,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_solar_thermal_in_individual_heat,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_ambient_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_biomass_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_electricity_except_heatpump_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_electricity_heatpump_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_solar_thermal_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_other_renewable_heating,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_of_individual_heat_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,energy_mix_capacity_per_panel_solar_pv,-,kWp,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_OM_solar_thermal_number_of_units_correction,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_installed_capacity_of_solar_pv,-,MW,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_installed_capacity_of_solar_thermal,-,MW,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_number_of_roof_solar_pv,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_number_of_roof_water_heater_solar_thermal,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_solar_pv_plants_land_use,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_solar_thermal_plants_land_use,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_roof_solar,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_from_solar_pv_plants,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_of_solar_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,energy_mix_capacity_per_unit_wind_turbine_inland,-,MW,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_installed_capacity_of_wind_turbine_inland_coastal,-,MW,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_number_of_wind_turbine_inland_coastal,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_number_of_wind_turbines_offshore,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_from_wind_and_other_electricity,-,MJ,-,Retired energy mix visual
+2026-03,Scenario report visual,Removed,biggest_electricity_producer_name,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,biggest_electricity_producer_value,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,biggest_final_demand_sector_name,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,biggest_final_demand_sector_value,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,bio_footprint_of_greengas_fraction_of_areable_land,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,bio_footprint_of_greengas_km,-,km2,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,ev_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,insulation_level_new_houses,-,m^2K/W,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,insulation_level_old_houses,-,m^2K/W,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_electric_vehicles_per_year,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_wind_turbines_per_year_coastal,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_wind_turbines_per_year_inland,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_wind_turbines_per_year_offshore,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,primary_energy_demand_percentage_wrt_start_year,-,%,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,profitability_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,refinery_percentage,-,%,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,renewability_percentage,-,%,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,steel_industry_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,total_net_energy_import,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,buildings_final_demand_low_temperature_heat,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,buildings_final_demand_power_and_light,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,buildings_final_demand_power_and_light_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,co2_reduction_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,energetic_co2_emissions_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,final_demand_difference,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,final_demand_from_built_environment,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,final_demand_from_built_environment_difference,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,hectares_of_solar_park_per_year,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,households_final_cooking_demand,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,households_final_demand_cooking_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,households_final_demand_low_temperature_heat,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,households_final_demand_power_and_light,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,households_final_demand_power_and_light_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,hydrogen_used_in_scenario,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,imported_electricity_percentage,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,international_transport_in_scenario,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,non_energetic_co2_emissions_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_residences_built_per_year,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_residences_removed_from_natural_gas,-,#,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_wind_turbines_inland_and_coastal,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,solar_park_total_football_fields,-,#,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,solar_park_total_land_use,-,km2,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,total_costs_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,total_energetic_and_non_energetic_co2_emissions,-,T,-,Retired scenario report visual
+2026-02,Liquid Fuels and feedstock flows,New,-,crude_oil_to_export,-,PJ,Bug fix in chart for export of crude oil
+2026-02,Liquid Fuels and feedstock flows,Changed,oil_products_to_export,oil_products_to_export,PJ,PJ,Bug fix in chart for export of crude oil
+2026-02,Liquid Fuels and feedstock flows,New,-,crude_oil_to_export_in_liquid_fuels_sankey,-,PJ,Bug fix in chart for export of crude oil
