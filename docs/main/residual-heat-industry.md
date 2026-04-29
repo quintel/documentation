@@ -16,7 +16,7 @@ Although the upper limit of the residual heat sliders is quite high, in reality 
 -   Refineries
 -   Fertilizer industry
 -   ICT
--   Hydrogen conversion of electricity via electrolysis
+-   Hydrogen production via electrolysis
 
 The above sectors are chosen because of their high residual heat potential compared to other sectors and/or because these sectors are similarly modelled in the ETM.
 

@@ -22,10 +22,10 @@ Must-run and volatile sources include all hydrogen sources that supply hydrogen 
 * Autothermal reforming (ATR) with or without CCS
 * Ammonia reforming
 * Biomass gasification with or without CCS
-* Dedicated H<sub>2</sub> production by offshore wind turbines
-* Dedicated H<sub>2</sub> production by solar PV plants
+* Electrolysis from offshore wind (dedicated)
+* Electrolysis from solar on land (dedicated)
 * Price-sensitive H<sub>2</sub> production with electrolysis (capacity can be installed in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-hydrogen) section)
-* Price-sensitive offshore H<sub>2</sub> production with electrolysis (capacity can be installed in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_net_load/hybrid-offshore-wind-components) section)
+* Price-sensitive offshore wind with hybrid connection for H<sub>2</sub> production (capacity can be installed in the [Renewable electricity](https://energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines) section)
 * LH2 regasification
 * LOHC reforming
 * Baseload import

@@ -28,7 +28,7 @@ See [Merit order](merit-order.md) for more information on the clearing of the de
 
 Electricity can be used to produce hydrogen through the electrolysis of water. The sustainability of hydrogen from electrolysis therefore depends on the carbon intensity of the electricity used to produce. In the ETM, the hydrogen produced by electrolysis will be supplied to the central hydrogen network.
 
-You can determine the installed capacity of onshore electrolysis and their willingness to pay in the [Conversion to hydrogen](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-hydrogen) section. Additionally, it is possible to set installed capacity for an offshore electrolyser as part of a hybrid offshore wind hub. Capacity can be installed in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_net_load/hybrid-offshore-wind-components) section. See [Hybrid offshore wind](hybrid-offshore-wind) for more information.
+You can determine the installed capacity of electrolysis from grid on land and its willingness to pay in the [Flexibility](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-to-hydrogen) section. Additionally, it is possible to set installed capacity for an offshore electrolyser as part of a hybrid offshore wind hub in the [Renewable electricity](https://energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines) section. See [Hybrid offshore wind](hybrid-offshore-wind) for more information.
 
 :::info Hydrogen
 See [Hydrogen](hydrogen.md) for more information about the central hydrogen network; what other types of supply are available, where to set hydrogen demand and how the central hydrogen network is balanced.
