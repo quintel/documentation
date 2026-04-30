@@ -47,7 +47,7 @@ Below you can find an overview of the different cost components that are taken i
 |  ***Subject***   | ***Cost components***  |
 |---|---|
 | Power-to-power (p2p) | CAPEX and OPEX of houshold batteries, EV batteries, grid batteries, OPAC and pumped storage
-| Power-to-gas (p2g) | CAPEX and OPEX of onshore and offshore electrolysers
+| Electrolysis from grid on land | CAPEX and OPEX of electrolysers connected to the electricity grid
 | Power-to-heat (p2h) | CAPEX and OPEX of industrial p2h boilers
 | Storage | CAPEX and OPEX of hydrogen and heat
 
