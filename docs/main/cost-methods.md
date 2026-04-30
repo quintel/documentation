@@ -32,7 +32,7 @@ The yearly costs of a scenario in the ETM is built up from all technologies, car
 
 4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). All G2P is associated with means of 'Energy production'. Subgroups:
   -  Power-to-power (p2p)
-  -  Electrolysis from grid on land
+  -  Electrolysis: electrolysis from grid on land and wind offshore with hybrid connection
   -  Power-to-heat (p2h)
   -  Storage (of hydrogen and heat)
 
