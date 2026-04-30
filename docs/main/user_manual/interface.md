@@ -2,7 +2,7 @@
 title: "Interface"
 ---
 
-This page explains the main features displayed in the [interface](https://energytransitionmodel.com/scenario/overview/scenario_overview/overview) of the ETM.
+This page efxplains the main features displayed in the [interface](https://energytransitionmodel.com/scenario/overview/scenario_overview/overview) of the ETM.
 You will land in the ETM interface after starting or opening a scenario. Here you will find the following topics:
 
 ![The ETM interface](/img/docs/interface.png)
@@ -20,7 +20,7 @@ In this section an overview of your scenario using summarizing charts can be fou
 The toolbar allows you to influence the main elements of the future energy system in your region:
 Demand: 	what happens to energy consumption in the future?
 Supply: 	which technologies will be used to produce heat, electricity and fuel in the future?
-Flexibility: 	future energy systems will most likely be characterized by times of excess electricity due to the volatile nature of the electricity production. Flexibility technologies, like battery storage and power to gas allow you to deal with this excess electricity.
+Flexibility: 	future energy systems will most likely be characterized by times of excess electricity due to the volatile nature of the electricity production. Flexibility technologies, like battery storage and electrolysis allow you to deal with this excess electricity.
 Emissions: what role will greenhouse gasses and CCUS play in the future?
 Costs & efficiencies: 	pecify what you think will happen to the costs of carriers and technologies.
 
