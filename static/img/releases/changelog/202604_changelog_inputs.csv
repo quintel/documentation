@@ -1,12 +1,9 @@
 Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanation
-2026-04,Gas power plants,Removed,capacity_of_energy_power_combined_cycle_network_gas,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
-2026-04,Gas power plants,Removed,capacity_of_energy_power_turbine_network_gas,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
-2026-04,Gas power plants,Removed,share_of_energy_power_combined_cycle_ccs_network_gas,-,%,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
-2026-04,Gas power plants,New,-,capacity_of_energy_power_combined_cycle_network_gas_dispatchable,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,capacity_of_energy_power_combined_cycle_network_gas,capacity_of_energy_power_combined_cycle_network_gas_dispatchable,MW,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,capacity_of_energy_power_turbine_network_gas,capacity_of_energy_power_turbine_network_gas_dispatchable,MW,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,share_of_energy_power_combined_cycle_ccs_network_gas,share_of_energy_power_combined_cycle_ccs_network_gas_dispatchable,%,%,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
 2026-04,Gas power plants,New,-,capacity_of_energy_power_combined_cycle_network_gas_must_run,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
-2026-04,Gas power plants,New,-,capacity_of_energy_power_turbine_network_gas_dispatchable,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
 2026-04,Gas power plants,New,-,capacity_of_energy_power_turbine_network_gas_must_run,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
-2026-04,Gas power plants,New,-,share_of_energy_power_combined_cycle_ccs_network_gas_dispatchable,-,%,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
 2026-04,Ammonia import,Changed,capacity_of_energy_imported_ammonia_baseload,capacity_of_energy_imported_ammonia_baseload,MW,MW,Doubled the maximum slider range for imported ammonia baseload capacity
 2026-03,Scenario report,Removed,energy_mix_capacity_per_unit_wind_turbine_inland,-,MW,-,Removed input with retired energy mix visual
 2026-02,Buildings appliances,New,-,buildings_appliances_coal_share,-,%,Updated modelling of the building appliances section
