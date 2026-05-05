@@ -30,9 +30,9 @@ The yearly costs of a scenario in the ETM is built up from all technologies, car
   -  Ammonia (import infrastructure costs of ammonia)
   -  Oil (import infrastructure costs of diesel)
 
-4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). All G2P is associated with means of 'Energy production'. Subgroups:
+4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). Subgroups:
   -  Power-to-power (p2p)
-  -  Electrolysis: electrolysis from grid on land and wind offshore with hybrid connection
+  -  Electrolysis (from grid on land and wind offshore with hybrid connection)
   -  Power-to-heat (p2h)
   -  Storage (of hydrogen and heat)
 
