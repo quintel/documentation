@@ -1,145 +1,198 @@
 # Jupyter Notebooks
 
-This guide explains the two main example notebooks included with PyETM and how to use them effectively
+This guide explains the example notebooks included with PyETM and how to use them effectively
 for scenario analysis and data manipulation.
 
 ---
 
 ## Overview
 
-The PyETM package includes two comprehensive Jupyter notebooks that demonstrate different ways of
+The PyETM package includes example Jupyter notebooks in the `examples/` directory that demonstrate different ways of
 working with scenarios via the API:
 
-1. **`scenarios_with_excel.ipynb`** - Complete workflow from Excel input to API interaction
-2. **`scenarios_with_packer.ipynb`** - Programmatic scenario management and data export
+1. **`basic_features.ipynb`** - Excel workflows, scenario creation, and core functionality
+2. **`advanced_features.ipynb`** - Batch operations, interpolation, user management, and ScenarioPacker
 
 Both notebooks are designed to help you understand PyETM's capabilities and provide starting points
-for your own workflows.
+for your own workflows. They use helper functions from `examples/example_helpers.py` for setup and logging configuration.
 
 ---
 
-## 1. Scenarios with Excel Notebook
+## 1. Basic Features Notebook
 
-Notebook: `scenarios_with_excel.ipynb`
+Notebook: `examples/basic_features.ipynb`
 
 ### Purpose
-This notebook demonstrates the complete end-to-end workflow for working with ETM scenarios using Excel
-as the primary interface. It shows how to load existing scenarios, create new ones, and export results
-back to Excel format.
+This notebook demonstrates the core PyETM functionality including Excel-based workflows, scenario creation,
+copying, querying results, and exporting data. It provides a comprehensive introduction to working with
+ETM scenarios programmatically and via Excel.
 
 ### Key Functionalities
 
-#### Excel-Based Scenario Management
-- **Load scenarios from Excel**: Import scenario configurations, inputs, and metadata from structured Excel files
-- **Create new scenarios**: Automatically create scenarios in the ETM based on Excel specifications
-- **Update existing scenarios**: Modify loaded scenarios with new inputs and parameters
+#### Scenario Management
+- **Load scenarios by ID**: Load existing scenarios from MyETM
+- **Create new scenarios**: Create scenarios programmatically with specified parameters
+- **Copy scenarios**: Duplicate scenarios with or without preset links
+- **Create sessions**: Work with transient ETEngine sessions
 
-#### Data Exploration and Analysis
-- **Scenario metadata inspection**: View and analyze scenario properties (title, ID, area, end year, version)
-- **Input parameter analysis**: Examine user inputs, defaults, min/max values, and permitted values
-- **Coupling relationships**: Explore interdependent input parameters
-- **Sortable data**: Access and analyze merit order and priority queue data
-- **Custom curves**: View and manipulate time-series data and custom profiles
-- **Query results**: Access calculated outputs and model results
-- **Warning system**: Identify and troubleshoot scenario issues
+#### Excel-Based Workflows
+- **Read from Excel**: Import scenario configurations from structured Excel files
+- **Write to Excel**: Export scenario data, inputs, and results to Excel workbooks
+- **Structured data format**: Use the MAIN sheet for scenario definitions and EXPORT_CONFIG for output control
 
-#### Export Capabilities
-- **Comprehensive Excel export**: Generate detailed Excel workbooks with all scenario data
-- **Separate export files**: Automatically create additional files for complex data (e.g., exports by carrier type)
-- **Configurable output**: Control which data types are included in exports
+#### Data Access and Analysis
+- **Scenario metadata**: View scenario properties (title, ID, area, end year, version)
+- **Input parameters**: Access user values, defaults, min/max ranges, and permitted values
+- **Couplings**: View interdependent input parameters and external model connections
+- **Sortables**: Access merit order and priority queue data
+- **Custom curves**: Work with 8760-hour time-series data and custom profiles
+- **Gquery results**: Execute queries and retrieve calculated outputs
+- **Annual exports**: Access energy flows and production parameters
+- **Hourly output curves**: Retrieve 8760-hour calculated time-series
+
+#### Export and Visualization
+- **Excel export**: Generate comprehensive workbooks with configurable data types
+- **Custom curves visualization**: Plot 8760-hour profiles
+- **Logging configuration**: Control output verbosity for batch operations
 
 ### Typical Use Cases
-- **Batch scenario processing**: Work with multiple scenarios simultaneously
-- **Data validation**: Verify scenario configurations before API submission
-- **Results analysis**: Export and analyze scenario outcomes in familiar Excel format
-- **Template-based workflow**: Use Excel templates for consistent scenario creation
+- **Learning PyETM**: Understand core functionality through practical examples
+- **Excel-based workflows**: Configure and analyze scenarios using Excel
+- **Individual scenario analysis**: Deep dive into a single scenario's data
+- **Results exploration**: Access and visualize various types of scenario outputs
+- **Template creation**: Build Excel templates for consistent scenario configuration
 
 ### Getting Started
-1. Place your Excel input file in the `inputs` folder (use `example_input_excel.xlsx` as a template)
-2. Configure scenario IDs for scenarios you own
+1. Place your Excel input files in the `examples/inputs/` folder (use `example_input_excel.xlsx` as a template)
+2. Configure scenario IDs for scenarios you own or have access to
 3. Run through the notebook cells to see the complete workflow
-4. Specify where to export your 'outputs'.
+4. Outputs will be saved to `examples/outputs/`
 
-**Note:** The exports and curves contribute to longer processing times. If you are only interested in updating inputs
-then exclude them from your outputs.
+**Note:** Exporting detailed data (curves, hourly outputs, annual exports) increases processing time. If you only need to update inputs or access basic results, exclude these from your export configuration.
 
-### About the Excel
-Specify scenario inputs with one scenario on each row.
-In the MAIN sheet:
-- short_name: The short name you can use to specify slider settings for the scenario. The short name
-will also show up in PyETM as the identifier for your scenario.
-- scenario_id: If you are loading an existing scenario from the ETM, specify the id here.
-- template: This field is not yet implemented.
-- title: The title of your scenario. This will be set in the metadata of the scenario.
-- description: The description of your scenario. This will be set in the metadata of the scenario.
-- area_code: If you are creating a scenario, this field is required. Determines the base area for your
-scenario.
-- end_year: If you are creating a scenario, this field is required. Determines the end year for your
-scenario.
-- private: Defaults to false. Set to true if you don't want others to access your scenario.
-- custom_curves: Specify the name of the tab where you have put the custom curves for upload. Can be left blank.
-- sortables: Specify the name of the tab where you have put the sortables for upload. Can be left blank.
+### Excel File Structure
+Specify scenario inputs with one scenario per row in the MAIN sheet:
 
-In the EXPORT_CONFIG sheet:
-Set each of the options to TRUE or FALSE depending on if you want them to be included in the export to excel.
+**MAIN Sheet Columns:**
+- `short_name`: Internal identifier for the scenario (used in PyETM and input specifications)
+- `scenario_id`: For loading existing scenarios, specify the MyETM scenario ID
+- `template`: Reserved for future use
+- `title`: Scenario title (set in metadata)
+- `description`: Scenario description (set in metadata)
+- `area_code`: Required for new scenarios - determines the base region (e.g., "nl2023")
+- `end_year`: Required for new scenarios - determines the end year (e.g., 2050)
+- `private`: Boolean (TRUE/FALSE) - set to TRUE to restrict access to your account
+- `custom_curves`: Name of the sheet containing custom curve data (optional)
+- `sortables`: Name of the sheet containing sortable data (optional)
+
+**EXPORT_CONFIG Sheet:**
+Set each option to TRUE or FALSE to control what data is included in Excel exports:
+- `include_inputs`: Export input parameter values
+- `include_exports`: Export annual energy flows and production data
+- `include_gqueries`: Export gquery results
+- `include_custom_curves`: Export 8760-hour custom profiles
+- `include_hourly_curves`: Export 8760-hour calculated outputs
+- `include_sortables`: Export merit order and priority queue data
 
 ---
 
-## 2. Scenarios with packer (Development-Focused)
+## 2. Advanced Features Notebook
 
-Notebook: `scenarios_with_packer.ipynb`
+Notebook: `examples/advanced_features.ipynb`
 
 ### Purpose
-This notebook provides a more programmatic approach to scenario management, focusing on bulk operations
-and data manipulation using Python code rather than Excel interfaces.
+This notebook demonstrates advanced PyETM capabilities including batch operations, scenario interpolation,
+user management, and the ScenarioPacker class for efficient multi-scenario data processing.
 
 ### Key Functionalities
 
-#### Programmatic Scenario Management
-- **Bulk loading**: Load multiple scenarios by ID in a single operation
-- **Batch creation**: Create multiple scenarios with different parameters programmatically
-- **Scenario collections**: Manage groups of scenarios as unified collections
+#### Batch Scenario Operations
+- **Bulk loading**: Load multiple scenarios by ID with `load_many()`
+- **Batch creation**: Create multiple scenarios with different parameters using `create_many()`
+- **Scenario copying**: Duplicate scenarios with `copy()` and `copy_with_preset()`
+- **Scenario interpolation**: Create intermediate-year scenarios between two endpoints
 
-#### Data Processing with ScenarioPacker
-- **Unified data structure**: Convert all scenario data into pandas DataFrames for analysis
-- **Flexible data views**: Access different aspects of scenario data (inputs, curves, sortables, exports)
-- **Column customization**: Choose specific data columns for focused analysis
-- **Export control**: Fine-tune what data gets included in Excel exports
+#### User Management
+- **Add collaborators**: Grant other users access to scenarios with specific roles
+- **Update permissions**: Modify user roles (viewer, scenario_viewer, scenario_contributor, scenario_owner)
+- **Remove users**: Revoke access for specific users
+- **List users**: View all users with access to a scenario
 
-#### Developer-Oriented Features
-- **Direct API interaction**: Work directly with PyETM's programmatic interfaces
-- **Data transformation**: Leverage pandas for advanced data manipulation
-- **Batch processing**: Efficiently handle large numbers of scenarios
-- **Custom analysis workflows**: Build specialized analysis pipelines
+#### ScenarioPacker for Multi-Scenario Analysis
+- **Unified data structure**: Aggregate multiple scenarios into pandas DataFrames
+- **Flexible data access**: Extract inputs, custom curves, sortables, hourly curves, and annual exports
+- **Column customization**: Select specific data columns for focused analysis
+- **Batch export**: Export multiple scenarios to a single Excel workbook with multiple sheets
+- **Query execution**: Run gqueries across all scenarios and compare results
+
+#### Advanced Data Processing
+- **DataFrame integration**: Leverage pandas for advanced data manipulation
+- **Comparative analysis**: Compare inputs and outputs across multiple scenarios
+- **Custom workflows**: Build specialized analysis pipelines for large-scale studies
+- **Logging control**: Configure output verbosity for batch operations
 
 ### ScenarioPacker Capabilities
-The `ScenarioPacker` class is the central tool in this notebook, providing:
+The `ScenarioPacker` class provides efficient multi-scenario data access:
 
-- **`inputs()`**: Access input parameters with customizable column selection
-- **`custom_curves()`**: Retrieve time-series and profile data
-- **`sortables()`**: Get merit order and queue data
-- **`exports()`**: Access output carrier data
-- **`to_excel()`**: Export with granular control over included data types
+**Data Access Methods:**
+- **`inputs(columns=None)`**: Access input parameters across all scenarios, optionally filtering columns
+- **`custom_curves(columns=None)`**: Retrieve 8760-hour time-series and profile data
+- **`sortables(columns=None)`**: Get merit order and priority queue data
+- **`gquery_results()`**: Access query results with scenarios as columns
+- **`hourly_output_curves(columns=None)`**: Retrieve 8760-hour calculated outputs
+- **`annual_exports(columns=None)`**: Access annual energy flows and production parameters
+
+**Export Methods:**
+- **`to_excel(path, include_input_details=False)`**: Export to Excel with configurable detail level
+- **`from_excel(path)`**: Restore scenarios and data from previously exported Excel files
+
+**Configuration:**
+- Add scenarios with `packer.add(scenario1, scenario2, ...)`
+- Add queries with `packer.add_queries([query1, query2, ...])`
+- Configure per-scenario exports using `scenario.set_export_config(ExportConfig(...))`
 
 ### Typical Use Cases
-- **Large-scale analysis**: Process many scenarios efficiently
-- **Custom data pipelines**: Build specialized analysis workflows
-- **API integration**: Integrate PyETM into larger analyses
-- **Performance optimization**: Handle large datasets with optimized data structures
+- **Large-scale comparative studies**: Analyze many scenarios simultaneously
+- **Scenario interpolation**: Create transition pathways between different years
+- **Collaborative projects**: Manage user access and permissions for shared scenarios
+- **Multi-scenario exports**: Generate comprehensive Excel reports with data from multiple scenarios
+- **Custom analysis pipelines**: Build specialized workflows leveraging pandas DataFrames
+- **Performance optimization**: Handle large datasets efficiently with batch operations
 
 ### Getting Started
-1. Modify the scenario IDs in the loading examples to use scenarios you own
-2. Experiment with different `create_params` for scenario creation
-3. Explore the `ScenarioPacker` methods to understand data access patterns
-4. Try different export configurations to see how they affect output files
+1. Update scenario IDs in the examples to use scenarios you own or have access to
+2. Experiment with `create_many()` parameters to create scenario variations
+3. Try the interpolation examples to create intermediate-year scenarios
+4. Explore user management features to collaborate with colleagues
+5. Use `ScenarioPacker` to aggregate and analyze multiple scenarios
+6. Experiment with different export configurations
 
 ---
 
+## Choosing the Right Notebook
 
-### Use `scenarios_with_excel.ipynb` when:
-You prefer working with Excel for scenario configuration or want to create/update batches of
-scenarios via Excel.
+### Use `basic_features.ipynb` when:
+- Learning PyETM for the first time
+- Working with individual scenarios
+- Using Excel-based configuration workflows
+- Exploring a single scenario's data in depth
+- Creating template-based scenarios
 
-### Use `scenarios_with_packer.ipynb` when:
-You want to understand the core PyETM development functionalities so you can use the package in
-your own development project and take advantage of the API tools.
+### Use `advanced_features.ipynb` when:
+- Processing multiple scenarios simultaneously
+- Creating scenario interpolations across years
+- Managing user access and collaboration
+- Building custom analysis workflows with pandas
+- Developing programmatic tools that use PyETM
+- Generating comparative reports across multiple scenarios
+
+---
+
+## Helper Functions
+
+Both notebooks use utilities from `examples/example_helpers.py`:
+
+- **`setup_notebook()`**: Initializes logging and displays configuration info
+- **`setup_logging(level)`**: Configures logging verbosity (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+
+These helpers provide consistent setup and make it easier to control output verbosity during batch operations.
