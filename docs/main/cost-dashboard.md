@@ -27,9 +27,9 @@ This page explains the six main groups that comprise the total annual costs disp
   -  Hydrogen network
   -  Electricity network
 
-4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). All G2P is associated with means of 'Energy production'. Subgroups:
+4. **Storage and conversion:** Installation-related costs (CAPEX + OPEX). Subgroups:
   -  Power-to-power (p2p)
-  -  Power-to-gas (p2g), onshore and offshore
+  -  Electrolysis (from grid on land and wind offshore with hybrid connection)
   -  Power-to-heat (p2h)
   -  Storage (of hydrogen and heat)
 

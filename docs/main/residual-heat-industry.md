@@ -2,7 +2,7 @@
 title:  Industrial residual heat
 ---
 
-There is a lot of heat available in industry that currently goes to waste. Using this residual heat as a source for heat networks could be an interesting way to reduce emissions. 
+There is a lot of heat available in industry that currently goes to waste. Using this residual heat as a source for heat networks could be an interesting way to reduce emissions.
 
 The ETM allows you to specify the amount of residual heat (in PJ) that the industry as a whole provides to heat networks. You can manually set the amount of heat delivered to each temperature level (high-temperature, medium-temperature and low-temperature) in the Supply > ['District Heating'](https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources) section within the ETM.
 
@@ -16,7 +16,7 @@ Although the upper limit of the residual heat sliders is quite high, in reality 
 -   Refineries
 -   Fertilizer industry
 -   ICT
--   Hydrogen conversion of electricity via power-to-gas
+-   Hydrogen production via electrolysis
 
 The above sectors are chosen because of their high residual heat potential compared to other sectors and/or because these sectors are similarly modelled in the ETM.
 

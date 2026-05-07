@@ -11,7 +11,7 @@ Some forms of flexibility are more suited to process large (fluctuations in) vol
 
 _Suitable for large (fluctuations in) volume_
 * Imports/exports of gas/hydrogen
-* Power-to-gas: hydrogen production from electricity
+* Electrolysis: hydrogen production from electricity
 * Storage of gas/hydrogen
 * Seasonal storage of heat
 
@@ -103,7 +103,7 @@ See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/sup
 * Inflexible:
   * Must-run / volatile: dedicated offshore wind turbine or solar PV plant for H2, steam methane reforming, autothermal reforming, ammonia reforming and biomass gasification
   * Baseload import of hydrogen (flat curve; constant import of hydrogen)
-  * Hydrogen produced by power-to-gas
+  * Hydrogen produced by electrolysis
 * Flexible:
   * Storage production: salt caverns or depleted gas fields
   * Steam methane reforming, autothermal reforming and ammonia reforming

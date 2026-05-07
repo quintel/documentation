@@ -18,13 +18,13 @@ In this section an overview of your scenario using summarizing charts can be fou
 
 ### 4. Toolbar
 The toolbar allows you to influence the main elements of the future energy system in your region:
-Demand: 	what happens to energy consumption in the future?
-Supply: 	which technologies will be used to produce heat, electricity and fuel in the future?
-Flexibility: 	future energy systems will most likely be characterized by times of excess electricity due to the volatile nature of the electricity production. Flexibility technologies, like battery storage and power to gas allow you to deal with this excess electricity.
-Emissions: what role will greenhouse gasses and CCUS play in the future?
-Costs & efficiencies: 	pecify what you think will happen to the costs of carriers and technologies.
+* Demand: what happens to energy consumption in the future?
+* Supply: which technologies will be used to produce heat, electricity and fuel in the future?
+* Flexibility: future energy systems will most likely be characterized by times of excess electricity due to the volatile nature of the electricity production. Flexibility technologies, like battery storage and electrolysis allow you to deal with this excess electricity.
+* Emissions: what role will greenhouse gasses and CCUS play in the future?
+* Costs & efficiencies: specify what you think will happen to the costs of carriers and technologies.
 
-Checkout: the Detailed Explanations section for more information on calculations and definitions.
+Checkout the sections under Detailed information for more information on calculations and definitions.
 
 ### 5. Tools and sliders
 In the ETM you can use sliders to manipulate the current situation to produce a future energy scenario. You can either:
