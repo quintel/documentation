@@ -114,15 +114,10 @@ module.exports = {
       collapsed: true,
       items: ["main/energy-calculations", "main/useful-demand"],
     },
-      {
-      type: "category",
+    {
+      type: "doc",
+      id: "main/PyETM/introduction",
       label: "5. PyETM",
-      collapsed: true,
-      items: [
-        "main/PyETM/introduction",
-        "main/PyETM/notebooks",
-        "main/PyETM/contributor-docs"
-      ],
     },
     {
       type: "category",

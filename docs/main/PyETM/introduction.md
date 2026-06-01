@@ -1,92 +1,64 @@
 ---
-title: Introduction
+title: PyETM
 ---
+
 ## What is PyETM?
-PyETM is a package written in Python that allows ETM users to interact with the ETM via the API. The
-package is designed to be a modular tool that advanced users can incorporate into their workflows.
 
-You can clone the PyETM from [our Github](https://github.com/quintel/PyETM). The package is also
-available via pip like any other python package - install it and use it in your project!
-```
-pip install pyetm
-```
+PyETM is a Python package that provides a set of tools for interacting with the Energy Transition Model's API. It's designed to be a modular tool that advanced users can incorporate into their scenario workflows, making it easier to manage scenarios, run bulk queries, and export data programmatically.
 
-**Requirements:** Python 3.12 or higher is required.
+## What can you do with PyETM?
 
-The package includes example Jupyter notebooks in the `examples/` directory that demonstrate common workflows. Many actions require minimal programming experience.
+PyETM enables you to:
 
+- **Manage scenarios** — Create, update, and manage ETM scenarios programmatically
+- **Run bulk queries** — Query multiple GQueries across scenarios efficiently
+- **Work with Excel** — Load scenarios from Excel files, update them, and export results
+- **Custom curves** — Upload and manage custom electricity and heat profiles
+- **Export data** — Export scenario data in various formats
+- **Automate workflows** — Integrate ETM into your scripts or automations
 
-With PyETM you can:
-- [Use premade Jupyter notebooks to interface with scenarios directly or via Excel](notebooks.md)
-- [Develop your own python tooling for working with scenarios](contributor-docs.md)
+---
 
-## Version Status
+## Installation
 
-PyETM is currently in **beta/pre-release**. While the core functionality is stable and tested, the package API may evolve as we gather feedback and add features.
+Install PyETM from PyPI:
 
-You can find the latest releases and pre-releases on PyPI: [https://pypi.org/project/pyetm/#history](https://pypi.org/project/pyetm/#history)
-
-To install a specific version:
-```bash
-# Install latest (including pre-releases)
-pip install --pre pyetm
-
-# Install a specific version
-pip install pyetm==2.0.0b9
-```
-
-The ETM API itself is stable, so your workflows will remain reliable even as the PyETM package interface improves.
-
-## Getting started
-
-Make sure you have [Python 3.12+](https://www.python.org/downloads/) installed.
-
-### Installation
 ```bash
 pip install pyetm
 ```
 
-### Initial Setup
-Create a `.env` configuration file and example files:
+**Requirements**: Python 3.12 or later
+
+---
+
+## Getting Started
+
+The quickest way to get started is with the interactive setup:
+
 ```bash
 pyetm init
 ```
 
-This creates:
-- `.env` template file for your API credentials
-- `examples/` directory with sample input files and notebooks
-
-## Configuration
-
-Edit the `.env` file created by `pyetm init`:
+This will guide you through configuration and create an input template. You can then run scenarios from Excel:
 
 ```bash
-# Your ETM API token (required)
-ETM_API_TOKEN=your.token.here
-
-# Environment (default: pro)
-ENVIRONMENT=pro
-
-# Optional: Logging level
-LOG_LEVEL=INFO
+pyetm run inputs/input.xlsx
 ```
 
-**Environment Options:**
-- `pro` (default): Production environment
-- `beta`: Staging environment
-- `local`: Local development environment
-- `YYYY-MM`: Stable tagged environment (e.g., `2025-01`)
+For comprehensive documentation, tutorials, and API reference, visit:
 
-For advanced configuration options (custom BASE_URL, proxy settings, CSV formatting), see the [contributor documentation](contributor-docs.md).
+### [PyETM Documentation](https://quintel.github.io/pyetm/)
 
-## Next Steps
+The full documentation includes:
+- [Installation guide](https://quintel.github.io/pyetm/getting-started/installation/)
+- [Quick start tutorial](https://quintel.github.io/pyetm/getting-started/quickstart/)
+- [User guides](https://quintel.github.io/pyetm/user-guide/) for all features
+- [API reference](https://quintel.github.io/pyetm/api/)
+- [Contributing guide](https://quintel.github.io/pyetm/contributing/guide/)
 
-### Using the Notebooks
-The `examples/` directory contains Jupyter notebooks demonstrating PyETM workflows:
-- `basic_features.ipynb` - Core functionality and Excel workflows
-- `advanced_features.ipynb` - Batch operations and advanced features
+---
 
-See the [notebooks documentation](notebooks.md) for detailed guides.
+## Need Help?
 
-### Building Your Own Tools
-If you want to develop custom applications with PyETM, see the [contributor documentation](contributor-docs.md) for API details and development setup.
+- **Issues**: [GitHub Issues](https://github.com/quintel/pyetm/issues)
+- **Repository**: [github.com/quintel/pyetm](https://github.com/quintel/pyetm)
