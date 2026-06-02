@@ -79,6 +79,7 @@ module.exports = {
             "main/co2-negative-emissions",
             "main/co2-overview-per-sector",
             "main/emissions-footprint",
+            "main/direct-emissions"
           ],
         },
         {

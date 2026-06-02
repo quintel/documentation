@@ -521,8 +521,7 @@ article p code {
 /* Add "New" tag to some sidebar items. */
 /* Commented out for now as there are no recent updates to highlight. */
 
-/* .menu a[href="/main/liquid-fuels"]:after,
-.menu a[href="/main/releases"]:after {
+.menu a[href="/main/direct-emissions"]:after {
   -webkit-font-smoothing: initial;
   border-radius: 4px;
   border: 1px solid #bac0d4;
@@ -537,11 +536,10 @@ article p code {
   text-transform: uppercase;
 }
 
-.menu a.menu__link--active[href="/main/liquid-fuels"]:after,
-.menu a.menu__link--active[href="/main/releases"]:after {
+.menu a.menu__link--active[href="/main/direct-emissions"]:after {
   color: #e8eeff;
   border-color: #e8eeff;
-} */
+}
 
 /* Add "Updated" tag to some sidebar items. */
 /* Commented out for now as there are no recent updates to highlight. */
