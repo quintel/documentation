@@ -12,7 +12,7 @@ The direct emissions method determines the emissions in a scenario based on wher
 * CO2 emissions are allocated to the sector where the emissions actually occur. Captured CO2 is deducted from the sector where it is captured. This is where the ETM [deviates from IPCC guidelines](#deviation-from-ipcc-guidelines).
 
 ![](/img/docs/direct_emissions_co2_flows.png)
-***Figure**. Ingoing and outgoing CO2 flows of a technology.*
+***Figure**. Incoming and outgoing CO2 flows of a technology.*
 
 :::info Calculation example
 The coal-fired power plant consumes `100 MJ` coal. Taking the emission factor of `0.0945 kg CO2/MJ` for coal, the resulting CO2 emissions at the power plant are `100 MJ * 0.0945 kg CO2/MJ = 9.45 kg CO2`, which are allocated to the energy sector.
@@ -49,5 +49,7 @@ The following emission results, expressed in kg CO2-eq, are included in the data
 * **Total GHG emissions**: net total GHG emissions, calculated as `CO2 production - CO2 capture + Other GHG emissions`.
 
 :::warning Phased implementation of direct emissions method
-Note that the direct emissions method and related user output will be implemented in the ETM in phases. This means that, among others, the data export will initially contain only the essential emission resutls, but will be expanded gradually. Similarly, the data export will at first only be avialable for national datasets, but will eventually become available for regional datasets as well. 
+Note that the direct emissions method and related user output will be implemented in the ETM in phases. This means that, among others, the data export will initially contain only the essential emission result columns, but will be expanded gradually (for example with CO2 utilisation and biogenic CO2 emissions). 
+
+Similarly, the complete data export will at first only be available for national datasets. For regional (Dutch) datasets, only the dynamically calculated emissions will be available at first, but eventually the complete data export will become available for these datasets as well. 
 :::
