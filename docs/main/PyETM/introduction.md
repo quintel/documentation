@@ -4,18 +4,21 @@ title: PyETM
 
 ## What is PyETM?
 
-PyETM is a Python package that provides a set of tools for interacting with the Energy Transition Model's API. It's designed to be a modular tool that advanced users can incorporate into their scenario workflows, making it easier to manage scenarios, run bulk queries, and export data programmatically.
+PyETM is a Python package that provides a set of tools for interacting with the Energy Transition Model's API. It's designed to be a modular tool that advanced users can incorporate into their scenario workflows, making it easier to manage scenarios, run bulk queries, and export data through code.
+
+---
 
 ## What can you do with PyETM?
 
 PyETM enables you to:
 
-- **Manage scenarios** — Create, update, and manage ETM scenarios programmatically
-- **Run bulk queries** — Query multiple GQueries across scenarios efficiently
-- **Work with Excel** — Load scenarios from Excel files, update them, and export results
-- **Custom curves** — Upload and manage custom electricity and heat profiles
-- **Export data** — Export scenario data in various formats
-- **Automate workflows** — Integrate ETM into your scripts or automations
+- **Manage scenarios**: create, update, and manage ETM scenarios through code.
+- **Run bulk queries**: query multiple GQueries across multiple scenarios in one go.
+- **Custom profiles**: upload and manage custom hourly profiles.
+- **Export data**: export scenario data in various formats.
+- **Automate workflows**: integrate ETM into your scripts or other workflows, like:
+  - **Excel**: load scenarios from Excel files, update them, and export results.
+  - **Jupyter Notebook**: load scenarios from Jupyter Notebooks, update them, and export results.
 
 ---
 
@@ -31,7 +34,7 @@ pip install pyetm
 
 ---
 
-## Getting Started
+## Getting started
 
 The quickest way to get started is with the interactive setup:
 
@@ -58,7 +61,6 @@ The full documentation includes:
 
 ---
 
-## Need Help?
+## Need help?
 
-- **Issues**: [GitHub Issues](https://github.com/quintel/pyetm/issues)
-- **Repository**: [github.com/quintel/pyetm](https://github.com/quintel/pyetm)
+Issues and feature requests can be added to the [GitHub](https://github.com/quintel/pyetm/issues) repository.
