@@ -4,6 +4,10 @@ title: Main principles
 
 In the ETM the total greenhouse gas emissions for both the present and future are calculated for scenarios. This page contains extra information on the modelling principles behind carbon emissions in the ETM.
 
+:::warning Direct emissions method beta release
+This page gives information about the default emissions method of the ETM, based on primary demand. A new emissions method based on **direct emissions** is currently in beta release. Read more about this direct emisisons method [here](direct-emissions). 
+:::
+
 ## Emission categories
 The ETM makes a distinction between four 'types' of greenhouse gas emissions:
 1. **Energetic CO<sub>2</sub> emissions**. These emissions are calculated by the ETM based on the energy use in your scenario. In other words, they are the result of the choices made in the [Demand](https://energytransitionmodel.com/scenario/demand/households/population-and-housing-stock) and [Supply](https://energytransitionmodel.com/scenario/supply/electricity/coal-plants) sections of the model.

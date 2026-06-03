@@ -2,12 +2,16 @@
 title: Direct emissions
 ---
 
-The direct emissions method determines the greenhouse gas emissions of a scenario based on direct emissions. This method is available as an additional method alongside the default emissions method based on [primary demand](co2-main-principles#modelling-principles). The results of the direct emissions method are currently only accessible via [user output](#method-implementation). This page explains the method principles and how it is implemented.
+The direct emissions method determines the greenhouse gas emissions of a scenario at the point where emissions are released. This method is available as an additional method alongside the default emissions method based on [primary demand](co2-main-principles#modelling-principles). This page explains the method principles and how it is implemented in the model.
+
+:::warning Beta release
+The direct emissions method is currently in beta release. This means that it is being implemented incrementally and is subject to further improvement and refinement. Read more about the phased implementation [here](#beta-release-phased-implementation). 
+:::
 
 ## Principles
 The direct emissions method determines the emissions in a scenario based on where the emissions actually occur. Direct emissions are determined following IPCC guidelines (with an exception explained below). The main principles of the method are:
 
-* Energetic CO2 emissions are dynamically calculated based on the modelled energy supply and demand flows. Most non-energetic CO2 emissions and other greenhouse gas emissions are not dynamically calculated but are given as input for a scenario. Go to [this page](co2-main-principles#emission-categories) for more information dynamically and statically modelled emissions.
+* Energetic CO2 emissions are dynamically calculated based on the modelled energy supply and demand flows. Most non-energetic CO2 emissions and other greenhouse gas emissions are not dynamically calculated but are given as input for a scenario. For more information on on dynamically and statically modelled emissions, go to [this page](co2-main-principles#emission-categories).
 * The dynamically calculated CO2 emissions for a technology are determined based on the difference between incoming CO2 via input carriers and CO2 utilisation, and outgoing CO2 via output carriers and CO2 capture. The incoming and outgoing CO2 via input and output carriers is fixed CO2 that is determined based on the emission factor of the carrier. See the diagram and calculation example below.
 * CO2 emissions are allocated to the sector where the emissions actually occur. Captured CO2 is deducted from the sector where it is captured. This is where the ETM [deviates from IPCC guidelines](#deviation-from-ipcc-guidelines).
 
@@ -22,7 +26,7 @@ The coal-fired power plant consumes `100 MJ` coal. Taking the emission factor of
 ## Deviation from IPCC guidelines
 Due to the modelling structure of the ETM, the allocation of captured and used CO2 emissions in the ETM deviates from the IPCC guidelines.
 
-The ETM deducts captured CO2 emissions from the sector where these emissions are captured. If this CO2 is then used and released in the short term (for example used for the production of synthetic fuels and combusted in an aircraft), the ETM allocates these emissions to the using sector where the CO2 is emitted. 
+The ETM deducts captured CO2 emissions from the sector where these emissions are captured. If this CO2 is then used and released in the short term (for example used for the production of synthetic fuels and combusted in an aircraft), the ETM allocates these emissions to the use sector where the CO2 is emitted. 
 
 From [IPCC, 2019 refinement](https://www.energy.gov/sites/default/files/2021-12/UN%20IPCC,%202019%20Refinement.pdf):
 
@@ -31,7 +35,7 @@ From [IPCC, 2019 refinement](https://www.energy.gov/sites/default/files/2021-12/
 This means that according to IPCC guidelines, the released CO2 emissions from combustion of the synthetic fuel should be allocated to the sector where the CO2 was originally captured. See the calculation example below for the differences in allocation.
 
 :::info Calculation example
-A coal-fired power plant in the energy sector produces `100 kg CO2`, of which `80 kg CO2` is captured and `20 kg CO2` is emitted. This is used for synthetic kerosene production, which is later combusted in an aircraft leading to `80 kg` of emitted CO2. 
+A coal-fired power plant in the energy sector produces `100 kg CO2`, of which `80 kg CO2` is captured and `20 kg CO2` is emitted. The captured CO2 is used for synthetic kerosene production, which is later combusted in an aircraft, leading to `80 kg` of emitted CO2. 
 
 **Allocation ETM**: the energy sector emits `20 kg CO2`, the transport sector emits `80 kg CO2`.  
 **Allocation IPCC**: the energy sector emits `100 kg CO2`, the transport sector emits `0 kg CO2`. 
@@ -48,8 +52,9 @@ The following emission results, expressed in kg CO2-eq, are included in the data
 * **Other GHG emissions**: total non-CO2 emissions.
 * **Total GHG emissions**: net total GHG emissions, calculated as `CO2 production - CO2 capture + Other GHG emissions`.
 
-:::warning Phased implementation of direct emissions method
-Note that the direct emissions method and related user output will be implemented in the ETM in phases. This means that, among others, the data export will initially contain only the essential emission result columns, but will be expanded gradually (for example with CO2 utilisation and biogenic CO2 emissions). 
+### Beta release: phased implementation
+The direct emissions method and related user output will be implemented in the ETM in phases. This means that, among others, the data export will initially contain only the essential emission result columns specified above, but will be expanded gradually (for example with CO2 utilisation and biogenic CO2 emissions). 
 
-Similarly, the complete data export will at first only be available for national datasets. For regional (Dutch) datasets, only the dynamically calculated emissions will be available at first, but eventually the complete data export will become available for these datasets as well. 
-:::
+Similarly, the complete data export will first only be available for national datasets. For regional (Dutch) datasets, only the dynamically calculated emissions will be available at first. Eventually, the complete data export will become available for these datasets as well.
+
+Finally, in the near future the role of the direct emissions method vs. the primary emissions method will be reviewed and further improved. This will entail, among others, that the direct emissions method could be set as the default emissions method for model calculations and that users should be able to switch between the direct and primary emissions method as default for their scenario. 
