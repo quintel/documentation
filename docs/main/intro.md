@@ -6,7 +6,9 @@ sidebar_label: Introduction
 
 The [Energy Transition Model](https://energytransitionmodel.com/?locale=en) (ETM) is an open-source, interactive tool for energy modelling developed by Quintel. While other models focus on one or several parts of the energy system, the ETM allows you to build and explore scenarios for the entire energy system of your country, region or city. Years of data collection and updating make sure your scenarios generate fact-based conclusions creating important insights into the future of your energy system. In this way the ETM supports a successful energy transition!
 
-![The ETM interface](/img/docs/etm.png)
+<div style={{ textAlign: "center" }}>
+  <img src="/img/docs/etm.png" style={{ border: "1px solid #dfdede" }} />
+</div>
 
 The ETM documentation is created to aid (new) users and contributors to understand and use the ETM. You can find the following topics within this documentation:
 
