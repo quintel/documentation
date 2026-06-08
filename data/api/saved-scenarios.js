@@ -90,6 +90,12 @@ export default {
     ],
     token: { scopes: ["scenarios:read", "scenarios:write"] },
   },
+  discard: {
+    endpoint: "/api/v3/saved_scenarios/{id}/discard",
+    method: "PUT",
+    path_parameters: [scenarioIdParam],
+    token: { scopes: ["scenarios:read", "scenarios:delete"] },
+  },
   destroy: {
     endpoint: "/api/v3/saved_scenarios/{id}",
     method: "DELETE",

@@ -37,6 +37,10 @@ collection endpoint:
   * `id` - the owner's unique ID number.
   * `name` - the owner's name.
 
+:::info Transition path parameters
+The `interpolation_params` object in API responses is automatically populated from the collection's `area_code` and `end_year` fields (shown as `end_years` array in the response). These are top-level input parameters when creating or updating a collection, and are auto-filled from saved scenarios for transition paths.
+:::
+
 ## Getting information about a collection
 
 Fetch information about a collection.
@@ -119,6 +123,10 @@ Creating a collection will cause it to appear in your list and in the web applic
 
 Before you can create a **collection**, you must [create the underlying **scenarios**](scenarios.md#create-a-scenario) or [**saved scenarios**](saved-scenarios#create-a-saved-scenario). The response will include the ID number of your new scenario. You may then create a collection as a second step, passing the scenario IDs:
 
+:::info Auto-filled attributes
+The API automatically fills in `version` for all collections. For transition paths (`interpolation: true`) with saved scenarios, `area_code` and `end_year` are also auto-filled from the saved scenarios if not explicitly provided.
+:::
+
 ```http title="Example request"
 POST /api/v3/collections HTTP/2
 Host: engine.energytransitionmodel.com
@@ -128,7 +136,8 @@ Authorization: Bearer YOUR_TOKEN
 {
   "title": "My collection",
   "scenario_ids": [12, 34],
-  "saved_scenario_ids": [5, 6]
+  "saved_scenario_ids": [5, 6],
+  "discarded": false
 }
 ```
 
@@ -167,7 +176,8 @@ Authorization: Bearer YOUR_TOKEN
 {
   "title": "A new title",
   "scenario_ids": [45, 67],
-  "saved_scenario_ids": [89]
+  "saved_scenario_ids": [89],
+  "discarded": false
 }
 ```
 
@@ -189,6 +199,10 @@ Authorization: Bearer YOUR_TOKEN
   }
 }
 ```
+
+:::info Managing discarded collections
+You can move a collection to the trash by setting `discarded: true` when creating or updating it. To restore a collection from trash, update it with `discarded: false`. This allows you to manage your collections without permanently deleting them.
+:::
 
 ## Delete a collection
 

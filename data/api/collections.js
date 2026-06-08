@@ -56,6 +56,20 @@ export default {
           </ul>`,
         required: false,
       },
+      {
+        name: "area_code",
+        type: "string",
+        description:
+          "the area code for the collection (optional; auto-filled from saved scenarios for transition paths)",
+        required: false,
+      },
+      {
+        name: "end_year",
+        type: "number",
+        description:
+          "the end year for the collection (optional; auto-filled from saved scenarios for transition paths)",
+        required: false,
+      },
     ],
     token: { scopes: ["scenarios:read", "scenarios:write"] },
   },
@@ -86,6 +100,18 @@ export default {
         type: "boolean",
         description:
           "whether the collection should be in the owner's trash",
+      },
+      {
+        name: "area_code",
+        type: "string",
+        description:
+          "the area code for the collection",
+      },
+      {
+        name: "end_year",
+        type: "number",
+        description:
+          "the end year for the collection",
       },
     ],
     token: { scopes: ["scenarios:read", "scenarios:write"] },
