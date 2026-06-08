@@ -24,6 +24,9 @@ In the table below, the various production processes for liquid fuel and feedsto
 |  | Non-biogenic waste | Methanol | CO<sub>2</sub> emissions captured by default |
 | | Biogenic waste | Biomethanol | CO<sub>2</sub> emissions captured by default|
 | | Dry biomass | Biomethanol | CO<sub>2</sub> emissions captured by default|
+| **Pyrolysis oil production** | Non-biogenic waste | Pyrolysis oil (non-biogenic) | Produces the pyrolysis oil used as feedstock for pyrolysis oil fractionation; residual heat is a by-product |
+| **Pyrolysis bio-oil production** | Biogenic waste | Pyrolysis bio-oil (biogenic) | Produces the pyrolysis bio-oil used as feedstock for pyrolysis bio-oil fractionation; residual heat is a by-product |
+| | Dry biomass | Pyrolysis bio-oil (biogenic) | Produces the pyrolysis bio-oil used as feedstock for pyrolysis bio-oil fractionation; residual heat is a by-product |
 | **Pyrolysis oil fractionation** | Pyrolysis oil (non-biogenic), hydrogen | Kerosene, naphtha | Required pyrolysis oil is produced by non-biogenic waste by default |
 | **Pyrolysis bio-oil fractionation** | Pyrolysis bio-oil (biogenic), hydrogen | Biokerosene, bionaphtha | Required pyrolysis bio-oil can be produced from dry biomass or biogenic waste |
 | **Hydrotreatment to HVO (biokerosene)** | Oily biomass, hydrogen, network gas | Biokerosene (main product), bionaphtha | Output fractions increased proportionally to account for product output not modelled in the ETM |
