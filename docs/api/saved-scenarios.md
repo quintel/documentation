@@ -161,6 +161,10 @@ Creating a saved scenario will cause it to appear in your list of saved scenario
 
 Before you can create a **saved scenario**, you must [create the underlying **scenario**](scenarios.md#create-a-scenario). The response will include the ID number of your new scenario. You may then create a saved scenario as a second step, passing the scenario ID:
 
+:::info Auto-filled attributes
+The API automatically fills in `area_code`, `end_year`, and `version` from the underlying scenario. You don't need to provide these fields - they will be populated from the scenario you reference.
+:::
+
 ```http title="Example request"
 POST /api/v3/saved_scenarios HTTP/2
 Host: engine.energytransitionmodel.com
@@ -168,8 +172,10 @@ Accept: application/json
 Authorization: Bearer YOUR_TOKEN
 
 {
-  "scenario_id": 12345,
-  "title": "My saved scenario"
+  "saved_scenario": {
+    "scenario_id": 12345,
+    "title": "My saved scenario"
+  }
 }
 ```
 
@@ -212,8 +218,10 @@ Accept: application/json
 Authorization: Bearer YOUR_TOKEN
 
 {
-  "title": "A new title",
-  "scenario_id": 67890
+  "saved_scenario": {
+    "title": "A new title",
+    "scenario_id": 67890
+  }
 }
 ```
 
@@ -273,6 +281,30 @@ Every saved scenario must have at least one owner. The API will prevent you from
 :::
 
 See also the [saved scenario access](/main/user_manual/managing-scenarios/scenario-manage-access) page for more information.
+
+### User object structure
+
+Each user object in the `saved_scenario_users` array has the following structure:
+
+**For adding users (POST):**
+* `user_email` - the email address of the user (required if `user_id` not provided)
+* `user_id` - the numeric ID of an existing ETM user (required if `user_email` not provided)
+* `role` - the user's role: `"scenario_owner"`, `"scenario_collaborator"`, or `"scenario_viewer"` (required)
+
+**For updating users (PUT):**
+* `id` - the SavedScenarioUser ID (optional, for identification)
+* `user_id` - the numeric ID of an existing ETM user (optional, for identification)
+* `user_email` - the email address of the user (optional, for identification)
+* `role` - the new role to assign (required)
+
+**For removing users (DELETE):**
+* `id` - the SavedScenarioUser ID (optional, for identification)
+* `user_id` - the numeric ID of an existing ETM user (optional, for identification)
+* `user_email` - the email address of the user (optional, for identification)
+
+:::info Identifying users
+When adding users, you must provide either `user_email` OR `user_id`, but not both. When updating or removing users, you can identify them by `id`, `user_id`, or `user_email` - at least one must be provided.
+:::
 
 ### Listing users on a saved scenario
 
@@ -458,12 +490,26 @@ User management operations support partial success:
 When a bulk operation returns partial success, the successful changes **are persisted** to the database. Only the failed operations need to be retried.
 :::
 
-Common errors include:
+#### Validation rules
+
+The API validates user objects according to these rules:
+
+* **User identification**: When adding users, you must provide either `user_email` OR `user_id`, but not both
+* **Email format**: If providing `user_email`, it must be a valid email address format
+* **Role values**: The `role` must be one of: `"scenario_viewer"`, `"scenario_collaborator"`, or `"scenario_owner"`
+* **Last owner protection**: Every saved scenario must have at least one owner - you cannot remove or demote the last owner
+* **Duplicate prevention**: Cannot add a user who is already associated with the saved scenario
+
+#### Common errors
+
+When validation fails, you'll receive a `422 Unprocessable Entity` response with one of these error codes:
 
 * `duplicate` - User is already associated with the saved scenario
-* `role_id` - Invalid role specified
+* `role_id` - Invalid role specified (must be scenario_viewer, scenario_collaborator, or scenario_owner)
 * `not_found` - User not found when updating or removing
 * `ownership` - Cannot remove or change the last owner
+* `user_email` - Invalid email format or missing when user_id not provided
+* `user_id` - Missing when user_email not provided
 
 For managing users on regular scenarios (not saved scenarios), see [Scenario Users](/api/users).
 
@@ -649,8 +695,10 @@ Accept: application/json
 Authorization: Bearer YOUR_TOKEN
 
 {
-  // highlight-next-line
-  "scenario_id": 123457
+  "saved_scenario": {
+    // highlight-next-line
+    "scenario_id": 123457
+  }
 }
 ```
 
@@ -671,6 +719,32 @@ The saved scenario now points at your new scenario, and the the original scenari
 
 </li>
 </ol>
+
+## Discard a saved scenario
+
+Saved scenarios can be moved to the trash (discarded) without permanently deleting them. This sets the `discarded_at` timestamp and marks the scenario as discarded, making it appear in the trash instead of your regular saved scenarios list.
+
+<ApiEndpoint data={endpointData.discard} />
+
+```http title="Example request"
+PUT /api/v3/saved_scenarios/123/discard HTTP/2
+Host: engine.energytransitionmodel.com
+Authorization: Bearer YOUR_TOKEN
+```
+
+```json title="Example response"
+{
+  "message": "Scenario discarded successfully"
+}
+```
+
+:::info Preserving timestamps
+Discarding a scenario sets the `discarded_at` field but preserves the original `updated_at` timestamp. This ensures the modification history remains accurate.
+:::
+
+:::tip Undiscarding
+Discarded scenarios can be restored through the web interface. The API currently does not support undiscarding scenarios.
+:::
 
 ## Delete a saved scenario
 

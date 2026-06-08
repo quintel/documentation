@@ -21,6 +21,8 @@ Endpoints that can be used to retrieve annual data are based on the following da
 * `sankey` – Creates a CSV by reading the `sankey` configuration file from ETSource.
 * `storage_parameters` - Creates a CSV by reading the `storage` configuration file from ETSource.
 * `costs_parameters` - Returns a CSV file containing the cost parameters of nodes belonging to costs groups.
+* `direct_emissions_present` - Returns a CSV file containing the direct emissions by node in the present scenario year.
+* `direct_emissions_future` - Returns a CSV file containing the direct emissions by node in the future scenario year.
 
 
 ## Get annual data
