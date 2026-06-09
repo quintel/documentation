@@ -5,7 +5,9 @@ title: Direct emissions
 The direct emissions method determines the greenhouse gas emissions of a scenario at the point where emissions are released. This method is available as an additional method alongside the default emissions method based on [primary demand](co2-main-principles#modelling-principles). This page explains the method principles and how it is implemented in the model.
 
 :::warning Beta release
-The direct emissions method is currently in beta release. This means that it is being implemented incrementally and is subject to further improvement and refinement. Read more about the phased implementation [here](#beta-release-phased-implementation). 
+The direct emissions method is currently in beta release. This means that it is being implemented incrementally and is subject to further improvement and refinement. Complete user output will first be available for national datasets and will later become availbale for regional (Dutch) datasets. Read more about how the method is currently implemented [here](#method-implementation). 
+
+In the near future, the role of the direct emissions method vs. the primary emissions method will be reviewed and further improved.
 :::
 
 ## Principles
@@ -47,14 +49,7 @@ The detailed [data export](#method-implementation) will contain the results of e
 Currently, the direct emissions method is implemented as an additional method alongside the default primary emissions method. The results of the direct emissions method can be viewed via a detailed [data export](https://energytransitionmodel.com/scenario/data/data_export/yearly-direct-greenhouse-gas-emissions). This data export provides a complete overview of all emissions in a scenario for the start year and future year. All technologies where emissions can occur are included and categorised by ETM sector and subsector. In addition, other greenhouse gas emissions that are not dynamically calculated are also included.
 
 The following emission results, expressed in kg CO2-eq, are included in the data export:
-* **CO2 production**: gross produced CO2, before CO2 capture.
-* **CO2 capture**: amount of captured CO2 emissions.
+* **CO2 production**: gross produced fossil CO2, before CO2 capture.
+* **CO2 capture**: amount of captured fossil and biogenic CO2 emissions.
 * **Other GHG emissions**: total non-CO2 emissions.
 * **Total GHG emissions**: net total GHG emissions, calculated as `CO2 production - CO2 capture + Other GHG emissions`.
-
-### Beta release: phased implementation
-The direct emissions method and related user output will be implemented in the ETM in phases. This means that, among others, the data export will initially contain only the essential emission result columns specified above, but will be expanded gradually (for example with CO2 utilisation and biogenic CO2 emissions). 
-
-Similarly, the complete data export will first only be available for national datasets. For regional (Dutch) datasets, only the dynamically calculated emissions will be available at first. Eventually, the complete data export will become available for these datasets as well.
-
-Finally, in the near future the role of the direct emissions method vs. the primary emissions method will be reviewed and further improved. This will entail, among others, that the direct emissions method could be set as the default emissions method for model calculations and that users should be able to switch between the direct and primary emissions method as default for their scenario. 
