@@ -4,6 +4,10 @@ title: Main principles
 
 In the ETM the total greenhouse gas emissions for both the present and future are calculated for scenarios. This page contains extra information on the modelling principles behind carbon emissions in the ETM.
 
+:::warning Beta release: direct emissions
+The documentation pages give information about the default emissions method of the ETM, based on primary energy demand. A new emissions method based on **direct energy demand** is currently in beta release. Read more about this direct emisisons method [here](direct-emissions).
+:::
+
 ## Emission categories
 The ETM makes a distinction between four 'types' of greenhouse gas emissions:
 1. **Energetic CO<sub>2</sub> emissions**. These emissions are calculated by the ETM based on the energy use in your scenario. In other words, they are the result of the choices made in the [Demand](https://energytransitionmodel.com/scenario/demand/households/population-and-housing-stock) and [Supply](https://energytransitionmodel.com/scenario/supply/electricity/coal-plants) sections of the model.
@@ -44,8 +48,8 @@ One exception to the primary emission method is for final demand of non-biogenic
 If additional feedstock is required in the production process for these liquid fuels, the related CO<sub>2</sub> emissions are accounted for using the primary emissions method and allocated to the energy sector.
 
 :::info Calculation example
-The transport sector has a final diesel demand of `100 [MJ]`. Diesel is produced via pyrolysis and pyrolysis-oil fractionation, which proportionally requires `50 [PJ]` of hydrogen for diesel production. This hydrogen is in turn produced via SMR, requiring `60 [PJ]` of natural gas. 
-The direct CO<sub>2</sub> emissions for diesel demand are allocated to the transport sector and equal `100 [MJ] * emission factor of diesel [kgCO2/MJ]`. The primary CO<sub>2</sub> emissions associated with hydrogen consumption in the production process are allocated to the energy sector and equal `60 [PJ] * emission factor of natural gas [kgCO2/MJ]`. 
+The transport sector has a final diesel demand of `100 [MJ]`. Diesel is produced via pyrolysis and pyrolysis-oil fractionation, which proportionally requires `50 [PJ]` of hydrogen for diesel production. This hydrogen is in turn produced via SMR, requiring `60 [PJ]` of natural gas.
+The direct CO<sub>2</sub> emissions for diesel demand are allocated to the transport sector and equal `100 [MJ] * emission factor of diesel [kgCO2/MJ]`. The primary CO<sub>2</sub> emissions associated with hydrogen consumption in the production process are allocated to the energy sector and equal `60 [PJ] * emission factor of natural gas [kgCO2/MJ]`.
 :::
 
 The emission factors for liquid fuels are region-specific and can be consulted in the [Dataset Manager](https://data.energytransitionmodel.com/). The liquid fuels for which direct emissions are calculated as an exception are the following:

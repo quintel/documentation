@@ -10,11 +10,9 @@ The ETM supports so-called 'negative' emissions. Negative emissions arise when m
     * Direct use of biomass in industry, for both feedstock and combustion
     * Biomass-fired power plants
 
-2. By using Direct Air Capture
+2. By using Direct Air Capture (DAC)
 
-You can make assumptions about this in the Emissions > ['CCUS'](https://pro.energytransitionmodel.com/scenario/emissions/ccus/capture-of-co2)
-
-Below, both routes are explained in more detail.
+You can make assumptions about this in the [CCUS](https://energytransitionmodel.com/scenario/emissions/ccus/capture-of-co2) section of the model. Below, both routes are explained in more detail.
 
 ## Negative emissions from biomass
 Using biomass to extract bioenergy, for example for the production of electricity and hydrogen, and subsequently capturing and storing the CO<sub>2</sub> emissions released in this process may result in a net decrease in atmospheric CO<sub>2</sub> levels. This is typically referred to as BECCS: bio-energy with carbon capture and storage.
@@ -26,9 +24,9 @@ The [IPCC](https://doi.org/10.1111%2Fgcbb.12514) estimates the global potential 
 ## Negative emissions from Direct Air Capture
 Direct Air Capture (DAC) is a process of capturing CO<sub>2</sub> directly from the ambient air using electricity. If the electricity used is renewable, storing the captured CO<sub>2</sub> can lead to a net decrease in atmospheric CO<sub>2</sub> levels. The captured CO<sub>2</sub> can also be used for the production of carbon neutral fuels.
 
-Direct Air Capture is a promising technology to bring down global CO<sub>2</sub> levels in the atmosphere. However, it is also an energy intensive process. Since CO<sub>2</sub> in the ambient air is 'available' everywhere in the world, DAC capacity is likely to be installed in areas that will have very low (renewable) power costs.
+DAC is a promising technology to bring down global CO<sub>2</sub> levels in the atmosphere. However, it is also an energy intensive process. Since CO<sub>2</sub> in the ambient air is 'available' everywhere in the world, DAC capacity is likely to be installed in areas that will have very low (renewable) power costs.
 
 ## Bookkeeping
 Negative emissions are incorporated in the CO<sub>2</sub> calculation in the following way:
 * Negative emissions arising from the production of electricity or hydrogen are incorporated in the [emission factor](co2-emission-factors.md) of these carriers. Since the ETM allocates CO<sub>2</sub> to the sectors in which energy is _used_, this means that all sectors using electricity or hydrogen 'benefit' from these negative emissions. Using more electricity or hydrogen may result in lower or even net negative sector emissions.
-* CO<sub>2</sub> captured by Direct Air Capture is deducted from the Energy sector.
+* CO<sub>2</sub> captured by DAC is deducted from the Energy sector.
