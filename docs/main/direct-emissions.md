@@ -2,7 +2,7 @@
 title: Direct emissions
 ---
 
-The direct emissions method determines the greenhouse gas emissions of a scenario at the point where emissions are released. This method is available as an additional method alongside the default emissions method based on [primary demand](co2-main-principles#modelling-principles). This page explains the method principles and how it is implemented in the model.
+The direct emissions method determines the greenhouse gas emissions of a scenario at the point where emissions are released. This method is available as an additional method alongside the default emissions method based on [primary demand](co2-main-principles#modelling-principles). This page explains the method principles and how it is implemented in the model. Go to [this page](../contrib/direct-emissions-method.md) for more details on the technical implementation of the method.
 
 :::warning Beta release
 The direct emissions method is currently in beta release. This means that it is being implemented incrementally and is subject to further improvement and refinement. Complete user output will first be available for national datasets and will later become availbale for regional (Dutch) datasets. Read more about how the method is currently implemented [here](#method-implementation). 
@@ -53,3 +53,5 @@ The following emission results, expressed in kg CO2-eq, are included in the data
 * **CO2 capture**: amount of captured fossil and biogenic CO2 emissions.
 * **Other GHG emissions**: total non-CO2 emissions.
 * **Total GHG emissions**: net total GHG emissions, calculated as `CO2 production - CO2 capture + Other GHG emissions`.
+
+Go to [this page](../contrib/direct-emissions-method.md) for more technical details on how these emissions are calculated in the model.

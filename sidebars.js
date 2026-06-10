@@ -177,7 +177,8 @@ module.exports = {
         "contrib/molecules",
         "contrib/waste-outputs",
         "contrib/gql",
-        "contrib/recursive-methods"
+        "contrib/recursive-methods",
+        "contrib/direct-emissions-method"
       ],
     },
     {
