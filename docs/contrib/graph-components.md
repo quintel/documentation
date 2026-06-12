@@ -23,6 +23,81 @@ Nodes are extremely versatile. They can represent a single technology type or in
 
 For example, the [`transport_car_using_electricity`](https://engine.energytransitionmodel.com/inspect/_/graphs/energy/nodes/transport_car_using_electricity) node represents electric cars used for transport. This sends energy into a [`transport_useful_demand_cars`](https://engine.energytransitionmodel.com/inspect/_/graphs/energy/nodes/transport_useful_demand_cars) node which does not have a real-world counterpart. Instead, it is used to represent the total demand for car-based transport in the graph. Car demand then feeds into [`transport_useful_demand_passenger_kms`](https://engine.energytransitionmodel.com/inspect/_/graphs/energy/nodes/transport_useful_demand_passenger_kms) which represents the total passenger kilometers travelled by all transport methods, including bicycles, busses, cars, and more.
 
+### Node attributes
+
+Each node is described by a document in [ETSource](https://github.com/quintel/etsource) containing attributes which configure how the node behaves in calculations. The full list of permitted attributes is defined in Atlas, in [`node.rb`](https://github.com/quintel/atlas/blob/master/lib/atlas/node.rb) and [`energy_node.rb`](https://github.com/quintel/atlas/blob/master/lib/atlas/energy_node.rb).
+
+Many attributes are self-explanatory, such as `initial_investment` and `technical_lifetime`. This section explains the attributes whose function is less obvious from their name.
+
+#### use
+
+Describes how the energy entering the node is used: `energetic` (the energy is converted or consumed as energy), `non_energetic` (the carrier is used as a feedstock, for example oil used to make plastics), or `undefined` (for abstract nodes which have no real-world counterpart).
+
+Non-energetic nodes typically also belong to the `non_energetic_use` group and carry a `free_co2_factor` of 1.0, so that carbon which ends up locked inside products is not counted as an emission. The [recursive calculations](recursive-methods) for primary demand and CO<sub>2</sub> stop at such nodes.
+
+```
+- use = energetic
+```
+
+#### free_co2_factor
+
+The proportion of the CO<sub>2</sub> emissions of the node's input which is considered "free", meaning it is not emitted to the atmosphere. The real-world counterpart is carbon which remains locked inside a product (for example in the chemical industry) or emissions which are accounted for elsewhere.
+
+In ETEngine, the [recursive CO<sub>2</sub> calculation](recursive-methods) reduces the emissions attributed to the node's primary demand by this factor: the CO<sub>2</sub> per MJ of each input carrier is multiplied by `(1 - free_co2_factor)`. A node with a factor of `1.0` stops the recursion entirely and contributes zero emissions. The factor is also applied when calculating the CO<sub>2</sub> costs of the node, so that no CO<sub>2</sub> price is paid over the "free" share.
+
+```
+- free_co2_factor = 0.85
+```
+
+#### takes_part_in_ets
+
+Indicates whether the node must pay for its emissions through the European Emissions Trading System (`1.0` = yes, `0.0` = no).
+
+In ETEngine this value is used as a multiplier in the CO<sub>2</sub> cost calculation: the node's emissions per MJ of input are multiplied by the area's CO<sub>2</sub> price, by `takes_part_in_ets`, and by `(1 - free_co2_factor)`. Setting it to `0.0` therefore removes all CO<sub>2</sub> costs from the node's total and marginal costs; when the attribute is not set, a value of `1.0` is assumed.
+
+```
+- takes_part_in_ets = 1.0
+```
+
+#### land_use_per_unit
+
+The land used by a single unit of the technology, in km².
+
+In ETEngine, the node's `total_land_use` is calculated as `number_of_units * land_use_per_unit`. This is queried by gqueries to report, for example, the area used by onshore wind turbines or solar PV in land use charts.
+
+```
+- land_use_per_unit = 0.0201
+```
+
+#### sustainability_share
+
+The share of the node's energy which is considered sustainable. This is normally only set on [primary energy demand](recursive-methods) nodes or other "dead end" nodes on the right of the graph, where energy enters the model.
+
+Usually the sustainable share of energy is determined by the `sustainable` attribute of the output carriers of the node; setting `sustainability_share` on the node overrides the carrier value. ETEngine then calculates the sustainability share of every other node recursively, as the weighted sum of the shares of its suppliers, and uses it to split primary demand into sustainable and fossil parts (`primary_demand_of_sustainable` and `primary_demand_of_fossil`) for the renewability metrics on the dashboard. Atlas requires this attribute on `primary_energy_demand` nodes when one or more of their output carriers does not define a `sustainable` value.
+
+```
+- sustainability_share = 1.0
+```
+
+#### waste_outputs
+
+A list of output carriers which should be treated as free waste byproducts of the node's main conversion, such as waste heat from a power plant.
+
+When calculating the fuel and CO<sub>2</sub> costs of a node, ETEngine normally assumes all outputs contribute to those costs. Carriers listed in `waste_outputs` are excluded: the costs are attributed only to the remaining ("costable") outputs, which lowers the marginal cost of the main product. See [Waste outputs and costable factor](waste-outputs) for a full explanation.
+
+```
+- waste_outputs = [steam_hot_water]
+```
+
+#### Deprecated attributes
+
+The following attributes may still appear in node documents, but are no longer used in any calculation:
+
+- `energy_balance_group` — was intended to group nodes which draw from the same categories of the energy balance when constructing datasets. It is still declared in Atlas, but no node document sets it and no code reads it.
+- `forecasting_error` — was used in old security-of-supply calculations to account for errors in forecasting the output of variable renewables.
+- `part_load_operating_point` — the point, as a share of nominal capacity, at which a plant typically operates when running at part load. Together with `part_load_efficiency_penalty` it was intended to model reduced efficiency in old security-of-supply calculations.
+- `part_load_efficiency_penalty` — the efficiency loss incurred per unit of deviation below the part-load operating point. See `part_load_operating_point`.
+
 ## Edges
 
 Edges allow us to move energy from one node to another. The ETM uses a _directed_ graph, which means that the edges have a direction; energy flows in one direction through the edge. In the example at the top of the page, energy flows from Node 1 to Node 2 through the edge, but not from Node 2 to Node 1.
@@ -62,7 +137,7 @@ In the ETSource document for an edge, you will assign a `type` attribute.
 
 #### Share edges
 
-Share edges allow you to directly define [the share of an edge](#edge-shares): the proportion of the supply of a node which is sent to the consumer node. In the ETSource document, you will set this with the `parent_share` attribute; in ETEngine it is simply called `share` for historical reasons.
+Share edges allow you to directly define [the share of an edge](#edge-shares). In the ETSource document, you will set this with the `child_share` attribute (the proportion of the consumer node's demand which is supplied through the edge) or the `parent_share` attribute (the proportion of the supplier node's output which is sent through the edge). In ETEngine the share is simply called `share` for historical reasons.
 
 ```
 - type = share
@@ -82,7 +157,7 @@ Flexible edges are similar to share edges, except that you don't need to explici
 <div className="images-row">
   <figure>
     <img src="/img/docs/contrib/graph-components/flexible-edge.png" alt="A graph with a flexible edge" />
-    <figcaption className="image-title">As in the previous example, Node 1 receives 75% of its energy from Node 2. As the Node 3 edge is flexible, it's share is set dynamically to 1.0 - 0.75 = 0.25.</figcaption>
+    <figcaption className="image-title">As in the previous example, Node 1 receives 75% of its energy from Node 2. As the Node 3 edge is flexible, its share is set dynamically to 1.0 - 0.75 = 0.25.</figcaption>
   </figure>
 </div>
 
