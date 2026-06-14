@@ -13,10 +13,6 @@ Graphs are collections of **Nodes**, which we typically use to represent the tra
   </figure>
 </div>
 
-## Carriers
-
-A "carrier" can be thought of as a _type_ of energy. For example, coal, electricity, wind, and gas are all different energy carriers. Each carrier has a collection of attributes which describe whether it is a sustainable source of energy, the CO2 emissions per MJ, [and more](https://github.com/quintel/atlas/blob/master/lib/atlas/carrier.rb).
-
 ## Nodes
 
 Nodes are extremely versatile. They can represent a single technology type or industrial process or can be used more abstractly to combine energy flows from multiple sources to easily query the graph.
@@ -102,7 +98,9 @@ The following attributes may still appear in node documents, but are no longer u
 
 Edges allow us to move energy from one node to another. The ETM uses a _directed_ graph, which means that the edges have a direction; energy flows in one direction through the edge. In the example at the top of the page, energy flows from Node 1 to Node 2 through the edge, but not from Node 2 to Node 1.
 
-Edges are also associated with a carrier, for example electricity.
+### Carriers
+
+Edges are associated with a carrier. A "carrier" can be thought of as a _type_ of energy. For example, coal, electricity, wind, and gas are all different energy carriers. Each carrier has a collection of attributes which describe whether it is a sustainable source of energy, the CO2 emissions per MJ, [and more](https://github.com/quintel/atlas/blob/master/lib/atlas/carrier.rb).
 
 <div className="images-row">
   <figure>
