@@ -200,6 +200,12 @@ export const mainReleases = [
 // API changelog timeline data
 export const apiChangelog = [
   {
+    date: "Jun 25, 2026",
+    title: "New capacity exports and renamed hourly curve endpoints",
+    file: "2026-06.md",
+    tag: "2026-06",
+  },
+  {
     date: "Mar 5, 2026",
     title: "Present year energy flow export",
     file: "2026-02.md",

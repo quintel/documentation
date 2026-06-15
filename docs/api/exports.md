@@ -14,7 +14,6 @@ as well as hourly data.
 
 Endpoints that can be used to retrieve annual data are based on the following data keys:
 
-* `production_parameters` - Returns a CSV file containing the capacities and costs of some electricity and heat producers.
 * `energy_flow` - Returns a CSV file containing the energetic inputs and outputs of every node in the graph of the future scenario year.
 * `energy_flow_present` - Returns a CSV file containing the energetic inputs and outputs of every node in the graph of the present dataset year.
 * `molecule_flow` - Returns a CSV file containing the flow of molecules through the molecule graph.
@@ -47,15 +46,19 @@ Primary demand,Electricity,...
 
 Endpoints that can be used to retrieve hourly data are based on the following data keys:
 
-* `merit_order` -Downloads the load on each participant in the electricity merit order.
+* `electricity_profiles` - Downloads the load on each participant in the electricity merit order.
+* `electricity_capacities` - Downloads the installed and peak capacity per electricity participant.
 * `electricity_price` - Downloads the hourly price of electricity according to the merit order.
-* `heat_network` - Downloads the load on each participant in the heat merit order as a CSV.
+* `heat_network_profiles` - Downloads the load on each participant in the heat merit order as a CSV.
+* `heat_network_capacities` - Downloads the installed and peak capacity per heat network participant.
 * `agriculture_heat` - Downloads the load on each participant in the agriculture heat merit order as a CSV.
 * `household_heat` – Downloads the supply and demand of heat in households, including deficits and surpluses due to buffering and time-shifting.
 * `buildings_heat` - Downloads the supply and demand of heat in buildings, including deficits and surpluses due to buffering and time-shifting.
-* `hydrogen` - Downloads the total demand and supply for hydrogen, with additional columns for the storage demand and supply.
-* `hydrogen_integral_costs` - Downloads the levelised costs, production costs per MWh and hourly production curve per hydrogen production technology.
-* `network_gas` - Downloads the total demand and supply for network gas, with additional columns for the storage demand and supply.
+* `hydrogen_profiles` - Downloads the total demand and supply for hydrogen, with additional columns for the storage demand and supply.
+* `hydrogen_capacities` - Downloads the installed and peak capacity per hydrogen participant.
+* `hydrogen_integral_cost` - Downloads the levelised costs, production costs per MWh and hourly production curve per hydrogen production technology.
+* `network_gas_profiles` - Downloads the total demand and supply for network gas, with additional columns for the storage demand and supply.
+* `network_gas_capacities` - Downloads the installed and peak capacity per network gas participant.
 * `residual_load` - Downloads the residual loads of various carriers.
 
 
@@ -66,7 +69,7 @@ Sending a GET request for a `csv` file with one of the keys specified above to a
 <ApiEndpoint data={endpointData.curves} />
 
 ```http title="Example request"
-GET /api/v3/scenarios/0/curves/hydrogen.csv HTTP/2
+GET /api/v3/scenarios/0/curves/hydrogen_profiles.csv HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: text/csv
 ```
