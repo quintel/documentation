@@ -1,7 +1,5 @@
 # ETM Documentation
 
-Please update your links: documentation is now published and searchable at **https://docs.energytransitionmodel.com**
-
 This repository contains the source for the [ETM Docs website](https://docs.energytransitionmodel.com). It's built using Docusaurus 2; please see [Installation](#installation) for instructions on getting up-and-running.
 
 ## Adding documentation
