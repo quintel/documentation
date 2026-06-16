@@ -100,3 +100,15 @@ For example, the first category may use values 100, 105, 110, 115; the second ca
 ### `output_element_key`
 
 The key of the chart to which the series belongs.
+
+## Universal series attributes
+
+Some series attributes work across multiple chart types. These include:
+
+### `hide_label`
+
+When set to `true`, the series will not appear in the chart legend. This is useful when you have duplicate series representing the same category but for different time periods (e.g., present/future values and 1990 baseline values), preventing cluttered legends with redundant entries.
+
+This attribute is optional and defaults to `false` when omitted.
+
+This attribute works with all chart types that use legends, including category bar, vertical stacked bar, bezier, and line charts.
