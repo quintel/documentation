@@ -7,7 +7,7 @@ The direct emissions method determines the greenhouse gas emissions of a scenari
 :::warning Beta release
 The direct emissions method is currently in beta release. This means that it is being implemented incrementally and is subject to further improvement and refinement. Complete user output will first be available for national datasets and will later become availbale for regional (Dutch) datasets. Read more about how the method is currently implemented [here](#method-implementation).
 
-In the near future, the role of the direct emissions method vs. the primary emissions method will be reviewed and further improved.
+In the near future, the role of the direct emissions method with respect to the primary emissions method will be reviewed and further improved.
 :::
 
 ## Principles
@@ -41,8 +41,6 @@ A coal-fired power plant in the energy sector produces `100 kg CO2`, of which `8
 **Allocation ETM**: the energy sector emits `20 kg CO2`, the transport sector emits `80 kg CO2`.
 **Allocation IPCC**: the energy sector emits `100 kg CO2`, the transport sector emits `0 kg CO2`.
 :::
-
-The detailed [data export](#method-implementation) will contain the results of emitted, captured and utilised CO2 per technology. With this data, users can do a reallocation of emissions between sectors if desired.
 
 ## Method implementation
 Currently, the direct emissions method is implemented as an additional method alongside the default primary emissions method. The results of the direct emissions method can be viewed via a detailed [data export](https://energytransitionmodel.com/scenario/data/data_export/yearly-direct-greenhouse-gas-emissions). This data export provides a complete overview of all emissions in a scenario for the start year and future year. All technologies where emissions can occur are included and categorised by ETM sector and subsector. In addition, other greenhouse gas emissions that are not dynamically calculated are also included.
