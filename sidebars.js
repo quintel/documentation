@@ -79,6 +79,7 @@ module.exports = {
             "main/co2-negative-emissions",
             "main/co2-overview-per-sector",
             "main/emissions-footprint",
+            "main/direct-emissions"
           ],
         },
         {
@@ -171,7 +172,8 @@ module.exports = {
         "contrib/molecules",
         "contrib/waste-outputs",
         "contrib/gql",
-        "contrib/recursive-methods"
+        "contrib/recursive-methods",
+        "contrib/direct-emissions-method"
       ],
     },
     {
