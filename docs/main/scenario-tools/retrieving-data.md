@@ -48,8 +48,8 @@ The `data_downloads.csv` allows you to specify all [data export](https://pro.ene
 | annual_data  | hourly_data |
 |---|---|
 | energy_flow | electricity_price
-| sankey | hydrogen
-| production_parameters | heat_network
+| sankey | hydrogen_profiles
+| storage_parameters | heat_network_profiles
 | | household_heat
 
 
