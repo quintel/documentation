@@ -160,7 +160,7 @@ module.exports = {
       type: "category",
       label: "For Contributors",
       collapsed: false,
-      items: ["contrib/intro", "contrib/engineering-principles", "contrib/running-with-docker"],
+      items: ["contrib/intro", "contrib/running-with-docker"],
     },
     {
       type: "category",
