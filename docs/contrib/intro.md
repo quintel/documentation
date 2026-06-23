@@ -5,7 +5,7 @@ title: Contributing to the ETM
 
 This section provides documentation to Quintel employees, and outside modellers and developers who may wish to contribute to the ETM.
 
-## Engineering principles
+## Contribution principles
 
 The ETM is built and maintained according to the engineering principles listed below. These principles should be adhered to when contributing to the model.
 
