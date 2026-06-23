@@ -7,7 +7,7 @@ This section provides documentation to Quintel employees, and outside modellers 
 
 ## Contribution principles
 
-The ETM is built and maintained according to the engineering principles listed below. These principles should be adhered to when contributing to the model.
+The ETM is built and maintained according to the principles listed below. These should be adhered to when contributing to the model.
 
 ### 1. Contributability
 
