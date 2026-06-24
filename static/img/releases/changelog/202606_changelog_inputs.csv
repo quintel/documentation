@@ -1,6 +1,6 @@
 Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanation
-2026-06,International aviation,Changed,bunkers_allocated_percentage_aviation,bunkers_allocated_percentage_aviation,%,%,Input now also updates non-CO2 greenhouse gas (other_ghg) emissions for international aviation
-2026-06,International navigation,Changed,bunkers_allocated_percentage_shipping,bunkers_allocated_percentage_shipping,%,%,Input now also updates non-CO2 greenhouse gas (other_ghg) emissions for international navigation
+2026-06,International aviation,Changed,bunkers_allocated_percentage_aviation,bunkers_allocated_percentage_aviation,%,%,Input now also updates non-CO2 greenhouse gas (other_ghg) emissions for international aviation in the direct emissions method
+2026-06,International navigation,Changed,bunkers_allocated_percentage_shipping,bunkers_allocated_percentage_shipping,%,%,Input now also updates non-CO2 greenhouse gas (other_ghg) emissions for international navigation in the direct emissions method
 2026-04,Gas power plants,Renamed,capacity_of_energy_power_combined_cycle_network_gas,capacity_of_energy_power_combined_cycle_network_gas_dispatchable,MW,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
 2026-04,Gas power plants,Renamed,capacity_of_energy_power_turbine_network_gas,capacity_of_energy_power_turbine_network_gas_dispatchable,MW,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
 2026-04,Gas power plants,Renamed,share_of_energy_power_combined_cycle_ccs_network_gas,share_of_energy_power_combined_cycle_ccs_network_gas_dispatchable,%,%,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
