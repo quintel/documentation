@@ -49,8 +49,8 @@ Endpoints that can be used to retrieve hourly data are based on the following da
 * `electricity_profiles` - Downloads the load on each participant in the electricity merit order.
 * `electricity_capacities` - Downloads the installed and peak capacity per electricity participant.
 * `electricity_price` - Downloads the hourly price of electricity according to the merit order.
-* `heat_network_profiles` - Downloads the load on each participant in the heat merit order as a CSV.
-* `heat_network_capacities` - Downloads the installed and peak capacity per heat network participant.
+* `district_heating_profiles` - Downloads the load on each participant in the district heating network merit order as a CSV.
+* `district_heating_capacities` - Downloads the installed and peak capacity per district heating network participant.
 * `agriculture_heat` - Downloads the load on each participant in the agriculture heat merit order as a CSV.
 * `household_heat` – Downloads the supply and demand of heat in households, including deficits and surpluses due to buffering and time-shifting.
 * `buildings_heat` - Downloads the supply and demand of heat in buildings, including deficits and surpluses due to buffering and time-shifting.
