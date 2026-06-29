@@ -85,15 +85,6 @@ When calculating the fuel and CO<sub>2</sub> costs of a node, ETEngine normally 
 - waste_outputs = [steam_hot_water]
 ```
 
-#### Deprecated attributes
-
-The following attributes may still appear in node documents, but are no longer used in any calculation:
-
-- `energy_balance_group` — was intended to group nodes which draw from the same categories of the energy balance when constructing datasets. It is still declared in Atlas, but no node document sets it and no code reads it.
-- `forecasting_error` — was used in old security-of-supply calculations to account for errors in forecasting the output of variable renewables.
-- `part_load_operating_point` — the point, as a share of nominal capacity, at which a plant typically operates when running at part load. Together with `part_load_efficiency_penalty` it was intended to model reduced efficiency in old security-of-supply calculations.
-- `part_load_efficiency_penalty` — the efficiency loss incurred per unit of deviation below the part-load operating point. See `part_load_operating_point`.
-
 ## Edges
 
 Edges allow us to move energy from one node to another. The ETM uses a _directed_ graph, which means that the edges have a direction; energy flows in one direction through the edge. In the example at the top of the page, energy flows from Node 1 to Node 2 through the edge, but not from Node 2 to Node 1.
