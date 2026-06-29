@@ -22,6 +22,10 @@ Endpoints that can be used to retrieve annual data are based on the following da
 * `costs_parameters` - Returns a CSV file containing the cost parameters of nodes belonging to costs groups.
 * `direct_emissions_present` - Returns a CSV file containing the direct emissions by node in the present scenario year.
 * `direct_emissions_future` - Returns a CSV file containing the direct emissions by node in the future scenario year.
+* `electricity_capacities` - Returns a CSV file containing the peak capacity per electricity participant.
+* `district_heating_capacities` - Returns a CSV file containing the peak capacity per district heating network participant.
+* `hydrogen_capacities` - Returns a CSV file containing the peak capacity per hydrogen participant.
+* `network_gas_capacities` - Returns a CSV file containing the peak capacity per network gas participant.
 
 
 ## Get annual data
@@ -47,18 +51,14 @@ Primary demand,Electricity,...
 Endpoints that can be used to retrieve hourly data are based on the following data keys:
 
 * `electricity_profiles` - Downloads the load on each participant in the electricity merit order.
-* `electricity_capacities` - Downloads the installed and peak capacity per electricity participant.
 * `electricity_price` - Downloads the hourly price of electricity according to the merit order.
 * `district_heating_profiles` - Downloads the load on each participant in the district heating network merit order as a CSV.
-* `district_heating_capacities` - Downloads the installed and peak capacity per district heating network participant.
 * `agriculture_heat` - Downloads the load on each participant in the agriculture heat merit order as a CSV.
 * `household_heat` – Downloads the supply and demand of heat in households, including deficits and surpluses due to buffering and time-shifting.
 * `buildings_heat` - Downloads the supply and demand of heat in buildings, including deficits and surpluses due to buffering and time-shifting.
 * `hydrogen_profiles` - Downloads the total demand and supply for hydrogen, with additional columns for the storage demand and supply.
-* `hydrogen_capacities` - Downloads the installed and peak capacity per hydrogen participant.
 * `hydrogen_integral_cost` - Downloads the levelised costs, production costs per MWh and hourly production curve per hydrogen production technology.
 * `network_gas_profiles` - Downloads the total demand and supply for network gas, with additional columns for the storage demand and supply.
-* `network_gas_capacities` - Downloads the installed and peak capacity per network gas participant.
 * `residual_load` - Downloads the residual loads of various carriers.
 
 
