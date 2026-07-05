@@ -177,6 +177,15 @@ module.exports = {
     },
     {
       type: "category",
+      label: "Dataset pipeline",
+      collapsed: false,
+      items: [
+        "contrib/dataset-pipeline/intro",
+        "contrib/dataset-pipeline/dagster-concepts",
+      ],
+    },
+    {
+      type: "category",
       label: "Adding new features",
       collapsed: false,
       items: [
