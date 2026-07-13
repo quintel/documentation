@@ -61,6 +61,6 @@ Two dashboard items are available for the direct emissions results:
 * **Direct total GHG emissions**: shows the total GHG emissions in the future year. 
 
 ### Chart
-The direct emissions results per sector for 1990, the start year and future year can be observed in the chart 'Direct total GHG emissions'. Emission data in the year 1990 is retrieved from UNFCCC and mapped to ETM sectors. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions) for more information on how the emission data is retrieved and mapped. 
+The direct emissions results per sector for 1990, the start year and future year can be observed in the chart 'Direct total GHG emissions'. Emission data in the year 1990 is retrieved from UNFCCC and mapped to ETM sectors. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data is retrieved and mapped. 
 
 ![](/img/docs/direct_emissions_chart_total_ghg_emissions.png)
