@@ -60,7 +60,9 @@ Two dashboard items are available for the direct emissions results:
 * **Direct total GHG emissions relative to 1990**: shows the reduction in total GHG emissions compared to 1990.
 * **Direct total GHG emissions**: shows the total GHG emissions in the future year. 
 
+The dashboard items include indirect emissions and LULUCF emissions. Emissions from international transport are included if the scenario is set to include demand from [international transport](https://energytransitionmodel.com/scenario/demand/transport_international_transport/international-transport).
+
 ### Chart
-The direct emissions results per sector for 1990, the start year and future year can be observed in the chart 'Direct total GHG emissions'. Emission data in the year 1990 is retrieved from UNFCCC and mapped to ETM sectors. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data is retrieved and mapped. 
+The direct emissions results per sector for 1990, the start year and future year can be observed in the chart 'Direct total GHG emissions'. Similar to the dashboard items, the chart includes indirect emissions and LULUCF emissions, and includes emissions from international transport if configured as such in the scenario. Emission data in the year 1990 is retrieved from UNFCCC and mapped to ETM sectors. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data is retrieved and mapped. 
 
 ![](/img/docs/direct_emissions_chart_total_ghg_emissions.png)
