@@ -19,7 +19,7 @@ $ yarn
 ### Local Development
 
 ```
-$ yarn start
+$ yarn start   # use -p <port> to change default port
 ```
 
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
@@ -31,6 +31,14 @@ $ yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+#### Testing search locally
+
+The site **search** functionality is not available under `yarn start`; it only works against a production build. You can preview a production build by running the following command after `yarn build`:
+
+```
+$ npx docusaurus serve   # use --port <port> to change default port
+```
 
 ### Deployment
 
