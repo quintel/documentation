@@ -52,13 +52,20 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Quintel`,
     },
-    algolia: {
-      appId: "NQGE6UZW7V",
-      apiKey: "5dcd7183ae0e2678ac84df798c9bafc0",
-      indexName: "energytransitionmodel",
-      contextualSearch: false,
-    },
   },
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        // Docs are served from the site root, see `routeBasePath` below.
+        docsRouteBasePath: "/",
+        indexBlog: false,
+        hashed: true,
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 10,
+      },
+    ],
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
