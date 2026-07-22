@@ -1,0 +1,995 @@
+Deploy,Subject,Status,Previous gquery,New gquery,Previous unit,New unit,Explanation
+2026-07,Direct emissions,New,-,dashboard_direct_emissions_reduction_of_total_ghg_emissions_versus_1990,-,factor,Direct emissions dashboard item GHG reduction future year versus 1990
+2026-07,Direct emissions,New,-,dashboard_direct_emissions_total_ghg_emissions,-,MT,Direct emissions dashboard item total GHG emissions future year
+2026-07,Direct emissions,New,-,direct_emissions_indirect_emissions_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_agriculture_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_buildings_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_bunkers_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_energy_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_households_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_industry_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_lulucf_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_other_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_transport_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_waste_co2_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_agriculture_other_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_buildings_other_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_bunkers_other_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_energy_other_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_households_other_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_industry_other_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_lulucf_other_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_other_other_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_transport_other_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_waste_other_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_agriculture_total_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_buildings_total_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_bunkers_total_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_energy_total_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_households_total_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_industry_total_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_lulucf_total_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_other_total_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_transport_total_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_waste_total_ghg_1990,-,MT,Direct emissions per sector in 1990
+2026-07,Direct emissions,New,-,direct_emissions_co2_excl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_excl_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_lulucf_excl_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_lulucf_excl_indirect_emissions_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_excl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_excl_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_lulucf_excl_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_lulucf_excl_indirect_emissions_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_excl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_excl_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_lulucf_excl_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_lulucf_excl_indirect_emissions_bunkers_1990,-,MT,Direct emissions totals in 1990
+2026-07,Direct emissions,New,-,direct_emissions_indirect_emissions_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_indirect_emissions_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_agriculture_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_buildings_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_bunkers_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_energy_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_households_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_industry_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_lulucf_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_other_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_transport_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_waste_co2,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_agriculture_other_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_buildings_other_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_bunkers_other_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_energy_other_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_households_other_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_industry_other_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_lulucf_other_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_other_other_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_transport_other_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_waste_other_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_agriculture_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_buildings_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_bunkers_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_energy_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_households_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_industry_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_lulucf_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_other_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_transport_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_waste_total_ghg,-,MT,Direct emissions per sector
+2026-07,Direct emissions,New,-,direct_emissions_co2_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_agriculture_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
+2026-07,Direct emissions,New,-,direct_emissions_agriculture_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
+2026-07,Direct emissions,New,-,direct_emissions_buildings_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
+2026-07,Direct emissions,New,-,direct_emissions_buildings_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
+2026-07,Direct emissions,New,-,direct_emissions_bunkers_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
+2026-07,Direct emissions,New,-,direct_emissions_bunkers_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
+2026-07,Direct emissions,New,-,direct_emissions_energy_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
+2026-07,Direct emissions,New,-,direct_emissions_energy_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
+2026-07,Direct emissions,New,-,direct_emissions_households_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
+2026-07,Direct emissions,New,-,direct_emissions_households_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
+2026-07,Direct emissions,New,-,direct_emissions_industry_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
+2026-07,Direct emissions,New,-,direct_emissions_industry_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
+2026-07,Direct emissions,New,-,direct_emissions_lulucf_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
+2026-07,Direct emissions,New,-,direct_emissions_lulucf_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
+2026-07,Direct emissions,New,-,direct_emissions_other_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
+2026-07,Direct emissions,New,-,direct_emissions_other_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries total 1990
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_future_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries total future
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_present_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries total present
+2026-07,Direct emissions,New,-,direct_emissions_transport_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
+2026-07,Direct emissions,New,-,direct_emissions_transport_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
+2026-07,Direct emissions,New,-,direct_emissions_waste_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
+2026-07,Direct emissions,New,-,direct_emissions_waste_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
+2026-07,Primary emissions,Removed,emissions_overview_energetic_agriculture_ghg,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_overview_energetic_built_environment_co2,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_overview_energetic_built_environment_ghg,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_overview_energetic_industry_co2,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_overview_energetic_industry_ghg,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_overview_energetic_transport_co2,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_overview_energetic_transport_ghg,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_overview_non_energetic_agriculture_co2,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_overview_non_energetic_agriculture_ghg,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_overview_non_energetic_industry_co2,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_overview_non_energetic_industry_ghg,-,T,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_captured_energy_chp_ht_wood_pellets,-,tonne,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_captured_energy_chp_mt_wood_pellets,-,tonne,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_captured_energy_power_wood_pellets,-,tonne,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_captured_power_biogenic,-,tonne,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_captured_power_non_biogenic,-,tonne,-,Cleanup of outdated queries
+2026-07,Primary emissions,Removed,emissions_captured_power_total,-,tonne,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_electricity_demand,-,MJ,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_amount_of_appliances,-,kwh,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_co2_emissions_per_household,-,tonnes,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_cooling_demand,-,%/year,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_electricity_fraction,-,MJ,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_final_demand_electricity_per_household,-,kwh,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_final_demand_energy_per_household,-,-,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_final_demand_network_gas_per_household,-,m3,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_heat_demand_per_person,-,-,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_heat_fraction,-,MJ,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_heating_technology_in_use,-,-,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_insulation_level,-,percentage,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_investment_per_household,-,euro,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_lighting_technology_in_use,-,-,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_monthly_energy_bill,-,euro,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_percentage_renewable_energy_per_household,-,%,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_renewability_percentage_electricity_per_household,-,%,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_renewability_percentage_heat_per_household,-,%,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_score,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_score_base,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_score_co2,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_score_costs,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_score_energy_use,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_score_investment,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_solar_pv_installed,-,factor,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_households_solar_thermal_installed,-,factor,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_renewable_energy_percentage,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_base,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_co2,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_cost,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_deviations_from_reference_scenario,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_electric_car,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_greengas,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_heatpump,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_imbalance,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_led,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_nuclear_waste,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_reliability,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,etflex_score_renewability,-,#,-,Cleanup of outdated queries
+2026-07,ETFlex module,Removed,number_of_electric_cars,-,number,-,Cleanup of outdated queries
+2026-07,Hydrogen,Removed,hydrogen_demand_hydrogen_production,-,curve,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_burner_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_geothermal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_geothermal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_geothermal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_heatpump_water_water_ts_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_heatpump_water_water_ts_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,agriculture_heatpump_water_water_ts_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_cooling_airconditioning_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_cooling_airconditioning_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_cooling_airconditioning_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_solar_pv_solar_radiation_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_solar_pv_solar_radiation_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_solar_pv_solar_radiation_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_collective_heatpump_water_water_ts_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_collective_heatpump_water_water_ts_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_collective_heatpump_water_water_ts_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_combined_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_combined_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_combined_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_heatpump_air_water_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_heatpump_air_water_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_heatpump_air_water_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_heatpump_air_water_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_heatpump_air_water_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_heatpump_air_water_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_solar_thermal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_solar_thermal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_solar_thermal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,buildings_space_heater_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_biogas_fermentation_wet_biomass_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_biogas_fermentation_wet_biomass_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_biogas_fermentation_wet_biomass_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_combined_cycle_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_combined_cycle_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_combined_cycle_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_local_engine_biogas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_local_engine_biogas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_local_engine_biogas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_local_engine_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_local_engine_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_local_engine_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_local_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_local_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_local_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_supercritical_ccs_waste_mix_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_supercritical_ccs_waste_mix_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_supercritical_ccs_waste_mix_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_supercritical_waste_mix_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_supercritical_waste_mix_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_supercritical_waste_mix_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_ultra_supercritical_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_ultra_supercritical_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_ultra_supercritical_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_ultra_supercritical_cofiring_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_ultra_supercritical_cofiring_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_ultra_supercritical_cofiring_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_ultra_supercritical_lignite_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_ultra_supercritical_lignite_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_chp_ultra_supercritical_lignite_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_flexibility_hv_opac_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_flexibility_hv_opac_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_flexibility_hv_opac_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_flexibility_mv_batteries_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_flexibility_mv_batteries_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_flexibility_mv_batteries_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_greengas_gasification_dry_biomass_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_greengas_gasification_dry_biomass_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_greengas_gasification_dry_biomass_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_greengas_gasification_wet_biomass_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_greengas_gasification_wet_biomass_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_greengas_gasification_wet_biomass_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_backup_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_backup_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_backup_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_boiler_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_boiler_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_boiler_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_waste_mix_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_waste_mix_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_waste_mix_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_burner_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_heatpump_water_water_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_heatpump_water_water_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_heatpump_water_water_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_solar_thermal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_solar_thermal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_solar_thermal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_well_geothermal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_well_geothermal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_heat_well_geothermal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_hydrogen_flexibility_p2g_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_hydrogen_flexibility_p2g_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_hydrogen_flexibility_p2g_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_ccs_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_ccs_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_ccs_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_ccs_network_gas_dispatchable_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_ccs_network_gas_dispatchable_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_ccs_network_gas_dispatchable_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_network_gas_dispatchable_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_network_gas_dispatchable_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_network_gas_dispatchable_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_network_gas_must_run_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_network_gas_must_run_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_combined_cycle_network_gas_must_run_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_engine_diesel_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_engine_diesel_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_engine_diesel_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_geothermal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_geothermal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_geothermal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_hydro_mountain_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_hydro_mountain_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_hydro_mountain_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_hydro_river_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_hydro_river_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_hydro_river_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_nuclear_gen2_uranium_oxide_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_nuclear_gen2_uranium_oxide_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_nuclear_gen2_uranium_oxide_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_nuclear_gen3_uranium_oxide_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_nuclear_gen3_uranium_oxide_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_nuclear_gen3_uranium_oxide_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_solar_csp_solar_radiation_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_solar_csp_solar_radiation_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_solar_csp_solar_radiation_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_solar_pv_solar_radiation_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_solar_pv_solar_radiation_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_solar_pv_solar_radiation_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_supercritical_ccs_waste_mix_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_supercritical_ccs_waste_mix_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_supercritical_ccs_waste_mix_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_supercritical_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_supercritical_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_supercritical_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_supercritical_waste_mix_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_supercritical_waste_mix_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_supercritical_waste_mix_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_turbine_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_turbine_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_turbine_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_turbine_network_gas_dispatchable_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_turbine_network_gas_dispatchable_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_turbine_network_gas_dispatchable_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_turbine_network_gas_must_run_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_turbine_network_gas_must_run_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_turbine_network_gas_must_run_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_ccs_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_ccs_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_ccs_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_cofiring_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_cofiring_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_cofiring_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_lignite_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_lignite_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_lignite_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_oxyfuel_ccs_lignite_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_oxyfuel_ccs_lignite_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_ultra_supercritical_oxyfuel_ccs_lignite_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_wind_turbine_coastal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_wind_turbine_coastal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_wind_turbine_coastal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_wind_turbine_inland_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_wind_turbine_inland_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_wind_turbine_inland_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_wind_turbine_offshore_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_wind_turbine_offshore_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_power_wind_turbine_offshore_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_production_synthetic_kerosene_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_production_synthetic_kerosene_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_production_synthetic_kerosene_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_production_synthetic_methanol_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_production_synthetic_methanol_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,energy_production_synthetic_methanol_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_cooling_airconditioning_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_cooling_airconditioning_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_cooling_airconditioning_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_flexibility_p2p_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_flexibility_p2p_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_flexibility_p2p_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_solar_pv_solar_radiation_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_solar_pv_solar_radiation_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_solar_pv_solar_radiation_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_combined_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_combined_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_combined_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_combined_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_combined_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_combined_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_heatpump_air_water_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_heatpump_air_water_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_heatpump_air_water_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_heatpump_ground_water_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_heatpump_ground_water_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_heatpump_ground_water_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_hybrid_heatpump_air_water_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_hybrid_heatpump_air_water_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_hybrid_heatpump_air_water_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_space_heater_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_water_heater_resistive_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_water_heater_resistive_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_water_heater_resistive_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_water_heater_solar_thermal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_water_heater_solar_thermal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,households_water_heater_solar_thermal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_aluminium_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_aluminium_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_aluminium_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_burner_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_captured_combustion_co2_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_captured_combustion_co2_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_captured_combustion_co2_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_captured_processes_co2_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_captured_processes_co2_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_fertilizers_captured_processes_co2_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_burner_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_flexibility_p2h_hydrogen_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_flexibility_p2h_hydrogen_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_flexibility_p2h_hydrogen_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_flexibility_p2h_network_gas_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_flexibility_p2h_network_gas_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_flexibility_p2h_network_gas_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_heater_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_heater_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_heater_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_heatpump_water_water_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_heatpump_water_water_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_heatpump_water_water_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_steam_recompression_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_steam_recompression_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_other_steam_recompression_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_burner_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_flexibility_p2h_hydrogen_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_flexibility_p2h_hydrogen_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_flexibility_p2h_hydrogen_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_flexibility_p2h_network_gas_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_flexibility_p2h_network_gas_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chemicals_refineries_flexibility_p2h_network_gas_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_combined_cycle_gas_power_fuelmix_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_combined_cycle_gas_power_fuelmix_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_combined_cycle_gas_power_fuelmix_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_engine_gas_power_fuelmix_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_engine_gas_power_fuelmix_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_engine_gas_power_fuelmix_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_turbine_gas_power_fuelmix_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_turbine_gas_power_fuelmix_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_turbine_gas_power_fuelmix_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_ultra_supercritical_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_ultra_supercritical_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_ultra_supercritical_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_chp_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_backup_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_backup_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_backup_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_burner_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_burner_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_burner_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_burner_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_burner_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_burner_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_burner_lignite_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_burner_lignite_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_burner_lignite_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_well_geothermal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_well_geothermal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_heat_well_geothermal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_burner_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_captured_co2_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_captured_co2_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_captured_co2_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_flexibility_p2h_hydrogen_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_flexibility_p2h_hydrogen_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_flexibility_p2h_hydrogen_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_flexibility_p2h_network_gas_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_flexibility_p2h_network_gas_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_flexibility_p2h_network_gas_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_heater_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_heater_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_food_heater_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_metals_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_metals_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_metals_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_hydrogen_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_hydrogen_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_hydrogen_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_burner_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_captured_co2_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_captured_co2_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_captured_co2_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_flexibility_p2h_hydrogen_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_flexibility_p2h_hydrogen_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_flexibility_p2h_hydrogen_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_flexibility_p2h_network_gas_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_flexibility_p2h_network_gas_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_flexibility_p2h_network_gas_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_heater_electricity_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_heater_electricity_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_other_paper_heater_electricity_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_blastfurnace_bof_captured_co2_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_blastfurnace_bof_captured_co2_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_blastfurnace_burner_coal_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_blastfurnace_burner_coal_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_blastfurnace_burner_coal_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_electricfurnace_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_electricfurnace_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_electricfurnace_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_scrap_hbi_eaf_captured_co2_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_scrap_hbi_eaf_captured_co2_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,industry_steel_scrap_hbi_eaf_captured_co2_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,molecules_direct_air_capture_co2_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,molecules_direct_air_capture_co2_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,molecules_direct_air_capture_co2_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,molecules_offshore_sequestration_co2_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,molecules_offshore_sequestration_co2_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,molecules_offshore_sequestration_co2_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_coal_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_coal_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_coal_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_crude_oil_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_crude_oil_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_crude_oil_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_network_gas_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_network_gas_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_network_gas_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_wood_pellets_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_wood_pellets_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,other_burner_wood_pellets_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,total_delta_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,total_future_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Investment cost table,Removed,total_present_in_investment_cost_table,-,euro,-,Cleanup of outdated queries
+2026-07,Merit order,Removed,user_sortable_power_to_heat_capacity,-,MW,-,Cleanup of outdated queries
+2026-07,Sankey,Removed,steam_hot_water_distribution_to_industry_in_liquid_fuels_sankey,-,PJ,-,Cleanup of outdated queries
+2026-07,Sankey,Changed,crude_oil_in_source_of_biomass_products_industry_transformation_in_sankey,-,PJ,PJ,Bug fix: output of bionaphta was not taken into account correctly
+2026-05,Electrolysis,Renamed,costs_storage_and_conversion_p2g,costs_storage_and_conversion_electrolysis,euro,euro,Power-to-gas renamed to electrolysis
+2026-04,Hydrogen,Renamed,buildings_individual_heater_hydrogen_for_mekko,is,PJ,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,heat_plants_hydrogen_for_mekko,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,energy_heat_from_hydrogen_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,industry_heat_from_hydrogen_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,energy_hydrogen_autothermal_reformer_ccs_must_run_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,energy_hydrogen_biomass_gasification_ccs_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,energy_hydrogen_electrolysis_wind_hybrid_for_mekko,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Renamed,energy_production_liquid_fuels_from_hydrogen_for_mekko,energy_liquid_fuels_production_hydrogen_for_mekko,PJ,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Renamed,households_individual_heater_hydrogen_for_mekko,households_final_demand_hydrogen_for_mekko,PJ,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_transformation_hydrogen_demand_for_mekko,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_transformation_hydrogen_supply_for_mekko,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_demand_transformation_chemical_fertilizers_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_demand_transformation_chemical_other_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_demand_transformation_chemical_refineries_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_supply_transformation_chemical_fertilizers_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_supply_transformation_chemical_other_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,hydrogen_supply_transformation_chemical_refineries_industry,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_final_demand_non_energetic_hydrogen_for_mekko,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,industry_final_demand_for_chemical_fertilizers_hydrogen_non_energetic_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Removed,industry_final_demand_for_chemical_other_hydrogen_non_energetic_for_mekko,-,PJ,-,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,Renamed,industry_final_demand_hydrogen_for_mekko,industry_final_demand_energetic_hydrogen_for_mekko,PJ,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,ammonia_reformer_dispatchable_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,ammonia_reformer_must_run_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,autothermal_reformer_dispatchable_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,autothermal_reformer_must_run_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_transformation_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,steam_methane_reformer_dispatchable_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,steam_methane_reformer_must_run_in_source_of_hydrogen_production,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,final_demand_of_hydrogen_in_industry_non_energetic,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,energy_heat_production_hydrogen_demand,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,energy_power_plants_hydrogen_demand,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_heat_production_hydrogen_demand,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,industry_transformation_hydrogen_demand,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,losses_energetic_hydrogen,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,storage_unused_hydrogen,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,export_of_hydrogen_backup,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,export_of_hydrogen_baseload,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,import_of_hydrogen_backup,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Hydrogen,New,-,import_of_hydrogen_baseload,-,PJ,Restructure Hydrogen supply and demand chart
+2026-04,Gas power plants,Removed,total_cost_of_energy_power_combined_cycle_ccs_network_gas,total_cost_of_energy_power_combined_cycle_ccs_network_gas_dispatchable,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,total_cost_of_energy_power_combined_cycle_network_gas,total_cost_of_energy_power_combined_cycle_network_gas_dispatchable,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,total_cost_of_energy_power_turbine_network_gas,total_cost_of_energy_power_turbine_network_gas_dispatchable,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,myc_installed_production_capacity_in_gas_ccgt,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,myc_installed_production_capacity_in_gas_turbine,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,myc_installed_production_capacity_in_gas_ccgt_dispatchable,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,myc_installed_production_capacity_in_gas_ccgt_must_run,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,myc_installed_production_capacity_in_gas_turbine_dispatchable,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,myc_installed_production_capacity_in_gas_turbine_must_run,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,costs_of_gas_ccgt_in_overview_costs_of_electricity_production,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,costs_of_gas_turbine_in_overview_costs_of_electricity_production,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,costs_of_gas_ccgt_dispatchable_in_overview_costs_of_electricity_production,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,costs_of_gas_ccgt_must_run_in_overview_costs_of_electricity_production,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,costs_of_gas_turbine_dispatchable_in_overview_costs_of_electricity_production,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,costs_of_gas_turbine_must_run_in_overview_costs_of_electricity_production,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,investment_for_gas_ccgt_in_overview_costs_of_electricity_production,-,mln_euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,investment_for_gas_turbine_in_overview_costs_of_electricity_production,-,mln_euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,investment_for_gas_ccgt_dispatchable_in_overview_costs_of_electricity_production,-,mln_euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,investment_for_gas_ccgt_must_run_in_overview_costs_of_electricity_production,-,mln_euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,investment_for_gas_turbine_dispatchable_in_overview_costs_of_electricity_production,-,mln_euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,investment_for_gas_turbine_must_run_in_overview_costs_of_electricity_production,-,mln_euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,energy_power_combined_cycle_ccs_network_gas,energy_power_combined_cycle_ccs_network_gas_dispatchable,curve,curve,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_combined_cycle_network_gas,-,curve,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_dispatchable,-,curve,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_must_run,-,curve,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_turbine_network_gas,-,curve,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_dispatchable,-,curve,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_must_run,-,curve,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,energy_power_combined_cycle_ccs_network_gas_delta_in_investment_cost_table,energy_power_combined_cycle_ccs_network_gas_dispatchable_delta_in_investment_cost_table,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,energy_power_combined_cycle_ccs_network_gas_future_in_investment_cost_table,energy_power_combined_cycle_ccs_network_gas_dispatchable_future_in_investment_cost_table,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,energy_power_combined_cycle_ccs_network_gas_present_in_investment_cost_table,energy_power_combined_cycle_ccs_network_gas_dispatchable_present_in_investment_cost_table,euro,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_combined_cycle_network_gas_delta_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_combined_cycle_network_gas_future_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_combined_cycle_network_gas_present_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_dispatchable_delta_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_dispatchable_future_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_dispatchable_present_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_must_run_delta_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_must_run_future_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_combined_cycle_network_gas_must_run_present_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_turbine_network_gas_delta_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_turbine_network_gas_future_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,energy_power_turbine_network_gas_present_in_investment_cost_table,-,euro,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_dispatchable_delta_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_dispatchable_future_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_dispatchable_present_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_must_run_delta_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_must_run_future_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,energy_power_turbine_network_gas_must_run_present_in_investment_cost_table,-,euro,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_merit_order,-,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_merit_order,-,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_merit_order,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_merit_order,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_merit_order,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_merit_order,-,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_availability_in_merit_order_table,-,Percentage,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_capacity_in_merit_order_table,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_full_load_hours_in_merit_order_table,-,hours,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_load_factor_in_merit_order_table,-,factor,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_operating_costs_in_merit_order_table,-,EUR,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_ccgt_position_in_merit_order_table,-,number,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_availability_in_merit_order_table,-,Percentage,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_capacity_in_merit_order_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_full_load_hours_in_merit_order_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_load_factor_in_merit_order_table,-,factor,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_operating_costs_in_merit_order_table,-,EUR,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_dispatchable_position_in_merit_order_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_availability_in_merit_order_table,-,Percentage,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_capacity_in_merit_order_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_full_load_hours_in_merit_order_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_load_factor_in_merit_order_table,-,factor,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_operating_costs_in_merit_order_table,-,EUR,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_ccgt_must_run_position_in_merit_order_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_availability_in_merit_order_table,-,Percentage,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_capacity_in_merit_order_table,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_full_load_hours_in_merit_order_table,-,hours,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_load_factor_in_merit_order_table,-,factor,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_operating_costs_in_merit_order_table,-,EUR,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,merit_order_gas_turbine_position_in_merit_order_table,-,number,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_availability_in_merit_order_table,-,Percentage,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_capacity_in_merit_order_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_full_load_hours_in_merit_order_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_load_factor_in_merit_order_table,-,factor,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_operating_costs_in_merit_order_table,-,EUR,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_dispatchable_position_in_merit_order_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_availability_in_merit_order_table,-,Percentage,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_capacity_in_merit_order_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_full_load_hours_in_merit_order_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_load_factor_in_merit_order_table,-,factor,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_operating_costs_in_merit_order_table,-,EUR,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,merit_order_gas_turbine_must_run_position_in_merit_order_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_capacity_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_capacity_in_power_plant_economic_performance_table,MW,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_capex_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_capex_in_power_plant_economic_performance_table,EUR/MWh,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_full_load_hours_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_full_load_hours_in_power_plant_economic_performance_table,hours,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_opex_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_opex_in_power_plant_economic_performance_table,EUR/MWh,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_position_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_position_in_power_plant_economic_performance_table,number,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_profit_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_profit_in_power_plant_economic_performance_table,EUR/MWh,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Renamed,gas_ccgt_ccs_revenue_in_power_plant_economic_performance_table,gas_ccgt_ccs_dispatchable_revenue_in_power_plant_economic_performance_table,EUR/MWh,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_capacity_in_power_plant_economic_performance_table,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_capex_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_full_load_hours_in_power_plant_economic_performance_table,-,hours,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_opex_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_position_in_power_plant_economic_performance_table,-,number,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_profit_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_ccgt_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_capacity_in_power_plant_economic_performance_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_capex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_full_load_hours_in_power_plant_economic_performance_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_opex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_position_in_power_plant_economic_performance_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_profit_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_dispatchable_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_capacity_in_power_plant_economic_performance_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_capex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_full_load_hours_in_power_plant_economic_performance_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_opex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_position_in_power_plant_economic_performance_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_profit_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_ccgt_must_run_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_capacity_in_power_plant_economic_performance_table,-,MW,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_capex_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_full_load_hours_in_power_plant_economic_performance_table,-,hours,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_opex_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_position_in_power_plant_economic_performance_table,-,number,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_profit_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,Removed,gas_turbine_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,-,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_capacity_in_power_plant_economic_performance_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_capex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_full_load_hours_in_power_plant_economic_performance_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_opex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_position_in_power_plant_economic_performance_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_profit_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_dispatchable_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_capacity_in_power_plant_economic_performance_table,-,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_capex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_full_load_hours_in_power_plant_economic_performance_table,-,hours,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_opex_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_position_in_power_plant_economic_performance_table,-,number,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_profit_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-04,Gas power plants,New,-,gas_turbine_must_run_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_built_environment_ex_heating,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_collective_heating,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_ict_data,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_individual_heating,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_production_of_hydrogen,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_electricity_of_transport,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_fossil_in_electricity,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_fossil_in_households_buildings_agriculture,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_fossil_in_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_fossil_in_mobility,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_fossil_in_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_biogas_greengas_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_biogas_greengas_electricity_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_biogas_greengas_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_biogas_greengas_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_biogas_greengas_transport,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_fossil_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_fossil_electricity_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_fossil_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_fossil_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_gas_from_fossil_transport,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_distribution_losses,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_exported,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_in_collective_heat,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_in_electricity,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_in_individual_heat,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_in_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_hydrogen_in_transport,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_electricity,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_in_collective_heat_production,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_other_built_environment,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_solar_and_wind_in_electricity_production,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_roof_solar_buildings,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_roof_solar_households,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_ambient_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_rest,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_rest_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_rest_industry,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_solar_thermal_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_hydrogen_imported,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_hydrogen_locally_produced,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_bio_fuels,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_collective_heat,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_electricity,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_gas_households_buildings,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_gas_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_nodes,-,-,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_oil_and_coal_products,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_renewable_heat,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_energetic_final_demand_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_households_buildings_in_total_demand,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_total_demand,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_total_demand_absolute_change,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_total_demand_relative_change,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_total_supply,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_biofuels,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_dry_biomass,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_import_except_imbalance,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_solar,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_wind,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_fossil_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_gas_from_biogas,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_gas_from_fossil,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_gas_from_synthetic_gas,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_fossil_heating,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_ambient,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_rest_and_geothermal,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_solar_thermal,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_in_individual_heat_production,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_other,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_demand_of_biomass_transport,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_installed_capacity_of_collective_heat_sources,-,MW,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_geothermal_in_collective_heat_sources,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_heatpump_in_collective_heat_sources,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_other_in_collective_heat_sources,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_solar_thermal_in_collective_heat_sources,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_waste_heat_in_collective_heat_sources,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_ambient_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_electricity_heatpump_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_geothermal_collective,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_of_collective_heat_per_residence,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_electricity_except_heatpump,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_greengas_in_total_gas,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_hydrogen_in_total_gas,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_natural_gas_in_total_gas,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_of_gas_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_biomass_in_individual_heat,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_of_heatpump_in_individual_heat,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_other_in_individual_heat,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_share_solar_thermal_in_individual_heat,-,%,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_ambient_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_biomass_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_electricity_except_heatpump_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_electricity_heatpump_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_from_solar_thermal_individual,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_heat_other_renewable_heating,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_of_individual_heat_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,energy_mix_capacity_per_panel_solar_pv,-,kWp,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_OM_solar_thermal_number_of_units_correction,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_installed_capacity_of_solar_pv,-,MW,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_installed_capacity_of_solar_thermal,-,MW,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_number_of_roof_solar_pv,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_number_of_roof_water_heater_solar_thermal,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_solar_pv_plants_land_use,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_solar_thermal_plants_land_use,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_electricity_from_roof_solar,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_from_solar_pv_plants,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_of_solar_total,-,MJ,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,energy_mix_capacity_per_unit_wind_turbine_inland,-,MW,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_installed_capacity_of_wind_turbine_inland_coastal,-,MW,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_number_of_wind_turbine_inland_coastal,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_number_of_wind_turbines_offshore,-,#,-,Retired energy mix visual
+2026-03,Energy mix visual,Removed,factsheet_supply_from_wind_and_other_electricity,-,MJ,-,Retired energy mix visual
+2026-03,Scenario report visual,Removed,biggest_electricity_producer_name,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,biggest_electricity_producer_value,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,biggest_final_demand_sector_name,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,biggest_final_demand_sector_value,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,bio_footprint_of_greengas_fraction_of_areable_land,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,bio_footprint_of_greengas_km,-,km2,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,ev_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,insulation_level_new_houses,-,m^2K/W,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,insulation_level_old_houses,-,m^2K/W,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_electric_vehicles_per_year,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_wind_turbines_per_year_coastal,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_wind_turbines_per_year_inland,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_wind_turbines_per_year_offshore,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,primary_energy_demand_percentage_wrt_start_year,-,%,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,profitability_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,refinery_percentage,-,%,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,renewability_percentage,-,%,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,steel_industry_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,total_net_energy_import,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,buildings_final_demand_low_temperature_heat,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,buildings_final_demand_power_and_light,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,buildings_final_demand_power_and_light_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,co2_reduction_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,energetic_co2_emissions_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,final_demand_difference,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,final_demand_from_built_environment,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,final_demand_from_built_environment_difference,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,hectares_of_solar_park_per_year,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,households_final_cooking_demand,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,households_final_demand_cooking_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,households_final_demand_low_temperature_heat,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,households_final_demand_power_and_light,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,households_final_demand_power_and_light_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,hydrogen_used_in_scenario,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,imported_electricity_percentage,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,international_transport_in_scenario,-,MJ,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,non_energetic_co2_emissions_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_residences_built_per_year,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_residences_removed_from_natural_gas,-,#,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,number_of_wind_turbines_inland_and_coastal,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,solar_park_total_football_fields,-,#,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,solar_park_total_land_use,-,km2,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,total_costs_percentage,-,-,-,Retired scenario report visual
+2026-03,Scenario report visual,Removed,total_energetic_and_non_energetic_co2_emissions,-,T,-,Retired scenario report visual
+2026-02,Liquid Fuels and feedstock flows,New,-,crude_oil_to_export,-,PJ,Bug fix in chart for export of crude oil
+2026-02,Liquid Fuels and feedstock flows,Changed,oil_products_to_export,oil_products_to_export,PJ,PJ,Bug fix in chart for export of crude oil
+2026-02,Liquid Fuels and feedstock flows,New,-,crude_oil_to_export_in_liquid_fuels_sankey,-,PJ,Bug fix in chart for export of crude oil
