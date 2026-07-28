@@ -5,7 +5,7 @@ title: Direct emissions
 The direct emissions method determines the greenhouse gas emissions of a scenario at the point where emissions are released. This method is available as an additional method alongside the default emissions method based on [primary demand](co2-main-principles#modelling-principles). This page explains the method principles and how it is implemented in the model.
 
 :::warning Beta release
-The direct emissions method is currently in beta release. This means that it is being implemented incrementally and is subject to further improvement and refinement. Complete user output will first be available for national datasets and will later become available for regional (Dutch) datasets. Read more about how the method is currently implemented [here](#method-implementation).
+The direct emissions method is currently in beta release. This means that it is being implemented incrementally and is subject to further improvement and refinement. New charts and sliders for setting other GHG emissions will be added to the model soon. Read more about how the method is currently implemented [here](#method-implementation).
 
 In the near future, the role of the direct emissions method with respect to the primary emissions method will be reviewed and further improved.
 :::
@@ -43,10 +43,10 @@ A coal-fired power plant in the energy sector produces `100 kg CO2`, of which `8
 :::
 
 ## Method implementation
-Currently, the direct emissions method is implemented as an additional method alongside the default primary emissions method. This [page](../contrib/direct-emissions-method.md) gives more technical details on how the direct emissions are calculated in the model. The results of the direct emissions method can currently be viewed via a detailed data export, a chart and two dashboard items.
+Currently, the direct emissions method is implemented as an additional method alongside the default primary emissions method. This [page](../contrib/direct-emissions-method.md) gives more technical details on how the direct emissions are calculated in the model. The results of the direct emissions method can be viewed via a detailed data export, charts and two dashboard items.
 
 ### Data export
-The detailed [data export](https://energytransitionmodel.com/scenario/data/data_export/yearly-direct-greenhouse-gas-emissions) provides a complete overview of all emissions in a scenario for the start year and future year. All technologies where emissions can occur are included and categorised by ETM sector and subsector. In addition, other greenhouse gas emissions that are not dynamically calculated are also included.
+The detailed [data export](https://energytransitionmodel.com/scenario/data/data_export/yearly-direct-greenhouse-gas-emissions) provides a complete overview of all emissions in a scenario for the start year and future year. All technologies where emissions can occur are included, as well as other greenhouse gas emissions that are not dynamically calculated. The emissions are categorised by **ETM sector** and **subsector**, as well as by **IPCC CRT category**.
 
 The following emission results, expressed in kg CO2-eq, are included in the data export:
 * **CO2 production**: fossil CO2 generated, before CO2 capture.
@@ -58,11 +58,16 @@ The following emission results, expressed in kg CO2-eq, are included in the data
 Two dashboard items are available for the direct emissions results:
 
 * **Direct total GHG emissions relative to 1990**: shows the reduction in total GHG emissions compared to 1990.
-* **Direct total GHG emissions**: shows the total GHG emissions in the future year. 
+* **Direct total GHG emissions**: shows the total GHG emissions in the future year.
 
 The dashboard items include indirect emissions and LULUCF emissions. Emissions from international transport are included if the scenario is set to include demand from [international transport](https://energytransitionmodel.com/scenario/demand/transport_international_transport/international-transport).
 
 ### Chart
-The direct emissions results per sector for 1990, the start year and future year can be observed in the chart 'Direct total GHG emissions'. Similar to the dashboard items, the chart includes indirect emissions and LULUCF emissions, and includes emissions from international transport if configured as such in the scenario. Emission data in the year 1990 is retrieved from UNFCCC and mapped to ETM sectors. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data is retrieved and mapped. 
+There are two charts available that show direct emissions results for 1990, the start year and future year:
+
+* **Direct total GHG emissions**: shows the emissions per ETM sector.
+* **Direct total GHG emissions per IPCC category**: shows the emissions per IPCC CRT category.
+
+Similar to the dashboard items, the charts include indirect emissions and LULUCF emissions, and include emissions from international transport if configured as such in the scenario. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data for 1990 is retrieved and mapped.
 
 ![](/img/docs/direct_emissions_chart_total_ghg_emissions.png)
