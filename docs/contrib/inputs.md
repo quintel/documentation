@@ -20,7 +20,7 @@ Priority is useful in two situations:
 Give the input which _sets_ the value the higher priority, so that it runs first. The input which _reads_ the value then sees the user's value rather than the default.
 
 **2. Two inputs set the same attribute.**
-Because the inputs are applied one after another, the input executed _last_ overwrites the earlier one. That is the input with the **lower** priority. If you need a particular input to determine the final value, give it the _lower_ priority.
+Because the inputs are applied one after another, the input executed _last_ overwrites the earlier one. That is the input with the **lower** priority. If a particular input should set the final value, it should have the _lower_ priority.
 
 ### Share groups
 
