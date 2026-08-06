@@ -63,7 +63,7 @@ Updates concerning stable versions are announced through the **Technical Newslet
 
 In the **front-end**, you can find the version you are working on next to the model logo in the navbar. By clicking on the version, it expands into a dropdown showing all available versions, allowing you to switch to a different version.
 
-- For version control via the **API**, see [Environments](../../api/intro#environments).
+For version control via the **API**, see [Environments](../../api/intro#environments).
 
 ## Scenario management with versions
 
@@ -77,7 +77,7 @@ When a stable version is created, there will be no changes to your saved scenari
 
 ### Move scenarios between versions
 
-If you want to a move a scenario between versions, for example from `latest` to `2025-01`, you have to do this manually. The inputs from the existing scenario can be extracted, for example using the API or pyetm. A new scenario can then be created in the desired version of the model. The inputs can then be set in the new scenario.
+If you want to a move a scenario between versions, for example from `latest` to `2025-01`, you have to do this manually. The inputs from the existing scenario can be extracted, for example using the [API](../../api/) or [PyETM](../PyETM/introduction). A new scenario can then be created in the desired version of the model. The inputs can then be set in the new scenario.
 
 :::warning Handling differences in inputs between versions
 Moving inputs between versions may not always be directly possible. The more time has passed between the versions, the more likely it is that some inputs will have been added, changed or deleted. Using the Changelog discussed in [Communication](#communication), you can determine how inputs should be corrected for the scenario in the different versions to still work.
