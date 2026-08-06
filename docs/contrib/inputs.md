@@ -6,11 +6,21 @@ Inputs are the means by which visitors to the ETM, and users of the API, set val
 
 ### Priority
 
-The `priority` attribute can be used to assign a numeric priority; this determines the order in which inputs are executed by ETEngine. Inputs with a higher priority are executed first. If two inputs modify the same value in the graph, the lower-priority input – which is executed second – will be the one which sets the final value.
+The `priority` attribute assigns a numeric priority to an input, which determines the order in which ETEngine executes the inputs in a scenario.
 
-This is a useful feature when one input sets a value which may be _read_ by another; ensure that the first input has a higher priority than the second to ensure that the second input reads the user value, rather than the default.
+**A higher number means the input is executed earlier.** An input with `priority = 2` runs before one with `priority = 1`, which runs before one with `priority = 0`. If `priority` is not specified in ETSource, the input gets a priority of 0. When two inputs have the same priority, they are executed in alphabetical order of their key.
 
-The default priority is 0.
+```
+- priority = 1
+```
+
+Priority is useful in two situations:
+
+**1. One input reads a value that another input sets.**
+Give the input which _sets_ the value the higher priority, so that it runs first. The input which _reads_ the value then sees the user's value rather than the default.
+
+**2. Two inputs set the same attribute.**
+Because the inputs are applied one after another, the input executed _last_ overwrites the earlier one. That is the input with the **lower** priority. If a particular input should set the final value, it should have the _lower_ priority.
 
 ### Share groups
 
