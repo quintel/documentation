@@ -2,4 +2,3 @@
 * The direct emissions method will become fully available for regional (Dutch) datasets.
 * Air conditioning will be added as a separate technology for space heating in households.
 * The sliders for heat demand in the built environment will be simplified to improve their usability.
-* The <a href="https://docs.energytransitionmodel.com/main/scenario-tools/introduction" target="_blank">scenario-tools</a> will be retired in favour of <a href="https://docs.energytransitionmodel.com/main/PyETM/introduction" target="_blank">PyETM</a>.

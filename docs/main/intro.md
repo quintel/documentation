@@ -27,16 +27,11 @@ An insight into the exact modelling principles behind the ETM.
 ### 5. PyETM
 PyETM is a package written in Python that allows ETM users to interact with the ETM via the API. The package is designed to be a modular tool that advanced users can incorporate into their workflows.
 
-### 6. Scenario-tools (To Be Retired)
-**Note:** The scenario-tools package will be retired in the future. We recommend using [PyETM](PyETM/introduction.md) instead for interacting with the ETM API. If you have questions, please <a href="https://my.energytransitionmodel.com/contact" target="_blank">contact us</a>.
-
-If you are interested in communicating with the ETM without using the web-interface, then you can visit this page to see if you can use any of the Python tools in this collection.
-
-### 7. For Contributors
+### 6. For Contributors
 If you are contributing or would like to contribute to the development of the ETM, this page will grant you a short overview of the different possibilities for contributing.
 
-### 8. API Reference
+### 7. API Reference
 Interested in exchanging data with the ETM? Here you can find the API references and documentation.
 
-### 9. External Models
+### 8. External Models
 The ETM can be combined with various external models. Here you can find a description of how these combinations work.
