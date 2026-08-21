@@ -49,7 +49,7 @@ Recall that **a higher `priority` number runs earlier**. The building/housing in
 
 This order is also documented as a comment at the top of each of the relevant `.ad` files in etsource, so it stays visible to anyone editing them directly.
 
-## Weather year overrides outdoor temperature
+### Weather year overrides outdoor temperature
 
 If the user selects a non-default weather curve set (`settings_weather_curve_set`), the `flexibility_outdoor_temperature` slider has **no effect at all**, even if a value for this was set.
 
