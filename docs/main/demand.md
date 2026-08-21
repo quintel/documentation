@@ -16,7 +16,7 @@ Demand consists of a number of domestic demand sectors and export:
 For each of the demand sectors shown in the Demand tab in the ETM, a percentage is displayed. This indicates primary energy used to supply the energy use of that particular sector, as a share in the total primary energy use for domestic demand.
 
 ## Households
-In the [Households](https://energytransitionmodel.com/scenario/demand/households/overview) section the demand for energy in households is specified. The demand growth of energy and the technology mix that uses this energy can be specified. The focus is on technologies used for heating, insulation, cooking, cooling, lighting and appliances. Additionally, you can specify the number and typical heat demand of residences per type and construction period.
+In the [Households](https://energytransitionmodel.com/scenario/demand/households/overview) section the demand for energy in households is specified. The demand growth of energy and the technology mix that uses this energy can be specified. The focus is on technologies used for heating, insulation, cooking, cooling, lighting and appliances. Additionally, you can specify the number of residences demolished and newly built per construction period, and the reduction in heat demand due to insulation.
 
 ## Buildings
 The [Buildings](https://energytransitionmodel.com/scenario/demand/buildings/overview) section contains all non-residential buildings in the services sector. This includes office buildings, schools and hospitals. Similar to the Households section, the focus lies on heating, cooling, ventilation, insulation, lighting and roof top solar PV.

@@ -86,7 +86,7 @@ Authorization: Bearer YOUR_TOKEN
   "end_year": 2040,
   "url": "https://engine.energytransitionmodel.com/api/v3/scenarios/123456",
   "user_values": {
-    "buildings_insulation_level": 40.3,
+    "buildings_insulation_new_buildings": 40.3,
     "capacity_of_energy_power_hydro_river": 39.0
   },
   ...

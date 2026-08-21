@@ -100,7 +100,7 @@ Authorization: Bearer YOUR_TOKEN
   "active_couplings": [],
   "inactive_couplings": [],
   "user_values": {
-    "buildings_insulation_level": 40.3,
+    "buildings_insulation_new_buildings": 40.3,
     "capacity_of_energy_power_hydro_river": 39.0
   },
   "metadata": {
@@ -224,7 +224,7 @@ Authorization: Bearer YOUR_TOKEN
     "area_code": "UKNI01_northern_ireland",
     "end_year": "2040"
     "user_values": {
-      "buildings_insulation_level": 40.3,
+      "buildings_insulation_new_buildings": 40.3,
       "capacity_of_energy_power_hydro_river": 39.0
     }
   }
@@ -239,7 +239,7 @@ Authorization: Bearer YOUR_TOKEN
   "end_year": 2040,
   ...
   "user_values": {
-    "buildings_insulation_level": 40.3,
+    "buildings_insulation_new_buildings": 40.3,
     "capacity_of_energy_power_hydro_river": 39.0
   }
 }
@@ -281,7 +281,7 @@ Authorization: Bearer YOUR_TOKEN
   "template": 11111,
   ...
   "user_values": {
-    "buildings_insulation_level": 40.3,
+    "buildings_insulation_new_buildings": 40.3,
     "capacity_of_energy_power_hydro_river": 39.0
   }
 }
@@ -307,7 +307,7 @@ Authorization: Bearer YOUR_TOKEN
 {
   "scenario": {
     "user_values": {
-      "buildings_insulation_level": 35.7
+      "buildings_insulation_new_buildings": 35.7
     }
   }
 }
@@ -319,7 +319,7 @@ Authorization: Bearer YOUR_TOKEN
     "id": 12345,
     ...
     "user_values": {
-      "buildings_insulation_level": 35.7,
+      "buildings_insulation_new_buildings": 35.7,
       "capacity_of_energy_power_hydro_river": 39.0
     }
   }
