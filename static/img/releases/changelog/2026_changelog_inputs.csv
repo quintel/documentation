@@ -1,4 +1,120 @@
 Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanation
+2026-08,Flexibility,Changed,households_flexibility_p2p_electricity_market_penetration,-,%,%,Updated flexibility calculation
+2026-08,Rail transport,Removed,transport_rail_mixer_diesel_biodiesel_share,-,%,-,Removed duplicate rail diesel input
+2026-08,International aviation,Changed,bunkers_allocated_percentage_aviation,-,%,%,Adjusted input priority
+2026-08,International aviation,Changed,bunkers_useful_demand_planes,-,%,%,Adjusted input priority
+2026-08,International navigation,Changed,bunkers_allocated_percentage_shipping,-,%,%,Adjusted input priority
+2026-08,International navigation,Changed,bunkers_useful_demand_ships,-,%,%,Adjusted input priority
+2026-08,Buildings heating,New,-,buildings_space_heating_behaviour,-,%,Introduced a new slider to change heat demand based on behaviour
+2026-08,Buildings heating,Changed,buildings_insulation_level_buildings_present,buildings_insulation_existing_buildings,kWh/m2,%,Replaced the existing-buildings insulation slider
+2026-08,Buildings heating,Changed,buildings_insulation_level_buildings_future,buildings_insulation_new_buildings,kWh/m2,%,Replaced the new-buildings insulation slider
+2026-08,Buildings heating,Changed,buildings_number_of_buildings_present,buildings_number_of_buildings_demolished,#,#,Replaced the existing stock slider with the demolished-buildings slider
+2026-08,Buildings heating,Changed,buildings_number_of_buildings_future,buildings_number_of_buildings_new,#,#,Replaced the future stock slider with the new-buildings slider
+2026-08,Households heating,New,-,households_demolished_1945_1964,-,#,Replaced stock sliders per building type and construction period with demolition sliders per construction period
+2026-08,Households heating,New,-,households_demolished_1965_1984,-,#,Replaced stock sliders per building type and construction period with demolition sliders per construction period
+2026-08,Households heating,New,-,households_demolished_1985_2004,-,#,Replaced stock sliders per building type and construction period with demolition sliders per construction period
+2026-08,Households heating,New,-,households_demolished_2005_present,-,#,Replaced stock sliders per building type and construction period with demolition sliders per construction period
+2026-08,Households heating,New,-,households_demolished_before_1945,-,#,Replaced stock sliders per building type and construction period with demolition sliders per construction period
+2026-08,Households heating,New,-,households_insulation_1945_1964,-,%,Replaced insulation sliders per building type and construction period with insulation sliders per construction period and changed unit of input
+2026-08,Households heating,New,-,households_insulation_1965_1984,-,%,Replaced insulation sliders per building type and construction period with insulation sliders per construction period and changed unit of input
+2026-08,Households heating,New,-,households_insulation_1985_2004,-,%,Replaced insulation sliders per building type and construction period with insulation sliders per construction period and changed unit of input
+2026-08,Households heating,New,-,households_insulation_2005_present,-,%,Replaced insulation sliders per building type and construction period with insulation sliders per construction period and changed unit of input
+2026-08,Households heating,New,-,households_insulation_before_1945,-,%,Replaced insulation sliders per building type and construction period with insulation sliders per construction period and changed unit of input
+2026-08,Households heating,New,-,households_insulation_new_residences,-,%,Replaced insulation sliders per building type and construction period with insulation sliders per construction period and changed unit of input
+2026-08,Households heating,New,-,households_number_of_residences_new,-,#,Replaced stock sliders for new residences per building type by a total new residence slider
+2026-08,Households heating,New,-,households_share_of_apartments,-,%,Added share of new buildings per building type sliders to replace the separate residence-type and stock sliders
+2026-08,Households heating,New,-,households_share_of_detached,-,%,Added share of new buildings per building type sliders to replace the separate residence-type and stock sliders
+2026-08,Households heating,New,-,households_share_of_semi_detached,-,%,Added share of new buildings per building type sliders to replace the separate residence-type and stock sliders
+2026-08,Households heating,New,-,households_share_of_terraced,-,%,Added share of new buildings per building type sliders to replace the separate residence-type and stock sliders
+2026-08,Households heating,New,-,households_space_heating_behaviour,-,%,Introduced a new slider to change heat demand based on behaviour
+2026-08,Households heating,Removed,households_insulation_level_apartments_1945_1964,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_apartments_1965_1984,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_apartments_1985_2004,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_apartments_2005_present,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_apartments_before_1945,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_apartments_future,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_1945_1964,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_1965_1984,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_1985_2004,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_2005_present,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_before_1945,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_future,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_1945_1964,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_1965_1984,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_1985_2004,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_2005_present,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_before_1945,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_future,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_1945_1964,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_1965_1984,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_1985_2004,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_2005_present,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_before_1945,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_future,-,kWh/m2,-,Removed old insulation sliders
+2026-08,Households heating,Removed,households_number_of_apartments_1945_1964,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_apartments_1965_1984,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_apartments_1985_2004,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_apartments_2005_present,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_apartments_before_1945,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_apartments_future,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_detached_houses_1945_1964,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_detached_houses_1965_1984,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_detached_houses_1985_2004,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_detached_houses_2005_present,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_detached_houses_before_1945,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_detached_houses_future,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_1945_1964,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_1965_1984,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_1985_2004,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_2005_present,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_before_1945,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_future,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_terraced_houses_1945_1964,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_terraced_houses_1965_1984,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_terraced_houses_1985_2004,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_terraced_houses_2005_present,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_terraced_houses_before_1945,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_number_of_terraced_houses_future,-,#,-,Removed old housing stock sliders
+2026-08,Emissions,New,-,emissions_agriculture_non_specified_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_agriculture_non_specified_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_agriculture_non_specified_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_buildings_non_specified_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_bunkers_international_aviation_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_bunkers_international_navigation_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_energy_ccus_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_energy_electricity_and_heat_production_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_energy_fuels_production_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_energy_fugitive_emissions_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_energy_fugitive_emissions_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_energy_hydrogen_production_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_energy_methanol_production_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_households_non_specified_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_aluminium_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_aluminium_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_chemicals_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_chemicals_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_fertilizers_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_food_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_food_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_non_specified_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_other_metals_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_other_metals_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_other_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_other_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_paper_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_paper_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_refineries_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_refineries_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_steel_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_industry_steel_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_lulucf_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_lulucf_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_other_indirect_emissions_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_other_non_specified_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_other_other_transportation_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_transport_non_specified_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_waste_non_specified_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
+2026-08,Emissions,New,-,emissions_waste_non_specified_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
 2026-06,International aviation,Changed,bunkers_allocated_percentage_aviation,bunkers_allocated_percentage_aviation,%,%,Input now also updates non-CO2 greenhouse gas (other_ghg) emissions for international aviation in the direct emissions method
 2026-06,International navigation,Changed,bunkers_allocated_percentage_shipping,bunkers_allocated_percentage_shipping,%,%,Input now also updates non-CO2 greenhouse gas (other_ghg) emissions for international navigation in the direct emissions method
 2026-04,Gas power plants,Renamed,capacity_of_energy_power_combined_cycle_network_gas,capacity_of_energy_power_combined_cycle_network_gas_dispatchable,MW,MW,Gas plants (CCGT and gas turbines) split into dispatchable and must-run variants

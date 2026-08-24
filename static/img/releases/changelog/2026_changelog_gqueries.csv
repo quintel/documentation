@@ -1,4 +1,161 @@
 Deploy,Subject,Status,Previous gquery,New gquery,Previous unit,New unit,Explanation
+2026-08,Buildings heating,New,-,number_of_existing_buildings_mekko,-,#,Buildings counts for the residences chart
+2026-08,Buildings heating,New,-,number_of_new_buildings_mekko,-,#,Buildings counts for the residences chart
+2026-08,Households heating,New,-,number_of_demolished_residences,-,#,Demolished residences
+2026-08,Households heating,New,-,households_share_of_apartments,-,share,Start values for residence-type share sliders
+2026-08,Households heating,New,-,households_share_of_detached,-,share,Start values for residence-type share sliders
+2026-08,Households heating,New,-,households_share_of_semi_detached,-,share,Start values for residence-type share sliders
+2026-08,Households heating,New,-,households_share_of_terraced,-,share,Start values for residence-type share sliders
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a1_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a2_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a3_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4a_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4b_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4c_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a5_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1b_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1c_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1d1_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_2_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_3_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_4_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_5_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_ind_co2_co2_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a1_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a2_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a3_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4a_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4b_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4c_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a5_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1b_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1d1_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_2_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_3_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_4_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_5_other_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a1_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a2_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a3_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4a_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4b_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4c_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a5_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1b_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1c_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_1d1_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_2_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_3_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_4_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_5_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_ind_co2_total_ghg_1990,-,MT,Direct emissions per IPCC category in 1990
+2026-08,Emissions,New,-,direct_emissions_ipcc_co2_excl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_co2_incl_indirect_emissions_excl_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_co2_incl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_co2_incl_indirect_emissions_lulucf_excl_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_co2_incl_lulucf_excl_indirect_emissions_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_other_ghg_excl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_other_ghg_incl_indirect_emissions_excl_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_other_ghg_incl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_other_ghg_incl_indirect_emissions_lulucf_excl_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_other_ghg_incl_lulucf_excl_indirect_emissions_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_excl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_incl_indirect_emissions_excl_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_incl_indirect_emissions_lulucf_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_incl_indirect_emissions_lulucf_excl_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_incl_lulucf_excl_indirect_emissions_bunkers_1990,-,MT,Direct emissions totals in 1990 (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a1_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a2_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a3_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4a_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4b_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4c_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a5_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1b_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1c_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1d1_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_2_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_3_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_4_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_5_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_ind_co2_co2,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a1_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a2_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a3_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4a_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4b_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4c_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a5_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1b_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1d1_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_2_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_3_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_4_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_5_other_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a1_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a2_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a3_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4a_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4b_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4c_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a5_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1b_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1c_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_1d1_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_2_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_3_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_4_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_5_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_ind_co2_total_ghg,-,MT,Direct emissions per IPCC category
+2026-08,Emissions,New,-,direct_emissions_ipcc_co2_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_co2_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_co2_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_co2_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_co2_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_other_ghg_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_other_ghg_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_other_ghg_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_other_ghg_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_other_ghg_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals (IPCC)
+2026-08,Emissions,New,-,max_value_dataset_derived_direct_emissions,-,kT,Dataset-derived direct emissions maximum
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a1_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a1_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a2_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a2_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a3_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a3_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4a_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4a_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4b_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4b_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4c_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a4c_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a5_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1a5_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1b_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1b_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1c_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1c_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1d1_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_1d1_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_2_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_2_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_3_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_3_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_4_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_4_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_5_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_5_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_ind_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_ind_total_ghg_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_1990_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_future_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
+2026-08,Emissions,New,-,direct_emissions_ipcc_total_ghg_present_for_direct_emissions_chart,-,MT,Supporting gqueries for the direct emissions IPCC chart
 2026-07,Direct emissions,New,-,dashboard_direct_emissions_reduction_of_total_ghg_emissions_versus_1990,-,factor,Direct emissions dashboard item GHG reduction future year versus 1990
 2026-07,Direct emissions,New,-,dashboard_direct_emissions_total_ghg_emissions,-,MT,Direct emissions dashboard item total GHG emissions future year
 2026-07,Direct emissions,New,-,direct_emissions_indirect_emissions_co2_1990,-,MT,Direct emissions per sector in 1990
@@ -79,21 +236,21 @@ Deploy,Subject,Status,Previous gquery,New gquery,Previous unit,New unit,Explanat
 2026-07,Direct emissions,New,-,direct_emissions_other_total_ghg,-,MT,Direct emissions per sector
 2026-07,Direct emissions,New,-,direct_emissions_transport_total_ghg,-,MT,Direct emissions per sector
 2026-07,Direct emissions,New,-,direct_emissions_waste_total_ghg,-,MT,Direct emissions per sector
-2026-07,Direct emissions,New,-,direct_emissions_co2_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_co2_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_other_ghg_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_total_ghg_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals 
-2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals 
+2026-07,Direct emissions,New,-,direct_emissions_co2_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_co2_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_other_ghg_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_excl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_excl_lulucf_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_lulucf_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_indirect_emissions_lulucf_excl_bunkers,-,MT,Direct emissions totals
+2026-07,Direct emissions,New,-,direct_emissions_total_ghg_incl_lulucf_excl_indirect_emissions_bunkers,-,MT,Direct emissions totals
 2026-07,Direct emissions,New,-,direct_emissions_agriculture_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
 2026-07,Direct emissions,New,-,direct_emissions_agriculture_total_ghg_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector
 2026-07,Direct emissions,New,-,direct_emissions_buildings_total_ghg_1990_for_direct_emissions_chart,-,MT,Dedicated GHG emission chart queries per sector 1990
