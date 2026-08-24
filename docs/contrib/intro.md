@@ -3,7 +3,7 @@ id: intro
 title: Contributing to the ETM
 ---
 
-This section provides documentation to Quintel employees, and outside modellers and developers who may wish to contribute to the ETM.
+This section provides documentation to Quintel employees, and external modellers and developers who may wish to contribute to the ETM.
 
 ## Contribution principles
 
