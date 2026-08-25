@@ -1,10 +1,6 @@
 Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanation
-2026-08,Flexibility,Changed,households_flexibility_p2p_electricity_market_penetration,-,%,%,Updated flexibility calculation
+2026-08,Flexibility,Changed,households_flexibility_p2p_electricity_market_penetration,-,%,%,Updated calculation. The number of units was not set correctly which is now fixed.
 2026-08,Rail transport,Removed,transport_rail_mixer_diesel_biodiesel_share,-,%,-,Removed duplicate rail diesel input
-2026-08,International aviation,Changed,bunkers_allocated_percentage_aviation,-,%,%,Adjusted input priority
-2026-08,International aviation,Changed,bunkers_useful_demand_planes,-,%,%,Adjusted input priority
-2026-08,International navigation,Changed,bunkers_allocated_percentage_shipping,-,%,%,Adjusted input priority
-2026-08,International navigation,Changed,bunkers_useful_demand_ships,-,%,%,Adjusted input priority
 2026-08,Buildings heating,New,-,buildings_space_heating_behaviour,-,%,Introduced a new slider to change heat demand based on behaviour
 2026-08,Buildings heating,Changed,buildings_insulation_level_buildings_present,buildings_insulation_existing_buildings,kWh/m2,%,Replaced the existing-buildings insulation slider
 2026-08,Buildings heating,Changed,buildings_insulation_level_buildings_future,buildings_insulation_new_buildings,kWh/m2,%,Replaced the new-buildings insulation slider
@@ -27,54 +23,54 @@ Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanat
 2026-08,Households heating,New,-,households_share_of_semi_detached,-,%,Added share of new buildings per building type sliders to replace the separate residence-type and stock sliders
 2026-08,Households heating,New,-,households_share_of_terraced,-,%,Added share of new buildings per building type sliders to replace the separate residence-type and stock sliders
 2026-08,Households heating,New,-,households_space_heating_behaviour,-,%,Introduced a new slider to change heat demand based on behaviour
-2026-08,Households heating,Removed,households_insulation_level_apartments_1945_1964,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_apartments_1965_1984,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_apartments_1985_2004,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_apartments_2005_present,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_apartments_before_1945,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_apartments_future,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_detached_houses_1945_1964,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_detached_houses_1965_1984,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_detached_houses_1985_2004,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_detached_houses_2005_present,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_detached_houses_before_1945,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_detached_houses_future,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_1945_1964,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_1965_1984,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_1985_2004,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_2005_present,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_before_1945,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_future,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_terraced_houses_1945_1964,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_terraced_houses_1965_1984,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_terraced_houses_1985_2004,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_terraced_houses_2005_present,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_terraced_houses_before_1945,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_insulation_level_terraced_houses_future,-,kWh/m2,-,Removed old insulation sliders
-2026-08,Households heating,Removed,households_number_of_apartments_1945_1964,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_apartments_1965_1984,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_apartments_1985_2004,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_apartments_2005_present,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_apartments_before_1945,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_apartments_future,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_detached_houses_1945_1964,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_detached_houses_1965_1984,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_detached_houses_1985_2004,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_detached_houses_2005_present,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_detached_houses_before_1945,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_detached_houses_future,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_semi_detached_houses_1945_1964,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_semi_detached_houses_1965_1984,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_semi_detached_houses_1985_2004,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_semi_detached_houses_2005_present,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_semi_detached_houses_before_1945,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_semi_detached_houses_future,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_terraced_houses_1945_1964,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_terraced_houses_1965_1984,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_terraced_houses_1985_2004,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_terraced_houses_2005_present,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_terraced_houses_before_1945,-,#,-,Removed old housing stock sliders
-2026-08,Households heating,Removed,households_number_of_terraced_houses_future,-,#,-,Removed old housing stock sliders
+2026-08,Households heating,Removed,households_insulation_level_apartments_1945_1964,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1945_1964
+2026-08,Households heating,Removed,households_insulation_level_apartments_1965_1984,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1965_1984
+2026-08,Households heating,Removed,households_insulation_level_apartments_1985_2004,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1985_2004
+2026-08,Households heating,Removed,households_insulation_level_apartments_2005_present,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_2005_present
+2026-08,Households heating,Removed,households_insulation_level_apartments_before_1945,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_before_1945
+2026-08,Households heating,Removed,households_insulation_level_apartments_future,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_new_residences
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_1945_1964,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1945_1964
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_1965_1984,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1965_1984
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_1985_2004,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1985_2004
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_2005_present,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_2005_present
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_before_1945,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_before_1945
+2026-08,Households heating,Removed,households_insulation_level_detached_houses_future,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_new_residences
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_1945_1964,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1945_1964
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_1965_1984,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1965_1984
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_1985_2004,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1985_2004
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_2005_present,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_2005_present
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_before_1945,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_before_1945
+2026-08,Households heating,Removed,households_insulation_level_semi_detached_houses_future,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_new_residences
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_1945_1964,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1945_1964
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_1965_1984,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1965_1984
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_1985_2004,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_1985_2004
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_2005_present,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_2005_present
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_before_1945,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_before_1945
+2026-08,Households heating,Removed,households_insulation_level_terraced_houses_future,-,kWh/m2,-,Removed old insulation sliders. Now use: households_insulation_new_residences
+2026-08,Households heating,Removed,households_number_of_apartments_1945_1964,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1945_1964
+2026-08,Households heating,Removed,households_number_of_apartments_1965_1984,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1965_1984
+2026-08,Households heating,Removed,households_number_of_apartments_1985_2004,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1985_2004
+2026-08,Households heating,Removed,households_number_of_apartments_2005_present,-,#,-,Removed old housing stock sliders. Now use: households_demolished_2005_present
+2026-08,Households heating,Removed,households_number_of_apartments_before_1945,-,#,-,Removed old housing stock sliders. Now use: households_demolished_before_1945
+2026-08,Households heating,Removed,households_number_of_apartments_future,-,#,-,Removed old housing stock sliders. Now use: households_number_of_residences_new and households_share_of_apartments
+2026-08,Households heating,Removed,households_number_of_detached_houses_1945_1964,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1945_1964
+2026-08,Households heating,Removed,households_number_of_detached_houses_1965_1984,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1965_1984
+2026-08,Households heating,Removed,households_number_of_detached_houses_1985_2004,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1985_2004
+2026-08,Households heating,Removed,households_number_of_detached_houses_2005_present,-,#,-,Removed old housing stock sliders. Now use: households_demolished_2005_present
+2026-08,Households heating,Removed,households_number_of_detached_houses_before_1945,-,#,-,Removed old housing stock sliders. Now use: households_demolished_before_1945
+2026-08,Households heating,Removed,households_number_of_detached_houses_future,-,#,-,Removed old housing stock sliders. Now use: households_number_of_residences_new and households_share_of_detached
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_1945_1964,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1945_1964
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_1965_1984,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1965_1984
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_1985_2004,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1985_2004
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_2005_present,-,#,-,Removed old housing stock sliders Now use: households_demolished_2005_present
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_before_1945,-,#,-,Removed old housing stock sliders. Now use: households_demolished_before_1945
+2026-08,Households heating,Removed,households_number_of_semi_detached_houses_future,-,#,-,Removed old housing stock sliders. Now use: households_number_of_residences_new and households_share_of_detached
+2026-08,Households heating,Removed,households_number_of_terraced_houses_1945_1964,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1945_1964
+2026-08,Households heating,Removed,households_number_of_terraced_houses_1965_1984,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1965_1984
+2026-08,Households heating,Removed,households_number_of_terraced_houses_1985_2004,-,#,-,Removed old housing stock sliders. Now use: households_demolished_1985_2004
+2026-08,Households heating,Removed,households_number_of_terraced_houses_2005_present,-,#,-,Removed old housing stock sliders. Now use: households_demolished_2005_present
+2026-08,Households heating,Removed,households_number_of_terraced_houses_before_1945,-,#,-,Removed old housing stock sliders. Now use: households_demolished_before_1945
+2026-08,Households heating,Removed,households_number_of_terraced_houses_future,-,#,-,Removed old housing stock sliders. Now use: households_number_of_residences_new and households_share_of_detached
 2026-08,Emissions,New,-,emissions_agriculture_non_specified_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
 2026-08,Emissions,New,-,emissions_agriculture_non_specified_non_energetic_co2,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
 2026-08,Emissions,New,-,emissions_agriculture_non_specified_non_energetic_other_ghg,-,kT,Direct emissions sliders to change non-energetic co2 and other ghg emissions
