@@ -42,8 +42,6 @@ _Example_: 1000 terraced houses with a typical heat demand of 350 kWh/m<sup>2</s
 * Total per residence: €23,910
 * *Total insulation costs: €23,910,000*
 
-In some cases the default typical heat demand for new housing stock is already lower compared to existing houses. This does not by itself incur insulation costs, unless you insulate these houses further by moving the insulation slider for _New residences_ above 0%. In that case, the insulation costs are calculated using the higher costs category. For new terraced houses, for example, that would be €157 per kWh/m<sup>2</sup> of further typical heat demand reduction.
-
 ## Buildings
 The insulation costs for buildings follow the same procedure as described above for households. The costs figure for buildings are based on the _tussenwoning_ figures from the Ecofys report, i.e.:
 
