@@ -152,6 +152,7 @@ module.exports = {
       items: [
         "contrib/graph-components",
         "contrib/inputs",
+        "contrib/built-environment-inputs-priority",
         "contrib/molecules",
         "contrib/waste-outputs",
         "contrib/gql",

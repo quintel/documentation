@@ -566,7 +566,7 @@ Authorization: Bearer YOUR_TOKEN
 {
   "scenario": {
     "user_values": {
-      "buildings_insulation_level": 35.7
+      "buildings_insulation_new_buildings": 35.7
     }
   }
 }
@@ -648,7 +648,7 @@ Authorization: Bearer YOUR_TOKEN
   "start_year": 2019,
   "end_year": 2050,
   "user_values": {
-    "buildings_insulation_level": 35.7
+    "buildings_insulation_new_buildings": 35.7
   }
   // ...
 }
@@ -673,7 +673,7 @@ Authorization: Bearer YOUR_TOKEN
 {
   "scenario": {
     "user_values": {
-      "buildings_insulation_level": 42.0,
+      "buildings_insulation_new_buildings": 42.0,
       "households_number_of_inhabitants": 18.3,
       "households_solar_pv_solar_radiation_market_penetration": 21.0
     }
