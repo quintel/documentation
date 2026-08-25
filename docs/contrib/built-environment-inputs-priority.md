@@ -34,7 +34,7 @@ Recall that **a higher `priority` number runs earlier**. The building/housing in
 
 ### 1. Insulation
 
-   * `households_insulation_<costruction_period>`
+   * `households_insulation_<construction_period>`
    * `buildings_insulation_existing_buildings`
    * `buildings_insulation_new_buildings`
 
