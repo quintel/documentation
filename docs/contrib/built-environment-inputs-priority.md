@@ -4,7 +4,7 @@ title: Built environment inputs priority
 
 The housing and building stock, insulation and behaviour inputs (introduced in [quintel/etsource#3470](https://github.com/quintel/etsource/pull/3470)) update a lot of shared graph state: typical heat demand attributes, useful demand `preset_demand`, number of units, roof surface for PV, and more. Because ETEngine applies inputs one after another (see [Priority](inputs#priority) for the general mechanism), the **order** in which these inputs run matters. Running them in the wrong order silently produces incorrect results rather than an error.
 
-This page documents the priority order used for these inputs, and the reasoning behind it, so that future additions or changes respect the same ordering.
+This page documents the priority order used for these inputs, and the reasoning behind it, so that future additions or changes respect the same ordering. These priorities order is also documented as a comment at the top of each of the relevant `.ad` files in etsource, so it stays visible to anyone editing them directly.
 
 ## Priorities
 
@@ -32,6 +32,11 @@ Recall that **a higher `priority` number runs earlier**. The building/housing in
 
    If the user selects a non-default weather year, this scales `preset_demand` for space heating and cooling using temperature/degree-day factors derived from that weather year, and marks `AREA(weather_curve_set)` as non-default. This must run after stock changes so it scales correctly.
 
+:::info Weather years override temperature input
+
+If the user selects a non-default weather year (`settings_weather_curve_set`), the `flexibility_outdoor_temperature` slider has **no effect at all**, even though the temperature with priority 0 is set after the weather years with priority 2. This happens because temperature input explicitly checks whether a weather year has been selected, and does nothing when this is the case
+:::
+
 ### 1. Insulation
 
    * `households_insulation_<construction_period>`
@@ -48,10 +53,3 @@ Recall that **a higher `priority` number runs earlier**. The building/housing in
    * `households_flexibility_p2p_electricity_market_penetration`
 
    These are the last things to run, changing already-calculated heat demands by a factor. Since nothing downstream depends on their output, their relative execution order doesn't matter.
-
-:::info Weather years override temperature input
-
-If the user selects a non-default weather year (`settings_weather_curve_set`), the `flexibility_outdoor_temperature` slider has **no effect at all**, even the temperature with priority 0 is set after the weather years with priority 2. This happens because temperature input explicitly checks whether a weather year has been selected, and does nothing when this is the case
-:::
-
-These priorities order is also documented as a comment at the top of each of the relevant `.ad` files in etsource, so it stays visible to anyone editing them directly.
