@@ -55,9 +55,8 @@ If the user selects a non-default weather year (`settings_weather_curve_set`), t
    * `flexibility_outdoor_temperature`
    * `households_flexibility_p2p_electricity_market_penetration`
 
-   These are the last things to run, changing already-calculated heat demands by a factor. Their relative execution order doesn't matter.
-   The total number of households batteries is also calculated based on the market penetration and the total number of households.
+   These are the last things to run, applying a final factor to the heat demands. Their relative execution order doesn't matter. The total number of households batteries is also calculated based on the market penetration and the total number of households.
 
 :::info Custom profiles for air temperature
 
-If a user uploads a custom temperature curve in the _Modify profiles_ it sets the _Outdoor temperature_ slider based on the temperature profile in the back-end and de-activates the slider in the front-end.
+When a user uploads a custom temperature profile in the [Modify profiles](https://energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves) section, this profile sets the outdoor temperature input in the backend and deactivates the slider in the front-end.
