@@ -50,7 +50,7 @@ For the **future year**, each insulation slider directly sets a **percentage red
 
 ![](/img/docs/20260821_insulation_sliders.png)
 
-Households have six insulation sliders: one per construction-period category (before 1945, 1945–1964, 1965–1984, 1985–2004, 2005–present, and new residences). Each slider applies the same percentage reduction to all four housing types within that period simultaneously. Buildings have two insulation sliders: one for existing buildings and one for new buildings.
+Households have six insulation sliders: one per construction-period category. Each slider applies the same percentage reduction to all four housing types within that period simultaneously. Buildings have two insulation sliders: one for existing buildings and one for new buildings.
 
 The ETM uses these sliders in two different ways:
 * For **existing** housing/building stock, the percentage reduction is applied to the heat demand for space heating from the start year.
