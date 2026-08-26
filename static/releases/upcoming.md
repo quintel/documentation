@@ -1,4 +1,3 @@
-* The direct emissions <a href="https://energytransitionmodel.com/scenario/data/data_export/yearly-direct-greenhouse-gas-emissions" target="_blank">data export</a> will be expanded to include a mapping to IPCC CRT categories. A chart with GHG emissions per IPCC CRT category will be added as well.
-* The direct emissions method will become fully available for regional (Dutch) datasets.
-* Air conditioning will be added as a separate technology for space heating in households.
-* The sliders for heat demand in the built environment will be simplified to improve their usability.
+* The technical and financial properties of air heat pumps and hybrid heat pumps will be updated.
+Amongst others, this will update the COP of these heatpumps and result in a different space heating technology split.
+* The efficiency of a selection of transport technologies will be updated. This applies to the pkm/MJ attribute for passenger and the tkm/MJ attribute for freight transport. This can result in changes in the modal split.
