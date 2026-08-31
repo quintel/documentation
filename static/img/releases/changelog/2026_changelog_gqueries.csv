@@ -1,4 +1,58 @@
 Deploy,Subject,Status,Previous gquery,New gquery,Previous unit,New unit,Explanation
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_1945_1964,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_1965_1984,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_1985_2004,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_2005_present,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_before_1945,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_future,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_detached_house_1945_1964,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_detached_house_1965_1984,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_detached_house_1985_2004,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_detached_house_2005_present,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_detached_house_before_1945,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_detached_house_future,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_1945_1964,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_1965_1984,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_1985_2004,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_2005_present,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_before_1945,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_future,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_1945_1964,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_1965_1984,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_1985_2004,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_2005_present,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_before_1945,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_future,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_1945_1964_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_1965_1984_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_1985_2004_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_2005_present_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_before_1945_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_apartment_future_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_fully_detached_house_1945_1964_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_fully_detached_house_1965_1984_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_fully_detached_house_1985_2004_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_fully_detached_house_2005_present_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_fully_detached_house_before_1945_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_fully_detached_house_future_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_1945_1964_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_1965_1984_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_1985_2004_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_2005_present_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_before_1945_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_semi_detached_house_future_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_1945_1964_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_1965_1984_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_1985_2004_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_2005_present_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_before_1945_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,New,-,useful_heat_demand_per_terraced_house_future_bar,-,GJ/#,Chart series for the new residential heat demand chart
+2026-09,Households heating,Removed,useful_demand_total_residences_1945_1964_bar,-,PJ,-,Not used anymore
+2026-09,Households heating,Removed,useful_demand_total_residences_1965_1984_bar,-,PJ,-,Not used anymore
+2026-09,Households heating,Removed,useful_demand_total_residences_1985_2004_bar,-,PJ,-,Not used anymore
+2026-09,Households heating,Removed,useful_demand_total_residences_2005_present_bar,-,PJ,-,Not used anymore
+2026-09,Households heating,Removed,useful_demand_total_residences_before_1945_bar,-,PJ,-,Not used anymore
+2026-09,Households heating,Removed,useful_demand_total_residences_future_bar,-,PJ,-,Not used anymore
 2026-08,Buildings heating,New,-,number_of_existing_buildings_mekko,-,#,Buildings counts for the residences chart
 2026-08,Buildings heating,New,-,number_of_new_buildings_mekko,-,#,Buildings counts for the residences chart
 2026-08,Households heating,New,-,number_of_demolished_residences,-,#,Demolished residences
