@@ -2,7 +2,7 @@
 // Maps version tags to production/staging dates for dynamic badge rendering
 const releases = {
   "2026-09": {
-    production: "2026-09-17",
+    production: "2026-09-03",
   },
   "2026-08": {
     production: "2026-08-26",
@@ -103,14 +103,14 @@ const releases = {
 // Main releases timeline data
 export const mainReleases = [
   {
-    date: "October 15, 2026",
+    date: "September 17, 2026",
     title: "Next Release",
     file: "upcoming.md",
     version: "upcoming",
     tag: null,
   },
   {
-    date: "September 17, 2026",
+    date: "September 3, 2026",
     title: "2026-09",
     file: "2026-09.md",
     version: "latest",
