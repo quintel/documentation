@@ -46,20 +46,20 @@ Insulation can be used to reduce the amount of heating needed for houses and bui
 
 For the **start year**, the heat demand for space heating follows from the region's dataset. The sources for these data can be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
 
-For the **future year**, each insulation slider directly sets a **percentage reduction in the typical heat demand** for space heating, relative to its start year (or, for new stock, default new-build) value. Internally, the ETM keeps track of the typical heat demand per housing/building category, expressed in kWh/m<sup>2</sup>. The sliders scale these values down by the percentage entered. The source for the typical heat demands in the starting year can be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
+For the **future year**, each insulation slider directly sets a **percentage reduction** for space heating, relative to its start year (or, for new stock, default new-build) value. Depending on the category, the slider's percentage reduction is applied either to directly to this historical heat demand value, or to a typical heat demand value. See below for how this works per category. The source for the typical heat demands in the starting year can be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
 
 ![](/img/docs/20260821_insulation_sliders.png)
 
 Households have six insulation sliders: one per construction-period category. Each slider applies the same percentage reduction to all four housing types within that period simultaneously. Buildings have two insulation sliders: one for existing buildings and one for new buildings.
 
-The ETM uses these sliders in two different ways:
-* For **existing** housing/building stock, the percentage reduction is applied to the heat demand for space heating from the start year.
-    * _Example:_ setting the "1985 - 2004" insulation slider to 20% reduces the total heat demand for all building types from this construction period by 20%. It also reduces the typical heat demand of all building types by 20%, which is used to calculate insulation costs.
+The ETM uses these sliders in three different ways:
+* For **existing** housing/building stock, the slider is applied to the existing heat demand for space heating, reducing it directly. This also reduces the typical heat demand values in kWh/m<sup>2</sup>, which are used to calculate insulation costs.
 
-* For **new** housing/building stock, the percentage reduction is applied to a default typical heat demand for newly built residences/buildings, before that value is multiplied by the number of new units and an average surface area per unit to determine the future heat demand for space heating.
-    * _Example: the default typical heat demand for space heating for new apartments is 65 kWh/m<sup>2</sup>. Setting the "new residences" insulation slider to 10% reduces this to 58.5 kWh/m<sup>2</sup>. If the number of new apartments is set to 100,000, the heat demand for space heating from new apartments increases by 100,000 apartments x 58.5 kWh/m<sup>2</sup> x 84 m<sup>2</sup>/apartment._
+* For **new residences** there is no existing heat demand to reduce. Instead, the slider is applied to a heat demand derived from the per-residence heat demand of 2005-present residences. A typical heat demand per residence in kWh/m<sup>2</sup> is also tracked, and reduced by the same percentage, to calculate insulation costs.
 
-Note that, for existing stock, the typical heat demand and the actual heat demand for space heating are not directly related: the total heat demand is calculated top-down from the region's dataset, while the typical heat demand is only a bottom-up reference value, scaled by the insulation slider. The resulting typical heat demand values are used to calculate insulation costs. See the [Costs](cost-insulation-costs) section for details on this topic. For new stock, the typical heat demand is actually used to calculate the total heat demand.
+* For **new non-residential buildings** the slider is applied to the typical heat demand in kWh/m<sup>2</sup> for new buildings, which is dataset dependent. This value is multiplied by the number of residence equivalents and the area per residence equivalent to determine the heat demand for space heating.
+
+Note that, except for new non-residential buildings, the typical heat demand and the actual heat demand for space heating are not directly related: the total heat demand is calculated top-down from the region's dataset, while the typical heat demand is only a bottom-up reference value, scaled by the insulation slider. See the [Costs](cost-insulation-costs) section for details on how these values are used to calculate insulation costs.
 
 ### Behavioural change in space heating demand
 The heat demand for space heating can also be changed due to behaviour, using the corresponding slider under the [Behaviour](https://energytransitionmodel.com/scenario/demand/households/behaviour) section for Households, or the equivalent [Behaviour](https://energytransitionmodel.com/scenario/demand/buildings/behaviour) section for Buildings. This slider sets a percentage change, from -50% to +50%, which is applied uniformly to the heat demand for space heating of all housing types and construction periods, including new stock.
