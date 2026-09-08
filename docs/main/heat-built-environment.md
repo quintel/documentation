@@ -7,13 +7,13 @@ This page discusses the methods and data used for modelling space heating and ho
 The building stock sets the preconditions for heat in the built environment. It determines the amount of heat needed and is also relevant for which heating technologies can be used to meet the heat demand.
 
 ### Households (residential)
-The ETM distinguishes four housing types:
+The ETM distinguishes four residence types:
 * Apartments
 * Detached houses
 * Semi-detached houses (not available for all country datasets in the ETM)
 * Terraced houses
 
-Each housing type is then split into construction periods:
+Each residence type is then split into construction periods:
 * Before 1945
 * 1945 – 1964
 * 1965 – 1984
@@ -21,53 +21,53 @@ Each housing type is then split into construction periods:
 * 2005 to present (where present is the start year of the simulated region)
 * New residences (built between the start year and end year)
 
-The sources used for the existing housing stock data can be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
+The sources used for the existing housing stock data can be found in the [Dataset Manager](https://data.energytransitionmodel.com/).
 
 Changes to the housing stock between the start and end year are set as follows in the [Population & housing stock](https://energytransitionmodel.com/scenario/demand/households/population-and-housing-stock) section:
 * A single slider sets the **total number of new residences** built between the start and end year.
-* Four **share sliders** (one per housing type) distribute the total number of new residences across apartments, detached, semi-detached and terraced houses. These four shares always add up to 100%.
-* For each of the five existing construction-period categories, a slider sets the **number of residences demolished** in that category (up to the number of residences present in the start year). This number is distributed across the four housing types in proportion to their share of the existing stock within that period.
+* Four **share sliders** (one per residence type) distribute the total number of new residences across apartments, detached, semi-detached and terraced houses. These four shares always add up to 100%.
+* For each of the five existing construction-period categories, a slider sets the **number of residences demolished** in that category (up to the number of residences present in the start year). This number is distributed across the four residence types in proportion to their share of the existing stock within that period.
 
 ### Buildings (non-residential)
 The building stock within the buildings sector is used to provide a wide range of services, from hospitals to offices or swimming pools, making it difficult to capture the sector in a limited number of categories. Therefore, no different building types are distinguished.
 
-There is limited reliable data available about construction periods for buildings. Therefore, the building stock is split into only two categories:
+The building stock is split into only two categories:
 * Existing buildings
 * New buildings (built between the start year and end year)
 
-The sources used for the existing building stock data can be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
+The sources used for the existing building stock data can be found in the [Dataset Manager](https://data.energytransitionmodel.com/).
 
 Changes to the building stock are set in the [Building stock](https://energytransitionmodel.com/scenario/demand/buildings/building-stock) section using a slider for the **number of buildings demolished** and a slider for the **number of new buildings**.
 
 ## Heat demand
 
 ### Insulation
-Insulation can be used to reduce the amount of heating needed for houses and buildings. The ETM allows you to reduce the heat demand for space heating in the [Insulation](https://energytransitionmodel.com/scenario/demand/households/insulation) section under Households, and the corresponding [Insulation](https://energytransitionmodel.com/scenario/demand/buildings/insulation) section under Buildings.
+Insulation can be applied to reduce the amount of heating needed for residences and buildings. The ETM allows you to reduce the heat demand for space heating in the [Insulation](https://energytransitionmodel.com/scenario/demand/households/insulation) section under Households, and the corresponding [Insulation](https://energytransitionmodel.com/scenario/demand/buildings/insulation) section under Buildings.
 
-For the **start year**, the heat demand for space heating follows from the region's dataset. The sources for these data can be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
+Households have six insulation sliders: one per construction-period category. Each slider applies the same percentage reduction to all four residence types within that period simultaneously. Buildings have two insulation sliders: one for existing buildings and one for new buildings.
 
-For the **future year**, each insulation slider directly sets a **percentage reduction** for space heating, relative to its start year (or, for new stock, default new-build) value. Depending on the category, the slider's percentage reduction is applied either to directly to this historical heat demand value, or to a typical heat demand value. See below for how this works per category. The source for the typical heat demands in the starting year can be found in the [ETM Dataset Manager](https://data.energytransitionmodel.com/).
+For the **start year**, the heat demand for space heating follows from the region's dataset. The sources for this data can be found in the [Dataset Manager](https://data.energytransitionmodel.com/).
+
+For the **future year**, each insulation slider directly sets a **percentage reduction** for space heating, relative to its start year.
 
 ![](/img/docs/20260821_insulation_sliders.png)
 
-Households have six insulation sliders: one per construction-period category. Each slider applies the same percentage reduction to all four housing types within that period simultaneously. Buildings have two insulation sliders: one for existing buildings and one for new buildings.
-
-The ETM uses these sliders in three different ways:
+The ETM applies these sliders in three different ways:
 * For **existing** housing/building stock, the slider is applied to the existing heat demand for space heating, reducing it directly. This also reduces the typical heat demand values in kWh/m<sup>2</sup>, which are used to calculate insulation costs.
 
-* For **new residences** there is no existing heat demand to reduce. Instead, the slider is applied to a heat demand derived from the per-residence heat demand of 2005-present residences. A typical heat demand per residence in kWh/m<sup>2</sup> is also tracked, and reduced by the same percentage, to calculate insulation costs.
+* For **new residences** there is no existing heat demand to reduce. Instead, the slider is applied to the default space heating demand for new residences, based on the per-residence space heating demand of 2005-present residences. A typical heat demand per residence in kWh/m<sup>2</sup> is also tracked, and reduced by the same percentage, to calculate insulation costs.
 
 * For **new non-residential buildings** the slider is applied to the typical heat demand in kWh/m<sup>2</sup> for new buildings, which is dataset dependent. This value is multiplied by the number of residence equivalents and the area per residence equivalent to determine the heat demand for space heating.
 
 Note that, except for new non-residential buildings, the typical heat demand and the actual heat demand for space heating are not directly related: the total heat demand is calculated top-down from the region's dataset, while the typical heat demand is only a bottom-up reference value, scaled by the insulation slider. See the [Costs](cost-insulation-costs) section for details on how these values are used to calculate insulation costs.
 
 ### Behavioural change in space heating demand
-The heat demand for space heating can also be changed due to behaviour, using the corresponding slider under the [Behaviour](https://energytransitionmodel.com/scenario/demand/households/behaviour) section for Households, or the equivalent [Behaviour](https://energytransitionmodel.com/scenario/demand/buildings/behaviour) section for Buildings. This slider sets a percentage change, from -50% to +50%, which is applied uniformly to the heat demand for space heating of all housing types and construction periods, including new stock.
+The heat demand for space heating can also be changed due to behaviour, using the corresponding slider under the [Behaviour](https://energytransitionmodel.com/scenario/demand/households/behaviour) section for Households, or the equivalent [Behaviour](https://energytransitionmodel.com/scenario/demand/buildings/behaviour) section for Buildings. This slider sets a percentage change, from -50% to +50%, which is applied uniformly to the heat demand for space heating of all residence types and construction periods, including new stock.
 
 The behaviour slider is applied on top of, and independently from, the insulation sliders: it changes the actual heat demand for space heating for the simulated future year, but does not affect the typical heat demand values used to calculate insulation costs. For example, insulating a housing category by 20% and additionally setting the behaviour slider to +10% results in a heat demand for space heating of 0.8 x 1.1 = 88% of its start year value, but insulation costs are still calculated based on the 20% reduction in typical heat demand alone.
 
 ### Hot water
-The demand for hot water is only defined for households. Residences of all housing types and build years are assumed to have the same hot water demand, since it is assumed to depend mostly on human behavior. The behavioral impact on hot water demand can be altered using the corresponding slider under the [Behaviour](https://energytransitionmodel.com/scenario/demand/households/behaviour) section.
+The demand for hot water is only defined for households. Residences of all residence types and build years are assumed to have the same hot water demand, since it is assumed to depend mostly on human behavior. The behavioral impact on hot water demand can be altered using the corresponding slider under the [Behaviour](https://energytransitionmodel.com/scenario/demand/households/behaviour) section.
 
 ### Solar thermal panels
 Solar thermal panels in households are only used to meet hot water demand. They can be used to meet up to 100% of demand using the corresponding slider. The remaining demand is then met using the specified mix of technologies for space heating and hot water.
@@ -79,7 +79,7 @@ A wide range of technologies is available to meet the space heating and hot wate
 * For **households**, a single technology is assumed to provide both space heating and hot water in a residence.
 * For **buildings**, a technology only provides space heating, since the ETM does not specify hot water demand for buildings.
 
-It is not possible to directly specify the technology mix for each housing or building category. Instead, technologies are assigned to housing/building categories through a so-called **merit order**. A prioritized mix of technologies is assigned to housing/building stock first by build year, and for housing stock subsequently by housing type: first apartments, then terraced houses, semi-detached and finally detached houses. This order roughly follows the useful heat demand in increasing order, i.e. new apartments have a lower useful heat demand than detached houses from before 1945. The _consumer order_ is therefore fixed as follows:
+It is not possible to directly specify the technology mix for each housing or building category. Instead, technologies are assigned to housing/building categories through a so-called **merit order**. A prioritized mix of technologies is assigned to housing/building stock first by build year, and for housing stock subsequently by residence type: first apartments, then terraced houses, semi-detached and finally detached houses. This order roughly follows the useful heat demand in increasing order, i.e. new apartments have a lower useful heat demand than detached houses from before 1945. The _consumer order_ is therefore fixed as follows:
 
 | Housing stock |   Building stock   |
 |------------------------|----------|
@@ -109,7 +109,7 @@ Below the process for the **simulated end year** is described.
 **Hourly demand** is determined by the combination of annual heat demand and a housing/building category specific heat demand curve. The annual heat demand for water heating is considered separately from that of space heating. The heat demand curve is then applied to convert the annual demand to hourly demand profiles. This results in the following hourly demand profiles:
 * **Buildings**: one heat demand profile for buildings;
 * **Households water heating**: one water heating demand profile for households;
-* **Households space heating**: for each housing type (apartments / terraced / semi-detached / detached), the ETM contains a demand profile for high, medium and low levels of insulation. These are matched with build year categories as follows:
+* **Households space heating**: for each residence type (apartments / terraced / semi-detached / detached), the ETM contains a demand profile for high, medium and low levels of insulation. These are matched with build year categories as follows:
     * _high insulation_: 'new' and '2005-present' residences;
     * _medium insulation_: '1965-1984' and '1985-2004' residences
     * _low insulation_: '1945-1964' and 'before 1945' residences.
