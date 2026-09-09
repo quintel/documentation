@@ -8,7 +8,7 @@ import UpcomingFeature from '@site/src/components/UpcomingFeature';
 
 <UpcomingFeature release="2023.01" />
 
-The ETM's [Collections](https://energytransitionmodel.com/multi_year_charts) feature shows a collection by its ID. Use this API to create persisted collections, so that they appear in your list and can be opened in the viewer.
+The ETM's [Collections](https://my.energytransitionmodel.com/collections) feature shows a collection by its ID. Use this API to create persisted collections, so that they appear in your list and can be opened in the viewer.
 
 Instead of a collection, the viewer can also show a comparison of a selection of [saved scenarios](saved-scenarios.md). With this endpoint you may also create such a persisted collection.
 
