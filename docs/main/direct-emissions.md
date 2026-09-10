@@ -46,7 +46,7 @@ A coal-fired power plant in the energy sector produces `100 kg CO2`, of which `8
 Currently, the direct emissions method is implemented as an additional method alongside the default primary emissions method. This [page](../contrib/direct-emissions-method.md) gives more technical details on how the direct emissions are calculated in the model. The results of the direct emissions method can be viewed via a detailed data export, charts and two dashboard items.
 
 ### Data export
-The detailed [data export](https://energytransitionmodel.com/scenario/data/data_export/yearly-direct-greenhouse-gas-emissions) provides a complete overview of all emissions in a scenario for the start year and future year. All technologies where emissions can occur are included, as well as other greenhouse gas emissions that are not dynamically calculated. The emissions are categorised by **ETM sector** and **subsector**, as well as by [IPCC CRT category](#mapping_of_etm_sectors_to_ipcc_categories) and [Klimaattafel category](klimaattafels).
+The detailed [data export](https://energytransitionmodel.com/scenario/data/data_export/yearly-direct-greenhouse-gas-emissions) provides a complete overview of all emissions in a scenario for the start year and future year. All technologies where emissions can occur are included, as well as other greenhouse gas emissions that are not dynamically calculated. The emissions are categorised by **ETM sector** and **subsector**, as well as by [IPCC CRT category](#mapping_of_etm_sectors_to_ipcc_categories) and Dutch [Klimaatsector](#klimaatsector).
 
 The following emission results, expressed in kg CO2-eq, are included in the data export:
 * **CO2 production**: fossil CO2 generated, before CO2 capture.
@@ -67,7 +67,7 @@ There are three charts available that show direct emissions results for 1990, th
 
 * **Direct total GHG emissions**: shows the emissions per ETM sector.
 * **Direct total GHG emissions per IPCC category**: shows the emissions per IPCC CRT category.
-* **Direct total GHG emissions per Klimaattafel category**: shows the emissions per Klimaattafel category.
+* **Direct total GHG emissions per Klimaatsector category**: shows the emissions per Klimaatsector category.
 
 Similar to the dashboard items, the charts include indirect emissions and LULUCF emissions, and include emissions from international transport if configured as such in the scenario. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data for 1990 is retrieved and mapped.
 
@@ -91,15 +91,14 @@ The table below maps ETM sectors to their corresponding IPCC categories, describ
 | LULUCF | 4 |
 | Waste | 5 |
 
+## Klimaatsector
+The Klimaatsector categorisation is a categorisation commonly used in the Netherlands, and should therefore only be applied to Dutch datasets.
 
-## Klimaattafels
-Klimaattafels is a direct-emissions categorisation widely used in the Netherlands, and should therefore only be applied to Dutch datasets.
-
-The Klimaattafel categories in the ETM match the official Klimaattafel categories with a few exeptions. These exceptions are described in the following table. Where relevant, the IPCC CRT code under which such emissions are reported is also stated.
-
+The Klimaatsector categories in the ETM match the official Klimaatsector categories with a few exeptions. These exceptions are described in the following table. Where relevant, the IPCC CRT code under which such emissions are reported is also stated.
 
 
-|  **Klimaattafel in ETM**  | **Exceptions** |
+
+|  **Klimaatsector in ETM**  | **Exceptions** |
 |---|---|
 | Industrie | Incl. paraffin and fireworks *(CRT code 2.D and 2.G)*<br/>Incl. lubricants and urea *(CRT code 2.D)*<br/>Incl. fugitive emissions *(CRT code 1.B)*<br/>Excl. electricity and heat production from waste plants *(CRT code 1.A.1.a)* |
 | Elektriciteit | Incl. electricity and heat production from waste plants *(CRT code 1.A.1.a)*<br/>Incl. CCUS *(CRT code 1.C)*<br/>Incl. pipeline transport *(CRT code 1.A.3.e)* |
@@ -107,5 +106,5 @@ The Klimaattafel categories in the ETM match the official Klimaattafel categorie
 | Gebouwde omgeving | Excl. fireworks and paraffin for households *(CRT code 2.D and 2.G)* |
 | Landbouw | - |
 | Landgebruik | Sometimes this category is combined into "Landbouw en landgebruik", but is often treated separately. |
-| Internationaal transport | Not an official Klimaattafel category but created in the ETM to account for international transport |
-| Indirecte emissies | Officially these emissions are allocated across all Klimaattafel categories, but in the ETM it is added as a separate Klimaattafel category |
+| Internationaal transport | Not an official Klimaatsector but created in the ETM to account for international transport |
+| Indirecte emissies | Officially these emissions are allocated across all Klimaatsector categories, but in the ETM it is added as a separate category |
