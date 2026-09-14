@@ -1,4 +1,61 @@
 Deploy,Subject,Status,Previous gquery,New gquery,Previous unit,New unit,Explanation
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_hydrogen_ht_steam_hot_water_output_curve,-,curve,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_hydrogen_mt_steam_hot_water_output_curve,-,curve,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_ht_hydrogen_output_of_electricity,-,PJ,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_ht_hydrogen_output_of_steam_hot_water,-,PJ,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_mt_hydrogen_output_of_electricity,-,PJ,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_mt_hydrogen_output_of_steam_hot_water,-,PJ,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_hydrogen_hydrogen_input_curve,-,curve,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,myc_installed_production_capacity_in_hydrogen_chp_ccgt,-,MW,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_hydrogen,-,curve,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_ht_hydrogen_for_heat_network_ht_mekko,-,PJ,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_mt_hydrogen_for_heat_network_mt_mekko,-,PJ,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_ht_merit_order,-,-,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_mt_merit_order,-,-,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_ht_availability_in_merit_order_table,-,percentage,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_ht_capacity_in_merit_order_table,-,MW,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_ht_full_load_hours_in_merit_order_table,-,hours,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_ht_load_factor_in_merit_order_table,-,factor,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_ht_operating_costs_in_merit_order_table,-,EUR/MWh,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_ht_position_in_merit_order_table,-,number,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_mt_availability_in_merit_order_table,-,percentage,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_mt_capacity_in_merit_order_table,-,MW,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_mt_full_load_hours_in_merit_order_table,-,hours,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_mt_load_factor_in_merit_order_table,-,factor,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_mt_operating_costs_in_merit_order_table,-,EUR/MWh,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,merit_order_hydrogen_chp_ccgt_mt_position_in_merit_order_table,-,number,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_ht_hydrogen_capacity_in_chp_properties,-,GW,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_ht_hydrogen_electricity_production_in_chp_properties,-,PJ,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_ht_hydrogen_heat_production_in_chp_properties,-,PJ,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_ht_hydrogen_number_of_units_in_chp_properties,-,#,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_mt_hydrogen_capacity_in_chp_properties,-,GW,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_mt_hydrogen_electricity_production_in_chp_properties,-,PJ,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_mt_hydrogen_heat_production_in_chp_properties,-,PJ,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,energy_chp_combined_cycle_mt_hydrogen_number_of_units_in_chp_properties,-,#,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_ht_capacity_in_power_plant_economic_performance_table,-,MW,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_ht_capex_in_power_plant_economic_performance_table,-,EUR/MWh,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_ht_full_load_hours_in_power_plant_economic_performance_table,-,hours,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_ht_opex_in_power_plant_economic_performance_table,-,EUR/MWh,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_ht_position_in_power_plant_economic_performance_table,-,number,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_ht_profit_in_power_plant_economic_performance_table,-,EUR/MWh,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_ht_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_mt_capacity_in_power_plant_economic_performance_table,-,MW,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_mt_capex_in_power_plant_economic_performance_table,-,EUR/MWh,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_mt_full_load_hours_in_power_plant_economic_performance_table,-,hours,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_mt_opex_in_power_plant_economic_performance_table,-,EUR/MWh,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_mt_position_in_power_plant_economic_performance_table,-,number,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_mt_profit_in_power_plant_economic_performance_table,-,EUR/MWh,New queries for the hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,hydrogen_chp_ccgt_mt_revenue_in_power_plant_economic_performance_table,-,EUR/MWh,New queries for the hydrogen CCGT CHP
+2026-10,Buildings heating,New,-,useful_demand_buildings_future_per_building,-,GJ/#,Useful heat demand per building
+2026-10,Buildings heating,New,-,useful_demand_buildings_present_per_building,-,GJ/#,Useful heat demand per building
+2026-10,Buildings heating,New,-,useful_demand_buildings_future_per_building_bar,-,GJ/#,Useful heat demand per building
+2026-10,Buildings heating,New,-,useful_demand_buildings_present_per_building_bar,-,GJ/#,Useful heat demand per building
+2026-10,Households heating,Renamed,useful_demand_detached_houses_1945_1964_bar,useful_demand_fully_detached_houses_1945_1964_bar,PJ,PJ,Renamed gquery
+2026-10,Households heating,Renamed,useful_demand_detached_houses_1965_1984_bar,useful_demand_fully_detached_houses_1965_1984_bar,PJ,PJ,Renamed gquery
+2026-10,Households heating,Renamed,useful_demand_detached_houses_1985_2004_bar,useful_demand_fully_detached_houses_1985_2004_bar,PJ,PJ,Renamed gquery
+2026-10,Households heating,Renamed,useful_demand_detached_houses_2005_present_bar,useful_demand_fully_detached_houses_2005_present_bar,PJ,PJ,Renamed gquery
+2026-10,Households heating,Renamed,useful_demand_detached_houses_before_1945_bar,useful_demand_fully_detached_houses_before_1945_bar,PJ,PJ,Renamed gquery
+2026-10,Households heating,Renamed,useful_demand_detached_houses_future_bar,useful_demand_fully_detached_houses_future_bar,PJ,PJ,Renamed gquery
 2026-09,Households heating,New,-,useful_heat_demand_per_apartment_1945_1964,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
 2026-09,Households heating,New,-,useful_heat_demand_per_apartment_1965_1984,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
 2026-09,Households heating,New,-,useful_heat_demand_per_apartment_1985_2004,-,GJ/#,"Useful heat demand per residence, by residence type and construction period"
