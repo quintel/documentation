@@ -67,16 +67,14 @@ There are three charts available that show direct emissions results for 1990, th
 
 * **Direct total GHG emissions**: shows the emissions per ETM sector.
 * **Direct total GHG emissions per IPCC category**: shows the emissions per IPCC CRT category.
-* **Direct total GHG emissions per Klimaatsector category**: shows the emissions per Klimaatsector category.
+* **Direct total GHG emissions per Dutch Klimaatsector**: shows the emissions per Dutch Klimaatsector category.
 
 Similar to the dashboard items, the charts include indirect emissions and LULUCF emissions, and include emissions from international transport if configured as such in the scenario. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data for 1990 is retrieved and mapped.
 
 ![](/img/docs/direct_emissions_chart_total_ghg_emissions.png)
 
 ## Mapping of ETM sectors to IPCC categories
-The IPCC categories are a standard classification to report direct emissions in Europe.
-The table below maps ETM sectors to their corresponding IPCC categories, described by IPCC CRT code.
-
+The Common Reporting Tables (CRT) of the IPCC are a standardardised categorisation in which countries report their greenhouse gas emissions to the UNFCCC. The table below shows how the emissions reported in ETM sectors are mapped to IPCC CRT codes.
 
 |  **ETM sector**  | **IPCC CRT code** |
 |---|---|
@@ -92,19 +90,17 @@ The table below maps ETM sectors to their corresponding IPCC categories, describ
 | Waste | 5 |
 
 ## Klimaatsector
-The Klimaatsector categorisation is a categorisation commonly used in the Netherlands, and should therefore only be applied to Dutch datasets.
+The Klimaatsector categorisation is a categorisation commonly used in the Netherlands and should therefore only be applied to Dutch datasets.
 
-The Klimaatsector categories in the ETM match the official Klimaatsector categories with a few exeptions. These exceptions are described in the following table. Where relevant, the IPCC CRT code under which such emissions are reported is also stated.
-
-
+The Klimaatsector categories in the ETM generally match the official Klimaatsector categories with a few exceptions. These exceptions are described in the table below. Where relevant, the IPCC CRT code under which such emissions are reported is also stated.
 
 |  **Klimaatsector in ETM**  | **Exceptions** |
 |---|---|
-| Industrie | Incl. paraffin and fireworks *(CRT code 2.D and 2.G)*<br/>Incl. lubricants and urea *(CRT code 2.D)*<br/>Incl. fugitive emissions *(CRT code 1.B)*<br/>Excl. electricity and heat production from waste plants *(CRT code 1.A.1.a)* |
-| Elektriciteit | Incl. electricity and heat production from waste plants *(CRT code 1.A.1.a)*<br/>Incl. CCUS *(CRT code 1.C)*<br/>Incl. pipeline transport *(CRT code 1.A.3.e)* |
-| Mobiliteit | Incl. military emissions *(CRT code 1.A.5)*<br/>Excl. lubricants and urea *(CRT code 2.D)* |
-| Gebouwde omgeving | Excl. fireworks and paraffin for households *(CRT code 2.D and 2.G)* |
-| Landbouw | - |
-| Landgebruik | Sometimes this category is combined into "Landbouw en landgebruik", but is often treated separately. |
-| Internationaal transport | Not an official Klimaatsector but created in the ETM to account for international transport |
-| Indirecte emissies | Officially these emissions are allocated across all Klimaatsector categories, but in the ETM it is added as a separate category |
+| Industrie | Excl. electricity and heat production from waste plants *(CRT code 1.A.1.a)* <br/> Incl. lubricants, paraffin wax, other non-energy products use from other sectors *(CRT code 2.D)*<br/>Incl. fireworks *(CRT code 2.G.4)* |
+| Elektriciteit | Incl. electricity and heat production from waste plants *(CRT code 1.A.1.a)*<br/>Incl. CCUS *(CRT code 1.C)* |
+| Mobiliteit | Incl. military fuel use *(CRT code 1.A.5)*<br/>Excl. lubricants and other non-energy products use *(CRT code 2.D)* |
+| Gebouwde omgeving | Excl. paraffin wax use in built environemnt *(CRT code 2.D)*<br/>Excl. fireworks *(CRT code 2.G.4)* |
+| Landbouw | Klimaatsector "Landbouw en landgebruik" split into separate sectors |
+| Landgebruik | Klimaatsector "Landbouw en landgebruik" split into separate sectors |
+| Internationaal transport | Not an official Klimaatsector, but added as separate sector |
+| Indirecte emissies | Indirect emissions should be distributed proportionally over the Klimaatsecotren, but are added as separate category due to practical reasons |
