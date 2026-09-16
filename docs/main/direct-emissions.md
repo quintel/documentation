@@ -46,7 +46,7 @@ A coal-fired power plant in the energy sector produces `100 kg CO2`, of which `8
 Currently, the direct emissions method is implemented as an additional method alongside the default primary emissions method. This [page](../contrib/direct-emissions-method.md) gives more technical details on how the direct emissions are calculated in the model. The results of the direct emissions method can be viewed via a detailed data export, charts and two dashboard items.
 
 ### Data export
-The detailed [data export](https://energytransitionmodel.com/scenario/data/data_export/yearly-direct-greenhouse-gas-emissions) provides a complete overview of all emissions in a scenario for the start year and future year. All technologies where emissions can occur are included, as well as other greenhouse gas emissions that are not dynamically calculated. The emissions are categorised by **ETM sector** and **subsector**, as well as by [IPCC CRT category](#mapping_of_etm_sectors_to_ipcc_categories) and Dutch [Klimaatsector](#klimaatsector).
+The detailed [data export](https://energytransitionmodel.com/scenario/data/data_export/yearly-direct-greenhouse-gas-emissions) provides a complete overview of all emissions in a scenario for the start year and future year. All technologies where emissions can occur are included, as well as other greenhouse gas emissions that are not dynamically calculated. The emissions are categorised by **ETM sector** and **subsector**, as well as by [IPCC CRT category](#mapping_of_etm_sectors_to_ipcc_categories) and Dutch [Climate sector (*Klimaatsector*)](#klimaatsector).
 
 The following emission results, expressed in kg CO2-eq, are included in the data export:
 * **CO2 production**: fossil CO2 generated, before CO2 capture.
@@ -67,7 +67,7 @@ There are three charts available that show direct emissions results for 1990, th
 
 * **Direct total GHG emissions**: shows the emissions per ETM sector.
 * **Direct total GHG emissions per IPCC category**: shows the emissions per IPCC CRT category.
-* **Direct total GHG emissions per Dutch Klimaatsector**: shows the emissions per Dutch Klimaatsector category.
+* **Direct total GHG emissions per Dutch Climate sector**: shows the emissions per Dutch Climate sector (*Klimaatsector*) category.
 
 Similar to the dashboard items, the charts include indirect emissions and LULUCF emissions, and include emissions from international transport if configured as such in the scenario. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data for 1990 is retrieved and mapped.
 
@@ -80,34 +80,33 @@ The Common Reporting Tables (CRT) of the IPCC are a standardardised categorisati
 |---|---|
 | Households | 1.A.4.b |
 | Buildings | 1.A.4.a |
-| Industry | 1.A.1.b \| 1.A.2 \| 1.B.2.a.iv \| 2 excl. 2.B.8.a and 2.B.10.a |
+| Industry | 1.A.1.b <br/> 1.A.2 <br/> 1.B.2.a.iv <br/> 2 excl. 2.B.8.a and 2.B.10.a |
 | Transport | 1.A.3 excl. 1.A.3.e |
-| Energy | 1.A.1.a \| 1.A.1.c \| 1.B excl. 1.B.2.a.iv \| 1.C \| 2.B.8.a \| 2.B.10.a |
+| Energy | 1.A.1.a <br/> 1.A.1.c <br/> 1.B excl. 1.B.2.a.iv <br/> 1.C <br/> 2.B.8.a <br/> 2.B.10.a |
 | International transport | 1.D.1 |
-| Agriculture | 1.A.4.c \| 3 |
-| Other | 1.A.3.e \| 1.A.5 \| ind_CO2 |
+| Agriculture | 1.A.4.c <br/> 3 |
+| Other | 1.A.3.e <br/> 1.A.5 <br/> ind_CO2 |
 | LULUCF | 4 |
 | Waste | 5 |
 
 ## Klimaatsector
-The Klimaatsector categorisation is a categorisation commonly used in the Netherlands and should therefore only be applied to Dutch datasets.
-The table below shows how the emissions reported in Klimaatsector categories are mapped to IPCC CRT codes.
+The *Klimaatsector* categorisation is a categorisation commonly used in the Netherlands and should therefore only be applied to Dutch datasets.
+Generally, the Klimaatsector categorisation in the ETM matches the official Klimaatsector categories with a few exceptions. The table below shows how the IPCC CRT codes are mapped to the Klimaatsector categories in the ETM.
 
 | **Klimaatsector in ETM** | **IPCC CRT code** |
 |---|---|
-| Industry | 1.A.1.b \| 1.A.1.c \| 1.A.2 \| 1.B \| 2 \| 5 |
-| Electricity | 1.A.1.a \| 1.A.3.e \| 1.C |
-| Mobility | 1.A.3 excl. 1.A.3.e \| 1.A.5 |
-| Built environment | 1.A.4.a \| 1.A.4.b |
-| Agriculture | 1.A.4.c \| 3 |
-| Land use | 4 |
-| International transport | 1.D.1 |
-| Indirect emissions | ind_CO2 |
+| Industrie | 1.A.1.b <br/> 1.A.1.c <br/> 1.A.2 excl. 1.A.2.g.vii <br/> 1.B <br/> 2 excl 2.B.8.a and 2.B.10.a <br/> 5 |
+| Elektriciteit | 1.A.1.a <br/> 1.A.3.e <br/> 1.C <br/> 2.B.8.a <br/> 2.B.10.a |
+| Mobiliteit | 1.A.2.g.vii <br/> 1.A.3 excl. 1.A.3.e <br/> 1.A.4.a.ii <br/> 1.A.4.b.ii <br/> 1.A.4.c.ii <br/> 1.A.5 |
+| Gebouwde omgeving | 1.A.4.a.i <br/> 1.A.4.b.i |
+| Landbouw | 1.A.4.c.i <br/> 3 |
+| Landgebruik | 4 |
+| Bunkers | 1.D.1 |
+| Indirecte emissies | ind_CO2 |
 
-Note: pipeline transport (1.A.3.e) is included under Electricity, as its emissions are assigned to energy companies.
-
-The Klimaatsector categories in the ETM generally match the official Klimaatsector categories with a few exceptions:
-* The Klimaatsector category Industry includes paraffin and fireworks (2.D and 2.G), lubricants and urea (2.D) which officially belong to Households and Industry respectively.
-* The Klimaatsector category Electricity includes electricity and heat production from waste plants (1.A.1.a) that officialy belongs to Industry.
-* International transport and Indirect emissions are not official Klimaattafel categories but created in the ETM.
-
+The Klimaatsector categorisation in the ETM deviates from the official Klimaatsector categorisation on the following aspects:
+* *Industrie* includes the entire IPCC CRT code 2.D and 2.G, which therefore also includes emissions from fireworks from Households and lubricants, paraffin wax and other non-energy product use from other sectors.
+* *Elektriciteit* includes electricity and heat production from waste plants (1.A.1.a) that officially should be allocated to Industrie.
+* *Landbouw* does not include fishery (1.A.4.c.iii) since fishery is not modelled for Dutch datasets
+* *Bunkers* is not an official Klimaatsector, but added here as a separate category
+* *Indirecte emissies* is added as separate category for practical purposes, but should officially be attributed to the Klimaatsector where these arise
