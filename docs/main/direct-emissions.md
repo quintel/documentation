@@ -91,16 +91,23 @@ The Common Reporting Tables (CRT) of the IPCC are a standardardised categorisati
 
 ## Klimaatsector
 The Klimaatsector categorisation is a categorisation commonly used in the Netherlands and should therefore only be applied to Dutch datasets.
+The table below shows how the emissions reported in Klimaatsector categories are mapped to IPCC CRT codes.
 
-The Klimaatsector categories in the ETM generally match the official Klimaatsector categories with a few exceptions. These exceptions are described in the table below. Where relevant, the IPCC CRT code under which such emissions are reported is also stated.
-
-|  **Klimaatsector in ETM**  | **Exceptions** |
+| **Klimaatsector in ETM** | **IPCC CRT code** |
 |---|---|
-| Industrie | Excl. electricity and heat production from waste plants *(CRT code 1.A.1.a)* <br/> Incl. lubricants, paraffin wax, other non-energy products use from other sectors *(CRT code 2.D)*<br/>Incl. fireworks *(CRT code 2.G.4)* |
-| Elektriciteit | Incl. electricity and heat production from waste plants *(CRT code 1.A.1.a)*<br/>Incl. CCUS *(CRT code 1.C)* |
-| Mobiliteit | Incl. military fuel use *(CRT code 1.A.5)*<br/>Excl. lubricants and other non-energy products use *(CRT code 2.D)* |
-| Gebouwde omgeving | Excl. paraffin wax use in built environemnt *(CRT code 2.D)*<br/>Excl. fireworks *(CRT code 2.G.4)* |
-| Landbouw | Klimaatsector "Landbouw en landgebruik" split into separate sectors |
-| Landgebruik | Klimaatsector "Landbouw en landgebruik" split into separate sectors |
-| Internationaal transport | Not an official Klimaatsector, but added as separate sector |
-| Indirecte emissies | Indirect emissions should be distributed proportionally over the Klimaatsecotren, but are added as separate category due to practical reasons |
+| Industry | 1.A.1.b \| 1.A.1.c \| 1.A.2 \| 1.B \| 2 \| 5 |
+| Electricity | 1.A.1.a \| 1.A.3.e \| 1.C |
+| Mobility | 1.A.3 excl. 1.A.3.e \| 1.A.5 |
+| Built environment | 1.A.4.a \| 1.A.4.b |
+| Agriculture | 1.A.4.c \| 3 |
+| Land use | 4 |
+| International transport | 1.D.1 |
+| Indirect emissions | ind_CO2 |
+
+Note: pipeline transport (1.A.3.e) is included under Electricity, as its emissions are assigned to energy companies.
+
+The Klimaatsector categories in the ETM generally match the official Klimaatsector categories with a few exceptions:
+* The Klimaatsector category Industry includes paraffin and fireworks (2.D and 2.G), lubricants and urea (2.D) which officially belong to Households and Industry respectively.
+* The Klimaatsector category Electricity includes electricity and heat production from waste plants (1.A.1.a) that officialy belongs to Industry.
+* International transport and Indirect emissions are not official Klimaattafel categories but created in the ETM.
+
