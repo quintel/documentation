@@ -1,4 +1,9 @@
 Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanation
+2026-10,Hydrogen CHP,New,-,capacity_of_energy_chp_combined_cycle_hydrogen,-,MW,Capacity input for hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,share_of_energy_chp_combined_cycle_ht_hydrogen,-,%,Share of produced heat by hydrogen CCGT CHP going to HT heat network
+2026-10,Hydrogen CHP,New,-,share_of_energy_chp_combined_cycle_mt_hydrogen,-,%,Share of produced heat by hydrogen CCGT CHP going to MT heat network
+2026-10,Hydrogen CHP,New,-,efficiency_energy_chp_combined_cycle_hydrogen_electricity,-,%,Electricity efficiency of hydrogen CCGT CHP
+2026-10,Hydrogen CHP,New,-,efficiency_energy_chp_combined_cycle_hydrogen_heat,-,%,Heat efficiency of hydrogen CCGT CHP
 2026-08,Flexibility,Changed,households_flexibility_p2p_electricity_market_penetration,-,%,%,Updated calculation. The number of units was not set correctly which is now fixed.
 2026-08,Rail transport,Removed,transport_rail_mixer_diesel_biodiesel_share,-,%,-,Removed duplicate rail diesel input
 2026-08,Buildings heating,New,-,buildings_space_heating_behaviour,-,%,Introduced a new slider to change heat demand based on behaviour
