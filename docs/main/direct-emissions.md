@@ -69,7 +69,7 @@ There are three charts available that show direct emissions results for 1990, th
 * **Direct total GHG emissions per IPCC category**: shows the emissions per IPCC CRT category.
 * **Direct total GHG emissions per Dutch Climate sector**: shows the emissions per Dutch Climate sector (*Klimaatsector*) category.
 
-Similar to the dashboard items, the charts include indirect emissions and LULUCF emissions, and include emissions from international transport if configured as such in the scenario. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data for 1990 is retrieved and mapped.
+Similar to the dashboard items, the charts include indirect emissions and LULUCF emissions, and include emissions from international transport if configured as such in the scenario. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data for 1990 is retrieved and mapped for country datasets and Dutch regional datasets.
 
 ![](/img/docs/direct_emissions_chart_total_ghg_emissions.png)
 
