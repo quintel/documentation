@@ -45,7 +45,7 @@ _Checkout the specifications in [Documentation heat pump air - hot water](https:
 #### General working principle
 A hybrid heat pump (HHP) is a combination of an electric heat pump that draws its heat from the outside air and a fuel-fired boiler. This fuel can be network gas, hydrogen or oil. The fuel-fired part takes over all of the heating of the building on cold winter days, when heat demand peaks. As a result, a hybrid heat pump has less impact on the electricity grid than an all-electric heat pump does. Smart use of HHPs may therefore avoid the need to reinforce local power grids.
 
-For optimal results with most types of heat pump, installation of under-floor and wall heating instead of radiators is often required, as well as good levels of insulation. The HHP partly bypasses those needs because of its fuel-fired heater as a fall-back option. Hybrid hydrogen heat pumps can intelligently use whichever part (heat pump or fuel-fired heater) is the most efficient or cost-effective given the weather conditions and insulation level. Houses with limited insulation will rely on the fuel-fired part more, better insulated ones will make more use of the heat pump.
+For optimal results with most types of heat pump, installation of under-floor and wall heating instead of radiators is often required, as well as good levels of insulation. The HHP partly bypasses those needs because of its fuel-fired heater as a fall-back option. Hybrid heat pumps can intelligently use whichever part (heat pump or fuel-fired heater) is the most efficient or cost-effective given the weather conditions and insulation level. Houses with limited insulation will rely on the fuel-fired part more, better insulated ones will make more use of the heat pump.
 
 #### COP of hybrid heat pumps
 The COP as a function of outside temperature, and the corresponding sources, differ per fuel:
@@ -144,9 +144,15 @@ _Checkout the specifications in [Documentation heat pump ground - space heating]
 
 ## Aquathermal heat pump (surface water)
 
-This heat pump abstracts heat from surface water and is equipped with seasonal thermal storage (TS). Unlike the air-to-water and air-to-air heat pumps above, its COP curve responds to the (more stable) surface water temperature rather than the outside air temperature:
+This heat pump abstracts heat from surface water and is equipped with seasonal thermal storage (TS).
+
+For space heating, the COP is:
 
 `  COP(T) = 3.25 + 0.0875 * T`
+
+For hot water, the COP is:
+
+`  COP(T) = 1.86 + 0.043 * T`
 
 Where T is the surface water temperature.
 
