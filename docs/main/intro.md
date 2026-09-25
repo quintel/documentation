@@ -15,14 +15,14 @@ The ETM documentation is created to aid (new) users and contributors to understa
 ### 1. User Manual
 Shows you how to use the ETM.
 
-### 2. Detailed Information
+### 2. How the ETM calculates
+Explains in plain language how the model works: the energy graph, what happens when you move a slider, where the starting data comes from, and how annual and hourly calculations fit together.
+
+### 3. Detailed Information
 Provides a more detailed explanation of different tools and topics within the ETM.
 
-### 3. Data Sources
+### 4. Data Sources
 An overview of all data used within the ETM accompanied by their respective sources.
-
-### 4. Modelling Principles
-An insight into the exact modelling principles behind the ETM.
 
 ### 5. PyETM
 PyETM is a package written in Python that allows ETM users to interact with the ETM via the API. The package is designed to be a modular tool that advanced users can incorporate into their workflows.

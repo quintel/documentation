@@ -29,7 +29,18 @@ module.exports = {
     },
     {
       type: "category",
-      label: "2. Detailed information",
+      label: "2. How the ETM calculates",
+      collapsed: false,
+      items: [
+        "main/how-the-etm-calculates/introduction",
+        "main/how-the-etm-calculates/from-data-to-scenario",
+        "main/how-the-etm-calculates/annual-and-hourly-calculations",
+        "main/how-the-etm-calculates/useful-final-primary-energy",
+      ],
+    },
+    {
+      type: "category",
+      label: "3. Detailed information",
       collapsed: false,
       items: [
         {
@@ -102,18 +113,12 @@ module.exports = {
     },
     {
       type: "category",
-      label: "3. Data Sources",
+      label: "4. Data Sources",
       collapsed: true,
       items: [
         "main/data-sources-regions",
         "main/data-sources-local"
       ],
-    },
-    {
-      type: "category",
-      label: "4. Modelling Principles",
-      collapsed: true,
-      items: ["main/energy-calculations", "main/useful-demand"],
     },
     {
       type: "doc",
