@@ -1,5 +1,4 @@
 Deploy,Subject,Status,Previous gquery,New gquery,Previous unit,New unit,Explanation
-2026-11,Emissions,Changed,direct_emissions_ipcc_4_other_ghg_1990,-,MT,MT,Comment corrected; no change in result
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_elektriciteit_co2_1990,-,MT,New query for direct emissions per klimaatsector in 1990
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_gebouwde_omgeving_co2_1990,-,MT,New query for direct emissions per klimaatsector in 1990
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_indirecte_emissies_co2_1990,-,MT,New query for direct emissions per klimaatsector in 1990
@@ -78,7 +77,6 @@ Deploy,Subject,Status,Previous gquery,New gquery,Previous unit,New unit,Explanat
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_total_ghg_incl_indirecte_emissies_landgebruik_excl_internationaal_transport,-,MT,New query for direct emissions per klimaatsector
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_total_ghg_incl_indirecte_emissies_landgebruik_internationaal_transport,-,MT,New query for direct emissions per klimaatsector
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_total_ghg_incl_landgebruik_excl_indirecte_emissies_internationaal_transport,-,MT,New query for direct emissions per klimaatsector
-2026-11,Emissions,Changed,emissions_captured_industry_other,-,tonne,tonne,Formatting change only; no change in result
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_elektriciteit_total_ghg_1990_for_direct_emissions_chart,-,MT,New query for the direct emissions per klimaatsector chart
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_elektriciteit_total_ghg_for_direct_emissions_chart,-,MT,New query for the direct emissions per klimaatsector chart
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_gebouwde_omgeving_total_ghg_1990_for_direct_emissions_chart,-,MT,New query for the direct emissions per klimaatsector chart
