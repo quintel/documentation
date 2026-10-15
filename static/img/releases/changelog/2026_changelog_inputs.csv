@@ -3,98 +3,15 @@ Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanat
 2026-11,External coupling,New,-,external_coupling_energy_chemical_other_transformation_external_coupling_node_co2_captured,-,%,New input for CO2 capture in chemical industry transformation when coupled to an external model
 2026-11,External coupling,New,-,external_coupling_energy_chemical_refineries_transformation_external_coupling_node_co2_captured,-,%,New input for CO2 capture in chemical industry transformation when coupled to an external model
 2026-11,External coupling,Removed,external_coupling_industry_external_coupling_node_captured_co2_supply,-,MT,-,Replaced by CO2 capture inputs per chemical industry transformation node
-2026-11,External coupling,Changed,external_coupling_bio_ethanol_bio_ethanol_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_bio_ethanol_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_bio_ethanol_network_gas_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_bio_ethanol_wet_biomass_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_bio_ethanol_to_jet_bio_ethanol_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_bio_ethanol_to_jet_bio_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_bio_ethanol_to_jet_biodiesel_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_bio_ethanol_to_jet_hydrogen_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_bio_ethanol_to_jet_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_biogenic_waste_ccs_bio_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_biogenic_waste_ccs_biodiesel_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_biogenic_waste_ccs_bionaphtha_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_biogenic_waste_ccs_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_dry_biomass_ccs_bio_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_dry_biomass_ccs_biodiesel_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_dry_biomass_ccs_bionaphtha_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_dry_biomass_ccs_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_non_biogenic_waste_ccs_diesel_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_non_biogenic_waste_ccs_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_non_biogenic_waste_ccs_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_non_biogenic_waste_ccs_naphtha_output_share,-,%,%,Layout of the input query updated; no functional change
 2026-11,External coupling,New,-,external_coupling_fischer_tropsch_synthetic_dispatchable_co2_utilisation,-,kg/GJ,New input for CO2 utilisation in synthetic fuel production (Fischer-Tropsch and methanol synthesis)
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_synthetic_dispatchable_electricity_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_synthetic_dispatchable_gasoline_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_synthetic_dispatchable_hydrogen_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_synthetic_dispatchable_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_synthetic_dispatchable_loss_output_share,-,%,%,Layout of the input query updated; no functional change
 2026-11,External coupling,New,-,external_coupling_fischer_tropsch_synthetic_must_run_co2_utilisation,-,kg/GJ,New input for CO2 utilisation in synthetic fuel production (Fischer-Tropsch and methanol synthesis)
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_synthetic_must_run_electricity_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_synthetic_must_run_gasoline_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_synthetic_must_run_hydrogen_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_synthetic_must_run_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fischer_tropsch_synthetic_must_run_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_bio_kerosene_bio_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_bio_kerosene_bionaphtha_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_bio_kerosene_hydrogen_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_bio_kerosene_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_bio_kerosene_network_gas_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_bio_kerosene_oily_biomass_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_biodiesel_biodiesel_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_biodiesel_bionaphtha_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_biodiesel_hydrogen_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_biodiesel_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_hvo_biodiesel_oily_biomass_input_share,-,%,%,Layout of the input query updated; no functional change
 2026-11,External coupling,New,-,external_coupling_methanol_synthesis_biogenic_waste_ccs_biogenic_waste_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
-2026-11,External coupling,Changed,external_coupling_methanol_synthesis_biogenic_waste_ccs_biomethanol_output_share,-,%,%,Layout of the input query updated; no functional change
 2026-11,External coupling,New,-,external_coupling_methanol_synthesis_biogenic_waste_ccs_hydrogen_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
-2026-11,External coupling,Changed,external_coupling_methanol_synthesis_biogenic_waste_ccs_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_methanol_synthesis_dry_biomass_ccs_biomethanol_output_share,-,%,%,Layout of the input query updated; no functional change
 2026-11,External coupling,New,-,external_coupling_methanol_synthesis_dry_biomass_ccs_dry_biomass_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
 2026-11,External coupling,New,-,external_coupling_methanol_synthesis_dry_biomass_ccs_hydrogen_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
-2026-11,External coupling,Changed,external_coupling_methanol_synthesis_dry_biomass_ccs_loss_output_share,-,%,%,Layout of the input query updated; no functional change
 2026-11,External coupling,New,-,external_coupling_methanol_synthesis_non_biogenic_waste_ccs_hydrogen_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
-2026-11,External coupling,Changed,external_coupling_methanol_synthesis_non_biogenic_waste_ccs_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_methanol_synthesis_non_biogenic_waste_ccs_methanol_output_share,-,%,%,Layout of the input query updated; no functional change
 2026-11,External coupling,New,-,external_coupling_methanol_synthesis_non_biogenic_waste_ccs_non_biogenic_waste_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
 2026-11,External coupling,New,-,external_coupling_methanol_synthesis_synthetic_co2_utilisation,-,kg/GJ,New input for CO2 utilisation in synthetic fuel production (Fischer-Tropsch and methanol synthesis)
-2026-11,External coupling,Changed,external_coupling_methanol_synthesis_synthetic_electricity_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_methanol_synthesis_synthetic_hydrogen_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_methanol_synthesis_synthetic_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_methanol_synthesis_synthetic_methanol_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_biomethanol_to_jet_bio_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_biomethanol_to_jet_biomethanol_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_biomethanol_to_jet_bionaphtha_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_biomethanol_to_jet_hydrogen_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_biomethanol_to_jet_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_methanol_to_jet_hydrogen_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_methanol_to_jet_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_methanol_to_jet_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_methanol_to_jet_methanol_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_methanol_to_jet_naphtha_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_bio_pyrolysis_oil_bio_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_bio_pyrolysis_oil_bio_pyrolysis_oil_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_bio_pyrolysis_oil_bionaphtha_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_bio_pyrolysis_oil_hydrogen_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_bio_pyrolysis_oil_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_bio_pyrolysis_oil_steam_hot_water_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_pyrolysis_oil_hydrogen_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_pyrolysis_oil_kerosene_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_pyrolysis_oil_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_pyrolysis_oil_naphtha_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_pyrolysis_oil_pyrolysis_oil_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_fractionation_pyrolysis_oil_steam_hot_water_input_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_pyrolysis_biogenic_waste_bio_pyrolysis_oil_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_pyrolysis_biogenic_waste_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_pyrolysis_biogenic_waste_steam_hot_water_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_pyrolysis_dry_biomass_bio_pyrolysis_oil_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_pyrolysis_dry_biomass_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_pyrolysis_dry_biomass_steam_hot_water_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_pyrolysis_non_biogenic_waste_loss_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_pyrolysis_non_biogenic_waste_pyrolysis_oil_output_share,-,%,%,Layout of the input query updated; no functional change
-2026-11,External coupling,Changed,external_coupling_pyrolysis_non_biogenic_waste_steam_hot_water_output_share,-,%,%,Layout of the input query updated; no functional change
 2026-10,Hydrogen CHP,New,-,capacity_of_energy_chp_combined_cycle_hydrogen,-,MW,Capacity input for hydrogen CCGT CHP
 2026-10,Hydrogen CHP,New,-,share_of_energy_chp_combined_cycle_ht_hydrogen,-,%,Share of produced heat by hydrogen CCGT CHP going to HT heat network
 2026-10,Hydrogen CHP,New,-,share_of_energy_chp_combined_cycle_mt_hydrogen,-,%,Share of produced heat by hydrogen CCGT CHP going to MT heat network
