@@ -1,4 +1,17 @@
 Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanation
+2026-11,External coupling,New,-,external_coupling_energy_chemical_fertilizers_transformation_external_coupling_node_co2_captured,-,%,New input for CO2 capture in chemical industry transformation when coupled to an external model
+2026-11,External coupling,New,-,external_coupling_energy_chemical_other_transformation_external_coupling_node_co2_captured,-,%,New input for CO2 capture in chemical industry transformation when coupled to an external model
+2026-11,External coupling,New,-,external_coupling_energy_chemical_refineries_transformation_external_coupling_node_co2_captured,-,%,New input for CO2 capture in chemical industry transformation when coupled to an external model
+2026-11,External coupling,Removed,external_coupling_industry_external_coupling_node_captured_co2_supply,-,MT,-,Replaced by CO2 capture inputs per chemical industry transformation node
+2026-11,External coupling,New,-,external_coupling_fischer_tropsch_synthetic_dispatchable_co2_utilisation,-,kg/GJ,New input for CO2 utilisation in synthetic fuel production (Fischer-Tropsch and methanol synthesis)
+2026-11,External coupling,New,-,external_coupling_fischer_tropsch_synthetic_must_run_co2_utilisation,-,kg/GJ,New input for CO2 utilisation in synthetic fuel production (Fischer-Tropsch and methanol synthesis)
+2026-11,External coupling,New,-,external_coupling_methanol_synthesis_biogenic_waste_ccs_biogenic_waste_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
+2026-11,External coupling,New,-,external_coupling_methanol_synthesis_biogenic_waste_ccs_hydrogen_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
+2026-11,External coupling,New,-,external_coupling_methanol_synthesis_dry_biomass_ccs_dry_biomass_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
+2026-11,External coupling,New,-,external_coupling_methanol_synthesis_dry_biomass_ccs_hydrogen_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
+2026-11,External coupling,New,-,external_coupling_methanol_synthesis_non_biogenic_waste_ccs_hydrogen_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
+2026-11,External coupling,New,-,external_coupling_methanol_synthesis_non_biogenic_waste_ccs_non_biogenic_waste_input_share,-,%,"New input share for methanol synthesis from biomass and waste, which now also uses hydrogen"
+2026-11,External coupling,New,-,external_coupling_methanol_synthesis_synthetic_co2_utilisation,-,kg/GJ,New input for CO2 utilisation in synthetic fuel production (Fischer-Tropsch and methanol synthesis)
 2026-10,Hydrogen CHP,New,-,capacity_of_energy_chp_combined_cycle_hydrogen,-,MW,Capacity input for hydrogen CCGT CHP
 2026-10,Hydrogen CHP,New,-,share_of_energy_chp_combined_cycle_ht_hydrogen,-,%,Share of produced heat by hydrogen CCGT CHP going to HT heat network
 2026-10,Hydrogen CHP,New,-,share_of_energy_chp_combined_cycle_mt_hydrogen,-,%,Share of produced heat by hydrogen CCGT CHP going to MT heat network
