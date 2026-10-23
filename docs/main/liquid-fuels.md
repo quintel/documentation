@@ -36,6 +36,24 @@ In the table below, the various production processes for liquid fuel and feedsto
 | **Methanol-to-jet** | Methanol, hydrogen | Kerosene (main product), naphtha | Output fractions increased proportionally to account for product output not modelled in the ETM |
 | **Biomethanol-to-jet** | Biomethanol, hydrogen | Biokerosene (main product), bionaphtha | Output fractions increased proportionally to account for product output not modelled in the ETM |
 
+### Oil refineries
+Oil refineries convert crude oil into a fixed mix of oil products. The output shares of these products are derived from the energy balance of the start year and remain the same in the future: if you change the refinery output, all products scale proportionally. If a region has no refinery in the start year, the output shares of a typical European refinery are used.
+
+#### Refinery gas
+Refinery gas is a by-product of the refining process. It is must-use: its production follows directly from the refinery output and cannot be set separately. The ETM explicitly models the use of refinery gas as fuel in two sectors:
+
+* **Refineries**: the refineries themselves use refinery gas for their heat demand.
+* **Chemical industry**: the cheical industry (excluding refineries and fertilizers) uses refinery gas for its heat demand.
+
+The distribution of refinery gas between these two sectors can be set in the [Oil refineries](https://energytransitionmodel.com/scenario/supply/fuel_production/oil-refineries) section. In both sectors, refinery gas is used first to meet heat demand. The heat technology sliders of these sectors only distribute the heat demand that remains. If more refinery gas is directed to a sector than its heat demand, the excess is flared and creates excess heat which is considered a loss.
+
+In the start year, the refinery gas production calculated from the refinery output generally does not match the refinery gas use in these two sectors. The mismatch can go either way, and depending on the region, one of the following applies:
+
+* **Production exceeds use**: the remaining refinery gas ends up in a node without further use, and is shown as a loss in the liquid fuels and feedstock sankey. In the energy balance, this refinery gas is mostly used in power plants and CHPs. This use is not modelled yet and is a known gap.
+* **Use exceeds production**: the missing refinery gas is supplied directly from crude oil. This crude oil input can be seen as part of the refining process, but in the ETM it is modelled separately. The mismatch is caused by streams in the energy balance that are not included in the ETM, such as statistical differences and accounting streams like backflows and primary product receipts.
+
+The size of this surplus or shortage, relative to the refinery output, is the same in the future year as in the start year. If you change the refinery output, refinery gas production, use and the balancing flow all scale proportionally.
+
 ### Pyrolysis (bio-)oil
 The production and subsequent fractionation of pyrolysis (bio-)oil are closely tied together but can change due to import or exports of the pyrolysis (bio-)oil. There are three different use cases, which are described below.
 
