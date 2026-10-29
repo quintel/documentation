@@ -19,6 +19,7 @@ There is always only one **latest** version, but there may be multiple **stable*
 | Version | Release date | Updated | Link |
 |:---|:---|:---|:---|
 | `#latest` | - | Monthly | [energytransitionmodel.com](https://energytransitionmodel.com/) |
+| `#2027-01` | December 2026| - | [2027-01.energytransitionmodel.com](https://2027-01.energytransitionmodel.com/)
 | `#2025-01` | February 2025| - | [2025-01.energytransitionmodel.com](https://2025-01.energytransitionmodel.com/) |
 
 ## Functionalities

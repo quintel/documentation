@@ -109,6 +109,13 @@ const releases = {
 // Main releases timeline data
 export const mainReleases = [
   {
+    date: "December 10, 2026",
+    title: "stable.2027.01",
+    file: "stable.2027.01.md",
+    version: "stable.2027.01",
+    tag: "stable.2027.01",
+  },
+  {
     date: "November 12, 2026",
     title: "Next Release",
     file: "upcoming.md",
