@@ -57,6 +57,11 @@ explicitly, it will take that attribute from its 'parent'. The parent dataset ca
 migration by assigning the `parent` field. The `parent` field must be assigned with the parent's geo_id + name,
 concatenated with an underscore. For example, `PV26_utrecht`.
 
+### Geo IDs
+
+When creating a sub region of an existing dataset, its `geo_id` should always follow the pattern
+`RG{parent_geo_id}{xx}_{name}`, where `{parent_geo_id}` is the geo_id of the parent dataset and `{xx}` is a sequence number distinguishing the sub region from its siblings. For example, `RGPV2501_kop_van_de_veluwe`.
+
 
 ## Running the migration
 
