@@ -1,4 +1,170 @@
 Deploy,Subject,Status,Previous gquery,New gquery,Previous unit,New unit,Explanation
+2026-12,Electricity,New,-,flexible_electricity_demand_peak,-,MW,New query for the peak of flexible or inflexible electricity demand
+2026-12,Electricity,New,-,inflexible_electricity_demand_peak,-,MW,New query for the peak of flexible or inflexible electricity demand
+2026-12,Electricity,Changed,total_electricity_demand_peak,-,MW,MW,Added documentation; no functional change
+2026-12,Emissions,Changed,primary_co2_emissions_of_oil_and_oil_products_in_industry_energetic,-,mt,mt,Now includes refinery gas
+2026-12,Emissions,Changed,emissions_energetic_industry_chemical_co2,-,T,T,Now includes refinery gas
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_fertilizers_external_coupling,-,tonne,"New query for captured CO2 per chemical industry sector, including external coupling"
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_fertilizers_total_including_external_coupling,-,tonne,"New query for captured CO2 per chemical industry sector, including external coupling"
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_other_external_coupling,-,tonne,"New query for captured CO2 per chemical industry sector, including external coupling"
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_other_total_including_external_coupling,-,tonne,"New query for captured CO2 per chemical industry sector, including external coupling"
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_refineries_external_coupling,-,tonne,"New query for captured CO2 per chemical industry sector, including external coupling"
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_refineries_total_including_external_coupling,-,tonne,"New query for captured CO2 per chemical industry sector, including external coupling"
+2026-12,Emissions,Removed,emissions_captured_industry_external_coupling,-,tonne,-,Replaced by captured CO2 queries per chemical industry sector including external coupling
+2026-12,Emissions,Changed,emissions_captured_industry_total,-,tonne,tonne,Captured CO2 from external coupling is now allocated to the chemical industry sectors
+2026-12,Emissions,Changed,co2_sheet_industry_chemical_energetic_co2_emissions,-,T,T,Now includes refinery gas
+2026-12,Emissions,Changed,co2_supply_industry_chemical_other,-,Mt,Mt,Captured CO2 from external coupling is now allocated to the chemical industry sectors
+2026-12,Emissions,Removed,co2_supply_industry_external_coupling,-,MT,-,Replaced by captured CO2 queries per chemical industry sector including external coupling
+2026-12,Emissions,Changed,co2_supply_industry_fertilizers,-,Mt,Mt,Captured CO2 from external coupling is now allocated to the chemical industry sectors
+2026-12,Emissions,Changed,co2_supply_industry_refineries,-,Mt,Mt,Captured CO2 from external coupling is now allocated to the chemical industry sectors
+2026-12,Emissions,Removed,captured_co2_industry_external_coupling_in_ccus_sankey,-,MT,-,Replaced by captured CO2 queries per chemical industry sector including external coupling
+2026-12,Emissions,Changed,industry_chemical_other_captured_co2_total_in_ccus_sankey,-,MT,MT,Captured CO2 from external coupling is now allocated to the chemical industry sectors
+2026-12,Emissions,Changed,industry_fertilizers_captured_co2_total_in_ccus_sankey,-,MT,MT,Captured CO2 from external coupling is now allocated to the chemical industry sectors
+2026-12,Emissions,Changed,industry_refineries_captured_co2_total_in_ccus_sankey,-,MT,MT,Captured CO2 from external coupling is now allocated to the chemical industry sectors
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_buildings_appliances_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_buildings_cooling_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_buildings_lighting_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_buildings_space_heating_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_households_appliances_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_households_cooking_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_households_cooling_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_households_hot_water_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_households_lighting_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_households_space_heating_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,New,-,final_demand_of_oil_and_derivatives_excl_refinery_gas_in_chemical_industry_energetic,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,New,-,final_demand_of_oil_and_derivatives_excl_refinery_gas_in_other_chemical_industry_energetic,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,New,-,final_demand_of_oil_and_derivatives_excl_refinery_gas_in_refineries_industry_energetic,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_chemical_industry_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_chemical_industry_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_fertilizers_industry,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_fertilizers_industry_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_fertilizers_industry_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_other_chemical_industry,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_other_chemical_industry_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_other_chemical_industry_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_refineries_industry,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_refineries_industry_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_refineries_industry_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,New,-,final_demand_of_refinery_gas_in_chemical_industry_energetic,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,New,-,final_demand_of_refinery_gas_in_chemical_industry_energetic_excess,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,New,-,final_demand_of_refinery_gas_in_chemical_industry_energetic_useful,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,New,-,final_demand_of_refinery_gas_in_other_chemical_industry_energetic,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,New,-,final_demand_of_refinery_gas_in_other_chemical_industry_energetic_excess,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,New,-,final_demand_of_refinery_gas_in_other_chemical_industry_energetic_useful,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,New,-,final_demand_of_refinery_gas_in_refineries_industry_energetic,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,New,-,final_demand_of_refinery_gas_in_refineries_industry_energetic_excess,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,New,-,final_demand_of_refinery_gas_in_refineries_industry_energetic_useful,-,PJ,"New query for final demand of refinery gas (total, used and excess)"
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_metal_industry,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_metal_industry_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_metal_industry_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_food_industry,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_food_industry_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_food_industry_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_ict_industry,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_ict_industry_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_ict_industry_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_other_non_specified_industry,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_other_non_specified_industry_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_other_non_specified_industry_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_paper_industry,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_paper_industry_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_paper_industry_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_agriculture,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_buildings,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_bunkers,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_energy,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_households,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_industry,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_other,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_transport,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_agriculture_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_buildings_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_bunkers_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_energy_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_households_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_industry_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_other_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_transport_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_industry_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_other_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_non_energetic,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_agriculture_energetic_corrected_for_bio_oil,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_buildings_energetic_corrected_for_bio_oil,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_households_energetic_corrected_for_bio_oil,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_industry_energetic_corrected_for_bio_oil,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Final demand,Changed,final_demand_of_oil_and_derivatives_in_industry_non_energetic_corrected_for_bio_oil,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Heat,Changed,heat_production_from_oil_and_derivatives,-,PJ,PJ,Now includes heat production from refinery gas
+2026-12,Heat,Changed,heat_production_from_oil_and_derivatives_in_industry,-,PJ,PJ,Now includes heat production from refinery gas
+2026-12,Heat,New,-,user_sortable_households_space_heater_airconditioning_with_heat_pump_boiler_capacity,-,MW,New capacity query for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Heat,New,-,user_sortable_households_space_heater_hybrid_airconditioning_combined_network_gas_capacity,-,MW,New capacity query for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_1945_1964_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_1965_1984_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_1985_2004_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_2005_present_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_before_1945_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_future_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_1945_1964_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_1965_1984_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_1985_2004_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_2005_present_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_before_1945_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Households heating,New,-,number_of_houses_future_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,New query for number of houses per space heating technology for air conditioning heating technologies (air conditioning with heat pump boiler and hybrid air conditioning with gas boiler)
+2026-12,Liquid Fuels and feedstock flows,New,-,bio_kerosene_to_fossil_refinery,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,Changed,bio_kerosene_to_industry,-,PJ,PJ,Updated to show refinery gas and backflows to refineries explicitly in the liquid fuels sankey
+2026-12,Liquid Fuels and feedstock flows,New,-,biodiesel_to_fossil_refinery,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,Changed,biodiesel_to_industry,-,PJ,PJ,Updated to show refinery gas and backflows to refineries explicitly in the liquid fuels sankey
+2026-12,Liquid Fuels and feedstock flows,Changed,crude_oil_to_fossil_refinery,-,PJ,PJ,Updated to show refinery gas and backflows to refineries explicitly in the liquid fuels sankey
+2026-12,Liquid Fuels and feedstock flows,New,-,crude_oil_to_oil_products,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,crude_oil_to_refinery_gas,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,diesel_to_fossil_refinery,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,Changed,diesel_to_industry,-,PJ,PJ,Updated to show refinery gas and backflows to refineries explicitly in the liquid fuels sankey
+2026-12,Liquid Fuels and feedstock flows,Changed,fossil_refinery_to_loss,-,PJ,PJ,Updated to show refinery gas and backflows to refineries explicitly in the liquid fuels sankey
+2026-12,Liquid Fuels and feedstock flows,Changed,fossil_refinery_to_refinery_gas,-,PJ,PJ,Updated to show refinery gas and backflows to refineries explicitly in the liquid fuels sankey
+2026-12,Liquid Fuels and feedstock flows,New,-,kerosene_to_fossil_refinery,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,Changed,kerosene_to_industry,-,PJ,PJ,Updated to show refinery gas and backflows to refineries explicitly in the liquid fuels sankey
+2026-12,Liquid Fuels and feedstock flows,New,-,lpg_to_fossil_refinery,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,Changed,lpg_to_industry,-,PJ,PJ,Updated to show refinery gas and backflows to refineries explicitly in the liquid fuels sankey
+2026-12,Liquid Fuels and feedstock flows,New,-,oil_products_to_agriculture,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,oil_products_to_buildings,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,oil_products_to_fossil_refinery,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,oil_products_to_households,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,oil_products_to_industry,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,refinery_gas_to_fossil_refinery,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,refinery_gas_to_industry,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,refinery_gas_to_loss,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,share_of_industry_crude_oil_to_refineries,-,factor,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,Renamed,industry_useful_output_industry_refinery_transofrmation_crude_oil,industry_useful_output_industry_refinery_transformation_crude_oil,PJ,-,Fixed typo in query key
+2026-12,Liquid Fuels and feedstock flows,New,-,bio_kerosene_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,biodiesel_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,crude_oil_to_oil_products_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,crude_oil_to_refinery_gas_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,diesel_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,kerosene_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,lpg_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,oil_products_to_agriculture_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,oil_products_to_buildings_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,oil_products_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,oil_products_to_households_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,oil_products_to_industry_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,refinery_gas_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,New,-,refinery_gas_to_industry_in_liquid_fuels_sankey,-,PJ,"New query for the liquid fuels sankey, showing refinery gas and oil products flows (including backflows to refineries) explicitly"
+2026-12,Liquid Fuels and feedstock flows,Changed,refinery_gas_to_losses_in_liquid_fuels_sankey,-,PJ,PJ,Updated to show refinery gas and backflows to refineries explicitly in the liquid fuels sankey
+2026-12,Multi-year charts,Changed,myc_final_demand_of_oil_and_derivatives,-,MJ,MJ,Refinery gas is now included in oil and derivatives
+2026-12,Multi-year charts,Changed,myc_final_demand_of_oil_and_derivatives_in_agriculture,-,MJ,MJ,Refinery gas is now included in oil and derivatives
+2026-12,Multi-year charts,Changed,myc_final_demand_of_oil_and_derivatives_in_buildings,-,MJ,MJ,Refinery gas is now included in oil and derivatives
+2026-12,Multi-year charts,Changed,myc_final_demand_of_oil_and_derivatives_in_bunkers,-,MJ,MJ,Refinery gas is now included in oil and derivatives
+2026-12,Multi-year charts,Changed,myc_final_demand_of_oil_and_derivatives_in_energy,-,MJ,MJ,Refinery gas is now included in oil and derivatives
+2026-12,Multi-year charts,Changed,myc_final_demand_of_oil_and_derivatives_in_households,-,MJ,MJ,Refinery gas is now included in oil and derivatives
+2026-12,Multi-year charts,Changed,myc_final_demand_of_oil_and_derivatives_in_industry,-,MJ,MJ,Refinery gas is now included in oil and derivatives
+2026-12,Multi-year charts,Changed,myc_final_demand_of_oil_and_derivatives_in_other,-,MJ,MJ,Refinery gas is now included in oil and derivatives
+2026-12,Multi-year charts,Changed,myc_final_demand_of_oil_and_derivatives_in_transport,-,MJ,MJ,Refinery gas is now included in oil and derivatives
+2026-12,Oil mix,Changed,final_demand_industry_oil,-,MJ,MJ,Refinery gas is now shown separately in the oil mix chart
+2026-12,Oil mix,New,-,final_demand_refinery_gas,-,MJ,New query to show refinery gas separately in the oil mix chart
+2026-12,Renewability,Changed,final_demand_of_oil_and_derivatives_in_renewability,-,%,%,Refinery gas is now included in oil and derivatives
+2026-12,Sankey,Changed,oil_and_derivatives_to_industry_in_sankey,-,PJ,PJ,Refinery gas is now included in oil and derivatives
+2026-12,Sankey export,Changed,conversion_loss_crude_oil_to_refinery_gas,-,PJ,PJ,Updated documentation for refinery gas losses; no functional change
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_elektriciteit_co2_1990,-,MT,New query for direct emissions per klimaatsector in 1990
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_gebouwde_omgeving_co2_1990,-,MT,New query for direct emissions per klimaatsector in 1990
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_indirecte_emissies_co2_1990,-,MT,New query for direct emissions per klimaatsector in 1990
