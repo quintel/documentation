@@ -19,7 +19,7 @@ There is always only one **latest** version, but there may be multiple **stable*
 | Version | Release date | Updated | Link |
 |:---|:---|:---|:---|
 | `#latest` | - | Monthly | [energytransitionmodel.com](https://energytransitionmodel.com/) |
-| `#2027-01` | December 2026| - | [2027-01.energytransitionmodel.com](https://2027-01.energytransitionmodel.com/)
+| `#stabel-2027` | December 2026| - | _available soon_ |
 | `#2025-01` | February 2025| - | [2025-01.energytransitionmodel.com](https://2025-01.energytransitionmodel.com/) |
 
 ## Functionalities
@@ -78,8 +78,8 @@ When a stable version is created, there will be no changes to your saved scenari
 
 ### Move scenarios between versions
 
-If you want to a move a scenario between versions, for example from `latest` to `2025-01`, you have to do this manually. The inputs from the existing scenario can be extracted, for example using the [API](../../api/) or [PyETM](../PyETM/introduction). A new scenario can then be created in the desired version of the model. The inputs can then be set in the new scenario.
+Scenarios are not moved between versions automatically. To move a scenario, for example from `latest` to a stable version, you copy its slider settings to a new scenario in the other version. The easiest way to do this is with the [API](../../api/intro).
 
-:::warning Handling differences in inputs between versions
-Moving inputs between versions may not always be directly possible. The more time has passed between the versions, the more likely it is that some inputs will have been added, changed or deleted. Using the Changelog discussed in [Communication](#communication), you can determine how inputs should be corrected for the scenario in the different versions to still work.
-:::
+Right after a stable version is released, this is straightforward, because the stable version is identical to `latest`. As time goes by, sliders in `latest` may be renamed, added, deleted or changed in function. Moving a scenario is then still possible, but you have to check the changelog and adjust the slider settings.
+
+See **[Move scenarios between versions: a step-by-step manual](move-scenarios-between-versions)** for detailed instructions.

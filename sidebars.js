@@ -24,7 +24,14 @@ module.exports = {
             "main/user_manual/managing-scenarios/scenario-manage-access"
           ]
         },
-        "main/user_manual/model-versions"
+        {
+          type: "category",
+          label: "Model versions",
+          items: [
+            "main/user_manual/model-versions",
+            "main/user_manual/move-scenarios-between-versions",
+          ],
+        },
       ],
     },
     {
