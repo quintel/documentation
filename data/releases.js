@@ -110,10 +110,10 @@ const releases = {
 export const mainReleases = [
   {
     date: "December 10, 2026",
-    title: "stable.2027.01",
-    file: "stable.2027.01.md",
-    version: "stable.2027.01",
-    tag: "stable.2027.01",
+    title: "stable.2027",
+    file: "stable.2027.md",
+    version: "stable.2027",
+    tag: "null",
   },
   {
     date: "November 12, 2026",
