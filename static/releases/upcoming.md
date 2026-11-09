@@ -1,2 +1,3 @@
-* The modelling of the final consumption of refinery gas will be improved.
-* Air conditioning as a space heating technology will be added to the model.
+* A new stable version `2027-01` of the model will be released. Read the <a href="../../main/user_manual/model-versions" target="_blank">documentation</a> to know more about stable versions.
+* A new chart will be added that shows the gross vs. net greenhouse gas emissions (due to CCS and other carbon removal) of a scenario.
+* The capacity <a href="https://energytransitionmodel.com/scenario/data/data_export/hourly-profiles-and-capacities-for-electricity" target="_blank">data exports</a> for electricity, district heating, hydrogen and network gas will be expanded to also show the installed capacity of technologies, next to their peak capacity.
