@@ -4,7 +4,7 @@ title: "Move scenarios between versions: a step-by-step manual"
 sidebar_label: Move scenarios between versions
 ---
 
-This manual explains how to move a scenario from one model version to another, for example from `latest` to a stable version. For background on the different versions, see [Model versions](model-versions).
+This manual explains how to move a scenario from one model version to another, for example from `latest` to `2027-stable`. For background on the different versions, see [Model versions](model-versions).
 
 ## Before you start
 
@@ -19,7 +19,7 @@ which wraps the same API calls in Python. Every version of the model has its own
 |:---|:---|
 | `#latest` | `https://engine.energytransitionmodel.com/api/v3` |
 | `#2025-01` | `https://2025-01.engine.energytransitionmodel.com/api/v3` |
-| `#stable-2027` | _available soon_ |
+| `#2027-stable` | _available soon_ |
 
 The same [personal access token](../../api/authentication) works for both `latest` and
 the stable versions. A token is required if the new scenario should belong to your account.

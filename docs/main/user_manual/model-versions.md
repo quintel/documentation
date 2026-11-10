@@ -14,12 +14,12 @@ The **[Scenario versions](managing-scenarios/scenario-history.md)** in the scena
 
 ## Current versions
 
-There is always only one **latest** version, but there may be multiple **stable** versions of the model. Stable versions are labelled first with the year in which the version was released, and then with a version number: `#YEAR-NN`.
+There is always only one **latest** version, but there may be multiple **stable** versions of the model. Stable versions are labelled with a year, for example `#2025-01` and `#2027-stable`.
 
 | Version | Release date | Updated | Link |
 |:---|:---|:---|:---|
 | `#latest` | - | Monthly | [energytransitionmodel.com](https://energytransitionmodel.com/) |
-| `#stabel-2027` | December 2026| - | _available soon_ |
+| `#2027-stable` | December 2026| - | _available soon_ |
 | `#2025-01` | February 2025| - | [2025-01.energytransitionmodel.com](https://2025-01.energytransitionmodel.com/) |
 
 ## Functionalities
@@ -78,7 +78,7 @@ When a stable version is created, there will be no changes to your saved scenari
 
 ### Move scenarios between versions
 
-Scenarios are not moved between versions automatically. To move a scenario, for example from `latest` to a stable version, you copy its slider settings to a new scenario in the other version. The easiest way to do this is with the [API](../../api/intro).
+Scenarios are not moved between versions automatically. To move a scenario, for example from `latest` to `2027-stable`, you copy its slider settings to a new scenario in the other version. The easiest way to do this is with the [API](../../api/intro).
 
 Right after a stable version is released, this is straightforward, because the stable version is identical to `latest`. As time goes by, sliders in `latest` may be renamed, added, deleted or changed in function. Moving a scenario is then still possible, but you have to check the changelog and adjust the slider settings.
 
