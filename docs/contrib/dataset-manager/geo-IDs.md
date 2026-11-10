@@ -21,22 +21,26 @@ Country datasets use the plain two-letter ISO country code as their `geo_id`. Fo
 #### Provinces
 
 Provinces use the pattern `PV{xx}`, where `{xx}` is the official two-digit
-[CBS provincie code](https://www.cbs.nl/nl-nl/onze-diensten/methoden/classificaties/overig/gemeentelijke-indeling-per-jaar) for that province. The number does **not** represent a year or dataset version; it stays the same even when the dataset is updated. For example:
+[CBS provincie code](https://www.cbs.nl/nl-nl/cijfers/detail/86247NED) 
+for that province. The number does **not** represent a year or dataset version; it 
+stays the same even when the dataset is updated. For example:
 
 * `PV20` – Groningen
 * `PV25` – Gelderland
 
 #### Municipalities
 
-Municipality (gemeente) datasets use the pattern `GM{nnnn}`, where `{nnnn}` is the official, four-digit [CBS gemeentecode](https://www.cbs.nl/nl-nl/onze-diensten/methoden/classificaties/overig/gemeentelijke-indeling-per-jaar). For example:
+Municipality (gemeente) datasets use the pattern `GM{nnnn}`, where `{nnnn}` is the official, four-digit 
+[CBS gemeentecode](https://www.cbs.nl/nl-nl/cijfers/detail/86247NED). For example:
 
 * `GM0014` – Groningen
 * `GM0363` – Amsterdam
 
 #### (RES) regions
 
-RES stands for "Regionale Energiestrategie". Despite that, current RES region datasets use the prefix `ES` (not `RES`), followed by a two-digit number corresponding to the
-[official CBS RES-region code](https://www.cbs.nl/nl-nl/onze-diensten/methoden/classificaties/overig/gemeentelijke-indeling-per-jaar): `ES{xx}`.
+RES stands for "Regionale Energiestrategie". Despite that, current RES region datasets use the prefix `ES` 
+(not `RES`), followed by a two-digit number corresponding to the
+[official CBS RES-region code](https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/geografische-data/cbs-gebiedsindelingen): `ES{xx}`.
 For example:
 
 * `ES01` – Groningen
