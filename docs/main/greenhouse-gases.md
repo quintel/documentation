@@ -74,7 +74,7 @@ Below you can find a table with all sliders and corresponding categories and exp
 | ETM slider | UNFCCC category | Category name | Description |
 | ---- | ----|---- |---- |
 | **Chemical industry**| 2.B | Chemical Industry | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. All chemical processes, this time including the production of ammonia/fertilizer._|
-| **Waste Managemen**| 5 | Waste Management | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. All types of waste management including waste incineration and sewage._ |
+| **Waste Management**| 5 | Waste Management | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. All types of waste management including waste incineration and sewage._ |
 | **Other Industry**| 2.A | Mineral Industry | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. All types of mineral industry including cement, lime and glass production._ |
 | | 2.C | Metal Industry | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. Contains all types of metal production including iron, steel, aluminum and lead._ |
 | | 2.D | Non-energy Products from Fuels and Solvent Use | _Includes all non-energetic greenhouse gas emissions in this category, except CO<sub>2</sub>. The use of fossil fuels as a product for primary purposes other than combustion, feedstock or reducing agent._ |
