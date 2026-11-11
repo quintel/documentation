@@ -24,14 +24,7 @@ module.exports = {
             "main/user_manual/managing-scenarios/scenario-manage-access"
           ]
         },
-        {
-          type: "category",
-          label: "Model versions",
-          items: [
-            "main/user_manual/model-versions",
-            "main/user_manual/move-scenarios-between-versions",
-          ],
-        },
+        "main/user_manual/model-versions"
       ],
     },
     {
@@ -228,6 +221,7 @@ module.exports = {
       collapsed: false,
       items: [
         "api/scenarios",
+        "api/move-scenarios-between-versions",
         "api/custom-curves",
         "api/flexibility-order",
         "api/forecast-storage-order",

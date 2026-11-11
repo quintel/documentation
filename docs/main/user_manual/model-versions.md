@@ -18,7 +18,7 @@ There is always only one **latest** version, but there may be multiple **stable*
 
 | Version | Release date | Updated | Link |
 |:---|:---|:---|:---|
-| `#latest` | - | Monthly | [energytransitionmodel.com](https://energytransitionmodel.com/) |
+| `#latest` | - | Every four weeks | [energytransitionmodel.com](https://energytransitionmodel.com/) |
 | `#2027-stable` | December 2026| - | _available soon_ |
 | `#2025-01` | February 2025| - | [2025-01.energytransitionmodel.com](https://2025-01.energytransitionmodel.com/) |
 
@@ -78,8 +78,11 @@ When a stable version is created, there will be no changes to your saved scenari
 
 ### Move scenarios between versions
 
-Scenarios are not moved between versions automatically. To move a scenario, for example from `latest` to `2027-stable`, you copy its slider settings to a new scenario in the other version. The easiest way to do this is with the [API](../../api/intro).
+If you want to move a scenario between versions, for example from `latest` to `2027-stable`, you have to create a new scenario in the other version with the same region, end year and slider settings. You can do this:
 
-Right after a stable version is released, this is straightforward, because the stable version is identical to `latest`. As time goes by, sliders in `latest` may be renamed, added, deleted or changed in function. Moving a scenario is then still possible, but you have to check the changelog and adjust the slider settings.
+* **by hand**, by setting each slider you changed to the same value. This works well if you changed only a few sliders;
+* **with [PyETM](../PyETM/introduction) or the API**, which copies all slider settings at once. See **[Move scenarios between versions through the API](../../api/move-scenarios-between-versions)** for a step-by-step guide.
 
-See **[Move scenarios between versions: a step-by-step manual](move-scenarios-between-versions)** for detailed instructions.
+:::warning Handling differences in inputs between versions
+Right after a stable version is released, it is identical to `latest`, so you can copy all inputs as they are. Later on, moving inputs between versions may not always be directly possible. The more time has passed between the versions, the more likely it is that some inputs will have been added, changed or deleted. Using the Changelog discussed in [Communication](#communication), you can determine how inputs should be corrected for the scenario in the different versions to still work.
+:::
