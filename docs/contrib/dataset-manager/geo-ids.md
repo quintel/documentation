@@ -23,8 +23,8 @@ do get that country's two-letter code prefixed to their `geo_id` (e.g. `BEGM1100
 
 Country datasets use the plain two-letter ISO country code as their `geo_id`. For example:
 
-* `AT` – `AT_austria`
-* `IE` – `IE_ireland`
+* `AT` – Austria
+* `IE` – Ireland
 
 ### Provinces
 
