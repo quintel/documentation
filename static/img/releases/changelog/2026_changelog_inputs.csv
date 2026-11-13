@@ -1,4 +1,10 @@
 Deploy,Subject,Status,Previous inputs,New inputs,Previous unit,New unit,Explanation
+2026-12,Air conditioning,New,-,households_heater_airconditioning_with_heat_pump_boiler_share,-,%,Share of residences heated by air conditioning heating technologies
+2026-12,Air conditioning,New,-,households_heater_hybrid_airconditioning_combined_network_gas_share,-,%,Share of residences heated by air conditioning heating technologies
+2026-12,Air conditioning,New,-,households_heater_airconditioning_with_heat_pump_boiler_heat_output_capacity,-,kW,Heat output capacity of air conditioning heating technologies
+2026-12,Air conditioning,New,-,households_heater_hybrid_airconditioning_combined_network_gas_heat_output_capacity,-,kW,Heat output capacity of air conditioning heating technologies
+2026-12,Refinery gas,New,-,industry_chemicals_refineries_refinery_gas_distribution_chemicals_other_share,-,%,Sets the distribution of refinery gas use between refineries and chemical industry
+2026-12,Refinery gas,New,-,industry_chemicals_refineries_refinery_gas_distribution_refineries_share,-,%,Sets the distribution of refinery gas use between refineries and chemical industry
 2026-11,External coupling,New,-,external_coupling_energy_chemical_fertilizers_transformation_external_coupling_node_co2_captured,-,%,New input for CO2 capture in chemical industry transformation when coupled to an external model
 2026-11,External coupling,New,-,external_coupling_energy_chemical_other_transformation_external_coupling_node_co2_captured,-,%,New input for CO2 capture in chemical industry transformation when coupled to an external model
 2026-11,External coupling,New,-,external_coupling_energy_chemical_refineries_transformation_external_coupling_node_co2_captured,-,%,New input for CO2 capture in chemical industry transformation when coupled to an external model

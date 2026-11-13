@@ -1,4 +1,168 @@
 Deploy,Subject,Status,Previous gquery,New gquery,Previous unit,New unit,Explanation
+2026-12,Air conditioning,New,-,user_sortable_households_space_heater_airconditioning_with_heat_pump_boiler_capacity,-,MW,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,user_sortable_households_space_heater_hybrid_airconditioning_combined_network_gas_capacity,-,MW,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_1945_1964_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_1965_1984_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_1985_2004_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_2005_present_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_before_1945_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_future_with_space_heater_airconditioning_with_heat_pump_boiler,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_1945_1964_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_1965_1984_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_1985_2004_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_2005_present_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_before_1945_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Air conditioning,New,-,number_of_houses_future_with_space_heater_hybrid_airconditioning_combined_network_gas,-,#,Heating capacity and number of air conditioning units as heating technology for households
+2026-12,Electricity,New,-,flexible_electricity_demand_peak,-,MW,Peak of flexible electricity demand
+2026-12,Electricity,New,-,inflexible_electricity_demand_peak,-,MW,Peak of inflexible electricity demand
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_fertilizers_external_coupling,-,tonne,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_fertilizers_total_including_external_coupling,-,tonne,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_other_external_coupling,-,tonne,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_other_total_including_external_coupling,-,tonne,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_refineries_external_coupling,-,tonne,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,New,-,emissions_captured_industry_chemicals_refineries_total_including_external_coupling,-,tonne,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Removed,emissions_captured_industry_external_coupling,-,tonne,-,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Removed,co2_supply_industry_external_coupling,-,MT,-,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Removed,captured_co2_industry_external_coupling_in_ccus_sankey,-,MT,-,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Changed,emissions_captured_industry_total,-,tonne,tonne,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Changed,co2_sheet_industry_chemical_energetic_co2_emissions,-,T,T,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Changed,co2_supply_industry_chemical_other,-,Mt,Mt,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Changed,co2_supply_industry_fertilizers,-,Mt,Mt,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Changed,co2_supply_industry_refineries,-,Mt,Mt,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Changed,industry_chemical_other_captured_co2_total_in_ccus_sankey,-,MT,MT,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Changed,industry_fertilizers_captured_co2_total_in_ccus_sankey,-,MT,MT,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Emissions,Changed,industry_refineries_captured_co2_total_in_ccus_sankey,-,MT,MT,Captured CO2 in chemical subsectors via external model coupling are now included in the industry subsector queries
+2026-12,Refinery gas,New,-,final_demand_of_oil_and_derivatives_excl_refinery_gas_in_chemical_industry_energetic,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_oil_and_derivatives_excl_refinery_gas_in_other_chemical_industry_energetic,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_oil_and_derivatives_excl_refinery_gas_in_refineries_industry_energetic,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_refinery_gas_in_chemical_industry_energetic,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_refinery_gas_in_chemical_industry_energetic_excess,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_refinery_gas_in_chemical_industry_energetic_useful,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_refinery_gas_in_other_chemical_industry_energetic,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_refinery_gas_in_other_chemical_industry_energetic_excess,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_refinery_gas_in_other_chemical_industry_energetic_useful,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_refinery_gas_in_refineries_industry_energetic,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_refinery_gas_in_refineries_industry_energetic_excess,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_of_refinery_gas_in_refineries_industry_energetic_useful,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Renamed,industry_useful_output_industry_refinery_transofrmation_crude_oil,industry_useful_output_industry_refinery_transformation_crude_oil,PJ,PJ,Fixed typo in query key
+2026-12,Refinery gas,Changed,primary_co2_emissions_of_oil_and_oil_products_in_industry_energetic,-,mt,mt,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,emissions_energetic_industry_chemical_co2,-,T,T,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_buildings_appliances_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_buildings_cooling_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_buildings_lighting_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_buildings_space_heating_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_households_appliances_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_households_cooking_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_households_cooling_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_households_hot_water_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_households_lighting_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_households_space_heating_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_chemical_industry_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_chemical_industry_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_fertilizers_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_fertilizers_industry_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_fertilizers_industry_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_other_chemical_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_other_chemical_industry_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_other_chemical_industry_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_refineries_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_refineries_industry_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_refineries_industry_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_metal_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_metal_industry_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_metal_industry_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_food_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_food_industry_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_food_industry_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_ict_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_ict_industry_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_ict_industry_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_other_non_specified_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_other_non_specified_industry_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_other_non_specified_industry_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_paper_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_paper_industry_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_paper_industry_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_agriculture,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_buildings,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_bunkers,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_energy,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_households,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_other,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_transport,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_agriculture_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_buildings_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_bunkers_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_energy_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_households_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_industry_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_other_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_transport_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_industry_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_other_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_non_energetic,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_agriculture_energetic_corrected_for_bio_oil,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_buildings_energetic_corrected_for_bio_oil,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_households_energetic_corrected_for_bio_oil,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_industry_energetic_corrected_for_bio_oil,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_industry_non_energetic_corrected_for_bio_oil,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,heat_production_from_oil_and_derivatives,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,heat_production_from_oil_and_derivatives_in_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,bio_kerosene_to_fossil_refinery,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,bio_kerosene_to_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,biodiesel_to_fossil_refinery,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,biodiesel_to_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,crude_oil_to_fossil_refinery,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,crude_oil_to_oil_products,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,crude_oil_to_refinery_gas,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,diesel_to_fossil_refinery,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,diesel_to_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,fossil_refinery_to_loss,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,fossil_refinery_to_refinery_gas,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,kerosene_to_fossil_refinery,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,kerosene_to_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,lpg_to_fossil_refinery,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,lpg_to_industry,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,oil_products_to_agriculture,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,oil_products_to_buildings,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,oil_products_to_fossil_refinery,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,oil_products_to_households,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,oil_products_to_industry,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,refinery_gas_to_fossil_refinery,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,refinery_gas_to_industry,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,refinery_gas_to_loss,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,share_of_industry_crude_oil_to_refineries,-,factor,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,bio_kerosene_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,biodiesel_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,crude_oil_to_oil_products_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,crude_oil_to_refinery_gas_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,diesel_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,kerosene_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,lpg_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,oil_products_to_agriculture_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,oil_products_to_buildings_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,oil_products_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,oil_products_to_households_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,oil_products_to_industry_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,refinery_gas_to_fossil_refinery_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,refinery_gas_to_industry_in_liquid_fuels_sankey,-,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,refinery_gas_to_losses_in_liquid_fuels_sankey,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,myc_final_demand_of_oil_and_derivatives,-,MJ,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,myc_final_demand_of_oil_and_derivatives_in_agriculture,-,MJ,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,myc_final_demand_of_oil_and_derivatives_in_buildings,-,MJ,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,myc_final_demand_of_oil_and_derivatives_in_bunkers,-,MJ,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,myc_final_demand_of_oil_and_derivatives_in_energy,-,MJ,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,myc_final_demand_of_oil_and_derivatives_in_households,-,MJ,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,myc_final_demand_of_oil_and_derivatives_in_industry,-,MJ,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,myc_final_demand_of_oil_and_derivatives_in_other,-,MJ,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,myc_final_demand_of_oil_and_derivatives_in_transport,-,MJ,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_industry_oil,-,MJ,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,New,-,final_demand_refinery_gas,-,MJ,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,final_demand_of_oil_and_derivatives_in_renewability,-,%,%,Remodelling of refinery gas as a final demand carrier
+2026-12,Refinery gas,Changed,oil_and_derivatives_to_industry_in_sankey,-,PJ,PJ,Remodelling of refinery gas as a final demand carrier
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_elektriciteit_co2_1990,-,MT,New query for direct emissions per klimaatsector in 1990
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_gebouwde_omgeving_co2_1990,-,MT,New query for direct emissions per klimaatsector in 1990
 2026-11,Emissions,New,-,direct_emissions_klimaatsector_indirecte_emissies_co2_1990,-,MT,New query for direct emissions per klimaatsector in 1990
