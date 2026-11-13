@@ -221,7 +221,6 @@ module.exports = {
       collapsed: false,
       items: [
         "api/scenarios",
-        "api/move-scenarios-between-versions",
         "api/custom-curves",
         "api/flexibility-order",
         "api/forecast-storage-order",

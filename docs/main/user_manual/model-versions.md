@@ -81,7 +81,7 @@ When a stable version is created, there will be no changes to your saved scenari
 If you want to move a scenario between versions, for example from `latest` to `2027-stable`, you have to create a new scenario in the other version with the same region, end year and slider settings. You can do this:
 
 * **by hand**, by setting each slider you changed to the same value. This works well if you changed only a few sliders;
-* **with [PyETM](../PyETM/introduction) or the API**, which copies all slider settings at once. See **[Move scenarios between versions through the API](../../api/move-scenarios-between-versions)** for a step-by-step guide.
+* **with [PyETM](../PyETM/introduction)**, which copies all slider settings at once.
 
 :::warning Handling differences in inputs between versions
 Right after a stable version is released, it is identical to `latest`, so you can copy all inputs as they are. Later on, moving inputs between versions may not always be directly possible. The more time has passed between the versions, the more likely it is that some inputs will have been added, changed or deleted. Using the Changelog discussed in [Communication](#communication), you can determine how inputs should be corrected for the scenario in the different versions to still work.
