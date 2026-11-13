@@ -14,11 +14,12 @@ The **[Scenario versions](managing-scenarios/scenario-history.md)** in the scena
 
 ## Current versions
 
-There is always only one **latest** version, but there may be multiple **stable** versions of the model. Stable versions are labelled first with the year in which the version was released, and then with a version number: `#YEAR-NN`.
+There is always only one **latest** version, but there may be multiple **stable** versions of the model. Stable versions are labelled with a year, for example `#2025-01` and `#2027-stable`.
 
 | Version | Release date | Updated | Link |
 |:---|:---|:---|:---|
-| `#latest` | - | Monthly | [energytransitionmodel.com](https://energytransitionmodel.com/) |
+| `#latest` | - | Every four weeks | [energytransitionmodel.com](https://energytransitionmodel.com/) |
+| `#2027-stable` | December 2026| - | _available soon_ |
 | `#2025-01` | February 2025| - | [2025-01.energytransitionmodel.com](https://2025-01.energytransitionmodel.com/) |
 
 ## Functionalities
@@ -77,8 +78,11 @@ When a stable version is created, there will be no changes to your saved scenari
 
 ### Move scenarios between versions
 
-If you want to a move a scenario between versions, for example from `latest` to `2025-01`, you have to do this manually. The inputs from the existing scenario can be extracted, for example using the [API](../../api/) or [PyETM](../PyETM/introduction). A new scenario can then be created in the desired version of the model. The inputs can then be set in the new scenario.
+If you want to move a scenario between versions, for example from `latest` to `2027-stable`, you have to create a new scenario in the other version with the same region, end year and slider settings. You can do this:
+
+* **by hand**, by setting each slider you changed to the same value. This works well if you changed only a few sliders;
+* **with [PyETM](../PyETM/introduction)**, which copies all slider settings at once.
 
 :::warning Handling differences in inputs between versions
-Moving inputs between versions may not always be directly possible. The more time has passed between the versions, the more likely it is that some inputs will have been added, changed or deleted. Using the Changelog discussed in [Communication](#communication), you can determine how inputs should be corrected for the scenario in the different versions to still work.
+Right after a stable version is released, it is identical to `latest`, so you can copy all inputs as they are. Later on, moving inputs between versions may not always be directly possible. The more time has passed between the versions, the more likely it is that some inputs will have been added, changed or deleted. Using the Changelog discussed in [Communication](#communication), you can determine how inputs should be corrected for the scenario in the different versions to still work.
 :::
