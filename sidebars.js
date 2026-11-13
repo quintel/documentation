@@ -190,7 +190,8 @@ module.exports = {
       label: "Dataset manager",
       collapsed: true,
       items: [
-        "contrib/dataset-manager/data-migrations"
+        "contrib/dataset-manager/data-migrations",
+        "contrib/dataset-manager/geo-ids"
       ],
     },
     {
