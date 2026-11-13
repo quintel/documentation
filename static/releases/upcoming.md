@@ -1,3 +1,3 @@
-* A new stable version `2027-stable` of the model will be released. Read the <a href="../../main/user_manual/model-versions" target="_blank">documentation</a> to know more about stable versions.
 * A new chart will be added that shows the gross vs. net greenhouse gas emissions (due to CCS and other carbon removal) of a scenario.
 * The capacity <a href="https://energytransitionmodel.com/scenario/data/data_export/hourly-profiles-and-capacities-for-electricity" target="_blank">data exports</a> for electricity, district heating, hydrogen and network gas will be expanded to also show the installed capacity of technologies, next to their peak capacity.
+* A selection of outdated regions will be removed from the model. These regions will remain available on the new stable version `2027-stable` of the model. Read the box above for more information on the release of this new stable version.
