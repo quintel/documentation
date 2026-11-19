@@ -57,7 +57,6 @@ explicitly, it will take that attribute from its 'parent'. The parent dataset ca
 migration by assigning the `parent` field. The `parent` field must be assigned with the parent's geo_id + name,
 concatenated with an underscore. For example, `PV26_utrecht`.
 
-
 ## Running the migration
 
 ```sh
