@@ -1,5 +1,6 @@
 ---
 title: Main principles
+sidebar_label: Overview
 ---
 
 In the ETM the total greenhouse gas emissions for both the present and future are calculated for scenarios. This page contains extra information on the modelling principles behind carbon emissions in the ETM.

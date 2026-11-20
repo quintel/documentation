@@ -1,5 +1,6 @@
 ---
 title: Demand
+sidebar_label: Overview
 ---
 
 Demand consists of a number of domestic demand sectors and export:

@@ -1,5 +1,6 @@
 ---
 title: Flexibility
+sidebar_label: Overview
 ---
 
 Natural patterns like seasons (yearly), the variations in weather (weekly), day and night and our rhythm of waking up, going to work, coming home, etc. cause both the need for energy and the availability of energy to fluctuate. Flexibility is about balancing energy supply and demand on all of these timescales. In the ETM you have the ability to choose and adjust how you deal with these fluctuations in the ['Flexibility'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_overview/what-is-flexibility) section. On this page, concepts relevant for understanding flexibility are defined.

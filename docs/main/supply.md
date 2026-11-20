@@ -1,5 +1,6 @@
 ---
 title: Supply
+sidebar_label: Overview
 ---
 
 Within the [Supply](https://energytransitionmodel.com/scenario/supply/electricity/coal-plants) section you can try and cover the total energy demand which is set in the Demand section. The Supply section in the ETM covers the centralized production of both electricity and heat, as well as transport fuel. Decentralized production (e.g. of solar electricity) is covered in the Demand section. The following areas are covered:
