@@ -1,5 +1,6 @@
 ---
 title: Costs
+sidebar_label: Overview
 ---
 
 The Energy Transition Model calculates the total cost of the yearly energy supply for a scenario. This is the sum of depreciation costs, cost of capital, operation and maintenance costs, and fuel costs of various components of the energy system. You can change these in the ['Costs'](https://pro.energytransitionmodel.com/scenario/costs/specs_electricity/coal-plants) section of the ETM.

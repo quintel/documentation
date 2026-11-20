@@ -1,5 +1,6 @@
 ---
 title: Dashboard
+sidebar_label: Overview
 ---
 
 The dashboard of the Energy Transition Model is an overview at the bottom of the page containing the most essential performance indicators of your scenario. You can click on each of the indicators in the dashboard to view the corresponding chart and more detailed information. By clicking 'Change' at the bottom right of the dashboard you can customize the dashboard. This page defines the performance indicators used within the dashboard.
@@ -77,7 +78,7 @@ The loss of load dashboard item shows the number of hours in which the capacity 
 _Checkout: the ['Loss of load'](loss-of-load-expectation) infopage for more information._
 
 ### Power shortage
-This dashboard item shows the number of hours per year during which a power shortage occurs. Power shortages occur when electricity supply is insufficient to meet electricity demand and when it is not possible to fill this gap with electricity import or flexible technologies such as electricity storage. The ETM calculates power shortages on an hourly basis. The table shows information about the volume, peak capacity and duration of power shortages in a scenario. 
+This dashboard item shows the number of hours per year during which a power shortage occurs. Power shortages occur when electricity supply is insufficient to meet electricity demand and when it is not possible to fill this gap with electricity import or flexible technologies such as electricity storage. The ETM calculates power shortages on an hourly basis. The table shows information about the volume, peak capacity and duration of power shortages in a scenario.
 
 ### Number of hours with excess electricity
 As a result of large numbers of wind turbines and solar panels installed, the supply of electricity can be larger than the demand. The number of hours with excess electricity displays this event. If you include flexibility options in your scenario, the number of excess events decreases.

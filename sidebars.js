@@ -42,10 +42,20 @@ module.exports = {
           ],
         },
         {
-          Demand: ["main/demand", "main/heat-built-environment"],
+          Demand: [
+            "main/demand",
+            "main/heat-built-environment",
+            "main/non-road-mobile-machinery"
+          ],
         },
         {
-          Supply: ["main/supply", "main/balancing-demand", "main/hydrogen","main/liquid-fuels", "main/biomass"],
+          Supply: [
+            "main/supply",
+            "main/balancing-demand",
+            "main/hydrogen",
+            "main/liquid-fuels",
+            "main/biomass"
+          ],
         },
         {
           Flexibility: [
@@ -61,7 +71,11 @@ module.exports = {
               ],
             },
             {
-              Heat: ["main/heat-networks", "main/heat-pumps", "main/residual-heat-industry"],
+              Heat: [
+                "main/heat-networks",
+                "main/heat-pumps",
+                "main/residual-heat-industry"
+              ],
             },
             "main/profiles",
             "main/weather-conditions",
