@@ -5,18 +5,13 @@ sidebar_label: Forecasting
 
 ## Introduction
 
-In the Energy Transition Model, electricity storage technologies will charge and discharge whenever it is cost-effective for them to do so. These technologies are governed by a **willingness to pay** – the price they are willing to pay to store electricity – and a **willingness to accept** – the price they are willing to accept for discharging stored energy. This price-based behaviour is described in detail in [the electricity storage documentation](electricity-storage.md).
-
+In the Energy Transition Model, electricity storage technologies follow price-based behaviour by default (see [the electricity storage documentation](electricity-storage.md)).
 While this ensures that electricity storage technologies will not charge and discharge in such a way as would result in a loss, fixed prices can be inflexible and unrealistic. For example, setting a price suitable for winter months when prices tend to be higher, may result in behavior which is less suitable for the summer months.
 
-Electricity storage technologies have an optional forecasting option. When enabled, the technology is no longer controlled by the market price of electricity, but will instead forecast the electricity load for the year and decide when to charge and discharge accordingly. For household batteries there is a third option for which the battery
-forecasting algorithm is only applied to the household sector.
-
+Electricity storage technologies have an optional forecasting option. When enabled, the technology is no longer controlled by the market price of electricity, but will instead forecast the electricity load for the year and decide when to charge and discharge accordingly.
 In this mode, the goal of a storage technology is to flatten the residual load curve as much as possible. This also _generally_ increases the profitability of the technology.
 
-<div class="bordered-image">
-  <img src="/img/docs/battery-forecasting/toggle.png" alt="A toggle switch with two options 'Off' and 'On' that enables forecasting. The switch is turned on." />
-</div>
+There are two types of forcasting, **system forcasting** and **local forcasting**, depending on the scale of the residual load curve.
 
 :::info Residual load curves
 The residual load curve is the sum of demand in each hour, minus the sum of supply from must-run and volatile producers. This results in a curve describing the "residual load" for each hour in the year.
@@ -25,6 +20,25 @@ Whenever the value for an hour is positive, electricity demand is not fully sati
 
 See [Costs → Merit Order → Implementation](merit-order.md#implementation) for more details.
 :::
+
+
+### System forcasting algorithm
+The electricity storage technologies follow the price-based behaviour by default, but the system forcasting algorithm can be enabled with a toggle switch. When switched on, the algorithm aims to balance the total electricity system by flattening the residual load curve of the whole system.
+
+
+<div class="bordered-image">
+  <img src="/img/docs/battery-forecasting/toggle.png" alt="A toggle switch with two options 'Off' and 'On' that enables forecasting. The switch is turned on." />
+</div>
+
+
+### Local forcasting algorithm
+Household batteries offer the additional option of local forcasting. The local forcasting algorithm aims to balance local household demand with local electricity production by flattening the local residual load curve. In the ETM the household electricity production is provided by solar PV.
+
+The household batteries therefore support three storage behaviours: price-based, system forcasting and local forcasting.
+
+<div class="bordered-image">
+  <img src="/img/docs/battery-forecasting/household-batteries.png" alt="The household batteries have three options for the storage behaviour." width="400" />
+</div>
 
 ## Algorithm
 
