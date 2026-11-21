@@ -9,3 +9,15 @@
   to = "/main/intro"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/main/energy-calculations"
+  to = "/main/how-the-etm-calculates/introduction"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/main/useful-demand"
+  to = "/main/how-the-etm-calculates/useful-final-primary-energy"
+  status = 301
+  force = true
