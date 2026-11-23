@@ -7,9 +7,9 @@ For almost all regions in the ETM, energy use of mobile machinery is part of the
 
 | Dataset | Start year | Allocation of mobile machinery |
 |---|---|---|
-| Netherlands (national) | 2023 | Diesel and biodiesel use distributed proportionally over all road vehicles using diesel (cars, vans, trucks and buses), LPG distributed proportionally over road vehicles using LPG |
-| Netherlands (provinces, RES regions and municipalities) | 2023 | All fuel use counted as diesel and biodiesel, distributed proportionally over all road vehicles using diesel (cars, vans, trucks and buses) |
-| Netherlands | 2019 | Diesel and biodiesel use allocated to trucks, LPG distributed proportionally over road vehicles using LPG |
+| Netherlands (national) | 2023 | Diesel and biodiesel use distributed proportionally over all road vehicles using diesel (cars, vans, trucks and buses), LPG use distributed proportionally over all road vehicles using LPG (cars and vans) |
+| Netherlands (provinces, RES regions and municipalities) | 2023 | Fossil fuel and biofuel use counted as respectively diesel and biodiesel, distributed proportionally over all road vehicles using diesel (cars, vans, trucks and buses) |
+| Netherlands | 2019 | Diesel and biodiesel use allocated to trucks, LPG use distributed proportionally over all road vehicles using LPG (cars and vans) |
 
 :::warning Modal and technology split
 The reallocation of mobile machinery also affects the modal and technology split shown in the start year of a scenario: this can therefore differ from reported national statistics.
