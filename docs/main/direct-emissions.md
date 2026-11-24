@@ -5,9 +5,7 @@ title: Direct emissions
 The direct emissions method determines the greenhouse gas emissions of a scenario at the point where emissions are released. This method is available as an additional method alongside the default emissions method based on [primary demand](co2-main-principles#modelling-principles). This page explains the method principles and how it is implemented in the model.
 
 :::warning Beta release
-The direct emissions method is currently in beta release. This means that it is being implemented incrementally and is subject to further improvement and refinement. New charts and sliders for setting other GHG emissions will be added to the model soon. Read more about how the method is currently implemented [here](#method-implementation).
-
-In the near future, the role of the direct emissions method with respect to the primary emissions method will be reviewed and further improved.
+The direct emissions method is currently in beta release. This means that the method is still being validated and improved, and will be fully integrated into the model in the future. Read more about how the method is currently implemented [here](#method-implementation).
 :::
 
 ## Principles
@@ -63,11 +61,12 @@ Two dashboard items are available for the direct emissions results:
 The dashboard items include indirect emissions and LULUCF emissions. Emissions from international transport are included if the scenario is set to include demand from [international transport](https://energytransitionmodel.com/scenario/demand/transport_international_transport/international-transport).
 
 ### Chart
-There are three charts available that show direct emissions results for 1990, the start year and future year:
+The following charts are available that show direct emissions results:
 
-* **Direct total GHG emissions**: shows the emissions per ETM sector.
-* **Direct total GHG emissions per IPCC category**: shows the emissions per IPCC CRT category.
-* **Direct total GHG emissions per Dutch Climate sector**: shows the emissions per Dutch Climate sector (*Klimaatsector*) category.
+* **Direct total GHG emissions per sector**: shows the emissions per ETM sector for 1990, start year and future year.
+* **Direct total GHG emissions per IPCC category**: shows the emissions per IPCC CRT category for 1990, start year and future year.
+* **Direct total GHG emissions per Dutch Climate sector**: shows the emissions per Dutch Climate sector (*Klimaatsector*) category for 1990, start year and future year.
+* **Direct total GHG emissions per category (future)**: shows the emissions per category for the future year. The depicted categories correspond to those in the [data export](#data-export): CO2 production, CO2 capture, other GHG emissions and total GHG emissions.
 
 Similar to the dashboard items, the charts include indirect emissions and LULUCF emissions, and include emissions from international transport if configured as such in the scenario. Go to this [page](https://github.com/quintel/etdataset-public/tree/master/tools/emissions/README.md) for more information on how the emission data for 1990 is retrieved and mapped for country datasets and Dutch regional datasets.
 
