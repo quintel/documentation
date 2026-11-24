@@ -50,7 +50,7 @@ Below, an example text of a release is shown, containing new features, a bug fix
 
 ### Bug fixes
 
-  * An issue in the [curtailment settings](https://energytransitionmodel.com/scenario/flexibility/flexibility_net_load/curtailment-solar-pv) for solar PV led to the wrong calculation of the peak production before curtailment. This issue has been fixed, the correct peak production before curtailment is given. The production after curtailment remains unaffected.
+  * An issue in the [curtailment settings](https://energytransitionmodel.com/scenario/flexibility/flexibility_net_load/curtailment-solar-energy) for solar PV led to the wrong calculation of the peak production before curtailment. This issue has been fixed, the correct peak production before curtailment is given. The production after curtailment remains unaffected.
 
 ### Technical changelog
 

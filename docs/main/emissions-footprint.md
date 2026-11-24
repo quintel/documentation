@@ -24,10 +24,10 @@ This page shortly explains what falls under the different categories in every gr
 
 | Category | Description |
 | ---- | ----|
-|**Other emissions**|_Energetic emissions of other greenhouse gases (non-CO<sub>2</sub>) in households and buildings, as well as energetic CO<sub>2</sub> emissions from the ETM's ['Other'](https://energytransitionmodel.com/scenario/demand/other/demand-growth) sector._|
-|**Appliances & lightning**|_Energetic CO<sub>2</sub> emissions from lightning and appliances._|
+|**Other emissions**|_Energetic emissions of other greenhouse gases (non-CO<sub>2</sub>) in households and buildings, as well as energetic CO<sub>2</sub> emissions from the ETM's [Other](https://energytransitionmodel.com/scenario/demand/other/development-of-demand) sector._|
+|**Appliances & lighting**|_Energetic CO<sub>2</sub> emissions from lightning and appliances._|
 |**Cooking**|_Energetic CO<sub>2</sub> emissions from cooking._|
-|**Hotwater**|_Energetic CO<sub>2</sub> emissions from hot water use._|
+|**Hot water**|_Energetic CO<sub>2</sub> emissions from hot water use._|
 |**Heating & cooling**|_Energetic CO<sub>2</sub> emissions from heating and cooling._|
 
 ## Industry & Energy

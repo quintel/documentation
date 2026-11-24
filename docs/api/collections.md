@@ -8,7 +8,7 @@ import UpcomingFeature from '@site/src/components/UpcomingFeature';
 
 <UpcomingFeature release="2023.01" />
 
-The ETM's [Collections](https://energytransitionmodel.com/multi_year_charts) feature can be used by providing scenario IDs directly to the URL. However, in order for them to appear in your list, you can use the API to create persisted collections.
+The ETM's [Collections](https://collections.energytransitionmodel.com) feature can be used by providing scenario IDs directly to the URL. However, in order for them to appear in your list, you can use the API to create persisted collections.
 
 Instead of a collection, the viewer can also show a comparison of a selection of [saved scenarios](saved-scenarios.md). With this endpoint you may also create such a persisted collection.
 

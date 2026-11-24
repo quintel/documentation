@@ -24,7 +24,7 @@ To calculate the energetic CO<sub>2</sub> emissions in your scenario (category 1
 * In a departure from common UNFCCC standards, emissions per sector are calculated based on the [primary energy](primary-energy.md) that is used to supply the final energy demand of that sector. This means that any conversion and transportation losses are included in the sector's emissions. For example, transmission losses of the power grid are distributed to the demand sectors relative to their electricity demand. The primary energy demand is multiplied with the emission factor per carrier to obtain the CO<sub>2</sub> emissions. More information can be found in the [emission factors](co2-emission-factors.md) section.
 
 * The ETM follows international conventions regarding the scope of CO<sub>2</sub> emissions. More precisely, this means that by default:
-  * Emissions of biomass are assumed to be (net) zero. This assumption can be changed in the [biomass section](https://energytransitionmodel.com/scenario/supply/biomass/co-sub-2-sub-emissions-of-biomass).
+  * Emissions of biomass are assumed to be (net) zero. This assumption can be changed in the [biomass section](https://energytransitionmodel.com/scenario/emissions/emission_factors/co2-emissions-of-biomass).
   * Emissions of international aviation and shipping are not taken into account. This assumption can be changed in the [transportation sector](https://energytransitionmodel.com/scenario/demand/transport_international_transport/international-transport).
 
 * LULUCF (Land Use, Land Use Change, and Forestry) emissions are out of scope. For more information on these definitions click [here](http://www.eea.europa.eu/publications/emep-eea-emission-inventory-guidebook-2009/part-b-sectoral-guidance-chapters).

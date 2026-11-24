@@ -47,7 +47,7 @@ Keep in mind that the definitions used to classify flexible and inflexible techn
 ## Categorization of flexible and inflexible technologies
 ### Electricity
 
-See the [Flexibility → Electricity storage](https://energytransitionmodel.com/scenario/flexibility/flexibility_storage/electricity-storage) and [Flexibility → Electricity conversion](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-by-flexible-demand-technologies) sections of the model.
+See the [Flexibility → Electricity storage](https://energytransitionmodel.com/scenario/flexibility/flexibility_storage/behaviour-of-storage-technologies) and [Flexibility → Electricity conversion](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/behaviour-of-conversion-technologies) sections of the model.
 
 #### Supply
 
@@ -123,7 +123,7 @@ See the [Supply → Hydrogen](https://energytransitionmodel.com/scenario/supply/
 
 ### Heat for district heating
 
-See the [Supply → District heating](https://energytransitionmodel.com/scenario/supply/heat/heat-sources) section of the model.
+See the [Supply → District heating](https://energytransitionmodel.com/scenario/supply/heat/overview-district-heating) section of the model.
 
 #### Supply
 

@@ -12,7 +12,7 @@ The ETM supports so-called 'negative' emissions. Negative emissions arise when m
 
 2. By using Direct Air Capture (DAC)
 
-You can make assumptions about this in the [CCUS](https://energytransitionmodel.com/scenario/emissions/ccus/capture-of-co2) section of the model. Below, both routes are explained in more detail.
+You can make assumptions about this in the [CCUS](https://energytransitionmodel.com/scenario/emissions/ccus/overview) section of the model. Below, both routes are explained in more detail.
 
 ## Negative emissions from biomass
 Using biomass to extract bioenergy, for example for the production of electricity and hydrogen, and subsequently capturing and storing the CO<sub>2</sub> emissions released in this process may result in a net decrease in atmospheric CO<sub>2</sub> levels. This is typically referred to as BECCS: bio-energy with carbon capture and storage.

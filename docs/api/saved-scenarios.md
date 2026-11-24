@@ -8,7 +8,7 @@ import UpcomingFeature from '@site/src/components/UpcomingFeature';
 
 <UpcomingFeature release="2023.01" />
 
-Those using [the ETM web application](https://energytransitionmodel.com/) can save scenarios to their account. These scenarios appear in [their saved scenario list](https://energytransitionmodel.com/saved_scenarios). Scenarios in this list are called **saved scenarios**.
+Those using [the ETM web application](https://energytransitionmodel.com/) can save scenarios to their account. These scenarios appear in [their saved scenario list](https://my.energytransitionmodel.com/saved_scenarios). Scenarios in this list are called **saved scenarios**.
 
 The ETM provides an API for creating, updating, and removing scenarios from your list of saved scenarios.
 
