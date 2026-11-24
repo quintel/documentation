@@ -5,8 +5,8 @@ This article contains background information for the following overview chart:
 
 ![](/img/docs/greenhouse-gas-footprint.png)
 
-In the Results & Data > Visuals > [Greenhouse gas footprint](https://pro.energytransitionmodel.com/scenario/data/data_visuals/greenhouse-gas-footprint) section you can find and download a summary of all greenhouse gas emissions.
-The summary is based on the energetic CO<sub>2</sub> emissions calculated by the ETM based on energy demand and supply, as well as the energetic other greenhouse gases, non-energetic CO<sub>2</sub> and non-energetic other greenhouse gases determined in the Emissions > [Greenhouse gases](https://pro.energytransitionmodel.com/scenario/emissions/other_emissions/overview) section in the ETM.
+In the Results & Data > Visuals > [Greenhouse gas footprint](https://energytransitionmodel.com/scenario/data/data_visuals/greenhouse-gas-footprint) section you can find and download a summary of all greenhouse gas emissions.
+The summary is based on the energetic CO<sub>2</sub> emissions calculated by the ETM based on energy demand and supply, as well as the energetic other greenhouse gases, non-energetic CO<sub>2</sub> and non-energetic other greenhouse gases determined in the Emissions > [Greenhouse gases](https://energytransitionmodel.com/scenario/emissions/other_emissions/overview) section in the ETM.
 
 This page shortly explains what falls under the different categories in every graph.
 
@@ -14,7 +14,7 @@ This page shortly explains what falls under the different categories in every gr
 
 | Category | Description |
 | ---- | ----|
-|**Indirect & Delayed emissions**|_**Indirect emissions** are CO<sub>2</sub> emissions caused by the atmospheric oxidation of methane (CH<sub>4</sub>), carbon monoxide (CO) and Non-Methane Volatile Organic Compounds (NMVOC). These substances are often released during non-energetic processes such as the storage of manure, chemical processes or use of solvents. Due to the large number of causes, indirect emissions can originate in any sector (agriculture, industry, the built environment or other sectors). These emissions can be adjusted in the [Greenhouse gas section](https://pro.energytransitionmodel.com/scenario/emissions/other_emissions/indirect-emissions). **Delayed emissions** are captured CO<sub>2</sub> emissions that has been emitted at a later point in time. These emissions can be adjusted in the [CCUS section](https://pro.energytransitionmodel.com/scenario/emissions/ccus/utilisation-and-storage-of-co2)._|
+|**Indirect & Delayed emissions**|_**Indirect emissions** are CO<sub>2</sub> emissions caused by the atmospheric oxidation of methane (CH<sub>4</sub>), carbon monoxide (CO) and Non-Methane Volatile Organic Compounds (NMVOC). These substances are often released during non-energetic processes such as the storage of manure, chemical processes or use of solvents. Due to the large number of causes, indirect emissions can originate in any sector (agriculture, industry, the built environment or other sectors). These emissions can be adjusted in the [Greenhouse gas section](https://energytransitionmodel.com/scenario/emissions/other_emissions/indirect-emissions). **Delayed emissions** are captured CO<sub>2</sub> emissions that has been emitted at a later point in time. These emissions can be adjusted in the [CCUS section](https://energytransitionmodel.com/scenario/emissions/ccus/utilisation-and-storage-of-co2)._|
 |**Built environment**|_All emissions from the built environment shown in the separate built environment graph._|
 |**Transport & Mobility**|_All emissions from transport & mobility shown in the separate transport & mobility graph._|
 |**Industry & Energy**|_All emissions from industry & energy production shown in the separate industry & energy graph._|
@@ -24,7 +24,7 @@ This page shortly explains what falls under the different categories in every gr
 
 | Category | Description |
 | ---- | ----|
-|**Other emissions**|_Energetic emissions of other greenhouse gases (non-CO<sub>2</sub>) in households and buildings, as well as energetic CO<sub>2</sub> emissions from the ETM's ['Other'](https://pro.energytransitionmodel.com/scenario/demand/other/demand-growth) sector._|
+|**Other emissions**|_Energetic emissions of other greenhouse gases (non-CO<sub>2</sub>) in households and buildings, as well as energetic CO<sub>2</sub> emissions from the ETM's ['Other'](https://energytransitionmodel.com/scenario/demand/other/demand-growth) sector._|
 |**Appliances & lightning**|_Energetic CO<sub>2</sub> emissions from lightning and appliances._|
 |**Cooking**|_Energetic CO<sub>2</sub> emissions from cooking._|
 |**Hotwater**|_Energetic CO<sub>2</sub> emissions from hot water use._|

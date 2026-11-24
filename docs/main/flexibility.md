@@ -3,7 +3,7 @@ title: Flexibility
 sidebar_label: Overview
 ---
 
-Natural patterns like seasons (yearly), the variations in weather (weekly), day and night and our rhythm of waking up, going to work, coming home, etc. cause both the need for energy and the availability of energy to fluctuate. Flexibility is about balancing energy supply and demand on all of these timescales. In the ETM you have the ability to choose and adjust how you deal with these fluctuations in the ['Flexibility'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_overview/what-is-flexibility) section. On this page, concepts relevant for understanding flexibility are defined.
+Natural patterns like seasons (yearly), the variations in weather (weekly), day and night and our rhythm of waking up, going to work, coming home, etc. cause both the need for energy and the availability of energy to fluctuate. Flexibility is about balancing energy supply and demand on all of these timescales. In the ETM you have the ability to choose and adjust how you deal with these fluctuations in the ['Flexibility'](https://energytransitionmodel.com/scenario/flexibility/flexibility_overview/what-is-flexibility) section. On this page, concepts relevant for understanding flexibility are defined.
 
 ## Flexibility for different types of energy fluctuations
 A first distinction to make when looking into flexibility, is to decide whether it is required for longer or for shorter timescales. For longer timescales, the amount or **volume** of energy supplied or used is more interesting. For shorter timescales, the ability to produce or use a certain amount of energy is more interesting. This is called **capacity**. For a typical energy system fluctuations occur on both timescales, and enough flexibility should be provided for both volume and capacity.
@@ -28,7 +28,7 @@ _Suitable for both volume and capacity_
 * Large-scale electricity storage: pumped hydro storage
 
 ## Definitions of flexible and inflexible supply and demand
-The different forms of flexibility listed above indicate that there are also types of supply and demand that are **inflexible**. In the ETM this distinction between inflexible and flexible supply and inflexible (or *baseload*) and flexible demand is explained in the section about ['Hourly inflexible supply and demand'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_overview/hourly-inflexible-supply-and-demand):
+The different forms of flexibility listed above indicate that there are also types of supply and demand that are **inflexible**. In the ETM this distinction between inflexible and flexible supply and inflexible (or *baseload*) and flexible demand is explained in the section about ['Hourly inflexible supply and demand'](https://energytransitionmodel.com/scenario/flexibility/flexibility_overview/hourly-inflexible-supply-and-demand):
 
 * Inflexible supply: this is the energy produced by technologies that cannot be regulated easily by humans or that run continuously based on cost considerations. Wind and solar are good examples of technologies that cannot be regulated by humans. They do show variable behaviour (volatile changes due to environmental effects) but they for instance do not follow hourly electricity prices. They are therefore called inflexible. Nuclear power plants are an example of power plants that can be adjusted to run continuously based on cost considerations. These kind of plants are called must-run.
 * Flexible supply: this energy production typically *does* follow man-made rules (such as hourly electricity prices) and includes so-called *dispatchable plants* like gas-fired power plants.
@@ -40,14 +40,14 @@ Note that technologies can be classified as flexible for one energy carrier, but
 *Note: the classification of technologies as flexible or inflexible, is based on their representation in the ETM. Some technologies that may be flexible in reality, can be modelled in such a way that they are considered inflexible by the ETM. For example, the import of natural gas can be considered flexible in reality, but in the ETM it is represented by a flat curve and therefore seen as inflexible.*
 
 ## The need for flexibility
-In the ETM, we have made selection of charts available that can give you insight in the need for flexibility in the energy system. These charts are intended to give you a sense of the mismatch between supply and demand on various timescales, for the energy carriers electricity, gas, hydrogen, and heat for district heating. These charts are accompanied by explanatory texts that build your understanding of the need for flexibility in a logical order. If you are interested in exploring the need for flexibility in your scenario, we therefore recommend starting at the ['Overview'](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_overview/what-is-flexibility).
+In the ETM, we have made selection of charts available that can give you insight in the need for flexibility in the energy system. These charts are intended to give you a sense of the mismatch between supply and demand on various timescales, for the energy carriers electricity, gas, hydrogen, and heat for district heating. These charts are accompanied by explanatory texts that build your understanding of the need for flexibility in a logical order. If you are interested in exploring the need for flexibility in your scenario, we therefore recommend starting at the ['Overview'](https://energytransitionmodel.com/scenario/flexibility/flexibility_overview/what-is-flexibility).
 
 Keep in mind that the definitions used to classify flexible and inflexible technologies described above, affect what is shown in the charts. In the paragraph below you can find a complete overview of which technologies are flexible, and which are inflexible, for the four energy carriers defined above.
 
 ## Categorization of flexible and inflexible technologies
 ### Electricity
 
-See the [Flexibility → Electricity storage](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_storage/electricity-storage) and [Flexibility → Electricity conversion](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-by-flexible-demand-technologies) sections of the model.
+See the [Flexibility → Electricity storage](https://energytransitionmodel.com/scenario/flexibility/flexibility_storage/electricity-storage) and [Flexibility → Electricity conversion](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-by-flexible-demand-technologies) sections of the model.
 
 #### Supply
 
@@ -97,7 +97,7 @@ Flexible demand technologies are governed by a "willingness to pay": a maximum p
 
 ### Hydrogen
 
-See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/supply/hydrogen/hydrogen-production) section of the model.
+See the [Supply → Hydrogen](https://energytransitionmodel.com/scenario/supply/hydrogen/hydrogen-production) section of the model.
 
 #### Supply
 
@@ -123,7 +123,7 @@ See the [Supply → Hydrogen](https://pro.energytransitionmodel.com/scenario/sup
 
 ### Heat for district heating
 
-See the [Supply → District heating](https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources) section of the model.
+See the [Supply → District heating](https://energytransitionmodel.com/scenario/supply/heat/heat-sources) section of the model.
 
 #### Supply
 

@@ -25,7 +25,7 @@ For various industry sectors, you can make assumptions about the captured amount
 
 The capture potential of an industrial sector depends on various aspects. First of all, it depends on the size and efficiency of the sector in the chosen area.
 
-Secondly, it depends on the energy carriers or production technologies used in the sector. For example, a steel sector using conventional blast furnaces has a much lower capture potential than a steel sector using cyclone furnaces. Your choices in the [Industry](https://pro.energytransitionmodel.com/scenario/demand/industry/energy-demand-in-the-industry) section of the model directly impact the capture potential.
+Secondly, it depends on the energy carriers or production technologies used in the sector. For example, a steel sector using conventional blast furnaces has a much lower capture potential than a steel sector using cyclone furnaces. Your choices in the [Industry](https://energytransitionmodel.com/scenario/demand/industry/energy-demand-in-the-industry) section of the model directly impact the capture potential.
 
 Thirdly, capture potentials can vary per the region chosen in the ETM. More information about the assumed potentials and sources used can be found on [ETDataset](https://github.com/quintel/etdataset-public/tree/master/source_analyses/nl/2015/12_molecules).
 

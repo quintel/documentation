@@ -38,7 +38,7 @@ scenario endpoint:
 
 ### Templates
 
-On [the ETM start page](https://pro.energytransitionmodel.com/#preset-scenario) you find a list of
+On [the ETM start page](https://energytransitionmodel.com/#preset-scenario) you find a list of
 featured scenarios that were created or commissioned by professional and governmental bodies. Any of
 these scenarios can be used as a preset.
 

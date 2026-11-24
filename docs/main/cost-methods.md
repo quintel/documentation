@@ -78,5 +78,5 @@ These costs are specified in the category "carriers". This includes all raw fuel
 
 
 ## Changing costs in a scenario
-All the costs of [technologies](https://github.com/quintel/etdataset/tree/master/nodes_source_analyses) and [datasets (or regions)](https://github.com/quintel/etdataset/tree/master/source_analyses) are researched in advance. Technologies have the same starting assumptions for all regions. Carrier costs can be different per region. When making a scenario, many of these assumptions can be changed in the [costs](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) section of the ETM.
+All the costs of [technologies](https://github.com/quintel/etdataset/tree/master/nodes_source_analyses) and [datasets (or regions)](https://github.com/quintel/etdataset/tree/master/source_analyses) are researched in advance. Technologies have the same starting assumptions for all regions. Carrier costs can be different per region. When making a scenario, many of these assumptions can be changed in the [costs](https://energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) section of the ETM.
 

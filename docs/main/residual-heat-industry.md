@@ -4,7 +4,7 @@ title:  Industrial residual heat
 
 There is a lot of heat available in industry that currently goes to waste. Using this residual heat as a source for heat networks could be an interesting way to reduce emissions.
 
-The ETM allows you to specify the amount of residual heat (in PJ) that the industry as a whole provides to heat networks. You can manually set the amount of heat delivered to each temperature level (high-temperature, medium-temperature and low-temperature) in the Supply > ['District Heating'](https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources) section within the ETM.
+The ETM allows you to specify the amount of residual heat (in PJ) that the industry as a whole provides to heat networks. You can manually set the amount of heat delivered to each temperature level (high-temperature, medium-temperature and low-temperature) in the Supply > ['District Heating'](https://energytransitionmodel.com/scenario/supply/heat/heat-sources) section within the ETM.
 
 ![](/img/docs/residual_heat_district_heating_slider.png)
 
