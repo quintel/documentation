@@ -2,10 +2,10 @@
 title: District heating
 ---
 
-In the Supply > ['District heating'](https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources) section in the ETM you can specify the heat sources, transport losses and storage for district heating. If you want to know more about the modelling principles behind the use of district heating within the ETM, you can find more information below. 
+In the Supply > [District heating](https://energytransitionmodel.com/scenario/supply/heat/overview-district-heating) section in the ETM you can specify the heat sources, transport losses and storage for district heating. If you want to know more about the modelling principles behind the use of district heating within the ETM, you can find more information below.
 
 ## District heating networks
-The demand, supply and storage of heat for district heating networks in households, buildings and agriculture is calculated on an hourly basis. The ETM contains heat networks for three temperature levels: LT (40 <sup>o</sup>C), MT (65 <sup>o</sup>C) and HT (90 <sup>o</sup>C). 
+The demand, supply and storage of heat for district heating networks in households, buildings and agriculture is calculated on an hourly basis. The ETM contains heat networks for three temperature levels: LT (40 <sup>o</sup>C), MT (65 <sup>o</sup>C) and HT (90 <sup>o</sup>C).
 
 ### Demand
 In the households, buildings and agriculture section of the model, you can make assumptions about the share of heat demand that will be supplied by district heating networks in the future. For example, in the scenario below, a total of 40% of residences is assumed to be connected to on of the three district heating networks.

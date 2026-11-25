@@ -2,7 +2,7 @@
 title: Heat infrastructure costs
 ---
 
-Below you can find more information on the heat infrastructure cost calculation in the Costs > ['Heat'](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) sub-section of the ETM. Unless stated otherwise the methodology and data behind this calculation is based on Warmtenetten in Vesta MAIS (Heat networks in Vesta MAIS, [CE Delft 2022](https://refman.energytransitionmodel.com/publications/2165)). [Vesta MAIS](https://github.com/RuudvandenWijngaart/VestaDV) is an energy model developed by the Dutch Environmental Assessment Agency (PBL). This section provides a summary of the applied method and numbers. A detailed description can be found on [ETDataset](https://github.com/quintel/etdataset-public/tree/master/source_analyses/general/11_area).
+Below you can find more information on the heat infrastructure cost calculation in the Costs > [Heat](https://energytransitionmodel.com/scenario/costs/costs_heat/costs-district-heating-infrastructure) sub-section of the ETM. Unless stated otherwise the methodology and data behind this calculation is based on Warmtenetten in Vesta MAIS (Heat networks in Vesta MAIS, [CE Delft 2022](https://refman.energytransitionmodel.com/publications/2165)). [Vesta MAIS](https://github.com/RuudvandenWijngaart/VestaDV) is an energy model developed by the Dutch Environmental Assessment Agency (PBL). This section provides a summary of the applied method and numbers. A detailed description can be found on [ETDataset](https://github.com/quintel/etdataset-public/tree/master/source_analyses/general/11_area).
 
 ## Households and buildings costs
 
@@ -50,7 +50,7 @@ For non-residential buildings, two types of indoor costs are taken into account:
 * Indoor distribution
 * Heat meter
 
-The indoor costs consist of a fixed part per connection and a variable part that depends on peak heat capacity. Peak heat capacity is calculated dynamically by the ETM and depends on hourly demand profiles, insulation levels etc. 
+The indoor costs consist of a fixed part per connection and a variable part that depends on peak heat capacity. Peak heat capacity is calculated dynamically by the ETM and depends on hourly demand profiles, insulation levels etc.
 
 _Checkout: the [heat network documentation](heat-networks) for more information on the hourly heat calculation._
 
@@ -87,7 +87,7 @@ To account for this, the ETM distinguishes between five 'length' brackets: A dif
 * Bracket 2 specifies the average if up to 40% of residences/buildings are connected.
 * Etc.
 
-Depending on the (weighted) average share of residences and buildings connected to district heating networks, the ETM uses a different average length per connected residence/building to determine the required pipeline length of the distribution and connection pipelines. The sum of all heat network connections (LT, MT and HT) is used to determine the total share of connections to district heating networks. 
+Depending on the (weighted) average share of residences and buildings connected to district heating networks, the ETM uses a different average length per connected residence/building to determine the required pipeline length of the distribution and connection pipelines. The sum of all heat network connections (LT, MT and HT) is used to determine the total share of connections to district heating networks.
 
 These pipeline length brackets can be specified per region in the ETM. In this way it is possible to distinguish between a city, with lower average pipeline networks per connection, and a rural region, with higher average pipeline lengths. For regions with both urban and rural parts (e.g. a country), the ETM can simulate that pipeline lengths (and thus costs) rise when the share of buildings connected to district heating networks increases: the 'low hanging fruit' (urban areas) is picked first, the more expensive, less densely populated areas follow later.
 

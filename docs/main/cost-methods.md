@@ -70,7 +70,7 @@ Operating expenses include Operation and Maintenance (O&M) costs, without CCS. O
 Additional definitions:
 
 -   Full load hours = the typical yearly full load hours of a plant of this type, this is calculated in the scenario.
--   Variable Operation & Maintenance Costs per Full load hour = the normal costs for operating and maintaining the plant for one full load hour, this is researched per technology, see: [ETDataset source analysis](https://github.com/quintel/etdataset/tree/master/nodes_source_analyses)
+-   Variable Operation & Maintenance Costs per Full load hour = the normal costs for operating and maintaining the plant for one full load hour, this is researched per technology, see: [ETDataset source analysis](https://github.com/quintel/etdataset-public/tree/master/nodes_source_analyses)
 
 
 ### **Fuel costs**
@@ -78,5 +78,4 @@ These costs are specified in the category "carriers". This includes all raw fuel
 
 
 ## Changing costs in a scenario
-All the costs of [technologies](https://github.com/quintel/etdataset/tree/master/nodes_source_analyses) and [datasets (or regions)](https://github.com/quintel/etdataset/tree/master/source_analyses) are researched in advance. Technologies have the same starting assumptions for all regions. Carrier costs can be different per region. When making a scenario, many of these assumptions can be changed in the [costs](https://pro.energytransitionmodel.com/scenario/costs/costs_heat/district-heating-infrastructure) section of the ETM.
-
+All the costs of [technologies](https://github.com/quintel/etdataset-public/tree/master/nodes_source_analyses) and [datasets (or regions)](https://data.energytransitionmodel.com/) are researched in advance. Technologies have the same starting assumptions for all regions. Carrier costs can be different per region. When making a scenario, many of these assumptions can be changed in the [Costs & efficiencies](https://energytransitionmodel.com/scenario/costs/specs_electricity/coal-plants) section of the ETM.

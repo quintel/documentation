@@ -2,10 +2,10 @@
 title: Renewables
 ---
 
-The following page describes the definitions of renewables used within the ETM as well as the calculation method for the share of renewables and share of renewable electricity. You can choose different types of renewable energy production methods in the Supply > ['Renewable electricity'](https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines) section in the ETM. 
+The following page describes the definitions of renewables used within the ETM as well as the calculation method for the share of renewables and share of renewable electricity. You can choose different types of renewable energy production methods in the Supply > ['Renewable electricity'](https://energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines) section in the ETM.
 
 ## Definitions of renewable share
-The renewable percentage that the ETM calculates may be different from the number that is published by official statistics. The main reason is that different organizations use different definitions for calculating a renewable percentage. 
+The renewable percentage that the ETM calculates may be different from the number that is published by official statistics. The main reason is that different organizations use different definitions for calculating a renewable percentage.
 
 -	IEA & Eurostat: Primary energy method (also called input method) where the renewable share is calculated on the basis of primary energy input including non-energy consumption.
 -	CBS (Dutch national statistics bureau): Substitution method (primary energy) where the renewable share is calculated on the basis of primary energy including non-energy consumption, but the amount of primary energy for renewables is determined on the basis of what amount of fossil fuel they replace. This results in larger amounts of primary energy for solar and wind and lower amounts for relatively inefficient biomass and waste electricity generation stations.

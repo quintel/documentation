@@ -2,7 +2,7 @@
 title: Electricity conversion
 ---
 
-The [Electricity conversion](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/conversion-by-flexible-demand-technologies) section of the ETM deals with flexible electricity demand technologies that can convert electricity into another energy carrier. The demand of these technologies is considered flexible because it can be increased, reduced or shifted in time if needed. This characteristic is especially useful when large capacities of inflexible supply are installed, such as wind turbines and solar panels. By strategically implementing flexible electricity demand, you can decrease the amount of inflexible supply that has to be curtailed at times when it exceeds inflexible (or baseload) demand.
+The [Electricity conversion](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/behaviour-of-conversion-technologies) section of the ETM deals with flexible electricity demand technologies that can convert electricity into another energy carrier. The demand of these technologies is considered flexible because it can be increased, reduced or shifted in time if needed. This characteristic is especially useful when large capacities of inflexible supply are installed, such as wind turbines and solar panels. By strategically implementing flexible electricity demand, you can decrease the amount of inflexible supply that has to be curtailed at times when it exceeds inflexible (or baseload) demand.
 
 :::info Flexibility
 See [the Flexibility page](flexibility.md) for more information about the difference between flexible and inflexible supply and demand technologies.
@@ -55,7 +55,7 @@ For agriculture, power-to-heat works the same as for the industrial steam networ
 ### Power for synthetic kerosene production
 In the ETM, electricity can also be used for the production of synthetic kerosene. This kerosene is produced by combining electricity, hydrogen and CO2<sub>2</sub>. See the [Utilisation and storage of CO<sub>2</sub>](co2-ccus.md)page for more information.
 
-The capacity of the dispatchable synthetic kerosene production can be set under [Utilisation and storage of CO<sub>2</sub>](https://energytransitionmodel.com/scenario/emissions/ccus/utilisation-and-storage-of-co2). The willingness to pay can be set under [Conversion to kerosene for industry](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_conversion/).
+The capacity of the dispatchable synthetic kerosene production can be set under [Utilisation and storage of CO<sub>2</sub>](https://energytransitionmodel.com/scenario/emissions/ccus/utilisation-and-storage-of-co2). The willingness to pay can be set under [Conversion to kerosene for industry](https://energytransitionmodel.com/scenario/flexibility/flexibility_conversion/).
 
 ### Electricity storage
 Consumption by electricity storage technologies, also known as power-to-power, is another form of flexible electricity demand. An example of this is charging by batteries. For electricity storage two types of behaviour are available: one that is based on willingness to pay and willingness to accept prices and another that uses a forecasting algorithm. The [electricity storage documentation](electricity-storage.md) contains more information about both types of behaviour.

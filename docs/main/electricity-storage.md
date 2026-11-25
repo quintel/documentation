@@ -2,7 +2,7 @@
 title: Electricity storage
 ---
 
-The [Flexibility → Electricity storage](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_storage/behaviour-of-storage-technologies) section of the ETM deals with technologies that can store electricity and release it at a later point in time. These technologies are considered flexible because both their supply and demand can be increased, reduced or shifted in time if needed. This characteristic is especially useful when large capacities of inflexible supply are installed, such as wind turbines and solar panels. By strategically implementing electricity storage, you can decrease the amount of inflexible supply that has to be curtailed at times when it exceeds inflexible (or baseload) demand.
+The [Flexibility → Electricity storage](https://energytransitionmodel.com/scenario/flexibility/flexibility_storage/behaviour-of-storage-technologies) section of the ETM deals with technologies that can store electricity and release it at a later point in time. These technologies are considered flexible because both their supply and demand can be increased, reduced or shifted in time if needed. This characteristic is especially useful when large capacities of inflexible supply are installed, such as wind turbines and solar panels. By strategically implementing electricity storage, you can decrease the amount of inflexible supply that has to be curtailed at times when it exceeds inflexible (or baseload) demand.
 
 :::info Flexibility
 See [the flexibility documentation](flexibility.md) for more information about the difference between flexible and inflexible supply and demand technologies.

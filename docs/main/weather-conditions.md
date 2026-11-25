@@ -2,7 +2,7 @@
 title: Weather conditions
 ---
 
-For all datasets the average temperature and full load hours of wind turbines and solar PV can be adjusted in the [Weather conditions](https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/temperature-and-full-load-hours) section. For the Netherlands it is possible to select one of three weather years with extreme weather conditions to explore the effect of these conditions. On this page these features are explained.
+For all datasets the average temperature and full load hours of wind turbines and solar PV can be adjusted in the [Weather conditions](https://energytransitionmodel.com/scenario/flexibility/flexibility_weather/temperature-and-full-load-hours) section. For the Netherlands it is possible to select one of three weather years with extreme weather conditions to explore the effect of these conditions. On this page these features are explained.
 
 ## Temperature
 
@@ -41,7 +41,7 @@ The default wind production curves which are based on measured production data p
 
 The default solar PV production curves which are based on measured production data provided by the Open Power System Data platform (read more about [solar curves](https://github.com/quintel/etdataset-public/blob/master/curves/supply/solar/README.md)) are not available for the weather years (1987, 1997, 2004).
 
-For weather years we use measured irradiation data (Source: [KNMI](https://dataplatform.knmi.nl/)). The shape of the curve equals the shape of irradiation data. Full load hours for solar PV are based on the total solar irradiation of the weather year. FLH of the weather year are determined using information about total solar irradiation and FLH of the reference year 2015. More information can be found on [ETDataset](https://github.com/quintel/etdataset/tree/master/curves/supply/solar/script/weather_years).
+For weather years we use measured irradiation data (Source: [KNMI](https://dataplatform.knmi.nl/)). The shape of the curve equals the shape of irradiation data. Full load hours for solar PV are based on the total solar irradiation of the weather year. FLH of the weather year are determined using information about total solar irradiation and FLH of the reference year 2015. More information can be found on [ETDataset](https://github.com/quintel/etdataset-public/tree/master/curves/supply/solar/script/weather_years).
 
 ### Temperature
 Just as for default setting for weather years, temperature curves are based on measured data from The Bilt. (Source: [KNMI](https://dataplatform.knmi.nl/)). For each weather year the average temperature is compared with the average temperature of the default year. If a user selects a weather year this value is used to set the temperature slider. This has an impact on the energy demand for heating and cooling in households, buildings and agriculture. For more information, see the [outdoor temperature](outdoor-temperature.md) section.

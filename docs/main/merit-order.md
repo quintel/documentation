@@ -2,7 +2,7 @@
 title: Merit Order
 ---
 
-The merit order module calculates the hourly electricity mix based on the demand for electricity and the installed capacities and marginal costs of the electricity producing technologies (called producers from now on). The two main results of this calculation are the full load hours for these producers and the amount of excess electricity that is used by the different flexibility technologies. This page explains the calculations and modelling principles behind the merit order module. The Merit Order Module is available in the ETM in the [Supply → Merit order](https://pro.energytransitionmodel.com/scenario/supply/merit_order/merit-order) section.
+The merit order module calculates the hourly electricity mix based on the demand for electricity and the installed capacities and marginal costs of the electricity producing technologies (called producers from now on). The two main results of this calculation are the full load hours for these producers and the amount of excess electricity that is used by the different flexibility technologies. This page explains the calculations and modelling principles behind the merit order module. The Merit Order Module is available in the ETM in the [Supply → Merit order](https://energytransitionmodel.com/scenario/supply/merit_order/merit-order) section.
 
 ## The merit order module principles in the ETM
 With the merit order switched on, the merit order module manages power plants in a smarter way. Power plants are turned on and off in order to follow the electricity demand, which actually varies over the course of time. Instead of having a plant running just because it exists, the merit order will only allow a plant to operate when its output is required (this is under the presumption that the power plant is [dispatchable](#producers) and can be turned off). At times of low demand, only those producers are turned on that generate electricity at lowest costs. If the demand increases from one hour to the next, additional (and more expensive) producers are switched on. Based on this mechanism, the amount of time is calculated that each power plant actually needs to run in order to fulfil the electricity demand. In other words, the merit order calculates the full load hours of each participant.
@@ -163,7 +163,7 @@ Thirdly, the Merit Order Module sets an electricity price for each hour. The pri
 1. The marginal cost for the most expensive dispatchable plant which is producing electricity.
 2. The price paid for electricity by the least expensive [flexible consumer](flexibility.md#categorization-of-flexible-and-inflexible-technologies).
 
-In the event that there is a surplus of electricity, the price will be set to zero. If there is a deficit – there was demand for more electricity than could be produced – a fallback price will be used. You may configure this fallback price in the ETM under [Costs & efficiencies → Value of Lost Load](https://pro.energytransitionmodel.com/scenario/costs/costs_flexibility/value-of-lost-load).
+In the event that there is a surplus of electricity, the price will be set to zero. If there is a deficit – there was demand for more electricity than could be produced – a fallback price will be used. You may configure this fallback price in the ETM under [Costs & efficiencies → Value of Lost Load](https://energytransitionmodel.com/scenario/costs/costs_flexibility/value-of-lost-load).
 
 ### Scope
 
