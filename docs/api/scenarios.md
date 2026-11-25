@@ -115,7 +115,7 @@ Authorization: Bearer YOUR_TOKEN
 
 <UpcomingFeature release="2023.01" />
 
-[When authenticated](authentication.md), you can get a list of all scenarios which belong to you. [The list is paginated](intro.md#pagination).
+[When authenticated](authentication.md), you can get a list of all scenarios which belong to you. [The list is paginated](v3/overview.md#pagination).
 
 <ApiEndpoint data={endpointData.index} />
 

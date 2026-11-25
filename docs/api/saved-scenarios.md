@@ -109,7 +109,7 @@ Authorization: Bearer YOUR_TOKEN
 
 ## Listing your saved scenarios
 
-You can get a list of all saved scenarios which belong to you. [The list is paginated](intro.md#pagination).
+You can get a list of all saved scenarios which belong to you. [The list is paginated](v3/overview.md#pagination).
 
 <ApiEndpoint data={endpointData.index} />
 

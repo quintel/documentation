@@ -20,9 +20,9 @@ function dynamicBadge({ production, staging }) {
   today.setHours(12, 0, 0, 0);
 
   if (production && Date.parse(production) < today.getTime()) {
-    return <ProductionBadge />;
+    return <LatestBadge />;
   } else if (staging && Date.parse(staging) < today.getTime()) {
-    return <StagingBadge />;
+    return <BetaBadge />;
   } else {
     return <UnreleasedBadge />;
   }
@@ -48,23 +48,23 @@ export const UnreleasedBadge = ({ label, children, className = '', ...rest }) =>
   </EnvBadge>
 );
 
-export const StagingBadge = ({ label, children, className = '', ...rest }) => (
+export const BetaBadge = ({ label, children, className = '', ...rest }) => (
   <EnvBadge
-    className={`${styles.staging} ${className}`.trim()}
+    className={`${styles.beta} ${className}`.trim()}
     {...linkProps(rest)}
     {...rest}
   >
-    {children ?? label ?? 'Staging'}
+    {children ?? label ?? 'Beta'}
   </EnvBadge>
 );
 
-export const ProductionBadge = ({ label, children, className = '', ...rest }) => (
+export const LatestBadge = ({ label, children, className = '', ...rest }) => (
   <EnvBadge
-    className={`${styles.production} ${className}`.trim()}
+    className={`${styles.latest} ${className}`.trim()}
     {...linkProps(rest)}
     {...rest}
   >
-    {children ?? label ?? 'Production'}
+    {children ?? label ?? 'Latest'}
   </EnvBadge>
 );
 

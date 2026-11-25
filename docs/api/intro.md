@@ -4,17 +4,20 @@ title: Introduction to the API
 sidebar_title: Introduction to the API
 ---
 
-import { StagingBadge, StableBadge, ProductionBadge } from '@site/src/components/EnvBadge';
+import { BetaBadge, StableBadge, LatestBadge } from '@site/src/components/EnvBadge';
 
 ## Versioning
 
-The ETM API is versioned as **v3**, but at the time of writing is not semantically versioned. While we seek not to change the public API in a way that would break clients, it's nonetheless constantly in development.
+The ETM API has two versions, v3 and v4. Within a version we seek not to change the public API in a way that would break clients, but it's nonetheless constantly in development.
 
-All paths to the API are prefixed with `/api/v3`.
+* **[API v4](v4/overview.md)** is served by MyETM, with one endpoint for latest and every stable version. Its paths are prefixed with `/api/v4`.
+* **[API v3](v3/overview.md)** is served by the engine that calculates each scenario, with its own endpoint for latest and for each stable version. Its paths are prefixed with `/api/v3`.
+
+API v4 aims to replace API v3, so start new work with v4. API v3 keeps working alongside it for now.
 
 ## Environments
 
-We operate three main versions of the ETM: production, stable, and staging. You should default to using the production environment unless you have a specific reason to use a stable version or the staging environment.
+The ETM is available in three environments: latest, stable versions, and beta. You should default to using latest unless you have a specific reason to use a stable version or beta.
 
 <table className="no-stripe">
   <thead>
@@ -26,118 +29,42 @@ We operate three main versions of the ETM: production, stable, and staging. You 
   </thead>
   <tbody>
     <tr>
-      <td><ProductionBadge nolink /></td>
-      <td><code>engine.energytransitionmodel.com/api/v3</code></td>
+      <td><LatestBadge nolink /></td>
+      <td><code>my.energytransitionmodel.com/api/v4</code><br /><code>engine.energytransitionmodel.com/api/v3</code></td>
       <td><code>production</code></td>
     </tr>
     <tr>
       <td><StableBadge nolink /></td>
-      <td><code>version_tag.engine.energytransitionmodel.com/api/v3</code></td>
+      <td><code>my.energytransitionmodel.com/api/v4</code><br /><code>version_tag.engine.energytransitionmodel.com/api/v3</code></td>
       <td><code>version branch</code></td>
     </tr>
     <tr>
-      <td><StagingBadge nolink /></td>
-      <td><code>beta.engine.energytransitionmodel.com/api/v3</code></td>
+      <td><BetaBadge nolink /></td>
+      <td><code>beta.my.energytransitionmodel.com/api/v4</code><br /><code>beta.engine.energytransitionmodel.com/api/v3</code></td>
       <td><code>master</code></td>
     </tr>
   </tbody>
 </table>
 
-#### Production
+#### Latest
 
-This is the standard version of the ETM. Features are generally complete, well-tested, and ready to be used by the general public. We aim for the production environment to be available 24-hours a day and 365-days a year, except during occasional, short periods while we perform updates.
+This is the standard version of the ETM. Features are generally complete, well-tested, and ready to be used by the general public. We aim for latest to be available 24-hours a day and 365-days a year, except during occasional, short periods while we perform updates.
 
-We intend to store [owned scenarios](scenarios.md#authentication) created on the production server forever.
+We keep [owned scenarios](scenarios.md#authentication) created on latest for as long as they are in use. Scenarios left unused for a long time may eventually be removed. We also reserve the right to retire scenarios whose dataset is being retired.
 
 #### **Stable Versions**
 
-Stable environments are not continuously developed. If you need consistent and reproducible results, using a stable version is recommended. However, these versions do not include the latest improvements made to the ETM. For more details, see [Model Versions](../main/user_manual/model-versions#expiration-date).
+Stable versions are not continuously developed. If you need consistent and reproducible results, using a stable version is recommended. However, these versions do not include the latest improvements made to the ETM. For more details, see [Model Versions](../main/user_manual/model-versions#expiration-date).
 
-:::info **Stable Version Tags**
-Stable version endpoints follow a specific URL pattern:
-
-```plaintext
-{version_tag}.engine.energytransitionmodel.com/api/v3
-```
-Where `{version_tag}` is in the format **`YYYY_##`**.
-
-For example, for **[#2025-01](docs/main/user_manual/model-versions.md#CurrentVersions)**, the endpoint would be:
-
-```plaintext
-2025-01.engine.energytransitionmodel.com/api/v3
-```
-The corresponding **Git branch** also matches the `{version_tag}`.
-:::
+In API v4, a scenario on a stable version is reached through the same endpoint as one on latest: its version decides which engine calculates it. In API v3, each stable version has its own endpoint, as the [API v3 overview](v3/overview.md#endpoints) describes.
 
 The stable versions have an [expiration date](../main/user_manual/model-versions#expiration-date). After this expiration date, the version is retired and all scenarios will be deleted.
 
 
-#### Staging
+#### Beta
 
-The staging environment is used to test new features before they are ready for the general public. While this means you can get access to access to cutting-edge features earlier, results from the staging server are subject to change. Scenarios made on the staging environment cannot be transferred to production, and vice-versa. Your settings and user account from the production server do not carry over to the staging server; you need to create a separate account.
+Beta is used to test new features before they are ready for the general public. While this means you can get access to cutting-edge features earlier, results from beta are subject to change. Scenarios made on beta cannot be transferred to latest or a stable version, and vice-versa. Your settings and user account do not carry over to beta; you need to create a separate account.
 
-We have no plans to delete scenarios from the staging server, but we reserve the right to do so including owned scenarios.
+We have no plans to delete scenarios from beta, but we reserve the right to do so including owned scenarios.
 
-The staging environment may occasionally be unavailable.
-
-## Response status codes
-
-As a REST API, the Energy Transition Model uses a range of status codes to indicate the success or failure of the request.
-
-| Code | Reason |
-| --- | --- |
-| `200 OK` | The request was successful. |
-| `201 Created` | The request was successful and a new resource was created. Note that a number of API endpoints use `200 OK` instead. |
-| `400 Bad Request` | The server was not able to process the request due to it being malformed. |
-| `401 Unauthorized` | The request was rejected due to not having permission to access the resource. |
-| `404 Not Found` | The resource requested does not exist at the current time. |
-| `406 Not Acceptable` | The `Accept` header did not specify a content type which can be generated by the server. |
-| `422 Unprocessable Entity` | The request was correctly formed (unlike a 400 Bad Request response), but contained errors which prevent it from being accepted. Typically an `"errors"` parameter will contain more information. See [Errors](#errors).
-| `429 Too Many Requests` | The request was rejected due to exceeding the API rate-limit. At the time of writing, the ETM has no rate-limits; while there are no plans to change this, but your application should be prepared. |
-| `500 Internal Server Error` | An error occurred with the ETM. |
-
-## Pagination
-
-Some endpoints return paginated data – where there are too many items to show at once. Examples include the scenario and saved scenario lists. To get the full list of items you must iterate through all pages.
-
-Paginated responses contain three keys:
-
-* `data` - an array of items, such as scenarios or saved scenarios
-* `meta` - information about pagination, the number of items in the `data` array, the total
-   number of items belonging to you, etc.
-* `links` - links to the first, previous, next, and last pages in the set
-
-#### `meta`
-
-* `limit` - the requested limit for how many items should be included on each page of results
-* `count` - the number of items on the current page; this may be lower than `limit` when viewing the last page of results
-* `total` - the total number of items which belong to you
-* `total_pages` - the total number of pages of items
-* `current_page` - the number of the current pages
-
-#### `links`
-
-* `first` - link to the first page of items
-* `prev` - link to the previous page of items, or null if you are on the first page
-* `next` - link to the next page of items, or null if you are on the last page
-* `last` - link to the last page of items
-
-## Errors
-
-Many endpoints within the ETM will respond with useful error information if the received request could not be processed. This will be in the form of a `400..499` response code, and a JSON response containing an `errors` key.
-
-```http
-HTTP/1.1 422 Unprocessable Entity
-Content-Type: application/json; charset=utf-8
-
-{
-  "errors": [
-    "Curve must have 8760 numeric values, one for each hour in a typical year",
-    "Curve must only contain numeric values"
-  ]
-}
-```
-
-:::warning "error_keys" attribute
-Some endpoints also provide an `error_keys` attribute – used for localization on official ETM websites. This attribute is not considered stable, and may be subject to change in the future. Please do not rely on it in your own applications.
-:::
+Beta may occasionally be unavailable.

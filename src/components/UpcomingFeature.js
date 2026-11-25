@@ -4,7 +4,7 @@ import Link from "@docusaurus/Link";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 
 import releases from "@site/data/releases";
-import { StagingBadge, ProductionBadge } from "./EnvBadge";
+import { BetaBadge, LatestBadge } from "./EnvBadge";
 
 import styles from "./UpcomingFeature.module.css";
 
@@ -35,8 +35,8 @@ const UpcomingFeature = ({ release: releaseName }) => {
 
   text = (
     <span>
-      This feature is available in the {<StagingBadge />} environment and will become available in{" "}
-      {<ProductionBadge />} on {formattedDate} with the {releaseName} release. See the{" "}
+      This feature is available in the {<BetaBadge />} environment and will become available in{" "}
+      {<LatestBadge />} on {formattedDate} with the {releaseName} release. See the{" "}
       {<Link to="/api/changelog">changelog</Link>} for more information.
     </span>
   );

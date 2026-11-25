@@ -80,7 +80,7 @@ Authorization: Bearer YOUR_TOKEN
 
 ## Listing your collections
 
-You can get a list of all collections which belong to you. [The list is paginated](intro.md#pagination).
+You can get a list of all collections which belong to you. [The list is paginated](v3/overview.md#pagination).
 
 <ApiEndpoint data={endpointData.index} />
 

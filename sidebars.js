@@ -234,6 +234,7 @@ module.exports = {
       label: "API v3",
       collapsed: false,
       items: [
+        "api/v3/overview",
         {
           type: "category",
           label: "Scenario Endpoints",
@@ -261,6 +262,12 @@ module.exports = {
           items: ["api/areas", "api/saved-scenarios", "api/collections"],
         },
       ],
+    },
+    {
+      type: "category",
+      label: "API v4",
+      collapsed: false,
+      items: ["api/v4/overview"],
     },
   ],
 };

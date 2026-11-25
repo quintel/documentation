@@ -22,14 +22,14 @@
   margin-left: 0;
 }
 
-.staging {
+.beta {
   --badge-color: #b45309;
   --badge-background: #fef3c7;
   --badge-hover-color: #78350f;
   --badge-hover-background: #fde68a;
 }
 
-.production {
+.latest {
   --badge-color: #047857;
   --badge-background: #d1fae5;
   --badge-hover-color: #064e3b;

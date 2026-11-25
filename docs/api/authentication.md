@@ -5,7 +5,7 @@ title: Authentication
 import endpointData from '@site/data/api/tokens';
 import ApiEndpoint from '@site/src/components/ApiEndpoint';
 import UpcomingFeature from '@site/src/components/UpcomingFeature';
-import { StagingBadge, StableBadge, ProductionBadge } from '@site/src/components/EnvBadge';
+import { BetaBadge, StableBadge, LatestBadge } from '@site/src/components/EnvBadge';
 
 <UpcomingFeature release="2023.01" />
 
@@ -47,8 +47,8 @@ Authorization: Bearer etm_xcNxTaX8KLr5LkGs93sRWnGfhyAUDPWPqKVGe1RL73GJUnfQ...
 
 #### Tokens are environment-specific
 
-- <ProductionBadge /> tokens can be used in both the production and stable environments.
-- <StagingBadge /> tokens are valid only in the staging environment.
+- <LatestBadge /> tokens can be used on latest and on every stable version.
+- <BetaBadge /> tokens are valid only on beta.
 
 ## Using the API without authentication
 

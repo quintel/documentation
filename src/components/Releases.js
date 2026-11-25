@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { marked } from 'marked';
 import styles from './Releases.module.css';
-import { ProductionBadge, StableBadge, UnreleasedBadge } from './EnvBadge';
+import { LatestBadge, StableBadge, UnreleasedBadge } from './EnvBadge';
 import badgeStyles from './EnvBadge.module.css';
 import { mainReleases, apiChangelog } from '@site/data/releases';
 import { FaGithub } from "react-icons/fa6";
@@ -33,7 +33,7 @@ export default function Releases({ children, dataSource = 'releases' }) {
 
     switch (update.version) {
       case 'latest':
-        return <ProductionBadge nolink label={update.version} />;
+        return <LatestBadge nolink label={update.version} />;
       case 'upcoming':
         return <UnreleasedBadge label="upcoming" />;
       default:
@@ -250,7 +250,7 @@ export default function Releases({ children, dataSource = 'releases' }) {
                         ) : update.version === 'latest' ? (
                           // Main releases: show "Latest" with badge
                           <>
-                            <span className={`${badgeStyles.badge} ${badgeStyles.production} ${styles.tocBadge}`}>
+                            <span className={`${badgeStyles.badge} ${badgeStyles.latest} ${styles.tocBadge}`}>
                               {update.version}
                             </span>
                           </>
