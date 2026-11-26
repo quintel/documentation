@@ -52,7 +52,7 @@ export default {
         description: "data of the curve to be attached to the sceanrio",
       },
     ],
-    token: { scopes: ["scenarios:wite"], type: "optional-owned" },
+    token: { scopes: ["scenarios:write"], type: "optional-owned" },
   },
   destroy: {
     endpoint: "/api/v3/scenarios/{scenario_id}/custom_curves/{curve_key}",

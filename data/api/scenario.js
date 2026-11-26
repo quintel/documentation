@@ -37,7 +37,7 @@ export default {
     endpoint: "/api/v3/scenarios/{id}",
     method: "PUT",
     path_parameters: [scenarioIdParam],
-    token: { scopes: ["scenarios:read"], type: "optional-owned" },
+    token: { scopes: ["scenarios:write"], type: "optional-owned" },
   },
   destroy: {
     endpoint: "/api/v3/scenarios/{id}",

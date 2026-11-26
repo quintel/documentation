@@ -2,6 +2,7 @@ import React from "react";
 import Link from "@docusaurus/Link";
 
 import styles from "./ApiEndpoint.module.css";
+import { endpointFor } from "./apiVersions";
 
 const formatParams = (params) => {
   if (!params || !params.length) {
@@ -104,9 +105,11 @@ const Scope = ({ scope }) => {
 };
 
 /**
- * Given data about an endpoint, formats it in a definition list.
+ * Given data about an endpoint, formats it in a definition list. With `api="v4"`, an engine
+ * endpoint under a scenario is shown as API v4 serves it.
  */
-const ApiEndpoint = ({ data }) => {
+const ApiEndpoint = ({ data: endpointData, api = "v3" }) => {
+  const data = endpointFor(endpointData, api);
   const pathParams = formatParams(data.path_parameters);
   const params = formatParams(data.parameters);
 

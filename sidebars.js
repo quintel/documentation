@@ -238,7 +238,7 @@ module.exports = {
         {
           type: "category",
           label: "Scenario Endpoints",
-          collapsed: false,
+          collapsed: true,
           items: [
             "api/scenarios",
             "api/custom-curves",
@@ -258,7 +258,7 @@ module.exports = {
         {
           type: "category",
           label: "Other Endpoints",
-          collapsed: false,
+          collapsed: true,
           items: ["api/areas", "api/saved-scenarios", "api/collections"],
         },
       ],
@@ -267,7 +267,23 @@ module.exports = {
       type: "category",
       label: "API v4",
       collapsed: false,
-      items: ["api/v4/overview"],
+      items: [
+        "api/v4/overview",
+        {
+          type: "category",
+          label: "Scenario Endpoints",
+          collapsed: true,
+          items: [
+            "api/v4/custom-curves",
+            "api/v4/forecast-storage-order",
+            "api/v4/heat-network-order",
+            "api/v4/nodes",
+            "api/v4/merit",
+            "api/v4/exports",
+            "api/v4/version-tag",
+          ],
+        },
+      ],
     },
   ],
 };
