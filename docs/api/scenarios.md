@@ -480,8 +480,8 @@ Authorization: Bearer YOUR_TOKEN
 
 {
   "gqueries": [
-    "costs_of_insulation",
-    "costs_of_capital_in_electricity_production"
+    "dashboard_total_costs",
+    "dashboard_renewability"
   ]
 }
 ```
@@ -492,15 +492,15 @@ Authorization: Bearer YOUR_TOKEN
     ...
   },
   "gqueries": {
-    "costs_of_insulation": {
-      "present": 0.0,
-      "future": 1234567.8,
-      "unit": "euro"
+    "dashboard_total_costs": {
+      "present": 63.2,
+      "future": 58.9,
+      "unit": "bln_euro"
     },
-    "costs_of_capital_in_electricity_production": {
-      "present": 1234567.8,
-      "future": 2345678.9,
-      "unit": "euro"
+    "dashboard_renewability": {
+      "present": 0.12,
+      "future": 0.67,
+      "unit": "factor"
     }
   }
 }
@@ -540,7 +540,7 @@ to the uncoupling endpoint.
 <ApiEndpoint data={endpointData.uncouple} />
 
 ```http title="Example request"
-POST /api/v3/scenarios/12345 HTTP/2
+POST /api/v3/scenarios/12345/uncouple HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
@@ -552,14 +552,10 @@ Authorization: Bearer YOUR_TOKEN
 
 ```json title="Example response"
 {
-  {
-  "scenario": {
-    "id": 12345,
-    ...
-    "active_couplings": [],
-    "inactive_couplings": ["external_coupling_group_1"],
-  }
-}
+  "id": 12345,
+  ...
+  "active_couplings": [],
+  "inactive_couplings": ["external_coupling_group_1"]
 }
 ```
 
@@ -570,7 +566,7 @@ The couple endpoint can be used to (re)activate the coupled external model.
 <ApiEndpoint data={endpointData.couple} />
 
 ```http title="Example request"
-POST /api/v3/scenarios/12345 HTTP/2
+POST /api/v3/scenarios/12345/couple HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
@@ -582,14 +578,10 @@ Authorization: Bearer YOUR_TOKEN
 
 ```json title="Example response"
 {
-  {
-  "scenario": {
-    "id": 12345,
-    ...
-    "active_couplings": ["external_coupling_group_1"],
-    "inactive_couplings": [],
-  }
-}
+  "id": 12345,
+  ...
+  "active_couplings": ["external_coupling_group_1"],
+  "inactive_couplings": []
 }
 ```
 ### Uncoupling coupled models
@@ -600,7 +592,7 @@ This means that the inputs set by the external model will be erased. This action
 <ApiEndpoint data={endpointData.uncouple} />
 
 ```http title="Example request"
-POST /api/v3/scenarios/12345 HTTP/2
+POST /api/v3/scenarios/12345/uncouple HTTP/2
 Host: engine.energytransitionmodel.com
 Accept: application/json
 Authorization: Bearer YOUR_TOKEN
@@ -612,13 +604,10 @@ Authorization: Bearer YOUR_TOKEN
 
 ```json title="Example response"
 {
-  {
   "scenario": {
     "id": 12345,
     ...
-    "active_couplings": [],
-    "inactive_couplings": [],
-  }
-}
+  },
+  "gqueries": {}
 }
 ```

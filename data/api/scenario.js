@@ -31,7 +31,7 @@ export default {
   create: {
     endpoint: "/api/v3/scenarios",
     method: "POST",
-    token: { scopes: ["scenarios:read"], type: "optional" },
+    token: { scopes: ["scenarios:write"], type: "optional" },
   },
   update: {
     endpoint: "/api/v3/scenarios/{id}",

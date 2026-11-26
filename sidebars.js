@@ -274,9 +274,11 @@ module.exports = {
           label: "Scenario Endpoints",
           collapsed: true,
           items: [
+            "api/v4/scenarios",
             "api/v4/custom-curves",
             "api/v4/forecast-storage-order",
             "api/v4/heat-network-order",
+            "api/v4/inputs",
             "api/v4/nodes",
             "api/v4/merit",
             "api/v4/exports",
