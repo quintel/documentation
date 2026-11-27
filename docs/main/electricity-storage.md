@@ -32,3 +32,8 @@ See the [merit order documentation](merit-order.md) for more information on the 
 When this type of behaviour is selected, charging and discharging by the electricity storage technology no longer depends on the **willingness to pay** and the **willingness to accept**. Instead, it uses an algorithm to determine optimal moments in the year for charging and discharging.
 
 You can read more about this in [the forecasting documentation](battery-forecasting.md).
+
+
+### Integrated storage systems
+
+Storage systems that are integrated with wind turbines or solar plants only store electricity when the production of the connected renewable energy source exceeds the connection capacity to the grid. They release their electricity when the production drops below that capacity. The storage system itself has no further interaction with the rest of the electricity system.
