@@ -44,21 +44,23 @@ To make sure that scenarios keep working when the latest version of the model is
 
 The goal of **stable** versions is to have stable model input and outputs. If you want to use scenarios to report specific settings or outcomes of the model, it is recommended to make those scenarios on a stable version.
 
-:::info Bug fixes in stable versions
+:::info * Bug fixes in stable versions
 By default, bug fixes are not applied to stable versions of the model, as this may change inputs and outputs. Under very strict conditions, an exception can be made. Any stable version bug fixes will be announced ahead of time. See [Communication](#communication).
 :::
 
 ## Frequency and timing
 
-By default, a new stable version is released **every year**, in the beginning of the **first quarter**. Additional stable versions may be created, under specific conditions, and will be announced ahead of time, see also [Communication](#communication).
+By default, a new stable version is released **every two years**. Additional stable versions may be created, under specific conditions, and will be announced ahead of time, see also [Communication](#communication).
 
 ## Expiration date
 
-By default, stable versions are maintained for **four** years. After this time period, both the stable version and the scenarios on that version are deleted. If you want to keep your scenario, you have to move it to a newer version, see also [Move scenarios between versions](#move-scenarios-between-versions).
+By default, stable versions are maintained for **four** years. Combined with a new stable version every two years, this means there are usually two stable versions available at the same time.
+
+After the maintenance period, the stable version is taken offline completely, including its datasets and all scenarios on that version. They are no longer available in the front-end or through the API. Six months before a stable version expires, this is announced with a banner in the model and in the Technical Newsletter (see [Communication](#communication)). If you want to keep your scenario, you have to move it to a newer version, see also [Move scenarios between versions](#move-scenarios-between-versions).
 
 ## Communication
 
-Updates concerning stable versions are announced through the **Technical Newsletter**. You can sign up for this newsletter in your account settings. The newsletter includes a monthly **Changelog** for the latest version of the model. Combined, the monthly changelogs between two stable version releases indicate the overall changes between two stable versions.
+Updates concerning versions are announced through the **Technical Newsletter**. You can sign up for this newsletter in your account settings. The newsletter includes a monthly **Changelog** for the latest version of the model. Combined, the monthly changelogs after a stable version is released indicate the overall changes between stable and latest.
 
 ## Version selection
 
@@ -74,7 +76,7 @@ When you work in a specific version of the model and save your scenario, that sc
 
 ### Scenario changes when a stable version is released
 
-When a stable version is created, there will be no changes to your saved scenarios. By default, all scenarios will stay on the version in which they were created. If scenario is created on `latest`, it will stay on `latest`.
+When a stable version is created, there will be no changes to your saved scenarios. By default, all scenarios will stay on the version in which they were created. If a scenario is created on `latest`, it will stay on `latest`.
 
 ### Move scenarios between versions
 
